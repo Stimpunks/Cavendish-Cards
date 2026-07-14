@@ -2,8 +2,6 @@
 
 Cavendish Cards is an open deck for naming sensory and interaction needs — you point at a card, or lay a few, and no reading is required to play.
 
-No scoring, no winners, nothing earned. Just a gentler way for a child to be understood.
-
 Cavendish Cards come out of the [Cavendish Space Project](https://stimpunks.org/projects/cavendish-space-project/) — an open experiment in designing environments that work for real neurodivergent and Disabled bodies and minds. The deck lets a child shape the space around them, and lets the people beside them read what that child needs without asking a child to explain in words they may not have.
 
 Inspired by oracle decks, but these are not oracle cards. They are pictorial prompt cards.
@@ -12,7 +10,7 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 
 ## Two rules hold the whole thing up
 
-- **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand.
+- **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand. Just a gentler way for a child to be understood.
 - **The child controls sharing.** A spread laid face-down stays private. Turning a card up is the child sharing it. The turn is the consent — you don't turn their cards over for them.
 
 ## Not a screening tool
