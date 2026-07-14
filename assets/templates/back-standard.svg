@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <!-- Cavendish Cards — standard card back (all families except Love Locutions). CC0. Font: Atkinson Hyperlegible. -->
+  <defs><clipPath id="cardclip"><rect x="0" y="0" width="750" height="1050" rx="48"/></clipPath></defs>
+  <g clip-path="url(#cardclip)">
+    <rect x="0" y="0" width="750" height="1050" fill="#fdf6e3"/>
+    <path d="M225 405 A150 150 0 0 1 525 405" fill="none" stroke="#E40303" stroke-width="16"/>
+    <path d="M245 405 A130 130 0 0 1 505 405" fill="none" stroke="#FF8C00" stroke-width="16"/>
+    <path d="M265 405 A110 110 0 0 1 485 405" fill="none" stroke="#FFED00" stroke-width="16"/>
+    <path d="M285 405 A90 90 0 0 1 465 405" fill="none" stroke="#008026" stroke-width="16"/>
+    <path d="M305 405 A70 70 0 0 1 445 405" fill="none" stroke="#004DFF" stroke-width="16"/>
+    <path d="M325 405 A50 50 0 0 1 425 405" fill="none" stroke="#750787" stroke-width="16"/>
+    <path d="M375 405 V523 q0 30 -30 30" fill="none" stroke="#073642" stroke-width="11" stroke-linecap="round"/>
+    <text x="375" y="700" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="62" font-weight="700" fill="#002b36">Cavendish Cards</text>
+    <line x1="315" y1="735" x2="435" y2="735" stroke="#2aa198" stroke-width="4"/>
+    <text x="375" y="792" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="28" fill="#586e75">how i feel, what i need</text>
+      <rect x="0.00" y="1000" width="125.60" height="50" fill="#E40303"/>
+      <rect x="125.00" y="1000" width="125.60" height="50" fill="#FF8C00"/>
+      <rect x="250.00" y="1000" width="125.60" height="50" fill="#FFED00"/>
+      <rect x="375.00" y="1000" width="125.60" height="50" fill="#008026"/>
+      <rect x="500.00" y="1000" width="125.60" height="50" fill="#004DFF"/>
+      <rect x="625.00" y="1000" width="125.60" height="50" fill="#750787"/>
+  </g>
+</svg>
