@@ -29,10 +29,11 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 
 ## What's in this repo
 
-- [`cards/`](./cards/) — the deck itself: one card per file, sorted into the six families. This is the source of truth.
-- [`cavendish-cards-starter-deck.md`](./cavendish-cards-starter-deck.md) — the same 50 cards as a single readable list, with image cues and prompts.
+- [`cards/`](./cards/) — the deck itself: one card per file, sorted into the seven families. This is the source of truth.
+- [`cavendish-cards-starter-deck.md`](./cavendish-cards-starter-deck.md) — the same 55 cards as a single readable list, with image cues and prompts.
 - [`CARD.md`](./CARD.md) — the template for adding a new card. Copy it, fill it in, open a pull request.
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per family plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
+- [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction family, whose fixed color+shape designs need no illustrator.
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the five ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 
