@@ -176,4 +176,4 @@ This starter deck is free to use, print, translate, adapt, and remix.
 
 Version: 0.1 (starter draft)
 License: This work is dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
-Repository: proposed at `github.com/Stimpunks/Cavendish-Cards` (one card per file, mirroring the Why Sheets workflow — confirm repo name before first push)
+Repository: `github.com/Stimpunks/Cavendish-Cards`
