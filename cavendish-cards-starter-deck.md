@@ -166,7 +166,7 @@ Roughly a standard deck's size — familiar to hold, easy to spread. "What helps
 
 ## Two card backs
 
-- **Standard back** — the umbrella logo, Solarized palette, Progressive Pride accent, Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
+- **Standard back** — the umbrella logo, Solarized palette, a six-colour rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
 - **Love Locution back** — visibly different, so a gift is never mistaken for a state or a need. It should read, at a glance, as *someone gave me this.*
 
 The distinct back also does the sharing work: a spread laid face-down stays private until the child turns it up. The gesture of turning a card over *is* consent. Sharing is something the child does, not something the deck does to them. Interaction cards are the deliberate exception: their job is to be shown, so they sit face-up, and the child changes them by flipping or swapping — still the child's choice, just worn openly.
