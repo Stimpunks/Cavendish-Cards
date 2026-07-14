@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
+  <rect x="60" y="60" width="34" height="34" rx="9" fill="#1E8E3E"/>
+  <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#2C2C2A">interaction</text>
+  <rect x="60" y="150" width="630" height="620" rx="24" fill="#1E8E3E"/>
+  <circle cx="375" cy="432" r="132" fill="#ffffff" stroke="#00000033" stroke-width="4"/>
+  <text x="375" y="655" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="34" font-weight="500" fill="#ffffff" letter-spacing="2">green</text>
+  <text x="60" y="862" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="66" font-weight="700" fill="#002b36">come say hi</text>
+  <text x="60" y="922" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" fill="#586e75">i want to talk — you can start.</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
+  <rect x="60" y="60" width="34" height="34" rx="9" fill="#FFFFFF" stroke="#d9d2bb" stroke-width="2"/>
+  <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#2C2C2A">interaction</text>
+  <rect x="60" y="150" width="630" height="620" rx="24" fill="#FFFFFF" stroke="#d9d2bb" stroke-width="2"/>
+  <polygon points="375,298 512,432 375,566 238,432" fill="none" stroke="#2C2C2A" stroke-width="7" stroke-linejoin="round"/>
+  <text x="375" y="655" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="34" font-weight="500" fill="#2C2C2A" letter-spacing="2">neutral</text>
+  <text x="60" y="862" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="66" font-weight="700" fill="#002b36">i've got this</text>
+  <text x="60" y="922" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" fill="#586e75">i can do my own hellos.</text>
+</svg>
