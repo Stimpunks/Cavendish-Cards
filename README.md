@@ -31,6 +31,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`cards/`](./cards/) — the deck itself: one card per file, sorted into the six families. This is the source of truth.
 - [`cavendish-cards-starter-deck.md`](./cavendish-cards-starter-deck.md) — the same 50 cards as a single readable list, with image cues and prompts.
 - [`CARD.md`](./CARD.md) — the template for adding a new card. Copy it, fill it in, open a pull request.
+- [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per family plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the five ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 
@@ -40,7 +41,7 @@ One deck, across the age range: **show me** (early years), **build my day** (a c
 
 ## Contributing
 
-The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing. Always capitalize Autistic and Disabled.
+The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing. Always capitalize Autistic and Disabled. Illustrators: the card frames live in [`assets/templates/`](./assets/templates/) — drop artwork into the art slot and keep the frame.
 
 ## License
 
