@@ -5,6 +5,7 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 > **How to use this template (delete this block before you commit)**
 > 
 > - Fill in every field below the line. Keep the `## License` block.
+> - The card's name is the H1 at the very top (`# something soft`) — there is no separate name field.
 > - Filename: `cards/<family>/<card-name>.md` — lowercase, hyphens, no spaces. Example: `cards/what-helps/headphones.md`.
 > - Everything is sentence case. Always capitalize Autistic and Disabled.
 > - Art is human- and community-made. The image cue is a motif for an illustrator, not finished art — don't paste AI-generated images.
@@ -13,6 +14,8 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 > - Look at `cavendish-cards-starter-deck.md` for fifty worked examples before you write yours.
 
 ---- 
+
+# [ the card's name ]
 
 ## Family
 
@@ -29,12 +32,6 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 | grower        | pink   |
 | love locution | coral  |
 | blank         | gray   |
-
-## Name
-
-<!-- The words under the picture. Short. Sentence case. A child never has to read them. -->
-
-`[ the words under the picture ]`
 
 ## Image cue
 
@@ -62,7 +59,5 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 This card is free to use, print, translate, adapt, and remix.
 
 Version: 0.1
-License: This work is dedicated to the public domain under [CC0 1.0][1]. Home: https://stimpunks.org/projects/cavendish-space-project/
+License: This work is dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
 Repository: `github.com/Stimpunks/Cavendish-Cards`
-
-[1]:	https://creativecommons.org/publicdomain/zero/1.0/

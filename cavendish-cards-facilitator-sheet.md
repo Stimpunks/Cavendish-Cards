@@ -46,6 +46,4 @@ Broken systems, not broken people. The deck exists so a child can shape the spac
 
 ---- 
 
-Free to use, print, and adapt. [CC0 1.0][1]. Home: https://stimpunks.org/projects/cavendish-space-project/
-
-[1]:	https://creativecommons.org/publicdomain/zero/1.0/
+Free to use, print, and adapt. [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
