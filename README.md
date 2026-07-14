@@ -1,6 +1,6 @@
 # Cavendish Cards
 
-A deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading is needed to play.
+Cavendish Cards is an open deck for naming sensory and interaction needs — you point at a card, or lay a few, and no reading is required to play. When a child lays down cave, buzzy, headphones, they've handed you a design brief, not a behavior report.
 
 Cavendish Cards come out of the [Cavendish Space Project](https://stimpunks.org/projects/cavendish-space-project/) — an open experiment in designing environments that work for real neurodivergent and Disabled bodies and minds. The deck lets a child shape the space around them, and lets the people beside them read what that child needs without asking a child to explain in words they may not have.
 
