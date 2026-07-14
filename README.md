@@ -13,6 +13,18 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 - **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand.
 - **The child controls sharing.** A spread laid face-down stays private. Turning a card up is the child sharing it. The turn is the consent — you don't turn their cards over for them.
 
+## Not a screening tool
+
+The deck augments a child's legibility to the people around them — on the child's own terms. It does not screen a child's inner world for institutional convenience. It makes needs sayable; it does not make children assessable. A spread is self-advocacy in the child's hands, never data gathered about them.
+
+It carries none of the frameworks that turn human difference into a problem to be managed:
+
+- **No pathology paradigm.** A card names a need, not a symptom. "Buzzy" describes an environment that is too much — not a disorder inside the child.
+- **No deficit ideology.** The deck records what helps, never what a child lacks. If it isn't working, the environment is what hasn't fit yet.
+- **No behaviorism.** No card is a target, a reward, or a compliance check. Turning a card up is communication, not performance — never something to shape a child toward "better" behavior.
+
+Used to sort, score, rank, or flag children, the deck becomes the opposite of what it is for.
+
 ## The seven families
 
 Every card is pictorial first. The words are for the adults; a child never has to read to play.
@@ -43,7 +55,7 @@ One deck, across the age range: **show me** (early years), **build my day** (a c
 
 ## Contributing
 
-The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing. Always capitalize Autistic and Disabled. Illustrators: the card frames live in [`assets/templates/`](./assets/templates/) — drop artwork into the art slot and keep the frame.
+The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing — nothing that reads a card as a symptom, a target, or a reward. Always capitalize Autistic and Disabled. Illustrators: the card frames live in [`assets/templates/`](./assets/templates/) — drop artwork into the art slot and keep the frame.
 
 ## License
 

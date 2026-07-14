@@ -54,6 +54,8 @@ Stuck is a lily pad. It's a place to land, not a failure. Read it as information
 
 **If it's not working, it's not the child.**
 
+**Not a screening tool.** A spread is the child telling you something — not you assessing them. No pathology paradigm, no deficit ideology, no behaviorism: a card names a need, never a symptom or a target.
+
 Broken systems, not broken people. The deck exists so a child can shape the space around them — and so the people beside them can read what they need without asking a child to explain in words they may not have.
 
 ---- 
