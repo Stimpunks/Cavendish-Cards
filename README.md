@@ -13,7 +13,7 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 - **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand.
 - **The child controls sharing.** A spread laid face-down stays private. Turning a card up is the child sharing it. The turn is the consent — you don't turn their cards over for them.
 
-## The six families
+## The seven families
 
 Every card is pictorial first. The words are for the adults; a child never has to read to play.
 
@@ -23,6 +23,7 @@ Every card is pictorial first. The words are for the adults; a child never has t
 - **Lily pads** — the in-between: i need a minute, watch first, coming back, stuck.
 - **Growers** — who am I today: dandelion, tulip, orchid.
 - **Love Locutions** — affirmations, given never earned: you belong here, you're not broken.
+- **Interaction** — how open I am to talking, right now: come say hi, people i know, not right now. The Autistic community's color communication badges, brought into the deck.
 
 Plus a **blank card** — the deck isn't finished. A child or a facilitator draws the need that's missing, and if it's good, it becomes a card. The community authors the deck by using it.
 

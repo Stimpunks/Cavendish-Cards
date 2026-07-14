@@ -21,7 +21,7 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 
 <!-- Pick one. The family sets the card's color. -->
 
-`[ places | weather | what-helps | lily-pad | grower | love-locution | blank ]`
+`[ places | weather | what-helps | lily-pad | grower | love-locution | interaction | blank ]`
 
 | Family        | Color  |
 | ------------- | ------ |
@@ -31,6 +31,7 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 | lily pad      | green  |
 | grower        | pink   |
 | love locution | coral  |
+| interaction   | varies — green, yellow, red, neutral, orange (fixed per card) |
 | blank         | gray   |
 
 ## Image cue
