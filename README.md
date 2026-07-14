@@ -6,7 +6,7 @@ Cavendish Cards come out of the [Cavendish Space Project](https://stimpunks.org/
 
 Inspired by oracle decks, but these are not oracle cards. They are pictorial prompt cards.
 
-**Broken systems, not broken people.** A child laying *cave, buzzy, headphones* has handed you a design brief, not a behaviour report.
+**Broken systems, not broken people.** A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
 ## Two rules hold the whole thing up
 

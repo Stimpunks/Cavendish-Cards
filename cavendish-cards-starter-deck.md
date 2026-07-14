@@ -4,7 +4,7 @@ A pictorial deck for naming sensory and niche-construction needs. Point at a car
 
 The starter deck is **55 cards** across seven families, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
-Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behaviour report.
+Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
 ---- 
 
@@ -16,7 +16,7 @@ Each card is one small spec:
 - **Image cue** — a motif for the illustrator. All deck art is human- and community-made; these are starting points, not finished art.
 - **Prompt** — an optional line an adult can voice, or an older child can read. Gentle, never a demand.
 
-Sentence case throughout. Always capitalise Autistic and Disabled.
+Sentence case throughout. Always capitalize Autistic and Disabled.
 
 ---- 
 
@@ -49,7 +49,7 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 | far-away | a small figure at the end of a long view | A bit distant, floating off.        |
 | fizzy    | happy bubbles rising                     | Excited, in a good way.             |
 | stormy   | big clouds about to break                | Big feelings, close to the edge.    |
-| warm     | a cosy glow, wrapped up                  | Settled and safe.                   |
+| warm     | a cozy glow, wrapped up                  | Settled and safe.                   |
 
 ---- 
 
@@ -124,7 +124,7 @@ Affirmations. Given between people, never earned, never a reward for behaving. D
 
 ## Interaction (5)
 
-How open I am to talking, right now. The Autistic community's colour communication badges — Autism Network International, the first Autreat, Jim Sinclair, 1996 — brought into the deck. Colour and shape are redundant, so the cards work for colourblind readers: keep both. These are the deck's one exception to the face-down default. Their whole job is to be shown, and they can be worn and flipped as status changes. See https://stimpunks.org/access/interaction/.
+How open I am to talking, right now. The Autistic community's color communication badges — Autism Network International, the first Autreat, Jim Sinclair, 1996 — brought into the deck. Color and shape are redundant, so the cards work for colorblind readers: keep both. These are the deck's one exception to the face-down default. Their whole job is to be shown, and they can be worn and flipped as status changes. See https://stimpunks.org/access/interaction/.
 
 | Name          | Image cue                     | Prompt                            |
 | ------------- | ----------------------------- | --------------------------------- |
@@ -138,7 +138,7 @@ How open I am to talking, right now. The Autistic community's colour communicati
 
 ## Blank cards (2 in a starter set)
 
-Not enumerated — a template. A blank front, the family colours down one edge so it can join any family. A child or a staff member draws the need the deck doesn't have yet. This is the sketch-based play from the brief, and it is how the community authors the deck: use it, find the gap, draw the card, send it in.
+Not enumerated — a template. A blank front, the family colors down one edge so it can join any family. A child or a staff member draws the need the deck doesn't have yet. This is the sketch-based play from the brief, and it is how the community authors the deck: use it, find the gap, draw the card, send it in.
 
 | Name          | Image cue                 | Prompt                                   |
 | ------------- | ------------------------- | ---------------------------------------- |
@@ -166,7 +166,7 @@ Roughly a standard deck's size — familiar to hold, easy to spread. "What helps
 
 ## Two card backs
 
-- **Standard back** — the umbrella logo, Solarized palette, a six-colour rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
+- **Standard back** — the umbrella logo, Solarized palette, a six-color rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
 - **Love Locution back** — visibly different, so a gift is never mistaken for a state or a need. It should read, at a glance, as *someone gave me this.*
 
 The distinct back also does the sharing work: a spread laid face-down stays private until the child turns it up. The gesture of turning a card over *is* consent. Sharing is something the child does, not something the deck does to them. Interaction cards are the deliberate exception: their job is to be shown, so they sit face-up, and the child changes them by flipping or swapping — still the child's choice, just worn openly.
