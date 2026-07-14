@@ -5,7 +5,7 @@ A deck for naming sensory and niche-construction needs. Point at a card, or lay 
 **Two rules hold the whole thing up.**
 
 - **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand.
-- **The child controls sharing.** A spread laid face-down stays private. Turning a card up is the child sharing it. The turn is the consent — you don't turn their cards over for them.
+- **The child controls sharing.** Turning a card up is the child sharing it; the turn is the consent. You don't turn their cards over for them.
 
 ---- 
 
@@ -25,6 +25,18 @@ Walk the lily-pad cards across a timetable. Find where the hard transitions actu
 
 **Play as the environment** — *staff training*
 Deal a table of what-helps cards with needs that conflict — room to move against less talking, just one person against a full group. Build one habitat that holds them all. You'll feel neurological pluralism instead of hearing about it. Twenty minutes.
+
+---- 
+
+## Sharing is the child's
+
+The turn of a card is the consent. It plays out three ways:
+
+- **Kept** — the spread stays face-down. Nothing is read until the child turns something up.
+- **Shown by invitation** — the child hands the spread to one person they pick. A deliberate act, not standing permission.
+- **Ambient only** — in group play, only the room's weather shows. No individual's cards, ever.
+
+Interaction cards are the exception — they're made to be shown.
 
 ---- 
 
