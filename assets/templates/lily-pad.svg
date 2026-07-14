@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <!-- Cavendish Cards front template — lily pad. CC0. Font: Atkinson Hyperlegible.
+       Replace the group #art-placeholder with human-made artwork, clipped to the bounds of #art. -->
+  <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
+
+  <!-- family tag -->
+  <rect x="60" y="60" width="34" height="34" rx="9" fill="#3B6D11"/>
+  <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#173404">lily pad</text>
+
+  <!-- art window: the slot artwork drops into -->
+  <rect id="art" x="60" y="150" width="630" height="620" rx="24" fill="#fdf6e3" stroke="#3B6D11" stroke-width="3" stroke-dasharray="11 9"/>
+  <g id="art-placeholder">
+    <path d="M110 170 H80 V200" fill="none" stroke="#3B6D11" stroke-width="3" stroke-linecap="square"/>
+    <path d="M640 170 H670 V200" fill="none" stroke="#3B6D11" stroke-width="3" stroke-linecap="square"/>
+    <path d="M80 720 V750 H110" fill="none" stroke="#3B6D11" stroke-width="3" stroke-linecap="square"/>
+    <path d="M670 720 V750 H640" fill="none" stroke="#3B6D11" stroke-width="3" stroke-linecap="square"/>
+    <text x="375" y="452" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="26" font-weight="500" fill="#93a1a1" letter-spacing="1.5">PLACE ART HERE</text>
+    <text x="375" y="488" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="19" fill="#93a1a1">place inside the dashed frame</text>
+  </g>
+
+  <!-- name (the card's H1) -->
+  <text x="60" y="862" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="66" font-weight="700" fill="#002b36">i need a minute</text>
+
+  <!-- prompt -->
+  <text x="60" y="922" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" fill="#586e75">Pausing here. Not leaving.</text>
+</svg>
