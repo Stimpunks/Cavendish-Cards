@@ -8,6 +8,8 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 
 **Broken systems, not broken people.** A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
+**[Play it on the web](https://cavendish-cards.netlify.app/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
+
 ## Two rules hold the whole thing up
 
 - **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand. Just a gentler way for a child to be understood.
@@ -53,6 +55,9 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
 - [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
 - [`scripts/build-playtest-pdf.py`](./scripts/build-playtest-pdf.py) — lays the placeholders out as a print-and-play PDF.
+- [`web/`](./web/) — the playable web version, live at [cavendish-cards.netlify.app](https://cavendish-cards.netlify.app/). A static site generated from the cards; see its [README](./web/README.md).
+- [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck (`cards.json` and faces) from the card files.
+- [`netlify.toml`](./netlify.toml) — Netlify build configuration.
 
 ## Guidebook
 
@@ -69,6 +74,10 @@ No dependencies; it writes `cavendish-cards-guidebook.md` and prints a per-famil
 ## Five ways to play
 
 One deck, across the age range: **show me** (early years), **build my day** (a child and a support worker), **class weather** (a whole group), **map the edges** (older kids), and **play as the environment** (staff training). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
+
+## Play it on the web
+
+The deck is playable online at **[cavendish-cards.netlify.app](https://cavendish-cards.netlify.app/)** — browse and filter the cards, then lay a spread where each card starts face-down and you turn it up to share it. No scoring, no accounts, nothing stored. It's a static site generated from the card files and deployed from this repo by Netlify, so it stays in sync with the deck. See [`web/README.md`](./web/README.md).
 
 ## Playtesting before the art exists
 
