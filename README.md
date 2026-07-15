@@ -47,9 +47,12 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`CARD.md`](./CARD.md) — the template for adding a new card. Copy it, fill it in, open a pull request.
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per family plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction family, whose fixed color+shape designs need no illustrator.
+- [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the five ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
+- [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
+- [`scripts/build-playtest-pdf.py`](./scripts/build-playtest-pdf.py) — lays the placeholders out as a print-and-play PDF.
 
 ## Guidebook
 
@@ -66,6 +69,17 @@ No dependencies; it writes `cavendish-cards-guidebook.md` and prints a per-famil
 ## Five ways to play
 
 One deck, across the age range: **show me** (early years), **build my day** (a child and a support worker), **class weather** (a whole group), **map the edges** (older kids), and **play as the environment** (staff training). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
+
+## Playtesting before the art exists
+
+Human- and community-made artwork takes time, so the deck can be printed and played now with temporary placeholders — plain, code-drawn stand-ins (an "image pending" glyph plus each card's image-cue text), never illustrations. From the repo root:
+
+```
+python3 scripts/build-placeholders.py     # writes assets/playtest/<family>/<slug>.svg
+python3 scripts/build-playtest-pdf.py     # writes cavendish-cards-playtest.pdf, nine cards a page with cut lines
+```
+
+The placeholder generator has no dependencies; the PDF builder needs `cairosvg` and `weasyprint`. Both read the card files, so the output always matches the deck. When real art arrives it drops into the template's art slot and the finished face moves into [`assets/cards/`](./assets/cards/). See [`assets/playtest/README.md`](./assets/playtest/README.md).
 
 ## Contributing
 
