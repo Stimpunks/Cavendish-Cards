@@ -143,6 +143,11 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 
 .table-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
+.breakbar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 0; }
+.break-panel { background: var(--panel); border-bottom: 1px solid var(--line); }
+.break-panel .wrap { padding-top: 14px; padding-bottom: 16px; }
+.break-panel p { margin: 0 0 10px; max-width: 60ch; font-size: 1.05rem; }
+
 .gb { padding-top: 8px; }
 .gb-family { margin: 0 0 30px; }
 .gb-family > .muted { max-width: 70ch; margin: 0 0 14px; }

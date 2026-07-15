@@ -199,6 +199,25 @@
     blurbEl = document.getElementById('family-blurb');
     liveEl = document.getElementById('live');
 
+    var breakToggle = document.getElementById('break-toggle');
+    var breakPanel = document.getElementById('break-panel');
+    var breakClose = document.getElementById('break-close');
+    if (breakToggle && breakPanel) {
+      breakToggle.addEventListener('click', function () {
+        var opening = breakPanel.hidden;
+        breakPanel.hidden = !opening;
+        breakToggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
+        if (opening && breakClose) breakClose.focus();
+      });
+      if (breakClose) {
+        breakClose.addEventListener('click', function () {
+          breakPanel.hidden = true;
+          breakToggle.setAttribute('aria-expanded', 'false');
+          breakToggle.focus();
+        });
+      }
+    }
+
     fetch('cards.json')
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(start)

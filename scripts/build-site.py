@@ -32,8 +32,12 @@ def _load_placeholders():
     return mod
 
 
-# All families, in deck order, with display name and a short player-facing intro.
+# Family display order on the web (interaction first, per playtest feedback),
+# with display name and a short player-facing intro.
 FAMILIES = [
+    ("interaction", "Interaction",
+     "How open you are to talking right now — from “come say hi” to "
+     "“not right now.” Made to be shown or worn."),
     ("places", "Places",
      "The kind of space that fits right now — a quiet cave, a small campfire, "
      "an easy watering hole, a library, or the whole habitat around them."),
@@ -54,9 +58,6 @@ FAMILIES = [
     ("love-locution", "Love Locutions",
      "Kind things to give another person — said, not earned. Little affirmations "
      "you can hand to someone."),
-    ("interaction", "Interaction",
-     "How open you are to talking right now — from \u201ccome say hi\u201d to "
-     "\u201cnot right now.\u201d Made to be shown or worn."),
     ("blank", "Blank",
      "The card that isn't here yet. Draw or write your own."),
 ]
