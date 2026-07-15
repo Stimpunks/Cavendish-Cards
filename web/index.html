@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cavendish Cards</title>
+  <meta name="description" content="A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the deck</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Cavendish Cards</h1>
+      <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few &mdash; no reading needed to play.</p>
+
+      <div class="rules" role="note" aria-label="The two rules">
+        <p><strong>No scoring.</strong> No points, no right answer, no winning. There is no wrong card and no wrong hand.</p>
+        <p><strong>You choose what to share.</strong> Cards on the table stay face-down until you turn them up. Turning a card up is you sharing it.</p>
+      </div>
+
+      <details class="disclose">
+        <summary>Not a screening tool</summary>
+        <p>This deck helps a person say what they need, on their own terms. It is not a way to assess, score, or sort anyone. A card names a need, never a symptom or a target.</p>
+      </details>
+
+      <details class="disclose">
+        <summary>Five ways to play</summary>
+        <ul>
+          <li><strong>Show me</strong> &mdash; pick the one card that&rsquo;s you right now.</li>
+          <li><strong>Build my day</strong> &mdash; lay a place, a weather, and a couple of what-helps cards.</li>
+          <li><strong>Class weather</strong> &mdash; everyone lays a weather card, and the room&rsquo;s weather becomes visible. No one is named.</li>
+          <li><strong>Map the edges</strong> &mdash; walk the lily-pad cards across a timetable to find the hard transitions.</li>
+          <li><strong>Play as the environment</strong> &mdash; lay what-helps cards that conflict, and build one space that holds them all.</li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section aria-labelledby="deck-h">
+      <div class="section-head">
+        <h2 id="deck-h">The deck</h2>
+        <p class="muted" id="deck-hint">Choose a card to lay it on the table.</p>
+      </div>
+      <div id="filters" class="filters" role="group" aria-label="Filter by family"></div>
+      <div id="deck" class="deck-grid" aria-describedby="deck-hint"></div>
+    </section>
+
+    <section aria-labelledby="table-h" class="table-section">
+      <div class="section-head">
+        <h2 id="table-h">The table</h2>
+        <button id="clear" type="button" class="btn ghost" hidden>Clear the table</button>
+      </div>
+      <p id="table-empty" class="muted">Nothing laid down yet. Choose cards from the deck above &mdash; they arrive face-down, and you turn them up when you want to share them.</p>
+      <ul id="table" class="table-grid" aria-label="Cards on the table"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source and full deck on GitHub</a>.</p>
+    </div>
+  </footer>
+
+  <div id="live" class="visually-hidden" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Netlify build configuration for Cavendish Cards.
+#
+# On each deploy, Netlify runs the generator (which reads the card files and
+# writes web/cards.json and web/faces/), then publishes the web/ folder.
+# The generator is pure Python standard library; Netlify's build image
+# already includes python3.
+
+[build]
+  command = "python3 scripts/build-site.py"
+  publish = "web"
