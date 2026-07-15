@@ -47,11 +47,17 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 
 `[ a gentle line, or — for none ]`
 
-## Notes (optional)
+## Notes
 
-<!-- Anything a facilitator should know: when it tends to come up, what it pairs with, what it is NOT. Delete if empty. -->
+<!-- This is the card's guidebook entry. Every card gets one; they are assembled into the deck's guidebook.
+     Write in the third person, about the card — never about the child. Keep the same short arc:
+       1. The metaphor — what the image is.
+       2. What it names — the experience or need it points to, in the child's frame.
+       3. How to hold it — one line for the adult, always environment-facing.
+     Describe the card, not the child. A card is never a diagnosis, a trait, or a verdict on the person holding it.
+     Two to five sentences. Name a lineage where the metaphor has one. Capitalize Autistic and Disabled. -->
 
-`[ optional context ]`
+`[ guidebook entry — see above ]`
 
 ---- 
 

@@ -12,6 +12,10 @@ figures resting easy near water
 
 A soft place to pause and be near people.
 
+## Notes
+
+The watering hole is the open, in-between place where people cross paths and talk easily — near others, without being required to engage. It names loose, ambient sociability: drifting in and out, overhearing, being among people without a task or a script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge — being near people is the whole point, and joining in stays optional.
+
 ----
 
 ## License
