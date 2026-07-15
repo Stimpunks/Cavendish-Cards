@@ -35,6 +35,11 @@ The library is where what a group has figured out is kept and shared — shelves
 
 The watering hole is the open, in-between place where people cross paths and talk easily — near others, without being required to engage. It names loose, ambient sociability: drifting in and out, overhearing, being among people without a task or a script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge — being near people is the whole point, and joining in stays optional.
 
+### your own
+*a blank card and a pencil* · "A space that isn't here yet."
+
+It names the gap: a place no card catches. When this card is out, draw or write the missing one together — the deck grows from what people actually need.
+
 ----
 
 ## Weather
@@ -91,6 +96,11 @@ Stormy is big clouds about to break — pressure built up, feeling close to the 
 
 Warm is a cozy glow, wrapped up — settled, safe, at ease. It names calm security: regulated, comfortable, no alarm anywhere. Naming the good weather matters as much as naming the hard, so it can be recognized and returned to. When this card is out, notice the conditions that made it — and remember them, because they are the recipe worth repeating.
 
+### your own
+*a blank card and a pencil* · "A feeling that isn't here yet."
+
+It names the gap: a weather no card catches. When this card is out, draw or write the missing one together — the deck grows from what people actually need.
+
 ----
 
 ## What helps
@@ -101,6 +111,16 @@ _The niche-construction pieces: the ways we change the environment so it fits._
 *deep pressure, a weighted wrap* · "Firm pressure that steadies me."
 
 A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. It names the calming pull of proprioceptive input: firm pressure that many bodies find organizing when lighter touch would not. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only ever the pressure they ask for, on their terms.
+
+### a smell that helps
+*a hand near a scented thing* · "A smell that settles me, or less of one."
+
+A card for the nose. It names scent as a real sensory need — a calming smell to bring close, or an overwhelming one that has to go. Smell is easy for others to miss and hard to ignore when it's wrong. When this card is out, change the air rather than the person.
+
+### a snack or a drink
+*a cup and a small snack* · "Something to eat or drink."
+
+It names a body need that quietly derails everything else — hunger, thirst, low fuel. This is maintenance, not being off-task. When this card is out, meet it without making it a negotiation.
 
 ### a steady sound
 *a gentle repeating wave* · "A calm sound to rest on."
@@ -167,6 +187,11 @@ Something to chew is a chewy tool — safe oral input, a chew or a crunch. It na
 
 Tell me first is a small heads-up sign — warning before a change. It names a need for predictability: knowing what's coming so a transition doesn't arrive as a shock. Surprise is expensive for many nervous systems; a heads-up is cheap to give. When this card is out, narrate changes in advance — say what's next before it happens, every time you can.
 
+### your own
+*a blank card and a pencil* · "Something else that helps."
+
+It names the gap: a help no card catches. When this card is out, draw or write the missing one together — the deck grows from what people actually need.
+
 ----
 
 ## Lily pads
@@ -187,6 +212,11 @@ _The in-between. Every card is a landing place, not a failure._
 *a figure resting on a lily pad* · "Pausing here. Not leaving."
 
 "I need a minute" is a figure resting on a lily pad mid-crossing — a pause, not a departure. It names the need to stop briefly and gather before going on: still engaged, just not moving yet. A pause is part of the crossing, not a refusal of it. When this card is out, hold the moment open — stop the clock, don't fill the silence, and let the minute actually be a minute.
+
+### i want to stay a while
+*a figure settled on a lily pad* · "I'm good here. Let me stay."
+
+It names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to remain is as valid as wanting to move on. When this card is out, let the staying stand; don't hurry the crossing because the schedule wants it.
 
 ### not yet
 *a gentle raised hand* · "I'm not ready to move."
@@ -213,6 +243,11 @@ _The in-between. Every card is a landing place, not a failure._
 
 "Watch first" is a pair of eyes at the edge of a group — observing before entering. It names a real way of joining in: taking part by watching until the shape of things is clear enough to step into. Watching is participation, not shyness to be pushed past. When this card is out, let the watching stand — no coaxing to join, and count the edge of the group as being in it.
 
+### your own
+*a blank card and a pencil* · "A moment that isn't here yet."
+
+It names the gap: a moment no card catches. When this card is out, draw or write the missing one together — the deck grows from what people actually need.
+
 ----
 
 ## Growers
@@ -233,6 +268,11 @@ The orchid blooms brilliantly, but only in the conditions it actually needs — 
 *a tulip in a tended bed* · "I do well with the right care."
 
 The tulip does well in ordinary good conditions — a tended bed, its own season — neither as unkillable as the dandelion nor as exacting as the orchid. It names the wide middle: thriving reliably once the basics are in place, with honest limits when they are not. Tulip is the middle grower added to Boyce and Ellis's original orchid-and-dandelion pair. When this card is out, the ask is plain: meet the ordinary conditions well, and don't mistake low-maintenance for no needs.
+
+### your own
+*a blank card and a pencil* · "Another way of growing."
+
+It names the gap: a way of growing no card catches. When this card is out, draw or write the missing one together — the deck grows from what people actually need.
 
 ----
 
@@ -260,6 +300,16 @@ _Affirmations. Given between people, never earned — a gift, never a reward._
 
 "Nothing to fix" is a whole thing left as it is — an absence of the repair impulse. It affirms acceptance over correction: you are not a project, and this moment does not require improving you. The urge to fix a person often does the harm. When this card is given, set the fixing down — be with the person as they are, rather than working on them.
 
+### parallel existence
+*two figures side by side, each in their own world* · given, not read
+
+Companionship without the demand to interact — near someone, doing your own things, together and unpressured. For many people this is the most comfortable closeness there is. When this card is given, it offers company that costs nothing: stay near, expect nothing.
+
+### penguin pebbling
+*a small pebble offered in an open hand* · given, not read
+
+Penguins give each other pebbles. It names showing love by sharing small things — a rock, a link, a fact, a song. Handing someone a pebble says "I was thinking of you" in the language many Autistic people actually use. When this card is given, receive the pebble as the affection it is, not a tangent.
+
 ### you belong here
 *a hand held out, welcoming* · given, not read
 
@@ -269,6 +319,11 @@ _Affirmations. Given between people, never earned — a gift, never a reward._
 *a soft place to lie down* · given, not read
 
 "You can rest" is a soft place to lie down — permission to stop. It affirms that rest is allowed and earned by no one: you may stop striving, and nothing bad follows. Rest withheld until it's "deserved" isn't rest. When this card is given, make the permission real — clear the demands, and let stopping be genuinely safe.
+
+### your own
+*a blank card and a pencil* · given, not read
+
+It names the gap: a kind thing to give that no card holds yet. When this card is given, make or write your own — the deck grows from what people actually offer each other.
 
 ### your way is a real way
 *many paths, all valid* · given, not read
@@ -310,6 +365,11 @@ The red square is the "not right now" badge. It names a closed door to being app
 *white triangle on yellow* · "only say hi if we've met."
 
 The yellow triangle is the "only people I know" badge. It names a narrowed door: the person wants interaction only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger — wait to be known or greeted first — and keep the triangle, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the color communication badges from Autism Network International and the first Autreat, Jim Sinclair, 1996 — https://stimpunks.org/access/interaction/
+
+### your own
+*a blank badge and a pencil* · "Your own signal."
+
+The interaction badges cover common signals, but not everyone's. It names room for a signal the set doesn't have — your own way of showing how open you are right now. When this card is shown, treat the person's own signal as real, and ask what it means if you're not sure.
 
 ----
 
