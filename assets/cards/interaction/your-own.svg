@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
+  <rect x="60" y="60" width="34" height="34" rx="9" fill="#5F5E5A"/>
+  <text x="108" y="87" font-family="'Atkinson Hyperlegible',sans-serif" font-size="30" font-weight="500" fill="#2C2C2A">interaction</text>
+  <rect x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#5F5E5A" stroke-width="3" stroke-dasharray="11 9"/>
+  <rect x="270" y="320" width="210" height="210" rx="26" fill="none" stroke="#5F5E5A" stroke-width="6" opacity="0.7"/>
+  <path d="M332 470 L432 370 L472 410 L372 510 Z" fill="none" stroke="#5F5E5A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <path d="M332 470 L372 510 L328 514 Z" fill="#5F5E5A" opacity="0.7"/>
+  <text x="375" y="632" text-anchor="middle" font-family="'Atkinson Hyperlegible',sans-serif" font-size="27" fill="#2C2C2A" opacity="0.8">make your own signal</text>
+  <text x="60" y="862" font-family="'Atkinson Hyperlegible',sans-serif" font-size="58" font-weight="700" fill="#002b36">your own</text>
+  <text x="60" y="922" font-family="'Atkinson Hyperlegible',sans-serif" font-size="29" fill="#586e75">Your own signal.</text>
+</svg>

@@ -48,8 +48,8 @@ FAMILIES = [
      "Small changes to the space that make things easier — quiet, softer light, "
      "room to move, a way out."),
     ("lily-pad", "Lily pads",
-     "The in-between moments of moving from one thing to the next. Each one is a "
-     "place to pause, not a failure."),
+     "Moments you can drop onto the table anytime — a pause, a not-yet, a "
+     "ready-now. Each is a place to land, not a failure."),
     ("grower", "Growers",
      "How you're growing today, and what you need to do well. Some people are "
      "dandelions and grow almost anywhere; some are tulips and do well with the "
@@ -61,6 +61,10 @@ FAMILIES = [
     ("blank", "Blank",
      "The card that isn't here yet. Draw or write your own."),
 ]
+
+# Families rendered as an always-available "moments" strip rather than a
+# browsable filter (item 8/17 from playtesting).
+MOMENTS = {"lily-pad"}
 
 INTRO = (
     "Cavendish Cards come from the Cavendish Space model — a way of shaping the "
@@ -200,7 +204,9 @@ def main():
             total += 1
         if cards:
             out_families.append({"slug": slug, "name": display,
-                                 "intro": intro, "cards": cards})
+                                 "intro": intro,
+                                 "mode": "moments" if slug in MOMENTS else "browse",
+                                 "cards": cards})
 
     (web / "cards.json").write_text(
         json.dumps({"families": out_families}, ensure_ascii=False, indent=2),

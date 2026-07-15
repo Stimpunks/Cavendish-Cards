@@ -1,8 +1,10 @@
 (function () {
   'use strict';
 
-  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, liveEl;
+  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl;
   var families = [];
+  var browseFamilies = [];
+  var momentFamilies = [];
   var bySlug = {};
   var active = 'all';
   var laid = [];            // [{slug, up}]
@@ -56,7 +58,7 @@
 
   function renderDeck() {
     deckEl.innerHTML = '';
-    families.forEach(function (f) {
+    browseFamilies.forEach(function (f) {
       if (active !== 'all' && f.slug !== active) return;
       f.cards.forEach(function (c) {
         var b = document.createElement('button');
@@ -69,6 +71,22 @@
           '<span class="tile-name">' + esc(c.name) + '</span>';
         b.addEventListener('click', function () { lay(c.slug); });
         deckEl.appendChild(b);
+      });
+    });
+  }
+
+  function renderMoments() {
+    if (!momentsRow) return;
+    momentsRow.innerHTML = '';
+    momentFamilies.forEach(function (f) {
+      f.cards.forEach(function (c) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'moment-chip';
+        b.textContent = c.name;
+        b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
+        b.addEventListener('click', function () { lay(c.slug); });
+        momentsRow.appendChild(b);
       });
     });
   }
@@ -164,9 +182,11 @@
         c.family = f.slug; c.familyName = f.name; bySlug[c.slug] = c;
       });
     });
+    browseFamilies = families.filter(function (f) { return f.mode !== 'moments'; });
+    momentFamilies = families.filter(function (f) { return f.mode === 'moments'; });
 
     filtersEl.appendChild(mkFilter('all', 'All'));
-    families.forEach(function (f) {
+    browseFamilies.forEach(function (f) {
       filtersEl.appendChild(mkFilter(f.slug, f.name));
     });
 
@@ -186,6 +206,7 @@
     });
 
     renderDeck();
+    renderMoments();
     renderTable();
   }
 
@@ -197,6 +218,7 @@
     doneBtn = document.getElementById('done');
     filtersEl = document.getElementById('filters');
     blurbEl = document.getElementById('family-blurb');
+    momentsRow = document.getElementById('moments-row');
     liveEl = document.getElementById('live');
 
     var breakToggle = document.getElementById('break-toggle');

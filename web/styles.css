@@ -148,6 +148,14 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .break-panel .wrap { padding-top: 14px; padding-bottom: 16px; }
 .break-panel p { margin: 0 0 10px; max-width: 60ch; font-size: 1.05rem; }
 
+.moments { margin-top: 34px; }
+.moments-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.moment-chip {
+  font: inherit; cursor: pointer; padding: 8px 15px; border-radius: 999px;
+  border: 1.5px solid var(--line); background: #fff; color: var(--ink);
+}
+.moment-chip:hover { border-color: var(--cyan); }
+
 .gb { padding-top: 8px; }
 .gb-family { margin: 0 0 30px; }
 .gb-family > .muted { max-width: 70ch; margin: 0 0 14px; }
