@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var deckEl, tableEl, emptyEl, clearBtn, filtersEl, liveEl;
+  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, liveEl;
   var families = [];
   var bySlug = {};
   var active = 'all';
@@ -20,6 +20,20 @@
     window.setTimeout(function () { liveEl.textContent = msg; }, 30);
   }
 
+  function familyBySlug(slug) {
+    for (var i = 0; i < families.length; i++) {
+      if (families[i].slug === slug) return families[i];
+    }
+    return null;
+  }
+
+  function updateBlurb(slug) {
+    if (slug === 'all') { blurbEl.hidden = true; blurbEl.textContent = ''; return; }
+    var fam = familyBySlug(slug);
+    if (fam && fam.intro) { blurbEl.textContent = fam.intro; blurbEl.hidden = false; }
+    else { blurbEl.hidden = true; blurbEl.textContent = ''; }
+  }
+
   function mkFilter(slug, label) {
     var b = document.createElement('button');
     b.type = 'button';
@@ -34,6 +48,7 @@
         kids[i].setAttribute('aria-pressed',
           kids[i].dataset.slug === slug ? 'true' : 'false');
       }
+      updateBlurb(slug);
       renderDeck();
     });
     return b;
@@ -69,6 +84,7 @@
     tableEl.innerHTML = '';
     emptyEl.hidden = laid.length > 0;
     clearBtn.hidden = laid.length === 0;
+    doneBtn.hidden = laid.length === 0;
 
     laid.forEach(function (item, i) {
       var c = bySlug[item.slug];
@@ -161,6 +177,14 @@
       announce('Cleared the table.');
     });
 
+    doneBtn.addEventListener('click', function () {
+      if (!laid.length) return;
+      laid.forEach(function (x) { x.up = true; });
+      pendingFocus = null;
+      renderTable();
+      announce('Turned all the cards face-up.');
+    });
+
     renderDeck();
     renderTable();
   }
@@ -170,7 +194,9 @@
     tableEl = document.getElementById('table');
     emptyEl = document.getElementById('table-empty');
     clearBtn = document.getElementById('clear');
+    doneBtn = document.getElementById('done');
     filtersEl = document.getElementById('filters');
+    blurbEl = document.getElementById('family-blurb');
     liveEl = document.getElementById('live');
 
     fetch('cards.json')
