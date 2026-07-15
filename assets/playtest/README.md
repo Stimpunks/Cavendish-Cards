@@ -14,7 +14,15 @@ python3 scripts/build-placeholders.py
 
 No dependencies. It reads each card's name, image cue, and prompt and writes `assets/playtest/<family>/<slug>.svg`. Interaction cards are skipped — they already have finished faces in [`../cards/interaction/`](../cards/interaction/).
 
-A ready-to-print **print-and-play PDF** of all placeholders (nine cards per US-Letter page, with cut borders) can be assembled from these SVGs for quick table testing.
+## Print-and-play PDF
+
+For a ready-to-print sheet — nine cards per US-Letter page, with cut borders — run [`../../scripts/build-playtest-pdf.py`](../../scripts/build-playtest-pdf.py) from the repo root:
+
+```
+python3 scripts/build-playtest-pdf.py
+```
+
+It reuses the placeholder generator, so the PDF always matches these cards, and writes `cavendish-cards-playtest.pdf` at the repo root. Unlike the SVG generator, it needs two libraries: `pip install cairosvg weasyprint` (WeasyPrint also needs system libraries — Pango, cairo, GDK-PixBuf — see its [install notes](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)).
 
 ## When real art arrives
 
