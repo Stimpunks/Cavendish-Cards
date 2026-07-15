@@ -12,6 +12,10 @@ two figures, side by side
 
 Not a crowd — one person.
 
+## Notes
+
+Just one person is two figures side by side — one companion, not a crowd. It names a need to narrow the social field: one trusted person at a time, where a group would overwhelm. Preferring one-to-one is a real access need, not antisocial. When this card is out, thin the crowd — offer a single steady person, and don't require group participation to count as taking part.
+
 ----
 
 ## License

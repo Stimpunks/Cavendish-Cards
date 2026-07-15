@@ -12,6 +12,10 @@ a fidget in motion
 
 Something for my hands to do.
 
+## Notes
+
+Busy hands is a fidget in motion — something for the hands to work while the rest attends. It names a need for occupied hands: a fidget, a texture, a small motion that steadies attention rather than splitting it. Hands that move are often how a person listens. When this card is out, let the hands be busy; the fidget is helping, not distracting.
+
 ----
 
 ## License

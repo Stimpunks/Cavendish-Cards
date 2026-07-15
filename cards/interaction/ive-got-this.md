@@ -14,7 +14,7 @@ i can do my own hellos.
 
 ## Notes
 
-White, neutral badge. The wearer manages their own interaction — approach normally. The diamond is a Stimpunks addition: white has no canonical shape, so the diamond keeps the neutral card distinct for colorblind readers. Meant to be shown, and can be worn or flipped as live status. From the neutral (white, or no badge) convention documented at https://stimpunks.org/access/interaction/
+The neutral card — a dark diamond on white — is the "I manage my own interaction" badge. It names an ordinary open state: approach normally, and the person will handle their own hellos. When this card is shown, just interact as usual — and keep the diamond, a Stimpunks addition so the neutral card stays distinct for colorblind readers, since white carries no canonical shape. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the neutral (white, or no badge) convention — https://stimpunks.org/access/interaction/
 
 ----
 

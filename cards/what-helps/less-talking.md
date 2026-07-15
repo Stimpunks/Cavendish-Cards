@@ -12,6 +12,10 @@ a hushed mouth, a calm face
 
 Fewer words for a while.
 
+## Notes
+
+Less talking is a hushed mouth and a calm face — fewer words in the air. It names a need to reduce language load: less to process, less to answer, quiet from the demand to keep up a conversation. Silence together can be a relief, not a problem to fill. When this card is out, ease off the words — fewer questions, more room, and don't read the quiet as trouble.
+
 ----
 
 ## License

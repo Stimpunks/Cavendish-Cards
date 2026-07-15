@@ -14,7 +14,7 @@ ask before you touch me.
 
 ## Notes
 
-Orange-star consent badge. It gives permission to *ask* before touching — for example, before a hug. Without it, don't ask. Keep the star: the shape carries the meaning alongside the color, for colorblind readers. Meant to be shown, and can be worn or flipped as live status. From the orange-star convention documented at https://stimpunks.org/access/interaction/
+The orange star is the consent badge. It names a boundary around touch: it gives permission to ask before touching — a hug, a hand — where, without it, you should not ask at all. When this card is shown, ask first and accept the answer — and keep the star, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the orange-star convention — https://stimpunks.org/access/interaction/
 
 ----
 
