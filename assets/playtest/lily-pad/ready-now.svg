@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
+<rect x="60" y="60" width="34" height="34" rx="9" fill="#3B6D11"/>
+<text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#173404">lily pad</text>
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#3B6D11" stroke-width="3" stroke-dasharray="11 9"/>
+<g id="art-placeholder" opacity="0.6">
+<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#3B6D11" stroke-width="4"/>
+<circle cx="334" cy="328" r="12" fill="#3B6D11"/>
+<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#3B6D11"/>
+</g>
+<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#173404" opacity="0.75">a foot stepping forward</text>
+<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">ready now</text>
+<text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">I'm ready to shift.</text>
+</svg>
