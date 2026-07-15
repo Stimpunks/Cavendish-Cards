@@ -66,6 +66,20 @@ FAMILIES = [
 # browsable filter (item 8/17 from playtesting).
 MOMENTS = {"lily-pad"}
 
+# Sense-signpost grouping for the What helps family (display only).
+GROUPS = {
+    "what-helps": [
+        ("Sound", ["headphones", "a-steady-sound", "less-talking"]),
+        ("Light", ["dim-the-light"]),
+        ("Touch", ["something-soft"]),
+        ("Pressure", ["a-big-squeeze"]),
+        ("Movement", ["room-to-move", "busy-hands"]),
+        ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
+        ("People & time", ["just-one-person", "a-way-out", "my-own-spot", "tell-me-first", "no-rush"]),
+        ("Make your own", ["your-own"]),
+    ],
+}
+
 INTRO = (
     "Cavendish Cards come from the Cavendish Space model — a way of shaping the "
     "space around real needs instead of asking people to mask them. The deck "
@@ -169,6 +183,13 @@ def main():
         if not fam_dir.is_dir():
             continue
         cards = []
+        group_map = {}
+        group_order = []
+        used_more = False
+        for glabel, gslugs in GROUPS.get(slug, []):
+            group_order.append(glabel)
+            for gs in gslugs:
+                group_map[gs] = glabel
         for f in sorted(fam_dir.glob("*.md")):
             name, sec = bp.parse_card(f)
             if not name:
@@ -188,6 +209,10 @@ def main():
                 continue
             (faces / f"{cslug}.svg").write_text(face_svg, encoding="utf-8")
 
+            grp = group_map.get(cslug)
+            if group_order and grp is None:
+                grp = "More"
+                used_more = True
             has_prompt = bool(prompt) and prompt != "—"
             back = ("back-love-locution.svg" if slug == "love-locution"
                     else "back-standard.svg")
@@ -200,13 +225,17 @@ def main():
                 "notes": notes,
                 "face": f"faces/{cslug}.svg",
                 "back": f"faces/{back}",
+                "group": grp,
             })
             total += 1
         if cards:
-            out_families.append({"slug": slug, "name": display,
-                                 "intro": intro,
-                                 "mode": "moments" if slug in MOMENTS else "browse",
-                                 "cards": cards})
+            order = group_order + (["More"] if used_more else [])
+            fam_obj = {"slug": slug, "name": display, "intro": intro,
+                       "mode": "moments" if slug in MOMENTS else "browse",
+                       "cards": cards}
+            if order:
+                fam_obj["groupOrder"] = order
+            out_families.append(fam_obj)
 
     (web / "cards.json").write_text(
         json.dumps({"families": out_families}, ensure_ascii=False, indent=2),

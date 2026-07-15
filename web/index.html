@@ -30,7 +30,7 @@
       <h1>Cavendish Cards</h1>
       <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few &mdash; no reading needed to play.</p>
 
-      <p class="intro">Cavendish Cards come from the Cavendish Space model &mdash; a way of shaping the space around real needs instead of asking people to hide them. The cards give you pictures and words for how you feel and what helps, so you can show someone instead of having to explain. New here? <a href="guidebook.html">Start with the guidebook</a>.</p>
+      <p class="intro">Cavendish Cards come from the Cavendish Space model &mdash; a way of shaping the space around real needs instead of asking people to hide them. The cards give you pictures and words for how you feel and what helps, so you can show someone instead of having to explain. Play on your own, or with someone alongside you. New here? <a href="guidebook.html">Start with the guidebook</a>.</p>
 
       <div class="rules" role="note" aria-label="The two rules">
         <p><strong>No scoring.</strong> No points, no right answer, no winning. There is no wrong card and no wrong hand.</p>
@@ -68,7 +68,7 @@
       </div>
       <div id="filters" class="filters" role="group" aria-label="Filter by family"></div>
       <p id="family-blurb" class="family-blurb" hidden></p>
-      <div id="deck" class="deck-grid" aria-describedby="deck-hint"></div>
+      <div id="deck" aria-describedby="deck-hint"></div>
     </section>
 
     <section class="moments" aria-labelledby="moments-h">
@@ -87,6 +87,17 @@
       </div>
       <p id="table-empty" class="muted">Nothing laid down yet. Choose cards from the deck above &mdash; they arrive face-down, and you turn them up when you want to share them.</p>
       <ul id="table" class="table-grid" aria-label="Cards on the table"></ul>
+    </section>
+
+    <section id="summary" class="summary" hidden aria-labelledby="summary-h">
+      <h2 id="summary-h" tabindex="-1">Your spread</h2>
+      <p class="muted">Here&rsquo;s what you turned up. Nothing to score &mdash; just what&rsquo;s true right now.</p>
+      <ul id="summary-list" class="summary-list"></ul>
+      <p class="summary-q"><em>If you want: which card matters most right now? Is there one you&rsquo;d like someone to notice?</em></p>
+      <div class="table-actions">
+        <button id="summary-copy" type="button" class="btn">Copy for a journal</button>
+        <button id="summary-close" type="button" class="btn ghost">Hide</button>
+      </div>
     </section>
   </main>
 

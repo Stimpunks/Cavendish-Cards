@@ -2,6 +2,7 @@
   'use strict';
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl;
+  var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
   var families = [];
   var browseFamilies = [];
   var momentFamilies = [];
@@ -25,6 +26,12 @@
   function familyBySlug(slug) {
     for (var i = 0; i < families.length; i++) {
       if (families[i].slug === slug) return families[i];
+    }
+    return null;
+  }
+  function browseBySlug(slug) {
+    for (var i = 0; i < browseFamilies.length; i++) {
+      if (browseFamilies[i].slug === slug) return browseFamilies[i];
     }
     return null;
   }
@@ -56,23 +63,53 @@
     return b;
   }
 
+  function tile(c) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'tile';
+    b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
+    b.innerHTML =
+      '<span class="tile-art"><img src="' + escAttr(c.face) +
+      '" alt="" loading="lazy"></span>' +
+      '<span class="tile-name">' + esc(c.name) + '</span>';
+    b.addEventListener('click', function () { lay(c.slug); });
+    return b;
+  }
+
+  function grid(cards) {
+    var g = document.createElement('div');
+    g.className = 'deck-grid';
+    cards.forEach(function (c) { g.appendChild(tile(c)); });
+    return g;
+  }
+
+  function renderGrouped(fam) {
+    fam.groupOrder.forEach(function (label) {
+      var inGroup = fam.cards.filter(function (c) { return c.group === label; });
+      if (!inGroup.length) return;
+      var h = document.createElement('h3');
+      h.className = 'deck-group';
+      h.textContent = label;
+      deckEl.appendChild(h);
+      deckEl.appendChild(grid(inGroup));
+    });
+  }
+
   function renderDeck() {
     deckEl.innerHTML = '';
+    if (active !== 'all') {
+      var fam = browseBySlug(active);
+      if (fam && fam.groupOrder && fam.groupOrder.length) {
+        renderGrouped(fam);
+        return;
+      }
+    }
+    var all = [];
     browseFamilies.forEach(function (f) {
       if (active !== 'all' && f.slug !== active) return;
-      f.cards.forEach(function (c) {
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'tile';
-        b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
-        b.innerHTML =
-          '<span class="tile-art"><img src="' + escAttr(c.face) +
-          '" alt="" loading="lazy"></span>' +
-          '<span class="tile-name">' + esc(c.name) + '</span>';
-        b.addEventListener('click', function () { lay(c.slug); });
-        deckEl.appendChild(b);
-      });
+      f.cards.forEach(function (c) { all.push(c); });
     });
+    deckEl.appendChild(grid(all));
   }
 
   function renderMoments() {
@@ -98,7 +135,18 @@
     announce('Laid ' + bySlug[slug].name + ' on the table, face-down.');
   }
 
+  function updatePlaceBackground() {
+    var place = '';
+    laid.forEach(function (item) {
+      var c = bySlug[item.slug];
+      if (item.up && c && c.family === 'places' && item.slug !== 'your-own') place = item.slug;
+    });
+    if (place) document.body.setAttribute('data-place', place);
+    else document.body.removeAttribute('data-place');
+  }
+
   function renderTable() {
+    if (summaryEl) summaryEl.hidden = true;
     tableEl.innerHTML = '';
     emptyEl.hidden = laid.length > 0;
     clearBtn.hidden = laid.length === 0;
@@ -159,6 +207,7 @@
       tableEl.appendChild(li);
     });
 
+    updatePlaceBackground();
     applyFocus();
   }
 
@@ -173,6 +222,27 @@
       if (el) el.focus();
     }
     pendingFocus = null;
+  }
+
+  function summaryText() {
+    return laid.map(function (item) {
+      var c = bySlug[item.slug];
+      return '- ' + c.name + (c.prompt ? ' — ' + c.prompt : '');
+    }).join('\n');
+  }
+
+  function showSummary() {
+    if (!summaryEl) return;
+    summaryListEl.innerHTML = '';
+    laid.forEach(function (item) {
+      var c = bySlug[item.slug];
+      var li = document.createElement('li');
+      li.textContent = c.name + (c.prompt ? ' — ' + c.prompt : '');
+      summaryListEl.appendChild(li);
+    });
+    summaryEl.hidden = false;
+    var h = document.getElementById('summary-h');
+    if (h) h.focus();
   }
 
   function start(data) {
@@ -202,8 +272,29 @@
       laid.forEach(function (x) { x.up = true; });
       pendingFocus = null;
       renderTable();
+      showSummary();
       announce('Turned all the cards face-up.');
     });
+
+    if (summaryCopyBtn) {
+      summaryCopyBtn.addEventListener('click', function () {
+        var text = 'My Cavendish spread\n' + summaryText();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(
+            function () { announce('Copied.'); },
+            function () { announce('Could not copy.'); }
+          );
+        } else {
+          announce('Copy is not available in this browser.');
+        }
+      });
+    }
+    if (summaryCloseBtn) {
+      summaryCloseBtn.addEventListener('click', function () {
+        summaryEl.hidden = true;
+        doneBtn.focus();
+      });
+    }
 
     renderDeck();
     renderMoments();
@@ -220,6 +311,10 @@
     blurbEl = document.getElementById('family-blurb');
     momentsRow = document.getElementById('moments-row');
     liveEl = document.getElementById('live');
+    summaryEl = document.getElementById('summary');
+    summaryListEl = document.getElementById('summary-list');
+    summaryCopyBtn = document.getElementById('summary-copy');
+    summaryCloseBtn = document.getElementById('summary-close');
 
     var breakToggle = document.getElementById('break-toggle');
     var breakPanel = document.getElementById('break-panel');
