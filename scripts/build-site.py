@@ -80,6 +80,60 @@ GROUPS = {
     ],
 }
 
+# Reflection question pools (hybrid). A card uses its own ## Reflection section
+# if present; otherwise the authoring pool (blank / your-own cards) or its
+# family pool. Card- and environment-facing, invitational, never diagnostic.
+REFLECTIONS = {
+    "weather": [
+        "Where do you feel this in your body right now?",
+        "A little, or a lot?",
+        "Is this the same as earlier, or has it changed?",
+        "Is there a what-helps card you'd reach for?",
+    ],
+    "places": [
+        "What would make where you are more like this?",
+        "Is there one thing nearby you'd change?",
+        "Who would you want here with you — anyone, or no one?",
+        "Is there a what-helps card that goes with this place?",
+    ],
+    "what-helps": [
+        "Could you have this right now, or is something in the way?",
+        "Who could help make it happen?",
+        "Would you want someone to know you need this?",
+        "Is there another what-helps card you'd add?",
+    ],
+    "lily-pad": [
+        "What would help you feel ready — or is staying right for now?",
+        "Are you just settling here, or ready to move on?",
+        "Would a little more time help?",
+        "Is there a what-helps card that would make this easier?",
+    ],
+    "grower": [
+        "What helps you bloom on a day like today?",
+        "What are your good conditions right now?",
+        "Is today this kind of day, or a different one?",
+        "Is there a what-helps card that fits your conditions?",
+    ],
+    "love-locution": [
+        "Does this one feel true for you right now?",
+        "Who might need to hear this?",
+        "Would you like to give it to someone, or keep it?",
+        "Is there someone who gives this to you?",
+    ],
+    "interaction": [
+        "Who around you should see this card?",
+        "Is this true just for now, or for a while?",
+        "Would you wear it, or show it once?",
+        "Is there a different signal you'd rather give?",
+    ],
+}
+
+AUTHORING = [
+    "What's missing that you'd want a card for?",
+    "What would the picture be?",
+    "What would it help someone understand?",
+]
+
 INTRO = (
     "Cavendish Cards come from the Cavendish Space model — a way of shaping the "
     "space around real needs instead of asking people to mask them. The deck "
@@ -213,6 +267,14 @@ def main():
             if group_order and grp is None:
                 grp = "More"
                 used_more = True
+            refl_override = sec.get("Reflection", "").strip()
+            if refl_override:
+                reflections = [ln.lstrip("-* ").strip()
+                               for ln in refl_override.splitlines() if ln.strip()]
+            elif slug == "blank" or cslug == "your-own":
+                reflections = list(AUTHORING)
+            else:
+                reflections = list(REFLECTIONS.get(slug, []))
             has_prompt = bool(prompt) and prompt != "—"
             back = ("back-love-locution.svg" if slug == "love-locution"
                     else "back-standard.svg")
@@ -226,6 +288,7 @@ def main():
                 "face": f"faces/{cslug}.svg",
                 "back": f"faces/{back}",
                 "group": grp,
+                "reflections": reflections,
             })
             total += 1
         if cards:

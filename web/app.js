@@ -8,7 +8,7 @@
   var momentFamilies = [];
   var bySlug = {};
   var active = 'all';
-  var laid = [];            // [{slug, up}]
+  var laid = [];            // [{slug, up, refIdx}]
   var pendingFocus = null;  // {i, sel} | 'empty' | null
 
   function esc(s) {
@@ -34,6 +34,12 @@
       if (browseFamilies[i].slug === slug) return browseFamilies[i];
     }
     return null;
+  }
+
+  function reflectionFor(item) {
+    var c = bySlug[item.slug];
+    if (!c || !c.reflections || !c.reflections.length) return '';
+    return c.reflections[(item.refIdx || 0) % c.reflections.length];
   }
 
   function updateBlurb(slug) {
@@ -129,7 +135,7 @@
   }
 
   function lay(slug) {
-    laid.push({ slug: slug, up: false });
+    laid.push({ slug: slug, up: false, refIdx: 0 });
     pendingFocus = { i: laid.length - 1, sel: '.flip' };
     renderTable();
     announce('Laid ' + bySlug[slug].name + ' on the table, face-down.');
@@ -172,8 +178,18 @@
           ? '<details class="laid-note"><summary>What this card means</summary><p>' +
             esc(c.notes) + '</p></details>'
           : '';
+        var refl = c.reflections && c.reflections.length ? c.reflections : [];
+        var reflHtml = '';
+        if (refl.length) {
+          reflHtml = '<div class="reflect">' +
+            '<p class="reflect-q" aria-live="polite">' + esc(reflectionFor(item)) + '</p>' +
+            (refl.length > 1
+              ? '<button type="button" class="reflect-more">another question</button>'
+              : '') +
+            '</div>';
+        }
         text = '<div class="laid-text"><span class="laid-name">' +
-          esc(c.name) + '</span>' + promptLine + note + '</div>';
+          esc(c.name) + '</span>' + promptLine + note + reflHtml + '</div>';
       }
 
       li.innerHTML =
@@ -203,6 +219,14 @@
         renderTable();
         announce('Removed ' + nm + ' from the table.');
       });
+      var moreBtn = li.querySelector('.reflect-more');
+      if (moreBtn) {
+        moreBtn.addEventListener('click', function () {
+          laid[i].refIdx = ((laid[i].refIdx || 0) + 1) % c.reflections.length;
+          var qEl = li.querySelector('.reflect-q');
+          if (qEl) qEl.textContent = reflectionFor(laid[i]);
+        });
+      }
 
       tableEl.appendChild(li);
     });
@@ -227,7 +251,9 @@
   function summaryText() {
     return laid.map(function (item) {
       var c = bySlug[item.slug];
-      return '- ' + c.name + (c.prompt ? ' — ' + c.prompt : '');
+      var line = '- ' + c.name + (c.prompt ? ' — ' + c.prompt : '');
+      var q = reflectionFor(item);
+      return q ? line + '\n  reflect: ' + q : line;
     }).join('\n');
   }
 
@@ -236,8 +262,11 @@
     summaryListEl.innerHTML = '';
     laid.forEach(function (item) {
       var c = bySlug[item.slug];
+      var name = c.name + (c.prompt ? ' — ' + c.prompt : '');
+      var q = reflectionFor(item);
       var li = document.createElement('li');
-      li.textContent = c.name + (c.prompt ? ' — ' + c.prompt : '');
+      li.innerHTML = '<span class="summary-name">' + esc(name) + '</span>' +
+        (q ? '<span class="summary-reflect">' + esc(q) + '</span>' : '');
       summaryListEl.appendChild(li);
     });
     summaryEl.hidden = false;

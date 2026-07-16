@@ -163,6 +163,13 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .summary-list { margin: 8px 0 12px; padding-left: 1.2em; max-width: 62ch; }
 .summary-list li { margin: 3px 0; }
 .summary-q { max-width: 62ch; }
+.summary-list li { margin: 8px 0; }
+.summary-name { display: block; }
+.summary-reflect { display: block; font-style: italic; color: var(--muted); }
+
+.reflect { margin-top: 8px; }
+.reflect-q { margin: 0 0 4px; font-style: italic; color: var(--ink); }
+.reflect-more { font: inherit; font-size: .85rem; cursor: pointer; background: none; border: 0; padding: 0; color: var(--cyan-ink); text-decoration: underline; }
 
 body { transition: background-color .4s ease; }
 body[data-place="the-cave"] { background-color: #e9edf2; }
