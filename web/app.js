@@ -50,10 +50,18 @@
   }
 
   function updateBlurb(slug) {
-    if (slug === 'all') { blurbEl.hidden = true; blurbEl.textContent = ''; return; }
+    if (slug === 'all') { blurbEl.hidden = true; blurbEl.innerHTML = ''; return; }
     var fam = familyBySlug(slug);
-    if (fam && fam.intro) { blurbEl.textContent = fam.intro; blurbEl.hidden = false; }
-    else { blurbEl.hidden = true; blurbEl.textContent = ''; }
+    if (fam && (fam.intro || fam.subtitle)) {
+      var html = fam.intro ? esc(fam.intro) : '';
+      if (fam.subtitle) {
+        html += '<span class="family-subtitle">' + esc(fam.subtitle) + '</span>';
+      }
+      blurbEl.innerHTML = html;
+      blurbEl.hidden = false;
+    } else {
+      blurbEl.hidden = true; blurbEl.innerHTML = '';
+    }
   }
 
   function mkFilter(slug, label) {

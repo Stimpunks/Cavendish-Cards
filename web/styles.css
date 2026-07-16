@@ -141,6 +141,7 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   margin: 0 0 16px; max-width: 70ch; color: var(--ink);
   background: var(--panel); border-radius: 10px; padding: 10px 14px;
 }
+.family-subtitle { display: block; margin-top: 6px; color: var(--muted); font-size: .92rem; }
 
 .table-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 

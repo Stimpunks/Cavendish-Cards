@@ -55,7 +55,7 @@ FAMILIES = [
      "dandelions and grow almost anywhere; some are tulips and do well with the "
      "right basics; some are orchids and thrive with specific care. None is "
      "better — they just need different things."),
-    ("love-locution", "Love Locutions",
+    ("love-locution", "Kind words",
      "Things that are true about you — you belong, you can rest, you're not "
      "broken. Turning one up claims it out loud: I need this said, and heard."),
     ("blank", "Blank",
@@ -65,6 +65,16 @@ FAMILIES = [
 # Families rendered as an always-available "moments" strip rather than a
 # browsable filter (item 8/17 from playtesting).
 MOMENTS = {"lily-pad"}
+
+# App-only subtitles surfaced under a realm's name (community / alternate terms).
+SUBTITLES = {
+    "love-locution": "Also called Love Locutions or Love Languages.",
+}
+
+# Headings kept in the guidebook even when the app shows a plainer label.
+GB_NAMES = {
+    "love-locution": "Love Locutions",
+}
 
 # Sense-signpost grouping for the What helps family (display only).
 GROUPS = {
@@ -185,8 +195,9 @@ def guidebook_html(out_families):
                 f'<p class="gb-meta">{meta}</p>{note}</article>'
             )
         realm_note = GUIDEBOOK_NOTES.get(fam["slug"], "")
+        gb_name = GB_NAMES.get(fam["slug"], fam["name"])
         sections.append(
-            f'<section class="gb-family"><h2>{e(fam["name"])}</h2>'
+            f'<section class="gb-family"><h2>{e(gb_name)}</h2>'
             f'<p class="muted">{e(fam["intro"])}</p>{realm_note}{"".join(entries)}</section>'
         )
     body = "\n".join(sections)
@@ -310,6 +321,8 @@ def main():
             fam_obj = {"slug": slug, "name": display, "intro": intro,
                        "mode": "moments" if slug in MOMENTS else "browse",
                        "cards": cards}
+            if slug in SUBTITLES:
+                fam_obj["subtitle"] = SUBTITLES[slug]
             if order:
                 fam_obj["groupOrder"] = order
             out_families.append(fam_obj)
