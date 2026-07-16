@@ -91,7 +91,7 @@ REFLECTIONS = {
         "Is there a what-helps card you'd reach for?",
     ],
     "places": [
-        "What would make where you are more like this?",
+        "What's one thing that would make this place feel right?",
         "Is there one thing nearby you'd change?",
         "Who would you want here with you — anyone, or no one?",
         "Is there a what-helps card that goes with this place?",
