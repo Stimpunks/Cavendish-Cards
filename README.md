@@ -93,7 +93,7 @@ python3 scripts/build-placeholders.py     # writes assets/playtest/<family>/<slu
 python3 scripts/build-playtest-pdf.py     # writes cavendish-cards-playtest.pdf, nine cards a page with cut lines
 ```
 
-The placeholder generator has no dependencies; the PDF builder needs `cairosvg` and `weasyprint`. Both read the card files, so the output always matches the deck. When real art arrives it drops into the template's art slot and the finished face moves into [`assets/cards/`](./assets/cards/). See [`assets/playtest/README.md`](./assets/playtest/README.md).
+The placeholder generator has no dependencies; the PDF builder needs `cairosvg` and `weasyprint` plus their native libraries (on macOS: `brew install cairo pango gdk-pixbuf libffi`). Both read the card files, so the output always matches the deck. When real art arrives it drops into the template's art slot and the finished face moves into [`assets/cards/`](./assets/cards/). See [`assets/playtest/README.md`](./assets/playtest/README.md).
 
 ## Contributing
 

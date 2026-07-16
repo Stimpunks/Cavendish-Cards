@@ -57,12 +57,14 @@ def main():
             continue
 
         missing_deps = "ModuleNotFoundError" in err or "ImportError" in err
+        native_lib = "cairo" in err.lower() or "pango" in err.lower()
         detail = (err.splitlines()[-1] if err else out.splitlines()[-1]
                   if out else f"exit {proc.returncode}")
-        if not required and missing_deps:
-            print("  skipped: needs cairosvg + weasyprint "
-                  "(pip install cairosvg weasyprint)\n")
-            skipped.append((script, "missing optional dependencies"))
+        if not required and (missing_deps or native_lib):
+            print("  skipped: the PDF needs cairosvg + weasyprint and their native\n"
+                  "           libraries (macOS: brew install cairo pango gdk-pixbuf libffi;\n"
+                  "           then pip install cairosvg weasyprint)\n")
+            skipped.append((script, "missing PDF dependencies"))
         elif required:
             print(f"  FAILED: {detail}\n")
             failed.append((script, detail))
