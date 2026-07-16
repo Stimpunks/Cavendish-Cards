@@ -59,6 +59,19 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 
 `[ guidebook entry — see above ]`
 
+## Reflection
+
+<!-- Optional. Reflection questions shown on the website when this card is turned up,
+     and in the "Your spread" summary. Leave this out and the card inherits its
+     family's default questions — most cards should. Add it only when a card
+     deserves its own (for example, "stuck" or "you're not broken").
+     One question per line (a "- " bullet is fine). Keep the same guardrails as the
+     defaults: ask about the card and the environment, never diagnose the child;
+     make them invitations, not demands; avoid "why"; no scoring scales; and keep
+     them answerable by pointing to another card, not only by talking. -->
+
+`[ optional — one question per line, or omit to use the family's questions ]`
+
 ---- 
 
 ## License
