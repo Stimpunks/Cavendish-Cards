@@ -187,6 +187,11 @@ One wall crowded with stuff, one wall calm and bare — this card asks for the s
 
 This is a hand on the switch — the person turning the light, the sound, the thing up or down themselves. It names control as its own need: not a particular setting, but being the one who decides and adjusts it. For many people the same input is fine when they hold the dial and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — rather than setting it for them.
 
+### let me stim
+*a figure rocking and moving, easy in their own motion* · "Let me move and stim the way I need."
+
+Stimming is how many bodies settle and regulate — rocking, flapping, humming, pacing, tapping. It names the need to move in one's own way, freely, without being stopped or corrected: regulation and expression, not misbehavior. The freedom to move is part of the freedom to be. When this card is out, make room for the movement and let it be — never still it. Lineage: freedom of embodiment, from the Neuroqueer Learning Spaces Manifesto and Nick Walker's *Neuroqueer Heresies*.
+
 ### my own spot
 *a marked place that's mine* · "A place that's just mine."
 

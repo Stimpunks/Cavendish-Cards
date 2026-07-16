@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **73 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **74 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -56,7 +56,7 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 
 ---- 
 
-## What helps (24)
+## What helps (25)
 
 The niche-construction pieces — the ways we change the environment so it fits. The workhorse realm, and where the staff game finds its conflicts.
 
@@ -83,6 +83,7 @@ The niche-construction pieces — the ways we change the environment so it fits.
 | another way to talk   | a hand pointing at a card, next to a small whiteboard   | Let me point, write, or show it.                |
 | less to look at       | a busy, cluttered wall beside a calm bare one           | Fewer things to look at.                        |
 | let me control it     | a hand resting on a dimmer switch                       | Let me be the one to change it.                 |
+| let me stim           | a figure rocking and moving, easy in their own motion   | Let me move and stim the way I need.            |
 | parallel existence    | two figures side by side, each in their own world       | Someone alongside me, each doing our own thing. |
 | sit my way            | a floor cushion, a wobble stool, and someone standing   | Let me sit or stand how I like.                 |
 | the right temperature | a blanket on one side, a fan on the other               | Warmer, or cooler.                              |
@@ -166,13 +167,13 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | ----- | ----- |
 | Places | 5 |
 | Weather | 11 |
-| What helps | 24 |
+| What helps | 25 |
 | Lily pads | 9 |
 | Growers | 3 |
 | Love Locutions | 8 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **73** |
+| **Total** | **74** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -189,7 +190,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 73 cards, five ways:
+The same 74 cards, five ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

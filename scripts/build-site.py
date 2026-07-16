@@ -85,7 +85,7 @@ GROUPS = {
         ("Touch", ["something-soft"]),
         ("Pressure", ["a-big-squeeze"]),
         ("Temperature", ["the-right-temperature"]),
-        ("Movement", ["room-to-move", "busy-hands", "sit-my-way"]),
+        ("Movement", ["room-to-move", "busy-hands", "sit-my-way", "let-me-stim"]),
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
