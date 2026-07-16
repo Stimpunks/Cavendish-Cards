@@ -56,6 +56,11 @@ Bright is a clear sky and open light — nothing pressing in, everything easy fo
 
 Buzzy is a shower of sparks, too many at once — the air crackling with more input than there is room for. It names sensory or social overload: sound, light, movement, and demand all arriving together, none of it filtering out. Buzzy is weather, not a fault — the sparks come from the room as much as the person. When this card is out, turn the world down: fewer inputs, more space, rather than asking the person to absorb all of it.
 
+### can't tell
+*a figure with a faint, muffled question mark glowing at the belly and chest* · "My body's telling me something, but I can't tell what."
+
+Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: interoception, the eighth sense.
+
 ### far-away
 *a small figure at the end of a long view* · "A bit distant, floating off."
 
@@ -95,6 +100,11 @@ In the zone is deep, happy focus — attention narrowed to one thing while the r
 *a meerkat standing tall on the lookout, ears up, scanning for danger* · "On alert, watching for danger."
 
 Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable to settle or focus, wanting someone safe close by. It names a body stuck in high alert: not misbehaving, not clingy, but overwhelmed and searching for safety. When this card is out, be the safe one — come close, stay near, lower the demands, and don't leave them to it alone. Lineage: meerkat mode (Tanya Adkin and David Gray-Hammond).
+
+### need more
+*a figure reaching outward in a muted, empty space, movement lines around them* · "Everything's too flat and still — I need more."
+
+Need more is the under-buzzed feeling — the world too flat, too still, too quiet, and the body reaching for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking, and it's regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input rather than take it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
 
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."

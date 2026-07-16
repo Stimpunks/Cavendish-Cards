@@ -81,9 +81,9 @@ GB_NAMES = {
 # No headings, no good/bad split — just a gentle range.
 ORDER = {
     "weather": [
-        "warm", "bright", "fizzy", "happy-flappy", "in-the-zone",
+        "warm", "bright", "fizzy", "happy-flappy", "in-the-zone", "need-more",
         "buzzy", "prickly", "full", "pulled-every-way", "meerkat",
-        "round-and-round", "stormy", "heavy", "foggy", "far-away",
+        "round-and-round", "stormy", "heavy", "foggy", "cant-tell", "far-away",
     ],
 }
 
