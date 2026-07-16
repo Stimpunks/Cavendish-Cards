@@ -79,14 +79,13 @@ GB_NAMES = {
 }
 
 # Realm -> implementation guide. Only realms with a genuine environment-build
-# layer get a "how to build this" link; it deep-links to that realm's section
-# in the on-site guidebook (where the realm's implementation note lives).
-# Weather, Growers, Love Locutions, Blank have nothing to build — no link.
-# Extend by adding a realm here; the anchor gid="gb-<slug>" is emitted below.
+# layer get a "how to build this" link; it deep-links to that realm's section in
+# the on-site Implementation Guidebook. Weather, Growers, Love Locutions, Blank
+# have nothing to build — no link. Anchors are emitted by implementation_html().
 BUILD_LINKS = {
-    "places":     {"href": "guidebook.html#gb-places",    "label": "Building the space"},
-    "what-helps": {"href": "guidebook.html#gb-what-helps", "label": "Building the niche"},
-    "lily-pad":   {"href": "guidebook.html#gb-lily-pad",   "label": "Building the crossings"},
+    "places":     {"href": "implementation.html#build-places",    "label": "Building the space"},
+    "what-helps": {"href": "implementation.html#build-what-helps", "label": "Building the niche"},
+    "lily-pad":   {"href": "implementation.html#build-lily-pad",   "label": "Building the crossings"},
 }
 
 # Curated display order within a realm (web deck). Cards not listed fall in
@@ -286,7 +285,7 @@ def guidebook_html(out_families):
   <a class="skip" href="#gb">Skip to the guidebook</a>
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">&larr; Back to the deck</a></p>
+      <p class="backlink"><a href="index.html">&larr; Back to the deck</a> &middot; <a href="implementation.html">Implementation guidebook</a></p>
       <h1>Guidebook</h1>
       <p class="intro">{e(INTRO)}</p>
       <div class="rules" role="note" aria-label="Not a screening tool">
@@ -308,6 +307,323 @@ def guidebook_html(out_families):
 </body>
 </html>
 '''
+
+
+# ---------------------------------------------------------------------------
+# Implementation Guidebook — the companion "how to build the room" book.
+# Renders to web/implementation.html and cavendish-cards-implementation-layer.md.
+# Card names come from the deck (so they never drift); the build prose lives here
+# for hand-iteration. Adult layer: materials stay here, never on a card. Sourced
+# from early-years / PMLD practice (Helen Edgar); meant to be iterated in-app.
+# ---------------------------------------------------------------------------
+
+IMPL_ORDER = ["places", "what-helps", "lily-pad"]
+IMPL_LABELS = {
+    "places": "Building the space",
+    "what-helps": "Building the niche",
+    "lily-pad": "Building the crossings",
+}
+
+IMPL_INTRO = (
+    "The card guidebook says what each card means. This one says how to build the "
+    "room the cards ask for. A child laying cave, i need a minute, coming back has "
+    "handed you a design brief for the space between one place and the next \u2014 and "
+    "this is how you answer it, in cushions, light, sightlines, and floor plan. It is "
+    "the adult layer: the materials live here, never on a card. The card names the "
+    "need; you fill it with what you have."
+)
+
+IMPL_PRINCIPLE = (
+    "Design the space between the zones \u2014 not just the zones. Most rooms build the "
+    "destinations and leave the crossings to chance, so a child still has to leap. The "
+    "principle is the same for every child: gentle, continuous, warned, consented "
+    "crossings, never on the room's clock. How you build the crossing changes with how "
+    "a child moves, senses, and communicates \u2014 and the room is built with the child, "
+    "not around them."
+)
+
+IMPL_GUARDRAILS = [
+    ("Build with, never to",
+     "A padded crossing or a made niche is designed with the child and offered as a "
+     "gentle nudge \u2014 never sprung as a demand, never done to them. Presume competence."),
+    ("The room is the work, not the child",
+     "You are shaping the environment, not fixing the person. A hard transition, or a "
+     "space that doesn't fit, is information about the room \u2014 never a verdict on whoever "
+     "is in it."),
+    ("Not a compliance system",
+     "Smoother days are a by-product, never the goal, and a sensory space is never "
+     "containment or seclusion. Don't let \u201cwe built them a nook\u201d become a reason to "
+     "under-provide real rest, real support, or a child's actual communication tools."),
+]
+
+IMPL_REALM_NOTES = {
+    "places":
+        "The five zones are the cave (solitude), the campfire (a small, known group), "
+        "the watering hole (open, ambient company), the library (reference and depth), "
+        "and the habitat (the whole surround that holds the other four). Cave, campfire, "
+        "and watering hole also run along a sociality gradient \u2014 solo, small group, open "
+        "\u2014 lining up with the interaction moods (red, yellow, green). Build the zones so "
+        "a child can move along that gradient on their own terms, and keep each reachable "
+        "without a leap.",
+    "what-helps":
+        "These are the pieces you change so the space fits. Each card names a need, not a "
+        "product \u2014 a den can be a pop-up tent or a blanket over a table; less to look at "
+        "can be a screen, a corner, or a turned-around desk. Build for the sense the child "
+        "is asking about, with whatever you have. Organised here by sense, the way the deck "
+        "groups it.",
+    "lily-pad":
+        "A transition is a crossing, and for a mind in deep focus a hard crossing is "
+        "jarring and costly \u2014 attention yanked across with nowhere to land. Lily pads are "
+        "the stepping stones that make it gentle: a pause, a heads-up, a held place, a "
+        "graded step. Build the space between the zones so each crossing has somewhere to "
+        "land, and keep the pace the child's \u2014 read from their signals when they can't set "
+        "it with their feet.",
+}
+
+# Per-card build notes (Places zones + Lily-pad crossings). Keyed by card slug;
+# the display name is pulled live from the deck. Cards without a note (each realm's
+# your-own) are simply skipped.
+IMPL_PAIRINGS = {
+    "the-cave": "Two walls and a low roof of your making \u2014 a blanket over a table, a "
+                "corner with a shelf pulled across, a hood pulled up. Low light, sound "
+                "down, the world kept out. A retreat, never a time-out.",
+    "the-campfire": "A small, soft circle \u2014 a rug, a few cushions, room for a known "
+                    "handful rather than a crowd. Close enough to feel the warmth; never "
+                    "a stage.",
+    "the-watering-hole": "An open, in-between spot near others \u2014 a bench at the edge of "
+                         "the room, somewhere to hover and drift, among people without a "
+                         "task or a script.",
+    "the-library": "Somewhere the group's figured-out things are kept and reachable \u2014 a "
+                   "shelf, a box, a screen \u2014 a place to go deep at your own pace.",
+    "the-habitat": "The whole surround: the light, sound, texture, and rhythm the other "
+                   "zones sit inside. Make the habitat steady and sensory-safe first, and "
+                   "the other places become reachable.",
+    "i-need-a-minute": "A pause-place at the seam \u2014 a beanbag, a windowsill, a cushion "
+                       "where two zones meet \u2014 so leaving one lands somewhere before "
+                       "arriving at the next.",
+    "slowly": "A graded strip between a loud zone and a quiet one, where the light dims "
+              "and the sound drops before arrival. Grade the crossing instead of forcing "
+              "a single leap.",
+    "not-yet": "Let the crossing wait on the child's signal \u2014 check back rather than "
+               "push \u2014 never on the room's clock.",
+    "ready-now": "Go when they go: follow their timing, and build routes that let them "
+                 "move the moment they're ready.",
+    "coming-back": "Keep the spot, the task, and the welcome ready, and let a carried "
+                   "object travel the crossing as a thread of continuity between the two "
+                   "banks.",
+    "stuck": "A landing spot in the gap \u2014 somewhere to be between pads without being "
+             "pushed across. Offer a what-helps, and let them choose; never shove.",
+    "watch-first": "A place at the rim of a group, in view of it, where watching counts "
+                   "as being in. Keep joining optional.",
+    "all-done": "Let a called ending be an ending \u2014 no one-more-thing, no negotiation "
+                "over whether it really is.",
+    "i-want-to-stay-a-while": "Let staying stand \u2014 a spot that isn't hurried on just "
+                              "because the schedule wants it.",
+}
+
+# What helps — build guidance organised by the deck's sense signposts.
+IMPL_WHATHELPS = [
+    ("Being in charge",
+     "Hand over the dial. The same input is fine when the child controls it and too "
+     "much when someone else does \u2014 so give them the switch, the volume, the timing, "
+     "not a fixed setting."),
+    ("Sound",
+     "Turn the world down, or fill it kindly \u2014 headphones, a quieter corner, or a "
+     "steady hum to cover the jagged, unpredictable sounds. The sound was the problem; "
+     "lowering it is the answer, not avoidance."),
+    ("Light & looking",
+     "Soften what reaches the eyes. Dim or diffuse harsh light, and clear busy "
+     "sight-lines \u2014 a plainer wall, fewer displays, a calmer view. Clearing clutter "
+     "is free."),
+    ("Touch",
+     "A soft thing to hold \u2014 a plush, a texture, something to squeeze or keep close. "
+     "A tactile anchor is a real regulation strategy, not babyish; let it stay."),
+    ("Pressure",
+     "Deep, even pressure \u2014 a weighted wrap, a firm tuck \u2014 but only ever the pressure "
+     "the child asks for, on their terms."),
+    ("Temperature",
+     "A layer, a fan, an open window, a warm drink. Too warm or too cold fills a body "
+     "up like noise does; change the air around the child rather than telling them "
+     "they're fine."),
+    ("Movement",
+     "Room to move, and things to move with \u2014 floor to pace or spin, a fidget for the "
+     "hands, options to sit, stand, or wobble, freedom to stim. Bodies that move to "
+     "focus are doing exactly what they should."),
+    ("Mouth & nose",
+     "Safe oral and scent input \u2014 something to chew or crunch, a snack or a drink, a "
+     "calming smell brought close or an overwhelming one taken away. Ordinary needs, "
+     "met without a negotiation."),
+    ("Space & enclosure",
+     "Cover and edges \u2014 a den to tuck under, a corner with sides, a claimed spot that "
+     "stays theirs, and a visible, usable way out. Knowing the door is there is often "
+     "what makes staying possible."),
+    ("Telling & talking",
+     "Ease the language load \u2014 fewer words, a heads-up before a change, and another "
+     "channel to point, write, sign, or show a card when speech is hard. A different "
+     "way to communicate is not less communication."),
+    ("People & time",
+     "Thin the social field and slow the clock \u2014 one steady person instead of a crowd, "
+     "quiet company alongside, more processing time, a stopping point before a switch, "
+     "permission to come and go. Speed is not understanding."),
+    ("Make your own",
+     "The gap the deck doesn't hold yet \u2014 draw or build the missing help together."),
+]
+
+IMPL_BUDGET = (
+    "None of this is a purchase order. A blanket over a table is a cave. A rug zones a "
+    "watering hole. A turned-around shelf makes a corner. A dimmable lamp makes a "
+    "decompression seam. A cushion at the join of two zones is a pause pad. The "
+    "materials are yours to choose; the card names the need, and you fill it with what "
+    "you have."
+)
+BUDGET_URL = "https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/"
+NESTING_URL = "https://stimpunks.org/glossary/nesting/"
+
+IMPL_PLAYMODES = (
+    "Two play modes map the rhythm; this book builds the room that lets it happen. Run "
+    "Map the edges with the child to find where the crossings bite \u2014 focus to talking, "
+    "rest to joining in, home to out the door. Run Moving between to see the shape of a "
+    "day, alone to together and back. Then build the padding where the map shows it's "
+    "needed. The child maps; you build it with them; the room changes, not the child."
+)
+
+# (bold lead, rest, optional url)
+IMPL_LINEAGE = [
+    ("Physical niche construction in the early years",
+     "Helen Edgar. Much of the budget and building practice here comes from twenty "
+     "years teaching children with Profound and Multiple Disabilities, where children "
+     "and adults shaped the space together. (Credit wording to confirm with Helen.)",
+     None),
+    ("Nesting as the physical architecture of lily padding", "David Gray-Hammond.", None),
+    ("Lily padding, and transitional trauma for monotropic minds", "Tanya Adkin.", None),
+    ("Caves, campfires, and watering holes",
+     "David Thornburg's learning-space metaphors; the case for cave spaces in schools, "
+     "Prakash Nair, The Language of School Design.", None),
+    ("Cavendish Space, intermittent collaboration, niche construction",
+     "Stimpunks Foundation.", "https://stimpunks.org/glossary/lily-pad/"),
+]
+
+
+def implementation_html(out_families):
+    fam_by_slug = {f["slug"]: f for f in out_families}
+    sections = []
+    for slug in IMPL_ORDER:
+        fam = fam_by_slug.get(slug)
+        if not fam:
+            continue
+        note = IMPL_REALM_NOTES.get(slug, "")
+        items = []
+        if slug == "what-helps":
+            for signpost, txt in IMPL_WHATHELPS:
+                items.append(
+                    f'<article class="gb-entry"><h3>{e(signpost)}</h3><p>{e(txt)}</p></article>')
+        else:
+            for c in fam["cards"]:
+                pair = IMPL_PAIRINGS.get(c["slug"])
+                if pair:
+                    items.append(
+                        f'<article class="gb-entry"><h3>{e(c["name"])}</h3><p>{e(pair)}</p></article>')
+        sections.append(
+            f'<section class="gb-family" id="build-{slug}"><h2>{e(IMPL_LABELS[slug])}</h2>'
+            f'<p class="muted">{e(note)}</p>{"".join(items)}</section>')
+
+    budget_html = (
+        f'<section class="gb-family" id="build-budget"><h2>On any budget</h2>'
+        f'<p class="muted">{e(IMPL_BUDGET)} For the full material-level how-to, see '
+        f'<a href="{BUDGET_URL}">Creating Cavendish Space on a Budget</a> and '
+        f'<a href="{NESTING_URL}">Nesting</a>.</p></section>')
+    play_html = (
+        f'<section class="gb-family" id="build-play"><h2>How it pairs with the play modes</h2>'
+        f'<p class="muted">{e(IMPL_PLAYMODES)}</p></section>')
+    lineage_items = "".join(
+        f'<li><strong>{e(lead)}</strong> \u2014 {e(rest)}'
+        + (f' <a href="{url}">{e(url)}</a>' if url else '')
+        + '</li>'
+        for lead, rest, url in IMPL_LINEAGE)
+    lineage_html = (
+        f'<section class="gb-family" id="build-lineage"><h2>Lineage</h2>'
+        f'<ul class="gb-lineage">{lineage_items}</ul></section>')
+
+    guardrail_boxes = "\n".join(
+        f'<div class="rules" role="note" aria-label="{e(t)}"><p><strong>{e(t)}.</strong> {e(b)}</p></div>'
+        for t, b in IMPL_GUARDRAILS)
+
+    body = "\n".join(sections + [budget_html, play_html, lineage_html])
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cavendish Cards — Implementation Guidebook</title>
+  <meta name="description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#impl">Skip to the guide</a>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="backlink"><a href="index.html">&larr; Back to the deck</a> &middot; <a href="guidebook.html">Card guidebook</a></p>
+      <h1>Implementation Guidebook</h1>
+      <p class="intro">{e(IMPL_INTRO)}</p>
+      <div class="rules" role="note" aria-label="The one principle">
+        <p><strong>The one principle.</strong> {e(IMPL_PRINCIPLE)}</p>
+      </div>
+      {guardrail_boxes}
+    </div>
+  </header>
+  <main id="impl" class="wrap gb">
+{body}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
+'''
+
+
+def implementation_md(out_families):
+    fam_by_slug = {f["slug"]: f for f in out_families}
+    L = ["# Cavendish Cards — Implementation Guidebook", ""]
+    L.append("*How to build the room the cards ask for. Generated from the card files by "
+             "`scripts/build-site.py` — do not edit this file by hand; edit the constants "
+             "in the script and regenerate.*")
+    L += ["", IMPL_INTRO, "", "Adult layer. Nothing here goes on a card.", "", "---- ", ""]
+    L += ["## The one principle", "", IMPL_PRINCIPLE, ""]
+    L += ["## Guardrails", ""]
+    L += [f"- **{t}.** {b}" for t, b in IMPL_GUARDRAILS]
+    L.append("")
+    for slug in IMPL_ORDER:
+        fam = fam_by_slug.get(slug)
+        if not fam:
+            continue
+        L += ["---- ", "", f"## {IMPL_LABELS[slug]}", "", IMPL_REALM_NOTES.get(slug, ""), ""]
+        if slug == "what-helps":
+            L += [f"- **{signpost}** — {txt}" for signpost, txt in IMPL_WHATHELPS]
+        else:
+            for c in fam["cards"]:
+                pair = IMPL_PAIRINGS.get(c["slug"])
+                if pair:
+                    L.append(f"- **{c['name']}** — {pair}")
+        L.append("")
+    L += ["---- ", "", "## On any budget", ""]
+    L.append(f"{IMPL_BUDGET} For the full material-level how-to, see "
+             f"[Creating Cavendish Space on a Budget]({BUDGET_URL}) and [Nesting]({NESTING_URL}).")
+    L += ["", "## How it pairs with the play modes", "", IMPL_PLAYMODES, ""]
+    L += ["## Lineage", ""]
+    for lead, rest, url in IMPL_LINEAGE:
+        L.append(f"- **{lead}** — {rest}" + (f" {url}" if url else ""))
+    L += ["", "---- ", ""]
+    L.append("Dedicated to the public domain under [CC0 1.0]"
+             "(https://creativecommons.org/publicdomain/zero/1.0/). "
+             "Home: https://stimpunks.org/projects/cavendish-space-project/")
+    L.append("")
+    return "\n".join(L)
 
 
 def main():
@@ -406,8 +722,12 @@ def main():
         json.dumps({"families": out_families}, ensure_ascii=False, indent=2),
         encoding="utf-8")
     (web / "guidebook.html").write_text(guidebook_html(out_families), encoding="utf-8")
+    (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")
+    (root / "cavendish-cards-implementation-layer.md").write_text(
+        implementation_md(out_families), encoding="utf-8")
 
-    print(f"Wrote web/cards.json, web/guidebook.html, and {total} faces into web/faces/")
+    print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
+          f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")
 

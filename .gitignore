@@ -8,5 +8,6 @@
 # Generated web build outputs (build-site.py writes these; Netlify rebuilds on deploy)
 /web/cards.json
 /web/guidebook.html
+/web/implementation.html
 /web/faces/
 /assets/cards/.DS_Store
