@@ -154,6 +154,15 @@ SCREENING = (
     "the opposite of what it is for. Broken systems, not broken people."
 )
 
+GUIDEBOOK_NOTES = {
+    "love-locution":
+        "<p><strong>Penguin pebbling.</strong> Giving someone a Love Locution is "
+        "<em>penguin pebbling</em> — penguins bring each other pebbles, and these "
+        "cards are pebbles you can hand to a person. On paper, the cards are made "
+        "to be given this way. In the web app they work the other way round, too: "
+        "truths a person claims and turns up for themselves.</p>",
+}
+
 
 def e(s):
     return html.escape(s, quote=False)
@@ -175,9 +184,10 @@ def guidebook_html(out_families):
                 f'<article class="gb-entry"><h3>{e(c["name"])}</h3>'
                 f'<p class="gb-meta">{meta}</p>{note}</article>'
             )
+        realm_note = GUIDEBOOK_NOTES.get(fam["slug"], "")
         sections.append(
             f'<section class="gb-family"><h2>{e(fam["name"])}</h2>'
-            f'<p class="muted">{e(fam["intro"])}</p>{"".join(entries)}</section>'
+            f'<p class="muted">{e(fam["intro"])}</p>{realm_note}{"".join(entries)}</section>'
         )
     body = "\n".join(sections)
     return f'''<!DOCTYPE html>

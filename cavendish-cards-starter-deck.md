@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **73 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **72 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -118,21 +118,20 @@ Who am I today. Optional. A non-deficit way to hold that different people bloom 
 
 ---- 
 
-## Love Locutions (9)
+## Love Locutions (8)
 
 Affirmations. Given between people, never earned, never a reward for behaving. Distinct card back so it reads as a gift. If it's a prize, it's scoring — keep it a gift.
 
-| Name                            | Image cue                              | Prompt |
-| ------------------------------- | -------------------------------------- | ------ |
-| you belong here                 | a hand held out, welcoming             | —      |
-| you're not broken               | whole, unbroken shape                  | —      |
-| it's okay to need what you need | an open, unjudging space               | —      |
-| i'm glad you're here            | two figures, warm together             | —      |
-| you can rest                    | a soft place to lie down               | —      |
-| your way is a real way          | many paths, all valid                  | —      |
-| nothing to fix                  | a whole thing, left as it is           | —      |
-| i see you                       | eyes meeting, kindly                   | —      |
-| penguin pebbling                | a small pebble offered in an open hand | —      |
+| Name                            | Image cue                    | Prompt |
+| ------------------------------- | ---------------------------- | ------ |
+| you belong here                 | a hand held out, welcoming   | —      |
+| you're not broken               | whole, unbroken shape        | —      |
+| it's okay to need what you need | an open, unjudging space     | —      |
+| i'm glad you're here            | two figures, warm together   | —      |
+| you can rest                    | a soft place to lie down     | —      |
+| your way is a real way          | many paths, all valid        | —      |
+| nothing to fix                  | a whole thing, left as it is | —      |
+| i see you                       | eyes meeting, kindly         | —      |
 
 ---- 
 
@@ -169,10 +168,10 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | What helps | 24 |
 | Lily pads | 9 |
 | Growers | 3 |
-| Love Locutions | 9 |
+| Love Locutions | 8 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **73** |
+| **Total** | **72** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -189,7 +188,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 73 cards, five ways:
+The same 72 cards, five ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

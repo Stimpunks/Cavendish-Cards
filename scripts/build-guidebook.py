@@ -37,6 +37,15 @@ FAMILIES = [
      "The card the deck doesn't have yet. Find the gap, draw it, send it in."),
 ]
 
+REALM_NOTES = {
+    "love-locution":
+        "**Penguin pebbling.** Giving someone a Love Locution is *penguin "
+        "pebbling* — penguins bring each other pebbles, and these cards are "
+        "pebbles you can hand to a person. On paper, the cards are made to be "
+        "given this way. In the web app they work the other way round, too: "
+        "truths a person claims and turns up for themselves.",
+}
+
 
 def parse_card(path):
     """Return (name, {section_heading: text}) for a card file, excluding License."""
@@ -110,6 +119,8 @@ def main():
         if not files:
             continue
         doc += ["----", "", f"## {display}", "", f"_{intro}_", ""]
+        if slug in REALM_NOTES:
+            doc += [REALM_NOTES[slug], ""]
         count = 0
         for f in files:
             name, sections = parse_card(f)

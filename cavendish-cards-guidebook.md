@@ -320,6 +320,8 @@ It names the gap: a way of growing no card catches. When this card is out, draw 
 
 _Affirmations. Given between people, never earned — a gift, never a reward._
 
+**Penguin pebbling.** Giving someone a Love Locution is *penguin pebbling* — penguins bring each other pebbles, and these cards are pebbles you can hand to a person. On paper, the cards are made to be given this way. In the web app they work the other way round, too: truths a person claims and turns up for themselves.
+
 ### i see you
 *eyes meeting, kindly* · given, not read
 
@@ -339,11 +341,6 @@ _Affirmations. Given between people, never earned — a gift, never a reward._
 *a whole thing, left as it is* · given, not read
 
 "Nothing to fix" is a whole thing left as it is — an absence of the repair impulse. It affirms acceptance over correction: you are not a project, and this moment does not require improving you. The urge to fix a person often does the harm. When this card is given, set the fixing down — be with the person as they are, rather than working on them.
-
-### penguin pebbling
-*a small pebble offered in an open hand* · given, not read
-
-Penguins give each other pebbles. It names showing love by sharing small things — a rock, a link, a fact, a song. Handing someone a pebble says "I was thinking of you" in the language many Autistic people actually use. When this card is given, receive the pebble as the affection it is, not a tangent.
 
 ### you belong here
 *a hand held out, welcoming* · given, not read
