@@ -112,6 +112,16 @@ _The niche-construction pieces: the ways we change the environment so it fits._
 
 A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. It names the calming pull of proprioceptive input: firm pressure that many bodies find organizing when lighter touch would not. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only ever the pressure they ask for, on their terms.
 
+### a corner
+*a small figure tucked into a corner, walls on two sides* · "Somewhere with sides, at my back."
+
+A corner is the cheapest cave there is — two walls meeting, a back that's covered, an edge to settle against. It names the pull toward enclosure: sides and boundaries that cut the input down and let a body feel held. Corners, edges, and nooks are in every room and cost nothing. When this card is out, find the person a corner — or make one with a shelf, a bookcase, a bit of furniture pulled out — rather than asking them to settle in the open.
+
+### a den
+*a blanket or umbrella making a little roof overhead* · "Something over me to tuck under."
+
+A den is a roof you make — a blanket over a table, an umbrella, a pop-up tent, a hood pulled up. It names the comfort of cover overhead: a small, enclosed pocket that drops the light and the noise and marks off a space that's yours. Dens are quick to build from what's already in the room. When this card is out, help build the cover — and let the person decide how closed-in it should be.
+
 ### a smell that helps
 *a hand near a scented thing* · "A smell that settles me, or less of one."
 
@@ -131,6 +141,11 @@ A steady sound is a gentle, repeating wave — a hum, white noise, a loop to res
 *an open door* · "A way to leave that I can use."
 
 A way out is an open door — a visible, usable exit. It names the need to know escape is possible: not necessarily to leave, but to be certain leaving is allowed. Often just knowing the door is there is what makes staying possible. When this card is out, guarantee the exit — a clear way to step out, no permission ritual, no penalty for using it.
+
+### another way to talk
+*a hand pointing at a card, next to a small whiteboard* · "Let me point, write, or show it."
+
+A pointing hand and a whiteboard — saying it without saying it aloud. It names the need for another channel: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to communicate is not less communication. When this card is out, offer the other channel and wait — hand over the whiteboard, the device, the cards, the time — rather than pressing for spoken words.
 
 ### busy hands
 *a fidget in motion* · "Something for my hands to do."
@@ -157,6 +172,16 @@ Just one person is two figures side by side — one companion, not a crowd. It n
 
 Less talking is a hushed mouth and a calm face — fewer words in the air. It names a need to reduce language load: less to process, less to answer, quiet from the demand to keep up a conversation. Silence together can be a relief, not a problem to fill. When this card is out, ease off the words — fewer questions, more room, and don't read the quiet as trouble.
 
+### less to look at
+*a busy, cluttered wall beside a calm bare one* · "Fewer things to look at."
+
+One wall crowded with stuff, one wall calm and bare — this card asks for the second. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing sight-lines is free. When this card is out, take some things down or turn the person toward a plainer view — reduce what there is to look at, not what the person can cope with.
+
+### let me control it
+*a hand resting on a dimmer switch* · "Let me be the one to change it."
+
+This is a hand on the switch — the person turning the light, the sound, the thing up or down themselves. It names control as its own need: not a particular setting, but being the one who decides and adjusts it. For many people the same input is fine when they hold the dial and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — rather than setting it for them.
+
 ### my own spot
 *a marked place that's mine* · "A place that's just mine."
 
@@ -172,6 +197,11 @@ No rush is a slow, easy clock — time without pressure. It names a need for mor
 
 Room to move is open floor — space to pace, rock, spin, or stim. It names a need for movement: motion that regulates and thinks, not fidgeting to be stilled. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement rather than asking the body to be quiet; stillness is not the goal.
 
+### sit my way
+*a floor cushion, a wobble stool, and someone standing* · "Let me sit or stand how I like."
+
+Three ways to be where a chair would go — on the floor, on a wobble stool, standing. It names posture as a choice: a body settles and attends differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — rather than asking the person to sit still and straight.
+
 ### something soft
 *a plush thing to hold* · "Something to hold and squeeze."
 
@@ -186,6 +216,11 @@ Something to chew is a chewy tool — safe oral input, a chew or a crunch. It na
 *a small heads-up sign* · "Let me know before it changes."
 
 Tell me first is a small heads-up sign — warning before a change. It names a need for predictability: knowing what's coming so a transition doesn't arrive as a shock. Surprise is expensive for many nervous systems; a heads-up is cheap to give. When this card is out, narrate changes in advance — say what's next before it happens, every time you can.
+
+### the right temperature
+*a blanket on one side, a fan on the other* · "Warmer, or cooler."
+
+Warmth on one side, cool air on the other — the body asking for a different temperature. It names thermal comfort as a real sensory need: too warm or too cold can fill a body up as much as noise or light can, and it is easy for others to miss. A layer, a fan, an open window, a warm drink all shift it. When this card is out, change the temperature around the person — add or take away a layer, move the air — rather than telling them they're fine.
 
 ### your own
 *a blank card and a pencil* · "Something else that helps."
