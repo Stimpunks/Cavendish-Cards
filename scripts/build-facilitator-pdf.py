@@ -118,9 +118,8 @@ def parse(md):
             continue
 
         if all(re.match(r"^\d+\.\s", l.lstrip()) for l in blines):
-            items = "".join(
-                f"<li>{inline(re.sub(r'^\\d+\\.\\s+', '', l.lstrip()))}</li>"
-                for l in blines)
+            stripped = (re.sub(r"^\d+\.\s+", "", l.lstrip()) for l in blines)
+            items = "".join(f"<li>{inline(s)}</li>" for s in stripped)
             html.append(f'<ol class="steps">{items}</ol>')
             continue
 
