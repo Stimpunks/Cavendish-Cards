@@ -212,6 +212,15 @@ GUIDEBOOK_NOTES = {
         "<em>intermittent collaboration</em>: everyone needs all three, but not at "
         "once, and not in the same measure. Lay places, interaction moods, and lily "
         "pads in a row to map that rhythm.</p>",
+    "what-helps":
+        "<p><strong>Building the niche.</strong> These cards name what would help — "
+        "the <em>need</em>, not the thing that meets it. The materials are up to you "
+        "and your budget: a den can be a pop-up tent or a blanket over a table; less "
+        "to look at can be a screen, a corner, or a turned-around desk. For practical, "
+        "low-cost ways to build these, see "
+        "<a href=\"https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/\">Creating Cavendish Space on a Budget</a> "
+        "and <a href=\"https://stimpunks.org/glossary/nesting/\">Nesting</a>. The card "
+        "names the need; niche construction fills it, with whatever you have.</p>",
     "love-locution":
         "<p><strong>Penguin pebbling.</strong> Giving someone a Love Locution is "
         "<em>penguin pebbling</em> — penguins bring each other pebbles, and these "

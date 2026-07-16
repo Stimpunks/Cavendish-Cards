@@ -198,7 +198,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 82 cards, six ways:
+The same 82 cards, seven ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.
@@ -206,6 +206,7 @@ The same 82 cards, six ways:
 - **Older kids — map the edges.** Walk lily pads across a timetable to find the hard transitions.
 - **Staff training — play as the environment.** Deal conflicting what-helps cards; build one habitat that holds them all. Feel neurological pluralism instead of hearing about it.
 - **Moving between — map your rhythm.** Lay places, interaction moods, and lily pads left to right to show how you move between alone and together across a day: the cave, then ready now, then the campfire, then a minute alone, then back. Move a card when the rhythm shifts. This is intermittent collaboration — nobody stays in one place all day.
+- **Build a niche — design a space that fits.** Lay the what-helps that would make a space yours — the den, less to look at, the right temperature — with *the habitat* card at the center. A design brief for the room, not a snapshot of the day. Then build it on any budget: see [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/).
 
 ---- 
 

@@ -48,6 +48,15 @@ REALM_NOTES = {
         "collaboration*: everyone needs all three, but not at once, and not in the "
         "same measure. Lay places, interaction moods, and lily pads in a row to map "
         "that rhythm.",
+    "what-helps":
+        "**Building the niche.** These cards name what would help — the *need*, not "
+        "the thing that meets it. The materials are up to you and your budget: a den "
+        "can be a pop-up tent or a blanket over a table; less to look at can be a "
+        "screen, a corner, or a turned-around desk. For practical, low-cost ways to "
+        "build these, see [Creating Cavendish Space on a Budget]"
+        "(https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/) and "
+        "[Nesting](https://stimpunks.org/glossary/nesting/). The card names the need; "
+        "niche construction fills it, with whatever you have.",
     "love-locution":
         "**Penguin pebbling.** Giving someone a Love Locution is *penguin "
         "pebbling* — penguins bring each other pebbles, and these cards are "

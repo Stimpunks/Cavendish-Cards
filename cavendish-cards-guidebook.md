@@ -144,6 +144,8 @@ It names the gap: a weather no card catches. When this card is out, draw or writ
 
 _The niche-construction pieces: the ways we change the environment so it fits._
 
+**Building the niche.** These cards name what would help — the *need*, not the thing that meets it. The materials are up to you and your budget: a den can be a pop-up tent or a blanket over a table; less to look at can be a screen, a corner, or a turned-around desk. For practical, low-cost ways to build these, see [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/) and [Nesting](https://stimpunks.org/glossary/nesting/). The card names the need; niche construction fills it, with whatever you have.
+
 ### a big squeeze
 *deep pressure, a weighted wrap* · "Firm pressure that steadies me."
 

@@ -9,7 +9,7 @@ A deck for naming sensory and niche-construction needs. Point at a card, or lay 
 
 ---- 
 
-## Six ways to play
+## Seven ways to play
 
 **Show me** — *early years, anyone*
 Pick the one card that's you right now. That's the whole game. Say back what you see: "Buzzy today. Okay." Under a minute.
@@ -28,6 +28,9 @@ Deal a table of what-helps cards with needs that conflict — room to move again
 
 **Moving between** — *anyone, across a day*
 Lay places, interaction moods, and lily pads left to right — the cave, ready now, the campfire, a minute alone, back again. A rhythm of alone and together, mapped in cards. Move one when the rhythm shifts. This is intermittent collaboration: nobody stays in one place all day.
+
+**Build a niche** — *a learner, or a group*
+Lay the what-helps that would make a space fit you — a den, less to look at, the right temperature — with the habitat card at the center. A design brief for the room, not a snapshot of a day. Then build it, on any budget.
 
 ---- 
 
