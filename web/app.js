@@ -3,7 +3,7 @@
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl, toTableBtn;
   var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
-  var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbCloseBtn, lbReturn = null;
+  var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbBuildEl, lbBuildLinkEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
   var momentFamilies = [];
@@ -409,6 +409,15 @@
     if (lbNoteEl) {
       if (card.notes) {
         lbNoteTextEl.textContent = card.notes;
+        if (lbBuildEl) {
+          if (card.buildLink) {
+            lbBuildLinkEl.href = card.buildLink.href;
+            lbBuildLinkEl.textContent = card.buildLink.label + ' \u2192';
+            lbBuildEl.hidden = false;
+          } else {
+            lbBuildEl.hidden = true;
+          }
+        }
         lbNoteEl.open = false;
         lbNoteEl.hidden = false;
       } else {
@@ -533,6 +542,8 @@
     lbCloseBtn = document.getElementById('lightbox-close');
     lbNoteEl = document.getElementById('lightbox-note');
     lbNoteTextEl = document.getElementById('lightbox-note-text');
+    lbBuildEl = document.getElementById('lightbox-build');
+    lbBuildLinkEl = document.getElementById('lightbox-build-link');
     if (lightboxEl && lbCloseBtn) {
       lbCloseBtn.addEventListener('click', closeLightbox);
       lightboxEl.addEventListener('click', function (e) {
