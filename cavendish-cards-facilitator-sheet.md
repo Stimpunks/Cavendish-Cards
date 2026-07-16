@@ -20,8 +20,8 @@ Lay a place, a weather, and a couple of what-helps cards. A sentence in pictures
 **Class weather** — *a whole group*
 Everyone lays a weather card face-up. The room's weather becomes visible. No one is named. Nothing is scored. Two minutes, and the group has a shared word for the day.
 
-**Map the edges** — *older kids*
-Walk the lily-pad cards across a timetable. Find where the hard transitions actually are — between focus and talking, rest and joining in. Self-advocacy, in their hands. Ten minutes.
+**Map the edges** — *older kids, or a group*
+Every day has edges — the jumps between one thing and the next, where a mind in deep focus gets yanked to something new. Those crossings are where the day gets hard, and the strain is the *jump*, not the person. Lay the day out left to right, then find its edges: focus → talking, rest → joining in, home → out the door. On each edge that bites, lay a lily pad — *slowly, tell me first, i need a minute, coming back* — the stepping stone that would let you land gently instead of being pulled across. You're not mapping what's wrong with you; you're padding the crossings so the day fits. Designed *with* the person, never *at* them. Ten to fifteen minutes.
 
 **Play as the environment** — *staff training*
 Deal a table of what-helps cards with needs that conflict — room to move against less talking, just one person against a full group. Build one habitat that holds them all. You'll feel neurological pluralism instead of hearing about it. Twenty minutes.

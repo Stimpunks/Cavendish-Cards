@@ -294,7 +294,9 @@ It names the gap: a help no card catches. When this card is out, draw or write t
 
 ## Lily pads
 
-_The in-between. Every card is a landing place, not a failure._
+_The in-between. Stepping stones for the crossings — every card is a place to land and push off from, never a failure._
+
+**Lily padding.** A lily pad is a springboard and a landing place both — somewhere to rest, and somewhere to push off from. For a mind in deep focus, a hard crossing between one thing and the next is jarring and costly: attention gets yanked across with nowhere to land. Lily pads are the stepping stones that make the crossing gentle — a pause, a heads-up, a held place, a graded step — designed *with* the person and never sprung *at* them. Each card names not a failure to move but a way to land and launch again: *i need a minute*, *slowly*, *coming back*, *stuck*. The work is never to hurry the crossing; it's to pad it. Rendered in the web app as an always-available *Moments* strip, because a moment can land on the table at any point in play. Lineage: lily padding, from Cavendish Space; the transitional-trauma framing from Tanya Adkin — https://stimpunks.org/glossary/lily-pad/.
 
 ### all done
 *a closed, contented loop* · "I'm finished here."

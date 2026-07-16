@@ -48,8 +48,9 @@ FAMILIES = [
      "Small changes to the space that make things easier — quiet, softer light, "
      "room to move, a way out."),
     ("lily-pad", "Lily pads",
-     "Moments you can drop onto the table anytime — a pause, a not-yet, a "
-     "ready-now. Each is a place to land, not a failure."),
+     "Stepping stones for the crossings between one thing and the next — drop "
+     "one onto the table anytime. A pause, a not-yet, a ready-now. Each is a "
+     "place to land and push off from, never a failure."),
     ("grower", "Growers",
      "How you're growing today, and what you need to do well. Some people are "
      "dandelions and grow almost anywhere; some are tulips and do well with the "
@@ -69,6 +70,7 @@ MOMENTS = {"lily-pad"}
 # App-only subtitles surfaced under a realm's name (community / alternate terms).
 SUBTITLES = {
     "love-locution": "Also called Love Locutions or Love Languages.",
+    "lily-pad": "Also called Moments — drop one anytime.",
 }
 
 # Headings kept in the guidebook even when the app shows a plainer label.
