@@ -64,7 +64,8 @@ main { padding: 28px 0 44px; }
 h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .muted { color: var(--muted); }
 
-.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 20px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 20px; }
+.filters-label { margin: 16px 0 6px; color: var(--ink); }
 .filter {
   font: inherit; cursor: pointer; padding: 7px 15px; border-radius: 999px;
   border: 1.5px solid var(--line); background: #fff; color: var(--ink);
