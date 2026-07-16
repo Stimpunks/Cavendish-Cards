@@ -115,6 +115,8 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .laid-note { margin-top: 2px; }
 .laid-note summary { cursor: pointer; color: var(--cyan-ink); }
 .laid-note p { margin: 6px 0 0; }
+.laid-build { margin: 8px 0 0; font-size: 0.95em; }
+.laid-build a { color: var(--cyan-ink); text-decoration: underline; }
 
 .btn {
   font: inherit; cursor: pointer; padding: 9px 14px; border-radius: 10px;

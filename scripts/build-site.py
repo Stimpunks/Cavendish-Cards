@@ -78,6 +78,17 @@ GB_NAMES = {
     "love-locution": "Love Locutions",
 }
 
+# Realm -> implementation guide. Only realms with a genuine environment-build
+# layer get a "how to build this" link; it deep-links to that realm's section
+# in the on-site guidebook (where the realm's implementation note lives).
+# Weather, Growers, Love Locutions, Blank have nothing to build — no link.
+# Extend by adding a realm here; the anchor gid="gb-<slug>" is emitted below.
+BUILD_LINKS = {
+    "places":     {"href": "guidebook.html#gb-places",    "label": "Building the space"},
+    "what-helps": {"href": "guidebook.html#gb-what-helps", "label": "Building the niche"},
+    "lily-pad":   {"href": "guidebook.html#gb-lily-pad",   "label": "Building the crossings"},
+}
+
 # Curated display order within a realm (web deck). Cards not listed fall in
 # alphabetically after the listed ones; a realm's "your own" card is always last.
 # No headings, no good/bad split — just a gentle range.
@@ -255,7 +266,7 @@ def guidebook_html(out_families):
         realm_note = GUIDEBOOK_NOTES.get(fam["slug"], "")
         gb_name = GB_NAMES.get(fam["slug"], fam["name"])
         sections.append(
-            f'<section class="gb-family"><h2>{e(gb_name)}</h2>'
+            f'<section class="gb-family" id="gb-{fam["slug"]}"><h2>{e(gb_name)}</h2>'
             f'<p class="muted">{e(fam["intro"])}</p>{realm_note}{"".join(entries)}</section>'
         )
     body = "\n".join(sections)
@@ -364,7 +375,7 @@ def main():
             has_prompt = bool(prompt) and prompt != "—"
             back = ("back-love-locution.svg" if slug == "love-locution"
                     else "back-standard.svg")
-            cards.append({
+            card = {
                 "slug": cslug,
                 "name": name,
                 "cue": cue,
@@ -375,7 +386,10 @@ def main():
                 "back": f"faces/{back}",
                 "group": grp,
                 "reflections": reflections,
-            })
+            }
+            if slug in BUILD_LINKS:
+                card["buildLink"] = BUILD_LINKS[slug]
+            cards.append(card)
             total += 1
         if cards:
             order = group_order + (["More"] if used_more else [])

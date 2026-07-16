@@ -277,9 +277,13 @@
         var promptLine = c.prompt
           ? '<span class="laid-prompt">' + esc(c.prompt) + '</span>'
           : '';
+        var buildLink = c.buildLink
+          ? '<p class="laid-build"><a href="' + esc(c.buildLink.href) + '">' +
+            esc(c.buildLink.label) + ' \u2192</a></p>'
+          : '';
         var note = c.notes
           ? '<details class="laid-note"><summary>What this card means</summary><p>' +
-            esc(c.notes) + '</p></details>'
+            esc(c.notes) + '</p>' + buildLink + '</details>'
           : '';
         var refl = c.reflections && c.reflections.length ? c.reflections : [];
         var reflHtml = '';
