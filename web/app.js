@@ -3,7 +3,7 @@
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl;
   var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
-  var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbCloseBtn, lbReturn = null;
+  var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
   var momentFamilies = [];
@@ -314,6 +314,15 @@
     } else {
       lbPromptEl.textContent = ''; lbPromptEl.hidden = true;
     }
+    if (lbNoteEl) {
+      if (card.notes) {
+        lbNoteTextEl.textContent = card.notes;
+        lbNoteEl.open = false;
+        lbNoteEl.hidden = false;
+      } else {
+        lbNoteEl.hidden = true;
+      }
+    }
     lightboxEl.hidden = false;
     document.body.classList.add('lightbox-open');
     document.addEventListener('keydown', lbKeydown);
@@ -330,8 +339,18 @@
   }
 
   function lbKeydown(e) {
-    if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
-    else if (e.key === 'Tab') { e.preventDefault(); lbCloseBtn.focus(); }
+    if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); return; }
+    if (e.key !== 'Tab') return;
+    var found = lightboxEl.querySelectorAll(
+      'button, summary, a[href], [tabindex]:not([tabindex="-1"])');
+    var els = [];
+    for (var i = 0; i < found.length; i++) {
+      if (!found[i].disabled && found[i].offsetParent !== null) els.push(found[i]);
+    }
+    if (!els.length) return;
+    var first = els[0], last = els[els.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
   function start(data) {
@@ -419,6 +438,8 @@
     lbNameEl = document.getElementById('lightbox-name');
     lbPromptEl = document.getElementById('lightbox-prompt');
     lbCloseBtn = document.getElementById('lightbox-close');
+    lbNoteEl = document.getElementById('lightbox-note');
+    lbNoteTextEl = document.getElementById('lightbox-note-text');
     if (lightboxEl && lbCloseBtn) {
       lbCloseBtn.addEventListener('click', closeLightbox);
       lightboxEl.addEventListener('click', function (e) {

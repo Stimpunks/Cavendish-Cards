@@ -230,6 +230,7 @@ body[data-place="the-habitat"] { background-color: #e9f0e6; }
 .lightbox-name { margin: 4px 0 2px; font-size: 1.3rem; }
 .lightbox-prompt { margin: 0; color: var(--ink); font-size: 1.1rem; }
 .lightbox-prompt[hidden] { display: none; }
+.lightbox-note { margin-top: 6px; }
 body.lightbox-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
