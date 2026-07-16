@@ -11,6 +11,7 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 > - Art is human- and community-made. The image cue is a motif for an illustrator, not finished art — don't paste AI-generated images.
 > - No scoring, no rewards, no "right" card. If a card ranks, judges, or is earned, it doesn't belong in this deck.
 > - Counter-deficit only. A card names a need or a state or a change to the environment. It never names a child as the problem.
+> - **Not an AAC board.** A card earns its place if it names a hard-to-voice inner state (a feeling, a sensory experience) or a niche-construction need — *and* carries a reframe in its Notes. It is not for wants, objects, or actions a child could request ("juice," "go outside"). That is communication, and it belongs to a child's real AAC, which this deck sits alongside and never replaces. Quick test: "can't tell" (an experience) belongs; "hungry" (a request) does not.
 > - Look at `cavendish-cards-starter-deck.md` for fifty worked examples before you write yours.
 
 ---- 

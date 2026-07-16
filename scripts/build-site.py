@@ -191,6 +191,16 @@ SCREENING = (
     "the opposite of what it is for. Broken systems, not broken people."
 )
 
+NOT_AAC = (
+    "The deck is a lens, not a language. It makes one hard-to-voice thing — "
+    "sensory, regulatory, and emotional weather, and the conditions that help — "
+    "sayable, and it stops there. It is not a communication system and does not "
+    "try to be comprehensive the way AAC must be. Most of all, it sits alongside "
+    "a child's real communication tools, never in place of them: if a child needs "
+    "a way to communicate, they need AAC, and \"they have the cards\" is never a "
+    "reason to under-provide it."
+)
+
 GUIDEBOOK_NOTES = {
     "love-locution":
         "<p><strong>Penguin pebbling.</strong> Giving someone a Love Locution is "
@@ -249,6 +259,9 @@ def guidebook_html(out_families):
       <p class="intro">{e(INTRO)}</p>
       <div class="rules" role="note" aria-label="Not a screening tool">
         <p><strong>Not a screening tool.</strong> {e(SCREENING)}</p>
+      </div>
+      <div class="rules" role="note" aria-label="Not an AAC board">
+        <p><strong>Not an AAC board.</strong> {e(NOT_AAC)}</p>
       </div>
     </div>
   </header>

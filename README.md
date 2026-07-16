@@ -29,6 +29,16 @@ It carries none of the frameworks that turn human difference into a problem to b
 
 Used to sort, score, rank, or flag children, the deck becomes the opposite of what it is for.
 
+## Not an AAC board
+
+The deck is a lens, not a language. It makes one hard-to-voice thing — sensory, regulatory, and emotional weather, and the conditions that help — sayable and shareable. It is not a communication system, and it does not try to be comprehensive the way augmentative and alternative communication (AAC) must be. Its vocabulary is small and opinionated on purpose.
+
+- **Curated, not comprehensive.** AAC aims to let a person say anything. This deck names a specific, hard-to-voice inner world and stops there. Completeness is not the goal; chasing it is how the deck drifts.
+- **A reframe, not a referent.** An AAC symbol is a neutral pointer ("juice" means the drink). Every card here carries a worldview in its Notes — how to hold it, why it is not misbehavior. A card that is only a label does not belong.
+- **A design brief, not a request.** A spread changes the adult and the room, not just the message. AAC is a person's expressive channel; this deck is a relational object that reshapes the environment.
+
+Most of all: **this deck sits alongside a child's real communication tools — never in place of them.** If a child needs a way to communicate, they need AAC. Don't let "they have the cards" become a reason to under-provide it.
+
 ## The seven realms
 
 Every card is pictorial first. The words are for the adults; a child never has to read to play.
