@@ -161,8 +161,22 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .deck-group { font-size: 1.05rem; color: var(--ink-strong); margin: 20px 0 8px; }
 .deck-group:first-child { margin-top: 0; }
 
-.deck-realm { font-size: 1.2rem; font-weight: 700; color: var(--ink-strong); margin: 26px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
-.deck-realm:first-child { margin-top: 0; }
+.deck-realm-head { display: flex; align-items: center; gap: 8px; margin: 26px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.deck-realm-head:first-child { margin-top: 0; }
+.deck-realm { margin: 0; font-size: 1.2rem; font-weight: 700; color: var(--ink-strong); }
+.realm-info {
+  flex: none; width: 24px; height: 24px; padding: 0; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 999px; cursor: pointer; font-weight: 700; font-size: .85rem; font-style: italic;
+  border: 1.5px solid var(--line); background: #fff; color: var(--cyan-ink);
+}
+.realm-info:hover { border-color: var(--cyan); }
+.realm-desc {
+  margin: 0 0 14px; max-width: 70ch; color: var(--ink);
+  background: var(--panel); border-radius: 10px; padding: 10px 14px;
+}
+.realm-desc[hidden] { display: none; }
+.realm-desc p { margin: 0; }
 
 .summary { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 20px; }
 .summary-list { margin: 8px 0 12px; padding-left: 1.2em; max-width: 62ch; }

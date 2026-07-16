@@ -143,10 +143,45 @@
     // "All": one section per realm (heading + flat grid, no sense signposts).
     browseFamilies.forEach(function (f) {
       if (!f.cards.length) return;
+      var hasDesc = !!(f.intro || f.subtitle);
+      var descId = 'realm-desc-' + f.slug;
+
+      var head = document.createElement('div');
+      head.className = 'deck-realm-head';
       var h = document.createElement('h3');
       h.className = 'deck-realm';
       h.textContent = f.name;
-      deckEl.appendChild(h);
+      head.appendChild(h);
+
+      var info = null;
+      if (hasDesc) {
+        info = document.createElement('button');
+        info.type = 'button';
+        info.className = 'realm-info';
+        info.textContent = 'i';
+        info.setAttribute('aria-label', 'What is ' + f.name + '?');
+        info.setAttribute('aria-expanded', 'false');
+        info.setAttribute('aria-controls', descId);
+        head.appendChild(info);
+      }
+      deckEl.appendChild(head);
+
+      if (hasDesc) {
+        var desc = document.createElement('div');
+        desc.id = descId;
+        desc.className = 'realm-desc';
+        desc.hidden = true;
+        var dhtml = f.intro ? '<p>' + esc(f.intro) + '</p>' : '';
+        if (f.subtitle) dhtml += '<p class="family-subtitle">' + esc(f.subtitle) + '</p>';
+        desc.innerHTML = dhtml;
+        deckEl.appendChild(desc);
+        info.addEventListener('click', function () {
+          var open = desc.hidden;
+          desc.hidden = !open;
+          info.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
       deckEl.appendChild(grid(f.cards));
     });
   }
