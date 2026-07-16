@@ -228,7 +228,18 @@
 
   function lay(slug) {
     if (isLaid(slug)) { announce(bySlug[slug].name + ' is already on the table.'); return; }
-    laid.push({ slug: slug, up: false, refIdx: 0 });
+    var c = bySlug[slug];
+    var start = 0;                      // vary the question so a spread doesn't repeat
+    if (c && c.reflections && c.reflections.length > 1) {
+      var same = 0;
+      for (var i = 0; i < laid.length; i++) {
+        var lc = bySlug[laid[i].slug];
+        if (lc && lc.reflections && lc.reflections.length &&
+            lc.reflections[0] === c.reflections[0]) same++;
+      }
+      start = same % c.reflections.length;
+    }
+    laid.push({ slug: slug, up: false, refIdx: start });
     pendingFocus = null;               // stay in the deck; don't scroll to the table
     renderTable();
     announce('Laid ' + bySlug[slug].name + ' on the table, face-down.');
