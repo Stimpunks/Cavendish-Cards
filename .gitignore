@@ -4,7 +4,6 @@
 /.DS_Store
 /cards/.DS_Store
 /assets/.DS_Store
-/cards/.DS_Store
 
 # Generated web build outputs (build-site.py writes these; Netlify rebuilds on deploy)
 /web/cards.json
