@@ -69,13 +69,17 @@ MOMENTS = {"lily-pad"}
 # Sense-signpost grouping for the What helps family (display only).
 GROUPS = {
     "what-helps": [
-        ("Sound", ["headphones", "a-steady-sound", "less-talking"]),
-        ("Light", ["dim-the-light"]),
+        ("Being in charge", ["let-me-control-it"]),
+        ("Sound", ["headphones", "a-steady-sound"]),
+        ("Light & looking", ["dim-the-light", "less-to-look-at"]),
         ("Touch", ["something-soft"]),
         ("Pressure", ["a-big-squeeze"]),
-        ("Movement", ["room-to-move", "busy-hands"]),
+        ("Temperature", ["the-right-temperature"]),
+        ("Movement", ["room-to-move", "busy-hands", "sit-my-way"]),
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
-        ("People & time", ["just-one-person", "a-way-out", "my-own-spot", "tell-me-first", "no-rush"]),
+        ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
+        ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
+        ("People & time", ["just-one-person", "no-rush"]),
         ("Make your own", ["your-own"]),
     ],
 }

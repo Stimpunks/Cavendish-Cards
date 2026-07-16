@@ -1,0 +1,29 @@
+# the right temperature
+
+## Family
+
+what-helps
+
+## Image cue
+
+a blanket on one side, a fan on the other
+
+## Prompt
+
+Warmer, or cooler.
+
+## Reflection
+
+- Warmer, or cooler, right now?
+- Is there something nearby that would change it — a layer, a window, some air?
+- Is there a what-helps card that would go with it?
+
+## Notes
+
+Warmth on one side, cool air on the other — the body asking for a different temperature. It names thermal comfort as a real sensory need: too warm or too cold can fill a body up as much as noise or light can, and it is easy for others to miss. A layer, a fan, an open window, a warm drink all shift it. When this card is out, change the temperature around the person — add or take away a layer, move the air — rather than telling them they're fine.
+
+----
+
+## License
+
+Dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
