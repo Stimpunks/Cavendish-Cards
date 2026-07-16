@@ -55,35 +55,36 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 
 ---- 
 
-## What helps (23)
+## What helps (24)
 
 The niche-construction pieces — the ways we change the environment so it fits. The workhorse realm, and where the staff game finds its conflicts.
 
-| Name                  | Image cue                                               | Prompt                                   |
-| --------------------- | ------------------------------------------------------- | ---------------------------------------- |
-| headphones            | headphones, the noise turned down                       | Turn the world down a bit.               |
-| dim the light         | a dial lowering a lamp                                  | Softer light.                            |
-| something soft        | a plush thing to hold                                   | Something to hold and squeeze.           |
-| a big squeeze         | deep pressure, a weighted wrap                          | Firm pressure that steadies me.          |
-| room to move          | open floor, space to pace or spin                       | Space to move my body.                   |
-| busy hands            | a fidget in motion                                      | Something for my hands to do.            |
-| a steady sound        | a gentle repeating wave                                 | A calm sound to rest on.                 |
-| just one person       | two figures, side by side                               | Not a crowd — one person.                |
-| a way out             | an open door                                            | A way to leave that I can use.           |
-| my own spot           | a marked place that's mine                              | A place that's just mine.                |
-| something to chew     | a chewy tool                                            | Something to chew or crunch.             |
-| less talking          | a hushed mouth, a calm face                             | Fewer words for a while.                 |
-| tell me first         | a small heads-up sign                                   | Let me know before it changes.           |
-| no rush               | a slow, easy clock                                      | All the time I need.                     |
-| a corner              | a small figure tucked into a corner, walls on two sides | Somewhere with sides, at my back.        |
-| a den                 | a blanket or umbrella making a little roof overhead     | Something over me to tuck under.         |
-| a smell that helps    | a hand near a scented thing                             | A smell that settles me, or less of one. |
-| a snack or a drink    | a cup and a small snack                                 | Something to eat or drink.               |
-| another way to talk   | a hand pointing at a card, next to a small whiteboard   | Let me point, write, or show it.         |
-| less to look at       | a busy, cluttered wall beside a calm bare one           | Fewer things to look at.                 |
-| let me control it     | a hand resting on a dimmer switch                       | Let me be the one to change it.          |
-| sit my way            | a floor cushion, a wobble stool, and someone standing   | Let me sit or stand how I like.          |
-| the right temperature | a blanket on one side, a fan on the other               | Warmer, or cooler.                       |
+| Name                  | Image cue                                               | Prompt                                          |
+| --------------------- | ------------------------------------------------------- | ----------------------------------------------- |
+| headphones            | headphones, the noise turned down                       | Turn the world down a bit.                      |
+| dim the light         | a dial lowering a lamp                                  | Softer light.                                   |
+| something soft        | a plush thing to hold                                   | Something to hold and squeeze.                  |
+| a big squeeze         | deep pressure, a weighted wrap                          | Firm pressure that steadies me.                 |
+| room to move          | open floor, space to pace or spin                       | Space to move my body.                          |
+| busy hands            | a fidget in motion                                      | Something for my hands to do.                   |
+| a steady sound        | a gentle repeating wave                                 | A calm sound to rest on.                        |
+| just one person       | two figures, side by side                               | Not a crowd — one person.                       |
+| a way out             | an open door                                            | A way to leave that I can use.                  |
+| my own spot           | a marked place that's mine                              | A place that's just mine.                       |
+| something to chew     | a chewy tool                                            | Something to chew or crunch.                    |
+| less talking          | a hushed mouth, a calm face                             | Fewer words for a while.                        |
+| tell me first         | a small heads-up sign                                   | Let me know before it changes.                  |
+| no rush               | a slow, easy clock                                      | All the time I need.                            |
+| a corner              | a small figure tucked into a corner, walls on two sides | Somewhere with sides, at my back.               |
+| a den                 | a blanket or umbrella making a little roof overhead     | Something over me to tuck under.                |
+| a smell that helps    | a hand near a scented thing                             | A smell that settles me, or less of one.        |
+| a snack or a drink    | a cup and a small snack                                 | Something to eat or drink.                      |
+| another way to talk   | a hand pointing at a card, next to a small whiteboard   | Let me point, write, or show it.                |
+| less to look at       | a busy, cluttered wall beside a calm bare one           | Fewer things to look at.                        |
+| let me control it     | a hand resting on a dimmer switch                       | Let me be the one to change it.                 |
+| parallel existence    | two figures side by side, each in their own world       | Someone alongside me, each doing our own thing. |
+| sit my way            | a floor cushion, a wobble stool, and someone standing   | Let me sit or stand how I like.                 |
+| the right temperature | a blanket on one side, a fan on the other               | Warmer, or cooler.                              |
 
 ---- 
 
@@ -117,22 +118,21 @@ Who am I today. Optional. A non-deficit way to hold that different people bloom 
 
 ---- 
 
-## Love Locutions (10)
+## Love Locutions (9)
 
 Affirmations. Given between people, never earned, never a reward for behaving. Distinct card back so it reads as a gift. If it's a prize, it's scoring — keep it a gift.
 
-| Name                            | Image cue                                         | Prompt |
-| ------------------------------- | ------------------------------------------------- | ------ |
-| you belong here                 | a hand held out, welcoming                        | —      |
-| you're not broken               | whole, unbroken shape                             | —      |
-| it's okay to need what you need | an open, unjudging space                          | —      |
-| i'm glad you're here            | two figures, warm together                        | —      |
-| you can rest                    | a soft place to lie down                          | —      |
-| your way is a real way          | many paths, all valid                             | —      |
-| nothing to fix                  | a whole thing, left as it is                      | —      |
-| i see you                       | eyes meeting, kindly                              | —      |
-| parallel existence              | two figures side by side, each in their own world | —      |
-| penguin pebbling                | a small pebble offered in an open hand            | —      |
+| Name                            | Image cue                              | Prompt |
+| ------------------------------- | -------------------------------------- | ------ |
+| you belong here                 | a hand held out, welcoming             | —      |
+| you're not broken               | whole, unbroken shape                  | —      |
+| it's okay to need what you need | an open, unjudging space               | —      |
+| i'm glad you're here            | two figures, warm together             | —      |
+| you can rest                    | a soft place to lie down               | —      |
+| your way is a real way          | many paths, all valid                  | —      |
+| nothing to fix                  | a whole thing, left as it is           | —      |
+| i see you                       | eyes meeting, kindly                   | —      |
+| penguin pebbling                | a small pebble offered in an open hand | —      |
 
 ---- 
 
@@ -166,10 +166,10 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | ----- | ----- |
 | Places | 5 |
 | Weather | 10 |
-| What helps | 23 |
+| What helps | 24 |
 | Lily pads | 9 |
 | Growers | 3 |
-| Love Locutions | 10 |
+| Love Locutions | 9 |
 | Interaction | 5 |
 | Draw your own | 8 |
 | **Total** | **73** |

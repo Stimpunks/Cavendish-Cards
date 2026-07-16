@@ -56,8 +56,8 @@ FAMILIES = [
      "right basics; some are orchids and thrive with specific care. None is "
      "better — they just need different things."),
     ("love-locution", "Love Locutions",
-     "Kind things to give another person — said, not earned. Little affirmations "
-     "you can hand to someone."),
+     "Things that are true about you — you belong, you can rest, you're not "
+     "broken. Turning one up claims it out loud: I need this said, and heard."),
     ("blank", "Blank",
      "The card that isn't here yet. Draw or write your own."),
 ]
@@ -79,7 +79,7 @@ GROUPS = {
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
-        ("People & time", ["just-one-person", "no-rush"]),
+        ("People & time", ["just-one-person", "parallel-existence", "no-rush"]),
         ("Make your own", ["your-own"]),
     ],
 }
@@ -119,10 +119,10 @@ REFLECTIONS = {
         "Is there a what-helps card that fits your conditions?",
     ],
     "love-locution": [
-        "Does this one feel true for you right now?",
-        "Who might need to hear this?",
-        "Would you like to give it to someone, or keep it?",
-        "Is there someone who gives this to you?",
+        "Is this one you needed to hear today?",
+        "What would help you believe it?",
+        "Who could help you hold onto it?",
+        "Would you want someone to know this is true for you?",
     ],
     "interaction": [
         "Who around you should see this card?",

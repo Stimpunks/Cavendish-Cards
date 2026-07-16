@@ -197,8 +197,7 @@
       if (item.up) {
         var promptLine = c.prompt
           ? '<span class="laid-prompt">' + esc(c.prompt) + '</span>'
-          : (c.given_not_read
-              ? '<span class="laid-prompt muted">given, not read</span>' : '');
+          : '';
         var note = c.notes
           ? '<details class="laid-note"><summary>What this card means</summary><p>' +
             esc(c.notes) + '</p></details>'
@@ -314,8 +313,6 @@
     lbNameEl.textContent = card.name;
     if (card.prompt) {
       lbPromptEl.textContent = card.prompt; lbPromptEl.hidden = false;
-    } else if (card.given_not_read) {
-      lbPromptEl.textContent = 'given, not read'; lbPromptEl.hidden = false;
     } else {
       lbPromptEl.textContent = ''; lbPromptEl.hidden = true;
     }

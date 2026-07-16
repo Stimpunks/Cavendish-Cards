@@ -192,6 +192,11 @@ My own spot is a marked place that belongs to one person — a seat, a corner, a
 
 No rush is a slow, easy clock — time without pressure. It names a need for more processing time: room to think, respond, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often undoes both. When this card is out, take the pressure off the clock — wait, and let the extra time be freely available.
 
+### parallel existence
+*two figures side by side, each in their own world* · "Someone alongside me, each doing our own thing."
+
+Two figures side by side, each in their own world — company without the demand to interact. It names body doubling: being near someone while you each do your own thing, the shared presence steadying without any pull to talk or engage. For many people this is the most workable kind of togetherness. When this card is out, offer quiet company — settle nearby, expect nothing, and don't turn it into conversation.
+
 ### room to move
 *open floor, space to pace or spin* · "Space to move my body."
 
@@ -334,11 +339,6 @@ _Affirmations. Given between people, never earned — a gift, never a reward._
 *a whole thing, left as it is* · given, not read
 
 "Nothing to fix" is a whole thing left as it is — an absence of the repair impulse. It affirms acceptance over correction: you are not a project, and this moment does not require improving you. The urge to fix a person often does the harm. When this card is given, set the fixing down — be with the person as they are, rather than working on them.
-
-### parallel existence
-*two figures side by side, each in their own world* · given, not read
-
-Companionship without the demand to interact — near someone, doing your own things, together and unpressured. For many people this is the most comfortable closeness there is. When this card is given, it offers company that costs nothing: stay near, expect nothing.
 
 ### penguin pebbling
 *a small pebble offered in an open hand* · given, not read
