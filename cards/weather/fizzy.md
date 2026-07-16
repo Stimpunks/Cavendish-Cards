@@ -6,15 +6,15 @@ weather
 
 ## Image cue
 
-happy bubbles rising
+bubbles rising inside, a fizzing glass — excitement on the inside
 
 ## Prompt
 
-Excited, in a good way.
+Bubbly and excited inside.
 
 ## Notes
 
-Fizzy is happy bubbles rising — bright, buoyant energy that wants to move and do. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
+Fizzy is happy bubbles rising inside — bright, buoyant excitement, felt before it shows. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
 
 ----
 

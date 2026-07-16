@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **72 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **73 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -36,22 +36,23 @@ The five Cavendish zones. Fixed. Everything else sits in one of these.
 
 ---- 
 
-## Weather (10)
+## Weather (11)
 
 Inner weather, not clinical states. Covers the whole range: too much, too little, and settled — good and hard alike.
 
-| Name     | Image cue                                | Prompt                              |
-| -------- | ---------------------------------------- | ----------------------------------- |
-| bright   | clear sky, open light                    | Clear and good right now.           |
-| buzzy    | sparks, too many at once                 | Too much coming in.                 |
-| prickly  | thorns, everything scratches             | Everything's rubbing the wrong way. |
-| full     | a jar filled to the brim                 | No more room inside.                |
-| foggy    | low mist, edges blurred                  | Hard to think, everything's slow.   |
-| heavy    | a weighted sky pressing down             | Low and weighed down.               |
-| far-away | a small figure at the end of a long view | A bit distant, floating off.        |
-| fizzy    | happy bubbles rising                     | Excited, in a good way.             |
-| stormy   | big clouds about to break                | Big feelings, close to the edge.    |
-| warm     | a cozy glow, wrapped up                  | Settled and safe.                   |
+| Name         | Image cue                                                                      | Prompt                              |
+| ------------ | ------------------------------------------------------------------------------ | ----------------------------------- |
+| bright       | clear sky, open light                                                          | Clear and good right now.           |
+| buzzy        | sparks, too many at once                                                       | Too much coming in.                 |
+| prickly      | thorns, everything scratches                                                   | Everything's rubbing the wrong way. |
+| full         | a jar filled to the brim                                                       | No more room inside.                |
+| foggy        | low mist, edges blurred                                                        | Hard to think, everything's slow.   |
+| heavy        | a weighted sky pressing down                                                   | Low and weighed down.               |
+| far-away     | a small figure at the end of a long view                                       | A bit distant, floating off.        |
+| fizzy        | bubbles rising inside, a fizzing glass — excitement on the inside              | Bubbly and excited inside.          |
+| stormy       | big clouds about to break                                                      | Big feelings, close to the edge.    |
+| warm         | a cozy glow, wrapped up                                                        | Settled and safe.                   |
+| happy flappy | a figure mid-flap, hands blurred with motion, bright sparks of joy around them | So happy my body has to move.       |
 
 ---- 
 
@@ -164,14 +165,14 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | Realm | Cards |
 | ----- | ----- |
 | Places | 5 |
-| Weather | 10 |
+| Weather | 11 |
 | What helps | 24 |
 | Lily pads | 9 |
 | Growers | 3 |
 | Love Locutions | 8 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **72** |
+| **Total** | **73** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -188,7 +189,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 72 cards, five ways:
+The same 73 cards, five ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

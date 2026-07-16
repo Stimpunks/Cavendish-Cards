@@ -62,9 +62,9 @@ Buzzy is a shower of sparks, too many at once — the air crackling with more in
 Far-away is a small figure at the end of a long view — present in the room but drifting off from it. It names dissociation or spaciness: a soft disconnection, floating loose from the here and now. It is often the mind's way of stepping back when things are too much. When this card is out, don't yank the person back — lower the intensity, offer a quiet anchor, and let them return at their own pace.
 
 ### fizzy
-*happy bubbles rising* · "Excited, in a good way."
+*bubbles rising inside, a fizzing glass — excitement on the inside* · "Bubbly and excited inside."
 
-Fizzy is happy bubbles rising — bright, buoyant energy that wants to move and do. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
+Fizzy is happy bubbles rising inside — bright, buoyant excitement, felt before it shows. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
 
 ### foggy
 *low mist, edges blurred* · "Hard to think, everything's slow."
@@ -75,6 +75,11 @@ Foggy is low mist with the edges blurred — thinking gone slow and soft, hard t
 *a jar filled to the brim* · "No more room inside."
 
 Full is a jar filled to the brim — one more drop and it spills. It names reaching capacity: not yet in distress, but with no room left to take anything else in. Full is an early, honest warning, offered before the overflow. When this card is out, stop adding — pause new demands and let some out before anything more goes in.
+
+### happy flappy
+*a figure mid-flap, hands blurred with motion, bright sparks of joy around them* · "So happy my body has to move."
+
+Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. It names happy stimming: delight that moves outward through the body, the way many Autistic people feel and show joy. This is not something to calm; it is the good thing itself. When this card is out, celebrate with them — join the bounce, make room for the flap — and never still the hands.
 
 ### heavy
 *a weighted sky pressing down* · "Low and weighed down."
