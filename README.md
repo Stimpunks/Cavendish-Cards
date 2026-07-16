@@ -65,6 +65,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
+- [`cavendish-cards-why-sheet.md`](./cavendish-cards-why-sheet.md) — a [Why Sheet](https://stimpunks.org/why/) making the case for the deck and connecting it to the [Cavendish Space](https://stimpunks.org/space/) learning-space principles.
 - [`scripts/build-all.py`](./scripts/build-all.py) — runs all the build scripts below in one command.
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
 - [`scripts/build-starter-deck.py`](./scripts/build-starter-deck.py) — regenerates the starter-deck list from the card files.
