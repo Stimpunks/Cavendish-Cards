@@ -22,7 +22,7 @@ Please **don't** include any text (we add the words), any card border or frame (
 
 Each card comes with a short **image cue** — a plain description of the picture — plus the family it belongs to and a note on what it means.
 
-- **Browse the deck:** https://cavendish-cards.netlify.app/
+- **Browse the deck:** https://cavendish.app/
 - **Full list of cards, with every picture cue:** the [starter deck](./cavendish-cards-starter-deck.md)
 - **What each card is *for*:** the guidebook on the site, or [`cavendish-cards-guidebook.md`](./cavendish-cards-guidebook.md) (helps you catch the feeling behind the cue)
 - **About the project:** https://stimpunks.org/projects/cavendish-space-project/

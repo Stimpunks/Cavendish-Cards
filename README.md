@@ -8,7 +8,7 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 
 **Broken systems, not broken people.** A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
-**[Play it on the web](https://cavendish-cards.netlify.app/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
+**[Play it on the web](https://cavendish.app/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
 
 **[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders. Any style, made for young children, human-made, CC0. You draw; we place it.
 
@@ -58,7 +58,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
 - [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
 - [`scripts/build-playtest-pdf.py`](./scripts/build-playtest-pdf.py) — lays the placeholders out as a print-and-play PDF.
-- [`web/`](./web/) — the playable web version, live at [cavendish-cards.netlify.app](https://cavendish-cards.netlify.app/). A static site generated from the cards; see its [README](./web/README.md).
+- [`web/`](./web/) — the playable web version, live at [cavendish.app](https://cavendish.app/). A static site generated from the cards; see its [README](./web/README.md).
 - [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck (`cards.json` and faces) from the card files.
 - [`netlify.toml`](./netlify.toml) — Netlify build configuration.
 
@@ -80,7 +80,7 @@ One deck, across the age range: **show me** (early years), **build my day** (a c
 
 ## Play it on the web
 
-The deck is playable online at **[cavendish-cards.netlify.app](https://cavendish-cards.netlify.app/)** — browse and filter the cards, then lay a spread where each card starts face-down and you turn it up to share it. No scoring, no accounts, nothing stored. It's a static site generated from the card files and deployed from this repo by Netlify, so it stays in sync with the deck. See [`web/README.md`](./web/README.md).
+The deck is playable online at **[cavendish.app](https://cavendish.app/)** — browse and filter the cards, then lay a spread where each card starts face-down and you turn it up to share it. No scoring, no accounts, nothing stored. It's a static site generated from the card files and deployed from this repo by Netlify, so it stays in sync with the deck. See [`web/README.md`](./web/README.md).
 
 ## Playtesting before the art exists
 
