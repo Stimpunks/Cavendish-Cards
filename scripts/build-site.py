@@ -76,6 +76,33 @@ GB_NAMES = {
     "love-locution": "Love Locutions",
 }
 
+# Curated display order within a realm (web deck). Cards not listed fall in
+# alphabetically after the listed ones; a realm's "your own" card is always last.
+# No headings, no good/bad split — just a gentle range.
+ORDER = {
+    "weather": [
+        "warm", "bright", "fizzy", "happy-flappy", "in-the-zone",
+        "buzzy", "prickly", "full", "pulled-every-way", "meerkat",
+        "round-and-round", "stormy", "heavy", "foggy", "far-away",
+    ],
+}
+
+
+def order_files(slug, fam_dir):
+    order = ORDER.get(slug)
+    files = list(fam_dir.glob("*.md"))
+    if not order:
+        return sorted(files)
+    idx = {s: i for i, s in enumerate(order)}
+    def key(p):
+        s = p.stem
+        if s == "your-own":
+            return (2, 0, s)
+        if s in idx:
+            return (0, idx[s], "")
+        return (1, 0, s)
+    return sorted(files, key=key)
+
 # Sense-signpost grouping for the What helps family (display only).
 GROUPS = {
     "what-helps": [
@@ -269,7 +296,7 @@ def main():
             group_order.append(glabel)
             for gs in gslugs:
                 group_map[gs] = glabel
-        for f in sorted(fam_dir.glob("*.md")):
+        for f in order_files(slug, fam_dir):
             name, sec = bp.parse_card(f)
             if not name:
                 continue
