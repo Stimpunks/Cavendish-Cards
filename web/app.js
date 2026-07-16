@@ -291,9 +291,18 @@
 
     clearBtn.addEventListener('click', function () {
       laid = [];
-      pendingFocus = 'empty';
+      active = 'all';
+      var kids = filtersEl.children;
+      for (var i = 0; i < kids.length; i++) {
+        kids[i].setAttribute('aria-pressed',
+          kids[i].dataset.slug === 'all' ? 'true' : 'false');
+      }
+      updateBlurb('all');
+      pendingFocus = null;
+      renderDeck();
       renderTable();
-      announce('Cleared the table.');
+      if (filtersEl.firstChild) filtersEl.firstChild.focus();
+      announce('Cleared the table and started over.');
     });
 
     doneBtn.addEventListener('click', function () {
