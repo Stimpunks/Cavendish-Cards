@@ -3,6 +3,7 @@
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl;
   var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
+  var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
   var momentFamilies = [];
@@ -10,6 +11,12 @@
   var active = 'all';
   var laid = [];            // [{slug, up, refIdx}]
   var pendingFocus = null;  // {i, sel} | 'empty' | null
+
+  var ZOOM_SVG =
+    '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">' +
+    '<circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"></circle>' +
+    '<line x1="12.6" y1="12.6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>' +
+    '</svg>';
 
   function esc(s) {
     return String(s).replace(/[&<>]/g, function (m) {
@@ -70,6 +77,9 @@
   }
 
   function tile(c) {
+    var wrap = document.createElement('div');
+    wrap.className = 'tile-wrap';
+
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'tile';
@@ -79,7 +89,17 @@
       '" alt="" loading="lazy"></span>' +
       '<span class="tile-name">' + esc(c.name) + '</span>';
     b.addEventListener('click', function () { lay(c.slug); });
-    return b;
+
+    var z = document.createElement('button');
+    z.type = 'button';
+    z.className = 'zoom';
+    z.setAttribute('aria-label', 'Enlarge ' + c.name);
+    z.innerHTML = ZOOM_SVG;
+    z.addEventListener('click', function () { openLightbox(c, z); });
+
+    wrap.appendChild(b);
+    wrap.appendChild(z);
+    return wrap;
   }
 
   function grid(cards) {
@@ -192,9 +212,14 @@
           esc(c.name) + '</span>' + promptLine + note + reflHtml + '</div>';
       }
 
+      var zoomBtn = item.up
+        ? '<button type="button" class="zoom" aria-label="Enlarge ' +
+          escAttr(c.name) + '">' + ZOOM_SVG + '</button>'
+        : '';
+
       li.innerHTML =
         '<div class="laid-card"><img class="laid-img" src="' + escAttr(img) +
-        '" alt="' + escAttr(alt) + '"></div>' +
+        '" alt="' + escAttr(alt) + '">' + zoomBtn + '</div>' +
         '<div class="laid-controls">' +
           '<button type="button" class="btn flip">' +
           (item.up ? 'Turn face-down' : 'Turn it up') + '</button>' +
@@ -227,6 +252,8 @@
           if (qEl) qEl.textContent = reflectionFor(laid[i]);
         });
       }
+      var zEl = li.querySelector('.laid-card .zoom');
+      if (zEl) zEl.addEventListener('click', function () { openLightbox(c, zEl); });
 
       tableEl.appendChild(li);
     });
@@ -272,6 +299,39 @@
     summaryEl.hidden = false;
     var h = document.getElementById('summary-h');
     if (h) h.focus();
+  }
+
+  function openLightbox(card, trigger) {
+    if (!lightboxEl) return;
+    lbReturn = trigger || null;
+    lbImg.setAttribute('src', card.face);
+    lbImg.setAttribute('alt', card.name + (card.prompt ? ': ' + card.prompt : ''));
+    lbNameEl.textContent = card.name;
+    if (card.prompt) {
+      lbPromptEl.textContent = card.prompt; lbPromptEl.hidden = false;
+    } else if (card.given_not_read) {
+      lbPromptEl.textContent = 'given, not read'; lbPromptEl.hidden = false;
+    } else {
+      lbPromptEl.textContent = ''; lbPromptEl.hidden = true;
+    }
+    lightboxEl.hidden = false;
+    document.body.classList.add('lightbox-open');
+    document.addEventListener('keydown', lbKeydown);
+    lbCloseBtn.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightboxEl || lightboxEl.hidden) return;
+    lightboxEl.hidden = true;
+    document.body.classList.remove('lightbox-open');
+    document.removeEventListener('keydown', lbKeydown);
+    if (lbReturn && document.body.contains(lbReturn)) lbReturn.focus();
+    lbReturn = null;
+  }
+
+  function lbKeydown(e) {
+    if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+    else if (e.key === 'Tab') { e.preventDefault(); lbCloseBtn.focus(); }
   }
 
   function start(data) {
@@ -353,6 +413,21 @@
     summaryListEl = document.getElementById('summary-list');
     summaryCopyBtn = document.getElementById('summary-copy');
     summaryCloseBtn = document.getElementById('summary-close');
+
+    lightboxEl = document.getElementById('lightbox');
+    lbImg = document.getElementById('lightbox-img');
+    lbNameEl = document.getElementById('lightbox-name');
+    lbPromptEl = document.getElementById('lightbox-prompt');
+    lbCloseBtn = document.getElementById('lightbox-close');
+    if (lightboxEl && lbCloseBtn) {
+      lbCloseBtn.addEventListener('click', closeLightbox);
+      lightboxEl.addEventListener('click', function (e) {
+        if (e.target === lightboxEl ||
+            (e.target.hasAttribute && e.target.hasAttribute('data-close'))) {
+          closeLightbox();
+        }
+      });
+    }
 
     var breakToggle = document.getElementById('break-toggle');
     var breakPanel = document.getElementById('break-panel');

@@ -108,6 +108,18 @@
     </div>
   </footer>
 
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-name">
+    <div class="lightbox-backdrop" data-close></div>
+    <figure class="lightbox-panel">
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close">&times;</button>
+      <img id="lightbox-img" class="lightbox-img" alt="">
+      <figcaption class="lightbox-caption">
+        <h2 id="lightbox-name" class="lightbox-name"></h2>
+        <p id="lightbox-prompt" class="lightbox-prompt"></p>
+      </figcaption>
+    </figure>
+  </div>
+
   <div id="live" class="visually-hidden" aria-live="polite"></div>
   <script src="app.js"></script>
 </body>
