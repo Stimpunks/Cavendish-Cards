@@ -90,6 +90,7 @@ Used to route children efficiently through a space that was never made to fit th
 - **Nesting as the physical architecture of lily padding** — David Gray-Hammond. The room as an architecture of continuity: channels to rest in, not leaps.
 - **Lily padding, and transitional trauma for monotropic minds** — Tanya Adkin.
 - **Caves, campfires, and watering holes** — David Thornburg's learning-space metaphors; the case for cave spaces in schools, Prakash Nair, *The Language of School Design*.
+- **Physical niche construction in the early years** — Helen Edgar. Much of the budget and building practice here comes from twenty years teaching children with Profound and Multiple Disabilities, where children and adults shaped the space together. *(Credit wording to confirm with Helen.)*
 - **Cavendish Space, intermittent collaboration, niche construction** — Stimpunks Foundation. https://stimpunks.org/glossary/lily-pad/
 
 ---- 
