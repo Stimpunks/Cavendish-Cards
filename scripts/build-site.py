@@ -64,13 +64,15 @@ FAMILIES = [
 ]
 
 # Families rendered as an always-available "moments" strip rather than a
-# browsable filter (item 8/17 from playtesting).
-MOMENTS = {"lily-pad"}
+# browsable filter. Retired: lily pads are now a normal browsable realm, like
+# every other family. Left as an empty hook — add a slug here (and restore the
+# strip markup + renderer) to bring the mechanic back.
+MOMENTS = set()
 
 # App-only subtitles surfaced under a realm's name (community / alternate terms).
 SUBTITLES = {
     "love-locution": "Also called Love Locutions or Love Languages.",
-    "lily-pad": "Also called Moments — drop one anytime.",
+    "lily-pad": "Also called Moments.",
 }
 
 # Headings kept in the guidebook even when the app shows a plainer label.
@@ -96,6 +98,10 @@ ORDER = {
         "warm", "bright", "fizzy", "happy-flappy", "in-the-zone", "need-more",
         "buzzy", "prickly", "full", "pulled-every-way", "meerkat",
         "round-and-round", "stormy", "heavy", "foggy", "cant-tell", "far-away",
+    ],
+    "lily-pad": [
+        "i-need-a-minute", "not-yet", "slowly", "watch-first", "coming-back",
+        "ready-now", "i-want-to-stay-a-while", "all-done", "stuck",
     ],
 }
 

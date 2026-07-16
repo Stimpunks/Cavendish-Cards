@@ -1,12 +1,11 @@
 (function () {
   'use strict';
 
-  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl, toTableBtn;
+  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, liveEl, toTableBtn;
   var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
   var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbBuildEl, lbBuildLinkEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
-  var momentFamilies = [];
   var bySlug = {};
   var active = 'all';
   var laid = [];            // [{slug, up, refIdx}]
@@ -206,15 +205,6 @@
       }
 
       deckEl.appendChild(grid(f.cards));
-    });
-    markAdded();
-  }
-
-  function renderMoments() {
-    if (!momentsRow) return;
-    momentsRow.innerHTML = '';
-    momentFamilies.forEach(function (f) {
-      momentsRow.appendChild(grid(f.cards));
     });
     markAdded();
   }
@@ -454,8 +444,7 @@
         c.family = f.slug; c.familyName = f.name; bySlug[c.slug] = c;
       });
     });
-    browseFamilies = families.filter(function (f) { return f.mode !== 'moments'; });
-    momentFamilies = families.filter(function (f) { return f.mode === 'moments'; });
+    browseFamilies = families;
 
     filtersEl.appendChild(mkFilter('all', 'All'));
     browseFamilies.forEach(function (f) {
@@ -508,7 +497,6 @@
     }
 
     renderDeck();
-    renderMoments();
     renderTable();
   }
 
@@ -520,7 +508,6 @@
     doneBtn = document.getElementById('done');
     filtersEl = document.getElementById('filters');
     blurbEl = document.getElementById('family-blurb');
-    momentsRow = document.getElementById('moments-row');
     liveEl = document.getElementById('live');
     toTableBtn = document.getElementById('to-table');
     summaryEl = document.getElementById('summary');

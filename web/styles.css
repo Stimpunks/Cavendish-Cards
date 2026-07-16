@@ -157,9 +157,6 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .break-panel .wrap { padding-top: 14px; padding-bottom: 16px; }
 .break-panel p { margin: 0 0 10px; max-width: 60ch; font-size: 1.05rem; }
 
-.moments { margin-top: 34px; }
-.moments-row { margin-top: 8px; }
-
 .deck-group { font-size: 1.05rem; color: var(--ink-strong); margin: 20px 0 8px; }
 .deck-group:first-child { margin-top: 0; }
 
