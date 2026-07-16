@@ -55,6 +55,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the five ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
+- [`scripts/build-all.py`](./scripts/build-all.py) — runs all the build scripts below in one command.
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
 - [`scripts/build-starter-deck.py`](./scripts/build-starter-deck.py) — regenerates the starter-deck list from the card files.
 - [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
@@ -96,7 +97,7 @@ The placeholder generator has no dependencies; the PDF builder needs `cairosvg` 
 
 ## Contributing
 
-The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing — nothing that reads a card as a symptom, a target, or a reward. Always capitalize Autistic and Disabled. Illustrators: see the [call for art](./CALL-FOR-ART.md) for the style and specs, then email work to stimpunks@stimpunks.org — we handle placement. (The card frames live in [`assets/templates/`](./assets/templates/) if you'd rather drop artwork into the slot yourself.)
+The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. After adding or editing cards, run `python3 scripts/build-all.py` from the repo root to regenerate the starter deck, guidebook, placeholders, web deck, and print-and-play PDF. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing — nothing that reads a card as a symptom, a target, or a reward. Always capitalize Autistic and Disabled. Illustrators: see the [call for art](./CALL-FOR-ART.md) for the style and specs, then email work to stimpunks@stimpunks.org — we handle placement. (The card frames live in [`assets/templates/`](./assets/templates/) if you'd rather drop artwork into the slot yourself.)
 
 ## License
 
