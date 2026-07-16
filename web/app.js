@@ -57,7 +57,7 @@
   }
 
   function markAdded() {
-    var tiles = deckEl.querySelectorAll('.tile');
+    var tiles = document.querySelectorAll('.tile');
     for (var i = 0; i < tiles.length; i++) {
       var t = tiles[i];
       var slug = t.dataset.slug;
@@ -214,16 +214,9 @@
     if (!momentsRow) return;
     momentsRow.innerHTML = '';
     momentFamilies.forEach(function (f) {
-      f.cards.forEach(function (c) {
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'moment-chip';
-        b.textContent = c.name;
-        b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
-        b.addEventListener('click', function () { lay(c.slug); });
-        momentsRow.appendChild(b);
-      });
+      momentsRow.appendChild(grid(f.cards));
     });
+    markAdded();
   }
 
   function lay(slug) {
