@@ -160,6 +160,9 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .deck-group { font-size: 1.05rem; color: var(--ink-strong); margin: 20px 0 8px; }
 .deck-group:first-child { margin-top: 0; }
 
+.deck-realm { font-size: 1.2rem; font-weight: 700; color: var(--ink-strong); margin: 26px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.deck-realm:first-child { margin-top: 0; }
+
 .summary { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 20px; }
 .summary-list { margin: 8px 0 12px; padding-left: 1.2em; max-width: 62ch; }
 .summary-list li { margin: 3px 0; }

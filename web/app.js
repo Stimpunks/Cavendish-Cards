@@ -127,15 +127,20 @@
       var fam = browseBySlug(active);
       if (fam && fam.groupOrder && fam.groupOrder.length) {
         renderGrouped(fam);
-        return;
+      } else if (fam) {
+        deckEl.appendChild(grid(fam.cards));
       }
+      return;
     }
-    var all = [];
+    // "All": one section per realm (heading + flat grid, no sense signposts).
     browseFamilies.forEach(function (f) {
-      if (active !== 'all' && f.slug !== active) return;
-      f.cards.forEach(function (c) { all.push(c); });
+      if (!f.cards.length) return;
+      var h = document.createElement('h3');
+      h.className = 'deck-realm';
+      h.textContent = f.name;
+      deckEl.appendChild(h);
+      deckEl.appendChild(grid(f.cards));
     });
-    deckEl.appendChild(grid(all));
   }
 
   function renderMoments() {
