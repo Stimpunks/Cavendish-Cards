@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **78 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **79 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -60,37 +60,38 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 
 ---- 
 
-## What helps (25)
+## What helps (26)
 
 The niche-construction pieces — the ways we change the environment so it fits. The workhorse realm, and where the staff game finds its conflicts.
 
-| Name                  | Image cue                                               | Prompt                                          |
-| --------------------- | ------------------------------------------------------- | ----------------------------------------------- |
-| headphones            | headphones, the noise turned down                       | Turn the world down a bit.                      |
-| dim the light         | a dial lowering a lamp                                  | Softer light.                                   |
-| something soft        | a plush thing to hold                                   | Something to hold and squeeze.                  |
-| a big squeeze         | deep pressure, a weighted wrap                          | Firm pressure that steadies me.                 |
-| room to move          | open floor, space to pace or spin                       | Space to move my body.                          |
-| busy hands            | a fidget in motion                                      | Something for my hands to do.                   |
-| a steady sound        | a gentle repeating wave                                 | A calm sound to rest on.                        |
-| just one person       | two figures, side by side                               | Not a crowd — one person.                       |
-| a way out             | an open door                                            | A way to leave that I can use.                  |
-| my own spot           | a marked place that's mine                              | A place that's just mine.                       |
-| something to chew     | a chewy tool                                            | Something to chew or crunch.                    |
-| less talking          | a hushed mouth, a calm face                             | Fewer words for a while.                        |
-| tell me first         | a small heads-up sign                                   | Let me know before it changes.                  |
-| no rush               | a slow, easy clock                                      | All the time I need.                            |
-| a corner              | a small figure tucked into a corner, walls on two sides | Somewhere with sides, at my back.               |
-| a den                 | a blanket or umbrella making a little roof overhead     | Something over me to tuck under.                |
-| a smell that helps    | a hand near a scented thing                             | A smell that settles me, or less of one.        |
-| a snack or a drink    | a cup and a small snack                                 | Something to eat or drink.                      |
-| another way to talk   | a hand pointing at a card, next to a small whiteboard   | Let me point, write, or show it.                |
-| less to look at       | a busy, cluttered wall beside a calm bare one           | Fewer things to look at.                        |
-| let me control it     | a hand resting on a dimmer switch                       | Let me be the one to change it.                 |
-| let me stim           | a figure rocking and moving, easy in their own motion   | Let me move and stim the way I need.            |
-| parallel existence    | two figures side by side, each in their own world       | Someone alongside me, each doing our own thing. |
-| sit my way            | a floor cushion, a wobble stool, and someone standing   | Let me sit or stand how I like.                 |
-| the right temperature | a blanket on one side, a fan on the other               | Warmer, or cooler.                              |
+| Name                  | Image cue                                                           | Prompt                                          |
+| --------------------- | ------------------------------------------------------------------- | ----------------------------------------------- |
+| headphones            | headphones, the noise turned down                                   | Turn the world down a bit.                      |
+| dim the light         | a dial lowering a lamp                                              | Softer light.                                   |
+| something soft        | a plush thing to hold                                               | Something to hold and squeeze.                  |
+| a big squeeze         | deep pressure, a weighted wrap                                      | Firm pressure that steadies me.                 |
+| room to move          | open floor, space to pace or spin                                   | Space to move my body.                          |
+| busy hands            | a fidget in motion                                                  | Something for my hands to do.                   |
+| a steady sound        | a gentle repeating wave                                             | A calm sound to rest on.                        |
+| just one person       | two figures, side by side                                           | Not a crowd — one person.                       |
+| a way out             | an open door                                                        | A way to leave that I can use.                  |
+| my own spot           | a marked place that's mine                                          | A place that's just mine.                       |
+| something to chew     | a chewy tool                                                        | Something to chew or crunch.                    |
+| less talking          | a hushed mouth, a calm face                                         | Fewer words for a while.                        |
+| tell me first         | a small heads-up sign                                               | Let me know before it changes.                  |
+| no rush               | a slow, easy clock                                                  | All the time I need.                            |
+| a corner              | a small figure tucked into a corner, walls on two sides             | Somewhere with sides, at my back.               |
+| a den                 | a blanket or umbrella making a little roof overhead                 | Something over me to tuck under.                |
+| a smell that helps    | a hand near a scented thing                                         | A smell that settles me, or less of one.        |
+| a snack or a drink    | a cup and a small snack                                             | Something to eat or drink.                      |
+| another way to talk   | a hand pointing at a card, next to a small whiteboard               | Let me point, write, or show it.                |
+| less to look at       | a busy, cluttered wall beside a calm bare one                       | Fewer things to look at.                        |
+| let me control it     | a hand resting on a dimmer switch                                   | Let me be the one to change it.                 |
+| let me finish         | a bookmark being slid into place — a natural stopping point reached | Let me get to a stopping point first.           |
+| let me stim           | a figure rocking and moving, easy in their own motion               | Let me move and stim the way I need.            |
+| parallel existence    | two figures side by side, each in their own world                   | Someone alongside me, each doing our own thing. |
+| sit my way            | a floor cushion, a wobble stool, and someone standing               | Let me sit or stand how I like.                 |
+| the right temperature | a blanket on one side, a fan on the other                           | Warmer, or cooler.                              |
 
 ---- 
 
@@ -171,13 +172,13 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | ----- | ----- |
 | Places | 5 |
 | Weather | 15 |
-| What helps | 25 |
+| What helps | 26 |
 | Lily pads | 9 |
 | Growers | 3 |
 | Love Locutions | 8 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **78** |
+| **Total** | **79** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -194,7 +195,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 78 cards, five ways:
+The same 79 cards, five ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

@@ -89,7 +89,7 @@ Heavy is a weighted sky pressing down — everything harder to lift, movement an
 ### in the zone
 *a figure deep in something, the world softened to a warm glow around them* · "Deep in it, and it feels good."
 
-In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in. It is a strength, not a distraction, and not something to interrupt lightly. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning before it has to end. Lineage: monotropic flow, from monotropism.
+In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in — a strength, not a distraction. Focus like this sends out tendrils of thought; an abrupt interruption feels like they are ripped out, and coming back up to the surface takes time. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning and time before it has to end. Lineage: monotropic flow, from monotropism; tendril theory (Erin, @EisforErin).
 
 ### meerkat
 *a meerkat standing tall on the lookout, ears up, scanning for danger* · "On alert, watching for danger."
@@ -206,6 +206,11 @@ One wall crowded with stuff, one wall calm and bare — this card asks for the s
 *a hand resting on a dimmer switch* · "Let me be the one to change it."
 
 This is a hand on the switch — the person turning the light, the sound, the thing up or down themselves. It names control as its own need: not a particular setting, but being the one who decides and adjusts it. For many people the same input is fine when they hold the dial and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — rather than setting it for them.
+
+### let me finish
+*a bookmark being slid into place — a natural stopping point reached* · "Let me get to a stopping point first."
+
+Let me finish is the need to reach a stopping point before switching — not hurried, not cut off partway, but given the moment to bring what I'm doing to a close. Coming out of deep focus takes time: the mind has to retract its tendrils before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point rather than a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: tendril theory (Erin, @EisforErin).
 
 ### let me stim
 *a figure rocking and moving, easy in their own motion* · "Let me move and stim the way I need."

@@ -89,7 +89,7 @@ GROUPS = {
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
-        ("People & time", ["just-one-person", "parallel-existence", "no-rush"]),
+        ("People & time", ["just-one-person", "parallel-existence", "no-rush", "let-me-finish"]),
         ("Make your own", ["your-own"]),
     ],
 }
