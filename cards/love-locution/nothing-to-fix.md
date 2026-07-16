@@ -12,6 +12,11 @@ a whole thing, left as it is
 
 —
 
+## Reflection
+
+- What's something about you that's good just as it is?
+- Is this a card to keep, or to give to someone?
+
 ## Notes
 
 "Nothing to fix" is a whole thing left as it is — an absence of the repair impulse. It affirms acceptance over correction: you are not a project, and this moment does not require improving you. The urge to fix a person often does the harm. When this card is given, set the fixing down — be with the person as they are, rather than working on them.

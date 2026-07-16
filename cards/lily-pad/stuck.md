@@ -12,6 +12,12 @@ a figure paused between two pads
 
 I can't get going. That's okay.
 
+## Reflection
+
+- What would help you feel less stuck — or is it okay to just be here a minute?
+- Is there a what-helps card that would make starting easier?
+- Would it help to have someone nearby, or to have some space?
+
 ## Notes
 
 "Stuck" is a figure paused between two lily pads — unable to get going, for now. It names a genuine state, not a stall to be scolded: the machinery won't turn over yet, and that is information about the moment, not a verdict on the person. Stuck is a place to land, never a failure. When this card is out, don't push across the gap — ask what would help them land where they are, or offer a what-helps card and let them choose.

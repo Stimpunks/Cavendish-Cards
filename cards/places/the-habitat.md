@@ -12,6 +12,12 @@ the whole landscape holding the other four
 
 The world around it all — steady, sensory-safe.
 
+## Reflection
+
+- What's one thing around you that feels right, and one that doesn't?
+- If you could change one thing about the whole space, what would it be?
+- Is there a what-helps card that would make the whole place easier?
+
 ## Notes
 
 The habitat is the whole landscape that holds the cave, campfire, watering hole, and library — the surrounding conditions, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's niche-construction principle as a place — needs are met by shaping surroundings, not by changing people. When it is out, the work is the environment: make the habitat steady and sensory-safe, and the other places become reachable.

@@ -12,6 +12,12 @@ a figure settled on a lily pad
 
 I'm good here. Let me stay.
 
+## Reflection
+
+- What makes here a good place to stay?
+- Would you like to let someone know you're staying put?
+- Is there anything that would make staying even better?
+
 ## Notes
 
 It names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to remain is as valid as wanting to move on. When this card is out, let the staying stand; don't hurry the crossing because the schedule wants it.

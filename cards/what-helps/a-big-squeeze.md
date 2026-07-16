@@ -12,6 +12,12 @@ deep pressure, a weighted wrap
 
 Firm pressure that steadies me.
 
+## Reflection
+
+- Would a big squeeze help right now?
+- Who would you like to help — and you decide how much, and when to stop?
+- Is there another what-helps card you'd pair with it?
+
 ## Notes
 
 A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. It names the calming pull of proprioceptive input: firm pressure that many bodies find organizing when lighter touch would not. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only ever the pressure they ask for, on their terms.
