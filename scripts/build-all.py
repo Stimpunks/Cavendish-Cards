@@ -7,11 +7,12 @@ Regenerates all derived files from the card files:
   build-placeholders.py  -> assets/playtest/**
   build-site.py          -> web/ (cards.json, guidebook.html, faces/) [gitignored]
   build-playtest-pdf.py  -> cavendish-cards-playtest.pdf  [needs cairosvg + weasyprint]
+  build-facilitator-pdf.py -> cavendish-cards-facilitator-sheet.pdf  [needs weasyprint]
 
 Usage (from anywhere):
     python3 scripts/build-all.py
 
-The playtest PDF is optional: if its extra dependencies aren't installed it is
+The PDF steps are optional: if their extra dependencies aren't installed they are
 skipped with a note, and the run still succeeds. Any required step failing makes
 this exit non-zero.
 """
@@ -29,6 +30,7 @@ STEPS = [
     ("build-placeholders.py", True),
     ("build-site.py", True),
     ("build-playtest-pdf.py", False),
+    ("build-facilitator-pdf.py", False),
 ]
 
 

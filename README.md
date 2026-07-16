@@ -71,6 +71,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`scripts/build-starter-deck.py`](./scripts/build-starter-deck.py) — regenerates the starter-deck list from the card files.
 - [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
 - [`scripts/build-playtest-pdf.py`](./scripts/build-playtest-pdf.py) — lays the placeholders out as a print-and-play PDF.
+- [`scripts/build-facilitator-pdf.py`](./scripts/build-facilitator-pdf.py) — regenerates the facilitator-sheet PDF from its Markdown source.
 - [`web/`](./web/) — the playable web version, live at [cavendish.app](https://cavendish.app/). A static site generated from the cards; see its [README](./web/README.md).
 - [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck (`cards.json` and faces) from the card files.
 - [`netlify.toml`](./netlify.toml) — Netlify build configuration.
