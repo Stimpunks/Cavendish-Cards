@@ -63,7 +63,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per realm plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction realm, whose fixed color+shape designs need no illustrator.
 - [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
-- [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the five ways to play, for support staff. Screen-reader-friendly source.
+- [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`scripts/build-all.py`](./scripts/build-all.py) — runs all the build scripts below in one command.
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
@@ -86,9 +86,9 @@ python3 scripts/build-guidebook.py
 
 No dependencies; it writes `cavendish-cards-guidebook.md` and prints a per-family count.
 
-## Five ways to play
+## Seven ways to play
 
-One deck, across the age range: **show me** (early years), **build my day** (a child and a support worker), **class weather** (a whole group), **map the edges** (older kids), and **play as the environment** (staff training). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
+One deck, across the age range: **show me** (early years), **build my day** (a child and a support worker), **class weather** (a whole group), **map the edges** (older kids), **play as the environment** (staff training), **moving between** (anyone, across a day), and **build a niche** (a learner or a group). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
 
 ## Play it on the web
 
