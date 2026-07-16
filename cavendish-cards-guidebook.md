@@ -86,10 +86,30 @@ Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, 
 
 Heavy is a weighted sky pressing down — everything harder to lift, movement and mood both slowed. It names a low, weighed-down feeling: flat, tired, dim. Heavy weather is real weather; it is not laziness and it is not chosen. When this card is out, lighten the load rather than push against it — fewer expectations, gentle company or none, and time.
 
+### in the zone
+*a figure deep in something, the world softened to a warm glow around them* · "Deep in it, and it feels good."
+
+In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in. It is a strength, not a distraction, and not something to interrupt lightly. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning before it has to end. Lineage: monotropic flow, from monotropism.
+
+### meerkat
+*a meerkat standing tall on the lookout, ears up, scanning for danger* · "On alert, watching for danger."
+
+Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable to settle or focus, wanting someone safe close by. It names a body stuck in high alert: not misbehaving, not clingy, but overwhelmed and searching for safety. When this card is out, be the safe one — come close, stay near, lower the demands, and don't leave them to it alone. Lineage: meerkat mode (Tanya Adkin and David Gray-Hammond).
+
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."
 
 Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. It names irritability and raw sensory friction, when the ordinary suddenly grates. This is the nervous system reporting on its surroundings, not bad behavior. When this card is out, reduce the friction — soften the textures, lower the demands, make space — and don't take the sharpness personally.
+
+### pulled every way
+*a small figure with arrows tugging outward in every direction at once* · "Too many things pulling at me at once."
+
+Pulled every way is what happens when too many things need attention at once — each one tugging, none of them finished, no room to go deep on any of them. It names the strain of having to split attention in a mind that runs on focusing deeply, one thing at a time. Not laziness, not not-trying: a mind built for depth being asked to spread thin. When this card is out, take things away rather than add — one thing at a time, in order, and let the rest wait. Lineage: monotropic split (Tanya Adkin and David Gray-Hammond).
+
+### round and round
+*a single looping line spiralling inward — a thought going round and round* · "A thought that won't stop going round."
+
+Round and round is when one thought keeps looping — circling back, tightening, hard to step out of. Attention can lock onto a worry and pull deeper, and the harder you try to push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought — help step out sideways: a change of place, a gentle interest to catch onto, company, something for the hands. Lineage: monotropic spiral (Tanya Adkin and David Gray-Hammond).
 
 ### stormy
 *big clouds about to break* · "Big feelings, close to the edge."
