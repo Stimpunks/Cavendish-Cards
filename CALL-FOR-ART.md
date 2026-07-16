@@ -6,6 +6,8 @@ Right now the deck works, but its pictures are plain placeholders. **We're looki
 
 You make the art. We do all the technical work of fitting it onto the cards.
 
+**There's no deadline — the call is open-ended.** Send art whenever you make it. Cards without a picture yet simply wait for the right illustrator, and the deck keeps growing as art comes in. You'll never miss a window; there isn't one to miss.
+
 ## The style we're looking for
 
 The cards are for **young children**, so the art should be:
