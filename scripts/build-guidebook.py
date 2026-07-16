@@ -38,6 +38,16 @@ FAMILIES = [
 ]
 
 REALM_NOTES = {
+    "places":
+        "**Moving between the zones.** Cave, campfire, and watering hole are also a "
+        "sociality gradient — the cave inward and solo, the campfire a small safe "
+        "group, the watering hole open and social. They line up with the interaction "
+        "moods: the cave with red (not right now), the campfire with yellow (people I "
+        "know), the watering hole with green (come say hi). Moving between them on "
+        "your own terms — alone, then together, then alone again — is *intermittent "
+        "collaboration*: everyone needs all three, but not at once, and not in the "
+        "same measure. Lay places, interaction moods, and lily pads in a row to map "
+        "that rhythm.",
     "love-locution":
         "**Penguin pebbling.** Giving someone a Love Locution is *penguin "
         "pebbling* — penguins bring each other pebbles, and these cards are "

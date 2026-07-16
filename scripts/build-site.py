@@ -116,7 +116,7 @@ GROUPS = {
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
-        ("People & time", ["just-one-person", "parallel-existence", "no-rush", "let-me-finish"]),
+        ("People & time", ["just-one-person", "parallel-existence", "no-rush", "let-me-finish", "let-me-come-and-go"]),
         ("Make your own", ["your-own"]),
     ],
 }
@@ -202,6 +202,16 @@ NOT_AAC = (
 )
 
 GUIDEBOOK_NOTES = {
+    "places":
+        "<p><strong>Moving between the zones.</strong> Cave, campfire, and watering "
+        "hole are also a sociality gradient — the cave inward and solo, the campfire "
+        "a small safe group, the watering hole open and social. They line up with "
+        "the interaction moods: the cave with red (not right now), the campfire with "
+        "yellow (people I know), the watering hole with green (come say hi). Moving "
+        "between them on your own terms — alone, then together, then alone again — is "
+        "<em>intermittent collaboration</em>: everyone needs all three, but not at "
+        "once, and not in the same measure. Lay places, interaction moods, and lily "
+        "pads in a row to map that rhythm.</p>",
     "love-locution":
         "<p><strong>Penguin pebbling.</strong> Giving someone a Love Locution is "
         "<em>penguin pebbling</em> — penguins bring each other pebbles, and these "

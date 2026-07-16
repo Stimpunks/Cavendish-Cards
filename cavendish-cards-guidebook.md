@@ -10,6 +10,8 @@ _Generated from the card files in `cards/` by `scripts/build-guidebook.py`. Do n
 
 _The five Cavendish zones. Everything else sits in one of these._
 
+**Moving between the zones.** Cave, campfire, and watering hole are also a sociality gradient — the cave inward and solo, the campfire a small safe group, the watering hole open and social. They line up with the interaction moods: the cave with red (not right now), the campfire with yellow (people I know), the watering hole with green (come say hi). Moving between them on your own terms — alone, then together, then alone again — is *intermittent collaboration*: everyone needs all three, but not at once, and not in the same measure. Lay places, interaction moods, and lily pads in a row to map that rhythm.
+
 ### the campfire
 *a few figures around a warm glow* · "A small group, sharing."
 
@@ -211,6 +213,11 @@ Less talking is a hushed mouth and a calm face — fewer words in the air. It na
 *a busy, cluttered wall beside a calm bare one* · "Fewer things to look at."
 
 One wall crowded with stuff, one wall calm and bare — this card asks for the second. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing sight-lines is free. When this card is out, take some things down or turn the person toward a plainer view — reduce what there is to look at, not what the person can cope with.
+
+### let me come and go
+*a figure stepping out through an open doorway and back in — a loop of coming and going* · "Let me join and slip away as I need."
+
+Let me come and go is the need to move between being with people and being alone — joining in, then slipping away to recharge, then coming back, on my own rhythm rather than a set schedule. Dipping in and out is how many people do their best being-together; it isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, permission to lurk, drop in, and leave. Lineage: intermittent collaboration, from Cavendish Space.
 
 ### let me control it
 *a hand resting on a dimmer switch* · "Let me be the one to change it."

@@ -121,13 +121,14 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 PLAY = """## Playing across the age range
 
-The same {total} cards, five ways:
+The same {total} cards, six ways:
 
 - **Early years — show me.** One card. The adult mirrors it back.
 - **Child and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.
 - **A class — class weather.** Everyone lays a weather card face-up. No one named, nothing scored.
 - **Older kids — map the edges.** Walk lily pads across a timetable to find the hard transitions.
-- **Staff training — play as the environment.** Deal conflicting what-helps cards; build one habitat that holds them all. Feel neurological pluralism instead of hearing about it."""
+- **Staff training — play as the environment.** Deal conflicting what-helps cards; build one habitat that holds them all. Feel neurological pluralism instead of hearing about it.
+- **Moving between — map your rhythm.** Lay places, interaction moods, and lily pads left to right to show how you move between alone and together across a day: the cave, then ready now, then the campfire, then a minute alone, then back. Move a card when the rhythm shifts. This is intermittent collaboration — nobody stays in one place all day."""
 
 LICENSE = """## License
 

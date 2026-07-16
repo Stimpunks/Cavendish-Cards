@@ -9,7 +9,7 @@ A deck for naming sensory and niche-construction needs. Point at a card, or lay 
 
 ---- 
 
-## Five ways to play
+## Six ways to play
 
 **Show me** — *early years, anyone*
 Pick the one card that's you right now. That's the whole game. Say back what you see: "Buzzy today. Okay." Under a minute.
@@ -25,6 +25,9 @@ Walk the lily-pad cards across a timetable. Find where the hard transitions actu
 
 **Play as the environment** — *staff training*
 Deal a table of what-helps cards with needs that conflict — room to move against less talking, just one person against a full group. Build one habitat that holds them all. You'll feel neurological pluralism instead of hearing about it. Twenty minutes.
+
+**Moving between** — *anyone, across a day*
+Lay places, interaction moods, and lily pads left to right — the cave, ready now, the campfire, a minute alone, back again. A rhythm of alone and together, mapped in cards. Move one when the rhythm shifts. This is intermittent collaboration: nobody stays in one place all day.
 
 ---- 
 
