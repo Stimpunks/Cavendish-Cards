@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl;
+  var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, momentsRow, liveEl, toTableBtn;
   var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
   var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbCloseBtn, lbReturn = null;
   var families = [];
@@ -49,6 +49,27 @@
     return c.reflections[(item.refIdx || 0) % c.reflections.length];
   }
 
+  function isLaid(slug) {
+    for (var i = 0; i < laid.length; i++) {
+      if (laid[i].slug === slug) return true;
+    }
+    return false;
+  }
+
+  function markAdded() {
+    var tiles = deckEl.querySelectorAll('.tile');
+    for (var i = 0; i < tiles.length; i++) {
+      var t = tiles[i];
+      var slug = t.dataset.slug;
+      if (!slug) continue;
+      var on = isLaid(slug);
+      var nm = bySlug[slug] ? bySlug[slug].name : slug;
+      t.classList.toggle('tile-added', on);
+      t.setAttribute('aria-label',
+        on ? (nm + ' — already on the table') : ('Lay ' + nm + ' on the table'));
+    }
+  }
+
   function updateBlurb(slug) {
     if (slug === 'all') { blurbEl.hidden = true; blurbEl.innerHTML = ''; return; }
     var fam = familyBySlug(slug);
@@ -91,6 +112,7 @@
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'tile';
+    b.dataset.slug = c.slug;
     b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
     b.innerHTML =
       '<span class="tile-art"><img src="' + escAttr(c.face) +
@@ -138,6 +160,7 @@
       } else if (fam) {
         deckEl.appendChild(grid(fam.cards));
       }
+      markAdded();
       return;
     }
     // "All": one section per realm (heading + flat grid, no sense signposts).
@@ -184,6 +207,7 @@
 
       deckEl.appendChild(grid(f.cards));
     });
+    markAdded();
   }
 
   function renderMoments() {
@@ -203,8 +227,9 @@
   }
 
   function lay(slug) {
+    if (isLaid(slug)) { announce(bySlug[slug].name + ' is already on the table.'); return; }
     laid.push({ slug: slug, up: false, refIdx: 0 });
-    pendingFocus = { i: laid.length - 1, sel: '.flip' };
+    pendingFocus = null;               // stay in the deck; don't scroll to the table
     renderTable();
     announce('Laid ' + bySlug[slug].name + ' on the table, face-down.');
   }
@@ -306,6 +331,13 @@
     });
 
     updatePlaceBackground();
+    if (toTableBtn) {
+      toTableBtn.hidden = laid.length === 0;
+      toTableBtn.textContent = '↓ Table (' + laid.length + ')';
+      toTableBtn.setAttribute('aria-label',
+        'Go to the table (' + laid.length + (laid.length === 1 ? ' card' : ' cards') + ')');
+    }
+    markAdded();
     applyFocus();
   }
 
@@ -473,6 +505,7 @@
     blurbEl = document.getElementById('family-blurb');
     momentsRow = document.getElementById('moments-row');
     liveEl = document.getElementById('live');
+    toTableBtn = document.getElementById('to-table');
     summaryEl = document.getElementById('summary');
     summaryListEl = document.getElementById('summary-list');
     summaryCopyBtn = document.getElementById('summary-copy');
@@ -512,6 +545,18 @@
           breakToggle.focus();
         });
       }
+    }
+
+    if (toTableBtn) {
+      toTableBtn.addEventListener('click', function () {
+        var h = document.getElementById('table-h');
+        if (!h) return;
+        h.setAttribute('tabindex', '-1');
+        var reduce = window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        h.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        h.focus({ preventScroll: true });
+      });
     }
 
     fetch('cards.json')
