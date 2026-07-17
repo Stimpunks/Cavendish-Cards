@@ -65,7 +65,7 @@
       var nm = bySlug[slug] ? bySlug[slug].name : slug;
       t.classList.toggle('tile-added', on);
       t.setAttribute('aria-label',
-        on ? (nm + ' — already on the table') : ('Lay ' + nm + ' on the table'));
+        on ? ('Take ' + nm + ' back off the table') : ('Lay ' + nm + ' on the table'));
     }
   }
 
@@ -209,8 +209,17 @@
     markAdded();
   }
 
+  function unlay(slug) {
+    for (var i = 0; i < laid.length; i++) {
+      if (laid[i].slug === slug) { laid.splice(i, 1); break; }
+    }
+    pendingFocus = null;               // stay in the deck; focus stays on the tile
+    renderTable();
+    announce('Removed ' + bySlug[slug].name + ' from the table.');
+  }
+
   function lay(slug) {
-    if (isLaid(slug)) { announce(bySlug[slug].name + ' is already on the table.'); return; }
+    if (isLaid(slug)) { unlay(slug); return; }
     var c = bySlug[slug];
     var start = 0;                      // vary the question so a spread doesn't repeat
     if (c && c.reflections && c.reflections.length > 1) {
