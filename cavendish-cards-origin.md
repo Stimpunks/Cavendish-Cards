@@ -33,6 +33,7 @@ We are indebted to Steve Silberman's work uncovering and telling the story of He
 ## Lineage
 
 - **Caves, campfires, and watering holes** — David Thornburg's primordial learning metaphors (*From the Campfire to the Holodeck*).
+- **Timeless patterns in primordial spaces** — Ryan Boren, on caves, campfires, and watering holes as ancient, universal patterns of human learning ([essay](https://stimpunks.org/philosophy/timeless-patterns-in-primordial-spaces/)).
 - **Freedom of embodiment; cognitive and somatic liberty** — Nick Walker, *Neuroqueer Heresies*.
 - **Psychological and learner safety** — Timothy R. Clark, *The 4 Stages of Psychological Safety*.
 - **Orchid, tulip, and dandelion** — Boyce and Ellis, on differential sensitivity to environment.
