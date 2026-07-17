@@ -18,6 +18,7 @@ from pathlib import Path
 import html
 import importlib.util
 import json
+import re
 import shutil
 import sys
 
@@ -252,6 +253,156 @@ def e(s):
     return html.escape(s, quote=False)
 
 
+# ---------------------------------------------------------------------------
+# Site navigation, a tiny Markdown renderer, and a shared page shell.
+# Used by the standalone pages (Guidebook, Implementation, Why, Origin) and
+# mirrored by the hand-authored index.html. No JS: a native <details> menu.
+# ---------------------------------------------------------------------------
+
+# Order of the collapsed site menu. (label, href, key)
+SITE_NAV = [
+    ("The deck", "index.html", "deck"),
+    ("Guidebook", "guidebook.html", "guidebook"),
+    ("Implementation guidebook", "implementation.html", "implementation"),
+    ("Why this exists", "why.html", "why"),
+    ("Origin & lineage", "origin.html", "origin"),
+]
+
+
+def site_nav(current):
+    """A no-JS collapsed menu (native <details>), consistent across pages."""
+    items = []
+    for label, href, key in SITE_NAV:
+        cur = ' aria-current="page"' if key == current else ""
+        items.append(f'<li><a href="{href}"{cur}>{e(label)}</a></li>')
+    return ('<details class="disclose sitenav">'
+            '<summary>Menu</summary>'
+            f'<ul>{"".join(items)}</ul>'
+            '</details>')
+
+
+_MD_LINK = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+_MD_BOLD = re.compile(r'\*\*([^*]+)\*\*')
+_MD_CODE = re.compile(r'`([^`]+)`')
+_MD_EM = re.compile(r'\*([^*\n]+?)\*')
+
+
+def _md_inline(s):
+    """Inline Markdown -> HTML. Escape first, then links, code, bold, em."""
+    s = e(s)
+    s = _MD_LINK.sub(lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', s)
+    s = _MD_CODE.sub(lambda m: f'<code>{m.group(1)}</code>', s)
+    s = _MD_BOLD.sub(lambda m: f'<strong>{m.group(1)}</strong>', s)
+    s = _MD_EM.sub(lambda m: f'<em>{m.group(1)}</em>', s)
+    return s
+
+
+def md_to_html(text):
+    """Render the small Markdown subset used by the Why sheet and Origin page.
+
+    Handles ## / ### headings, "- " bullet lists, "> " blockquotes, all-dash
+    rules, blank-line paragraphs, and inline links/bold/code/em. Drops a leading
+    "# " title so the page shell owns the single <h1>.
+    """
+    out, para, items, quote = [], [], [], []
+
+    def flush_para():
+        if para:
+            out.append("<p>" + _md_inline(" ".join(para).strip()) + "</p>")
+            para.clear()
+
+    def flush_list():
+        if items:
+            out.append("<ul>" + "".join("<li>" + _md_inline(i) + "</li>"
+                                        for i in items) + "</ul>")
+            items.clear()
+
+    def flush_quote():
+        if quote:
+            out.append("<blockquote><p>"
+                       + _md_inline(" ".join(quote).strip()) + "</p></blockquote>")
+            quote.clear()
+
+    def flush_all():
+        flush_para(); flush_list(); flush_quote()
+
+    for raw in text.replace("\r\n", "\n").split("\n"):
+        s = raw.strip()
+        if not s:
+            flush_all(); continue
+        if s.startswith("# "):                       # drop title; shell owns <h1>
+            flush_all(); continue
+        if len(s) >= 3 and set(s) == {"-"}:           # --- horizontal rule
+            flush_all(); continue
+        if s.startswith("### "):
+            flush_all(); out.append("<h3>" + _md_inline(s[4:]) + "</h3>"); continue
+        if s.startswith("## "):
+            flush_all(); out.append("<h2>" + _md_inline(s[3:]) + "</h2>"); continue
+        if s.startswith("- "):
+            flush_para(); flush_quote(); items.append(s[2:]); continue
+        if s.startswith("> "):
+            flush_para(); flush_list(); quote.append(s[2:]); continue
+        flush_list(); flush_quote(); para.append(s)
+
+    flush_all()
+    return "\n".join(out)
+
+
+def _standalone_page(title, description, skip_id, skip_label, h1, current, body):
+    """Full HTML doc for a standalone prose page, matching the site shell."""
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cavendish Cards — {e(title)}</title>
+  <meta name="description" content="{e(description)}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#{skip_id}">{e(skip_label)}</a>
+  <header class="site-header">
+    <div class="wrap">
+      {site_nav(current)}
+      <h1>{e(h1)}</h1>
+    </div>
+  </header>
+  <main id="{skip_id}" class="wrap">
+    <div class="prose">
+{body}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
+'''
+
+
+def why_html(root):
+    src = (root / "cavendish-cards-why-sheet.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Why this exists",
+        "Why Cavendish Cards exist: what the deck is, why, and how it serves learners.",
+        "why", "Skip to the Why sheet", "Why this exists", "why",
+        md_to_html(src))
+
+
+def origin_html(root):
+    src = (root / "cavendish-cards-origin.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Origin & lineage",
+        "Where the Cavendish Space model behind the deck comes from, and its lineage.",
+        "origin", "Skip to the origin", "Origin & lineage", "origin",
+        md_to_html(src))
+
+
 def guidebook_html(out_families):
     sections = []
     for fam in out_families:
@@ -291,7 +442,7 @@ def guidebook_html(out_families):
   <a class="skip" href="#gb">Skip to the guidebook</a>
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">&larr; Back to the deck</a> &middot; <a href="implementation.html">Implementation guidebook</a></p>
+      {site_nav("guidebook")}
       <h1>Guidebook</h1>
       <p class="intro">{e(INTRO)}</p>
       <div class="rules" role="note" aria-label="Not a screening tool">
@@ -571,7 +722,7 @@ def implementation_html(out_families):
   <a class="skip" href="#impl">Skip to the guide</a>
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">&larr; Back to the deck</a> &middot; <a href="guidebook.html">Card guidebook</a></p>
+      {site_nav("implementation")}
       <h1>Implementation Guidebook</h1>
       <p class="intro">{e(IMPL_INTRO)}</p>
       <div class="rules" role="note" aria-label="The one principle">
@@ -729,10 +880,13 @@ def main():
         encoding="utf-8")
     (web / "guidebook.html").write_text(guidebook_html(out_families), encoding="utf-8")
     (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")
+    (web / "why.html").write_text(why_html(root), encoding="utf-8")
+    (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (root / "cavendish-cards-implementation-layer.md").write_text(
         implementation_md(out_families), encoding="utf-8")
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
+          f"web/why.html, web/origin.html, "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")

@@ -152,7 +152,29 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 
 .breakbar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 0; }
 .breakbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.breakbar-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 #to-table { flex: none; }
+
+/* Collapsed site menu (native <details>), reused on every page. */
+.sitenav { position: relative; margin: 0; }
+.sitenav > ul {
+  list-style: none; margin: 6px 0 0; padding: 8px 12px;
+  position: absolute; z-index: 20; left: 0; min-width: 230px;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.14);
+}
+.sitenav > ul li { margin: 3px 0; }
+.sitenav a[aria-current="page"] { font-weight: 700; }
+.site-header .sitenav { margin: 0 0 10px; }
+
+/* Standalone prose pages (Why, Origin). */
+.prose { max-width: 72ch; }
+.prose h2 { margin-top: 28px; }
+.prose h3 { margin-top: 18px; font-size: 1.1rem; color: var(--ink-strong); }
+.prose p { margin: 10px 0; }
+.prose ul { padding-left: 1.2em; }
+.prose li { margin: 4px 0; }
+.prose blockquote { margin: 12px 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
 .break-panel { background: var(--panel); border-bottom: 1px solid var(--line); }
 .break-panel .wrap { padding-top: 14px; padding-bottom: 16px; }
 .break-panel p { margin: 0 0 10px; max-width: 60ch; font-size: 1.05rem; }
