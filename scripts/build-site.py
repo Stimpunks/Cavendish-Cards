@@ -264,6 +264,7 @@ SITE_NAV = [
     ("The deck", "index.html", "deck"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
+    ("Facilitator sheet", "facilitator.html", "facilitator"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
 ]
@@ -401,6 +402,45 @@ def origin_html(root):
         "Where the Cavendish Space model behind the deck comes from, and its lineage.",
         "origin", "Skip to the origin", "Origin & lineage", "origin",
         md_to_html(src))
+
+
+def _load_facilitator():
+    """Load build-facilitator-pdf.py for its Markdown parser only.
+
+    Importing the module runs stdlib-level code only; weasyprint is imported
+    lazily inside that script's main(), so this stays PDF-dependency-free and
+    runs anywhere build-site.py runs (local dev without weasyprint, Netlify).
+    """
+    path = Path(__file__).resolve().parent / "build-facilitator-pdf.py"
+    if not path.exists():
+        sys.exit(f"Could not find {path}")
+    spec = importlib.util.spec_from_file_location("build_facilitator_pdf", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+FACILITATOR_PDF_URL = ("https://github.com/Stimpunks/Cavendish-Cards/blob/main/"
+                       "cavendish-cards-facilitator-sheet.pdf")
+
+
+def facilitator_html(root):
+    # Reuse the facilitator PDF's own parser so the on-site sheet and the print
+    # PDF render from one source and cannot drift in content or structure.
+    fac = _load_facilitator()
+    src = (root / "cavendish-cards-facilitator-sheet.md").read_text(encoding="utf-8")
+    _title, _kicker, blocks = fac.parse(src)
+    # Drop the sheet's own CC0 footer; the site shell already carries one.
+    blocks = [b for b in blocks if not b.startswith("<footer>")]
+    pdf_note = (f'<p class="facilitator-pdf"><a href="{FACILITATOR_PDF_URL}">'
+                'Download the one-page print sheet (PDF)</a> \u2014 the same content, '
+                'laid out for handing round.</p>')
+    body = pdf_note + "\n" + "\n".join(blocks)
+    return _standalone_page(
+        "Facilitator Sheet",
+        "A one-page guide for support staff: the seven ways to play, the sharing model, and how to respond to a spread.",
+        "facilitator", "Skip to the facilitator sheet", "Facilitator Sheet",
+        "facilitator", body)
 
 
 def guidebook_html(out_families):
@@ -882,11 +922,12 @@ def main():
     (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
+    (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (root / "cavendish-cards-implementation-layer.md").write_text(
         implementation_md(out_families), encoding="utf-8")
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
-          f"web/why.html, web/origin.html, "
+          f"web/why.html, web/origin.html, web/facilitator.html, "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")

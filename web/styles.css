@@ -175,6 +175,21 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: 4px 0; }
 .prose blockquote { margin: 12px 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+
+/* Facilitator sheet page: matches the print sheet's structure (modes, dot
+   bullets, numbered steps), restyled for the web with the site palette. */
+.prose .facilitator-pdf { margin: 0 0 20px; }
+.prose p.lead { font-weight: 700; color: var(--ink-strong); margin: 18px 0 6px; }
+.prose .mode { margin: 0 0 12px; }
+.prose .mode .name { font-weight: 700; color: var(--ink-strong); }
+.prose .mode .who { font-style: italic; color: var(--muted); }
+.prose .mode .desc { margin: 2px 0 0; }
+.prose ul.dot { list-style: none; margin: 0 0 8px; padding: 0; }
+.prose ul.dot > li { position: relative; padding-left: 18px; margin: 0 0 6px; }
+.prose ul.dot > li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
+.prose ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
+.prose ol.steps > li { counter-increment: s; position: relative; padding-left: 32px; margin: 0 0 8px; }
+.prose ol.steps > li::before { content: counter(s); position: absolute; left: 0; top: .05em; width: 22px; height: 22px; border-radius: 50%; background: var(--cyan); color: #fff; font-weight: 700; font-size: .8rem; text-align: center; line-height: 22px; }
 .break-panel { background: var(--panel); border-bottom: 1px solid var(--line); }
 .break-panel .wrap { padding-top: 14px; padding-bottom: 16px; }
 .break-panel p { margin: 0 0 10px; max-width: 60ch; font-size: 1.05rem; }
