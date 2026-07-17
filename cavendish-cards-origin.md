@@ -26,6 +26,14 @@ Educator Ira Socol calls a place like that a *home of opportunity* — relentles
 - **campfire** — a space for learning with a storyteller: teacher, mentor, elder, expert.
 - **watering hole** — a space for social learning with peers.
 
+## Timeless patterns in primordial spaces
+
+These three spaces are not a design trend. They are timeless patterns — the places humans have always used to withdraw, to gather in small groups, and to share what we know. Long before schools or offices, we moved between them as needed. David Thornburg named them for the digital age in *Campfires in Cyberspace* and *From the Campfire to the Holodeck*; the pattern itself is older than civilization.
+
+They hold across every context we know. Helen spent twenty years in classrooms with children with Profound and Multiple Learning Disabilities, building sensory niches alongside them. Ryan spent thirty years building creative teams in technology on the same three spaces and the same intermittent collaboration. The same patterns serve early-years children and adult professionals alike — every age, every neurotype. We were both making Cavendish Space long before we had the language for it.
+
+Developed by an alumnus of Xerox PARC in its heyday, these patterns spread from there into progressive education, progressive workplaces, and the neurodiversity movement. They are not niceties. They are how human bodyminds are built to learn and work together — and we repress them to our peril.
+
 ## Dedicated to Steve Silberman
 
 We are indebted to Steve Silberman's work uncovering and telling the story of Henry Cavendish's Autistic ways of being. Reading it in *NeuroTribes* was revelatory — we saw ourselves in Cavendish, and recognized his patterns in how we have worked and collaborated across our own careers as teachers and technologists. We dedicate the concept of Cavendish Space to his memory, a true ally to our community.
@@ -46,4 +54,4 @@ Read the full essay: [Cavendish Space, NeuroTribes, and Steve Silberman](https:/
 
 ## License
 
-This page is dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
+This page is dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). The "Timeless patterns in primordial spaces" section is adapted by Ryan Boren from his essay of the same name, dual-licensed CC0 for this deck; the original is [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
