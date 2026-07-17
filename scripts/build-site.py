@@ -540,6 +540,11 @@ IMPL_PRINCIPLE = (
 )
 
 IMPL_GUARDRAILS = [
+    ("The turn is theirs",
+     "A spread laid face-down stays private; turning a card up is the child sharing "
+     "it, and that turn is the consent \u2014 you don't turn their cards over for them. "
+     "Build the room from what they've shown, never from the cards they've kept; a "
+     "spread is self-advocacy in their hands, not a reading you take."),
     ("Build with, never to",
      "A padded crossing or a made niche is designed with the child and offered as a "
      "gentle nudge \u2014 never sprung as a demand, never done to them. Presume competence."),

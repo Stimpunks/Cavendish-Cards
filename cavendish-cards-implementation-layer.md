@@ -14,6 +14,7 @@ Design the space between the zones — not just the zones. Most rooms build the 
 
 ## Guardrails
 
+- **The turn is theirs.** A spread laid face-down stays private; turning a card up is the child sharing it, and that turn is the consent — you don't turn their cards over for them. Build the room from what they've shown, never from the cards they've kept; a spread is self-advocacy in their hands, not a reading you take.
 - **Build with, never to.** A padded crossing or a made niche is designed with the child and offered as a gentle nudge — never sprung as a demand, never done to them. Presume competence.
 - **The room is the work, not the child.** You are shaping the environment, not fixing the person. A hard transition, or a space that doesn't fit, is information about the room — never a verdict on whoever is in it.
 - **Not a compliance system.** Smoother days are a by-product, never the goal, and a sensory space is never containment or seclusion. Don't let “we built them a nook” become a reason to under-provide real rest, real support, or a child's actual communication tools.
