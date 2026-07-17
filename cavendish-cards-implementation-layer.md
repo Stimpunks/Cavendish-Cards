@@ -55,15 +55,15 @@ These are the pieces you change so the space fits. Each card names a need, not a
 
 A transition is a crossing, and for a mind in deep focus a hard crossing is jarring and costly — attention yanked across with nowhere to land. Lily pads are the stepping stones that make it gentle: a pause, a heads-up, a held place, a graded step. Build the space between the zones so each crossing has somewhere to land, and keep the pace the child's — read from their signals when they can't set it with their feet.
 
-- **all done** — Let a called ending be an ending — no one-more-thing, no negotiation over whether it really is.
-- **coming back** — Keep the spot, the task, and the welcome ready, and let a carried object travel the crossing as a thread of continuity between the two banks.
 - **i need a minute** — A pause-place at the seam — a beanbag, a windowsill, a cushion where two zones meet — so leaving one lands somewhere before arriving at the next.
-- **i want to stay a while** — Let staying stand — a spot that isn't hurried on just because the schedule wants it.
 - **not yet** — Let the crossing wait on the child's signal — check back rather than push — never on the room's clock.
-- **ready now** — Go when they go: follow their timing, and build routes that let them move the moment they're ready.
 - **slowly** — A graded strip between a loud zone and a quiet one, where the light dims and the sound drops before arrival. Grade the crossing instead of forcing a single leap.
-- **stuck** — A landing spot in the gap — somewhere to be between pads without being pushed across. Offer a what-helps, and let them choose; never shove.
 - **watch first** — A place at the rim of a group, in view of it, where watching counts as being in. Keep joining optional.
+- **coming back** — Keep the spot, the task, and the welcome ready, and let a carried object travel the crossing as a thread of continuity between the two banks.
+- **ready now** — Go when they go: follow their timing, and build routes that let them move the moment they're ready.
+- **i want to stay a while** — Let staying stand — a spot that isn't hurried on just because the schedule wants it.
+- **all done** — Let a called ending be an ending — no one-more-thing, no negotiation over whether it really is.
+- **stuck** — A landing spot in the gap — somewhere to be between pads without being pushed across. Offer a what-helps, and let them choose; never shove.
 
 ---- 
 
