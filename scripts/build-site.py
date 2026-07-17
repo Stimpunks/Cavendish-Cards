@@ -876,7 +876,11 @@ def main():
             else:
                 print(f"  ! no face for {slug}/{cslug}", file=sys.stderr)
                 continue
-            (faces / f"{cslug}.svg").write_text(face_svg, encoding="utf-8")
+            # Face filenames are namespaced by family: slugs are only unique
+            # within a realm (every realm ships a `your-own`), so a bare
+            # {cslug}.svg would let realms overwrite each other's faces.
+            face_file = f"{slug}--{cslug}.svg"
+            (faces / face_file).write_text(face_svg, encoding="utf-8")
 
             grp = group_map.get(cslug)
             if group_order and grp is None:
@@ -900,7 +904,7 @@ def main():
                 "prompt": prompt if has_prompt else "",
                 "given_not_read": slug == "love-locution",
                 "notes": notes,
-                "face": f"faces/{cslug}.svg",
+                "face": f"faces/{face_file}",
                 "back": f"faces/{back}",
                 "group": grp,
                 "reflections": reflections,

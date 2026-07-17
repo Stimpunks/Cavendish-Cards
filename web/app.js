@@ -6,9 +6,9 @@
   var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbBuildEl, lbBuildLinkEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
-  var bySlug = {};
+  var byUid = {};
   var active = 'all';
-  var laid = [];            // [{slug, up, refIdx}]
+  var laid = [];            // [{uid, up, refIdx}]
   var pendingFocus = null;  // {i, sel} | 'empty' | null
 
   var ZOOM_SVG =
@@ -43,14 +43,14 @@
   }
 
   function reflectionFor(item) {
-    var c = bySlug[item.slug];
+    var c = byUid[item.uid];
     if (!c || !c.reflections || !c.reflections.length) return '';
     return c.reflections[(item.refIdx || 0) % c.reflections.length];
   }
 
-  function isLaid(slug) {
+  function isLaid(uid) {
     for (var i = 0; i < laid.length; i++) {
-      if (laid[i].slug === slug) return true;
+      if (laid[i].uid === uid) return true;
     }
     return false;
   }
@@ -59,10 +59,10 @@
     var tiles = document.querySelectorAll('.tile');
     for (var i = 0; i < tiles.length; i++) {
       var t = tiles[i];
-      var slug = t.dataset.slug;
-      if (!slug) continue;
-      var on = isLaid(slug);
-      var nm = bySlug[slug] ? bySlug[slug].name : slug;
+      var uid = t.dataset.uid;
+      if (!uid) continue;
+      var on = isLaid(uid);
+      var nm = byUid[uid] ? byUid[uid].name : uid;
       t.classList.toggle('tile-added', on);
       t.setAttribute('aria-label',
         on ? ('Take ' + nm + ' back off the table') : ('Lay ' + nm + ' on the table'));
@@ -111,13 +111,13 @@
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'tile';
-    b.dataset.slug = c.slug;
+    b.dataset.uid = c.uid;
     b.setAttribute('aria-label', 'Lay ' + c.name + ' on the table');
     b.innerHTML =
       '<span class="tile-art"><img src="' + escAttr(c.face) +
       '" alt="" loading="lazy"></span>' +
       '<span class="tile-name">' + esc(c.name) + '</span>';
-    b.addEventListener('click', function () { lay(c.slug); });
+    b.addEventListener('click', function () { lay(c.uid); });
 
     var z = document.createElement('button');
     z.type = 'button';
@@ -209,39 +209,39 @@
     markAdded();
   }
 
-  function unlay(slug) {
+  function unlay(uid) {
     for (var i = 0; i < laid.length; i++) {
-      if (laid[i].slug === slug) { laid.splice(i, 1); break; }
+      if (laid[i].uid === uid) { laid.splice(i, 1); break; }
     }
     pendingFocus = null;               // stay in the deck; focus stays on the tile
     renderTable();
-    announce('Removed ' + bySlug[slug].name + ' from the table.');
+    announce('Removed ' + byUid[uid].name + ' from the table.');
   }
 
-  function lay(slug) {
-    if (isLaid(slug)) { unlay(slug); return; }
-    var c = bySlug[slug];
+  function lay(uid) {
+    if (isLaid(uid)) { unlay(uid); return; }
+    var c = byUid[uid];
     var start = 0;                      // vary the question so a spread doesn't repeat
     if (c && c.reflections && c.reflections.length > 1) {
       var same = 0;
       for (var i = 0; i < laid.length; i++) {
-        var lc = bySlug[laid[i].slug];
+        var lc = byUid[laid[i].uid];
         if (lc && lc.reflections && lc.reflections.length &&
             lc.reflections[0] === c.reflections[0]) same++;
       }
       start = same % c.reflections.length;
     }
-    laid.push({ slug: slug, up: false, refIdx: start });
+    laid.push({ uid: uid, up: false, refIdx: start });
     pendingFocus = null;               // stay in the deck; don't scroll to the table
     renderTable();
-    announce('Laid ' + bySlug[slug].name + ' on the table, face-down.');
+    announce('Laid ' + byUid[uid].name + ' on the table, face-down.');
   }
 
   function updatePlaceBackground() {
     var place = '';
     laid.forEach(function (item) {
-      var c = bySlug[item.slug];
-      if (item.up && c && c.family === 'places' && item.slug !== 'your-own') place = item.slug;
+      var c = byUid[item.uid];
+      if (item.up && c && c.family === 'places' && c.slug !== 'your-own') place = c.slug;
     });
     if (place) document.body.setAttribute('data-place', place);
     else document.body.removeAttribute('data-place');
@@ -255,7 +255,7 @@
     doneBtn.hidden = laid.length === 0;
 
     laid.forEach(function (item, i) {
-      var c = bySlug[item.slug];
+      var c = byUid[item.uid];
       var li = document.createElement('li');
       li.className = 'laid' + (item.up ? ' is-up' : '');
 
@@ -363,7 +363,7 @@
 
   function summaryText() {
     return laid.map(function (item) {
-      var c = bySlug[item.slug];
+      var c = byUid[item.uid];
       var line = '- ' + c.name + (c.prompt ? ' — ' + c.prompt : '');
       var q = reflectionFor(item);
       return q ? line + '\n  reflect: ' + q : line;
@@ -374,7 +374,7 @@
     if (!summaryEl) return;
     summaryListEl.innerHTML = '';
     laid.forEach(function (item) {
-      var c = bySlug[item.slug];
+      var c = byUid[item.uid];
       var name = c.name + (c.prompt ? ' — ' + c.prompt : '');
       var q = reflectionFor(item);
       var li = document.createElement('li');
@@ -450,7 +450,9 @@
     families = (data && data.families) || [];
     families.forEach(function (f) {
       f.cards.forEach(function (c) {
-        c.family = f.slug; c.familyName = f.name; bySlug[c.slug] = c;
+        c.family = f.slug; c.familyName = f.name;
+        c.uid = f.slug + '/' + c.slug;
+        byUid[c.uid] = c;
       });
     });
     browseFamilies = families;
