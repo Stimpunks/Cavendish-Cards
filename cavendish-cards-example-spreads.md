@@ -73,6 +73,14 @@ Three moves, every time:
 
 *One spread, one day. The order is the point — the same cards in a different order tell a different story. (Play mode: moving between.)*
 
+## 7. First morning at a new school
+
+**Turned up:** *big step · not yet · watch first · tell me first · a way out*
+
+**Reading it:** the crossing feels too big, and they're not ready to walk in yet. They want to watch from the edge before joining, and they need to know what's coming and that they can leave. So don't march them through the door: say what the morning holds (*tell me first*), let them hover and watch at the edge — that counts as taking part — guarantee a visible way out, and let *not yet* mean "check back," not "push harder." The step is big; make the step smaller, rather than the child braver.
+
+*One spread, one day. The second morning, with the room already known, may need only* watch first *— or nothing at all. (Play mode: show me / build my day.)*
+
 ----
 
 ## Make your own
