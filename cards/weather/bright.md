@@ -14,7 +14,7 @@ Clear and good right now.
 
 ## Notes
 
-Bright is a clear sky and open light — nothing pressing in, everything easy for now. It names a good, uncomplicated stretch: settled, capable, with room to move. Not every card is a problem to solve, and bright is the proof. When this card is out, notice what is keeping the sky clear and leave it be — good weather is worth protecting, not interrupting.
+Bright is a clear sky and open light. Nothing is pressing in, and everything feels easy for now. This card names a good, simple stretch — settled, able, with room to move. Not every card is a problem to fix, and bright is the proof. When this card is out, notice what is keeping the sky clear, and leave it alone. Good weather is worth protecting, not interrupting.
 
 ----
 

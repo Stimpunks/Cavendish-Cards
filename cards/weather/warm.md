@@ -14,7 +14,7 @@ Settled and safe.
 
 ## Notes
 
-Warm is a cozy glow, wrapped up — settled, safe, at ease. It names calm security: regulated, comfortable, no alarm anywhere. Naming the good weather matters as much as naming the hard, so it can be recognized and returned to. When this card is out, notice the conditions that made it — and remember them, because they are the recipe worth repeating.
+Warm is a cozy glow, wrapped up — settled, safe, at ease. This card names calm and safe: comfortable, steady, no alarm anywhere. Naming the good weather matters as much as naming the hard weather, so it can be noticed and returned to. When this card is out, notice what made it happen, and remember it. Those are the conditions worth repeating.
 
 ----
 

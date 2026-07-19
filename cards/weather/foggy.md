@@ -14,7 +14,7 @@ Hard to think, everything's slow.
 
 ## Notes
 
-Foggy is low mist with the edges blurred — thinking gone slow and soft, hard to find words or hold a plan. It names cognitive fog: reduced processing speed and clarity, often after too much has already happened. Fog is a condition to wait out, not a failure of effort. When this card is out, slow down and simplify — one thing at a time, no rush — and let the mist lift on its own schedule.
+Foggy is low mist with the edges blurred. Thinking has gone slow and soft, and it's hard to find words or hold a plan. This card names brain fog: things process slower and less clearly, often after too much has already happened. Fog is something to wait out, not a failure to try harder. When this card is out, slow down and keep it simple. One thing at a time, no rush, and let the mist lift on its own.
 
 ----
 

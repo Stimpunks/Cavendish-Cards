@@ -55,102 +55,102 @@ _Inner weather, not clinical states — the whole range, good and hard alike._
 ### bright
 *clear sky, open light* · "Clear and good right now."
 
-Bright is a clear sky and open light — nothing pressing in, everything easy for now. It names a good, uncomplicated stretch: settled, capable, with room to move. Not every card is a problem to solve, and bright is the proof. When this card is out, notice what is keeping the sky clear and leave it be — good weather is worth protecting, not interrupting.
+Bright is a clear sky and open light. Nothing is pressing in, and everything feels easy for now. This card names a good, simple stretch — settled, able, with room to move. Not every card is a problem to fix, and bright is the proof. When this card is out, notice what is keeping the sky clear, and leave it alone. Good weather is worth protecting, not interrupting.
 
 ### buzzy
 *sparks, too many at once* · "Too much coming in."
 
-Buzzy is a shower of sparks, too many at once — the air crackling with more input than there is room for. It names sensory or social overload: sound, light, movement, and demand all arriving together, none of it filtering out. Buzzy is weather, not a fault — the sparks come from the room as much as the person. When this card is out, turn the world down: fewer inputs, more space, rather than asking the person to absorb all of it.
+Buzzy is a shower of sparks — too much coming in at once, the air crackling. This card names sensory or social overload: sound, light, movement, and demands all arrive together, and none of it filters out. Buzzy is weather, not a fault — the sparks come from the room as much as the person. When this card is out, turn the world down. Give fewer things to take in and more space, instead of asking the person to soak it all up.
 
 ### can't tell
 *a figure with a faint, muffled question mark glowing at the belly and chest* · "My body's telling me something, but I can't tell what."
 
-Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: [interoception](https://stimpunks.org/glossary/interoception/), the eighth sense.
+Can't tell is when the body's signals are hard to read. You might be hungry, thirsty, need the toilet, be too hot, or be hurting — but it doesn't come through clearly. This is interoception, the sense of what is happening inside the body. For many Autistic people, those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing; the messages are just faint. When this card is out, don't quiz or insist. Gently offer a drink, the toilet, a warm layer, or a rest, and let the person check without pressure. Lineage: [interoception](https://stimpunks.org/glossary/interoception/), the eighth sense.
 
 ### far-away
 *a small figure at the end of a long view* · "A bit distant, floating off."
 
-Far-away is a small figure at the end of a long view — present in the room but drifting off from it. It names dissociation or spaciness: a soft disconnection, floating loose from the here and now. It is often the mind's way of stepping back when things are too much. When this card is out, don't yank the person back — lower the intensity, offer a quiet anchor, and let them return at their own pace.
+Far-away is a small figure at the end of a long view. The person is in the room but drifting off from it. This card names feeling spaced-out or checked-out — a soft disconnection, floating loose from the here and now. It is often the mind's way of stepping back when things are too much. When this card is out, don't yank the person back. Lower the intensity, offer a quiet anchor, and let them return at their own pace.
 
 ### fizzy
 *bubbles rising inside, a fizzing glass — excitement on the inside* · "Bubbly and excited inside."
 
-Fizzy is happy bubbles rising inside — bright, buoyant excitement, felt before it shows. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
+Fizzy is happy bubbles rising inside — bright, bouncy excitement you feel before it shows. This card names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the happy kind. When this card is out, make room for the bubbles. Let the energy go somewhere instead of asking it to sit still.
 
 ### foggy
 *low mist, edges blurred* · "Hard to think, everything's slow."
 
-Foggy is low mist with the edges blurred — thinking gone slow and soft, hard to find words or hold a plan. It names cognitive fog: reduced processing speed and clarity, often after too much has already happened. Fog is a condition to wait out, not a failure of effort. When this card is out, slow down and simplify — one thing at a time, no rush — and let the mist lift on its own schedule.
+Foggy is low mist with the edges blurred. Thinking has gone slow and soft, and it's hard to find words or hold a plan. This card names brain fog: things process slower and less clearly, often after too much has already happened. Fog is something to wait out, not a failure to try harder. When this card is out, slow down and keep it simple. One thing at a time, no rush, and let the mist lift on its own.
 
 ### full
 *a jar filled to the brim* · "No more room inside."
 
-Full is a jar filled to the brim — one more drop and it spills. It names reaching capacity: not yet in distress, but with no room left to take anything else in. Full is an early, honest warning, offered before the overflow. When this card is out, stop adding — pause new demands and let some out before anything more goes in.
+Full is a jar filled to the brim — one more drop and it spills. This card names running out of room: not upset yet, but with no space left to take anything else in. Full is an early, honest warning, given before the overflow. When this card is out, stop adding. Pause new demands, and let some out before anything more goes in.
 
 ### happy flappy
 *a figure mid-flap, hands blurred with motion, bright sparks of joy around them* · "So happy my body has to move."
 
-Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. It names happy stimming: delight that moves outward through the body, the way many Autistic people feel and show joy. This is not something to calm; it is the good thing itself. When this card is out, celebrate with them — join the bounce, make room for the flap — and never still the hands.
+Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. This card names happy stimming: delight that moves out through the body. It's the way many Autistic people feel and show joy. This is not something to calm down; it is the good thing itself. When this card is out, celebrate with them. Join the bounce, make room for the flap, and never still the hands.
 
 ### heavy
 *a weighted sky pressing down* · "Low and weighed down."
 
-Heavy is a weighted sky pressing down — everything harder to lift, movement and mood both slowed. It names a low, weighed-down feeling: flat, tired, dim. Heavy weather is real weather; it is not laziness and it is not chosen. When this card is out, lighten the load rather than push against it — fewer expectations, gentle company or none, and time.
+Heavy is a weighted sky pressing down. Everything is harder to lift, and both movement and mood slow down. This card names a low, weighed-down feeling: flat, tired, dim. Heavy weather is real weather. It is not laziness, and it is not a choice. When this card is out, lighten the load instead of pushing against it. Fewer expectations, gentle company or none, and time.
 
 ### in the zone
 *a figure deep in something, the world softened to a warm glow around them* · "Deep in it, and it feels good."
 
-In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in — a strength, not a distraction. Focus like this sends out tendrils of thought; an abrupt interruption feels like they are ripped out, and coming back up to the surface takes time. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning and time before it has to end. Lineage: monotropic flow, from [monotropism](https://stimpunks.org/glossary/monotropism/); [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
+In the zone is deep, happy focus. Attention narrows to one thing while the rest of the world goes quiet. This is monotropic flow — the deep, absorbing focus many Autistic and ADHD minds do their best thinking in. It is a strength, not a distraction. Focus like this sends out little tendrils of thought. A sudden interruption feels like they get ripped out, and coming back to the surface takes time. When this card is out, protect it. Hold off interruptions, let it run, and give plenty of warning and time before it has to end. Lineage: monotropic flow, from [monotropism](https://stimpunks.org/glossary/monotropism/); [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
 
 ### meerkat
 *a meerkat standing tall on the lookout, ears up, scanning for danger* · "On alert, watching for danger."
 
-Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable to settle or focus, wanting someone safe close by. It names a body stuck in high alert: not misbehaving, not clingy, but overwhelmed and searching for safety. When this card is out, be the safe one — come close, stay near, lower the demands, and don't leave them to it alone. Lineage: [meerkat mode](https://stimpunks.org/glossary/meerkat-mode/) (Tanya Adkin and David Gray-Hammond).
+Meerkat is the on-alert feeling — standing guard, scanning for danger, unable to settle or focus, wanting someone safe close by. This card names a body stuck on high alert: not misbehaving, not clingy, but overwhelmed and looking for safety. When this card is out, be the safe one. Come close, stay near, lower the demands, and don't leave them to face it alone. Lineage: [meerkat mode](https://stimpunks.org/glossary/meerkat-mode/) (Tanya Adkin and David Gray-Hammond).
 
 ### need more
 *a figure reaching outward in a muted, empty space, movement lines around them* · "Everything's too flat and still — I need more."
 
-Need more is the under-buzzed feeling — the world too flat, too still, too quiet, and the body reaching for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking, and it's regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input rather than take it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
+Need more is the under-filled feeling — the world too flat, too still, too quiet. The body reaches for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking. It is regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input instead of taking it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
 
 ### no words right now
 *a figure with bright, present eyes and a softly closed mouth, the voice curled up quiet inside* · "The words won't come right now."
 
-No words right now is a voice gone quiet — the words are there, but the door to them is shut for the moment. It names situational mutism: speech becoming hard or impossible in certain places, with certain people, or when things are too much — never a choice, never refusal, and often with someone who badly wants to talk waiting right behind it. Pressing for speech makes the door heavier, and sometimes pointing, typing, or even a nod go quiet too. When this card is out, take the pressure off speech entirely — don't repeat or rephrase the question, don't wait for an answer out loud, offer another way or just quiet company, and let the voice come back on its own. This card names the weather; it never stands in for a child's real communication tools. Lineage: [situational mutism](https://stimpunks.org/glossary/situational-mutism/) — "situational," not "selective," because it depends on the situation and is never chosen.
+No words right now is a voice gone quiet — the words are there, but the door to them is shut for now. This card names situational mutism: speech gets hard or impossible in some places, with some people, or when things are too much. It's never a choice and never rudeness, and often the person really wants to talk. Pushing for speech only makes the door heavier, and sometimes pointing, typing, or even a nod stop working too. When this card is out, take the pressure off talking: don't repeat or reword the question, don't wait for a spoken answer, and offer another way to share or just stay quietly nearby. Let the voice come back on its own. This card names a feeling — it never replaces a child's real communication tools. Lineage: [situational mutism](https://stimpunks.org/glossary/situational-mutism/) — "situational," not "selective," because it depends on the situation and is never chosen.
 
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."
 
-Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. It names irritability and raw sensory friction, when the ordinary suddenly grates. This is the nervous system reporting on its surroundings, not bad behavior. When this card is out, reduce the friction — soften the textures, lower the demands, make space — and don't take the sharpness personally.
+Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. This card names feeling irritable and raw, when ordinary things suddenly grate. This is the body reacting to its surroundings, not bad behavior. When this card is out, reduce the friction. Soften the textures, lower the demands, make space, and don't take the sharpness personally.
 
 ### pulled every way
 *a small figure with arrows tugging outward in every direction at once* · "Too many things pulling at me at once."
 
-Pulled every way is what happens when too many things need attention at once — each one tugging, none of them finished, no room to go deep on any of them. It names the strain of having to split attention in a mind that runs on focusing deeply, one thing at a time. Not laziness, not not-trying: a mind built for depth being asked to spread thin. When this card is out, take things away rather than add — one thing at a time, in order, and let the rest wait. Lineage: [monotropic split](https://stimpunks.org/glossary/monotropic-split/) (Tanya Adkin and David Gray-Hammond).
+Pulled every way is when too many things need attention at once. Each one tugs, none are finished, and there's no room to go deep on any of them. This card names the strain of splitting attention in a mind that likes to focus deeply, one thing at a time. It's not laziness or not trying — it's a mind built for depth being asked to spread thin. When this card is out, take things away instead of adding. One thing at a time, in order, and let the rest wait. Lineage: [monotropic split](https://stimpunks.org/glossary/monotropic-split/) (Tanya Adkin and David Gray-Hammond).
 
 ### round and round
 *a single looping line spiralling inward — a thought going round and round* · "A thought that won't stop going round."
 
-Round and round is when one thought keeps looping — circling back, tightening, hard to step out of. Attention can lock onto a worry and pull deeper, and the harder you try to push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought — help step out sideways: a change of place, a gentle interest to catch onto, company, something for the hands. Lineage: [monotropic spiral](https://stimpunks.org/glossary/monotropic-spiral/) (Tanya Adkin and David Gray-Hammond).
+Round and round is when one thought keeps looping — circling back, getting tighter, hard to step out of. Attention can lock onto a worry and pull in deeper, and the harder you push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought. Help the person step out sideways: a change of place, a gentle thing to notice, company, or something for the hands. Lineage: [monotropic spiral](https://stimpunks.org/glossary/monotropic-spiral/) (Tanya Adkin and David Gray-Hammond).
 
 ### stormy
 *big clouds about to break* · "Big feelings, close to the edge."
 
-Stormy is big clouds about to break — pressure built up, feeling close to the edge. It names strong emotion near its limit: overwhelmed, about to spill, weather that has to move through. A storm is not a threat to manage but a front to weather safely. When this card is out, get to shelter — lower the stimulation, drop the demands, stay steady and near — and let it pass without adding to it.
+Stormy is big clouds about to break — pressure built up, feeling close to the edge. This card names strong emotion near its limit: overwhelmed, about to spill, weather that has to move through. A storm is not something to manage away; it's a front to get through safely. When this card is out, get to shelter. Lower the stimulation, drop the demands, stay steady and near, and let it pass without adding to it.
 
 ### tender
 *a small figure with a soft, sore glow along their skin, flinching as a tiny word lands nearby like a dropped pebble* · "A small thing hurt a lot right now."
 
-Tender is skin left sore by too much sun — raw and overexposed, so even a light touch stings. It names the wound of rejection sensitivity: a word, a look, or a feeling of having let someone down landing far harder than it "should," as sudden, wordless hurt — often after a lifetime of extra criticism has already worn the skin thin. This is not being too sensitive or making a fuss; the soreness was earned, and broken systems, not broken people, put it there. When this card is out, be gentle and be clear — no sharp words, no guessing games, a plain reminder that they're still wanted and not in trouble — and let the sting ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
+Tender is like skin after too much sun — sore and raw, so even a light touch stings. This card names a small thing that hurts a lot. A word or a look can sting far more than it seems like it should, and the hurt comes fast and hard to put into words. Often it builds up after years of extra criticism. This is not being too sensitive; the soreness is real, and the world put it there — broken systems, not broken people. When this card is out, be gentle and clear: use kind words, say what you mean so there's nothing to guess, and remind the person they're still wanted and not in trouble. Let the hurt ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
 
 ### too seen
 *a small figure wanting to fold inward as soft gazes turn toward them from every side* · "Being looked at is a lot right now."
 
-Too seen is the raw feeling of being looked at — every gaze landing directly, your own existence felt too close up. It names the weather of exposure anxiety: not fear of a danger out there, but the self-consciousness of being perceived, where attention — even warm, kind attention — presses in and makes you want to disappear. It is different from meerkat's scan for threat; this is the discomfort of being the one watched, and the wish to connect can still be there underneath it. When this card is out, ease the gaze — look away, lower the attention, let the person be present without being on display, and don't read the wish to hide as not wanting to be here. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
+Too seen is the raw feeling of being looked at — every pair of eyes seems to land right on you. This card names a kind of exposure anxiety: not fear of danger, but the discomfort of being watched. Even kind, warm attention can feel like too much and make you want to disappear. It's different from meerkat, which is watching out for danger — too seen is about being the one who is watched, and the wish to be with people can still be there underneath. When this card is out, ease off: look away, lower the attention, and let the person be there without being on show. Their wish to hide doesn't mean they want to leave. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
 
 ### warm
 *a cozy glow, wrapped up* · "Settled and safe."
 
-Warm is a cozy glow, wrapped up — settled, safe, at ease. It names calm security: regulated, comfortable, no alarm anywhere. Naming the good weather matters as much as naming the hard, so it can be recognized and returned to. When this card is out, notice the conditions that made it — and remember them, because they are the recipe worth repeating.
+Warm is a cozy glow, wrapped up — settled, safe, at ease. This card names calm and safe: comfortable, steady, no alarm anywhere. Naming the good weather matters as much as naming the hard weather, so it can be noticed and returned to. When this card is out, notice what made it happen, and remember it. Those are the conditions worth repeating.
 
 ### your own
 *a blank card and a pencil* · "A feeling that isn't here yet."

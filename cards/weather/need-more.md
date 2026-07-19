@@ -14,7 +14,7 @@ Everything's too flat and still — I need more.
 
 ## Notes
 
-Need more is the under-buzzed feeling — the world too flat, too still, too quiet, and the body reaching for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking, and it's regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input rather than take it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
+Need more is the under-filled feeling — the world too flat, too still, too quiet. The body reaches for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking. It is regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input instead of taking it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
 
 ----
 

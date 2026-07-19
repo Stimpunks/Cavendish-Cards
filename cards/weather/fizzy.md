@@ -14,7 +14,7 @@ Bubbly and excited inside.
 
 ## Notes
 
-Fizzy is happy bubbles rising inside — bright, buoyant excitement, felt before it shows. It names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the joyful kind. When this card is out, make room for the bubbles — let the energy have somewhere to go rather than asking it to sit still.
+Fizzy is happy bubbles rising inside — bright, bouncy excitement you feel before it shows. This card names good excitement: eager, lit up, full of go. Not all high energy is trouble, and fizzy is the happy kind. When this card is out, make room for the bubbles. Let the energy go somewhere instead of asking it to sit still.
 
 ----
 

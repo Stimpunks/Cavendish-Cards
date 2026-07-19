@@ -14,7 +14,7 @@ Everything's rubbing the wrong way.
 
 ## Notes
 
-Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. It names irritability and raw sensory friction, when the ordinary suddenly grates. This is the nervous system reporting on its surroundings, not bad behavior. When this card is out, reduce the friction — soften the textures, lower the demands, make space — and don't take the sharpness personally.
+Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. This card names feeling irritable and raw, when ordinary things suddenly grate. This is the body reacting to its surroundings, not bad behavior. When this card is out, reduce the friction. Soften the textures, lower the demands, make space, and don't take the sharpness personally.
 
 ----
 

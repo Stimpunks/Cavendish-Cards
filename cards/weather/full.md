@@ -20,7 +20,7 @@ No more room inside.
 
 ## Notes
 
-Full is a jar filled to the brim — one more drop and it spills. It names reaching capacity: not yet in distress, but with no room left to take anything else in. Full is an early, honest warning, offered before the overflow. When this card is out, stop adding — pause new demands and let some out before anything more goes in.
+Full is a jar filled to the brim — one more drop and it spills. This card names running out of room: not upset yet, but with no space left to take anything else in. Full is an early, honest warning, given before the overflow. When this card is out, stop adding. Pause new demands, and let some out before anything more goes in.
 
 ----
 

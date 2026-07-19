@@ -20,7 +20,7 @@ A bit distant, floating off.
 
 ## Notes
 
-Far-away is a small figure at the end of a long view — present in the room but drifting off from it. It names dissociation or spaciness: a soft disconnection, floating loose from the here and now. It is often the mind's way of stepping back when things are too much. When this card is out, don't yank the person back — lower the intensity, offer a quiet anchor, and let them return at their own pace.
+Far-away is a small figure at the end of a long view. The person is in the room but drifting off from it. This card names feeling spaced-out or checked-out — a soft disconnection, floating loose from the here and now. It is often the mind's way of stepping back when things are too much. When this card is out, don't yank the person back. Lower the intensity, offer a quiet anchor, and let them return at their own pace.
 
 ----
 

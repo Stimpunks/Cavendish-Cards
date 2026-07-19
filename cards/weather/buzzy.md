@@ -20,7 +20,7 @@ Too much coming in.
 
 ## Notes
 
-Buzzy is a shower of sparks, too many at once — the air crackling with more input than there is room for. It names sensory or social overload: sound, light, movement, and demand all arriving together, none of it filtering out. Buzzy is weather, not a fault — the sparks come from the room as much as the person. When this card is out, turn the world down: fewer inputs, more space, rather than asking the person to absorb all of it.
+Buzzy is a shower of sparks — too much coming in at once, the air crackling. This card names sensory or social overload: sound, light, movement, and demands all arrive together, and none of it filters out. Buzzy is weather, not a fault — the sparks come from the room as much as the person. When this card is out, turn the world down. Give fewer things to take in and more space, instead of asking the person to soak it all up.
 
 ----
 

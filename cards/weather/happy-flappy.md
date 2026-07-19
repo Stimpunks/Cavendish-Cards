@@ -14,7 +14,7 @@ So happy my body has to move.
 
 ## Notes
 
-Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. It names happy stimming: delight that moves outward through the body, the way many Autistic people feel and show joy. This is not something to calm; it is the good thing itself. When this card is out, celebrate with them — join the bounce, make room for the flap — and never still the hands.
+Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. This card names happy stimming: delight that moves out through the body. It's the way many Autistic people feel and show joy. This is not something to calm down; it is the good thing itself. When this card is out, celebrate with them. Join the bounce, make room for the flap, and never still the hands.
 
 ----
 

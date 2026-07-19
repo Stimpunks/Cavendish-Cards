@@ -14,7 +14,7 @@ A thought that won't stop going round.
 
 ## Notes
 
-Round and round is when one thought keeps looping — circling back, tightening, hard to step out of. Attention can lock onto a worry and pull deeper, and the harder you try to push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought — help step out sideways: a change of place, a gentle interest to catch onto, company, something for the hands. Lineage: [monotropic spiral](https://stimpunks.org/glossary/monotropic-spiral/) (Tanya Adkin and David Gray-Hammond).
+Round and round is when one thought keeps looping — circling back, getting tighter, hard to step out of. Attention can lock onto a worry and pull in deeper, and the harder you push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought. Help the person step out sideways: a change of place, a gentle thing to notice, company, or something for the hands. Lineage: [monotropic spiral](https://stimpunks.org/glossary/monotropic-spiral/) (Tanya Adkin and David Gray-Hammond).
 
 ----
 
