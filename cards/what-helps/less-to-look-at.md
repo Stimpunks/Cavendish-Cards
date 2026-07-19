@@ -20,7 +20,7 @@ Fewer things to look at.
 
 ## Notes
 
-One wall crowded with stuff, one wall calm and bare — this card asks for the second. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing sight-lines is free. When this card is out, take some things down or turn the person toward a plainer view — reduce what there is to look at, not what the person can cope with.
+One wall is crowded with stuff; one wall is calm and bare. This card asks for the bare one. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing the view is free. When this card is out, take some things down, or turn the person toward a plainer view. Reduce what there is to look at, not what the person can cope with.
 
 ----
 

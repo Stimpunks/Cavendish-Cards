@@ -14,7 +14,7 @@ A calm sound to rest on.
 
 ## Notes
 
-A steady sound is a gentle, repeating wave — a hum, white noise, a loop to rest on. It names a need for predictable, soothing input: a constant sound that covers the jagged, unpredictable ones. Some quiet is too quiet; a steady sound fills it kindly. When this card is out, offer the calm sound and protect it from interruption.
+A steady sound is a gentle, repeating wave — a hum, white noise, a loop to rest on. This card names a need for calm, steady input. A constant sound can cover the sharp, surprising ones. Some quiet is too quiet, and a steady sound fills it kindly. When this card is out, offer the calm sound, and protect it from interruption.
 
 ----
 

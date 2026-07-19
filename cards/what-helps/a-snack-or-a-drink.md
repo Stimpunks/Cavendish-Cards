@@ -14,7 +14,7 @@ Something to eat or drink.
 
 ## Notes
 
-It names a body need that quietly derails everything else — hunger, thirst, low fuel. This is maintenance, not being off-task. When this card is out, meet it without making it a negotiation.
+This card names a body need that quietly throws everything else off — hunger, thirst, running low on fuel. This is upkeep, not being off-task. When this card is out, meet it without making it a negotiation.
 
 ----
 

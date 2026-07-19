@@ -20,7 +20,7 @@ Let me be the one to change it.
 
 ## Notes
 
-This is a hand on the switch — the person turning the light, the sound, the thing up or down themselves. It names control as its own need: not a particular setting, but being the one who decides and adjusts it. For many people the same input is fine when they hold the dial and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — rather than setting it for them.
+This is a hand on the switch — the person turning the light, the sound, or the thing up or down themselves. This card names control as its own need. It's not one right setting; it's being the one who decides and adjusts. For many people the same input is fine when they hold the dial, and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — instead of setting it for them.
 
 ----
 

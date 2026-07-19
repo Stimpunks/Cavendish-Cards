@@ -14,7 +14,7 @@ Something to chew or crunch.
 
 ## Notes
 
-Something to chew is a chewy tool — safe oral input, a chew or a crunch. It names a need for oral-sensory regulation: chewing, biting, or crunching that organizes and calms. This is a recognized sensory strategy, met with a safe tool rather than corrected. When this card is out, provide a proper chew and treat the need as ordinary; it is not misbehavior.
+Something to chew is a chewy tool — safe input for the mouth, a chew or a crunch. This card names a need to chew: biting or crunching that helps a body settle and calm. This is a known sensory strategy, met with a safe tool, not corrected. When this card is out, provide a proper chew and treat the need as ordinary. It is not misbehavior.
 
 ----
 

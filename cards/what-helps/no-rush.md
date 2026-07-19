@@ -14,7 +14,7 @@ All the time I need.
 
 ## Notes
 
-No rush is a slow, easy clock — time without pressure. It names a need for more processing time: room to think, respond, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often undoes both. When this card is out, take the pressure off the clock — wait, and let the extra time be freely available.
+No rush is a slow, easy clock — time without pressure. This card names a need for more time to process: room to think, answer, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often ruins both. When this card is out, take the pressure off the clock. Wait, and let the extra time be there for the taking.
 
 ----
 

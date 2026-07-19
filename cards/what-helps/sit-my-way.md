@@ -20,7 +20,7 @@ Let me sit or stand how I like.
 
 ## Notes
 
-Three ways to be where a chair would go — on the floor, on a wobble stool, standing. It names posture as a choice: a body settles and attends differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — rather than asking the person to sit still and straight.
+Three ways to be where a chair would go — on the floor, on a wobble stool, or standing. This card names posture as a choice. A body settles and pays attention differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — instead of asking the person to sit still and straight.
 
 ----
 

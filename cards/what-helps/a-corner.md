@@ -20,7 +20,7 @@ Somewhere with sides, at my back.
 
 ## Notes
 
-A corner is the cheapest cave there is — two walls meeting, a back that's covered, an edge to settle against. It names the pull toward enclosure: sides and boundaries that cut the input down and let a body feel held. Corners, edges, and nooks are in every room and cost nothing. When this card is out, find the person a corner — or make one with a shelf, a bookcase, a bit of furniture pulled out — rather than asking them to settle in the open.
+A corner is the cheapest cave there is — two walls meeting, a covered back, an edge to settle against. This card names a pull toward being tucked in. Sides and edges cut down the input and help a body feel held. Corners and nooks are in every room and cost nothing. When this card is out, find the person a corner, or make one with a shelf or some furniture, instead of asking them to settle out in the open.
 
 ----
 

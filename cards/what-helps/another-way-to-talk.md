@@ -20,7 +20,7 @@ Let me point, write, or show it.
 
 ## Notes
 
-A pointing hand and a whiteboard — saying it without saying it aloud. It names the need for another channel: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to communicate is not less communication. When this card is out, offer the other channel and wait — hand over the whiteboard, the device, the cards, the time — rather than pressing for spoken words.
+A pointing hand and a whiteboard — saying it without saying it out loud. This card names the need for another way to communicate: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to talk is not less talking. When this card is out, offer the other channel and wait. Hand over the whiteboard, the device, the cards, and the time, instead of pushing for spoken words.
 
 ----
 

@@ -168,142 +168,142 @@ _The niche-construction pieces: the ways we change the environment so it fits._
 ### a big squeeze
 *deep pressure, a weighted wrap* · "Firm pressure that steadies me."
 
-A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. It names the calming pull of proprioceptive input: firm pressure that many bodies find organizing when lighter touch would not. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only ever the pressure they ask for, on their terms.
+A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. This card names how firm pressure can calm the body. Many bodies feel steadier with a big squeeze when a light touch wouldn't help. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only the pressure they ask for, on their terms.
 
 ### a corner
 *a small figure tucked into a corner, walls on two sides* · "Somewhere with sides, at my back."
 
-A corner is the cheapest cave there is — two walls meeting, a back that's covered, an edge to settle against. It names the pull toward enclosure: sides and boundaries that cut the input down and let a body feel held. Corners, edges, and nooks are in every room and cost nothing. When this card is out, find the person a corner — or make one with a shelf, a bookcase, a bit of furniture pulled out — rather than asking them to settle in the open.
+A corner is the cheapest cave there is — two walls meeting, a covered back, an edge to settle against. This card names a pull toward being tucked in. Sides and edges cut down the input and help a body feel held. Corners and nooks are in every room and cost nothing. When this card is out, find the person a corner, or make one with a shelf or some furniture, instead of asking them to settle out in the open.
 
 ### a den
 *a blanket or umbrella making a little roof overhead* · "Something over me to tuck under."
 
-A den is a roof you make — a blanket over a table, an umbrella, a pop-up tent, a hood pulled up. It names the comfort of cover overhead: a small, enclosed pocket that drops the light and the noise and marks off a space that's yours. Dens are quick to build from what's already in the room. When this card is out, help build the cover — and let the person decide how closed-in it should be.
+A den is a roof you make — a blanket over a table, an umbrella, a pop-up tent, a hood pulled up. This card names the comfort of cover overhead. A small, closed-in pocket drops the light and noise and marks off a space that's yours. Dens are quick to build from what's already in the room. When this card is out, help build the cover, and let the person decide how closed-in it should be.
 
 ### a smell that helps
 *a hand near a scented thing* · "A smell that settles me, or less of one."
 
-A card for the nose. It names scent as a real sensory need — a calming smell to bring close, or an overwhelming one that has to go. Smell is easy for others to miss and hard to ignore when it's wrong. When this card is out, change the air rather than the person.
+This is a card for the nose. It names smell as a real sensory need — a calming smell to bring close, or a bad one that has to go. Smell is easy for others to miss, and hard to ignore when it's wrong. When this card is out, change the air, not the person.
 
 ### a snack or a drink
 *a cup and a small snack* · "Something to eat or drink."
 
-It names a body need that quietly derails everything else — hunger, thirst, low fuel. This is maintenance, not being off-task. When this card is out, meet it without making it a negotiation.
+This card names a body need that quietly throws everything else off — hunger, thirst, running low on fuel. This is upkeep, not being off-task. When this card is out, meet it without making it a negotiation.
 
 ### a steady sound
 *a gentle repeating wave* · "A calm sound to rest on."
 
-A steady sound is a gentle, repeating wave — a hum, white noise, a loop to rest on. It names a need for predictable, soothing input: a constant sound that covers the jagged, unpredictable ones. Some quiet is too quiet; a steady sound fills it kindly. When this card is out, offer the calm sound and protect it from interruption.
+A steady sound is a gentle, repeating wave — a hum, white noise, a loop to rest on. This card names a need for calm, steady input. A constant sound can cover the sharp, surprising ones. Some quiet is too quiet, and a steady sound fills it kindly. When this card is out, offer the calm sound, and protect it from interruption.
 
 ### a way out
 *an open door* · "A way to leave that I can use."
 
-A way out is an open door — a visible, usable exit. It names the need to know escape is possible: not necessarily to leave, but to be certain leaving is allowed. Often just knowing the door is there is what makes staying possible. When this card is out, guarantee the exit — a clear way to step out, no permission ritual, no penalty for using it.
+A way out is an open door — an exit you can see and use. This card names the need to know you can leave. It's not always about leaving; it's about being sure that leaving is allowed. Often, just knowing the door is there is what makes staying possible. When this card is out, make the exit certain: a clear way to step out, no asking ritual, no penalty for using it.
 
 ### another way to talk
 *a hand pointing at a card, next to a small whiteboard* · "Let me point, write, or show it."
 
-A pointing hand and a whiteboard — saying it without saying it aloud. It names the need for another channel: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to communicate is not less communication. When this card is out, offer the other channel and wait — hand over the whiteboard, the device, the cards, the time — rather than pressing for spoken words.
+A pointing hand and a whiteboard — saying it without saying it out loud. This card names the need for another way to communicate: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to talk is not less talking. When this card is out, offer the other channel and wait. Hand over the whiteboard, the device, the cards, and the time, instead of pushing for spoken words.
 
 ### busy hands
 *a fidget in motion* · "Something for my hands to do."
 
-Busy hands is a fidget in motion — something for the hands to work while the rest attends. It names a need for occupied hands: a fidget, a texture, a small motion that steadies attention rather than splitting it. Hands that move are often how a person listens. When this card is out, let the hands be busy; the fidget is helping, not distracting.
+Busy hands is a fidget in motion — something for the hands to do while the rest pays attention. This card names a need for busy hands: a fidget, a texture, a small motion that steadies focus instead of splitting it. Moving hands are often how a person listens. When this card is out, let the hands be busy. The fidget is helping, not distracting.
 
 ### dim the light
 *a dial lowering a lamp* · "Softer light."
 
-Dim the light is a dial turned down — harsh brightness eased to something softer. It names sensitivity to light: fluorescents, glare, or sheer intensity that most people tune out but this nervous system can't. Lowering the light is a change to the room, not a special favor. When this card is out, soften the lighting where you can, and treat bright rooms as the thing to fix.
+Dim the light is a dial turned down — harsh brightness eased to something softer. This card names being sensitive to light: bright bulbs, glare, or sheer strength that most people tune out but this body can't. Lowering the light is a change to the room, not a special favor. When this card is out, soften the light where you can, and treat a too-bright room as the thing to fix.
 
 ### headphones
 *headphones, the noise turned down* · "Turn the world down a bit."
 
-Headphones turn the world's volume down — a barrier between the ears and too much sound. It names a need for less auditory input: quieter, or filtered, so the rest becomes bearable. This is an environmental fix, not avoidance — the sound was the problem, and turning it down is a reasonable answer. When this card is out, provide the quiet or the headphones freely; needing less noise is not a failure to tolerate it.
+Headphones turn the world's volume down — a wall between the ears and too much sound. This card names a need for less sound: quieter, or filtered, so the rest becomes bearable. This is a fix to the room, not avoidance — the sound was the problem, and turning it down is a fair answer. When this card is out, give the quiet or the headphones freely. Needing less noise is not a failure to put up with it.
 
 ### just one person
 *two figures, side by side* · "Not a crowd — one person."
 
-Just one person is two figures side by side — one companion, not a crowd. It names a need to narrow the social field: one trusted person at a time, where a group would overwhelm. Preferring one-to-one is a real access need, not antisocial. When this card is out, thin the crowd — offer a single steady person, and don't require group participation to count as taking part.
+Just one person is two figures side by side — one companion, not a crowd. This card names a need to shrink the social field: one trusted person at a time, where a group would be too much. Liking one-to-one is a real access need, not being antisocial. When this card is out, thin the crowd. Offer a single steady person, and don't make group joining the only way to count as taking part.
 
 ### less talking
 *a hushed mouth, a calm face* · "Fewer words for a while."
 
-Less talking is a hushed mouth and a calm face — fewer words in the air. It names a need to reduce language load: less to process, less to answer, quiet from the demand to keep up a conversation. Silence together can be a relief, not a problem to fill. When this card is out, ease off the words — fewer questions, more room, and don't read the quiet as trouble.
+Less talking is a quiet mouth and a calm face — fewer words in the air. This card names a need for less language to handle: less to take in, less to answer, a break from keeping a conversation going. Quiet together can be a relief, not a gap to fill. When this card is out, ease off the words. Fewer questions, more room, and don't read the quiet as trouble.
 
 ### less to look at
 *a busy, cluttered wall beside a calm bare one* · "Fewer things to look at."
 
-One wall crowded with stuff, one wall calm and bare — this card asks for the second. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing sight-lines is free. When this card is out, take some things down or turn the person toward a plainer view — reduce what there is to look at, not what the person can cope with.
+One wall is crowded with stuff; one wall is calm and bare. This card asks for the bare one. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing the view is free. When this card is out, take some things down, or turn the person toward a plainer view. Reduce what there is to look at, not what the person can cope with.
 
 ### let me come and go
 *a figure stepping out through an open doorway and back in — a loop of coming and going* · "Let me join and slip away as I need."
 
-Let me come and go is the need to move between being with people and being alone — joining in, then slipping away to recharge, then coming back, on my own rhythm rather than a set schedule. Dipping in and out is how many people do their best being-together; it isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
+Let me come and go is the need to move between being with people and being alone. You join in, slip away to recharge, then come back — on your own rhythm, not a set schedule. Dipping in and out is how many people do their best being-together. It isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, and permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
 
 ### let me control it
 *a hand resting on a dimmer switch* · "Let me be the one to change it."
 
-This is a hand on the switch — the person turning the light, the sound, the thing up or down themselves. It names control as its own need: not a particular setting, but being the one who decides and adjusts it. For many people the same input is fine when they hold the dial and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — rather than setting it for them.
+This is a hand on the switch — the person turning the light, the sound, or the thing up or down themselves. This card names control as its own need. It's not one right setting; it's being the one who decides and adjusts. For many people the same input is fine when they hold the dial, and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — instead of setting it for them.
 
 ### let me finish
 *a bookmark being slid into place — a natural stopping point reached* · "Let me get to a stopping point first."
 
-Let me finish is the need to reach a stopping point before switching — not hurried, not cut off partway, but given the moment to bring what I'm doing to a close. Coming out of deep focus takes time: the mind has to retract its tendrils before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point rather than a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
+Let me finish is the need to reach a stopping point before switching — not rushed, not cut off partway, but given a moment to bring things to a close. Coming out of deep focus takes time. The mind has to pull its tendrils back in before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point instead of a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
 
 ### let me stim
 *a figure rocking and moving, easy in their own motion* · "Let me move and stim the way I need."
 
-Stimming is how many bodies settle and regulate — rocking, flapping, humming, pacing, tapping. It names the need to move in one's own way, freely, without being stopped or corrected: regulation and expression, not misbehavior. The freedom to move is part of the freedom to be. When this card is out, make room for the movement and let it be — never still it. Lineage: freedom of embodiment, from the Neuroqueer Learning Spaces Manifesto and Nick Walker's *Neuroqueer Heresies*.
+Stimming is how many bodies settle and steady themselves — rocking, flapping, humming, pacing, tapping. This card names the need to move in your own way, freely, without being stopped or corrected. It is regulation and expression, not misbehavior. The freedom to move is part of the freedom to be. When this card is out, make room for the movement and let it be — never still it. Lineage: freedom of embodiment, from the Neuroqueer Learning Spaces Manifesto and Nick Walker's *Neuroqueer Heresies*.
 
 ### my own spot
 *a marked place that's mine* · "A place that's just mine."
 
-My own spot is a marked place that belongs to one person — a seat, a corner, a patch of floor. It names a need for a reliable base: somewhere consistent and claimed, safe from being moved or shared without warning. A predictable spot lowers the daily cost of working out where to be. When this card is out, protect the spot — keep it theirs, and give notice before anything about it changes.
+My own spot is a marked place that belongs to one person — a seat, a corner, a patch of floor. This card names a need for a reliable base: somewhere steady and claimed, safe from being moved or shared without warning. A predictable spot makes it easier to work out where to be each day. When this card is out, protect the spot. Keep it theirs, and give notice before anything about it changes.
 
 ### no rush
 *a slow, easy clock* · "All the time I need."
 
-No rush is a slow, easy clock — time without pressure. It names a need for more processing time: room to think, respond, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often undoes both. When this card is out, take the pressure off the clock — wait, and let the extra time be freely available.
+No rush is a slow, easy clock — time without pressure. This card names a need for more time to process: room to think, answer, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often ruins both. When this card is out, take the pressure off the clock. Wait, and let the extra time be there for the taking.
 
 ### no spotlight
 *a figure settled easy at the edge of the room while a beam of attention points somewhere else* · "Please don't put me on the spot."
 
-No spotlight is being let out of the beam of attention — not called on, not watched, not praised in front of everyone. It names exposure anxiety: the way direct attention can feel invasive rather than kind, so that being looked at, complimented, or asked to perform on the spot triggers a pull to hide — even when the wish to take part is fully there. Praise and pressure can backfire; a side-on, low-key approach lets a person come out on their own. When this card is out, come at it sideways — work alongside rather than face-to-face, skip the public praise, and let competence show in its own form and its own time. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
+No spotlight means being let out of the beam of attention — not called on, not watched, not praised in front of everyone. This card names exposure anxiety: for some people, direct attention feels pushy rather than kind. Being looked at, praised, or put on the spot makes them want to hide, even when the wish to join in is still there. Praise and pressure can make it worse, so a calm, side-on approach works better. When this card is out, come at it from the side: sit alongside instead of face to face, skip the praise in front of others, and let the person show what they can do in their own way and time. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
 
 ### parallel existence
 *two figures side by side, each in their own world* · "Someone alongside me, each doing our own thing."
 
-Two figures side by side, each in their own world — company without the demand to interact. It names body doubling: being near someone while you each do your own thing, the shared presence steadying without any pull to talk or engage. For many people this is the most workable kind of togetherness. When this card is out, offer quiet company — settle nearby, expect nothing, and don't turn it into conversation.
+Two figures side by side, each in their own world — company without any push to interact. This card names body doubling: being near someone while you each do your own thing. The shared presence steadies you, with no pull to talk or join in. For many people this is the easiest kind of togetherness. When this card is out, offer quiet company. Settle nearby, expect nothing, and don't turn it into a conversation.
 
 ### room to move
 *open floor, space to pace or spin* · "Space to move my body."
 
-Room to move is open floor — space to pace, rock, spin, or stim. It names a need for movement: motion that regulates and thinks, not fidgeting to be stilled. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement rather than asking the body to be quiet; stillness is not the goal.
+Room to move is open floor — space to pace, rock, spin, or stim. This card names a need for movement: motion that helps a body settle and think, not fidgeting to be stopped. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement instead of asking the body to be still. Stillness is not the goal.
 
 ### sit my way
 *a floor cushion, a wobble stool, and someone standing* · "Let me sit or stand how I like."
 
-Three ways to be where a chair would go — on the floor, on a wobble stool, standing. It names posture as a choice: a body settles and attends differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — rather than asking the person to sit still and straight.
+Three ways to be where a chair would go — on the floor, on a wobble stool, or standing. This card names posture as a choice. A body settles and pays attention differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — instead of asking the person to sit still and straight.
 
 ### something soft
 *a plush thing to hold* · "Something to hold and squeeze."
 
-Something soft is a plush thing to hold — comfort and grounding through touch. It names a need for a tactile anchor: something gentle to squeeze, stroke, or keep close when the world is a lot. Holding an object to steady oneself is a real regulation strategy, not babyish. When this card is out, let the soft thing stay — comfort objects belong wherever the person does.
+Something soft is a plush thing to hold — comfort and grounding through touch. This card names a need for something to hold onto: something gentle to squeeze, stroke, or keep close when the world is a lot. Holding an object to steady yourself is a real way to cope, not babyish. When this card is out, let the soft thing stay. Comfort objects belong wherever the person does.
 
 ### something to chew
 *a chewy tool* · "Something to chew or crunch."
 
-Something to chew is a chewy tool — safe oral input, a chew or a crunch. It names a need for oral-sensory regulation: chewing, biting, or crunching that organizes and calms. This is a recognized sensory strategy, met with a safe tool rather than corrected. When this card is out, provide a proper chew and treat the need as ordinary; it is not misbehavior.
+Something to chew is a chewy tool — safe input for the mouth, a chew or a crunch. This card names a need to chew: biting or crunching that helps a body settle and calm. This is a known sensory strategy, met with a safe tool, not corrected. When this card is out, provide a proper chew and treat the need as ordinary. It is not misbehavior.
 
 ### tell me first
 *a small heads-up sign* · "Let me know before it changes."
 
-Tell me first is a small heads-up sign — warning before a change. It names a need for predictability: knowing what's coming so a transition doesn't arrive as a shock. Surprise is expensive for many nervous systems; a heads-up is cheap to give. When this card is out, narrate changes in advance — say what's next before it happens, every time you can.
+Tell me first is a small heads-up sign — a warning before a change. This card names a need to know what's coming, so a change doesn't arrive as a shock. Surprise is costly for many nervous systems, and a heads-up is cheap to give. When this card is out, say what's next before it happens, every time you can.
 
 ### the right temperature
 *a blanket on one side, a fan on the other* · "Warmer, or cooler."
 
-Warmth on one side, cool air on the other — the body asking for a different temperature. It names thermal comfort as a real sensory need: too warm or too cold can fill a body up as much as noise or light can, and it is easy for others to miss. A layer, a fan, an open window, a warm drink all shift it. When this card is out, change the temperature around the person — add or take away a layer, move the air — rather than telling them they're fine.
+Warmth on one side, cool air on the other — the body asking for a different temperature. This card names temperature as a real sensory need. Too warm or too cold can fill a body up as much as noise or light can, and it's easy for others to miss. A layer, a fan, an open window, or a warm drink all help. When this card is out, change the temperature around the person — add or take away a layer, move the air — instead of telling them they're fine.
 
 ### your own
 *a blank card and a pencil* · "Something else that helps."

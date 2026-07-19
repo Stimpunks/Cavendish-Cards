@@ -14,7 +14,7 @@ Let me join and slip away as I need.
 
 ## Notes
 
-Let me come and go is the need to move between being with people and being alone — joining in, then slipping away to recharge, then coming back, on my own rhythm rather than a set schedule. Dipping in and out is how many people do their best being-together; it isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
+Let me come and go is the need to move between being with people and being alone. You join in, slip away to recharge, then come back — on your own rhythm, not a set schedule. Dipping in and out is how many people do their best being-together. It isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, and permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
 
 ----
 
