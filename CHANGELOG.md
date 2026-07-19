@@ -4,6 +4,12 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-07-19
+
+### Site
+
+- **Copy for a journal** now includes the date and an optional note field (kept only in the copy, never saved).
+
 ## 2026-07-18
 
 ### Site
