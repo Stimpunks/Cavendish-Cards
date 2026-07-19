@@ -17,6 +17,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 - Added a **sitemap, robots.txt, and structured data**, plus web-app metadata, for better discoverability and installation.
 - Added this **changelog**, kept in the repository and published as a page on the site.
 - Reworked the **I need a bodymind break** button into a calming full-screen break: a modal (with the deck paused behind it) holding the definition of *bodymind*, an affirmation invitation, a self-hosted looping ocean-waves recording by Adriel Jeremiah Wool, and a collapsible list of ways to affirm your bodymind.
+- Fixed the **Copy for a journal** button failing silently in privacy-hardened Firefox browsers (such as Zen); it now uses a reliable fallback and shows a "Copied!" confirmation.
 
 ## 2026-07-17
 
