@@ -20,7 +20,7 @@ whole, unbroken shape
 
 ## Notes
 
-"You're not broken" is a whole, unbroken shape — the deck's spine said to a person's face. It affirms the core stance: the difference is real, the struggle is real, and neither makes the person defective. Broken systems, not broken people. When this card is given, it counters a lifetime of the opposite message — offer it steadily, and don't undercut it with a "but."
+"You're not broken" is a whole shape, not a broken one — the heart of the deck, said straight to a person. Your difference is real and your struggle is real, but neither one makes you broken: broken systems, not broken people. When this card is given, it answers a lifetime of the opposite message — so give it plainly and often, and don't add a "but."
 
 ----
 

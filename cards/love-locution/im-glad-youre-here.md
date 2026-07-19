@@ -14,7 +14,7 @@ two figures, warm together
 
 ## Notes
 
-"I'm glad you're here" is two figures warm together — simple gladness at another's presence. It affirms being wanted, not merely tolerated: your presence is a good thing to someone. Being glad of a person is different from approving of their behavior. When this card is given, attach it to the person, not their performance — glad they're here, full stop.
+"I'm glad you're here" is two figures warm together — simple gladness that someone is near. It says: you are wanted, not just put up with. Your being here is a good thing to someone. Being glad of a person is not the same as liking what they did. When this card is given, attach it to the person, not their behavior — glad they're here, full stop.
 
 ----
 

@@ -14,7 +14,7 @@ a soft place to lie down
 
 ## Notes
 
-"You can rest" is a soft place to lie down — permission to stop. It affirms that rest is allowed and earned by no one: you may stop striving, and nothing bad follows. Rest withheld until it's "deserved" isn't rest. When this card is given, make the permission real — clear the demands, and let stopping be genuinely safe.
+"You can rest" is a soft place to lie down — permission to stop. It says: rest is allowed, and no one has to earn it. You can stop trying so hard, and nothing bad follows. Rest you only get when you "deserve" it isn't rest. When this card is given, make the permission real. Clear the demands, and let stopping be truly safe.
 
 ----
 

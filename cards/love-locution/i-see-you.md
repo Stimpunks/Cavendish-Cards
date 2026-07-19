@@ -14,7 +14,7 @@ eyes meeting, kindly
 
 ## Notes
 
-"I see you" is eyes meeting, kindly — the plain fact of being truly noticed. It affirms recognition: not looked past, not managed, but actually seen and known. To be seen as oneself is rare and steadying. When this card is given, let it be true — see the actual person in front of you, and let them feel it.
+"I see you" is eyes meeting, kindly — the plain fact of being truly noticed. It says: you are not looked past, not managed, but really seen and known. Being seen as yourself is rare, and it steadies you. When this card is given, let it be true. See the actual person in front of you, and let them feel it.
 
 ----
 
