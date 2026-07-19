@@ -20,7 +20,7 @@ i want to talk — you can start.
 
 ## Notes
 
-The green circle is the "come talk to me" badge. It names an open door to interaction: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and initiate — and keep the circle, because the shape carries the meaning alongside the color for colorblind readers. Unlike the rest of the deck, interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
+The green circle is the "come talk to me" badge. It's an open door: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and say hello first. Keep the circle, too: the shape carries the meaning along with the color, for people who are colorblind. Unlike the rest of the deck, interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ----
 

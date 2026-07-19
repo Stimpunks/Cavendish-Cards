@@ -461,27 +461,27 @@ _How open I am to talking, right now. The Autistic community's color communicati
 ### ask first
 *white star on orange* · "ask before you touch me."
 
-The orange star is the consent badge. It names a boundary around touch: it gives permission to ask before touching — a hug, a hand — where, without it, you should not ask at all. When this card is shown, ask first and accept the answer — and keep the star, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the [orange-star convention](https://stimpunks.org/access/interaction/).
+The orange star is the consent badge. It sets a boundary around touch. It says you may ask before touching — a hug, a hand — where, without it, you shouldn't ask at all. When this card is shown, ask first and accept the answer. Keep the star, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. From the [orange-star convention](https://stimpunks.org/access/interaction/).
 
 ### come say hi
 *white circle on green* · "i want to talk — you can start."
 
-The green circle is the "come talk to me" badge. It names an open door to interaction: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and initiate — and keep the circle, because the shape carries the meaning alongside the color for colorblind readers. Unlike the rest of the deck, interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
+The green circle is the "come talk to me" badge. It's an open door: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and say hello first. Keep the circle, too: the shape carries the meaning along with the color, for people who are colorblind. Unlike the rest of the deck, interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### i've got this
 *dark diamond outline on white* · "i can do my own hellos."
 
-The neutral card — a dark diamond on white — is the "I manage my own interaction" badge. It names an ordinary open state: approach normally, and the person will handle their own hellos. When this card is shown, just interact as usual — and keep the diamond, a Stimpunks addition so the neutral card stays distinct for colorblind readers, since white carries no canonical shape. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the [neutral (white, or no badge) convention](https://stimpunks.org/access/interaction/).
+The neutral card — a dark diamond on white — is the "I do my own hellos" badge. It's an ordinary open state: approach as normal, and the person will handle their own hellos. When this card is shown, just interact as usual. Keep the diamond, too: it's a Stimpunks addition so the neutral card stays clear for people who are colorblind, since plain white has no set shape. Interaction cards are made to be shown, and can be worn or flipped as things change. From the [neutral (white, or no badge) convention](https://stimpunks.org/access/interaction/).
 
 ### not right now
 *white square on red* · "please don't start talking to me."
 
-The red square is the "not right now" badge. It names a closed door to being approached: the person doesn't want others to initiate, though they may still come to you, and you can respond when they do. When this card is shown, hold back — don't start conversation, and don't take it personally — and keep the square, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
+The red square is the "not right now" badge. It's a closed door to being approached: the person doesn't want others to start things, though they may still come to you, and you can answer when they do. When this card is shown, hold back. Don't start a conversation, and don't take it personally. Keep the square, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### people i know
 *white triangle on yellow* · "only say hi if we've met."
 
-The yellow triangle is the "only people I know" badge. It names a narrowed door: the person wants interaction only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger — wait to be known or greeted first — and keep the triangle, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
+The yellow triangle is the "only people I know" badge. It's a narrowed door: the person wants to talk only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger. Wait to be known or greeted first. Keep the triangle, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### your own
 *a blank badge and a pencil* · "Your own signal."
@@ -497,7 +497,7 @@ _The card the deck doesn't have yet. Find the gap, draw it, send it in._
 ### draw your own
 *a blank card and a pencil* · "The deck isn't finished. What's missing?"
 
-The blank card is an empty front and a pencil — a card that isn't drawn yet. It names the deck's own incompleteness: whatever a person needs that no existing card says, this is where it gets made. A blank is not a gap to apologize for; it is the deck admitting it can't know every need in advance. When this card is out, take the missing need seriously — draw it with the child, let it join whichever family fits, and send it back so the community deck can grow. This is how the deck is authored: use it, find the gap, make the card.
+The blank card is an empty front and a pencil — a card that isn't drawn yet. It names the fact that the deck isn't finished. Whatever a person needs that no card says yet, this is where it gets made. A blank is not a gap to say sorry for. It's the deck admitting it can't know every need in advance. When this card is out, take the missing need seriously. Draw it with the child, let it join whichever family fits, and send it back so the shared deck can grow. This is how the deck gets made: use it, find the gap, make the card.
 
 ----
 
