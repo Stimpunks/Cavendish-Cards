@@ -269,6 +269,7 @@ SITE_NAV = [
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
     ("Privacy & security", "privacy.html", "privacy"),
+    ("Changelog", "changelog.html", "changelog"),
 ]
 
 
@@ -443,6 +444,15 @@ def privacy_html(root):
         "Privacy & security",
         "What Cavendish Cards keeps (almost nothing), how it stays on your device, and the security measures behind the site.",
         "privacy", "Skip to the privacy details", "Privacy & security", "privacy",
+        md_to_html(src))
+
+
+def changelog_html(root):
+    src = (root / "CHANGELOG.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Changelog",
+        "A running summary of notable changes to the Cavendish Cards deck and website.",
+        "changelog", "Skip to the changelog", "Changelog", "changelog",
         md_to_html(src))
 
 
@@ -935,7 +945,7 @@ def implementation_md(out_families):
 _SITE_URL = "https://cavendish.app"
 _SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/facilitator.html",
-               "/privacy.html"]
+               "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
 # first paint. Kept byte-identical to the copy in web/index.html and to the CSP
@@ -997,7 +1007,7 @@ def _write_service_worker(root, web, faces):
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png",
         "/guidebook.html", "/implementation.html", "/why.html",
-        "/origin.html", "/facilitator.html", "/privacy.html",
+        "/origin.html", "/facilitator.html", "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1110,6 +1120,7 @@ def main():
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
+    (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
     (root / "cavendish-cards-implementation-layer.md").write_text(
