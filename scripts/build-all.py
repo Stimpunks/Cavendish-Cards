@@ -6,7 +6,7 @@ Regenerates all derived files from the card files:
   build-guidebook.py     -> cavendish-cards-guidebook.md
   build-placeholders.py  -> assets/playtest/**
   build-site.py          -> web/ (cards.json, guidebook.html, faces/) [gitignored]
-  build-playtest-pdf.py  -> cavendish-cards-playtest.pdf  [needs cairosvg + weasyprint]
+  build-playtest-pdf.py  -> assets/playtest/cavendish-cards-playtest.pdf  [needs cairosvg + weasyprint]
   build-facilitator-pdf.py -> cavendish-cards-facilitator-sheet.pdf  [needs weasyprint]
 
 Usage (from anywhere):
