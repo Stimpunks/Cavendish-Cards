@@ -30,8 +30,44 @@
   --cyan: #2aa198;
   --cyan-ink: #0d6b63;
   --focus: #0d6b63;
+  --surface: #fff;
+  --surface-active: #d9f2ee;
+  --error: #8a2f2f;
+  --place-cave: #e9edf2;
+  --place-campfire: #f6ead6;
+  --place-watering-hole: #e4efee;
+  --place-library: #efeaf1;
+  --place-habitat: #e9f0e6;
   --maxw: 1040px;
+  color-scheme: light;
   font-size: 18px;
+}
+
+/* Dark mode: the Solarized dark pairing of the light palette above. Applied
+   automatically for anyone whose device/browser is set to dark. Card faces
+   keep their own light backgrounds, so they read as light cards on a dark
+   table. Text tones are chosen to pass WCAG AA on the dark surfaces. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #002b36;
+    --panel: #073642;
+    --ink: #93a1a1;
+    --ink-strong: #eee8d5;
+    --muted: #839496;
+    --line: #103e4b;
+    --cyan: #2aa198;
+    --cyan-ink: #5fc9c0;
+    --focus: #5fc9c0;
+    --surface: #073642;
+    --surface-active: #0b453f;
+    --error: #f08c84;
+    --place-cave: #04303e;
+    --place-campfire: #0b2e30;
+    --place-watering-hole: #01313a;
+    --place-library: #0a2c3f;
+    --place-habitat: #04322f;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -90,7 +126,7 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .filters-label { margin: 16px 0 6px; color: var(--ink); }
 .filter {
   font: inherit; cursor: pointer; padding: 7px 15px; border-radius: 999px;
-  border: 1.5px solid var(--line); background: #fff; color: var(--ink);
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--ink);
 }
 .filter:hover { border-color: var(--cyan); }
 .filter[aria-pressed="true"] {
@@ -104,12 +140,12 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   gap: 14px;
 }
 .tile {
-  font: inherit; cursor: pointer; text-align: left; background: #fff;
+  font: inherit; cursor: pointer; text-align: left; background: var(--surface);
   border: 1px solid var(--line); border-radius: 14px; padding: 10px;
   display: flex; flex-direction: column; gap: 8px;
 }
 .tile:hover { border-color: var(--cyan); }
-.tile-added { border-color: var(--cyan); border-width: 2px; background: #d9f2ee; }
+.tile-added { border-color: var(--cyan); border-width: 2px; background: var(--surface-active); }
 .tile-added .tile-name { color: var(--cyan-ink); }
 .tile-added .tile-name::after { content: " ✓"; }
 .tile-art {
@@ -144,11 +180,11 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   font: inherit; cursor: pointer; padding: 9px 14px; border-radius: 10px;
   border: 1.5px solid var(--cyan); background: var(--cyan); color: #04302c; font-weight: 700;
 }
-.btn.ghost { background: #fff; color: var(--ink); border-color: var(--line); }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
 .btn:hover { filter: brightness(0.97); }
 
 .site-footer { border-top: 1px solid var(--line); margin-top: 20px; padding: 20px 0 40px; color: var(--muted); font-size: .92rem; }
-.error { color: #8a2f2f; max-width: 62ch; }
+.error { color: var(--error); max-width: 62ch; }
 
 .visually-hidden {
   position: absolute !important; width: 1px; height: 1px;
@@ -226,7 +262,7 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   flex: none; width: 24px; height: 24px; padding: 0; line-height: 1;
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 999px; cursor: pointer; font-weight: 700; font-size: .85rem; font-style: italic;
-  border: 1.5px solid var(--line); background: #fff; color: var(--cyan-ink);
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--cyan-ink);
 }
 .realm-info:hover { border-color: var(--cyan); }
 .realm-desc {
@@ -249,11 +285,11 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .reflect-more { font: inherit; font-size: .85rem; cursor: pointer; background: none; border: 0; padding: 0; color: var(--cyan-ink); text-decoration: underline; }
 
 body { transition: background-color .4s ease; }
-body[data-place="the-cave"] { background-color: #e9edf2; }
-body[data-place="the-campfire"] { background-color: #f6ead6; }
-body[data-place="the-watering-hole"] { background-color: #e4efee; }
-body[data-place="the-library"] { background-color: #efeaf1; }
-body[data-place="the-habitat"] { background-color: #e9f0e6; }
+body[data-place="the-cave"] { background-color: var(--place-cave); }
+body[data-place="the-campfire"] { background-color: var(--place-campfire); }
+body[data-place="the-watering-hole"] { background-color: var(--place-watering-hole); }
+body[data-place="the-library"] { background-color: var(--place-library); }
+body[data-place="the-habitat"] { background-color: var(--place-habitat); }
 
 .gb { padding-top: 8px; }
 .gb-family { margin: 0 0 30px; }
@@ -295,7 +331,7 @@ body[data-place="the-habitat"] { background-color: #e9f0e6; }
   position: absolute; top: 8px; right: 8px;
   width: 40px; height: 40px; padding: 0; line-height: 1; font-size: 1.6rem;
   cursor: pointer; border-radius: 999px; border: 1.5px solid var(--line);
-  background: #fff; color: var(--ink-strong);
+  background: var(--surface); color: var(--ink-strong);
 }
 .lightbox-close:hover { border-color: var(--cyan); }
 .lightbox-img {
