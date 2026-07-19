@@ -8,6 +8,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Deck
 
+- Added **big step** (Weather) — threshold anxiety: the dread at the edge of a change, like a doorway, a first day, or graduating. The moves for crossing it live in *Lily pads* and *What helps*.
 - **Plain-language pass across the whole deck:** every card's guidebook entry rewritten to about a grade-6 reading level (down from ~7.8), one idea per sentence, following [ASAN's plain-language guidance](https://autisticadvocacy.org/resources/accessibility/easyread/). The metaphors, counter-deficit reframes, and lineage all stay — the sentences just got shorter and plainer.
 - Added **no words right now** (situational mutism) and **too seen** (exposure anxiety) to Weather, and **no spotlight** to *What helps* — naming the voice going quiet and the discomfort of being seen, with lineage credited to Donna Williams.
 - Added the kind word **you don't have to talk**, affirming that not speaking is not the same as not knowing (presume competence).
