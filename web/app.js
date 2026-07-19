@@ -2,7 +2,7 @@
   'use strict';
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, liveEl, toTableBtn;
-  var summaryEl, summaryListEl, summaryCopyBtn, summaryCloseBtn;
+  var summaryEl, summaryListEl, summaryNoteEl, summaryCopyBtn, summaryCloseBtn;
   var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbBuildEl, lbBuildLinkEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
@@ -529,7 +529,11 @@
 
     if (summaryCopyBtn) {
       summaryCopyBtn.addEventListener('click', function () {
-        var text = 'My Cavendish spread\n' + summaryText();
+        var date = '';
+        try { date = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); } catch (e) {}
+        var text = 'My Cavendish spread' + (date ? '\n' + date : '') + '\n\n' + summaryText();
+        var note = summaryNoteEl ? summaryNoteEl.value.trim() : '';
+        if (note) text += '\n\nNote:\n' + note;
         copyText(text).then(function (ok) {
           flashButton(summaryCopyBtn, ok ? 'Copied!' : "Couldn't copy");
           announce(ok ? 'Copied.' : 'Could not copy.');
@@ -539,6 +543,7 @@
     if (summaryCloseBtn) {
       summaryCloseBtn.addEventListener('click', function () {
         summaryEl.hidden = true;
+        if (summaryNoteEl) summaryNoteEl.value = '';
         doneBtn.focus();
       });
     }
@@ -559,6 +564,7 @@
     toTableBtn = document.getElementById('to-table');
     summaryEl = document.getElementById('summary');
     summaryListEl = document.getElementById('summary-list');
+    summaryNoteEl = document.getElementById('summary-note');
     summaryCopyBtn = document.getElementById('summary-copy');
     summaryCloseBtn = document.getElementById('summary-close');
 

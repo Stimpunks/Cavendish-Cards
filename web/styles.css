@@ -331,6 +331,14 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .summary-list li { margin: 8px 0; }
 .summary-name { display: block; }
 .summary-reflect { display: block; font-style: italic; color: var(--muted); }
+.summary-note-field { max-width: 62ch; margin: 4px 0 14px; }
+.summary-note-field label { display: block; margin-bottom: 6px; }
+#summary-note {
+  width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px;
+  border: 1.5px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink); resize: vertical;
+}
+#summary-note:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 
 .reflect { margin-top: 8px; }
 .reflect-q { margin: 0 0 4px; font-style: italic; color: var(--ink); }
