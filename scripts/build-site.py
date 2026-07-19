@@ -267,6 +267,7 @@ SITE_NAV = [
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
+    ("Example spreads", "example-spreads.html", "example-spreads"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
     ("Privacy & security", "privacy.html", "privacy"),
@@ -441,6 +442,15 @@ def origin_html(root):
         "Origin & lineage",
         "Where the Cavendish Space model behind the deck comes from, and its lineage.",
         "origin", "Skip to the origin", "Origin & lineage", "origin",
+        md_to_html(src))
+
+
+def example_spreads_html(root):
+    src = (root / "cavendish-cards-example-spreads.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Example spreads",
+        "Worked examples of the deck in use: a moment, a spread someone laid, and how to read it as a design brief for the environment.",
+        "example-spreads", "Skip to the examples", "Example spreads", "example-spreads",
         md_to_html(src))
 
 
@@ -951,7 +961,7 @@ def implementation_md(out_families):
 _SITE_URL = "https://cavendish.app"
 _SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/facilitator.html",
-               "/privacy.html", "/changelog.html"]
+               "/example-spreads.html", "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
 # first paint. Kept byte-identical to the copy in web/index.html and to the CSP
@@ -1016,7 +1026,8 @@ def _write_service_worker(root, web, faces):
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
-        "/origin.html", "/facilitator.html", "/privacy.html", "/changelog.html",
+        "/origin.html", "/facilitator.html", "/example-spreads.html",
+        "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1133,6 +1144,7 @@ def main():
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
+    (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
@@ -1141,7 +1153,7 @@ def main():
         implementation_md(out_families), encoding="utf-8")
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
-          f"web/why.html, web/origin.html, web/facilitator.html, "
+          f"web/why.html, web/origin.html, web/facilitator.html, web/example-spreads.html, "
           f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
