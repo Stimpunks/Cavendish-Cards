@@ -361,6 +361,46 @@
     pendingFocus = null;
   }
 
+  // Copy to clipboard, with a fallback for browsers where the async Clipboard
+  // API is unavailable or blocked (e.g. privacy-hardened Firefox forks like Zen).
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(
+        function () { return true; },
+        function () { return legacyCopy(text); }
+      );
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+
+  function legacyCopy(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function flashButton(btn, msg) {
+    if (btn._flash) clearTimeout(btn._flash);
+    if (!btn._label) btn._label = btn.textContent;
+    btn.textContent = msg;
+    btn._flash = setTimeout(function () {
+      btn.textContent = btn._label;
+      btn._flash = null;
+    }, 1600);
+  }
+
   function summaryText() {
     return laid.map(function (item) {
       var c = byUid[item.uid];
@@ -490,14 +530,10 @@
     if (summaryCopyBtn) {
       summaryCopyBtn.addEventListener('click', function () {
         var text = 'My Cavendish spread\n' + summaryText();
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(
-            function () { announce('Copied.'); },
-            function () { announce('Could not copy.'); }
-          );
-        } else {
-          announce('Copy is not available in this browser.');
-        }
+        copyText(text).then(function (ok) {
+          flashButton(summaryCopyBtn, ok ? 'Copied!' : "Couldn't copy");
+          announce(ok ? 'Copied.' : 'Could not copy.');
+        });
       });
     }
     if (summaryCloseBtn) {
