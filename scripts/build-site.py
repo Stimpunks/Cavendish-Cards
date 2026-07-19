@@ -99,7 +99,7 @@ ORDER = {
     "weather": [
         "warm", "bright", "fizzy", "happy-flappy", "in-the-zone", "need-more",
         "buzzy", "prickly", "full", "pulled-every-way", "meerkat", "too-seen",
-        "round-and-round", "stormy", "heavy", "foggy", "cant-tell", "far-away",
+        "round-and-round", "stormy", "tender", "heavy", "foggy", "cant-tell", "far-away",
         "no-words-right-now",
     ],
     "lily-pad": [

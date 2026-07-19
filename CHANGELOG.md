@@ -10,6 +10,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 - Added **no words right now** (situational mutism) and **too seen** (exposure anxiety) to Weather, and **no spotlight** to *What helps* — naming the voice going quiet and the discomfort of being seen, with lineage credited to Donna Williams.
 - Added the kind word **you don't have to talk**, affirming that not speaking is not the same as not knowing (presume competence).
+- Added **tender** (Weather) — the wound of rejection sensitivity, the "emotional sunburn," with lineage credited.
 
 ### Site
 
