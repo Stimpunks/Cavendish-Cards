@@ -14,7 +14,7 @@ I'm not ready to move.
 
 ## Notes
 
-"Not yet" is a gently raised hand — a request for more time before a transition. It names readiness that hasn't arrived: not a refusal, just a "not on that timing." Honoring "not yet" is how you keep a transition from becoming a fight. When this card is out, wait for ready — check back rather than push, and let the moving happen when it can.
+"Not yet" is a gently raised hand — asking for more time before a change. It names readiness that hasn't arrived: not a no, just "not at this moment." Honoring "not yet" is how you keep a change from becoming a fight. When this card is out, wait for ready. Check back instead of pushing, and let the move happen when it can.
 
 ----
 

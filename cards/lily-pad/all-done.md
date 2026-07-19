@@ -14,7 +14,7 @@ I'm finished here.
 
 ## Notes
 
-"All done" is a closed, contented loop — a clean ending, chosen. It names completion: this is finished, and the finishing is theirs to declare. A self-called ending is different from being made to stop. When this card is out, honor the ending — let "done" mean done, without one-more-thing or a negotiation over whether it really is.
+"All done" is a closed, happy loop — a clean ending, chosen. It names finishing: this is done, and it's theirs to call. Calling your own ending is different from being made to stop. When this card is out, honor the ending. Let "done" mean done — no one-more-thing, and no arguing over whether it really is.
 
 ----
 

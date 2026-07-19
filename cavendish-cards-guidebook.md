@@ -321,47 +321,47 @@ _The in-between. Stepping stones for the crossings — every card is a place to 
 ### all done
 *a closed, contented loop* · "I'm finished here."
 
-"All done" is a closed, contented loop — a clean ending, chosen. It names completion: this is finished, and the finishing is theirs to declare. A self-called ending is different from being made to stop. When this card is out, honor the ending — let "done" mean done, without one-more-thing or a negotiation over whether it really is.
+"All done" is a closed, happy loop — a clean ending, chosen. It names finishing: this is done, and it's theirs to call. Calling your own ending is different from being made to stop. When this card is out, honor the ending. Let "done" mean done — no one-more-thing, and no arguing over whether it really is.
 
 ### coming back
 *a footprint returning to a spot* · "I'll be back — hold my place."
 
-"Coming back" is a footprint returning to a spot — a departure with a promise to return. It names a need to step away without losing your place: leaving to regulate, not to quit. Leaving and returning is a strategy, not an abandonment. When this card is out, hold their place — keep the spot, the task, and the welcome ready for when they return.
+"Coming back" is a footprint returning to a spot — leaving with a promise to return. It names a need to step away without losing your place: leaving to settle, not to quit. Leaving and coming back is a plan, not giving up. When this card is out, hold their place. Keep the spot, the task, and the welcome ready for when they return.
 
 ### i need a minute
 *a figure resting on a lily pad* · "Pausing here. Not leaving."
 
-"I need a minute" is a figure resting on a lily pad mid-crossing — a pause, not a departure. It names the need to stop briefly and gather before going on: still engaged, just not moving yet. A pause is part of the crossing, not a refusal of it. When this card is out, hold the moment open — stop the clock, don't fill the silence, and let the minute actually be a minute.
+"I need a minute" is a figure resting on a lily pad partway across — a pause, not a goodbye. It names the need to stop for a moment and gather before going on: still in it, just not moving yet. A pause is part of the crossing, not a refusal of it. When this card is out, hold the moment open. Stop the clock, don't fill the quiet, and let the minute really be a minute.
 
 ### i want to stay a while
 *a figure settled on a lily pad* · "I'm good here. Let me stay."
 
-It names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to remain is as valid as wanting to move on. When this card is out, let the staying stand; don't hurry the crossing because the schedule wants it.
+This card names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to stay is as okay as wanting to move on. When this card is out, let the staying stand. Don't hurry the crossing just because the schedule wants it.
 
 ### not yet
 *a gentle raised hand* · "I'm not ready to move."
 
-"Not yet" is a gently raised hand — a request for more time before a transition. It names readiness that hasn't arrived: not a refusal, just a "not on that timing." Honoring "not yet" is how you keep a transition from becoming a fight. When this card is out, wait for ready — check back rather than push, and let the moving happen when it can.
+"Not yet" is a gently raised hand — asking for more time before a change. It names readiness that hasn't arrived: not a no, just "not at this moment." Honoring "not yet" is how you keep a change from becoming a fight. When this card is out, wait for ready. Check back instead of pushing, and let the move happen when it can.
 
 ### ready now
 *a foot stepping forward* · "I'm ready to shift."
 
-"Ready now" is a foot stepping forward — the green light for a transition, on the person's own signal. It names arrived readiness: the move can happen because they say so, not because the schedule does. Letting the child call "ready" gives the transition back to them. When this card is out, go when they go — follow their timing, and treat their signal as the one that counts.
+"Ready now" is a foot stepping forward — the green light for a change, on the person's own signal. It names readiness that has arrived: the move can happen because they say so, not because the schedule does. Letting the child call "ready" gives the change back to them. When this card is out, go when they go. Follow their timing, and treat their signal as the one that counts.
 
 ### slowly
 *a gentle bridge between two pads* · "Ease me across, one step."
 
-"Slowly" is a gentle bridge between two lily pads — a transition taken one careful step at a time. It names a need for a graded crossing: not no, but not all at once — ease across with support. Some transitions only work when broken into steps. When this card is out, build the bridge — step it down, go at their pace, and don't collapse the crossing into a single leap.
+"Slowly" is a gentle bridge between two lily pads — a change taken one careful step at a time. It names a need to cross in stages: not no, but not all at once — ease across with support. Some changes only work when they're broken into steps. When this card is out, build the bridge. Step it down, go at their pace, and don't turn the crossing into one big leap.
 
 ### stuck
 *a figure paused between two pads* · "I can't get going. That's okay."
 
-"Stuck" is a figure paused between two lily pads — unable to get going, for now. It names a genuine state, not a stall to be scolded: the machinery won't turn over yet, and that is information about the moment, not a verdict on the person. Stuck is a place to land, never a failure. When this card is out, don't push across the gap — ask what would help them land where they are, or offer a what-helps card and let them choose.
+"Stuck" is a figure paused between two lily pads, unable to get going for now. This is a real state, not something to scold — the engine won't start yet, and that tells you about the moment, not the person. Stuck is a place to rest, never a failure. When this card is out, don't push them across the gap. Ask what would help them where they are, or offer a what-helps card and let them choose.
 
 ### watch first
 *eyes at the edge of a group* · "Let me look before I join."
 
-"Watch first" is a pair of eyes at the edge of a group — observing before entering. It names a real way of joining in: taking part by watching until the shape of things is clear enough to step into. Watching is participation, not shyness to be pushed past. When this card is out, let the watching stand — no coaxing to join, and count the edge of the group as being in it.
+"Watch first" is a pair of eyes at the edge of a group — looking before going in. It names a real way of joining in: taking part by watching until things are clear enough to step into. Watching is taking part, not shyness to be pushed past. When this card is out, let the watching stand. No coaxing to join, and count the edge of the group as being in it.
 
 ### your own
 *a blank card and a pencil* · "A moment that isn't here yet."

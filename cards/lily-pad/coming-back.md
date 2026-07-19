@@ -14,7 +14,7 @@ I'll be back — hold my place.
 
 ## Notes
 
-"Coming back" is a footprint returning to a spot — a departure with a promise to return. It names a need to step away without losing your place: leaving to regulate, not to quit. Leaving and returning is a strategy, not an abandonment. When this card is out, hold their place — keep the spot, the task, and the welcome ready for when they return.
+"Coming back" is a footprint returning to a spot — leaving with a promise to return. It names a need to step away without losing your place: leaving to settle, not to quit. Leaving and coming back is a plan, not giving up. When this card is out, hold their place. Keep the spot, the task, and the welcome ready for when they return.
 
 ----
 

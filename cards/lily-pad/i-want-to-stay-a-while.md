@@ -20,7 +20,7 @@ I'm good here. Let me stay.
 
 ## Notes
 
-It names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to remain is as valid as wanting to move on. When this card is out, let the staying stand; don't hurry the crossing because the schedule wants it.
+This card names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to stay is as okay as wanting to move on. When this card is out, let the staying stand. Don't hurry the crossing just because the schedule wants it.
 
 ----
 

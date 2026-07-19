@@ -14,7 +14,7 @@ Ease me across, one step.
 
 ## Notes
 
-"Slowly" is a gentle bridge between two lily pads — a transition taken one careful step at a time. It names a need for a graded crossing: not no, but not all at once — ease across with support. Some transitions only work when broken into steps. When this card is out, build the bridge — step it down, go at their pace, and don't collapse the crossing into a single leap.
+"Slowly" is a gentle bridge between two lily pads — a change taken one careful step at a time. It names a need to cross in stages: not no, but not all at once — ease across with support. Some changes only work when they're broken into steps. When this card is out, build the bridge. Step it down, go at their pace, and don't turn the crossing into one big leap.
 
 ----
 
