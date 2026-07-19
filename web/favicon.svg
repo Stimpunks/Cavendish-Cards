@@ -1,0 +1,9 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cavendish Cards">
+  <title>Cavendish Cards</title>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="#fdf6e3" stroke="#002b36" stroke-width="1"/>
+  <g stroke="#fdf6e3" stroke-width="1" stroke-linejoin="round">
+    <rect x="10" y="9" width="12" height="16.5" rx="2.4" fill="#534AB7" transform="rotate(-23 16 26)"/>
+    <rect x="10" y="9" width="12" height="16.5" rx="2.4" fill="#0F6E56" transform="rotate(0 16 26)"/>
+    <rect x="10" y="9" width="12" height="16.5" rx="2.4" fill="#993C1D" transform="rotate(23 16 26)"/>
+  </g>
+</svg>
