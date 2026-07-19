@@ -14,6 +14,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- The **guidebook** now links community vocabulary in each card's lineage to the Stimpunks glossary (monotropism, interoception, exposure anxiety, and more); the in-the-moment card view stays plain.
 - **Copy for a journal** now includes the date and an optional note field (kept only in the copy, never saved).
 
 ## 2026-07-18

@@ -20,7 +20,7 @@ A small thing hurt a lot right now.
 
 ## Notes
 
-Tender is skin left sore by too much sun — raw and overexposed, so even a light touch stings. It names the wound of rejection sensitivity: a word, a look, or a feeling of having let someone down landing far harder than it "should," as sudden, wordless hurt — often after a lifetime of extra criticism has already worn the skin thin. This is not being too sensitive or making a fuss; the soreness was earned, and broken systems, not broken people, put it there. When this card is out, be gentle and be clear — no sharp words, no guessing games, a plain reminder that they're still wanted and not in trouble — and let the sting ease before anything else. Lineage: rejection sensitive dysphoria, the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
+Tender is skin left sore by too much sun — raw and overexposed, so even a light touch stings. It names the wound of rejection sensitivity: a word, a look, or a feeling of having let someone down landing far harder than it "should," as sudden, wordless hurt — often after a lifetime of extra criticism has already worn the skin thin. This is not being too sensitive or making a fuss; the soreness was earned, and broken systems, not broken people, put it there. When this card is out, be gentle and be clear — no sharp words, no guessing games, a plain reminder that they're still wanted and not in trouble — and let the sting ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
 
 ----
 

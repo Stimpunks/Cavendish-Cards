@@ -14,7 +14,7 @@ My body's telling me something, but I can't tell what.
 
 ## Notes
 
-Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: interoception, the eighth sense.
+Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: [interoception](https://stimpunks.org/glossary/interoception/), the eighth sense.
 
 ----
 

@@ -302,6 +302,11 @@ def _md_inline(s):
     return s
 
 
+def _strip_md_links(s):
+    """Turn [text](url) into plain text — for the calm in-app card view."""
+    return _MD_LINK.sub(lambda m: m.group(1), s)
+
+
 def md_to_html(text):
     """Render the small Markdown subset used by the Why sheet and Origin page.
 
@@ -507,7 +512,7 @@ def guidebook_html(out_families):
                 meta = f'<em>{e(c["cue"])}</em> &middot; given, not read'
             else:
                 meta = f'<em>{e(c["cue"])}</em>'
-            note = f'<p>{e(c["notes"])}</p>' if c["notes"] else ''
+            note = f'<p>{_md_inline(c["notes"])}</p>' if c["notes"] else ''
             entries.append(
                 f'<article class="gb-entry"><h3>{e(c["name"])}</h3>'
                 f'<p class="gb-meta">{meta}</p>{note}</article>'
@@ -1115,8 +1120,13 @@ def main():
                 fam_obj["groupOrder"] = order
             out_families.append(fam_obj)
 
+    json_families = [
+        {**fam, "cards": [{**c, "notes": _strip_md_links(c["notes"])}
+                          for c in fam["cards"]]}
+        for fam in out_families
+    ]
     (web / "cards.json").write_text(
-        json.dumps({"families": out_families}, ensure_ascii=False, indent=2),
+        json.dumps({"families": json_families}, ensure_ascii=False, indent=2),
         encoding="utf-8")
     (web / "guidebook.html").write_text(guidebook_html(out_families), encoding="utf-8")
     (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")

@@ -65,7 +65,7 @@ Buzzy is a shower of sparks, too many at once — the air crackling with more in
 ### can't tell
 *a figure with a faint, muffled question mark glowing at the belly and chest* · "My body's telling me something, but I can't tell what."
 
-Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: interoception, the eighth sense.
+Can't tell is when the body's signals are hard to read — you might be hungry, thirsty, needing the toilet, too hot, or hurting, but it won't come through clearly. This is interoception, the sense of what's happening inside the body, and for many Autistic people those signals are quiet or slow to arrive, especially when attention is elsewhere. Nothing is broken or missing — the messages are just faint. When this card is out, don't quiz or insist; gently offer — a drink, the toilet, a warmer layer, a rest — and let the person check without pressure. Lineage: [interoception](https://stimpunks.org/glossary/interoception/), the eighth sense.
 
 ### far-away
 *a small figure at the end of a long view* · "A bit distant, floating off."
@@ -100,12 +100,12 @@ Heavy is a weighted sky pressing down — everything harder to lift, movement an
 ### in the zone
 *a figure deep in something, the world softened to a warm glow around them* · "Deep in it, and it feels good."
 
-In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in — a strength, not a distraction. Focus like this sends out tendrils of thought; an abrupt interruption feels like they are ripped out, and coming back up to the surface takes time. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning and time before it has to end. Lineage: monotropic flow, from monotropism; tendril theory (Erin, @EisforErin).
+In the zone is deep, happy focus — attention narrowed to one thing while the rest of the world goes quiet. This is monotropic flow: the natural, absorbing, joyful attention many Autistic and ADHD minds do their best thinking in — a strength, not a distraction. Focus like this sends out tendrils of thought; an abrupt interruption feels like they are ripped out, and coming back up to the surface takes time. When this card is out, protect it — hold off interruptions, let it run, and give plenty of warning and time before it has to end. Lineage: monotropic flow, from [monotropism](https://stimpunks.org/glossary/monotropism/); [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
 
 ### meerkat
 *a meerkat standing tall on the lookout, ears up, scanning for danger* · "On alert, watching for danger."
 
-Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable to settle or focus, wanting someone safe close by. It names a body stuck in high alert: not misbehaving, not clingy, but overwhelmed and searching for safety. When this card is out, be the safe one — come close, stay near, lower the demands, and don't leave them to it alone. Lineage: meerkat mode (Tanya Adkin and David Gray-Hammond).
+Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable to settle or focus, wanting someone safe close by. It names a body stuck in high alert: not misbehaving, not clingy, but overwhelmed and searching for safety. When this card is out, be the safe one — come close, stay near, lower the demands, and don't leave them to it alone. Lineage: [meerkat mode](https://stimpunks.org/glossary/meerkat-mode/) (Tanya Adkin and David Gray-Hammond).
 
 ### need more
 *a figure reaching outward in a muted, empty space, movement lines around them* · "Everything's too flat and still — I need more."
@@ -115,7 +115,7 @@ Need more is the under-buzzed feeling — the world too flat, too still, too qui
 ### no words right now
 *a figure with bright, present eyes and a softly closed mouth, the voice curled up quiet inside* · "The words won't come right now."
 
-No words right now is a voice gone quiet — the words are there, but the door to them is shut for the moment. It names situational mutism: speech becoming hard or impossible in certain places, with certain people, or when things are too much — never a choice, never refusal, and often with someone who badly wants to talk waiting right behind it. Pressing for speech makes the door heavier, and sometimes pointing, typing, or even a nod go quiet too. When this card is out, take the pressure off speech entirely — don't repeat or rephrase the question, don't wait for an answer out loud, offer another way or just quiet company, and let the voice come back on its own. This card names the weather; it never stands in for a child's real communication tools. Lineage: situational mutism — "situational," not "selective," because it depends on the situation and is never chosen.
+No words right now is a voice gone quiet — the words are there, but the door to them is shut for the moment. It names situational mutism: speech becoming hard or impossible in certain places, with certain people, or when things are too much — never a choice, never refusal, and often with someone who badly wants to talk waiting right behind it. Pressing for speech makes the door heavier, and sometimes pointing, typing, or even a nod go quiet too. When this card is out, take the pressure off speech entirely — don't repeat or rephrase the question, don't wait for an answer out loud, offer another way or just quiet company, and let the voice come back on its own. This card names the weather; it never stands in for a child's real communication tools. Lineage: [situational mutism](https://stimpunks.org/glossary/situational-mutism/) — "situational," not "selective," because it depends on the situation and is never chosen.
 
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."
@@ -125,12 +125,12 @@ Prickly is thorns and scratchy edges — every touch, sound, and interruption ru
 ### pulled every way
 *a small figure with arrows tugging outward in every direction at once* · "Too many things pulling at me at once."
 
-Pulled every way is what happens when too many things need attention at once — each one tugging, none of them finished, no room to go deep on any of them. It names the strain of having to split attention in a mind that runs on focusing deeply, one thing at a time. Not laziness, not not-trying: a mind built for depth being asked to spread thin. When this card is out, take things away rather than add — one thing at a time, in order, and let the rest wait. Lineage: monotropic split (Tanya Adkin and David Gray-Hammond).
+Pulled every way is what happens when too many things need attention at once — each one tugging, none of them finished, no room to go deep on any of them. It names the strain of having to split attention in a mind that runs on focusing deeply, one thing at a time. Not laziness, not not-trying: a mind built for depth being asked to spread thin. When this card is out, take things away rather than add — one thing at a time, in order, and let the rest wait. Lineage: [monotropic split](https://stimpunks.org/glossary/monotropic-split/) (Tanya Adkin and David Gray-Hammond).
 
 ### round and round
 *a single looping line spiralling inward — a thought going round and round* · "A thought that won't stop going round."
 
-Round and round is when one thought keeps looping — circling back, tightening, hard to step out of. Attention can lock onto a worry and pull deeper, and the harder you try to push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought — help step out sideways: a change of place, a gentle interest to catch onto, company, something for the hands. Lineage: monotropic spiral (Tanya Adkin and David Gray-Hammond).
+Round and round is when one thought keeps looping — circling back, tightening, hard to step out of. Attention can lock onto a worry and pull deeper, and the harder you try to push it away, the louder it gets. This isn't a choice or a fault; it's attention caught in a groove. When this card is out, don't argue with the thought — help step out sideways: a change of place, a gentle interest to catch onto, company, something for the hands. Lineage: [monotropic spiral](https://stimpunks.org/glossary/monotropic-spiral/) (Tanya Adkin and David Gray-Hammond).
 
 ### stormy
 *big clouds about to break* · "Big feelings, close to the edge."
@@ -140,12 +140,12 @@ Stormy is big clouds about to break — pressure built up, feeling close to the 
 ### tender
 *a small figure with a soft, sore glow along their skin, flinching as a tiny word lands nearby like a dropped pebble* · "A small thing hurt a lot right now."
 
-Tender is skin left sore by too much sun — raw and overexposed, so even a light touch stings. It names the wound of rejection sensitivity: a word, a look, or a feeling of having let someone down landing far harder than it "should," as sudden, wordless hurt — often after a lifetime of extra criticism has already worn the skin thin. This is not being too sensitive or making a fuss; the soreness was earned, and broken systems, not broken people, put it there. When this card is out, be gentle and be clear — no sharp words, no guessing games, a plain reminder that they're still wanted and not in trouble — and let the sting ease before anything else. Lineage: rejection sensitive dysphoria, the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
+Tender is skin left sore by too much sun — raw and overexposed, so even a light touch stings. It names the wound of rejection sensitivity: a word, a look, or a feeling of having let someone down landing far harder than it "should," as sudden, wordless hurt — often after a lifetime of extra criticism has already worn the skin thin. This is not being too sensitive or making a fuss; the soreness was earned, and broken systems, not broken people, put it there. When this card is out, be gentle and be clear — no sharp words, no guessing games, a plain reminder that they're still wanted and not in trouble — and let the sting ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
 
 ### too seen
 *a small figure wanting to fold inward as soft gazes turn toward them from every side* · "Being looked at is a lot right now."
 
-Too seen is the raw feeling of being looked at — every gaze landing directly, your own existence felt too close up. It names the weather of exposure anxiety: not fear of a danger out there, but the self-consciousness of being perceived, where attention — even warm, kind attention — presses in and makes you want to disappear. It is different from meerkat's scan for threat; this is the discomfort of being the one watched, and the wish to connect can still be there underneath it. When this card is out, ease the gaze — look away, lower the attention, let the person be present without being on display, and don't read the wish to hide as not wanting to be here. Lineage: exposure anxiety (Donna Williams).
+Too seen is the raw feeling of being looked at — every gaze landing directly, your own existence felt too close up. It names the weather of exposure anxiety: not fear of a danger out there, but the self-consciousness of being perceived, where attention — even warm, kind attention — presses in and makes you want to disappear. It is different from meerkat's scan for threat; this is the discomfort of being the one watched, and the wish to connect can still be there underneath it. When this card is out, ease the gaze — look away, lower the attention, let the person be present without being on display, and don't read the wish to hide as not wanting to be here. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
 
 ### warm
 *a cozy glow, wrapped up* · "Settled and safe."
@@ -238,7 +238,7 @@ One wall crowded with stuff, one wall calm and bare — this card asks for the s
 ### let me come and go
 *a figure stepping out through an open doorway and back in — a loop of coming and going* · "Let me join and slip away as I need."
 
-Let me come and go is the need to move between being with people and being alone — joining in, then slipping away to recharge, then coming back, on my own rhythm rather than a set schedule. Dipping in and out is how many people do their best being-together; it isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, permission to lurk, drop in, and leave. Lineage: intermittent collaboration, from Cavendish Space.
+Let me come and go is the need to move between being with people and being alone — joining in, then slipping away to recharge, then coming back, on my own rhythm rather than a set schedule. Dipping in and out is how many people do their best being-together; it isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
 
 ### let me control it
 *a hand resting on a dimmer switch* · "Let me be the one to change it."
@@ -248,7 +248,7 @@ This is a hand on the switch — the person turning the light, the sound, the th
 ### let me finish
 *a bookmark being slid into place — a natural stopping point reached* · "Let me get to a stopping point first."
 
-Let me finish is the need to reach a stopping point before switching — not hurried, not cut off partway, but given the moment to bring what I'm doing to a close. Coming out of deep focus takes time: the mind has to retract its tendrils before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point rather than a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: tendril theory (Erin, @EisforErin).
+Let me finish is the need to reach a stopping point before switching — not hurried, not cut off partway, but given the moment to bring what I'm doing to a close. Coming out of deep focus takes time: the mind has to retract its tendrils before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point rather than a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
 
 ### let me stim
 *a figure rocking and moving, easy in their own motion* · "Let me move and stim the way I need."
@@ -268,7 +268,7 @@ No rush is a slow, easy clock — time without pressure. It names a need for mor
 ### no spotlight
 *a figure settled easy at the edge of the room while a beam of attention points somewhere else* · "Please don't put me on the spot."
 
-No spotlight is being let out of the beam of attention — not called on, not watched, not praised in front of everyone. It names exposure anxiety: the way direct attention can feel invasive rather than kind, so that being looked at, complimented, or asked to perform on the spot triggers a pull to hide — even when the wish to take part is fully there. Praise and pressure can backfire; a side-on, low-key approach lets a person come out on their own. When this card is out, come at it sideways — work alongside rather than face-to-face, skip the public praise, and let competence show in its own form and its own time. Lineage: exposure anxiety (Donna Williams).
+No spotlight is being let out of the beam of attention — not called on, not watched, not praised in front of everyone. It names exposure anxiety: the way direct attention can feel invasive rather than kind, so that being looked at, complimented, or asked to perform on the spot triggers a pull to hide — even when the wish to take part is fully there. Praise and pressure can backfire; a side-on, low-key approach lets a person come out on their own. When this card is out, come at it sideways — work alongside rather than face-to-face, skip the public praise, and let competence show in its own form and its own time. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
 
 ### parallel existence
 *two figures side by side, each in their own world* · "Someone alongside me, each doing our own thing."
@@ -461,27 +461,27 @@ _How open I am to talking, right now. The Autistic community's color communicati
 ### ask first
 *white star on orange* · "ask before you touch me."
 
-The orange star is the consent badge. It names a boundary around touch: it gives permission to ask before touching — a hug, a hand — where, without it, you should not ask at all. When this card is shown, ask first and accept the answer — and keep the star, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the orange-star convention — https://stimpunks.org/access/interaction/
+The orange star is the consent badge. It names a boundary around touch: it gives permission to ask before touching — a hug, a hand — where, without it, you should not ask at all. When this card is shown, ask first and accept the answer — and keep the star, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the [orange-star convention](https://stimpunks.org/access/interaction/).
 
 ### come say hi
 *white circle on green* · "i want to talk — you can start."
 
-The green circle is the "come talk to me" badge. It names an open door to interaction: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and initiate — and keep the circle, because the shape carries the meaning alongside the color for colorblind readers. Unlike the rest of the deck, interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the color communication badges from Autism Network International and the first Autreat, Jim Sinclair, 1996 — https://stimpunks.org/access/interaction/
+The green circle is the "come talk to me" badge. It names an open door to interaction: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and initiate — and keep the circle, because the shape carries the meaning alongside the color for colorblind readers. Unlike the rest of the deck, interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### i've got this
 *dark diamond outline on white* · "i can do my own hellos."
 
-The neutral card — a dark diamond on white — is the "I manage my own interaction" badge. It names an ordinary open state: approach normally, and the person will handle their own hellos. When this card is shown, just interact as usual — and keep the diamond, a Stimpunks addition so the neutral card stays distinct for colorblind readers, since white carries no canonical shape. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the neutral (white, or no badge) convention — https://stimpunks.org/access/interaction/
+The neutral card — a dark diamond on white — is the "I manage my own interaction" badge. It names an ordinary open state: approach normally, and the person will handle their own hellos. When this card is shown, just interact as usual — and keep the diamond, a Stimpunks addition so the neutral card stays distinct for colorblind readers, since white carries no canonical shape. Interaction cards are made to be displayed, and can be worn or flipped as status changes. From the [neutral (white, or no badge) convention](https://stimpunks.org/access/interaction/).
 
 ### not right now
 *white square on red* · "please don't start talking to me."
 
-The red square is the "not right now" badge. It names a closed door to being approached: the person doesn't want others to initiate, though they may still come to you, and you can respond when they do. When this card is shown, hold back — don't start conversation, and don't take it personally — and keep the square, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the color communication badges from Autism Network International and the first Autreat, Jim Sinclair, 1996 — https://stimpunks.org/access/interaction/
+The red square is the "not right now" badge. It names a closed door to being approached: the person doesn't want others to initiate, though they may still come to you, and you can respond when they do. When this card is shown, hold back — don't start conversation, and don't take it personally — and keep the square, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### people i know
 *white triangle on yellow* · "only say hi if we've met."
 
-The yellow triangle is the "only people I know" badge. It names a narrowed door: the person wants interaction only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger — wait to be known or greeted first — and keep the triangle, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the color communication badges from Autism Network International and the first Autreat, Jim Sinclair, 1996 — https://stimpunks.org/access/interaction/
+The yellow triangle is the "only people I know" badge. It names a narrowed door: the person wants interaction only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger — wait to be known or greeted first — and keep the triangle, because the shape carries the meaning alongside the color for colorblind readers. Interaction cards are made to be displayed, and can be worn or flipped as status changes. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
 ### your own
 *a blank badge and a pencil* · "Your own signal."
