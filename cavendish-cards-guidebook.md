@@ -377,17 +377,17 @@ _Who am I today. A non-deficit way to hold that different people bloom in differ
 ### dandelion
 *a dandelion thriving in a crack* · "I can grow most places."
 
-The dandelion grows almost anywhere — pavement cracks, poor soil, little tending — and still blooms. It names hardiness across conditions: a way of growing that holds up in a wide range of environments, gentle and rough alike. Dandelion comes from Boyce and Ellis's work on how differently people respond to their surroundings. When this card is out, it speaks to range, not to lesser worth — hardy is not better than sensitive, only different, and every grower still deserves good ground.
+The dandelion grows almost anywhere — cracks in the pavement, poor soil, little care — and still blooms. This card names being hardy across many conditions: a way of growing that holds up in lots of places, gentle and rough alike. The dandelion comes from Boyce and Ellis's work on how differently people respond to their surroundings. When this card is out, it's about range, not worth. Hardy is not better than sensitive, just different, and every grower still deserves good ground.
 
 ### orchid
 *an orchid in its own conditions* · "Give me my conditions and I bloom."
 
-The orchid blooms brilliantly, but only in the conditions it actually needs — the right light, warmth, and care. It is not fragile and not difficult; it is specific, and struggle in the wrong setting is information about the setting, never a verdict on the plant. Orchid comes from Boyce and Ellis's metaphor for heightened sensitivity to environment — more shaped by both hardship and support. When this card is out, the question is never "what is wrong with them" but "what does this particular bloom need?"
+An orchid blooms beautifully, but only in the right conditions — the right light, warmth, and care. It isn't fragile and it isn't difficult; it's specific, and if it struggles, that's about the setting, not the plant. This card is for people who are like that: they feel their surroundings strongly, both the good and the hard. The idea comes from Boyce and Ellis. When this card is out, the question is never "what's wrong with them?" but "what does this bloom need?"
 
 ### tulip
 *a tulip in a tended bed* · "I do well with the right care."
 
-The tulip does well in ordinary good conditions — a tended bed, its own season — neither as unkillable as the dandelion nor as exacting as the orchid. It names the wide middle: thriving reliably once the basics are in place, with honest limits when they are not. Tulip is the middle grower added to Boyce and Ellis's original orchid-and-dandelion pair. When this card is out, the ask is plain: meet the ordinary conditions well, and don't mistake low-maintenance for no needs.
+The tulip does well in ordinary good conditions — a tended bed, its own season. It's not as unkillable as the dandelion, nor as exact as the orchid. This card names the wide middle: doing well once the basics are in place, with honest limits when they're not. The tulip is the middle grower, added to Boyce and Ellis's first pair, the orchid and the dandelion. When this card is out, the ask is plain: meet the ordinary conditions well, and don't mistake easy-going for having no needs.
 
 ### your own
 *a blank card and a pencil* · "Another way of growing."

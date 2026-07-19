@@ -14,7 +14,7 @@ Give me my conditions and I bloom.
 
 ## Notes
 
-The orchid blooms brilliantly, but only in the conditions it actually needs — the right light, warmth, and care. It is not fragile and not difficult; it is specific, and struggle in the wrong setting is information about the setting, never a verdict on the plant. Orchid comes from Boyce and Ellis's metaphor for heightened sensitivity to environment — more shaped by both hardship and support. When this card is out, the question is never "what is wrong with them" but "what does this particular bloom need?"
+An orchid blooms beautifully, but only in the right conditions — the right light, warmth, and care. It isn't fragile and it isn't difficult; it's specific, and if it struggles, that's about the setting, not the plant. This card is for people who are like that: they feel their surroundings strongly, both the good and the hard. The idea comes from Boyce and Ellis. When this card is out, the question is never "what's wrong with them?" but "what does this bloom need?"
 
 ----
 
