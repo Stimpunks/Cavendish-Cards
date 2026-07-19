@@ -553,16 +553,18 @@
       breakToggle.addEventListener('click', function () {
         if (typeof breakDialog.showModal === 'function') breakDialog.showModal();
         else breakDialog.setAttribute('open', 'open');
+        document.body.classList.add('break-open');
       });
       if (breakClose) {
         breakClose.addEventListener('click', function () {
           if (breakAudio) breakAudio.pause();
           if (typeof breakDialog.close === 'function') breakDialog.close();
-          else breakDialog.removeAttribute('open');
+          else { breakDialog.removeAttribute('open'); document.body.classList.remove('break-open'); }
         });
       }
       breakDialog.addEventListener('close', function () {
         if (breakAudio) breakAudio.pause();
+        document.body.classList.remove('break-open');
         breakToggle.focus();
       });
     }

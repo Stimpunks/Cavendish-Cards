@@ -287,7 +287,7 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 }
 .break-dialog::backdrop { background: rgba(0, 43, 54, 0.55); }
 .break-dialog-inner {
-  padding: 22px 22px 24px; max-height: 88vh; overflow-y: auto;
+  padding: 22px 22px 24px; max-height: 88vh; overflow-y: auto; overscroll-behavior: contain;
   display: flex; flex-direction: column; gap: 14px;
 }
 .break-dialog h2 { margin: 0; color: var(--ink-strong); }
@@ -396,6 +396,7 @@ body[data-place="the-habitat"] { background-color: var(--place-habitat); }
 .lightbox-prompt[hidden] { display: none; }
 .lightbox-note { margin-top: 6px; }
 body.lightbox-open { overflow: hidden; }
+body.break-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
