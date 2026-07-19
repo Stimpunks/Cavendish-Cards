@@ -43,12 +43,14 @@
   font-size: 18px;
 }
 
-/* Dark mode: the Solarized dark pairing of the light palette above. Applied
-   automatically for anyone whose device/browser is set to dark. Card faces
-   keep their own light backgrounds, so they read as light cards on a dark
-   table. Text tones are chosen to pass WCAG AA on the dark surfaces. */
+/* Dark mode: the Solarized dark pairing of the light palette above. Card
+   faces keep their own light backgrounds, so they read as light cards on a
+   dark table. Text tones are chosen to pass WCAG AA on the dark surfaces.
+   The tokens are applied automatically when the device is set to dark (unless
+   the reader has forced light with the on-page toggle), and explicitly when
+   the reader forces dark. Same values either way. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #002b36;
     --panel: #073642;
@@ -68,6 +70,26 @@
     --place-library: #0a2c3f;
     --place-habitat: #04322f;
   }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #002b36;
+  --panel: #073642;
+  --ink: #93a1a1;
+  --ink-strong: #eee8d5;
+  --muted: #839496;
+  --line: #103e4b;
+  --cyan: #2aa198;
+  --cyan-ink: #5fc9c0;
+  --focus: #5fc9c0;
+  --surface: #073642;
+  --surface-active: #0b453f;
+  --error: #f08c84;
+  --place-cave: #04303e;
+  --place-campfire: #0b2e30;
+  --place-watering-hole: #01313a;
+  --place-library: #0a2c3f;
+  --place-habitat: #04322f;
 }
 
 * { box-sizing: border-box; }
@@ -182,6 +204,15 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 }
 .btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
 .btn:hover { filter: brightness(0.97); }
+
+.theme-toggle {
+  font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 13px; border-radius: 999px; margin: 2px 0;
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 700;
+}
+.theme-toggle:hover { border-color: var(--cyan); }
+.theme-toggle-icon { font-size: 1.05rem; line-height: 1; }
+.site-header .theme-toggle { margin: 0 0 10px; }
 
 .site-footer { border-top: 1px solid var(--line); margin-top: 20px; padding: 20px 0 40px; color: var(--muted); font-size: .92rem; }
 .error { color: var(--error); max-width: 62ch; }

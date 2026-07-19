@@ -268,6 +268,7 @@ SITE_NAV = [
     ("Facilitator sheet", "facilitator.html", "facilitator"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
+    ("Privacy & security", "privacy.html", "privacy"),
 ]
 
 
@@ -357,6 +358,8 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {_THEME_INLINE}
+  <script src="/theme-toggle.js" defer></script>
   <title>Cavendish Cards — {e(title)}</title>
   <meta name="description" content="{e(description)}">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -434,6 +437,15 @@ def origin_html(root):
         md_to_html(src))
 
 
+def privacy_html(root):
+    src = (root / "cavendish-cards-privacy.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Privacy & security",
+        "What Cavendish Cards keeps (almost nothing), how it stays on your device, and the security measures behind the site.",
+        "privacy", "Skip to the privacy details", "Privacy & security", "privacy",
+        md_to_html(src))
+
+
 def _load_facilitator():
     """Load build-facilitator-pdf.py for its Markdown parser only.
 
@@ -501,6 +513,8 @@ def guidebook_html(out_families):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {_THEME_INLINE}
+  <script src="/theme-toggle.js" defer></script>
   <title>Cavendish Cards — Guidebook</title>
   <meta name="description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -815,6 +829,8 @@ def implementation_html(out_families):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {_THEME_INLINE}
+  <script src="/theme-toggle.js" defer></script>
   <title>Cavendish Cards — Implementation Guidebook</title>
   <meta name="description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -918,7 +934,14 @@ def implementation_md(out_families):
 
 _SITE_URL = "https://cavendish.app"
 _SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
-               "/why.html", "/origin.html", "/facilitator.html"]
+               "/why.html", "/origin.html", "/facilitator.html",
+               "/privacy.html"]
+
+# Pre-paint inline script (no flash): applies a saved light/dark choice before
+# first paint. Kept byte-identical to the copy in web/index.html and to the CSP
+# hash in netlify.toml — if you change it, update both.
+_THEME_INLINE = "<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>"
+
 
 _JSONLD = ('<script type="application/ld+json">\n'
            '{"@context":"https://schema.org","@graph":['
@@ -959,7 +982,7 @@ def _write_service_worker(root, web, faces):
     face_names = sorted(p.name for p in faces.glob("*.svg"))
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
-    for name in ("index.html", "styles.css", "app.js", "cards.json"):
+    for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
@@ -970,11 +993,11 @@ def _write_service_worker(root, web, faces):
     version = h.hexdigest()[:8]
     precache = [
         "/", "/index.html", "/styles.css", "/app.js", "/cards.json",
-        "/sw-register.js", "/site.webmanifest",
+        "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png",
         "/guidebook.html", "/implementation.html", "/why.html",
-        "/origin.html", "/facilitator.html",
+        "/origin.html", "/facilitator.html", "/privacy.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1086,6 +1109,7 @@ def main():
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
+    (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
     (root / "cavendish-cards-implementation-layer.md").write_text(
