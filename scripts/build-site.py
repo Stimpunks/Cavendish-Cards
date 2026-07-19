@@ -15,6 +15,7 @@ Usage, from the repo root:
 """
 
 from pathlib import Path
+import hashlib
 import html
 import importlib.util
 import json
@@ -385,6 +386,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
 </head>
 <body>
   <a class="skip" href="#{skip_id}">{e(skip_label)}</a>
+  <script src="/sw-register.js" defer></script>
   <header class="site-header">
     <div class="wrap">
       {site_nav(current)}
@@ -520,6 +522,7 @@ def guidebook_html(out_families):
 </head>
 <body>
   <a class="skip" href="#gb">Skip to the guidebook</a>
+  <script src="/sw-register.js" defer></script>
   <header class="site-header">
     <div class="wrap">
       {site_nav("guidebook")}
@@ -825,6 +828,7 @@ def implementation_html(out_families):
 </head>
 <body>
   <a class="skip" href="#impl">Skip to the guide</a>
+  <script src="/sw-register.js" defer></script>
   <header class="site-header">
     <div class="wrap">
       {site_nav("implementation")}
@@ -886,6 +890,34 @@ def implementation_md(out_families):
              "Home: https://stimpunks.org/projects/cavendish-space-project/")
     L.append("")
     return "\n".join(L)
+
+
+def _write_service_worker(root, web, faces):
+    """Generate web/sw.js from scripts/sw-template.js, version-stamped from the
+    shell files + face inventory so a new deploy evicts old caches. No deps."""
+    template = (Path(__file__).resolve().parent / "sw-template.js").read_text(
+        encoding="utf-8")
+    face_names = sorted(p.name for p in faces.glob("*.svg"))
+    h = hashlib.sha1()
+    for name in ("index.html", "styles.css", "app.js", "cards.json"):
+        p = web / name
+        if p.exists():
+            h.update(p.read_bytes())
+    for name in face_names:
+        h.update(name.encode("utf-8"))
+    version = h.hexdigest()[:8]
+    precache = [
+        "/", "/index.html", "/styles.css", "/app.js", "/cards.json",
+        "/sw-register.js", "/site.webmanifest",
+        "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
+        "/icon-192.png", "/icon-512.png", "/og-image.png",
+        "/guidebook.html", "/implementation.html", "/why.html",
+        "/origin.html", "/facilitator.html",
+    ] + [f"/faces/{n}" for n in face_names]
+    js = (template.replace("__VERSION__", version)
+                  .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
+    (web / "sw.js").write_text(js, encoding="utf-8")
+    return version, len(precache)
 
 
 def main():
@@ -992,11 +1024,13 @@ def main():
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
+    _sw_version, _sw_count = _write_service_worker(root, web, faces)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         implementation_md(out_families), encoding="utf-8")
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
           f"web/why.html, web/origin.html, web/facilitator.html, "
+          f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")

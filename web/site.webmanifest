@@ -1,7 +1,12 @@
 {
   "name": "Cavendish Cards",
   "short_name": "Cavendish",
+  "id": "/",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
   "description": "A calm, no-scoring deck for naming sensory and interaction needs.",
+  "categories": ["education"],
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fdf6e3",
