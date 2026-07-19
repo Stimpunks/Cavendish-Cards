@@ -16,6 +16,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 - Added a **Privacy & security page** and a strict set of security response headers, including a Content Security Policy.
 - Added a **sitemap, robots.txt, and structured data**, plus web-app metadata, for better discoverability and installation.
 - Added this **changelog**, kept in the repository and published as a page on the site.
+- Reworked the **I need a bodymind break** button into a calming full-screen break: a modal (with the deck paused behind it) holding the definition of *bodymind*, an affirmation invitation, a self-hosted looping ocean-waves recording by Adriel Jeremiah Wool, and a collapsible list of ways to affirm your bodymind.
 
 ## 2026-07-17
 

@@ -546,22 +546,25 @@
     }
 
     var breakToggle = document.getElementById('break-toggle');
-    var breakPanel = document.getElementById('break-panel');
+    var breakDialog = document.getElementById('break-dialog');
     var breakClose = document.getElementById('break-close');
-    if (breakToggle && breakPanel) {
+    var breakAudio = document.getElementById('break-audio');
+    if (breakToggle && breakDialog) {
       breakToggle.addEventListener('click', function () {
-        var opening = breakPanel.hidden;
-        breakPanel.hidden = !opening;
-        breakToggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
-        if (opening && breakClose) breakClose.focus();
+        if (typeof breakDialog.showModal === 'function') breakDialog.showModal();
+        else breakDialog.setAttribute('open', 'open');
       });
       if (breakClose) {
         breakClose.addEventListener('click', function () {
-          breakPanel.hidden = true;
-          breakToggle.setAttribute('aria-expanded', 'false');
-          breakToggle.focus();
+          if (breakAudio) breakAudio.pause();
+          if (typeof breakDialog.close === 'function') breakDialog.close();
+          else breakDialog.removeAttribute('open');
         });
       }
+      breakDialog.addEventListener('close', function () {
+        if (breakAudio) breakAudio.pause();
+        breakToggle.focus();
+      });
     }
 
     if (toTableBtn) {

@@ -1000,12 +1000,15 @@ def _write_service_worker(root, web, faces):
         h.update(name.encode("utf-8"))
     for name in font_names:
         h.update(name.encode("utf-8"))
+    _audio = web / "audio" / "ocean-waves.mp3"
+    if _audio.exists():
+        h.update(_audio.read_bytes())
     version = h.hexdigest()[:8]
     precache = [
         "/", "/index.html", "/styles.css", "/app.js", "/cards.json",
         "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
-        "/icon-192.png", "/icon-512.png", "/og-image.png",
+        "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/facilitator.html", "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
