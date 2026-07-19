@@ -19,27 +19,27 @@ _The five Cavendish zones. Everything else sits in one of these._
 ### the campfire
 *a few figures around a warm glow* · "A small group, sharing."
 
-The campfire is the small circle gathered around a warm glow to share and be told stories. It names warm, low-stakes togetherness — a known handful of people rather than a crowd, close enough to feel the warmth without the heat. In Thornburg's learning spaces the campfire is the storyteller's circle, where a person learns from those who have gone before. When this card is out, keep the group small and the fire gentle; a campfire is not a stage, and no one at it should have to perform.
+The campfire is a small circle around a warm glow, sharing and being told stories. It names warm, low-key togetherness — a few people you know, not a crowd, close enough to feel the warmth without the heat. In Thornburg's learning spaces, the campfire is the storyteller's circle, where a person learns from those who came before. When this card is out, keep the group small and the fire gentle. A campfire is not a stage, and no one at it should have to perform.
 
 ### the cave
 *a small den, low light, a person tucked in* · "Somewhere quiet, just for you."
 
-The cave is the place you go alone — low light, walls close, the world kept outside for a while. It names the need for solitude: not hiding or shutting down in distress, but the real rest and thinking that only happen away from other people. The cave is one of David Thornburg's learning-space metaphors — the space where a person learns from themselves. When this card is out, protect the retreat: offer the quiet, and don't make company or explanation the price of it.
+The cave is a place you go alone — low light, close walls, the world kept outside for a while. This card names a need to be by yourself. It isn't hiding, and it isn't a shutdown from distress; it's the real rest and thinking that only happen away from other people. The cave is one of David Thornburg's learning-space ideas — the place where a person learns from themselves. When this card is out, protect the quiet: offer it freely, and don't make company or an explanation the price of it.
 
 ### the habitat
 *the whole landscape holding the other four* · "The world around it all — steady, sensory-safe."
 
-The habitat is the whole landscape that holds the cave, campfire, watering hole, and library — the surrounding conditions, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's niche-construction principle as a place — needs are met by shaping surroundings, not by changing people. When it is out, the work is the environment: make the habitat steady and sensory-safe, and the other places become reachable.
+The habitat is the whole landscape that holds the cave, campfire, watering hole, and library. It's the conditions all around you, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's big idea, as a place — you meet needs by shaping the surroundings, not by changing the person. When this card is out, the work is the environment. Make the habitat steady and sensory-safe, and the other places become reachable.
 
 ### the library
 *shelves, maps, a book held open* · "Where we keep what we've figured out."
 
-The library is where what a group has figured out is kept and shared — shelves, maps, a page held open. It names the pull toward reference and depth: looking something up, going deep on what matters, drawing on what others have already worked out. In Cavendish Space it is the commons the other places feed into. When this card is out, point toward the resource rather than the answer — the library is a place to find your own way in, at your own pace.
+The library is where what a group has figured out is kept and shared — shelves, maps, a page held open. It names a pull toward looking things up and going deep: finding out more about what matters, and drawing on what others have already worked out. In Cavendish Space, it's the shared store the other places feed into. When this card is out, point toward the resource, not the answer. The library is a place to find your own way in, at your own pace.
 
 ### the watering hole
 *figures resting easy near water* · "A soft place to pause and be near people."
 
-The watering hole is the open, in-between place where people cross paths and talk easily — near others, without being required to engage. It names loose, ambient sociability: drifting in and out, overhearing, being among people without a task or a script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge — being near people is the whole point, and joining in stays optional.
+The watering hole is the open, in-between place where people cross paths and talk easily — near others, with no need to join in. It names easy, background togetherness: drifting in and out, overhearing, being among people with no task or script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge. Being near people is the whole point, and joining in stays optional.
 
 ### your own
 *a blank card and a pencil* · "A space that isn't here yet."

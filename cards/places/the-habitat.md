@@ -20,7 +20,7 @@ The world around it all — steady, sensory-safe.
 
 ## Notes
 
-The habitat is the whole landscape that holds the cave, campfire, watering hole, and library — the surrounding conditions, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's niche-construction principle as a place — needs are met by shaping surroundings, not by changing people. When it is out, the work is the environment: make the habitat steady and sensory-safe, and the other places become reachable.
+The habitat is the whole landscape that holds the cave, campfire, watering hole, and library. It's the conditions all around you, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's big idea, as a place — you meet needs by shaping the surroundings, not by changing the person. When this card is out, the work is the environment. Make the habitat steady and sensory-safe, and the other places become reachable.
 
 ----
 

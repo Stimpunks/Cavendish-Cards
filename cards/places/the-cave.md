@@ -14,7 +14,7 @@ Somewhere quiet, just for you.
 
 ## Notes
 
-The cave is the place you go alone — low light, walls close, the world kept outside for a while. It names the need for solitude: not hiding or shutting down in distress, but the real rest and thinking that only happen away from other people. The cave is one of David Thornburg's learning-space metaphors — the space where a person learns from themselves. When this card is out, protect the retreat: offer the quiet, and don't make company or explanation the price of it.
+The cave is a place you go alone — low light, close walls, the world kept outside for a while. This card names a need to be by yourself. It isn't hiding, and it isn't a shutdown from distress; it's the real rest and thinking that only happen away from other people. The cave is one of David Thornburg's learning-space ideas — the place where a person learns from themselves. When this card is out, protect the quiet: offer it freely, and don't make company or an explanation the price of it.
 
 ----
 

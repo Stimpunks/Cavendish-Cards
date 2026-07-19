@@ -14,7 +14,7 @@ A small group, sharing.
 
 ## Notes
 
-The campfire is the small circle gathered around a warm glow to share and be told stories. It names warm, low-stakes togetherness — a known handful of people rather than a crowd, close enough to feel the warmth without the heat. In Thornburg's learning spaces the campfire is the storyteller's circle, where a person learns from those who have gone before. When this card is out, keep the group small and the fire gentle; a campfire is not a stage, and no one at it should have to perform.
+The campfire is a small circle around a warm glow, sharing and being told stories. It names warm, low-key togetherness — a few people you know, not a crowd, close enough to feel the warmth without the heat. In Thornburg's learning spaces, the campfire is the storyteller's circle, where a person learns from those who came before. When this card is out, keep the group small and the fire gentle. A campfire is not a stage, and no one at it should have to perform.
 
 ----
 
