@@ -39,6 +39,12 @@ The deck is a lens, not a language. It makes one hard-to-voice thing — sensory
 
 Most of all: **this deck sits alongside a child's real communication tools — never in place of them.** If a child needs a way to communicate, they need AAC. Don't let "they have the cards" become a reason to under-provide it.
 
+## Privacy & security
+
+Cavendish Cards keeps nothing about you or a child. No accounts, no analytics, no tracking, no cookies; no spread, card choice, or reflection is ever recorded or sent anywhere. The only things saved live on your own device, for your own benefit — an optional light/dark preference and an offline copy of the site — and you can clear them at any time. The site loads only its own files, fonts included, with no third parties; it is served over HTTPS and ships a strict Content Security Policy and related protections.
+
+Plain-language details are on the [Privacy & security page](https://cavendish.app/privacy.html); the exact response headers and policy live in [`netlify.toml`](./netlify.toml).
+
 ## The seven realms
 
 Every card is pictorial first. The words are for the adults; a child never has to read to play.
@@ -66,6 +72,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`cavendish-cards-why-sheet.md`](./cavendish-cards-why-sheet.md) — a [Why Sheet](https://stimpunks.org/why/) making the case for the deck and connecting it to the [Cavendish Space](https://stimpunks.org/space/) learning-space principles.
+- [`cavendish-cards-privacy.md`](./cavendish-cards-privacy.md) — the source for the site's Privacy & security page: what's kept (almost nothing) and the security measures behind the site.
 - [`scripts/build-all.py`](./scripts/build-all.py) — runs all the build scripts below in one command.
 - [`scripts/build-guidebook.py`](./scripts/build-guidebook.py) — regenerates the guidebook from the card files.
 - [`scripts/build-starter-deck.py`](./scripts/build-starter-deck.py) — regenerates the starter-deck list from the card files.
@@ -73,8 +80,8 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`scripts/build-playtest-pdf.py`](./scripts/build-playtest-pdf.py) — lays the placeholders out as a print-and-play PDF.
 - [`scripts/build-facilitator-pdf.py`](./scripts/build-facilitator-pdf.py) — regenerates the facilitator-sheet PDF from its Markdown source.
 - [`web/`](./web/) — the playable web version, live at [cavendish.app](https://cavendish.app/). A static site generated from the cards; see its [README](./web/README.md).
-- [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck (`cards.json` and faces) from the card files.
-- [`netlify.toml`](./netlify.toml) — Netlify build configuration.
+- [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck from the card files and page sources: card data, faces, the standalone pages, the offline service worker, sitemap, and robots.txt.
+- [`netlify.toml`](./netlify.toml) — Netlify build configuration, plus the site's security response headers and Content Security Policy.
 
 ## Guidebook
 
@@ -95,6 +102,8 @@ One deck, across the age range: **show me** (early years), **build my day** (a c
 ## Play it on the web
 
 The deck is playable online at **[cavendish.app](https://cavendish.app/)** — browse and filter the cards, then lay a spread where each card starts face-down and you turn it up to share it. No scoring, no accounts, nothing stored. It's a static site generated from the card files and deployed from this repo by Netlify, so it stays in sync with the deck. See [`web/README.md`](./web/README.md).
+
+It works offline and installs like an app. After the first visit the deck keeps working with no connection, and most browsers offer "Install" or "Add to Home Screen" to open it in its own window from a home screen or dock. It follows your device's light or dark setting, with an on-page toggle to switch. The offline copy and your theme choice are the only things kept, and they stay on your device — see [Privacy & security](https://cavendish.app/privacy.html).
 
 ## Playtesting before the art exists
 
