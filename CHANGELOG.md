@@ -6,6 +6,11 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ## 2026-07-19
 
+### Deck
+
+- Added **no words right now** (situational mutism) and **too seen** (exposure anxiety) to Weather, and **no spotlight** to *What helps* — naming the voice going quiet and the discomfort of being seen, with lineage credited to Donna Williams.
+- Added the kind word **you don't have to talk**, affirming that not speaking is not the same as not knowing (presume competence).
+
 ### Site
 
 - **Copy for a journal** now includes the date and an optional note field (kept only in the copy, never saved).

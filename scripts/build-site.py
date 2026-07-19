@@ -98,8 +98,9 @@ BUILD_LINKS = {
 ORDER = {
     "weather": [
         "warm", "bright", "fizzy", "happy-flappy", "in-the-zone", "need-more",
-        "buzzy", "prickly", "full", "pulled-every-way", "meerkat",
+        "buzzy", "prickly", "full", "pulled-every-way", "meerkat", "too-seen",
         "round-and-round", "stormy", "heavy", "foggy", "cant-tell", "far-away",
+        "no-words-right-now",
     ],
     "lily-pad": [
         "i-need-a-minute", "not-yet", "slowly", "watch-first", "coming-back",
@@ -136,7 +137,7 @@ GROUPS = {
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
-        ("People & time", ["just-one-person", "parallel-existence", "no-rush", "let-me-finish", "let-me-come-and-go"]),
+        ("People & time", ["just-one-person", "parallel-existence", "no-spotlight", "no-rush", "let-me-finish", "let-me-come-and-go"]),
         ("Make your own", ["your-own"]),
     ],
 }

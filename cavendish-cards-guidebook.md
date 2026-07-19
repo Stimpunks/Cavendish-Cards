@@ -112,6 +112,11 @@ Meerkat is the on-alert feeling — standing sentry, scanning for danger, unable
 
 Need more is the under-buzzed feeling — the world too flat, too still, too quiet, and the body reaching for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking, and it's regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input rather than take it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
 
+### no words right now
+*a figure with bright, present eyes and a softly closed mouth, the voice curled up quiet inside* · "The words won't come right now."
+
+No words right now is a voice gone quiet — the words are there, but the door to them is shut for the moment. It names situational mutism: speech becoming hard or impossible in certain places, with certain people, or when things are too much — never a choice, never refusal, and often with someone who badly wants to talk waiting right behind it. Pressing for speech makes the door heavier, and sometimes pointing, typing, or even a nod go quiet too. When this card is out, take the pressure off speech entirely — don't repeat or rephrase the question, don't wait for an answer out loud, offer another way or just quiet company, and let the voice come back on its own. This card names the weather; it never stands in for a child's real communication tools. Lineage: situational mutism — "situational," not "selective," because it depends on the situation and is never chosen.
+
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."
 
@@ -131,6 +136,11 @@ Round and round is when one thought keeps looping — circling back, tightening,
 *big clouds about to break* · "Big feelings, close to the edge."
 
 Stormy is big clouds about to break — pressure built up, feeling close to the edge. It names strong emotion near its limit: overwhelmed, about to spill, weather that has to move through. A storm is not a threat to manage but a front to weather safely. When this card is out, get to shelter — lower the stimulation, drop the demands, stay steady and near — and let it pass without adding to it.
+
+### too seen
+*a small figure wanting to fold inward as soft gazes turn toward them from every side* · "Being looked at is a lot right now."
+
+Too seen is the raw feeling of being looked at — every gaze landing directly, your own existence felt too close up. It names the weather of exposure anxiety: not fear of a danger out there, but the self-consciousness of being perceived, where attention — even warm, kind attention — presses in and makes you want to disappear. It is different from meerkat's scan for threat; this is the discomfort of being the one watched, and the wish to connect can still be there underneath it. When this card is out, ease the gaze — look away, lower the attention, let the person be present without being on display, and don't read the wish to hide as not wanting to be here. Lineage: exposure anxiety (Donna Williams).
 
 ### warm
 *a cozy glow, wrapped up* · "Settled and safe."
@@ -249,6 +259,11 @@ My own spot is a marked place that belongs to one person — a seat, a corner, a
 *a slow, easy clock* · "All the time I need."
 
 No rush is a slow, easy clock — time without pressure. It names a need for more processing time: room to think, respond, or move at a pace that isn't someone else's stopwatch. Speed is not the same as understanding, and hurrying often undoes both. When this card is out, take the pressure off the clock — wait, and let the extra time be freely available.
+
+### no spotlight
+*a figure settled easy at the edge of the room while a beam of attention points somewhere else* · "Please don't put me on the spot."
+
+No spotlight is being let out of the beam of attention — not called on, not watched, not praised in front of everyone. It names exposure anxiety: the way direct attention can feel invasive rather than kind, so that being looked at, complimented, or asked to perform on the spot triggers a pull to hide — even when the wish to take part is fully there. Praise and pressure can backfire; a side-on, low-key approach lets a person come out on their own. When this card is out, come at it sideways — work alongside rather than face-to-face, skip the public praise, and let competence show in its own form and its own time. Lineage: exposure anxiety (Donna Williams).
 
 ### parallel existence
 *two figures side by side, each in their own world* · "Someone alongside me, each doing our own thing."
@@ -411,6 +426,11 @@ _Affirmations. Given between people, never earned — a gift, never a reward._
 *a soft place to lie down* · given, not read
 
 "You can rest" is a soft place to lie down — permission to stop. It affirms that rest is allowed and earned by no one: you may stop striving, and nothing bad follows. Rest withheld until it's "deserved" isn't rest. When this card is given, make the permission real — clear the demands, and let stopping be genuinely safe.
+
+### you don't have to talk
+*a calm, open space with no question hanging in the air* · given, not read
+
+"You don't have to talk" is a calm, open space with no question hanging in it — silence made welcome. It affirms that not speaking is not the same as not knowing: speech is not the measure of a mind, and staying quiet costs nothing here. Presume competence — the quiet person is thinking, understanding, and fully present, whether or not the words come out. When this card is given, mean it without a test — no coaxing for "just one word," no reward for speaking, just genuine ease with the quiet. Lineage: presume competence.
 
 ### your own
 *a blank card and a pencil* · given, not read
