@@ -359,9 +359,8 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cavendish Cards — {e(title)}</title>
   <meta name="description" content="{e(description)}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -370,6 +369,15 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   <meta name="theme-color" content="#fdf6e3">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
+  <meta name="color-scheme" content="light">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Cavendish">
+  <meta name="application-name" content="Cavendish Cards">
+  <meta property="og:locale" content="en_US">
+  <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+  {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — {e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:url" content="https://cavendish.app/{current}.html">
@@ -495,9 +503,8 @@ def guidebook_html(out_families):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cavendish Cards — Guidebook</title>
   <meta name="description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -506,6 +513,15 @@ def guidebook_html(out_families):
   <meta name="theme-color" content="#fdf6e3">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
+  <meta name="color-scheme" content="light">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Cavendish">
+  <meta name="application-name" content="Cavendish Cards">
+  <meta property="og:locale" content="en_US">
+  <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+  {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Guidebook">
   <meta property="og:description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
   <meta property="og:url" content="https://cavendish.app/guidebook.html">
@@ -801,9 +817,8 @@ def implementation_html(out_families):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cavendish Cards — Implementation Guidebook</title>
   <meta name="description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -812,6 +827,15 @@ def implementation_html(out_families):
   <meta name="theme-color" content="#fdf6e3">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
+  <meta name="color-scheme" content="light">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Cavendish">
+  <meta name="application-name" content="Cavendish Cards">
+  <meta property="og:locale" content="en_US">
+  <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+  {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Implementation Guidebook">
   <meta property="og:description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
   <meta property="og:url" content="https://cavendish.app/implementation.html">
@@ -892,18 +916,56 @@ def implementation_md(out_families):
     return "\n".join(L)
 
 
+_SITE_URL = "https://cavendish.app"
+_SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
+               "/why.html", "/origin.html", "/facilitator.html"]
+
+_JSONLD = ('<script type="application/ld+json">\n'
+           '{"@context":"https://schema.org","@graph":['
+           '{"@type":"WebSite","@id":"https://cavendish.app/#website",'
+           '"name":"Cavendish Cards","url":"https://cavendish.app/",'
+           '"description":"A calm, no-scoring deck for naming sensory and '
+           'interaction needs.","inLanguage":"en",'
+           '"license":"https://creativecommons.org/publicdomain/zero/1.0/",'
+           '"publisher":{"@id":"https://stimpunks.org/#organization"}},'
+           '{"@type":"Organization","@id":"https://stimpunks.org/#organization",'
+           '"name":"Stimpunks Foundation","url":"https://stimpunks.org/",'
+           '"sameAs":["https://github.com/Stimpunks/Cavendish-Cards"]}]}\n'
+           '</script>')
+
+
+def _write_sitemap_robots(web):
+    """Write web/sitemap.xml and web/robots.txt from the known page list."""
+    import datetime
+    today = datetime.date.today().isoformat()
+    urls = "\n".join(
+        f"  <url><loc>{_SITE_URL}{p}</loc><lastmod>{today}</lastmod></url>"
+        for p in _SITE_PAGES)
+    sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+               + urls + "\n</urlset>\n")
+    (web / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    robots = ("User-agent: *\n"
+              "Allow: /\n\n"
+              f"Sitemap: {_SITE_URL}/sitemap.xml\n")
+    (web / "robots.txt").write_text(robots, encoding="utf-8")
+
+
 def _write_service_worker(root, web, faces):
     """Generate web/sw.js from scripts/sw-template.js, version-stamped from the
     shell files + face inventory so a new deploy evicts old caches. No deps."""
     template = (Path(__file__).resolve().parent / "sw-template.js").read_text(
         encoding="utf-8")
     face_names = sorted(p.name for p in faces.glob("*.svg"))
+    font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
     for name in ("index.html", "styles.css", "app.js", "cards.json"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
     for name in face_names:
+        h.update(name.encode("utf-8"))
+    for name in font_names:
         h.update(name.encode("utf-8"))
     version = h.hexdigest()[:8]
     precache = [
@@ -913,7 +975,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/facilitator.html",
-    ] + [f"/faces/{n}" for n in face_names]
+    ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
     (web / "sw.js").write_text(js, encoding="utf-8")
@@ -1025,6 +1087,7 @@ def main():
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
+    _write_sitemap_robots(web)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         implementation_md(out_families), encoding="utf-8")
 

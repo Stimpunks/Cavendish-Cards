@@ -6,7 +6,6 @@
 const VERSION = '__VERSION__';
 const PRECACHE = 'cavendish-precache-' + VERSION;
 const RUNTIME = 'cavendish-runtime-' + VERSION;
-const FONTS = 'cavendish-fonts';
 const PRECACHE_URLS = __PRECACHE__;
 
 self.addEventListener('install', function (event) {
@@ -20,7 +19,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
   event.waitUntil((async function () {
-    const keep = [PRECACHE, RUNTIME, FONTS];
+    const keep = [PRECACHE, RUNTIME];
     const names = await caches.keys();
     await Promise.all(names.map(function (n) {
       if (n.indexOf('cavendish-') === 0 && keep.indexOf(n) === -1) {
@@ -32,23 +31,13 @@ self.addEventListener('activate', function (event) {
   })());
 });
 
-function isFontRequest(url) {
-  return url.origin === 'https://fonts.googleapis.com' ||
-         url.origin === 'https://fonts.gstatic.com';
-}
-
 self.addEventListener('fetch', function (event) {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
 
-  // Google Fonts: serve fast from cache, refresh in the background.
-  if (isFontRequest(url)) {
-    event.respondWith(staleWhileRevalidate(req, FONTS));
-    return;
-  }
-
-  // Leave other cross-origin requests to the network untouched.
+  // Everything is same-origin now (styles, script, fonts, faces, icons). Leave
+  // any unexpected cross-origin request to the network untouched.
   if (url.origin !== self.location.origin) return;
 
   // Freshness where it matters: page navigations and the card data are
@@ -58,7 +47,7 @@ self.addEventListener('fetch', function (event) {
     return;
   }
 
-  // Everything else same-origin (styles, script, faces, icons): cache-first.
+  // Everything else same-origin (styles, script, fonts, faces): cache-first.
   event.respondWith(cacheFirst(req));
 });
 
@@ -86,14 +75,4 @@ async function cacheFirst(req) {
   const res = await fetch(req);
   if (res && res.ok) cache.put(req, res.clone()).catch(function () {});
   return res;
-}
-
-async function staleWhileRevalidate(req, cacheName) {
-  const cache = await caches.open(cacheName);
-  const cached = await cache.match(req);
-  const network = fetch(req).then(function (res) {
-    if (res) cache.put(req, res.clone()).catch(function () {});
-    return res;
-  }).catch(function () { return null; });
-  return cached || network || fetch(req);
 }
