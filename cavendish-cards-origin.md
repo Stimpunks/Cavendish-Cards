@@ -4,7 +4,7 @@
 
 ## What Cavendish Space is
 
-Cavendish Space is our name for a psychologically and sensory-safe space suited to zone work, flow, intermittent collaboration, and collaborative niche construction. The deck is that model made tangible — the philosophy put into a child's hands, one card at a time.
+Cavendish Space is our name for a psychologically and sensory-safe space suited to zone work, flow, intermittent collaboration, and collaborative niche construction. The deck is that model made tangible — the philosophy put into a person's hands, one card at a time.
 
 ## The wizard of Clapham Common
 
@@ -18,7 +18,7 @@ The privileges of Cavendish's station gave him room for his differences. Without
 
 ## Homes of opportunity
 
-Educator Ira Socol calls a place like that a *home of opportunity* — relentlessly safe, both calming and exciting, offering trust, freedom, and choice. Today we lose too many neurodivergent children to school-induced anxiety in rooms designed against their neurology, their flow states, and their ways of being. Cavendish's life points the way out: build homes of opportunity that meet the sensory and social needs of all bodyminds. What worked for Henry Cavendish works for everyone.
+Educator Ira Socol calls a place like that a *home of opportunity* — relentlessly safe, both calming and exciting, offering trust, freedom, and choice. Today we lose too many neurodivergent people to school-induced anxiety in rooms designed against their neurology, their flow states, and their ways of being. Cavendish's life points the way out: build homes of opportunity that meet the sensory and social needs of all bodyminds. What worked for Henry Cavendish works for everyone.
 
 ## Caves, campfires, and watering holes
 

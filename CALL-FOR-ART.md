@@ -1,6 +1,6 @@
 # Call for Art — Cavendish Cards
 
-**Cavendish Cards** is a free, open deck that helps a child show how they feel and what they need — by pointing at a picture instead of having to find the words. It's made by and for neurodivergent and Disabled people, and it runs on one belief: **broken systems, not broken people.** A card names a need; it never labels a child.
+**Cavendish Cards** is a free, open deck that helps a person show how they feel and what they need — by pointing at a picture instead of having to find the words. It's made by and for neurodivergent and Disabled people, and it runs on one belief: **broken systems, not broken people.** A card names a need; it never labels a person.
 
 Right now the deck works, but its pictures are plain placeholders. **We're looking for artists to draw the real thing** — and we'd love it to come from our community.
 
@@ -10,11 +10,11 @@ You make the art. We do all the technical work of fitting it onto the cards.
 
 ## The style we're looking for
 
-The cards are for **young children**, so the art should be:
+The cards are for **all ages**, so the art should be:
 
 - **Warm, gentle, and friendly** — calm rather than busy, never scary or clinical.
 - **Simple and clear** — bold, readable shapes that still make sense at the size of a small playing card (about 2.5 inches wide).
-- **Neuroaffirming and counter-deficit** — draw the *feeling or the metaphor*, not a "problem child." A *stormy* card is weather building, not a child in trouble; *stuck* is a calm pause on a lily pad, not a failure.
+- **Neuroaffirming and counter-deficit** — draw the *feeling or the metaphor*, not a "problem person." A *stormy* card is weather building, not a person in trouble; *stuck* is a calm pause on a lily pad, not a failure.
 - **Inclusive** — where you draw people, draw a range of them: different skin tones, bodies, hair, and ages, and Disabled people simply present (ear defenders, mobility aids, AAC devices, and so on) as an ordinary part of the picture. Avoid stereotypes; don't gender things that don't need it.
 - **Your own style** — crayon, paint, ink, collage, cut-paper, digital, whatever you love. The style is the point.
 

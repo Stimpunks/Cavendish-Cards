@@ -4,13 +4,13 @@
 
 ## What this is
 
-Cavendish Cards is a free, open (CC0), neuroaffirming pictorial prompt-card deck by Stimpunks Foundation. A child (or anyone) SHOWS how they feel and what they need by pointing at or laying pictures — **no reading required, no scoring, no matching, no right answer, no winning.** The child controls sharing: cards lie face-down by default, and turning one up *is* the act of consent. It grows in the open, one card = one Markdown file, community-authored. It comes from the Cavendish Space model.
+Cavendish Cards is a free, open (CC0), neuroaffirming pictorial prompt-card deck by Stimpunks Foundation. A person of any age SHOWS how they feel and what they need by pointing at or laying pictures — **no reading required, no scoring, no matching, no right answer, no winning.** The person controls sharing: cards lie face-down by default, and turning one up *is* the act of consent. It grows in the open, one card = one Markdown file, community-authored. It comes from the Cavendish Space model.
 
 It is **not** a screening/assessment tool and **not** an AAC board (see Boundaries). A spread is a *design brief for the environment*, not a behavior report.
 
 ## Values (non-negotiable)
 
-- **Broken systems, not broken people.** Counter-deficit throughout. A card names a need, a state, or a change to the environment — never the child as the problem.
+- **Broken systems, not broken people.** Counter-deficit throughout. A card names a need, a state, or a change to the environment — never the person as the problem.
 - **Neurodiversity paradigm**, not pathology. Identity-first language; always **capitalize Autistic and Disabled**.
 - **Human/community-made art only — no AI art.** Glossary/Notes are human-authored.
 - Nothing about us without us. Helen Edgar (Autistic Realms) owns the values-heavy and Autistic-community calls (see Collaborators for the current, looser review pattern).
@@ -40,13 +40,13 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 - **Rebuild rule:**
   - Deck-content or generator change → `python3 scripts/build-all.py`, then `git add -A && commit && push`.
   - Hand-authored web file (`web/index.html`, `web/styles.css`, `web/app.js`) → **no rebuild**; Netlify serves as-is. Just commit those files.
-  - `web/cards.json`, `web/guidebook.html`, `web/implementation.html`, `web/why.html`, `web/origin.html`, `web/facilitator.html`, and `web/faces/` are **gitignored** (generated; Netlify rebuilds).
+  - `web/cards.json`, `web/guidebook.html`, `web/implementation.html`, `web/why.html`, `web/origin.html`, `web/facilitator.html`, `web/example-spreads.html`, and `web/faces/` are **gitignored** (generated; Netlify rebuilds).
 - After edits, Claude hands Ryan the exact `git add/commit/push` commands. **Claude cannot see whether a commit actually landed — always confirm.**
 - **Always mirror a validated container edit back into Ryan's repo** (the failure mode this session: patching the container copy but forgetting the `Filesystem:edit_file` to the repo → git sees nothing).
 
 ## Card schema & conventions
 
-- `cards/<realm>/<slug>.md`: `# name` (lowercase, deck-facing), `## Family` (folder-matching key), `## Image cue` (motif for illustrator), `## Prompt` (gentle optional line; `—` for Kind words), optional `## Reflection` (bulleted per-card override), `## Notes` (guidebook entry — metaphor / what it names / how to hold; "When this card is out…"; describe the card, never the child), `----`, `## License` (CC0).
+- `cards/<realm>/<slug>.md`: `# name` (lowercase, deck-facing), `## Family` (folder-matching key), `## Image cue` (motif for illustrator), `## Prompt` (gentle optional line; `—` for Kind words), optional `## Reflection` (bulleted per-card override), `## Notes` (guidebook entry — metaphor / what it names / how to hold; "When this card is out…"; describe the card, never the person), optional `## Pattern` (facilitator-layer Stimpunks Pattern map; never card-facing), `----`, `## License` (CC0).
 - **Notes carry a reframe, not just a label** — this is the anti-AAC feature. Lineage credited in Notes where relevant (e.g., Adkin & Gray-Hammond for monotropism terms; Nick Walker/NQLS for embodiment; Erin/@EisforErin for tendril theory; ANI/Sinclair 1996 for Interaction; Cavendish Space for intermittent collaboration).
 - Voice: short declarative sentences, stakes first, no hedging, no marketing register, em-dashes and fragments for weight. US spelling. Deck-facing copy lowercase.
 - Generators live in `scripts/` and read `cards/**` by folder. `build-all.py` runs them all. Reflection pools + display labels + signpost groups + curated order + subtitles + guidebook realm-notes are constants at the top of `build-site.py`; the starter deck's curated order + play modes are in `build-starter-deck.py`; the markdown guidebook's realm-notes are in `build-guidebook.py`.
@@ -57,14 +57,17 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 
 ## Decision log (settled — don't relitigate without reason)
 
-- **Not an AAC board.** Inclusion test (in `CARD.md`): a card earns its place if it names a hard-to-voice inner state or a niche-construction need AND carries a reframe — not if it's a want/object/action a child could request. "can't tell" (experience) belongs; "hungry" (request) does not. The deck sits **alongside** real AAC, never replacing it (child-safety line, in README + guidebook).
+- **All ages, not just children** (per Helen's request). The deck's framing was broadened from child-specific to all ages: `child` → `person`, `adult` → `facilitator` where it means the support role, or age-neutral phrasing otherwise; the "adult layer" term of art is now the **"facilitator layer."** Self-use and peer-use are first-class (Kind words are self-affirmation on the web; example spread 8 is an adult using the deck for themselves, no facilitator). Child-safety commitments are retained and children are still named explicitly (e.g. the AAC-alongside line). Origin's historical "children with PMLD" / "adult professionals" wording is left as-is; **open item:** the "no masking card" rationale weakened now that adults are users — revisit whether a masking-adjacent card belongs, or restate the rationale as "masking is a meta-observation, not a felt state."
+
+- **Not an AAC board.** Inclusion test (in `CARD.md`): a card earns its place if it names a hard-to-voice inner state or a niche-construction need AND carries a reframe — not if it's a want/object/action a person could request. "can't tell" (experience) belongs; "hungry" (request) does not. The deck sits **alongside** real AAC, never replacing it (child-safety line, in README + guidebook).
 - **Not a screening tool** (in README + guidebook).
-- **Materials stay in the adult layer.** The deck names the *need*; specific materials/techniques (tents, projectors, budget hacks) live in the guidebook + linked posts (Cavendish Space on a Budget, Nesting), not as cards.
+- **Materials stay in the facilitator layer.** The deck names the *need*; specific materials/techniques (tents, projectors, budget hacks) live in the guidebook + linked posts (Cavendish Space on a Budget, Nesting), not as cards.
 - **Kind words reframe:** self-affirmation on the web; "given, not read" kept only in print/guidebook; distinct card back retained (flagged for possible reconsideration).
 - **penguin pebbling** is the giving *verb*, not a card → guidebook note. **parallel existence** = body doubling → What helps.
-- **Monotropic-spiral clinical depth** (burnout→psychosis) stays OUT of the child cards; "round and round" names only the everyday looping-thought feeling.
+- **Monotropic-spiral clinical depth** (burnout→psychosis) stays OUT of the person cards; "round and round" names only the everyday looping-thought feeling.
 - **Seven play modes is the ceiling:** Show me · Build my day · Class weather · Map the edges · Play as the environment · Moving between (map your rhythm) · Build a niche. Listed in web app, starter deck, and facilitator sheet.
 - **Weather grouping:** flat with a curated order, NOT signpost headings (feelings don't sort cleanly, and a good/bad split would betray the ethos).
+- **Pattern crosswalk (facilitator layer).** Each card may carry an optional `## Pattern` field mapping it to Stimpunks Pattern(s); renders in the Markdown + web guidebook only, never on the card face / starter deck / web card view (stripped from cards.json). Registry of slugs lives in `build-guidebook.py`; `build-site.py` imports it. Full map in `cavendish-cards-pattern-crosswalk.md`. Anxiety-cluster Patterns 52–54 drafted for the Library, pending Helen review before publish/wire.
 
 ## Collaborators
 

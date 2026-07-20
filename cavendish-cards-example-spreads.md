@@ -2,14 +2,14 @@
 
 Worked examples of the deck in use: a moment, a spread someone laid, and how you might read it.
 
-These are here to show what playing the deck looks like — not to tell anyone what to lay, or how to be. A spread is a design brief for the environment, not a report on the child. Read every example below for what it asks the *room* to do, never for what it says the *person* is.
+These are here to show what playing the deck looks like — not to tell anyone what to lay, or how to be. A spread is a design brief for the environment, not a report on the person. Read every example below for what it asks the *room* to do, never for what it says the *person* is.
 
 **What these examples are not:**
 
 - **Not a scoring key.** There is no right spread, and no matching. No card is better than another, and no hand is a diagnosis.
 - **Not archetypes.** Nobody is "an orchid kid" or "a cave type." A grower card means *who I am today*; an interaction badge means *how open I am right now*. The same person might lay something completely different tomorrow.
-- **Not templates.** Don't match a child to an example. These show how to *read* a spread; they are not profiles to sort people into.
-- **Not screening.** The deck makes needs sayable; it never makes children assessable. The child turns the cards up themselves — that turn is the sharing, and what stays face-down stays private.
+- **Not templates.** Don't match a person to an example. These show how to *read* a spread; they are not profiles to sort people into.
+- **Not screening.** The deck makes needs sayable; it never makes people assessable. The person turns the cards up themselves — that turn is the sharing, and what stays face-down stays private.
 
 Each example ends with the same reminder: **one spread, one day.**
 
@@ -29,7 +29,7 @@ Three moves, every time:
 
 **Turned up:** *buzzy · too seen · no words right now · orchid · a way out · no spotlight*
 
-**Reading it — a design brief, not a diagnosis:** the room is too much, being watched stings, and speech is gone for now. So turn the world down, guarantee a visible exit, and don't put them on the spot. *Orchid* isn't a label here — it's the person saying "I bloom in the right conditions; set them." Not one card points at something wrong with the child; together they are a list of changes to the room. (A Kind word you might hand over, rather than lay: *you belong here*.)
+**Reading it — a design brief, not a diagnosis:** the room is too much, being watched stings, and speech is gone for now. So turn the world down, guarantee a visible exit, and don't put them on the spot. *Orchid* isn't a label here — it's the person saying "I bloom in the right conditions; set them." Not one card points at something wrong with the person; together they are a list of changes to the room. (A Kind word you might hand over, rather than lay: *you belong here*.)
 
 *One spread, one day. Tomorrow, in a calmer room, the same person might lay* bright *and* come say hi. *(Play mode: show me / build a niche.)*
 
@@ -53,11 +53,11 @@ Three moves, every time:
 
 **Turned up, around the room:** *bright · fizzy · buzzy · foggy · heavy*
 
-**Reading it:** the room is mixed this morning — a couple of people lit up and ready, a couple with too much coming in, one running low. This is a reading of the *group's* conditions, not a ranking of children. So maybe not a loud, high-stimulation lesson right now: offer quiet corners and dens for the buzzy ones, ease the pace for the foggy and heavy ones, and let the bright and fizzy energy have somewhere to go.
+**Reading it:** the room is mixed this morning — a couple of people lit up and ready, a couple with too much coming in, one running low. This is a reading of the *group's* conditions, not a ranking of people. So maybe not a loud, high-stimulation lesson right now: offer quiet corners and dens for the buzzy ones, ease the pace for the foggy and heavy ones, and let the bright and fizzy energy have somewhere to go.
 
 *One spread, one day. Weather moves; the class map will look different after lunch. (Play mode: class weather.)*
 
-## 5. Mapping my sensory edges (older child)
+## 5. Mapping my sensory edges (older person)
 
 **Turned up:** *prickly · the right temperature · dim the light · headphones · let me control it · my own spot*
 
@@ -77,9 +77,17 @@ Three moves, every time:
 
 **Turned up:** *big step · not yet · watch first · tell me first · a way out*
 
-**Reading it:** the crossing feels too big, and they're not ready to walk in yet. They want to watch from the edge before joining, and they need to know what's coming and that they can leave. So don't march them through the door: say what the morning holds (*tell me first*), let them hover and watch at the edge — that counts as taking part — guarantee a visible way out, and let *not yet* mean "check back," not "push harder." The step is big; make the step smaller, rather than the child braver.
+**Reading it:** the crossing feels too big, and they're not ready to walk in yet. They want to watch from the edge before joining, and they need to know what's coming and that they can leave. So don't march them through the door: say what the morning holds (*tell me first*), let them hover and watch at the edge — that counts as taking part — guarantee a visible way out, and let *not yet* mean "check back," not "push harder." The step is big; make the step smaller, rather than the person braver.
 
 *One spread, one day. The second morning, with the room already known, may need only* watch first *— or nothing at all. (Play mode: show me / build my day.)*
+
+## 8. A meeting that keeps overrunning (an adult, at work)
+
+**Turned up:** *pulled every way · full · less talking · a way out · let me finish*
+
+**Reading it:** too many threads at once, no room left to take anything else in, and the talk won't stop. The deck isn't only for children — here an adult has laid their own conditions in a meeting. So take things away rather than add: one thread at a time, fewer words, a clear way to step out, and space to bring a piece of work to a close before switching. The room overran the person; change the room, not the person.
+
+*One spread, one day. Laid by the person for themselves — no facilitator needed. (Play mode: build a niche / map the edges.)*
 
 ----
 
@@ -87,7 +95,7 @@ Three moves, every time:
 
 The best examples come from real play. If a spread taught you something about a room, write it up in this shape — the moment, the cards turned up, what the room did — and add it. Keep the frame: read the spread for what it asks the environment to do, never as a verdict on a person. Growers stay "who today," interaction badges stay "how open right now," and there is never a right spread.
 
-And the standing rule holds here too: these cards sit *alongside* a child's real communication tools, never in place of them. A spread makes one hard-to-voice thing sayable; it is not a full way to communicate, and it is not a substitute for AAC.
+And the standing rule holds here too: these cards sit *alongside* a person's real communication tools, never in place of them. A spread makes one hard-to-voice thing sayable; it is not a full way to communicate, and it is not a substitute for AAC.
 
 ----
 

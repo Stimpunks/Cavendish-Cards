@@ -10,7 +10,7 @@ Cavendish Cards is built to be a safe, quiet place. It gathers nothing about you
 
 ## What "nothing stored" means
 
-When we say the deck stores nothing, we mean nothing about you or a child. A spread you lay lives only in the page while it is open. Close the tab and it is gone. No spread, no card choice, and no reflection is ever recorded or transmitted. The deck makes needs sayable in the moment; it never turns them into data.
+When we say the deck stores nothing, we mean nothing about you or a person. A spread you lay lives only in the page while it is open. Close the tab and it is gone. No spread, no card choice, and no reflection is ever recorded or transmitted. The deck makes needs sayable in the moment; it never turns them into data.
 
 ## What is kept on your device
 

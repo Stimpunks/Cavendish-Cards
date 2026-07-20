@@ -1,12 +1,12 @@
-<!-- Adult-layer only. Maps each Cavendish card to the Stimpunks Pattern(s) it instantiates, so the deck reads as the Library's worked example at ground level. This wording is lineage/values-adjacent — ship with Ryan's sign-off and log for Helen's batch review. The generator wiring described at the end is now in place (build-guidebook.py + build-site.py render the ## Pattern field). -->
+<!-- Facilitator-layer only. Maps each Cavendish card to the Stimpunks Pattern(s) it instantiates, so the deck reads as the Library's worked example at ground level. This wording is lineage/values-adjacent — ship with Ryan's sign-off and log for Helen's batch review. The generator wiring described at the end is now in place (build-guidebook.py + build-site.py render the ## Pattern field). -->
 
 # Cavendish Cards — Pattern Crosswalk
 
 Where each card sits in the [Pattern Library](https://stimpunks.org/patterns/library/), and where the deck names something the Library hasn't patterned yet.
 
-This is an **adult-layer** document. It is the same kind of thing as materials and budget hacks: it informs the guidebook and the facilitator, and it never touches the child-facing card. A Pattern name may shape a card's Notes; it never appears on the card's face. The deck names a state or a need in a child's frame; the Pattern names the same reality in the designer's frame. Two frames, one reality.
+This is a **facilitator-layer** document. It is the same kind of thing as materials and budget hacks: it informs the guidebook and the facilitator, and it never touches the person-facing card. A Pattern name may shape a card's Notes; it never appears on the card's face. The deck names a state or a need in a person's frame; the Pattern names the same reality in the designer's frame. Two frames, one reality.
 
-The deck lives in the middle of [ARLES](https://stimpunks.org/glossary/arles/) — Relational, Lived Experience, Environment — and stops short of Systems as cards. So most maps land in Patterns 01–38. The Systems and Civilization patterns (39–49) mostly have no card, and that is correct: the deck hands the child a design brief, not a policy.
+The deck lives in the middle of [ARLES](https://stimpunks.org/glossary/arles/) — Relational, Lived Experience, Environment — and stops short of Systems as cards. So most maps land in Patterns 01–38. The Systems and Civilization patterns (39–49) mostly have no card, and that is correct: the deck hands the person a design brief, not a policy.
 
 ## How to read the tables
 
@@ -94,14 +94,14 @@ The niche-construction realm. The card names the *need*; the Pattern names the *
 
 ## Lily pads · Relational + Attention
 
-Transitions and moments. Mostly [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) held from the child's side.
+Transitions and moments. Mostly [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) held from the person's side.
 
 | Card | Pattern(s) | Note |
 |---|---|---|
 | i need a minute | **22 Regulation Windows** · 07 Regulation First | pause to gather |
 | stuck | **13 Context Switching Cost** · 16 Cognitive Load Windows | task initiation — see Gaps |
 | not yet | **04 Processing Time** · 32 Consent Over Compliance | readiness hasn't arrived |
-| ready now | **32 Consent Over Compliance** · 13 Context Switching Cost | the child's own signal |
+| ready now | **32 Consent Over Compliance** · 13 Context Switching Cost | the person's own signal |
 | slowly | **13 Context Switching Cost** · 35 Predictable Structure | a graded crossing |
 | coming back | **12 Energy Recovery** · 13 Context Switching Cost | leave without losing your place |
 | all done | **32 Consent Over Compliance** · 13 Context Switching Cost | self-called completion |
@@ -206,7 +206,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 These aren't loose ends — they're places the deck, built from the youngest and hardest-to-voice needs, has reached below the Library's current floor. Each is a candidate Pattern.
 
 - **Interoception (the eighth sense)** — `can't tell`. The Library patterns the external senses (Sensory Load, Sensory Thresholds) but not the internal one. Clean lineage, clear need. The strongest candidate.
-- **Dissociation / spacing out** — `far-away`. The mind stepping back under overload. Currently homeless; not the same as Sensory Load, and 11 Burnout Threshold is deliberately too clinical for the child layer.
+- **Dissociation / spacing out** — `far-away`. The mind stepping back under overload. Currently homeless; not the same as Sensory Load, and 11 Burnout Threshold is deliberately too clinical for the person layer.
 - **Regulated and good states** — `bright`, `fizzy`, and the felt side of `warm`. The Library is friction-lean; it under-patterns good weather. A positive-state Pattern (flow-and-delight, or "the recipe worth repeating") would close the loop, and it's on-ethos: naming the good matters as much as naming the hard.
 - **Differential environmental sensitivity** — the Growers. Boyce & Ellis's orchid/dandelion is its own construct; 09 Environment Fit + 49 Environmental Weathering only partly carry it. A sensitivity Pattern would give all three growers one home.
 - **The anxiety / exposure cluster** — `big-step` (threshold/transition anxiety), `too-seen` (exposure anxiety, Donna Williams), `tender` (rejection-sensitive dysphoria), and the fix-side `no-spotlight`. This is the largest gap: the Library patterns overload, energy, and regulation, but not anticipatory or social-evaluative anxiety. Four cards already live here with clean lineages (threshold/exposure anxiety, RSD). A small anxiety cluster in the Library — anticipatory anxiety, exposure anxiety, rejection sensitivity — would give all four a home. Drafts exist: see `pattern-library-anxiety-cluster-draft` (proposed Patterns 52–54). Note `no-words-right-now` (situational mutism) is the one member of this family that *does* map cleanly, to 30 Communication Bandwidth.
@@ -216,23 +216,23 @@ These aren't loose ends — they're places the deck, built from the youngest and
 
 Confirmation the deck's edges are where they should be, not gaps:
 
-- **08 Masking Pressure** — the deck names states, not the mask. Masking is an adult-facing concept; no card asks a child to name that they're masking. (`no-spotlight` maps here as the *relief* for observation/performance demand, not as naming the mask.)
-- **11 Burnout Threshold** — kept out of the child layer by the decision log (the same call that keeps the monotropic-spiral clinical depth out of `round and round`).
+- **08 Masking Pressure** — the deck names felt states, not the mask. "I'm masking" is a meta-observation about behavior, not a felt state, so no card asks a person to name it. (`no-spotlight` maps here as the *relief* for observation/performance demand, not as naming the mask.)
+- **11 Burnout Threshold** — kept out of the person layer by the decision log (the same call that keeps the monotropic-spiral clinical depth out of `round and round`).
 - **02 Spiky Profiles · 17 Attention Ecology · 28 Double Empathy** — realm- or designer-level lenses that sit *behind* cards rather than *as* one. Double Empathy is the whole reason the Interaction realm exists.
-- **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a child.
+- **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a person.
 
 ----
 
 ## How it's wired
 
-The mapping lives as a per-card field that never leaks into child-facing copy:
+The mapping lives as a per-card field that never leaks into person-facing copy:
 
-- An optional `## Pattern` block in each card (and in `CARD.md`), below `## Notes`. Format: `NN slug` per line (e.g. `03 sensory-load`), primary first. Adult-layer only, like materials.
+- An optional `## Pattern` block in each card (and in `CARD.md`), below `## Notes`. Format: `NN slug` per line (e.g. `03 sensory-load`), primary first. Facilitator-layer only, like materials.
 - The guidebook generators render a "Pattern:" line per entry, linking published (🟢) targets to `stimpunks.org/patterns/library/<slug>/` and leaving planned ones as plain text until their pages ship. The registry (slug → number, name, published) is the single source of truth, in `scripts/build-guidebook.py`; `scripts/build-site.py` imports it so the Markdown and web guidebooks can't drift.
 - The reverse index above is the source for each Pattern page's "Cards that name this" list — a Library-side include, not a deck file.
 - **One-way rule (enforced):** the `## Pattern` field feeds the Markdown guidebook and the web guidebook only. It is stripped (underscore-keyed) before `web/cards.json`, so it never renders on the card face, the starter deck, or the web deck's card view. Same wall as materials and budget hacks.
 
-This makes the deck the Library's worked example at ground level, and gives every spread a documented route from *named need* → *Pattern* → *recipe*, without changing a single thing a child sees.
+This makes the deck the Library's worked example at ground level, and gives every spread a documented route from *named need* → *Pattern* → *recipe*, without changing a single thing a person sees.
 
 ----
 

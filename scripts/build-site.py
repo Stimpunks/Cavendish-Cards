@@ -214,7 +214,7 @@ INTRO = (
     "gives a person pictures and words for how they feel and what helps, so they "
     "can show someone rather than explain in words they may not have. This "
     "guidebook says what each card means and how to hold it. It describes the "
-    "card, never the child."
+    "card, never the person."
 )
 
 SCREENING = (
@@ -229,7 +229,7 @@ NOT_AAC = (
     "sensory, regulatory, and emotional weather, and the conditions that help — "
     "sayable, and it stops there. It is not a communication system and does not "
     "try to be comprehensive the way AAC must be. Most of all, it sits alongside "
-    "a child's real communication tools, never in place of them: if a child needs "
+    "a person's real communication tools, never in place of them: if a person needs "
     "a way to communicate, they need AAC, and \"they have the cards\" is never a "
     "reason to under-provide it."
 )
@@ -555,7 +555,7 @@ def guidebook_html(out_families):
   {_THEME_INLINE}
   <script src="/theme-toggle.js" defer></script>
   <title>Cavendish Cards — Guidebook</title>
-  <meta name="description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
+  <meta name="description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -576,7 +576,7 @@ def guidebook_html(out_families):
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Guidebook">
-  <meta property="og:description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
+  <meta property="og:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
   <meta property="og:url" content="https://cavendish.app/guidebook.html">
   <link rel="canonical" href="https://cavendish.app/guidebook.html">
   <meta property="og:image" content="https://cavendish.app/og-image.png">
@@ -586,7 +586,7 @@ def guidebook_html(out_families):
   <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cavendish Cards — Guidebook">
-  <meta name="twitter:description" content="What each Cavendish card means and how to hold it. It describes the card, never the child.">
+  <meta name="twitter:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
   <meta name="twitter:image" content="https://cavendish.app/og-image.png">
 </head>
 <body>
@@ -622,7 +622,7 @@ def guidebook_html(out_families):
 # Implementation Guidebook — the companion "how to build the room" book.
 # Renders to web/implementation.html and cavendish-cards-implementation-layer.md.
 # Card names come from the deck (so they never drift); the build prose lives here
-# for hand-iteration. Adult layer: materials stay here, never on a card. Sourced
+# for hand-iteration. Facilitator layer: materials stay here, never on a card. Sourced
 # from early-years / PMLD practice (Helen Edgar); meant to be iterated in-app.
 # ---------------------------------------------------------------------------
 
@@ -635,39 +635,39 @@ IMPL_LABELS = {
 
 IMPL_INTRO = (
     "The card guidebook says what each card means. This one says how to build the "
-    "room the cards ask for. A child laying cave, i need a minute, coming back has "
+    "room the cards ask for. A person laying cave, i need a minute, coming back has "
     "handed you a design brief for the space between one place and the next \u2014 and "
     "this is how you answer it, in cushions, light, sightlines, and floor plan. It is "
-    "the adult layer: the materials live here, never on a card. The card names the "
+    "the facilitator layer: the materials live here, never on a card. The card names the "
     "need; you fill it with what you have."
 )
 
 IMPL_PRINCIPLE = (
     "Design the space between the zones \u2014 not just the zones. Most rooms build the "
-    "destinations and leave the crossings to chance, so a child still has to leap. The "
-    "principle is the same for every child: gentle, continuous, warned, consented "
+    "destinations and leave the crossings to chance, so a person still has to leap. The "
+    "principle is the same for every person: gentle, continuous, warned, consented "
     "crossings, never on the room's clock. How you build the crossing changes with how "
-    "a child moves, senses, and communicates \u2014 and the room is built with the child, "
+    "a person moves, senses, and communicates \u2014 and the room is built with the person, "
     "not around them."
 )
 
 IMPL_GUARDRAILS = [
     ("The turn is theirs",
-     "A spread laid face-down stays private; turning a card up is the child sharing "
+     "A spread laid face-down stays private; turning a card up is the person sharing "
      "it, and that turn is the consent \u2014 you don't turn their cards over for them. "
      "Build the room from what they've shown, never from the cards they've kept; a "
      "spread is self-advocacy in their hands, not a reading you take."),
     ("Build with, never to",
-     "A padded crossing or a made niche is designed with the child and offered as a "
+     "A padded crossing or a made niche is designed with the person and offered as a "
      "gentle nudge \u2014 never sprung as a demand, never done to them. Presume competence."),
-    ("The room is the work, not the child",
+    ("The room is the work, not the person",
      "You are shaping the environment, not fixing the person. A hard transition, or a "
      "space that doesn't fit, is information about the room \u2014 never a verdict on whoever "
      "is in it."),
     ("Not a compliance system",
      "Smoother days are a by-product, never the goal, and a sensory space is never "
      "containment or seclusion. Don't let \u201cwe built them a nook\u201d become a reason to "
-     "under-provide real rest, real support, or a child's actual communication tools."),
+     "under-provide real rest, real support, or a person's actual communication tools."),
 ]
 
 IMPL_REALM_NOTES = {
@@ -677,12 +677,12 @@ IMPL_REALM_NOTES = {
         "and the habitat (the whole surround that holds the other four). Cave, campfire, "
         "and watering hole also run along a sociality gradient \u2014 solo, small group, open "
         "\u2014 lining up with the interaction moods (red, yellow, green). Build the zones so "
-        "a child can move along that gradient on their own terms, and keep each reachable "
+        "a person can move along that gradient on their own terms, and keep each reachable "
         "without a leap.",
     "what-helps":
         "These are the pieces you change so the space fits. Each card names a need, not a "
         "product \u2014 a den can be a pop-up tent or a blanket over a table; less to look at "
-        "can be a screen, a corner, or a turned-around desk. Build for the sense the child "
+        "can be a screen, a corner, or a turned-around desk. Build for the sense the person "
         "is asking about, with whatever you have. Organised here by sense, the way the deck "
         "groups it.",
     "lily-pad":
@@ -690,7 +690,7 @@ IMPL_REALM_NOTES = {
         "jarring and costly \u2014 attention yanked across with nowhere to land. Lily pads are "
         "the stepping stones that make it gentle: a pause, a heads-up, a held place, a "
         "graded step. Build the space between the zones so each crossing has somewhere to "
-        "land, and keep the pace the child's \u2014 read from their signals when they can't set "
+        "land, and keep the pace the person's \u2014 read from their signals when they can't set "
         "it with their feet.",
 }
 
@@ -718,7 +718,7 @@ IMPL_PAIRINGS = {
     "slowly": "A graded strip between a loud zone and a quiet one, where the light dims "
               "and the sound drops before arrival. Grade the crossing instead of forcing "
               "a single leap.",
-    "not-yet": "Let the crossing wait on the child's signal \u2014 check back rather than "
+    "not-yet": "Let the crossing wait on the person's signal \u2014 check back rather than "
                "push \u2014 never on the room's clock.",
     "ready-now": "Go when they go: follow their timing, and build routes that let them "
                  "move the moment they're ready.",
@@ -738,7 +738,7 @@ IMPL_PAIRINGS = {
 # What helps — build guidance organised by the deck's sense signposts.
 IMPL_WHATHELPS = [
     ("Being in charge",
-     "Hand over the dial. The same input is fine when the child controls it and too "
+     "Hand over the dial. The same input is fine when the person controls it and too "
      "much when someone else does \u2014 so give them the switch, the volume, the timing, "
      "not a fixed setting."),
     ("Sound",
@@ -754,10 +754,10 @@ IMPL_WHATHELPS = [
      "A tactile anchor is a real regulation strategy, not babyish; let it stay."),
     ("Pressure",
      "Deep, even pressure \u2014 a weighted wrap, a firm tuck \u2014 but only ever the pressure "
-     "the child asks for, on their terms."),
+     "the person asks for, on their terms."),
     ("Temperature",
      "A layer, a fan, an open window, a warm drink. Too warm or too cold fills a body "
-     "up like noise does; change the air around the child rather than telling them "
+     "up like noise does; change the air around the person rather than telling them "
      "they're fine."),
     ("Movement",
      "Room to move, and things to move with \u2014 floor to pace or spin, a fidget for the "
@@ -795,10 +795,10 @@ NESTING_URL = "https://stimpunks.org/glossary/nesting/"
 
 IMPL_PLAYMODES = (
     "Two play modes map the rhythm; this book builds the room that lets it happen. Run "
-    "Map the edges with the child to find where the crossings bite \u2014 focus to talking, "
+    "Map the edges with the person to find where the crossings bite \u2014 focus to talking, "
     "rest to joining in, home to out the door. Run Moving between to see the shape of a "
     "day, alone to together and back. Then build the padding where the map shows it's "
-    "needed. The child maps; you build it with them; the room changes, not the child."
+    "needed. The person maps; you build it with them; the room changes, not the person."
 )
 
 # (bold lead, rest, optional url)
@@ -871,7 +871,7 @@ def implementation_html(out_families):
   {_THEME_INLINE}
   <script src="/theme-toggle.js" defer></script>
   <title>Cavendish Cards — Implementation Guidebook</title>
-  <meta name="description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
+  <meta name="description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -892,7 +892,7 @@ def implementation_html(out_families):
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Implementation Guidebook">
-  <meta property="og:description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
+  <meta property="og:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
   <meta property="og:url" content="https://cavendish.app/implementation.html">
   <link rel="canonical" href="https://cavendish.app/implementation.html">
   <meta property="og:image" content="https://cavendish.app/og-image.png">
@@ -902,7 +902,7 @@ def implementation_html(out_families):
   <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cavendish Cards — Implementation Guidebook">
-  <meta name="twitter:description" content="How to build the room the cards ask for. The adult layer: materials live here, never on a card.">
+  <meta name="twitter:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
   <meta name="twitter:image" content="https://cavendish.app/og-image.png">
 </head>
 <body>
@@ -938,7 +938,7 @@ def implementation_md(out_families):
     L.append("*How to build the room the cards ask for. Generated from the card files by "
              "`scripts/build-site.py` — do not edit this file by hand; edit the constants "
              "in the script and regenerate.*")
-    L += ["", IMPL_INTRO, "", "Adult layer. Nothing here goes on a card.", "", "---- ", ""]
+    L += ["", IMPL_INTRO, "", "Facilitator layer. Nothing here goes on a card.", "", "---- ", ""]
     L += ["## The one principle", "", IMPL_PRINCIPLE, ""]
     L += ["## Guardrails", ""]
     L += [f"- **{t}.** {b}" for t, b in IMPL_GUARDRAILS]
@@ -1087,7 +1087,7 @@ def main():
             cue = sec.get("Image cue", "").strip()
             prompt = sec.get("Prompt", "").strip()
             notes = sec.get("Notes", "").strip()
-            # Adult-layer only. Underscore keys are stripped before cards.json,
+            # Facilitator-layer only. Underscore keys are stripped before cards.json,
             # so the Pattern crosswalk reaches the web guidebook but never the
             # card view — same one-way wall as the Markdown guidebook.
             pattern_html = gb.render_pattern_html(
@@ -1151,7 +1151,7 @@ def main():
                 fam_obj["groupOrder"] = order
             out_families.append(fam_obj)
 
-    # Underscore-prefixed keys are adult-layer build state (e.g. _pattern) and
+    # Underscore-prefixed keys are facilitator-layer build state (e.g. _pattern) and
     # must never reach the web deck's card view. Strip them here.
     json_families = [
         {**fam, "cards": [

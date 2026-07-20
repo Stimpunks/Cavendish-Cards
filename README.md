@@ -2,32 +2,32 @@
 
 Cavendish Cards is an open deck for naming sensory and interaction needs — you point at a card, or lay a few, and no reading is required to play.
 
-Cavendish Cards come out of the [Cavendish Space Project](https://stimpunks.org/projects/cavendish-space-project/) — an open experiment in designing environments that work for real neurodivergent and Disabled bodies and minds. The deck lets a child shape the space around them, and lets the people beside them read what that child needs without asking a child to explain in words they may not have.
+Cavendish Cards come out of the [Cavendish Space Project](https://stimpunks.org/projects/cavendish-space-project/) — an open experiment in designing environments that work for real neurodivergent and Disabled bodies and minds. The deck lets a person of any age shape the space around them, and lets the people beside them read what that person needs — without anyone having to explain in words they may not have.
 
 Inspired by oracle decks, but these are not oracle cards. They are pictorial prompt cards.
 
-**Broken systems, not broken people.** A child laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
+**Broken systems, not broken people.** A person laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
 **[Play it on the web](https://cavendish.app/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
 
-**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders. Any style, made for young children, human-made, CC0. You draw; we place it.
+**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders. Any style, warm and human-made, CC0. You draw; we place it.
 
 ## Two rules hold the whole thing up
 
-- **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand. Just a gentler way for a child to be understood.
-- **The child controls sharing.** A spread laid face-down stays private. Turning a card up is the child sharing it. The turn is the consent — you don't turn their cards over for them.
+- **No scoring.** No points, no matching, no right answer, no winning. There is no wrong card and no wrong hand. Just a gentler way for a person to be understood.
+- **The person controls sharing.** A spread laid face-down stays private. Turning a card up is the person sharing it. The turn is the consent — you don't turn their cards over for them.
 
 ## Not a screening tool
 
-The deck augments a child's legibility to the people around them — on the child's own terms. It does not screen a child's inner world for institutional convenience. It makes needs sayable; it does not make children assessable. A spread is self-advocacy in the child's hands, never data gathered about them.
+The deck augments a person's legibility to the people around them — on the person's own terms. It does not screen a person's inner world for institutional convenience. It makes needs sayable; it does not make people assessable. A spread is self-advocacy in the person's hands, never data gathered about them.
 
 It carries none of the frameworks that turn human difference into a problem to be managed:
 
-- **No pathology paradigm.** A card names a need, not a symptom. "Buzzy" describes an environment that is too much — not a disorder inside the child.
-- **No deficit ideology.** The deck records what helps, never what a child lacks. If it isn't working, the environment is what hasn't fit yet.
-- **No behaviorism.** No card is a target, a reward, or a compliance check. Turning a card up is communication, not performance — never something to shape a child toward "better" behavior.
+- **No pathology paradigm.** A card names a need, not a symptom. "Buzzy" describes an environment that is too much — not a disorder inside the person.
+- **No deficit ideology.** The deck records what helps, never what a person lacks. If it isn't working, the environment is what hasn't fit yet.
+- **No behaviorism.** No card is a target, a reward, or a compliance check. Turning a card up is communication, not performance — never something to shape a person toward "better" behavior.
 
-Used to sort, score, rank, or flag children, the deck becomes the opposite of what it is for.
+Used to sort, score, rank, or flag people, the deck becomes the opposite of what it is for.
 
 ## Not an AAC board
 
@@ -35,19 +35,19 @@ The deck is a lens, not a language. It makes one hard-to-voice thing — sensory
 
 - **Curated, not comprehensive.** AAC aims to let a person say anything. This deck names a specific, hard-to-voice inner world and stops there. Completeness is not the goal; chasing it is how the deck drifts.
 - **A reframe, not a referent.** An AAC symbol is a neutral pointer ("juice" means the drink). Every card here carries a worldview in its Notes — how to hold it, why it is not misbehavior. A card that is only a label does not belong.
-- **A design brief, not a request.** A spread changes the adult and the room, not just the message. AAC is a person's expressive channel; this deck is a relational object that reshapes the environment.
+- **A design brief, not a request.** A spread changes the facilitator and the room, not just the message. AAC is a person's expressive channel; this deck is a relational object that reshapes the environment.
 
-Most of all: **this deck sits alongside a child's real communication tools — never in place of them.** If a child needs a way to communicate, they need AAC. Don't let "they have the cards" become a reason to under-provide it.
+Most of all: **this deck sits alongside a person's real communication tools — never in place of them.** If a person needs a way to communicate, they need AAC — this holds at any age, and especially for children. Don't let "they have the cards" become a reason to under-provide it.
 
 ## Privacy & security
 
-Cavendish Cards keeps nothing about you or a child. No accounts, no analytics, no tracking, no cookies; no spread, card choice, or reflection is ever recorded or sent anywhere. The only things saved live on your own device, for your own benefit — an optional light/dark preference and an offline copy of the site — and you can clear them at any time. The site loads only its own files, fonts included, with no third parties; it is served over HTTPS and ships a strict Content Security Policy and related protections.
+Cavendish Cards keeps nothing about you or a person. No accounts, no analytics, no tracking, no cookies; no spread, card choice, or reflection is ever recorded or sent anywhere. The only things saved live on your own device, for your own benefit — an optional light/dark preference and an offline copy of the site — and you can clear them at any time. The site loads only its own files, fonts included, with no third parties; it is served over HTTPS and ships a strict Content Security Policy and related protections.
 
 Plain-language details are on the [Privacy & security page](https://cavendish.app/privacy.html); the exact response headers and policy live in [`netlify.toml`](./netlify.toml).
 
 ## The seven realms
 
-Every card is pictorial first. The words are for the adults; a child never has to read to play.
+Every card is pictorial first. The words are for the people alongside; no one ever has to read to play.
 
 - **Places** — the five Cavendish zones: cave, campfire, watering hole, library, habitat.
 - **Weather** — inner weather, not clinical states: bright, buzzy, foggy, heavy, warm.
@@ -57,7 +57,7 @@ Every card is pictorial first. The words are for the adults; a child never has t
 - **Love Locutions** — affirmations, given never earned: you belong here, you're not broken.
 - **Interaction** — how open I am to talking, right now: come say hi, people i know, not right now. The Autistic community's color communication badges, brought into the deck.
 
-Plus a **blank card** — the deck isn't finished. A child or a facilitator draws the need that's missing, and if it's good, it becomes a card. The community authors the deck by using it.
+Plus a **blank card** — the deck isn't finished. A person or a facilitator draws the need that's missing, and if it's good, it becomes a card. The community authors the deck by using it.
 
 ## What's in this repo
 
@@ -71,7 +71,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 - [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
-- [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a child. Also rendered as a page on the site.
+- [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a person. Also rendered as a page on the site.
 - [`cavendish-cards-why-sheet.md`](./cavendish-cards-why-sheet.md) — a [Why Sheet](https://stimpunks.org/why/) making the case for the deck and connecting it to the [Cavendish Space](https://stimpunks.org/space/) learning-space principles.
 - [`cavendish-cards-privacy.md`](./cavendish-cards-privacy.md) — the source for the site's Privacy & security page: what's kept (almost nothing) and the security measures behind the site.
 - [`CHANGELOG.md`](./CHANGELOG.md) — notable changes to the deck and the site, newest first; also published as the [Changelog page](https://cavendish.app/changelog.html).
@@ -87,7 +87,7 @@ Plus a **blank card** — the deck isn't finished. A child or a facilitator draw
 
 ## Guidebook
 
-Like an oracle deck, Cavendish Cards has a guidebook — [`cavendish-cards-guidebook.md`](./cavendish-cards-guidebook.md) — with an entry for every card: what the image means, what it names, and how to hold it, plus the lineage behind the metaphors. It describes the card, never the child.
+Like an oracle deck, Cavendish Cards has a guidebook — [`cavendish-cards-guidebook.md`](./cavendish-cards-guidebook.md) — with an entry for every card: what the image means, what it names, and how to hold it, plus the lineage behind the metaphors. It describes the card, never the person.
 
 The guidebook is generated from the cards themselves — each card's `Notes` field is its entry — so it never drifts out of sync. After adding or editing a card, regenerate it from the repo root:
 
@@ -99,7 +99,7 @@ No dependencies; it writes `cavendish-cards-guidebook.md` and prints a per-famil
 
 ## Seven ways to play
 
-One deck, across the age range: **show me** (early years), **build my day** (a child and a support worker), **class weather** (a whole group), **map the edges** (older kids), **play as the environment** (staff training), **moving between** (anyone, across a day), and **build a niche** (a learner or a group). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
+One deck, across the age range: **show me** (early years), **build my day** (a person and a support worker), **class weather** (a whole group), **map the edges** (older learners), **play as the environment** (staff training), **moving between** (anyone, across a day), and **build a niche** (a learner or a group). The [facilitator sheet](./cavendish-cards-facilitator-sheet.md) has the details.
 
 ## Play it on the web
 
