@@ -549,7 +549,7 @@ def guidebook_html(out_families):
             if c["prompt"]:
                 meta = f'<em>{e(c["cue"])}</em> &middot; &ldquo;{e(c["prompt"])}&rdquo;'
             elif c["given_not_read"]:
-                meta = f'<em>{e(c["cue"])}</em> &middot; given or claimed, not read'
+                meta = f'<em>{e(c["cue"])}</em> &middot; given or claimed'
             else:
                 meta = f'<em>{e(c["cue"])}</em>'
             note = f'<p>{_md_inline(c["notes"])}</p>' if c["notes"] else ''

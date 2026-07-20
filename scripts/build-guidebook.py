@@ -261,7 +261,7 @@ def render_card(name, cue, prompt, notes, pattern=""):
     if prompt and prompt != "—":
         meta += f' · "{prompt}"' if meta else f'"{prompt}"'
     elif prompt == "—":
-        meta += " · given or claimed, not read" if meta else "given or claimed, not read"
+        meta += " · given or claimed" if meta else "given or claimed"
     parts = [f"### {name}"]
     if meta:
         parts.append(meta)

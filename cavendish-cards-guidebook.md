@@ -535,68 +535,68 @@ _Affirmations. Given to someone, or claimed for yourself — never earned, never
 **Penguin pebbling.** Giving someone a Love Locution is *penguin pebbling* — penguins bring each other pebbles, and these cards are pebbles you can hand to a person. On paper, the cards are made to be given this way. In the web app they work the other way round, too: truths a person claims and turns up for themselves.
 
 ### i see you
-*eyes meeting, kindly* · given or claimed, not read
+*eyes meeting, kindly* · given or claimed
 
 "I see you" is eyes meeting, kindly — the plain fact of being truly noticed. It says: you are not looked past, not managed, but really seen and known. Being seen as yourself is rare, and it steadies you. When this card is given, let it be true. See the actual person in front of you, and let them feel it.
 
 *Pattern: 23 Co-Regulation · 51 Bodymind Affirmation*
 
 ### i'm glad you're here
-*two figures, warm together* · given or claimed, not read
+*two figures, warm together* · given or claimed
 
 "I'm glad you're here" is two figures warm together — simple gladness that someone is near. It says: you are wanted, not just put up with. Your being here is a good thing to someone. Being glad of a person is not the same as liking what they did. When this card is given, attach it to the person, not their behavior — glad they're here, full stop.
 
 *Pattern: 51 Bodymind Affirmation · 44 Ecologies of Care*
 
 ### it's okay to need what you need
-*an open, unjudging space* · given or claimed, not read
+*an open, unjudging space* · given or claimed
 
 "It's okay to need what you need" is an open space with no judgment — room to have your own needs. It says: your needs are fine exactly as they are. Not too much, not embarrassing, not up for debate. Needing support is not a flaw. When this card is given, drop the judgment completely. The need is fine, and asking for it should cost nothing.
 
 *Pattern: 51 Bodymind Affirmation · 32 Consent Over Compliance*
 
 ### nothing to fix
-*a whole thing, left as it is* · given or claimed, not read
+*a whole thing, left as it is* · given or claimed
 
 "Nothing to fix" is a whole thing, left as it is — no urge to repair it. It says: you are not a project, and this moment does not need to improve you. The urge to fix a person often does the harm. When this card is given, set the fixing down. Be with the person as they are, instead of working on them.
 
 *Pattern: 51 Bodymind Affirmation · 39 Average User Fallacy*
 
 ### you belong here
-*a hand held out, welcoming* · given or claimed, not read
+*a hand held out, welcoming* · given or claimed
 
 "You belong here" is a hand held out in welcome — belonging offered plainly. It says: you are part of this, not on trial in it. Belonging you have to earn isn't really belonging. When this card is given, mean it with no strings. Offer it because the person is here, never as a reward for fitting in.
 
 *Pattern: 51 Bodymind Affirmation · 44 Ecologies of Care*
 
 ### you can rest
-*a soft place to lie down* · given or claimed, not read
+*a soft place to lie down* · given or claimed
 
 "You can rest" is a soft place to lie down — permission to stop. It says: rest is allowed, and no one has to earn it. You can stop trying so hard, and nothing bad follows. Rest you only get when you "deserve" it isn't rest. When this card is given, make the permission real. Clear the demands, and let stopping be truly safe.
 
 *Pattern: [12 Energy Recovery](https://stimpunks.org/patterns/library/energy-recovery/) · 50 Bodymind Break*
 
 ### you don't have to talk
-*a calm, open space with no question hanging in the air* · given or claimed, not read
+*a calm, open space with no question hanging in the air* · given or claimed
 
 "You don't have to talk" is a calm, open space with no question hanging in it — quiet made welcome. It says: not speaking is not the same as not knowing. Speech is not the measure of a mind, and staying quiet costs nothing here. Presume competence: the quiet person is thinking, understanding, and fully here, whether or not the words come out. When this card is given, mean it with no test — no coaxing for "just one word," no reward for speaking, just real ease with the quiet. Lineage: presume competence.
 
 *Pattern: 51 Bodymind Affirmation · 30 Communication Bandwidth*
 
 ### your own
-*a blank card and a pencil* · given or claimed, not read
+*a blank card and a pencil* · given or claimed
 
 It names the gap: a kind thing to give that no card holds yet. When this card is given, make or write your own — the deck grows from what people actually offer each other.
 
 ### your way is a real way
-*many paths, all valid* · given or claimed, not read
+*many paths, all valid* · given or claimed
 
 "Your way is a real way" is many paths, all of them good — a person's own way honored. It says: a different route to the same place still counts. Your way of doing, thinking, or being is not a wrong version of someone else's. Different is not deficient. When this card is given, back it up in practice. Let the person's way actually stand, instead of praising it and then overriding it.
 
 *Pattern: 45 Cognitive Pluralism · 51 Bodymind Affirmation*
 
 ### you're not broken
-*whole, unbroken shape* · given or claimed, not read
+*whole, unbroken shape* · given or claimed
 
 "You're not broken" is a whole shape, not a broken one — the heart of the deck, said straight to a person. Your difference is real and your struggle is real, but neither one makes you broken: broken systems, not broken people. When this card is given, it answers a lifetime of the opposite message — so give it plainly and often, and don't add a "but."
 
