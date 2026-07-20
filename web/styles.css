@@ -270,6 +270,9 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .prose .facilitator-pdf { margin: 0 0 20px; }
 .prose p.lead { font-weight: 700; color: var(--ink-strong); margin: 18px 0 6px; }
 .prose .mode { margin: 0 0 12px; }
+.prose img { max-width: 100%; height: auto; }
+.prose .fig { margin: 20px 0; }
+.prose .fig img { width: 100%; display: block; border: 1px solid var(--line); border-radius: 14px; }
 .prose .mode .name { font-weight: 700; color: var(--ink-strong); }
 .prose .mode .who { font-style: italic; color: var(--muted); }
 .prose .mode .desc { margin: 2px 0 0; }
