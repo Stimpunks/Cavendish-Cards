@@ -18,6 +18,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- Added an **[ARLES & the cards](https://cavendish.app/arles.html)** page — how the deck fits the Stimpunks Design Method (Attention → Relational → Lived Experience → Environment → Systems), with the design-method poster. Markdown pages can now include images.
 - The site reflects the all-ages reframe (see Deck), and gained an example spread of **an adult using the deck for themselves** — no facilitator. The behind-the-scenes "adult layer" is now the **"facilitator layer"** across the guidebook and implementation pages.
 - Added an **[Example spreads](https://cavendish.app/example-spreads.html)** page — worked gameplay examples that read a spread as a design brief for the environment, not a report on a person.
 - The **guidebook** now links community vocabulary in each card's lineage to the Stimpunks glossary (monotropism, interoception, exposure anxiety, and more); the in-the-moment card view stays plain.
