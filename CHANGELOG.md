@@ -12,6 +12,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- Card backs can now be opened in the lightbox — on the table, a face-down card gets the same enlarge button, showing just the back image (no card name or notes) so it can be seen larger without turning the card up. A visual-accessibility fix that keeps the turn-up-to-share gesture intact.
 - Offline cache now updates on art-only and guidebook-only changes: the service worker versions by page and card-face **content**, not just filenames — so returning visitors always get the current deck.
 
 ## 2026-07-19
