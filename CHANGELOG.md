@@ -8,6 +8,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Deck
 
+- **All-ages reframe:** the whole deck now speaks to people of any age, not just children — *child* becomes *person* throughout, and *adult* becomes *facilitator* where it means the support role (age-neutral wording elsewhere). Self-use and peer-use are first-class: the deck is as much for an Autistic adult naming their own conditions as for a child. The child-safety commitments stay, and children are still named explicitly.
 - Added **big step** (Weather) — threshold anxiety: the dread at the edge of a change, like a doorway, a first day, or graduating. The moves for crossing it live in *Lily pads* and *What helps*.
 - **Plain-language pass across the whole deck:** every card's guidebook entry rewritten to about a grade-6 reading level (down from ~7.8), one idea per sentence, following [ASAN's plain-language guidance](https://autisticadvocacy.org/resources/accessibility/easyread/). The metaphors, counter-deficit reframes, and lineage all stay — the sentences just got shorter and plainer.
 - Added **no words right now** (situational mutism) and **too seen** (exposure anxiety) to Weather, and **no spotlight** to *What helps* — naming the voice going quiet and the discomfort of being seen, with lineage credited to Donna Williams.
@@ -16,7 +17,8 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
-- Added an **[Example spreads](https://cavendish.app/example-spreads.html)** page — worked gameplay examples that read a spread as a design brief for the environment, not a report on a child.
+- The site reflects the all-ages reframe (see Deck), and gained an example spread of **an adult using the deck for themselves** — no facilitator. The behind-the-scenes "adult layer" is now the **"facilitator layer"** across the guidebook and implementation pages.
+- Added an **[Example spreads](https://cavendish.app/example-spreads.html)** page — worked gameplay examples that read a spread as a design brief for the environment, not a report on a person.
 - The **guidebook** now links community vocabulary in each card's lineage to the Stimpunks glossary (monotropism, interoception, exposure anxiety, and more); the in-the-moment card view stays plain.
 - **Copy for a journal** now includes the date and an optional note field (kept only in the copy, never saved).
 
