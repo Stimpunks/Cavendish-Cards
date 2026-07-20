@@ -98,7 +98,7 @@ def build_svg(family, name, cue, prompt):
     if prompt == "—" or not prompt:
         prompt_svg = (
             f'<text x="60" y="{py}" font-family="{FONT}" font-size="29" '
-            f'font-style="italic" fill="{acc}">given, not read</text>'
+            f'font-style="italic" fill="{acc}">given or claimed</text>'
         )
     else:
         prompt_svg = "".join(

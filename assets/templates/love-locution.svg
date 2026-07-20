@@ -21,6 +21,6 @@
   <!-- name (the card's H1) -->
   <text x="60" y="862" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="66" font-weight="700" fill="#002b36">you belong here</text>
 
-  <!-- prompt (Love Locutions carry no prompt — given, not read) -->
-  <text x="60" y="922" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-style="italic" fill="#993C1D">given, not read</text>
+  <!-- prompt (Love Locutions carry no prompt — given or claimed) -->
+  <text x="60" y="922" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-style="italic" fill="#993C1D">given or claimed</text>
 </svg>

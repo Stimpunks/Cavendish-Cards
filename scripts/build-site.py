@@ -1039,12 +1039,16 @@ def _write_service_worker(root, web, faces):
     face_names = sorted(p.name for p in faces.glob("*.svg"))
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
-    for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js"):
+    for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js",
+                 "guidebook.html", "implementation.html", "why.html", "origin.html",
+                 "arles.html", "facilitator.html", "example-spreads.html",
+                 "privacy.html", "changelog.html"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
     for name in face_names:
         h.update(name.encode("utf-8"))
+        h.update((faces / name).read_bytes())
     for name in font_names:
         h.update(name.encode("utf-8"))
     _audio = web / "audio" / "ocean-waves.mp3"

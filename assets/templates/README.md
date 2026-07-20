@@ -7,7 +7,7 @@ Front templates for Cavendish Cards — one SVG per family, plus the two shared 
 - `places.svg`, `weather.svg`, `what-helps.svg`, `lily-pad.svg`, `grower.svg`, `love-locution.svg`, `blank.svg` — one front template per family.
 - `interaction.svg` — the interaction family. A special case: fixed color+shape designs (green circle, yellow triangle, red square, neutral diamond, orange star), not art-window frames — the badge is the art. Keep both color and shape for colorblind readers. The five finished faces live in [`assets/cards/interaction/`](../cards/interaction/).
 - `back-standard.svg` — the shared back for every family except Love Locutions.
-- `back-love-locution.svg` — the distinct Love Locution back, so a gift is never mistaken for a state or a need.
+- `back-love-locution.svg` — the distinct Love Locution back, so an affirmation is never mistaken for a state or a need.
 
 ## Card size
 
@@ -27,7 +27,7 @@ Art is human- and community-made. The frame holds the layout; it never supplies 
 - **Family tag** (top-left) — the family name in its color. Matches the `Family` field and the `cards/<family>/` folder.
 - **Art window** — `#art`.
 - **Name** — the card's H1, in Atkinson Hyperlegible bold.
-- **Prompt** — the gentle line. Love Locutions carry no prompt (given, not read); the blank card's window is a draw-on space, not an illustrator's.
+- **Prompt** — the gentle line. Love Locutions carry no prompt (given or claimed); the blank card's window is a draw-on space, not an illustrator's.
 
 ## Font
 
