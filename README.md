@@ -73,6 +73,7 @@ Plus a **blank card** — the deck isn't finished. A person or a facilitator dra
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a person. Also rendered as a page on the site.
 - [`cavendish-cards-why-sheet.md`](./cavendish-cards-why-sheet.md) — a [Why Sheet](https://stimpunks.org/why/) making the case for the deck and connecting it to the [Cavendish Space](https://stimpunks.org/space/) learning-space principles.
+- [`cavendish-cards-arles.md`](./cavendish-cards-arles.md) — the source for the site's ARLES page: how the deck fits the Stimpunks Design Method (Attention, Relational, Lived Experience, Environment, Systems).
 - [`cavendish-cards-privacy.md`](./cavendish-cards-privacy.md) — the source for the site's Privacy & security page: what's kept (almost nothing) and the security measures behind the site.
 - [`CHANGELOG.md`](./CHANGELOG.md) — notable changes to the deck and the site, newest first; also published as the [Changelog page](https://cavendish.app/changelog.html).
 - [`scripts/build-all.py`](./scripts/build-all.py) — runs all the build scripts below in one command.

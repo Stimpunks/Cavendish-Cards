@@ -40,7 +40,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 - **Rebuild rule:**
   - Deck-content or generator change → `python3 scripts/build-all.py`, then `git add -A && commit && push`.
   - Hand-authored web file (`web/index.html`, `web/styles.css`, `web/app.js`) → **no rebuild**; Netlify serves as-is. Just commit those files.
-  - `web/cards.json`, `web/guidebook.html`, `web/implementation.html`, `web/why.html`, `web/origin.html`, `web/facilitator.html`, `web/example-spreads.html`, and `web/faces/` are **gitignored** (generated; Netlify rebuilds).
+  - `web/cards.json`, `web/guidebook.html`, `web/implementation.html`, `web/why.html`, `web/origin.html`, `web/arles.html`, `web/facilitator.html`, `web/example-spreads.html`, and `web/faces/` are **gitignored** (generated; Netlify rebuilds).
 - After edits, Claude hands Ryan the exact `git add/commit/push` commands. **Claude cannot see whether a commit actually landed — always confirm.**
 - **Always mirror a validated container edit back into Ryan's repo** (the failure mode this session: patching the container copy but forgetting the `Filesystem:edit_file` to the repo → git sees nothing).
 

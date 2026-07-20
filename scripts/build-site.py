@@ -282,6 +282,7 @@ SITE_NAV = [
     ("Example spreads", "example-spreads.html", "example-spreads"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
+    ("ARLES & the cards", "arles.html", "arles"),
     ("Privacy & security", "privacy.html", "privacy"),
     ("Changelog", "changelog.html", "changelog"),
 ]
@@ -303,6 +304,7 @@ _MD_LINK = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
 _MD_BOLD = re.compile(r'\*\*([^*]+)\*\*')
 _MD_CODE = re.compile(r'`([^`]+)`')
 _MD_EM = re.compile(r'\*([^*\n]+?)\*')
+_MD_IMG = re.compile(r'^!\[([^\]]*)\]\(([^)]+)\)\s*$')
 
 
 def _md_inline(s):
@@ -355,6 +357,13 @@ def md_to_html(text):
             flush_all(); continue
         if s.startswith("# "):                       # drop title; shell owns <h1>
             flush_all(); continue
+        m = _MD_IMG.match(s)
+        if m:
+            flush_all()
+            _alt = html.escape(m.group(1), quote=True)
+            _src = html.escape(m.group(2), quote=True)
+            out.append(f'<figure class="fig"><img src="{_src}" alt="{_alt}" loading="lazy"></figure>')
+            continue
         if len(s) >= 3 and set(s) == {"-"}:           # --- horizontal rule
             flush_all(); continue
         if s.startswith("### "):
@@ -454,6 +463,15 @@ def origin_html(root):
         "Origin & lineage",
         "Where the Cavendish Space model behind the deck comes from, and its lineage.",
         "origin", "Skip to the origin", "Origin & lineage", "origin",
+        md_to_html(src))
+
+
+def arles_html(root):
+    src = (root / "cavendish-cards-arles.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "ARLES & the cards",
+        "How the deck fits the Stimpunks Design Method (ARLES): Attention, Relational, Lived Experience, Environment, Systems — and why it stops short of Systems as cards.",
+        "arles", "Skip to the ARLES page", "ARLES & the cards", "arles",
         md_to_html(src))
 
 
@@ -973,7 +991,7 @@ def implementation_md(out_families):
 
 _SITE_URL = "https://cavendish.app"
 _SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
-               "/why.html", "/origin.html", "/facilitator.html",
+               "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
@@ -1039,7 +1057,7 @@ def _write_service_worker(root, web, faces):
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
-        "/origin.html", "/facilitator.html", "/example-spreads.html",
+        "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
         "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
@@ -1167,6 +1185,7 @@ def main():
     (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
+    (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
