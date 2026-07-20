@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <!-- Cavendish Cards — Interaction card back (the availability badges are shown, not laid face-down — a worn signal, not a private state or need). CC0. Font: Atkinson Hyperlegible. -->
+  <defs><clipPath id="cardclip"><rect x="0" y="0" width="750" height="1050" rx="48"/></clipPath></defs>
+  <g clip-path="url(#cardclip)">
+    <rect x="0" y="0" width="750" height="1050" fill="#fdf6e3"/>
+    <!-- three badge tiles: green circle, yellow triangle, red square (white shape on colored ground, mirroring the fronts) -->
+    <rect x="120" y="245" width="150" height="150" rx="24" fill="#008026"/>
+    <circle cx="195" cy="320" r="46" fill="#ffffff"/>
+    <rect x="300" y="245" width="150" height="150" rx="24" fill="#FFED00"/>
+    <polygon points="375,278 329,366 421,366" fill="#ffffff"/>
+    <rect x="480" y="245" width="150" height="150" rx="24" fill="#E40303"/>
+    <rect x="510" y="275" width="90" height="90" fill="#ffffff"/>
+    <text x="375" y="600" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="66" font-weight="700" fill="#002b36">how open i am</text>
+    <line x1="305" y1="636" x2="445" y2="636" stroke="#2aa198" stroke-width="4"/>
+    <text x="375" y="692" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="28" fill="#586e75">right now — show it, flip it</text>
+      <rect x="0.00" y="1000" width="125.60" height="50" fill="#E40303"/>
+      <rect x="125.00" y="1000" width="125.60" height="50" fill="#FF8C00"/>
+      <rect x="250.00" y="1000" width="125.60" height="50" fill="#FFED00"/>
+      <rect x="375.00" y="1000" width="125.60" height="50" fill="#008026"/>
+      <rect x="500.00" y="1000" width="125.60" height="50" fill="#004DFF"/>
+      <rect x="625.00" y="1000" width="125.60" height="50" fill="#750787"/>
+  </g>
+</svg>

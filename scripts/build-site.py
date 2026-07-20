@@ -1081,7 +1081,7 @@ def main():
         sys.exit(f"cards/ not found at {cards_dir}")
     faces.mkdir(parents=True, exist_ok=True)
 
-    for back in ("back-standard.svg", "back-love-locution.svg"):
+    for back in ("back-standard.svg", "back-love-locution.svg", "back-interaction.svg"):
         src = root / "assets" / "templates" / back
         if src.exists():
             shutil.copyfile(src, faces / back)
@@ -1144,6 +1144,7 @@ def main():
                 reflections = list(REFLECTIONS.get(slug, []))
             has_prompt = bool(prompt) and prompt != "—"
             back = ("back-love-locution.svg" if slug == "love-locution"
+                    else "back-interaction.svg" if slug == "interaction"
                     else "back-standard.svg")
             card = {
                 "slug": cslug,

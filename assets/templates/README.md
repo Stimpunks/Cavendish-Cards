@@ -6,8 +6,9 @@ Front templates for Cavendish Cards — one SVG per family, plus the two shared 
 
 - `places.svg`, `weather.svg`, `what-helps.svg`, `lily-pad.svg`, `grower.svg`, `love-locution.svg`, `blank.svg` — one front template per family.
 - `interaction.svg` — the interaction family. A special case: fixed color+shape designs (green circle, yellow triangle, red square, neutral diamond, orange star), not art-window frames — the badge is the art. Keep both color and shape for colorblind readers. The five finished faces live in [`assets/cards/interaction/`](../cards/interaction/).
-- `back-standard.svg` — the shared back for every family except Love Locutions.
+- `back-standard.svg` — the shared back for the face-down realms (every family except Love Locutions and Interaction).
 - `back-love-locution.svg` — the distinct Love Locution back, so an affirmation is never mistaken for a state or a need.
+- `back-interaction.svg` — the distinct Interaction back; the badges are shown and worn, not laid face-down, so they don't share the standard back.
 
 ## Card size
 

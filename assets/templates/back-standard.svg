@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
-  <!-- Cavendish Cards — standard card back (all families except Love Locutions). CC0. Font: Atkinson Hyperlegible. -->
+  <!-- Cavendish Cards — standard card back (all families except Love Locutions and Interaction). CC0. Font: Atkinson Hyperlegible. -->
   <defs><clipPath id="cardclip"><rect x="0" y="0" width="750" height="1050" rx="48"/></clipPath></defs>
   <g clip-path="url(#cardclip)">
     <rect x="0" y="0" width="750" height="1050" fill="#fdf6e3"/>

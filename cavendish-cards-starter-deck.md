@@ -194,10 +194,11 @@ Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps"
 
 ---- 
 
-## Two card backs
+## Three card backs
 
-- **Standard back** — the umbrella logo, Solarized palette, a six-color rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
+- **Standard back** — the umbrella logo, Solarized palette, a six-color rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. Shared by the face-down realms: Places, Weather, What helps, Lily pads, Growers, and Blanks.
 - **Love Locution back** — visibly different, so an affirmation is never read like a state or a need. It marks a Kind word as its own kind of card: *held or given* — turned up for yourself, or handed to someone else.
+- **Interaction back** — the three availability badges (green circle, yellow triangle, red square) over the line *how open i am*. The Interaction realm is shown face-up and worn, not laid face-down, so the standard *how i feel, what i need* would misdescribe it; this back names a worn signal instead.
 
 The distinct back also does the sharing work: a spread laid face-down stays private until the person turns it up. The gesture of turning a card over *is* consent. Interaction cards are the deliberate exception: their job is to be shown, so they sit face-up, and the person changes them by flipping or swapping — still the person's choice, just worn openly.
 
