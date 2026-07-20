@@ -6,6 +6,12 @@ _Generated from the card files in `cards/` by `scripts/build-guidebook.py`. Do n
 
 **Not a screening tool.** These cards help a person say what they need, on their own terms. They are not a way to assess, score, sort, or diagnose anyone. A card names a need, never a symptom or a target. Used to rank or flag people, the deck becomes the opposite of what it is for. Broken systems, not broken people.
 
+It carries none of the frameworks that turn human difference into a problem to be managed:
+
+- **No pathology paradigm.** A card names a need, not a symptom. "Buzzy" describes an environment that is too much — not a disorder inside the person.
+- **No deficit ideology.** The deck records what helps, never what a person lacks. If it isn't working, the environment is what hasn't fit yet.
+- **No behaviorism.** No card is a target, a reward, or a compliance check. Turning a card up is communication, not performance — never something to shape a person toward "better" behavior.
+
 **Not an AAC board.** The deck is a lens, not a language. It makes one hard-to-voice thing — sensory, regulatory, and emotional weather, and the conditions that help — sayable, and it stops there. It is not a communication system and does not try to be comprehensive the way AAC must be. Most of all, it sits alongside a person's real communication tools, never in place of them: if a person needs a way to communicate, they need AAC, and "they have the cards" is never a reason to under-provide it.
 
 ----

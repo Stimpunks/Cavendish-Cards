@@ -132,6 +132,10 @@ h1 { font-size: 2rem; margin: 0 0 4px; color: var(--ink-strong); }
 
 .rules { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 14px; }
 .rules p { margin: 0; max-width: 46ch; }
+.rules.stack { flex-direction: column; align-items: flex-start; gap: 8px; }
+.rules.stack .rules-lead { margin-top: 2px; }
+.rules.stack .rules-list { margin: 0; padding-left: 1.2em; max-width: 46ch; }
+.rules.stack .rules-list li { margin: 4px 0; }
 
 .disclose { margin: 8px 0 0; }
 .disclose summary { cursor: pointer; color: var(--cyan-ink); font-weight: 700; padding: 4px 0; }

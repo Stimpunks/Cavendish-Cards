@@ -90,6 +90,26 @@ SCREENING = (
     "the opposite of what it is for. Broken systems, not broken people."
 )
 
+# The three refused frameworks, kept word-for-word in sync with README and with
+# build-site.py (FRAMEWORKS_LEAD / FRAMEWORKS there).
+FRAMEWORKS_LEAD = (
+    "It carries none of the frameworks that turn human difference into a problem "
+    "to be managed:"
+)
+
+FRAMEWORKS = [
+    ("No pathology paradigm",
+     "A card names a need, not a symptom. \"Buzzy\" describes an environment "
+     "that is too much — not a disorder inside the person."),
+    ("No deficit ideology",
+     "The deck records what helps, never what a person lacks. If it isn't working, "
+     "the environment is what hasn't fit yet."),
+    ("No behaviorism",
+     "No card is a target, a reward, or a compliance check. Turning a card up is "
+     "communication, not performance — never something to shape a person toward "
+     "\"better\" behavior."),
+]
+
 NOT_AAC = (
     "The deck is a lens, not a language. It makes one hard-to-voice thing — "
     "sensory, regulatory, and emotional weather, and the conditions that help — "
@@ -292,6 +312,10 @@ def main():
         "cards and regenerate._",
         "",
         f"**Not a screening tool.** {SCREENING}",
+        "",
+        FRAMEWORKS_LEAD,
+        "",
+        *[f"- **{t}.** {b}" for t, b in FRAMEWORKS],
         "",
         f"**Not an AAC board.** {NOT_AAC}",
         "",
