@@ -4,11 +4,20 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
-## 2026-07-19
+## 2026-07-20
 
 ### Deck
 
 - **Kind words reframe:** no longer framed as *a gift*. A Kind word is **given to someone, or claimed for yourself** — never earned. The card back now reads *a kind word* / *you don't have to earn it* (was *a gift* / *given, not earned*), the faces read *given or claimed*, and the guidebook and starter deck match. Self-use is first-class alongside giving.
+
+### Site
+
+- Offline cache now updates on art-only and guidebook-only changes: the service worker versions by page and card-face **content**, not just filenames — so returning visitors always get the current deck.
+
+## 2026-07-19
+
+### Deck
+
 - Added **let me unmask** (What helps) — permission, and a safe space, to drop the mask for anyone who masks to get by. It names the *need* to stop performing, not the act of masking itself. Lineage: masking / camouflaging; freedom of embodiment (Nick Walker).
 - **All-ages reframe:** the whole deck now speaks to people of any age, not just children — *child* becomes *person* throughout, and *adult* becomes *facilitator* where it means the support role (age-neutral wording elsewhere). Self-use and peer-use are first-class: the deck is as much for an Autistic adult naming their own conditions as for a child. The child-safety commitments stay, and children are still named explicitly.
 - Mapped the deck to the **[Stimpunks Pattern Library](https://stimpunks.org/patterns/library/)**: each card can carry an optional Pattern field, and the guidebook now shows the pattern(s) each card instantiates, linking the published ones. Facilitator-layer only — patterns never appear on the card itself, the starter deck, or the web card view.
@@ -20,7 +29,6 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
-- Offline cache now updates on art-only and guidebook-only changes: the service worker versions by page and card-face **content**, not just filenames — so returning visitors always get the current deck.
 - Added an **[ARLES & the cards](https://cavendish.app/arles.html)** page — how the deck fits the Stimpunks Design Method (Attention → Relational → Lived Experience → Environment → Systems), with the design-method poster. Markdown pages can now include images.
 - The site reflects the all-ages reframe (see Deck), and gained an example spread of **an adult using the deck for themselves** — no facilitator. The behind-the-scenes "adult layer" is now the **"facilitator layer"** across the guidebook and implementation pages.
 - Added an **[Example spreads](https://cavendish.app/example-spreads.html)** page — worked gameplay examples that read a spread as a design brief for the environment, not a report on a person.
