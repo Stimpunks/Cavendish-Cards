@@ -136,7 +136,7 @@ Who am I today. Optional. A non-deficit way to hold that different people bloom 
 
 ## Love Locutions (9)
 
-Affirmations. Given between people, never earned, never a reward for behaving. Distinct card back so it reads as a gift. If it's a prize, it's scoring — keep it a gift.
+Affirmations. Given to someone, or claimed for yourself — never earned, never a reward for behaving. A distinct card back marks them as affirmations, held or given, rather than a state or a need. If a Kind word is ever treated as a prize, that's scoring — they are never earned.
 
 | Name                            | Image cue                                              | Prompt |
 | ------------------------------- | ------------------------------------------------------ | ------ |
@@ -197,7 +197,7 @@ Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps"
 ## Two card backs
 
 - **Standard back** — the umbrella logo, Solarized palette, a six-color rainbow accent, and the line *how i feel, what i need*, set in Atkinson Hyperlegible. One shared back for Places, Weather, What helps, Lily pads, Growers, Interaction, and Blanks.
-- **Love Locution back** — visibly different, so a gift is never mistaken for a state or a need. It should read, at a glance, as *someone gave me this.*
+- **Love Locution back** — visibly different, so an affirmation is never read like a state or a need. It marks a Kind word as its own kind of card: *held or given* — turned up for yourself, or handed to someone else.
 
 The distinct back also does the sharing work: a spread laid face-down stays private until the person turns it up. The gesture of turning a card over *is* consent. Interaction cards are the deliberate exception: their job is to be shown, so they sit face-up, and the person changes them by flipping or swapping — still the person's choice, just worn openly.
 

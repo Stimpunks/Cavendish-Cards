@@ -31,7 +31,7 @@ FAMILIES = [
      "Who am I today. A non-deficit way to hold that different people bloom in "
      "different conditions."),
     ("love-locution", "Love Locutions",
-     "Affirmations. Given between people, never earned — a gift, never a reward."),
+     "Affirmations. Given to someone, or claimed for yourself — never earned, never a reward."),
     ("interaction", "Interaction",
      "How open I am to talking, right now. The Autistic community's color "
      "communication badges."),
@@ -261,7 +261,7 @@ def render_card(name, cue, prompt, notes, pattern=""):
     if prompt and prompt != "—":
         meta += f' · "{prompt}"' if meta else f'"{prompt}"'
     elif prompt == "—":
-        meta += " · given, not read" if meta else "given, not read"
+        meta += " · given or claimed, not read" if meta else "given or claimed, not read"
     parts = [f"### {name}"]
     if meta:
         parts.append(meta)
