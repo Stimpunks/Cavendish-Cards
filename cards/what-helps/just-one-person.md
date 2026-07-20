@@ -16,6 +16,11 @@ Not a crowd — one person.
 
 Just one person is two figures side by side — one companion, not a crowd. This card names a need to shrink the social field: one trusted person at a time, where a group would be too much. Liking one-to-one is a real access need, not being antisocial. When this card is out, thin the crowd. Offer a single steady person, and don't make group joining the only way to count as taking part.
 
+## Pattern
+
+06 social-energy
+34 collaboration-gradients
+
 ----
 
 ## License

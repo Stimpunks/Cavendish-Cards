@@ -22,6 +22,11 @@ whole, unbroken shape
 
 "You're not broken" is a whole shape, not a broken one — the heart of the deck, said straight to a person. Your difference is real and your struggle is real, but neither one makes you broken: broken systems, not broken people. When this card is given, it answers a lifetime of the opposite message — so give it plainly and often, and don't add a "but."
 
+## Pattern
+
+51 bodymind-affirmation
+39 average-user-fallacy
+
 ----
 
 ## License

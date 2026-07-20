@@ -16,6 +16,11 @@ The deck isn't finished. What's missing?
 
 The blank card is an empty front and a pencil — a card that isn't drawn yet. It names the fact that the deck isn't finished. Whatever a person needs that no card says yet, this is where it gets made. A blank is not a gap to say sorry for. It's the deck admitting it can't know every need in advance. When this card is out, take the missing need seriously. Draw it with the child, let it join whichever family fits, and send it back so the shared deck can grow. This is how the deck gets made: use it, find the gap, make the card.
 
+## Pattern
+
+47 collaborative-niche-construction
+43 commons-infrastructure
+
 ----
 
 ## License

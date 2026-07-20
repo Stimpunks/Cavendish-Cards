@@ -16,6 +16,11 @@ eyes meeting, kindly
 
 "I see you" is eyes meeting, kindly — the plain fact of being truly noticed. It says: you are not looked past, not managed, but really seen and known. Being seen as yourself is rare, and it steadies you. When this card is given, let it be true. See the actual person in front of you, and let them feel it.
 
+## Pattern
+
+23 co-regulation
+51 bodymind-affirmation
+
 ----
 
 ## License

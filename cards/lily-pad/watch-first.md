@@ -16,6 +16,11 @@ Let me look before I join.
 
 "Watch first" is a pair of eyes at the edge of a group — looking before going in. It names a real way of joining in: taking part by watching until things are clear enough to step into. Watching is taking part, not shyness to be pushed past. When this card is out, let the watching stand. No coaxing to join, and count the edge of the group as being in it.
 
+## Pattern
+
+34 collaboration-gradients
+27 interaction-access
+
 ----
 
 ## License

@@ -16,6 +16,11 @@ an open, unjudging space
 
 "It's okay to need what you need" is an open space with no judgment — room to have your own needs. It says: your needs are fine exactly as they are. Not too much, not embarrassing, not up for debate. Needing support is not a flaw. When this card is given, drop the judgment completely. The need is fine, and asking for it should cost nothing.
 
+## Pattern
+
+51 bodymind-affirmation
+32 consent-over-compliance
+
 ----
 
 ## License

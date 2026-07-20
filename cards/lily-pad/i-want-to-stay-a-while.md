@@ -22,6 +22,11 @@ I'm good here. Let me stay.
 
 This card names the wish to stay put — not stuck, not avoiding, just not done yet. Wanting to stay is as okay as wanting to move on. When this card is out, let the staying stand. Don't hurry the crossing just because the schedule wants it.
 
+## Pattern
+
+05 deep-attention
+01 monotropism
+
 ----
 
 ## License

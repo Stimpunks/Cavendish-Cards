@@ -16,6 +16,11 @@ I'm finished here.
 
 "All done" is a closed, happy loop — a clean ending, chosen. It names finishing: this is done, and it's theirs to call. Calling your own ending is different from being made to stop. When this card is out, honor the ending. Let "done" mean done — no one-more-thing, and no arguing over whether it really is.
 
+## Pattern
+
+32 consent-over-compliance
+13 context-switching-cost
+
 ----
 
 ## License

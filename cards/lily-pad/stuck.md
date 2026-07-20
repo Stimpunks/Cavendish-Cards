@@ -22,6 +22,11 @@ I can't get going. That's okay.
 
 "Stuck" is a figure paused between two lily pads, unable to get going for now. This is a real state, not something to scold — the engine won't start yet, and that tells you about the moment, not the person. Stuck is a place to rest, never a failure. When this card is out, don't push them across the gap. Ask what would help them where they are, or offer a what-helps card and let them choose.
 
+## Pattern
+
+13 context-switching-cost
+16 cognitive-load-windows
+
 ----
 
 ## License

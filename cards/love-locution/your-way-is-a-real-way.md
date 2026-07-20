@@ -16,6 +16,11 @@ many paths, all valid
 
 "Your way is a real way" is many paths, all of them good — a person's own way honored. It says: a different route to the same place still counts. Your way of doing, thinking, or being is not a wrong version of someone else's. Different is not deficient. When this card is given, back it up in practice. Let the person's way actually stand, instead of praising it and then overriding it.
 
+## Pattern
+
+45 cognitive-pluralism
+51 bodymind-affirmation
+
 ----
 
 ## License

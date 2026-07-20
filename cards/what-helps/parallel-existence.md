@@ -16,6 +16,11 @@ Someone alongside me, each doing our own thing.
 
 Two figures side by side, each in their own world — company without any push to interact. This card names body doubling: being near someone while you each do your own thing. The shared presence steadies you, with no pull to talk or join in. For many people this is the easiest kind of togetherness. When this card is out, offer quiet company. Settle nearby, expect nothing, and don't turn it into a conversation.
 
+## Pattern
+
+29 parallel-presence
+23 co-regulation
+
 ----
 
 ## License

@@ -22,6 +22,11 @@ a calm, open space with no question hanging in the air
 
 "You don't have to talk" is a calm, open space with no question hanging in it — quiet made welcome. It says: not speaking is not the same as not knowing. Speech is not the measure of a mind, and staying quiet costs nothing here. Presume competence: the quiet person is thinking, understanding, and fully here, whether or not the words come out. When this card is given, mean it with no test — no coaxing for "just one word," no reward for speaking, just real ease with the quiet. Lineage: presume competence.
 
+## Pattern
+
+51 bodymind-affirmation
+30 communication-bandwidth
+
 ----
 
 ## License

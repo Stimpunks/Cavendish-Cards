@@ -16,6 +16,10 @@ Something to eat or drink.
 
 This card names a body need that quietly throws everything else off — hunger, thirst, running low on fuel. This is upkeep, not being off-task. When this card is out, meet it without making it a negotiation.
 
+## Pattern
+
+10 energy-accounting
+
 ----
 
 ## License
