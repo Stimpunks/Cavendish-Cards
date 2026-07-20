@@ -16,6 +16,11 @@ Everything's rubbing the wrong way.
 
 Prickly is thorns and scratchy edges — every touch, sound, and interruption rubbing the wrong way. This card names feeling irritable and raw, when ordinary things suddenly grate. This is the body reacting to its surroundings, not bad behavior. When this card is out, reduce the friction. Soften the textures, lower the demands, make space, and don't take the sharpness personally.
 
+## Pattern
+
+03 sensory-load
+18 sensory-thresholds
+
 ----
 
 ## License

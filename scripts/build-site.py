@@ -34,6 +34,18 @@ def _load_placeholders():
     return mod
 
 
+def _load_guidebook():
+    # Reuse the Pattern crosswalk registry + renderers so the web guidebook and
+    # the Markdown guidebook can't drift. Single source of truth in build-guidebook.py.
+    path = Path(__file__).resolve().parent / "build-guidebook.py"
+    if not path.exists():
+        sys.exit(f"Could not find {path}")
+    spec = importlib.util.spec_from_file_location("build_guidebook", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 # Family display order on the web (interaction first, per playtest feedback),
 # with display name and a short player-facing intro.
 FAMILIES = [
@@ -523,9 +535,10 @@ def guidebook_html(out_families):
             else:
                 meta = f'<em>{e(c["cue"])}</em>'
             note = f'<p>{_md_inline(c["notes"])}</p>' if c["notes"] else ''
+            pattern = c.get("_pattern", "")
             entries.append(
                 f'<article class="gb-entry"><h3>{e(c["name"])}</h3>'
-                f'<p class="gb-meta">{meta}</p>{note}</article>'
+                f'<p class="gb-meta">{meta}</p>{note}{pattern}</article>'
             )
         realm_note = GUIDEBOOK_NOTES.get(fam["slug"], "")
         gb_name = GB_NAMES.get(fam["slug"], fam["name"])
@@ -1037,6 +1050,7 @@ def _write_service_worker(root, web, faces):
 
 def main():
     bp = _load_placeholders()
+    gb = _load_guidebook()
     root = Path(__file__).resolve().parent.parent
     cards_dir = root / "cards"
     web = root / "web"
@@ -1073,6 +1087,11 @@ def main():
             cue = sec.get("Image cue", "").strip()
             prompt = sec.get("Prompt", "").strip()
             notes = sec.get("Notes", "").strip()
+            # Adult-layer only. Underscore keys are stripped before cards.json,
+            # so the Pattern crosswalk reaches the web guidebook but never the
+            # card view — same one-way wall as the Markdown guidebook.
+            pattern_html = gb.render_pattern_html(
+                gb.parse_pattern_field(sec.get("Pattern", "").strip()))
             cslug = f.stem
 
             finished = root / "assets" / "cards" / slug / f"{cslug}.svg"
@@ -1115,6 +1134,7 @@ def main():
                 "back": f"faces/{back}",
                 "group": grp,
                 "reflections": reflections,
+                "_pattern": pattern_html,
             }
             if slug in BUILD_LINKS:
                 card["buildLink"] = BUILD_LINKS[slug]
@@ -1131,9 +1151,13 @@ def main():
                 fam_obj["groupOrder"] = order
             out_families.append(fam_obj)
 
+    # Underscore-prefixed keys are adult-layer build state (e.g. _pattern) and
+    # must never reach the web deck's card view. Strip them here.
     json_families = [
-        {**fam, "cards": [{**c, "notes": _strip_md_links(c["notes"])}
-                          for c in fam["cards"]]}
+        {**fam, "cards": [
+            {**{k: v for k, v in c.items() if not k.startswith("_")},
+             "notes": _strip_md_links(c["notes"])}
+            for c in fam["cards"]]}
         for fam in out_families
     ]
     (web / "cards.json").write_text(

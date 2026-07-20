@@ -16,6 +16,11 @@ Softer light.
 
 Dim the light is a dial turned down — harsh brightness eased to something softer. This card names being sensitive to light: bright bulbs, glare, or sheer strength that most people tune out but this body can't. Lowering the light is a change to the room, not a special favor. When this card is out, soften the light where you can, and treat a too-bright room as the thing to fix.
 
+## Pattern
+
+18 sensory-thresholds
+37 sensory-gradients
+
 ----
 
 ## License

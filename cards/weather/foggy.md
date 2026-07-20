@@ -16,6 +16,11 @@ Hard to think, everything's slow.
 
 Foggy is low mist with the edges blurred. Thinking has gone slow and soft, and it's hard to find words or hold a plan. This card names brain fog: things process slower and less clearly, often after too much has already happened. Fog is something to wait out, not a failure to try harder. When this card is out, slow down and keep it simple. One thing at a time, no rush, and let the mist lift on its own.
 
+## Pattern
+
+04 processing-time
+16 cognitive-load-windows
+
 ----
 
 ## License

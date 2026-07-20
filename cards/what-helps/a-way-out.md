@@ -16,6 +16,11 @@ A way to leave that I can use.
 
 A way out is an open door — an exit you can see and use. This card names the need to know you can leave. It's not always about leaving; it's about being sure that leaving is allowed. Often, just knowing the door is there is what makes staying possible. When this card is out, make the exit certain: a clear way to step out, no asking ritual, no penalty for using it.
 
+## Pattern
+
+32 consent-over-compliance
+35 predictable-structure
+
 ----
 
 ## License

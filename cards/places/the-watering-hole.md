@@ -16,6 +16,11 @@ A soft place to pause and be near people.
 
 The watering hole is the open, in-between place where people cross paths and talk easily — near others, with no need to join in. It names easy, background togetherness: drifting in and out, overhearing, being among people with no task or script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge. Being near people is the whole point, and joining in stays optional.
 
+## Pattern
+
+29 parallel-presence
+34 collaboration-gradients
+
 ----
 
 ## License

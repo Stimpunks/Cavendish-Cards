@@ -22,6 +22,11 @@ Firm pressure that steadies me.
 
 A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. This card names how firm pressure can calm the body. Many bodies feel steadier with a big squeeze when a light touch wouldn't help. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only the pressure they ask for, on their terms.
 
+## Pattern
+
+18 sensory-thresholds
+22 regulation-windows
+
 ----
 
 ## License

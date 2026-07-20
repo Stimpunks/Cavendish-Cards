@@ -16,6 +16,11 @@ On alert, watching for danger.
 
 Meerkat is the on-alert feeling — standing guard, scanning for danger, unable to settle or focus, wanting someone safe close by. This card names a body stuck on high alert: not misbehaving, not clingy, but overwhelmed and looking for safety. When this card is out, be the safe one. Come close, stay near, lower the demands, and don't leave them to face it alone. Lineage: [meerkat mode](https://stimpunks.org/glossary/meerkat-mode/) (Tanya Adkin and David Gray-Hammond).
 
+## Pattern
+
+23 co-regulation
+07 regulation-first
+
 ----
 
 ## License

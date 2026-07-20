@@ -16,6 +16,11 @@ Let me get to a stopping point first.
 
 Let me finish is the need to reach a stopping point before switching — not rushed, not cut off partway, but given a moment to bring things to a close. Coming out of deep focus takes time. The mind has to pull its tendrils back in before it can move on, and being stopped mid-thing is jarring and costly. This is different from a warning (tell me first) and from an easy pace (no rush) — it's about landing, not just slowing. When this card is out, offer a stopping point instead of a hard stop: "finish that bit first," a few more minutes, a chance to save your place. Lineage: [tendril theory](https://stimpunks.org/glossary/tendril-theory/) (Erin, @EisforErin).
 
+## Pattern
+
+13 context-switching-cost
+05 deep-attention
+
 ----
 
 ## License

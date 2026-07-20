@@ -16,6 +16,11 @@ Let me know before it changes.
 
 Tell me first is a small heads-up sign — a warning before a change. This card names a need to know what's coming, so a change doesn't arrive as a shock. Surprise is costly for many nervous systems, and a heads-up is cheap to give. When this card is out, say what's next before it happens, every time you can.
 
+## Pattern
+
+35 predictable-structure
+13 context-switching-cost
+
 ----
 
 ## License

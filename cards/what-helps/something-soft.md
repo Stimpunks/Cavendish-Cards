@@ -16,6 +16,11 @@ Something to hold and squeeze.
 
 Something soft is a plush thing to hold — comfort and grounding through touch. This card names a need for something to hold onto: something gentle to squeeze, stroke, or keep close when the world is a lot. Holding an object to steady yourself is a real way to cope, not babyish. When this card is out, let the soft thing stay. Comfort objects belong wherever the person does.
 
+## Pattern
+
+15 attention-anchors
+18 sensory-thresholds
+
 ----
 
 ## License

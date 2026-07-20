@@ -73,6 +73,19 @@ One card, one file. Copy this file, fill it in, delete the guidance, open a pull
 
 `[ optional — one question per line, or omit to use the family's questions ]`
 
+## Pattern
+
+<!-- Optional. Adult layer only. Which Stimpunks Pattern(s) this card instantiates,
+     for the guidebook and facilitator — it maps the child's word to the designer's.
+     One per line, primary first, as `NN slug` (e.g. `03 sensory-load`). Slugs and
+     numbers are the Pattern Library's (https://stimpunks.org/patterns/library/).
+     This NEVER shows on the card face, in the starter deck, or in the web card view
+     — same wall as materials. Leave it out if no Pattern cleanly fits; a card that
+     names something the Library hasn't patterned yet is a finding, not an error.
+     See cavendish-cards-pattern-crosswalk.md for the full map. -->
+
+`[ optional — one `NN slug` per line, primary first, or omit ]`
+
 ---- 
 
 ## License

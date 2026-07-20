@@ -16,6 +16,11 @@ Space to move my body.
 
 Room to move is open floor — space to pace, rock, spin, or stim. This card names a need for movement: motion that helps a body settle and think, not fidgeting to be stopped. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement instead of asking the body to be still. Stillness is not the goal.
 
+## Pattern
+
+19 stim-regulation
+50 bodymind-break
+
 ----
 
 ## License

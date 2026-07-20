@@ -22,6 +22,11 @@ Low and weighed down.
 
 Heavy is a weighted sky pressing down. Everything is harder to lift, and both movement and mood slow down. This card names a low, weighed-down feeling: flat, tired, dim. Heavy weather is real weather. It is not laziness, and it is not a choice. When this card is out, lighten the load instead of pushing against it. Fewer expectations, gentle company or none, and time.
 
+## Pattern
+
+10 energy-accounting
+12 energy-recovery
+
 ----
 
 ## License

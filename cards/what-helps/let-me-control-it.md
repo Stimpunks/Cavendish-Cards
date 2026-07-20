@@ -22,6 +22,11 @@ Let me be the one to change it.
 
 This is a hand on the switch — the person turning the light, the sound, or the thing up or down themselves. This card names control as its own need. It's not one right setting; it's being the one who decides and adjusts. For many people the same input is fine when they hold the dial, and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — instead of setting it for them.
 
+## Pattern
+
+32 consent-over-compliance
+09 environment-fit
+
 ----
 
 ## License

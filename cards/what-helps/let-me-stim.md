@@ -16,6 +16,11 @@ Let me move and stim the way I need.
 
 Stimming is how many bodies settle and steady themselves — rocking, flapping, humming, pacing, tapping. This card names the need to move in your own way, freely, without being stopped or corrected. It is regulation and expression, not misbehavior. The freedom to move is part of the freedom to be. When this card is out, make room for the movement and let it be — never still it. Lineage: freedom of embodiment, from the Neuroqueer Learning Spaces Manifesto and Nick Walker's *Neuroqueer Heresies*.
 
+## Pattern
+
+19 stim-regulation
+51 bodymind-affirmation
+
 ----
 
 ## License

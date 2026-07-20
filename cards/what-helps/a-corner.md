@@ -22,6 +22,11 @@ Somewhere with sides, at my back.
 
 A corner is the cheapest cave there is — two walls meeting, a covered back, an edge to settle against. This card names a pull toward being tucked in. Sides and edges cut down the input and help a body feel held. Corners and nooks are in every room and cost nothing. When this card is out, find the person a corner, or make one with a shelf or some furniture, instead of asking them to settle out in the open.
 
+## Pattern
+
+21 sensory-safe-zones
+38 attention-sanctuaries
+
 ----
 
 ## License

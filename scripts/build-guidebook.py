@@ -13,6 +13,7 @@ Usage:
 """
 
 from pathlib import Path
+import html
 import sys
 
 # Family order (deck order) with display name and one-line intro.
@@ -100,6 +101,130 @@ NOT_AAC = (
 )
 
 
+# ---- Pattern crosswalk (adult layer) --------------------------------------
+# Maps a card's optional ## Pattern field into the Stimpunks Pattern Library.
+# Adult layer only, same wall as materials: this renders in the guidebook and
+# the facilitator, and NEVER on a card face, in the starter deck, or in the web
+# deck's card view. The Pattern names the reality in the designer's frame; the
+# card names it in the child's. Two frames, one reality.
+#
+# slug -> (library number, display name, published?). Only published patterns
+# have a live page to link; planned ones render as plain text until their page
+# ships. Status as of the Pattern Library at build time — bump `published` to
+# True when a page goes live. Source of truth for number/name/status lives here,
+# so a stale number typed in a card self-corrects on build.
+PATTERN_LIBRARY_URL = "https://stimpunks.org/patterns/library/"
+PATTERNS = {
+    "monotropism": (1, "Monotropism", True),
+    "spiky-profiles": (2, "Spiky Profiles", True),
+    "sensory-load": (3, "Sensory Load", True),
+    "processing-time": (4, "Processing Time", True),
+    "deep-attention": (5, "Deep Attention", True),
+    "social-energy": (6, "Social Energy", True),
+    "regulation-first": (7, "Regulation First", True),
+    "masking-pressure": (8, "Masking Pressure", True),
+    "environment-fit": (9, "Environment Fit", True),
+    "energy-accounting": (10, "Energy Accounting", True),
+    "burnout-threshold": (11, "Burnout Threshold", True),
+    "energy-recovery": (12, "Energy Recovery", True),
+    "context-switching-cost": (13, "Context Switching Cost", True),
+    "interest-driven-learning": (14, "Interest-Driven Learning", True),
+    "attention-anchors": (15, "Attention Anchors", True),
+    "cognitive-load-windows": (16, "Cognitive Load Windows", True),
+    "attention-ecology": (17, "Attention Ecology", True),
+    "sensory-thresholds": (18, "Sensory Thresholds", True),
+    "stim-regulation": (19, "Stim Regulation", False),
+    "sensory-filtering": (20, "Sensory Filtering", False),
+    "sensory-safe-zones": (21, "Sensory Safe Zones", False),
+    "regulation-windows": (22, "Regulation Windows", False),
+    "co-regulation": (23, "Co-Regulation", False),
+    "interaction-access": (27, "Interaction Access", False),
+    "double-empathy": (28, "Double Empathy", False),
+    "parallel-presence": (29, "Parallel Presence", False),
+    "communication-bandwidth": (30, "Communication Bandwidth", False),
+    "social-translation": (31, "Social Translation", False),
+    "consent-over-compliance": (32, "Consent Over Compliance", False),
+    "meeting-friction": (33, "Meeting Friction", False),
+    "collaboration-gradients": (34, "Collaboration Gradients", False),
+    "predictable-structure": (35, "Predictable Structure", False),
+    "cognitive-map-clarity": (36, "Cognitive Map Clarity", False),
+    "sensory-gradients": (37, "Sensory Gradients", False),
+    "attention-sanctuaries": (38, "Attention Sanctuaries", False),
+    "average-user-fallacy": (39, "Average User Fallacy", False),
+    "meritocracy-trap": (40, "Meritocracy Trap", False),
+    "administrative-burden": (41, "Administrative Burden", False),
+    "metric-fixation": (42, "Metric Fixation", False),
+    "commons-infrastructure": (43, "Commons Infrastructure", False),
+    "ecologies-of-care": (44, "Ecologies of Care", False),
+    "cognitive-pluralism": (45, "Cognitive Pluralism", False),
+    "neurodivergent-institutions": (46, "Neurodivergent Institutions", False),
+    "collaborative-niche-construction": (47, "Collaborative Niche Construction", False),
+    "neurodivergent-civilization": (48, "Neurodivergent Civilization", False),
+    "environmental-weathering": (49, "Environmental Weathering", False),
+    "bodymind-break": (50, "Bodymind Break", False),
+    "bodymind-affirmation": (51, "Bodymind Affirmation", False),
+}
+
+
+def parse_pattern_field(raw):
+    """Parse a ## Pattern block into an ordered list of pattern dicts.
+
+    Each non-empty line is `NN slug` (number optional); the slug is the last
+    whitespace token, so `03 sensory-load` and `sensory-load` both work. The
+    registry is the source of truth for number, name, and status. Unknown slugs
+    are warned and skipped rather than crashing the build. Order is preserved —
+    primary pattern first.
+    """
+    items = []
+    for line in (raw or "").splitlines():
+        line = line.strip().lstrip("-*").strip()
+        if not line:
+            continue
+        slug = line.split()[-1]
+        info = PATTERNS.get(slug)
+        if not info:
+            print(f"  ! unknown pattern slug: {slug!r}", file=sys.stderr)
+            continue
+        num, name, published = info
+        items.append({"num": num, "name": name, "slug": slug,
+                      "published": published})
+    return items
+
+
+def _pattern_label(item):
+    return f"{item['num']:02d} {item['name']}"
+
+
+def render_pattern_md(items):
+    """Trailing guidebook line, e.g. `*Pattern: [03 Sensory Load](url) · ...*`."""
+    if not items:
+        return ""
+    parts = []
+    for it in items:
+        label = _pattern_label(it)
+        if it["published"]:
+            parts.append(f"[{label}]({PATTERN_LIBRARY_URL}{it['slug']}/)")
+        else:
+            parts.append(label)
+    return "*Pattern: " + " · ".join(parts) + "*"
+
+
+def render_pattern_html(items):
+    """Same line as HTML, for the web guidebook. Published patterns link out."""
+    if not items:
+        return ""
+    parts = []
+    for it in items:
+        label = html.escape(_pattern_label(it))
+        if it["published"]:
+            parts.append(
+                f'<a href="{PATTERN_LIBRARY_URL}{it["slug"]}/">{label}</a>')
+        else:
+            parts.append(label)
+    return ('<p class="gb-pattern muted">Pattern: '
+            + " &middot; ".join(parts) + "</p>")
+
+
 def parse_card(path):
     """Return (name, {section_heading: text}) for a card file, excluding License."""
     name = None
@@ -131,7 +256,7 @@ def parse_card(path):
     return name, sections
 
 
-def render_card(name, cue, prompt, notes):
+def render_card(name, cue, prompt, notes, pattern=""):
     meta = f"*{cue}*" if cue else ""
     if prompt and prompt != "—":
         meta += f' · "{prompt}"' if meta else f'"{prompt}"'
@@ -142,6 +267,9 @@ def render_card(name, cue, prompt, notes):
         parts.append(meta)
     parts.append("")
     parts.append(notes if notes else "_No guidebook entry yet._")
+    if pattern:
+        parts.append("")
+        parts.append(pattern)
     return "\n".join(parts)
 
 
@@ -189,6 +317,8 @@ def main():
                 sections.get("Image cue", "").strip(),
                 sections.get("Prompt", "").strip(),
                 sections.get("Notes", "").strip(),
+                render_pattern_md(parse_pattern_field(
+                    sections.get("Pattern", "").strip())),
             ))
             doc.append("")
             count += 1

@@ -22,6 +22,11 @@ Fewer things to look at.
 
 One wall is crowded with stuff; one wall is calm and bare. This card asks for the bare one. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing the view is free. When this card is out, take some things down, or turn the person toward a plainer view. Reduce what there is to look at, not what the person can cope with.
 
+## Pattern
+
+20 sensory-filtering
+03 sensory-load
+
 ----
 
 ## License
