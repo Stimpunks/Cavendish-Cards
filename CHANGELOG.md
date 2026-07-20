@@ -8,6 +8,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Deck
 
+- Added **let me unmask** (What helps) — permission, and a safe space, to drop the mask for anyone who masks to get by. It names the *need* to stop performing, not the act of masking itself. Lineage: masking / camouflaging; freedom of embodiment (Nick Walker).
 - **All-ages reframe:** the whole deck now speaks to people of any age, not just children — *child* becomes *person* throughout, and *adult* becomes *facilitator* where it means the support role (age-neutral wording elsewhere). Self-use and peer-use are first-class: the deck is as much for an Autistic adult naming their own conditions as for a child. The child-safety commitments stay, and children are still named explicitly.
 - Added **big step** (Weather) — threshold anxiety: the dread at the edge of a change, like a doorway, a first day, or graduating. The moves for crossing it live in *Lily pads* and *What helps*.
 - **Plain-language pass across the whole deck:** every card's guidebook entry rewritten to about a grade-6 reading level (down from ~7.8), one idea per sentence, following [ASAN's plain-language guidance](https://autisticadvocacy.org/resources/accessibility/easyread/). The metaphors, counter-deficit reframes, and lineage all stay — the sentences just got shorter and plainer.

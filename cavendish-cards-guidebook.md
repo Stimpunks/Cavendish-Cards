@@ -336,6 +336,13 @@ Stimming is how many bodies settle and steady themselves — rocking, flapping, 
 
 *Pattern: 19 Stim Regulation · 51 Bodymind Affirmation*
 
+### let me unmask
+*a figure gently lowering a smiling paper mask away from their face — behind it, their own softer, real expression, shoulders easing. warm and relieved, never scary* · "Let me drop the mask here."
+
+Let me unmask is the need to set the mask down — to stop performing and let your real face show. Masking is the tiring work of hiding Autistic ways of being to seem okay, and it is survival, not a choice. It wears a body out. This card asks for a place, and people, where the performance can stop — where stimming, looking away, or going quiet costs nothing. When this card is out, make it safe to drop the mask: don't correct the stims, don't read quiet or little eye contact as rudeness, and never make seeming "normal" the price of belonging. Lineage: masking / camouflaging; freedom of embodiment, from Nick Walker's *Neuroqueer Heresies*.
+
+*Pattern: [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/) · 51 Bodymind Affirmation*
+
 ### my own spot
 *a marked place that's mine* · "A place that's just mine."
 

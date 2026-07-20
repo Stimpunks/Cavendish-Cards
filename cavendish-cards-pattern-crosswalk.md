@@ -91,6 +91,7 @@ The niche-construction realm. The card names the *need*; the Pattern names the *
 | parallel existence | **29 Parallel Presence** · 23 Co-Regulation | body doubling |
 | a snack or a drink | **10 Energy Accounting** | maintenance, not off-task |
 | no-spotlight | **08 Masking Pressure** | relief from observation/performance demand — also the fix for exposure anxiety (a gap) |
+| let me unmask | **08 Masking Pressure** · 51 Bodymind Affirmation | permission to drop the performance — a need, not a self-diagnosis of masking |
 
 ## Lily pads · Relational + Attention
 
@@ -168,7 +169,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 05 Deep Attention | 🟢 | in the zone · let me finish · i want to stay a while |
 | 06 Social Energy | 🟢 | the campfire · the watering hole · just one person · people i know |
 | 07 Regulation First | 🟢 | meerkat · stormy · i need a minute · no-words-right-now |
-| 08 Masking Pressure | 🟢 | no-spotlight |
+| 08 Masking Pressure | 🟢 | no-spotlight · let me unmask |
 | 09 Environment Fit | 🟢 | the habitat · warm · dandelion · tulip · orchid · let me control it |
 | 10 Energy Accounting | 🟢 | full · heavy · a snack or a drink |
 | 12 Energy Recovery | 🟢 | the cave · coming back · you can rest |
@@ -197,7 +198,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 47 Collaborative Niche Construction | 🟡 | the habitat · draw your own |
 | 49 Environmental Weathering | 🟡 | dandelion |
 | 50 Bodymind Break | 🟡 | room to move · you can rest |
-| 51 Bodymind Affirmation | 🟡 | happy flappy · let me stim · i see you · i'm glad you're here · it's okay to need what you need · nothing to fix · you belong here · you can rest · your way is a real way · you're not broken |
+| 51 Bodymind Affirmation | 🟡 | happy flappy · let me stim · let me unmask · i see you · i'm glad you're here · it's okay to need what you need · nothing to fix · you belong here · you can rest · your way is a real way · you're not broken |
 
 ----
 
@@ -216,7 +217,7 @@ These aren't loose ends — they're places the deck, built from the youngest and
 
 Confirmation the deck's edges are where they should be, not gaps:
 
-- **08 Masking Pressure** — the deck names felt states, not the mask. "I'm masking" is a meta-observation about behavior, not a felt state, so no card asks a person to name it. (`no-spotlight` maps here as the *relief* for observation/performance demand, not as naming the mask.)
+- **08 Masking Pressure** — the deck names felt states, not the mask. "I'm masking" is a meta-observation about behavior, not a felt state, so no card asks a person to name it. (`no-spotlight` and `let me unmask` map here as the *relief* from the masking demand, not as naming the mask itself.)
 - **11 Burnout Threshold** — kept out of the person layer by the decision log (the same call that keeps the monotropic-spiral clinical depth out of `round and round`).
 - **02 Spiky Profiles · 17 Attention Ecology · 28 Double Empathy** — realm- or designer-level lenses that sit *behind* cards rather than *as* one. Double Empathy is the whole reason the Interaction realm exists.
 - **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a person.

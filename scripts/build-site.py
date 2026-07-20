@@ -149,7 +149,7 @@ GROUPS = {
         ("Mouth & nose", ["something-to-chew", "a-snack-or-a-drink", "a-smell-that-helps"]),
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "tell-me-first", "another-way-to-talk"]),
-        ("People & time", ["just-one-person", "parallel-existence", "no-spotlight", "no-rush", "let-me-finish", "let-me-come-and-go"]),
+        ("People & time", ["just-one-person", "parallel-existence", "no-spotlight", "let-me-unmask", "no-rush", "let-me-finish", "let-me-come-and-go"]),
         ("Make your own", ["your-own"]),
     ],
 }
