@@ -291,10 +291,8 @@
           esc(c.name) + '</span>' + promptLine + note + reflHtml + '</div>';
       }
 
-      var zoomBtn = item.up
-        ? '<button type="button" class="zoom" aria-label="Enlarge ' +
-          escAttr(c.name) + '">' + ZOOM_SVG + '</button>'
-        : '';
+      var zoomBtn = '<button type="button" class="zoom" aria-label="Enlarge ' +
+        (item.up ? escAttr(c.name) : 'card back') + '">' + ZOOM_SVG + '</button>';
 
       li.innerHTML =
         '<div class="laid-card"><img class="laid-img" src="' + escAttr(img) +
@@ -332,7 +330,7 @@
         });
       }
       var zEl = li.querySelector('.laid-card .zoom');
-      if (zEl) zEl.addEventListener('click', function () { openLightbox(c, zEl); });
+      if (zEl) zEl.addEventListener('click', function () { openLightbox(c, zEl, !item.up); });
 
       tableEl.appendChild(li);
     });
@@ -427,9 +425,21 @@
     if (h) h.focus();
   }
 
-  function openLightbox(card, trigger) {
+  function openLightbox(card, trigger, showBack) {
     if (!lightboxEl) return;
     lbReturn = trigger || null;
+    if (showBack) {
+      lbImg.setAttribute('src', card.back);
+      lbImg.setAttribute('alt', 'Card back');
+      lbNameEl.textContent = 'Card back';
+      lbPromptEl.textContent = ''; lbPromptEl.hidden = true;
+      if (lbNoteEl) lbNoteEl.hidden = true;
+      lightboxEl.hidden = false;
+      document.body.classList.add('lightbox-open');
+      document.addEventListener('keydown', lbKeydown);
+      lbCloseBtn.focus();
+      return;
+    }
     lbImg.setAttribute('src', card.face);
     lbImg.setAttribute('alt', card.name + (card.prompt ? ': ' + card.prompt : ''));
     lbNameEl.textContent = card.name;
