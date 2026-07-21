@@ -321,6 +321,20 @@ def site_nav(current):
             '</details>')
 
 
+def site_topbar(current):
+    """Sticky top bar for every generated page: the collapsed Menu on the left,
+    and a clear route into the deck on the right. Mirrors index.html's breakbar
+    so a visitor who lands on a deep-linked page can find the playable deck. The
+    header below it carries a Cavendish Cards home link and a one-line description
+    so they also know what site they're on."""
+    return ('<div class="breakbar"><div class="wrap">'
+            '<div class="breakbar-left">'
+            + site_nav(current) +
+            '</div>'
+            '<a class="btn" href="index.html">Open the deck</a>'
+            '</div></div>')
+
+
 _MD_LINK = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
 _MD_BOLD = re.compile(r'\*\*([^*]+)\*\*')
 _MD_CODE = re.compile(r'`([^`]+)`')
@@ -448,10 +462,12 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
 <body>
   <a class="skip" href="#{skip_id}">{e(skip_label)}</a>
   <script src="/sw-register.js" defer></script>
+  {site_topbar(current)}
   <header class="site-header">
     <div class="wrap">
-      {site_nav(current)}
+      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
       <h1>{e(h1)}</h1>
+      <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. You're on one of its pages — open the deck to lay a spread.</p>
     </div>
   </header>
   <main id="{skip_id}" class="wrap">
@@ -640,9 +656,10 @@ def guidebook_html(out_families):
 <body>
   <a class="skip" href="#gb">Skip to the guidebook</a>
   <script src="/sw-register.js" defer></script>
+  {site_topbar("guidebook")}
   <header class="site-header">
     <div class="wrap">
-      {site_nav("guidebook")}
+      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
       <h1>Guidebook</h1>
       <p class="intro">{e(INTRO)}</p>
       <div class="rules stack" role="note" aria-label="Not a screening tool">
@@ -959,9 +976,10 @@ def implementation_html(out_families):
 <body>
   <a class="skip" href="#impl">Skip to the guide</a>
   <script src="/sw-register.js" defer></script>
+  {site_topbar("implementation")}
   <header class="site-header">
     <div class="wrap">
-      {site_nav("implementation")}
+      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
       <h1>Implementation Guidebook</h1>
       <p class="intro">{e(IMPL_INTRO)}</p>
       <div class="rules" role="note" aria-label="The one principle">
