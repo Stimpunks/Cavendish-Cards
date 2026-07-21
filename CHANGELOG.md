@@ -6,9 +6,14 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ## 2026-07-21
 
+### Deck
+
+- Added three cards for playtesting, drawn from the Livable worlds checklist crosswalk where the deck had gaps: **fewer choices** (What helps) for decision overload, **keep it the same** (What helps) for a need for sameness — reframing the labeled "insistence on sameness" as a support need — and **running on empty** (Weather) for everyday depletion, from spoon theory.
+
 ### Site
 
 - Added a **[Livable worlds checklist](https://cavendish.app/livable-worlds.html)** page — a companion environmental audit that pairs with the deck, adapted from Stimpunks' [Livable Worlds Checklist](https://stimpunks.org/design/livable-worlds-checklist/) (after Rose & Lupton, 2026) and dedicated to the public domain under CC0. Eleven areas, from regulation to sustainability, run on the room, the routine, the kit, or the system — never on the person — with no score and no pass mark, plus a section-by-section crosswalk to the cards that voice each need.
+- Deep-linked pages now orient newcomers: every guide page carries a sticky top bar with an **Open the deck** button and the Menu, plus a *Cavendish Cards* home link and a one-line description in the header — so landing on a page like the guidebook or the checklist makes clear what the site is and how to reach the playable deck.
 
 ## 2026-07-20
 
