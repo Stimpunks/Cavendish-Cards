@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **89 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **92 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A person laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -36,7 +36,7 @@ The five Cavendish zones. Fixed. Everything else sits in one of these.
 
 ---- 
 
-## Weather (21)
+## Weather (22)
 
 Inner weather, not clinical states. Covers the whole range: too much, too little, and settled — good and hard alike.
 
@@ -61,12 +61,13 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 | no words right now | a figure with bright, present eyes and a softly closed mouth, the voice curled up quiet inside                            | The words won't come right now.                        |
 | pulled every way   | a small figure with arrows tugging outward in every direction at once                                                     | Too many things pulling at me at once.                 |
 | round and round    | a single looping line spiralling inward — a thought going round and round                                                 | A thought that won't stop going round.                 |
+| running on empty   | a hand holding the last one or two spoons, the rest of the day's already used up — running low, still here, not broken    | I'm running low right now.                             |
 | tender             | a small figure with a soft, sore glow along their skin, flinching as a tiny word lands nearby like a dropped pebble       | A small thing hurt a lot right now.                    |
 | too seen           | a small figure wanting to fold inward as soft gazes turn toward them from every side                                      | Being looked at is a lot right now.                    |
 
 ---- 
 
-## What helps (29)
+## What helps (31)
 
 The niche-construction pieces — the ways we change the environment so it fits. The workhorse realm, and where the staff game finds its conflicts.
 
@@ -91,6 +92,8 @@ The niche-construction pieces — the ways we change the environment so it fits.
 | a smell that helps    | a hand near a scented thing                                                                                                                                         | A smell that settles me, or less of one.        |
 | a snack or a drink    | a cup and a small snack                                                                                                                                             | Something to eat or drink.                      |
 | another way to talk   | a hand pointing at a card, next to a small whiteboard                                                                                                               | Let me point, write, or show it.                |
+| fewer choices         | a wall of too many identical doors, with a hand gently sliding all but two aside — a big choice made small and doable                                               | Fewer things to choose from.                    |
+| keep it the same      | the same few things set out in the same order each morning — same cup, same seat — a familiar path worn smooth                                                      | The same way as before.                         |
 | less to look at       | a busy, cluttered wall beside a calm bare one                                                                                                                       | Fewer things to look at.                        |
 | let me come and go    | a figure stepping out through an open doorway and back in — a loop of coming and going                                                                              | Let me join and slip away as I need.            |
 | let me control it     | a hand resting on a dimmer switch                                                                                                                                   | Let me be the one to change it.                 |
@@ -181,14 +184,14 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | Realm | Cards |
 | ----- | ----- |
 | Places | 5 |
-| Weather | 21 |
-| What helps | 29 |
+| Weather | 22 |
+| What helps | 31 |
 | Lily pads | 9 |
 | Growers | 3 |
 | Love Locutions | 9 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **89** |
+| **Total** | **92** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -206,7 +209,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 89 cards, seven ways:
+The same 92 cards, seven ways:
 
 - **Early years — show me.** One card. The facilitator mirrors it back.
 - **Person and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

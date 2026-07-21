@@ -179,6 +179,11 @@ Round and round is when one thought keeps looping — circling back, getting tig
 
 *Pattern: [01 Monotropism](https://stimpunks.org/patterns/library/monotropism/)*
 
+### running on empty
+*a hand holding the last one or two spoons, the rest of the day's already used up — running low, still here, not broken* · "I'm running low right now."
+
+Running on empty is the last spoon in your hand, the rest of the day's already spent — the tank low, the battery nearly flat. This card names being out of energy: not sad, not overwhelmed, just spent, with nothing left to give and a real need to refill. It is different from heavy, which is a low, weighed-down mood, and from full, which is no more room to take things in — this is the fuel running out. Running low is not laziness, and pushing harder does not refill it. When this card is out, let the tank refill: take demands away, make rest truly allowed, and don't ask for what isn't there. Lineage: spoon theory (Christine Miserandino) — a way of counting the limited energy a day holds.
+
 ### stormy
 *big clouds about to break* · "Big feelings, close to the edge."
 
@@ -286,6 +291,11 @@ Dim the light is a dial turned down — harsh brightness eased to something soft
 
 *Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 37 Sensory Gradients*
 
+### fewer choices
+*a wall of too many identical doors, with a hand gently sliding all but two aside — a big choice made small and doable* · "Fewer things to choose from."
+
+Fewer choices is a wall of too many doors, with all but a couple slid gently aside. This card names decision overload: when there are so many options that picking any one feels impossible, and the choosing itself uses up energy the person needed for the thing they were choosing. It is different from pulled every way, which is many things tugging at once, and from stuck, which is not being able to get going at all — this is the load of having to decide. Too many options is a real cost, not fussiness or not trying. When this card is out, cut the field down: offer two or three instead of ten, decide the small stuff in advance, or give a first step to start from. Lineage: [monotropism](https://stimpunks.org/monotropism/) — a mind that runs deep on one thing at a time can find a wide spread of open choices especially costly.
+
 ### headphones
 *headphones, the noise turned down* · "Turn the world down a bit."
 
@@ -299,6 +309,11 @@ Headphones turn the world's volume down — a wall between the ears and too much
 Just one person is two figures side by side — one companion, not a crowd. This card names a need to shrink the social field: one trusted person at a time, where a group would be too much. Liking one-to-one is a real access need, not being antisocial. When this card is out, thin the crowd. Offer a single steady person, and don't make group joining the only way to count as taking part.
 
 *Pattern: [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/) · 34 Collaboration Gradients*
+
+### keep it the same
+*the same few things set out in the same order each morning — same cup, same seat — a familiar path worn smooth* · "The same way as before."
+
+Keep it the same is the same few things in the same order, day after day — a path worn smooth. This card names a need for sameness: the same routine, the same way of doing a thing, the same setup, because that steadiness is what keeps the load low and the world predictable. It is different from tell me first, which asks for warning when something has to change — this asks for it not to change at all where it doesn't have to. Wanting things the same is not rigidity or being difficult; it is how many Autistic people save energy and stay regulated. When this card is out, hold the routine steady: keep what works the same, change only what must, and when a change can't be avoided, warn early and go slowly. Lineage: a need for sameness, reframed as a support need rather than the "insistence on sameness" it is often labelled; close kin to [monotropism](https://stimpunks.org/monotropism/).
 
 ### less talking
 *a hushed mouth, a calm face* · "Fewer words for a while."

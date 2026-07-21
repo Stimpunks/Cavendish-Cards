@@ -111,7 +111,7 @@ ORDER = {
     "weather": [
         "warm", "bright", "fizzy", "happy-flappy", "in-the-zone", "need-more",
         "buzzy", "prickly", "full", "pulled-every-way", "meerkat", "too-seen",
-        "big-step", "round-and-round", "stormy", "tender", "heavy", "foggy", "cant-tell", "far-away",
+        "big-step", "round-and-round", "stormy", "tender", "running-on-empty", "heavy", "foggy", "cant-tell", "far-away",
         "no-words-right-now",
     ],
     "lily-pad": [
