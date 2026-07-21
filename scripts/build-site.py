@@ -300,6 +300,7 @@ SITE_NAV = [
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
     ("Example spreads", "example-spreads.html", "example-spreads"),
+    ("Livable worlds checklist", "livable-worlds.html", "livable-worlds"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
     ("ARLES & the cards", "arles.html", "arles"),
@@ -501,6 +502,15 @@ def example_spreads_html(root):
         "Example spreads",
         "Worked examples of the deck in use: a moment, a spread someone laid, and how to read it as a design brief for the environment.",
         "example-spreads", "Skip to the examples", "Example spreads", "example-spreads",
+        md_to_html(src))
+
+
+def livable_worlds_html(root):
+    src = (root / "cavendish-cards-livable-worlds.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Livable worlds checklist",
+        "A companion audit for the deck: run it on the room, the routine, the kit, or the system \u2014 never on the person \u2014 to find what to change.",
+        "livable-worlds", "Skip to the checklist", "Livable worlds checklist", "livable-worlds",
         md_to_html(src))
 
 
@@ -1015,7 +1025,7 @@ def implementation_md(out_families):
 _SITE_URL = "https://cavendish.app"
 _SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
-               "/example-spreads.html", "/privacy.html", "/changelog.html"]
+               "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
 # first paint. Kept byte-identical to the copy in web/index.html and to the CSP
@@ -1065,7 +1075,7 @@ def _write_service_worker(root, web, faces):
     for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
-                 "privacy.html", "changelog.html"):
+                 "livable-worlds.html", "privacy.html", "changelog.html"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
@@ -1085,7 +1095,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
-        "/privacy.html", "/changelog.html",
+        "/livable-worlds.html", "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1216,6 +1226,7 @@ def main():
     (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
+    (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
