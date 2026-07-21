@@ -4,7 +4,7 @@
 
 ## What this is
 
-Cavendish Cards is a free, open (CC0), neuroaffirming pictorial prompt-card deck by Stimpunks Foundation. A person of any age SHOWS how they feel and what they need by pointing at or laying pictures — **no reading required, no scoring, no matching, no right answer, no winning.** The person controls sharing: cards lie face-down by default, and turning one up *is* the act of consent. It grows in the open, one card = one Markdown file, community-authored. It comes from the Cavendish Space model.
+Cavendish Cards is a free, open (CC0), neuroaffirming pictorial prompt-card deck by Stimpunks Foundation. A person of any age SHOWS how they feel and what they need by pointing at or laying pictures — **no reading required, no scoring, no matching, no right answer, no winning.** The person controls sharing: cards lie face-down by default, and turning one up *is* the act of consent. It grows in the open, one card = one Markdown file, community-authored. It comes from the Cavendish Space model and the ARLES design method.
 
 It is **not** a screening/assessment tool and **not** an AAC board (see Boundaries). A spread is a *design brief for the environment*, not a behavior report.
 
