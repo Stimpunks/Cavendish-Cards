@@ -4,6 +4,12 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-07-21
+
+### Site
+
+- Added a **[Livable worlds checklist](https://cavendish.app/livable-worlds.html)** page — a companion environmental audit that pairs with the deck, adapted from Stimpunks' [Livable Worlds Checklist](https://stimpunks.org/design/livable-worlds-checklist/) (after Rose & Lupton, 2026) and dedicated to the public domain under CC0. Eleven areas, from regulation to sustainability, run on the room, the routine, the kit, or the system — never on the person — with no score and no pass mark, plus a section-by-section crosswalk to the cards that voice each need.
+
 ## 2026-07-20
 
 ### Deck
