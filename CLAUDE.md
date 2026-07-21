@@ -20,7 +20,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Decision
 - **Places** (~6): the cave, the campfire, the watering hole, the library, the habitat (+ your own). The five Cavendish zones. Fixed.
 - **Weather** (~18): inner weather, the whole range good and hard. **Curated display order** (gentle range, no headings, no good/bad split).
 - **What helps** (~28): the niche-construction realm; the largest on purpose. Grouped into ~12 sense **signposts** in its single-realm view (Being in charge, Sound, Light & looking, Touch, Pressure, Temperature, Movement, Mouth & nose, Space & enclosure, Telling & talking, People & time, Make your own).
-- **Lily pads** (~10): transitions/moments. (Verify how they render in `web/app.js` — the old always-on "moments strip" may have been retired in favor of a normal browsable realm.)
+- **Lily pads** (~10): transitions/moments. Renders in `web/app.js` as a normal browsable realm, same as any other family — the old always-on "moments strip" has been retired.
 - **Growers** (~4): dandelion/tulip/orchid resilience metaphor. Optional.
 - **Kind words** (~9): affirmations. App label **"Kind words"** (subtitle "Also called Love Locutions or Love Languages"); the **guidebook keeps "Love Locutions."** Reframed as **self-affirmation / self-advocacy** — **given to someone, or claimed for yourself**, never earned, never a reward. Folder/slug stays `love-locution`.
 - **Interaction** (~6): the Autistic community's red/yellow/green communication badges (ANI/Autreat/Sinclair 1996). The one exception to face-down default — meant to be shown; has its own distinct card back.
