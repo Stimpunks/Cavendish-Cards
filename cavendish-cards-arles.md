@@ -26,9 +26,18 @@ The deck is ARLES made handheld. A spread reads the ladder from the bottom up: i
 
 Systems change is real, and necessary — but it is not something to ask a person to name on a card. The deck's job is to move the work off the person and onto the environment, on the person's own terms. A spread is a design brief for the room and the people in it, not a policy handed down. The Systems layer is where the [Stimpunks Pattern Library](https://stimpunks.org/patterns/library/) and the deck's own [Pattern crosswalk](https://github.com/Stimpunks/Cavendish-Cards/blob/main/cavendish-cards-pattern-crosswalk.md) carry the work forward — from a named need, to a pattern, to a change in the structures around it.
 
+## SLODF, and the layer the deck supplies
+
+The [System-Level Organisational Design Framework](https://stimpunks.org/design/slodf/) (SLODF; Dark, 2026) is a workplace-inclusion framework that reads *across* four organisational domains — **environment, systems, people, and policy** — and moves the work of inclusion off the individual and onto organisational design. It shares the deck's premise word for word: if it isn't working, it's not the person — it's the environment, the relationships, or the system.
+
+Read against ARLES, SLODF's four domains fill the **top** of the ladder. Environment maps straight across; systems and policy sit in the structural rungs above; people carries the relational work. Where ARLES reads *down* — from Systems to Environment to Lived Experience to Relational to Attention — SLODF reads *across* the top three rungs and translates them into a workplace an organisation can act on. But it stops there. **SLODF has no Lived Experience layer** — no separate account of what the day actually feels like, held apart from the systems that shape it. That layer is the whole *Weather* realm.
+
+So the deck isn't something to bolt onto SLODF; it's the piece SLODF is missing. A spread laid at work (see example spread 9, *A new job, first weeks*) is the Lived Experience layer feeding an organisational redesign: the person names what the day feels like from the inside, and a framework like SLODF turns that into changes across environment, systems, and people. One reads down to where the person actually is; the other reads across to what the organisation can change. The [ARLES crosswalk](https://stimpunks.org/design/slodf/) reads the two side by side.
+
 ## Go deeper
 
 - [ARLES — the Stimpunks Design Method](https://stimpunks.org/glossary/arles/) — the full definition, and the ladder read both ways.
 - [The Neurodivergent Design Field Guide](https://stimpunks.org/fieldguide/design/) — ARLES as a practice loop you can run.
 - [The Stimpunks Pattern Library](https://stimpunks.org/patterns/library/) — the patterns each card instantiates.
+- [The SLODF ARLES crosswalk](https://stimpunks.org/design/slodf/) — the deck as the Lived Experience layer a workplace-inclusion framework lacks.
 - [Why this exists](why.html) and [Origin & lineage](origin.html) — how the deck grew out of Cavendish Space.

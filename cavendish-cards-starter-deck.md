@@ -4,7 +4,7 @@
 
 A pictorial deck for naming sensory and niche-construction needs. Point at a card, or lay a few. No reading required to play. No points, no matching, no right answer, no winning.
 
-The starter deck is **92 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
+The starter deck is **94 cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
 Broken systems, not broken people. A person laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
@@ -67,7 +67,7 @@ Inner weather, not clinical states. Covers the whole range: too much, too little
 
 ---- 
 
-## What helps (31)
+## What helps (33)
 
 The niche-construction pieces — the ways we change the environment so it fits. The workhorse realm, and where the staff game finds its conflicts.
 
@@ -101,7 +101,9 @@ The niche-construction pieces — the ways we change the environment so it fits.
 | let me stim           | a figure rocking and moving, easy in their own motion                                                                                                               | Let me move and stim the way I need.            |
 | let me unmask         | a figure gently lowering a smiling paper mask away from their face — behind it, their own softer, real expression, shoulders easing. warm and relieved, never scary | Let me drop the mask here.                      |
 | no spotlight          | a figure settled easy at the edge of the room while a beam of attention points somewhere else                                                                       | Please don't put me on the spot.                |
+| one thing at a time   | a single thing on a clear table                                                                                                                                     | One thing, then the next.                       |
 | parallel existence    | two figures side by side, each in their own world                                                                                                                   | Someone alongside me, each doing our own thing. |
+| say it straight       | a straight arrow, not a curving one                                                                                                                                 | Say what you mean.                              |
 | sit my way            | a floor cushion, a wobble stool, and someone standing                                                                                                               | Let me sit or stand how I like.                 |
 | the right temperature | a blanket on one side, a fan on the other                                                                                                                           | Warmer, or cooler.                              |
 
@@ -185,13 +187,13 @@ Every realm carries a **draw-your-own** card, and the deck ships with spare blan
 | ----- | ----- |
 | Places | 5 |
 | Weather | 22 |
-| What helps | 31 |
+| What helps | 33 |
 | Lily pads | 9 |
 | Growers | 3 |
 | Love Locutions | 9 |
 | Interaction | 5 |
 | Draw your own | 8 |
-| **Total** | **92** |
+| **Total** | **94** |
 
 Roughly a card deck's spread — familiar to hold, easy to lay out. "What helps" is deliberately the largest: it carries the niche-construction work and gives the staff game enough conflicting needs to build around (room to move against less talking; just one person against a full group).
 
@@ -209,7 +211,7 @@ The distinct back also does the sharing work: a spread laid face-down stays priv
 
 ## Playing across the age range
 
-The same 92 cards, seven ways:
+The same 94 cards, seven ways:
 
 - **Early years — show me.** One card. The facilitator mirrors it back.
 - **Person and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.

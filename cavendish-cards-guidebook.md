@@ -385,6 +385,13 @@ No spotlight means being let out of the beam of attention — not called on, not
 
 *Pattern: [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/)*
 
+### one thing at a time
+*a single thing on a clear table* · "One thing, then the next."
+
+One thing at a time is a single object on a clear table. This card names a need to line work up in order — one task, finished or parked, before the next arrives. Switching between things has a real cost. A pile of open tasks isn't more done; it's more split. This isn't slowness or avoidance — it's how a focused mind spends the least. When this card is out, hand over one thing at a time. Let it reach a stopping place before the next, and don't stack the whole queue in sight.
+
+*Pattern: [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · [01 Monotropism](https://stimpunks.org/patterns/library/monotropism/)*
+
 ### parallel existence
 *two figures side by side, each in their own world* · "Someone alongside me, each doing our own thing."
 
@@ -398,6 +405,13 @@ Two figures side by side, each in their own world — company without any push t
 Room to move is open floor — space to pace, rock, spin, or stim. This card names a need for movement: motion that helps a body settle and think, not fidgeting to be stopped. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement instead of asking the body to be still. Stillness is not the goal.
 
 *Pattern: 19 Stim Regulation · 50 Bodymind Break*
+
+### say it straight
+*a straight arrow, not a curving one* · "Say what you mean."
+
+Say it straight is a straight arrow, not a detour. This card names a need for plain, direct words — say what you mean, with no hints and no reading between the lines. The gap runs both ways. Indirect meaning takes real effort to decode, and leaves room to get it wrong. That is the double empathy problem (Milton, 2012), not a failure to read people. When this card is out, be direct: plain requests, clear feedback, no hidden test. A clear "no" is kinder than a soft maybe.
+
+*Pattern: 30 Communication Bandwidth*
 
 ### sit my way
 *a floor cushion, a wobble stool, and someone standing* · "Let me sit or stand how I like."

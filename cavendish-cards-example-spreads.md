@@ -89,6 +89,14 @@ Three moves, every time:
 
 *One spread, one day. Laid by the person for themselves — no facilitator needed. (Play mode: build a niche / map the edges.)*
 
+## 9. A new job, first weeks (an adult, at work)
+
+**Turned up:** *big step · tell me first · one thing at a time · say it straight · a way out*
+
+**Reading it:** starting somewhere new is a big crossing, and the unknowns are the hard part. So make the work legible instead of asking the person to settle in faster: say what's coming before it comes, hand over one task at a time instead of a pile, put things in plain words with no hidden test, and keep an exit that costs nothing. None of these are the person's failings — they're a list of things the *workplace* can do to be readable. This is the deck doing the one thing a workplace-inclusion framework can't do for itself: naming what the day actually feels like from the inside, so any redesign of the room, the systems, and the people has something true to work from.
+
+*One spread, one day. The same hand, six months in, may need only* tell me first *— or nothing at all. (Play mode: build my day / map the edges.)*
+
 ----
 
 ## Make your own

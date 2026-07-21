@@ -83,9 +83,11 @@ The niche-construction realm. The card names the *need*; the Pattern names the *
 | let me control it | **32 Consent Over Compliance** · 09 Environment Fit | hand over the dial |
 | let me come and go | **34 Collaboration Gradients** · 29 Parallel Presence | intermittent collaboration |
 | let me finish ⤢ | **13 Context Switching Cost** · 05 Deep Attention | tendril retraction; a landing, not a slow-down |
+| one thing at a time | **13 Context Switching Cost** · 01 Monotropism | one task in sequence, not a pile at once |
 | no rush | **04 Processing Time** · 16 Cognitive Load Windows | more processing time |
 | tell me first | **35 Predictable Structure** · 13 Context Switching Cost | warning before change |
 | less talking | **30 Communication Bandwidth** · 16 Cognitive Load Windows | reduce language load |
+| say it straight | **30 Communication Bandwidth** | plain, direct words — no subtext; double empathy (Milton) held in the Notes, not as a Pattern (see deliberate stops) |
 | another way to talk | **30 Communication Bandwidth** · 27 Interaction Access | a second channel; sits alongside real AAC |
 | just one person | **06 Social Energy** · 34 Collaboration Gradients | narrow the social field |
 | parallel existence | **29 Parallel Presence** · 23 Co-Regulation | body doubling |
@@ -163,7 +165,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 
 | Pattern | Status | Cards that name it |
 |---|---|---|
-| 01 Monotropism | 🟢 | in the zone · pulled every way · round and round · let me finish · i want to stay a while |
+| 01 Monotropism | 🟢 | in the zone · pulled every way · round and round · let me finish · one thing at a time · i want to stay a while |
 | 03 Sensory Load | 🟢 | buzzy · prickly · less to look at |
 | 04 Processing Time | 🟢 | foggy · no rush · not yet |
 | 05 Deep Attention | 🟢 | in the zone · let me finish · i want to stay a while |
@@ -173,7 +175,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 09 Environment Fit | 🟢 | the habitat · warm · dandelion · tulip · orchid · let me control it |
 | 10 Energy Accounting | 🟢 | full · heavy · a snack or a drink |
 | 12 Energy Recovery | 🟢 | the cave · coming back · you can rest |
-| 13 Context Switching Cost | 🟢 | pulled every way · let me finish · stuck · not yet · ready now · slowly · coming back · all done · tell me first · i want to stay a while · big-step |
+| 13 Context Switching Cost | 🟢 | pulled every way · let me finish · one thing at a time · stuck · not yet · ready now · slowly · coming back · all done · tell me first · i want to stay a while · big-step |
 | 14 Interest-Driven Learning | 🟢 | the library |
 | 15 Attention Anchors | 🟢 | busy hands · something soft |
 | 16 Cognitive Load Windows | 🟢 | foggy · full · less talking · no rush · stuck |
@@ -185,7 +187,7 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 23 Co-Regulation | 🟡 | meerkat · stormy · parallel existence · i see you |
 | 27 Interaction Access | 🟡 | come say hi · people i know · not right now · ask first · i've got this · another way to talk · watch first |
 | 29 Parallel Presence | 🟡 | the watering hole · let me come and go · parallel existence |
-| 30 Communication Bandwidth | 🟡 | another way to talk · just one person · less talking · come say hi · no-words-right-now · you don't have to talk |
+| 30 Communication Bandwidth | 🟡 | another way to talk · just one person · less talking · say it straight · come say hi · no-words-right-now · you don't have to talk |
 | 32 Consent Over Compliance | 🟡 | a way out · let me control it · sit my way · not yet · ready now · all done · it's okay to need what you need · ask first · not right now · let me come and go |
 | 34 Collaboration Gradients | 🟡 | the campfire · the watering hole · just one person · let me come and go · watch first |
 | 35 Predictable Structure | 🟡 | my own spot · a way out · tell me first · slowly · big-step |
@@ -219,7 +221,7 @@ Confirmation the deck's edges are where they should be, not gaps:
 
 - **08 Masking Pressure** — the deck names felt states, not the mask. "I'm masking" is a meta-observation about behavior, not a felt state, so no card asks a person to name it. (`no-spotlight` and `let me unmask` map here as the *relief* from the masking demand, not as naming the mask itself.)
 - **11 Burnout Threshold** — kept out of the person layer by the decision log (the same call that keeps the monotropic-spiral clinical depth out of `round and round`).
-- **02 Spiky Profiles · 17 Attention Ecology · 28 Double Empathy** — realm- or designer-level lenses that sit *behind* cards rather than *as* one. Double Empathy is the whole reason the Interaction realm exists.
+- **02 Spiky Profiles · 17 Attention Ecology · 28 Double Empathy** — realm- or designer-level lenses that sit *behind* cards rather than *as* one. Double Empathy is the whole reason the Interaction realm exists. `say it straight` is the first card to name the *need* Double Empathy explains (plain, direct communication); it patterns to 30 Communication Bandwidth and holds the Double Empathy lineage in its Notes, keeping 28 as a behind-lens. **Open question for Helen:** whether a direct-communication card is the case that finally turns Double Empathy from a lens into a nameable Pattern.
 - **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a person.
 
 ----
