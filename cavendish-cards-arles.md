@@ -34,10 +34,19 @@ Read against ARLES, SLODF's four domains fill the **top** of the ladder. Environ
 
 So the deck isn't something to bolt onto SLODF; it's the piece SLODF is missing. A spread laid at work (see example spread 9, *A new job, first weeks*) is the Lived Experience layer feeding an organisational redesign: the person names what the day feels like from the inside, and a framework like SLODF turns that into changes across environment, systems, and people. One reads down to where the person actually is; the other reads across to what the organisation can change. The [ARLES crosswalk](https://stimpunks.org/design/slodf/) reads the two side by side.
 
+## EMD, and reading a spread as feedback
+
+The [Ecosystemic Model of Distress](https://stimpunks.org/design/ecosystemic-model-of-distress/) (EMD; Gray-Hammond) is a companion crosswalk to SLODF, but it does a different job. Where SLODF is a catalogue of what an organisation can *do*, EMD is a model of how distress *moves* — through nested ecosystems, from the bodymind outward to sensory and relational conditions and up to systems, power, and access. It shares the deck's stance completely: distress isn't located in the person, the environment is never neutral (it fits or fights), and regulation is relational and environmental, not a skill a person is failing to practise.
+
+Read against ARLES, EMD folds the ladder into a current. It bundles the experiential interior — Attention and Lived Experience — into one **bodymind**, folds Relational and Environment into one **immediate ecosystem**, and shares the **systems** layer outright. As the crosswalk puts it: EMD tells you *how distress flows through the layers*; ARLES tells you *the order to build them back*. One reads the ecology as a current, the other as a ladder — the model finds where the water is rising, the method finds where to start laying floor.
+
+The deck sits at the bodymind end of that current, and it changes how a spread is read. A spread isn't a symptom list; it is **feedback** — the sign that something in the ecosystem is unsustainable, surfaced in the person's own frame and on the person's own terms. *Stormy*, *running on empty*, *meerkat*, *can't tell* are not faults to fix in the person; they are the bodymind reporting a mismatch, so you can trace it outward to the condition that's rising and change *that*. This is why the deck **cards the felt states but not the systems**: EMD's power, access, and institutional layers are real and central, but they are not something to ask a person to name on a card. The person names where it hurts; the [Pattern Library](https://stimpunks.org/patterns/library/) and frameworks like EMD and SLODF carry the work up the layers from there.
+
 ## Go deeper
 
 - [ARLES — the Stimpunks Design Method](https://stimpunks.org/glossary/arles/) — the full definition, and the ladder read both ways.
 - [The Neurodivergent Design Field Guide](https://stimpunks.org/fieldguide/design/) — ARLES as a practice loop you can run.
 - [The Stimpunks Pattern Library](https://stimpunks.org/patterns/library/) — the patterns each card instantiates.
 - [The SLODF ARLES crosswalk](https://stimpunks.org/design/slodf/) — the deck as the Lived Experience layer a workplace-inclusion framework lacks.
+- [The EMD ARLES crosswalk](https://stimpunks.org/design/ecosystemic-model-of-distress/) — distress as a current through nested ecosystems; a spread read as feedback, not symptom.
 - [Why this exists](why.html) and [Origin & lineage](origin.html) — how the deck grew out of Cavendish Space.
