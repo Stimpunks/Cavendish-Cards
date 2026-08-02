@@ -5,6 +5,9 @@
 /cards/.DS_Store
 /assets/.DS_Store
 
+# Claude Code local settings (machine-specific permission allowlist)
+/.claude/settings.local.json
+
 # Python bytecode cache
 __pycache__/
 
