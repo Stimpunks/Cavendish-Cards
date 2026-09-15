@@ -609,3 +609,18 @@ body.break-open { overflow: hidden; }
   .door-deck > a { flex-direction: row; align-items: baseline; gap: 18px; flex-wrap: wrap; }
   .door-deck .door-body { margin-top: 0; flex: 1 1 22ch; }
 }
+
+/* The zone-transition diagram on space.html. Preformatted text is the one
+   thing on these pages that cannot reflow, so it gets its own scroll container
+   rather than pushing the whole page sideways on a phone. */
+.rooms-diagram {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--ink);
+  overflow-x: auto;
+  font-size: .95rem;
+  line-height: 1.6;
+}
