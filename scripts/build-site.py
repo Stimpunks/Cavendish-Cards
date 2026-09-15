@@ -450,9 +450,9 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — {e(title)}">
   <meta property="og:description" content="{e(description)}">
-  <meta property="og:url" content="https://cavendish.app/{current}.html">
-  <link rel="canonical" href="https://cavendish.app/{current}.html">
-  <meta property="og:image" content="https://cavendish.app/og-image.png">
+  <meta property="og:url" content="https://cavendish.space/{current}.html">
+  <link rel="canonical" href="https://cavendish.space/{current}.html">
+  <meta property="og:image" content="https://cavendish.space/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -460,7 +460,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cavendish Cards — {e(title)}">
   <meta name="twitter:description" content="{e(description)}">
-  <meta name="twitter:image" content="https://cavendish.app/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
 </head>
 <body>
   <a class="skip" href="#{skip_id}">{e(skip_label)}</a>
@@ -644,9 +644,9 @@ def guidebook_html(out_families):
   {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Guidebook">
   <meta property="og:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
-  <meta property="og:url" content="https://cavendish.app/guidebook.html">
-  <link rel="canonical" href="https://cavendish.app/guidebook.html">
-  <meta property="og:image" content="https://cavendish.app/og-image.png">
+  <meta property="og:url" content="https://cavendish.space/guidebook.html">
+  <link rel="canonical" href="https://cavendish.space/guidebook.html">
+  <meta property="og:image" content="https://cavendish.space/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -654,7 +654,7 @@ def guidebook_html(out_families):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cavendish Cards — Guidebook">
   <meta name="twitter:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
-  <meta name="twitter:image" content="https://cavendish.app/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
 </head>
 <body>
   <a class="skip" href="#gb">Skip to the guidebook</a>
@@ -964,9 +964,9 @@ def implementation_html(out_families):
   {_JSONLD}
   <meta property="og:title" content="Cavendish Cards — Implementation Guidebook">
   <meta property="og:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
-  <meta property="og:url" content="https://cavendish.app/implementation.html">
-  <link rel="canonical" href="https://cavendish.app/implementation.html">
-  <meta property="og:image" content="https://cavendish.app/og-image.png">
+  <meta property="og:url" content="https://cavendish.space/implementation.html">
+  <link rel="canonical" href="https://cavendish.space/implementation.html">
+  <meta property="og:image" content="https://cavendish.space/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -974,7 +974,7 @@ def implementation_html(out_families):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cavendish Cards — Implementation Guidebook">
   <meta name="twitter:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
-  <meta name="twitter:image" content="https://cavendish.app/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
 </head>
 <body>
   <a class="skip" href="#impl">Skip to the guide</a>
@@ -1043,7 +1043,7 @@ def implementation_md(out_families):
     return "\n".join(L)
 
 
-_SITE_URL = "https://cavendish.app"
+_SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
@@ -1056,8 +1056,8 @@ _THEME_INLINE = "<script>(function(){try{var t=localStorage.getItem('theme');if(
 
 _JSONLD = ('<script type="application/ld+json">\n'
            '{"@context":"https://schema.org","@graph":['
-           '{"@type":"WebSite","@id":"https://cavendish.app/#website",'
-           '"name":"Cavendish Cards","url":"https://cavendish.app/",'
+           '{"@type":"WebSite","@id":"https://cavendish.space/#website",'
+           '"name":"Cavendish Cards","url":"https://cavendish.space/",'
            '"description":"A calm, no-scoring deck for naming sensory and '
            'interaction needs.","inLanguage":"en",'
            '"license":"https://creativecommons.org/publicdomain/zero/1.0/",'

@@ -9,7 +9,7 @@
 - The person controls sharing. A spread laid face-down stays private; turning a card up is the person sharing it. **The turn is the consent.**
 - A card names a need, a state, or a change to the environment — **never the person as the problem.**
 - The words on each card are for the people alongside. No one ever has to read to play.
-- Free, open (CC0), and community-authored. Play it at [cavendish.app](https://cavendish.app/).
+- Free, open (CC0), and community-authored. Play it at [cavendish.space](https://cavendish.space/).
 
 A spread is a **design brief for the environment**, not a behavior report. A person laying *cave, buzzy, headphones* has handed you a to-do list for the room.
 
@@ -95,7 +95,7 @@ Cavendish Cards let a person show how they feel and what they need by pointing a
 
 - Stimpunks Foundation — [Learning Space: At the Intersection of Dewey and Freire](https://stimpunks.org/space/)
 - Stimpunks Foundation — [Cavendish Space (Why Sheet)](https://stimpunks.org/why/cavendish-space/)
-- Cavendish Cards — [deck and guidebook](https://cavendish.app/) · [repository](https://github.com/Stimpunks/Cavendish-Cards)
+- Cavendish Cards — [deck and guidebook](https://cavendish.space/) · [repository](https://github.com/Stimpunks/Cavendish-Cards)
 - David Thornburg — *Campfires in Cyberspace* / *From the Campfire to the Holodeck* (caves, campfires, watering holes)
 - Nick Walker — *Neuroqueer Heresies* (cognitive and somatic liberty; freedom of embodiment)
 - Monotropism — Murray, Lesser & Lawson; Tanya Adkin & David Gray-Hammond (attention tunnels, flow, monotropic split)

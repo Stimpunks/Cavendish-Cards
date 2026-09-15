@@ -40,7 +40,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Decision
 ## Repository & deployment
 
 - Public repo: **github.com/Stimpunks/Cavendish-Cards** (CC0, branch `main`). This clone: **/Users/ryan/Documents/GitHub/Cavendish-Cards/**.
-- Deployed web app: **https://cavendish.app/** (Netlify; builds `web/` via `scripts/build-site.py`). In-repo links point to cavendish.app.
+- Deployed web app: **https://cavendish.space/** (moved from cavendish.app on 2026-09-15; cavendish.app stays registered as a domain alias and 301s path-for-path via `web/_redirects`, so old links keep working — but write the new domain in anything new) (Netlify; builds `web/` via `scripts/build-site.py`). In-repo links point to cavendish.space.
 - Card art submissions → **stimpunks@stimpunks.org** (CALL-FOR-ART.md). CC0, no AI.
 - **Generated + gitignored** (Netlify rebuilds — commit the *source*, not these): `web/cards.json`, `web/guidebook.html`, `web/implementation.html`, `web/why.html`, `web/origin.html`, `web/arles.html`, `web/example-spreads.html`, `web/facilitator.html`, `web/faces/`.
 - **Tracked generated files** (regenerate + commit when their sources change): `cavendish-cards-guidebook.md`, `cavendish-cards-starter-deck.md`, the placeholder SVGs under `assets/playtest/`, and the print PDFs.

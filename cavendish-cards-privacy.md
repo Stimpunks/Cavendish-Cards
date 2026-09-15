@@ -19,17 +19,17 @@ Two things may be saved locally in your own browser. Both stay on your device, a
 - **A theme preference.** If you use the light/dark toggle, your choice is saved so the site remembers it next time. Until you touch the toggle, the site simply follows your device's own light or dark setting and saves nothing.
 - **An offline copy of the site.** So the deck keeps working without a connection, your browser holds a copy of the site's own files — pages, styles, card art, and fonts. This is the site caching itself for you, not a record of anything you did.
 
-To remove both, clear this site's data in your browser (often listed as "clear site data" for cavendish.app).
+To remove both, clear this site's data in your browser (often listed as "clear site data" for cavendish.space).
 
 ## No third parties
 
-The site loads only its own files. Fonts are served from cavendish.app, not from a font network. There are no third-party scripts, no embedded trackers, no external images, and no content delivery networks watching requests. Nothing on the page reaches out to another company.
+The site loads only its own files. Fonts are served from cavendish.space, not from a font network. There are no third-party scripts, no embedded trackers, no external images, and no content delivery networks watching requests. Nothing on the page reaches out to another company.
 
 ## How the site is protected
 
 The site is served only over an encrypted connection (HTTPS), and ships a set of rules that tell your browser to lock it down:
 
-- **A strict content security policy.** The browser is told to load scripts, styles, fonts, images, and data only from cavendish.app. Inline scripts are refused unless they match a known fingerprint, which blocks injected or third-party code.
+- **A strict content security policy.** The browser is told to load scripts, styles, fonts, images, and data only from cavendish.space. Inline scripts are refused unless they match a known fingerprint, which blocks injected or third-party code.
 - **No embedding by strangers.** Other websites cannot frame the deck, apart from Stimpunks' own site. This guards against clickjacking.
 - **Locked-down device access.** The page asks for no camera, microphone, or location, and the browser is told to deny them outright.
 - **Careful content handling.** The browser is told not to second-guess file types, and to share only the minimum information about where you came from when you follow a link away.

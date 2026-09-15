@@ -1,0 +1,13 @@
+# Domain move: cavendish.app -> cavendish.space (2026-09-15).
+#
+# cavendish.app stays registered and stays an alias on this site, so it keeps
+# resolving and keeps its place on the certificate. It should not, however, keep
+# SERVING — two domains answering 200 with the same pages is duplicate content
+# and it leaves every canonical tag pointing somewhere the reader is not.
+#
+# Path-preserving, so a link to cavendish.app/rooms lands on the same page it
+# always did. The force flag (!) is required: every one of these paths exists as
+# a real file on the site, and without it Netlify serves the file instead of
+# redirecting.
+https://cavendish.app/*   https://cavendish.space/:splat   301!
+http://cavendish.app/*    https://cavendish.space/:splat   301!

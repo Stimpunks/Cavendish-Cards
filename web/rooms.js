@@ -201,7 +201,7 @@
     fig.appendChild(el("p", "rooms-sign-prompt", z.prompt));
     fig.appendChild(el("p", "rooms-sign-body", z.sign));
     var cap = el("figcaption", "rooms-sign-foot");
-    cap.textContent = "Cavendish Space · cavendish.app";
+    cap.textContent = "Cavendish Space · cavendish.space";
     fig.appendChild(cap);
     return fig;
   }

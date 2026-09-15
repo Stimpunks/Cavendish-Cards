@@ -30,7 +30,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 
 - Public repo: **github.com/Stimpunks/Cavendish-Cards** (CC0, branch `main`).
 - Ryan's local clone (Claude edits here via Filesystem MCP): **/Users/ryan/Documents/GitHub/Cavendish-Cards/**
-- Deployed web app: **https://cavendish.app/** (Netlify; builds `web/` via `scripts/build-site.py`). All in-repo links point to cavendish.app.
+- Deployed web app: **https://cavendish.space/** (Netlify; builds `web/` via `scripts/build-site.py`). All in-repo links point to cavendish.space.
 - Card art submissions → **stimpunks@stimpunks.org** (see CALL-FOR-ART.md). CC0, no AI.
 
 ## How Claude and Ryan collaborate (workflow)

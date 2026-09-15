@@ -2,7 +2,7 @@
 
 A calm, no-scoring web version of Cavendish Cards. Browse the deck, filter by family, and lay cards on a table — where they arrive **face-down** and you **turn them up** when you want to share them. That turn is the whole point: it puts the deck's sharing-is-consent rule into the interaction itself.
 
-Nothing is scored. There are no accounts, no timers, and no analytics, and nothing you do is ever sent anywhere — a spread lives only in the page while it is open. The only things kept are on your own device (an optional light/dark preference and an offline copy of the site); see the [Privacy & security page](https://cavendish.app/privacy.html).
+Nothing is scored. There are no accounts, no timers, and no analytics, and nothing you do is ever sent anywhere — a spread lives only in the page while it is open. The only things kept are on your own device (an optional light/dark preference and an offline copy of the site); see the [Privacy & security page](https://cavendish.space/privacy.html).
 
 ## How it's built
 
@@ -73,7 +73,7 @@ Response headers are set in [`../netlify.toml`](../netlify.toml):
 - `X-Content-Type-Options: nosniff`, a `Referrer-Policy`, and a `Permissions-Policy` that denies camera, microphone, geolocation, and topics.
 - Long-lived immutable caching for `/fonts/*`.
 
-Nothing about a user is stored or transmitted. The only local storage is the theme preference and the service-worker cache, both on-device and clearable. The full, plain-language statement is [`../cavendish-cards-privacy.md`](../cavendish-cards-privacy.md), published as the [Privacy & security page](https://cavendish.app/privacy.html).
+Nothing about a user is stored or transmitted. The only local storage is the theme preference and the service-worker cache, both on-device and clearable. The full, plain-language statement is [`../cavendish-cards-privacy.md`](../cavendish-cards-privacy.md), published as the [Privacy & security page](https://cavendish.space/privacy.html).
 
 ## Notes
 
