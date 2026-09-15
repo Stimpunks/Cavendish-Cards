@@ -8,6 +8,7 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- The mark now appears on the front page too, locked up beside the wordmark the way it is on the share card. It is the same `favicon.svg` the browser already fetched for the tab rather than an inlined copy, so the logo on the page cannot drift from the icon when the generator rebuilds it.
 - **New mark.** The favicon was a fan of three cards, which described the site when the site was a card deck. It is now **a sheltering arch with a hearth inside it** — the cave and the campfire in one shape, on the house cream tile that reads as the habitat holding them. Chosen by rendering the candidates at 16px and looking: a three-zone version was legible at 64px and mush at 16, which is the size that actually matters.
 - Icons and the Open Graph card are now generated from one SVG source by `scripts/build-icons.py`, so the mark is defined once. Three variants, for a real reason: a browser tab draws the favicon as-is and keeps its rounded border, while Apple and Android mask app icons and crop the edges — a rounded tile inside a mask gets its corners shaved twice.
 - **New share card** at 1200×630, set in Atkinson Hyperlegible like the site, carrying the mark, the line *places built to fit bodyminds, not the other way round*, and the two verbs. The old `og:image:alt` described a fan of cards on a cream background, which had not been true since the image changed; it now describes what is actually in the picture.

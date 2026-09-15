@@ -624,3 +624,17 @@ body.break-open { overflow: hidden; }
   font-size: .95rem;
   line-height: 1.6;
 }
+
+/* The wordmark lockup on the threshold. The mark is the same file the browser
+   already fetched for the tab — an <img> rather than an inlined copy, so the
+   logo on the page cannot drift from the favicon when build-icons.py regenerates
+   it. It is alt="" and aria-hidden because the <h1> beside it says the same
+   thing; announcing both would read the name twice. */
+.lockup { display: flex; align-items: center; gap: 18px; }
+.lockup h1 { margin: 0; }
+.lockup-mark { flex: 0 0 auto; width: 76px; height: 76px; display: block; }
+
+@media (max-width: 560px) {
+  .lockup { gap: 14px; }
+  .lockup-mark { width: 54px; height: 54px; }
+}
