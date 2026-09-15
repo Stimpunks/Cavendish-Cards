@@ -599,8 +599,12 @@ body.break-open { overflow: hidden; }
 
 .threshold-more { margin: 26px 0 0; max-width: 66ch; color: var(--muted); }
 
+/* Two columns, not three. The deck spans the row above and the other two doors
+   take one column each, so the grid closes. A three-column grid with a
+   full-width deck leaves the third cell of the second row empty — a ragged
+   hole exactly like the one in the Stimpunks footer this pattern came from. */
 @media (min-width: 860px) {
-  .doors { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .doors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .door-deck { grid-column: 1 / -1; }
   .door-deck > a { flex-direction: row; align-items: baseline; gap: 18px; flex-wrap: wrap; }
   .door-deck .door-body { margin-top: 0; flex: 1 1 22ch; }
