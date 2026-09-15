@@ -296,6 +296,7 @@ def e(s):
 # Order of the collapsed site menu. (label, href, key)
 SITE_NAV = [
     ("The deck", "index.html", "deck"),
+    ("Zone a room", "rooms.html", "rooms"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
@@ -1041,7 +1042,7 @@ def implementation_md(out_families):
 
 
 _SITE_URL = "https://cavendish.app"
-_SITE_PAGES = ["/", "/guidebook.html", "/implementation.html",
+_SITE_PAGES = ["/", "/rooms.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
 
@@ -1091,6 +1092,7 @@ def _write_service_worker(root, web, faces):
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
     for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js",
+                 "rooms.html", "rooms.js",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "livable-worlds.html", "privacy.html", "changelog.html"):
@@ -1108,6 +1110,7 @@ def _write_service_worker(root, web, faces):
     version = h.hexdigest()[:8]
     precache = [
         "/", "/index.html", "/styles.css", "/app.js", "/cards.json",
+        "/rooms.html", "/rooms.js",
         "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",

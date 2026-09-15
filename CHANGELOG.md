@@ -4,6 +4,16 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-09-15
+
+### Site
+
+- Added **[Zone a room](https://cavendish.app/rooms.html)** — the deck's environment-side companion. You tick what a room has got, and it says which Cavendish zones the room can hold today: cave, campfire, watering hole, library, habitat. The zones a room can't hold yet come back as a list of **changes to the room**, in the room's own words, never as a lack. Then it prints **signs for the door**, one zone per sheet, because a cave only works if people know not to talk in it — and that knowledge has to be in the room, not in a document.
+- **No score, and the code says so.** No number out of five, no percentage, no grade, no pass, no certificate. Every question is about the room and what can be changed in it; no output sentence takes a person as its subject. The page says this out loud before the first question, next to the same commitment the [Livable worlds checklist](https://cavendish.app/livable-worlds.html) already makes.
+- **The questions are the deck's vocabulary, not a new one.** The conditions are grouped by the same sense signposts the What helps realm uses — Being in charge, Sound, Light & looking, Touch/Pressure/Temperature, Movement, Space & enclosure, Telling & talking, People & time — so a need named on a card and a condition ticked on this page are the same need. Each zone's requirements are written from its own card's Notes; the wording on the page is the deck's.
+- Works with JavaScript off: the five zones and what each one needs are in the page, so it can be worked out on paper. With it on, nothing leaves the browser — state is in `localStorage`, there is no account, and no request goes anywhere.
+- Where it sits: a room is the **Environment** rung of [ARLES](https://cavendish.app/arles.html), and the rung below it is what a person actually needs. A spread is a design brief for the room; this is where the brief gets acted on.
+
 ## 2026-07-21
 
 ### Deck

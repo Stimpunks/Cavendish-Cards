@@ -416,3 +416,127 @@ body.break-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------------------------------------------------------------------------
+   Zone a room (rooms.html)
+   Reuses the existing tokens throughout, including the per-place background
+   colors already defined for the deck, so a zone is the same color here as it
+   is on its card. No new palette.
+   --------------------------------------------------------------------------- */
+
+.rooms-intro, .rooms-step { margin: 0 0 40px; }
+.rooms-step h2 { margin: 0 0 10px; }
+.rooms-note { margin: 4px 0 14px; font-size: .95rem; }
+
+.rooms-form { margin: 18px 0 0; }
+.rooms-group {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 12px 16px 14px;
+  margin: 0 0 14px;
+}
+.rooms-group legend {
+  font-weight: 700;
+  color: var(--ink-strong);
+  padding: 0 6px;
+}
+.rooms-group label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 8px 0;
+  max-width: 72ch;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.rooms-group input[type="checkbox"] {
+  margin-top: .3em;
+  width: 1.1em;
+  height: 1.1em;
+  flex: 0 0 auto;
+  accent-color: var(--cyan-ink);
+}
+
+.rooms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: center;
+  margin: 16px 0 0;
+}
+.rooms-saved { margin: 0; font-size: .92rem; }
+
+.rooms-result { margin: 12px 0 0; }
+.rooms-lead { max-width: 68ch; font-size: 1.05rem; color: var(--ink-strong); }
+.rooms-held, .rooms-open { margin: 10px 0 12px; padding-left: 1.2em; max-width: 72ch; }
+.rooms-held li, .rooms-open li { margin: 8px 0; line-height: 1.5; }
+.rooms-open-head { margin: 22px 0 6px; font-size: 1.05rem; }
+
+.rooms-zone {
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--cyan);
+  border-radius: 10px;
+  padding: 14px 18px 16px;
+  margin: 0 0 16px;
+  background: var(--surface);
+}
+.rooms-zone h3 { margin: 0 0 6px; }
+.rooms-zone p { max-width: 72ch; }
+.rooms-prompt { font-style: italic; color: var(--ink-strong); margin: 0 0 10px; }
+.rooms-needs { margin: 12px 0 0; color: var(--muted); font-size: .95rem; }
+#zone-cave { background: var(--place-cave); }
+#zone-campfire { background: var(--place-campfire); }
+#zone-watering-hole { background: var(--place-watering-hole); }
+#zone-library { background: var(--place-library); }
+#zone-habitat { background: var(--place-habitat); }
+
+.rooms-next { padding-left: 1.2em; max-width: 72ch; }
+.rooms-next li { margin: 8px 0; }
+
+.rooms-signs { margin: 20px 0 0; display: grid; gap: 18px; }
+.rooms-sign {
+  border: 2px solid var(--ink-strong);
+  border-radius: 12px;
+  background: var(--surface);
+  margin: 0;
+  padding: 26px 24px 18px;
+  text-align: center;
+}
+.rooms-sign-kicker { margin: 0; color: var(--muted); text-transform: lowercase; letter-spacing: .04em; }
+.rooms-sign-name { margin: 2px 0 10px; font-size: 2rem; color: var(--ink-strong); }
+.rooms-sign-prompt { margin: 0 0 14px; font-style: italic; font-size: 1.15rem; }
+.rooms-sign-body { margin: 0 auto; max-width: 42ch; font-size: 1.05rem; line-height: 1.5; }
+.rooms-sign-foot { margin: 18px 0 0; color: var(--muted); font-size: .85rem; }
+
+@media (min-width: 720px) {
+  .rooms-signs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Printing. Two modes:
+   - Plain print (browser File > Print): the whole page, minus screen furniture.
+   - "printing-signs" (the buttons on the page): ONLY the signs, one per sheet,
+     because a sign competing with a page of prose is a sign nobody puts up. */
+@media print {
+  .breakbar, .skip, .theme-toggle, .rooms-actions, .site-footer { display: none !important; }
+  .rooms-zone { break-inside: avoid; }
+  .rooms-sign { break-inside: avoid; border-width: 3px; }
+  .rooms-signs { grid-template-columns: 1fr; }
+
+  body.printing-signs > *:not(main) { display: none !important; }
+  body.printing-signs main .wrap > section:not(.rooms-signs-section) { display: none !important; }
+  body.printing-signs .rooms-signs-section > *:not(.rooms-signs) { display: none !important; }
+  body.printing-signs .rooms-signs { display: block; }
+  body.printing-signs .rooms-sign {
+    break-after: page;
+    page-break-after: always;
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body.printing-signs .rooms-sign:last-child { break-after: auto; page-break-after: auto; }
+  body.printing-signs .rooms-sign-name { font-size: 3.2rem; }
+  body.printing-signs .rooms-sign-prompt { font-size: 1.5rem; }
+  body.printing-signs .rooms-sign-body { font-size: 1.25rem; }
+}

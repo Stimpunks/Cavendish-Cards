@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/theme-toggle.js" defer></script>
+  <title>Zone a room — Cavendish Cards</title>
+  <meta name="description" content="Take a room you actually have and work out which Cavendish zones it can hold — cave, campfire, watering hole, library, habitat — then print signs so the room says what it is for.">
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#fdf6e3">
+  <link rel="canonical" href="https://cavendish.app/rooms.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cavendish Cards">
+  <meta name="color-scheme" content="light">
+  <meta property="og:locale" content="en_US">
+  <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+  <meta property="og:title" content="Zone a room — Cavendish Cards">
+  <meta property="og:description" content="Take a room you actually have and work out which Cavendish zones it can hold, then print signs so the room says what it is for.">
+  <meta property="og:url" content="https://cavendish.app/rooms.html">
+  <meta property="og:image" content="https://cavendish.app/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zone a room — Cavendish Cards">
+  <meta name="twitter:description" content="Take a room you actually have and work out which Cavendish zones it can hold, then print signs so the room says what it is for.">
+  <meta name="twitter:image" content="https://cavendish.app/og-image.png">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the room</a>
+  <script src="/sw-register.js" defer></script>
+
+  <div class="breakbar">
+    <div class="wrap">
+      <div class="breakbar-left">
+        <details class="disclose sitenav">
+          <summary>Menu</summary>
+          <ul>
+            <li><a href="index.html">The deck</a></li>
+            <li><a href="rooms.html" aria-current="page">Zone a room</a></li>
+            <li><a href="guidebook.html">Guidebook</a></li>
+            <li><a href="implementation.html">Implementation guidebook</a></li>
+            <li><a href="facilitator.html">Facilitator sheet</a></li>
+            <li><a href="example-spreads.html">Example spreads</a></li>
+            <li><a href="livable-worlds.html">Livable worlds checklist</a></li>
+            <li><a href="why.html">Why this exists</a></li>
+            <li><a href="origin.html">Origin &amp; lineage</a></li>
+            <li><a href="arles.html">ARLES &amp; the cards</a></li>
+            <li><a href="privacy.html">Privacy &amp; security</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </details>
+      </div>
+      <a class="btn" href="index.html">Open the deck</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
+      <h1>Zone a room</h1>
+      <p class="tagline">Take a room you actually have &mdash; a classroom, an office, a hall, a spare corner &mdash; and work out which Cavendish zones it can hold. Then print signs, so the room says what it is for without anyone having to ask.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <section class="rooms-intro">
+        <h2>What this does, and what it refuses to do</h2>
+        <p class="intro">A <a href="https://stimpunks.org/space/cavendish/">Cavendish Space</a> is made of zones. A <strong>cave</strong> to be alone in. A <strong>campfire</strong> for a few people. A <strong>watering hole</strong> to be near people without joining in. A <strong>library</strong> of what the group has worked out. And the <strong>habitat</strong> that holds all four.</p>
+        <p class="intro">Most rooms can already hold one or two. Almost no room says which.</p>
+        <p class="intro">A cave only works if people know not to talk in it. That knowledge has to be in the room, not in a document.</p>
+        <div class="rules stack">
+          <p class="rules-lead"><strong>This is not an assessment.</strong></p>
+          <ul class="rules-list">
+            <li>There is <strong>no score</strong>, no grade, no percentage, and no pass.</li>
+            <li>Nothing here is a certificate, and nothing here says a room is good or bad.</li>
+            <li>Every question is about <strong>the room</strong> &mdash; what it can do, what can be changed. None is about a person in it.</li>
+            <li>A zone this room cannot hold today is not a failure. It is a list of what would change that.</li>
+            <li>Everything stays in your browser. Nothing is sent anywhere, and there is no account.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="conditions">What has this room got?</h2>
+        <p class="intro">Tick what is true of the room <em>as it is now</em>, or as it could be by the time it is used. Leave anything you are unsure about &mdash; an unticked box is only a thing this page will not assume.</p>
+        <p class="muted rooms-note">Grouped the way the deck groups <a href="guidebook.html">what helps</a>, so the vocabulary here and the vocabulary on the cards are the same vocabulary.</p>
+
+        <form id="rooms-form" class="rooms-form">
+          <fieldset class="rooms-group">
+            <legend>Being in charge</legend>
+            <label><input type="checkbox" name="c" value="control"> People in the room can change things in it &mdash; move furniture, adjust the lights, open or close a door.</label>
+            <label><input type="checkbox" name="c" value="own-spot"> Someone can have a spot that stays theirs, at least for the session.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Sound</legend>
+            <label><input type="checkbox" name="c" value="quiet"> It can be made quiet, or quiet enough that one voice is not competing with three others.</label>
+            <label><input type="checkbox" name="c" value="steady-sound"> Steady background sound is available, or headphones are allowed.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Light &amp; looking</legend>
+            <label><input type="checkbox" name="c" value="dim"> The light can be turned down, or there is a part of the room that is not under the brightest light.</label>
+            <label><input type="checkbox" name="c" value="less-to-look-at"> There is somewhere with less to look at &mdash; a blank wall, a screen off, a corner out of the traffic.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Touch, pressure &amp; temperature</legend>
+            <label><input type="checkbox" name="c" value="soft"> There is something soft to sit or lean on, not only hard chairs.</label>
+            <label><input type="checkbox" name="c" value="temperature"> The temperature can be changed, or people can dress for their own.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Movement</legend>
+            <label><input type="checkbox" name="c" value="room-to-move"> There is room to move, stand, or pace without being in anyone's way.</label>
+            <label><input type="checkbox" name="c" value="sit-my-way"> People can sit however they like &mdash; floor, cushion, standing, turned away.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Space &amp; enclosure</legend>
+            <label><input type="checkbox" name="c" value="corner"> There is a corner, nook, or den out of the main flow of the room.</label>
+            <label><input type="checkbox" name="c" value="way-out"> There is a way out that does not mean crossing in front of everyone.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>Telling &amp; talking</legend>
+            <label><input type="checkbox" name="c" value="written"> What happens here is written down or posted somewhere people can read it.</label>
+            <label><input type="checkbox" name="c" value="another-way"> There is a way to take part other than speaking aloud &mdash; writing, pointing, cards, chat.</label>
+          </fieldset>
+
+          <fieldset class="rooms-group">
+            <legend>People &amp; time</legend>
+            <label><input type="checkbox" name="c" value="come-and-go"> A person can leave and come back without explaining themselves.</label>
+            <label><input type="checkbox" name="c" value="no-rush"> Things do not all have to happen at once, or at one pace.</label>
+            <label><input type="checkbox" name="c" value="small-group"> A small group can meet here without the rest of the room listening in.</label>
+          </fieldset>
+
+          <div class="rooms-actions">
+            <button type="button" class="btn ghost" id="rooms-clear">Clear everything</button>
+            <p class="muted rooms-saved" id="rooms-saved" role="status"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="rooms-step" id="result-section">
+        <h2 id="result">What this room can hold</h2>
+        <p class="intro rooms-jsnote" id="rooms-jsnote">This page works out the zones as you tick. Without JavaScript it stays a readable list &mdash; every zone below says what it needs, so you can work it out on paper.</p>
+        <div id="rooms-result" class="rooms-result"></div>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="zones">The five zones</h2>
+        <p class="intro">Each zone, what it is for, and what a room needs before it can hold one. The words are the deck's own.</p>
+
+        <article class="rooms-zone" id="zone-cave">
+          <h3>The cave</h3>
+          <p class="rooms-prompt">&ldquo;Somewhere quiet, just for you.&rdquo;</p>
+          <p>A place you go alone &mdash; low light, close walls, the world kept outside for a while. It isn't hiding, and it isn't a shutdown. It's the real rest and thinking that only happen away from other people. <strong>Protect the quiet: don't make company or an explanation the price of it.</strong></p>
+          <p class="rooms-needs"><strong>Needs:</strong> quiet &middot; light down or a corner out of the brightest light &middot; a corner or nook out of the main flow &middot; leaving and coming back without explaining</p>
+        </article>
+
+        <article class="rooms-zone" id="zone-campfire">
+          <h3>The campfire</h3>
+          <p class="rooms-prompt">&ldquo;A small group, sharing.&rdquo;</p>
+          <p>A few people you know, close enough to feel the warmth without the heat. The storyteller's circle &mdash; where a person learns from those who came before. <strong>A campfire is not a stage, and no one at it should have to perform.</strong></p>
+          <p class="rooms-needs"><strong>Needs:</strong> a small group able to meet without the room listening in &middot; something soft to sit on &middot; sitting however you like &middot; a way to take part other than speaking</p>
+        </article>
+
+        <article class="rooms-zone" id="zone-watering-hole">
+          <h3>The watering hole</h3>
+          <p class="rooms-prompt">&ldquo;A soft place to pause and be near people.&rdquo;</p>
+          <p>The open, in-between place where people cross paths and talk easily &mdash; near others, with no need to join in. Drifting in and out, overhearing, being among people with no task or script. <strong>Make room to hover at the edge. Being near people is the whole point, and joining in stays optional.</strong></p>
+          <p class="rooms-needs"><strong>Needs:</strong> room to move without being in the way &middot; a way out that doesn't cross in front of everyone &middot; leaving and coming back without explaining &middot; somewhere with less to look at</p>
+        </article>
+
+        <article class="rooms-zone" id="zone-library">
+          <h3>The library</h3>
+          <p class="rooms-prompt">&ldquo;Where we keep what we've figured out.&rdquo;</p>
+          <p>The shared store the other places feed into &mdash; a pull toward looking things up and going deep, drawing on what others have already worked out. <strong>Point toward the resource, not the answer. The library is a place to find your own way in, at your own pace.</strong></p>
+          <p class="rooms-needs"><strong>Needs:</strong> what happens here written down or posted &middot; things not all at one pace &middot; a way to take part other than speaking &middot; a spot that stays yours</p>
+        </article>
+
+        <article class="rooms-zone" id="zone-habitat">
+          <h3>The habitat</h3>
+          <p class="rooms-prompt">&ldquo;The world around it all &mdash; steady, sensory-safe.&rdquo;</p>
+          <p>The whole landscape that holds the other four. Not a spot you stand in: the light, sound, texture, and rhythm that either fit a bodymind or don't. <strong>This is the deck's big idea, as a place &mdash; you meet needs by shaping the surroundings, not by changing the person.</strong> Make the habitat steady and sensory-safe, and the other places become reachable.</p>
+          <p class="rooms-needs"><strong>Needs:</strong> people able to change things in the room &middot; temperature that can be changed or dressed for &middot; quiet &middot; light that can come down &middot; steady sound or headphones allowed</p>
+        </article>
+      </section>
+
+      <section class="rooms-step rooms-signs-section">
+        <h2 id="signs">Signs for the door</h2>
+        <p class="intro">A zone nobody can identify is just furniture. Print a sign for each zone the room holds and put it where the zone starts &mdash; the door, the wall, the end of the table. One sign per page.</p>
+        <p class="muted rooms-note">These print from your browser. Nothing is uploaded, and no file is fetched from anywhere.</p>
+        <div class="rooms-actions">
+          <button type="button" class="btn" id="rooms-print">Print the signs for this room</button>
+          <button type="button" class="btn ghost" id="rooms-print-all">Print all five</button>
+        </div>
+        <div id="rooms-signs" class="rooms-signs" aria-live="polite"></div>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="next">Where this goes next</h2>
+        <p class="intro">A room is the <strong>Environment</strong> rung of <a href="arles.html">ARLES</a>. The rung below it is what a person actually needs, and the deck is how that gets said without having to explain it: a spread is a design brief for the room and the people in it.</p>
+        <ul class="rooms-next">
+          <li><a href="index.html">Lay a spread</a> with the people who use the room, then come back and tick what the room would need.</li>
+          <li><a href="livable-worlds.html">The livable worlds checklist</a> asks the bigger questions this page deliberately leaves out.</li>
+          <li><a href="implementation.html">The implementation guidebook</a> carries the materials &mdash; the tents, the lamps, the budget hacks &mdash; that the cards leave to the facilitator layer.</li>
+          <li><a href="https://stimpunks.org/cavendish/design-patterns/">Cavendish Space design patterns</a> on stimpunks.org map each zone to the pattern recipes behind it.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Cavendish Cards is a project of <a href="https://stimpunks.org/">Stimpunks Foundation</a>, made with Helen Edgar at <a href="https://autisticrealms.com/">Autistic Realms</a>. Dedicated to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</p>
+      <p>Broken systems, not broken people.</p>
+    </div>
+  </footer>
+
+  <script src="/rooms.js" defer></script>
+</body>
+</html>
