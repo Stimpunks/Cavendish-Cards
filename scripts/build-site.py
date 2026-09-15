@@ -298,6 +298,7 @@ SITE_NAV = [
     ("Cavendish Space", "index.html", "home"),
     ("The deck", "deck.html", "deck"),
     ("Zone a room", "rooms.html", "rooms"),
+    ("What is a Cavendish Space?", "space.html", "space"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
@@ -1043,7 +1044,7 @@ def implementation_md(out_families):
 
 
 _SITE_URL = "https://cavendish.app"
-_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/guidebook.html", "/implementation.html",
+_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
 
@@ -1093,7 +1094,7 @@ def _write_service_worker(root, web, faces):
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
     for name in ("index.html", "deck.html", "styles.css", "app.js", "cards.json",
-                 "theme-toggle.js", "rooms.html", "rooms.js",
+                 "theme-toggle.js", "rooms.html", "rooms.js", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "livable-worlds.html", "privacy.html", "changelog.html"):
@@ -1111,7 +1112,7 @@ def _write_service_worker(root, web, faces):
     version = h.hexdigest()[:8]
     precache = [
         "/", "/index.html", "/deck.html", "/styles.css", "/app.js", "/cards.json",
-        "/rooms.html", "/rooms.js",
+        "/rooms.html", "/rooms.js", "/space.html",
         "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
