@@ -295,7 +295,8 @@ def e(s):
 
 # Order of the collapsed site menu. (label, href, key)
 SITE_NAV = [
-    ("The deck", "index.html", "deck"),
+    ("Cavendish Space", "index.html", "home"),
+    ("The deck", "deck.html", "deck"),
     ("Zone a room", "rooms.html", "rooms"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
@@ -332,7 +333,7 @@ def site_topbar(current):
             '<div class="breakbar-left">'
             + site_nav(current) +
             '</div>'
-            '<a class="btn" href="index.html">Open the deck</a>'
+            '<a class="btn" href="deck.html">Open the deck</a>'
             '</div></div>')
 
 
@@ -466,7 +467,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   {site_topbar(current)}
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
+      <p class="backlink"><a href="index.html">Cavendish Space</a></p>
       <h1>{e(h1)}</h1>
       <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. You're on one of its pages — open the deck to lay a spread.</p>
     </div>
@@ -660,7 +661,7 @@ def guidebook_html(out_families):
   {site_topbar("guidebook")}
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
+      <p class="backlink"><a href="index.html">Cavendish Space</a></p>
       <h1>Guidebook</h1>
       <p class="intro">{e(INTRO)}</p>
       <div class="rules stack" role="note" aria-label="Not a screening tool">
@@ -980,7 +981,7 @@ def implementation_html(out_families):
   {site_topbar("implementation")}
   <header class="site-header">
     <div class="wrap">
-      <p class="backlink"><a href="index.html">Cavendish Cards</a></p>
+      <p class="backlink"><a href="index.html">Cavendish Space</a></p>
       <h1>Implementation Guidebook</h1>
       <p class="intro">{e(IMPL_INTRO)}</p>
       <div class="rules" role="note" aria-label="The one principle">
@@ -1042,7 +1043,7 @@ def implementation_md(out_families):
 
 
 _SITE_URL = "https://cavendish.app"
-_SITE_PAGES = ["/", "/rooms.html", "/guidebook.html", "/implementation.html",
+_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
 
@@ -1091,8 +1092,8 @@ def _write_service_worker(root, web, faces):
     face_names = sorted(p.name for p in faces.glob("*.svg"))
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
-    for name in ("index.html", "styles.css", "app.js", "cards.json", "theme-toggle.js",
-                 "rooms.html", "rooms.js",
+    for name in ("index.html", "deck.html", "styles.css", "app.js", "cards.json",
+                 "theme-toggle.js", "rooms.html", "rooms.js",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "livable-worlds.html", "privacy.html", "changelog.html"):
@@ -1109,7 +1110,7 @@ def _write_service_worker(root, web, faces):
         h.update(_audio.read_bytes())
     version = h.hexdigest()[:8]
     precache = [
-        "/", "/index.html", "/styles.css", "/app.js", "/cards.json",
+        "/", "/index.html", "/deck.html", "/styles.css", "/app.js", "/cards.json",
         "/rooms.html", "/rooms.js",
         "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",

@@ -7,7 +7,7 @@
   "dir": "ltr",
   "description": "A calm, no-scoring deck for naming sensory and interaction needs.",
   "categories": ["education"],
-  "start_url": "/",
+  "start_url": "/deck.html",
   "display": "standalone",
   "background_color": "#fdf6e3",
   "theme_color": "#fdf6e3",

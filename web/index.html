@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <script src="/theme-toggle.js" defer></script>
-  <title>Cavendish Cards</title>
-  <meta name="description" content="A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few.">
+  <title>Cavendish Space</title>
+  <meta name="description" content="Places built to fit bodyminds, not the other way round. Show how you feel with the cards, or set up a room with the zone builder.">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -17,20 +17,20 @@
   <meta name="theme-color" content="#fdf6e3">
   <link rel="canonical" href="https://cavendish.app/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Cavendish Cards">
+  <meta property="og:site_name" content="Cavendish Space">
   <meta name="color-scheme" content="light">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Cavendish">
-  <meta name="application-name" content="Cavendish Cards">
+  <meta name="application-name" content="Cavendish Space">
   <meta property="og:locale" content="en_US">
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://cavendish.app/#website","name":"Cavendish Cards","url":"https://cavendish.app/","description":"A calm, no-scoring deck for naming sensory and interaction needs.","inLanguage":"en","license":"https://creativecommons.org/publicdomain/zero/1.0/","publisher":{"@id":"https://stimpunks.org/#organization"}},{"@type":"Organization","@id":"https://stimpunks.org/#organization","name":"Stimpunks Foundation","url":"https://stimpunks.org/","sameAs":["https://github.com/Stimpunks/Cavendish-Cards"]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://cavendish.app/#website","name":"Cavendish Space","url":"https://cavendish.app/","description":"Places built to fit bodyminds, not the other way round.","inLanguage":"en","license":"https://creativecommons.org/publicdomain/zero/1.0/","publisher":{"@id":"https://stimpunks.org/#organization"}},{"@type":"Organization","@id":"https://stimpunks.org/#organization","name":"Stimpunks Foundation","url":"https://stimpunks.org/","sameAs":["https://github.com/Stimpunks/Cavendish-Cards"]}]}
   </script>
-  <meta property="og:title" content="Cavendish Cards">
-  <meta property="og:description" content="A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few.">
+  <meta property="og:title" content="Cavendish Space">
+  <meta property="og:description" content="Places built to fit bodyminds, not the other way round. Show how you feel with the cards, or set up a room with the zone builder.">
   <meta property="og:url" content="https://cavendish.app/">
   <meta property="og:image" content="https://cavendish.app/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -38,12 +38,12 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cavendish Cards">
-  <meta name="twitter:description" content="A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few.">
+  <meta name="twitter:title" content="Cavendish Space">
+  <meta name="twitter:description" content="Places built to fit bodyminds, not the other way round.">
   <meta name="twitter:image" content="https://cavendish.app/og-image.png">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to the deck</a>
+  <a class="skip" href="#main">Skip to the doors</a>
   <script src="/sw-register.js" defer></script>
 
   <div class="breakbar">
@@ -52,7 +52,8 @@
         <details class="disclose sitenav">
           <summary>Menu</summary>
           <ul>
-            <li><a href="index.html" aria-current="page">The deck</a></li>
+            <li><a href="index.html" aria-current="page">Cavendish Space</a></li>
+            <li><a href="deck.html">The deck</a></li>
             <li><a href="rooms.html">Zone a room</a></li>
             <li><a href="guidebook.html">Guidebook</a></li>
             <li><a href="implementation.html">Implementation guidebook</a></li>
@@ -66,138 +67,56 @@
             <li><a href="changelog.html">Changelog</a></li>
           </ul>
         </details>
-        <button id="break-toggle" type="button" class="btn ghost" aria-haspopup="dialog">I need a bodymind break</button>
       </div>
-      <button id="to-table" type="button" class="btn ghost" hidden>↓ Table</button>
+      <a class="btn" href="deck.html">Open the deck</a>
     </div>
   </div>
-  <dialog id="break-dialog" class="break-dialog" aria-labelledby="break-title">
-    <div class="break-dialog-inner">
-      <h2 id="break-title">Take a bodymind break</h2>
-      <p class="break-lead">Nothing here needs you right now. Rest, move, breathe, or step away &mdash; whatever your body and mind want. Come back whenever you&rsquo;re ready.</p>
-      <p class="break-def"><strong>Bodymind</strong> &mdash; one word, because the body and mind aren&rsquo;t experienced separately. We&rsquo;re not minds riding around in bodies; we&rsquo;re bodyminds.</p>
-      <figure class="break-audio">
-        <figcaption>Ocean waves &mdash; press play. The swells are timed to invite slower, deeper breathing.</figcaption>
-        <audio id="break-audio" controls loop preload="none" src="/audio/ocean-waves.mp3"></audio>
-        <p class="break-credit"><em>&ldquo;Ocean Waves&rdquo; by <a href="https://www.adriel.art" target="_blank" rel="noopener">Adriel Jeremiah Wool</a></em></p>
-      </figure>
-      <blockquote class="break-affirm">
-        <p>Use this space however your bodymind needs. Sit in a chair or on the floor, pace, lie down, rock, flap, spin, move around, come and go.</p>
-        <p>Your bodymind has needs, and they deserve to be met. You are valuable, you are worthy, and you belong here.</p>
-      </blockquote>
-      <details class="break-ways">
-        <summary>Some ways to affirm your bodymind</summary>
-        <ul>
-          <li>stretch</li>
-          <li>flap</li>
-          <li>fidget</li>
-          <li>meditate</li>
-          <li>stim dance</li>
-          <li>body scan</li>
-          <li>eat</li>
-          <li>drink</li>
-          <li>pee</li>
-        </ul>
-      </details>
-      <button id="break-close" type="button" class="btn">I&rsquo;m back</button>
-    </div>
-  </dialog>
 
-  <header class="site-header">
+  <header class="site-header threshold-header">
     <div class="wrap">
-      <h1>Cavendish Cards</h1>
-      <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. Point at a card, or lay a few &mdash; no reading needed to play.</p>
-
-      <p class="intro">Cavendish Cards, developed by <a href="https://stimpunks.org/">Stimpunks Foundation</a>, come from the <a href="origin.html">Cavendish Space</a> model and the <a href="arles.html">ARLES</a> design method &mdash; ways of shaping the space around real needs instead of asking people to hide them. The cards give you pictures and words for how you feel and what helps, so you can show someone instead of having to explain. Play on your own, or with someone alongside you.<br>New here? <a href="guidebook.html">Start with the guidebook</a>.<br>Building a space? See the <a href="implementation.html">implementation guidebook</a>.</p>
-
-      <div class="rules" role="note" aria-label="The two rules">
-        <p><strong>No scoring.</strong> No points, no right answer, no winning. There is no wrong card and no wrong hand.</p>
-        <p><strong>You choose what to share.</strong> Cards on the table stay face-down until you turn them up. Turning a card up is you sharing it.</p>
-      </div>
-
-      <details class="disclose">
-        <summary>Seven ways to play</summary>
-        <ul>
-          <li><strong>Show me</strong> &mdash; pick the one card that&rsquo;s you right now.</li>
-          <li><strong>Build my day</strong> &mdash; start with a place, then how you feel (the weather), then what helps. A sentence in pictures.</li>
-          <li><strong>Class weather</strong> &mdash; everyone lays a weather card, and the room&rsquo;s weather becomes visible. No one is named.</li>
-          <li><strong>Map the edges</strong> &mdash; lay your day left to right, find the hard crossings between one thing and the next, and pad each one with a lily pad so attention lands gently instead of being yanked.</li>
-          <li><strong>Play as the environment</strong> &mdash; lay what-helps cards that conflict, and build one space that holds them all.</li>
-          <li><strong>Moving between</strong> &mdash; lay places, interaction moods, and lily pads left to right to show how you move between alone and together across the day.</li>
-          <li><strong>Build a niche</strong> &mdash; lay the what-helps that would make a space yours, with <em>the habitat</em> at the center, then build it &mdash; on any budget.</li>
-        </ul>
-      </details>
+      <h1>Cavendish Space</h1>
+      <p class="threshold-line">Places built to fit bodyminds, not the other way round.</p>
     </div>
   </header>
 
-  <main id="main" class="wrap">
-    <section aria-labelledby="deck-h">
-      <div class="section-head">
-        <h2 id="deck-h">The deck</h2>
-        <p class="muted" id="deck-hint">Choose a card to lay it on the table.</p>
-      </div>
-      <p class="filters-label" id="realms-label">Choose a realm to focus on, or browse all.</p>
-      <div id="filters" class="filters" role="group" aria-labelledby="realms-label"></div>
-      <p id="family-blurb" class="family-blurb" hidden></p>
-      <div id="deck" aria-describedby="deck-hint"></div>
-    </section>
+  <main id="main">
+    <div class="wrap">
 
-    <section aria-labelledby="table-h" class="table-section">
-      <div class="section-head">
-        <h2 id="table-h">The table</h2>
-        <div class="table-actions">
-          <button id="done" type="button" class="btn" hidden>I&rsquo;m done</button>
-          <button id="clear" type="button" class="btn ghost" hidden>Clear the table</button>
-        </div>
-      </div>
-      <p id="table-empty" class="muted">Nothing laid down yet. Choose cards from the deck above &mdash; they arrive face-down, and you turn them up when you want to share them.</p>
-      <ul id="table" class="table-grid" aria-label="Cards on the table"></ul>
-    </section>
+      <h2 class="visually-hidden">Ways in</h2>
+      <ul class="doors">
+        <li class="door door-deck">
+          <a href="deck.html">
+            <span class="door-verb">Show how you feel</span>
+            <span class="door-name">Cavendish Cards</span>
+            <span class="door-body">Point at a picture instead of explaining. No reading needed, no scoring, and nothing is shared until you turn it up.</span>
+          </a>
+        </li>
+        <li class="door door-rooms">
+          <a href="rooms.html">
+            <span class="door-verb">Set up a room</span>
+            <span class="door-name">Zone a room</span>
+            <span class="door-body">Work out which zones a room can already hold, what would change that, and print signs for the door.</span>
+          </a>
+        </li>
+        <li class="door door-about">
+          <a href="https://stimpunks.org/space/cavendish/">
+            <span class="door-verb">Read the idea</span>
+            <span class="door-name">What is a Cavendish Space?</span>
+            <span class="door-body">Caves, campfires, watering holes, a library, and the habitat that holds them. The full model lives at stimpunks.org.</span>
+          </a>
+        </li>
+      </ul>
 
-    <section id="summary" class="summary" hidden aria-labelledby="summary-h">
-      <h2 id="summary-h" tabindex="-1">Your spread</h2>
-      <p class="muted">Here&rsquo;s what you turned up. Nothing to score &mdash; just what&rsquo;s true right now.</p>
-      <ul id="summary-list" class="summary-list"></ul>
-      <p class="summary-q"><em>If you want: which card matters most right now? Is there one you&rsquo;d like someone to notice?</em></p>
-      <details class="laid-note summary-why">
-        <summary>What a spread is for</summary>
-        <p>A spread is a design brief for the space &mdash; not a report on the person. It says <em>this is too much, and here&rsquo;s what would help</em>, so the room can change and the person doesn&rsquo;t have to keep explaining. Regulation before instruction. Environment is curriculum. <a href="https://cavendish.app/why">Why this exists</a>.</p>
-      </details>
-      <div class="summary-note-field">
-        <label for="summary-note">Anything you want to remember about this? <span class="muted">(optional)</span></label>
-        <textarea id="summary-note" rows="3" placeholder="Just for you &mdash; added to the copy, never saved."></textarea>
-      </div>
-      <div class="table-actions">
-        <button id="summary-copy" type="button" class="btn">Copy for a journal</button>
-        <button id="summary-close" type="button" class="btn ghost">Hide</button>
-      </div>
-    </section>
+      <p class="threshold-more">Also here: the <a href="guidebook.html">guidebook</a>, the <a href="facilitator.html">facilitator sheet</a>, <a href="example-spreads.html">example spreads</a>, the <a href="livable-worlds.html">livable worlds checklist</a>, and <a href="arles.html">how this fits ARLES</a>. Everything is free and <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source and full deck on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
+      <p>A project of <a href="https://stimpunks.org/">Stimpunks Foundation</a>, made with Helen Edgar at <a href="https://autisticrealms.com/">Autistic Realms</a>.</p>
+      <p>Broken systems, not broken people.</p>
     </div>
   </footer>
-
-  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-name">
-    <div class="lightbox-backdrop" data-close></div>
-    <figure class="lightbox-panel">
-      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close">&times;</button>
-      <img id="lightbox-img" class="lightbox-img" alt="">
-      <figcaption class="lightbox-caption">
-        <h2 id="lightbox-name" class="lightbox-name"></h2>
-        <p id="lightbox-prompt" class="lightbox-prompt"></p>
-        <details id="lightbox-note" class="laid-note lightbox-note" hidden>
-          <summary>What this card means</summary>
-          <p id="lightbox-note-text"></p>
-          <p id="lightbox-build" class="laid-build" hidden><a id="lightbox-build-link" href=""></a></p>
-        </details>
-      </figcaption>
-    </figure>
-  </div>
-
-  <div id="live" class="visually-hidden" aria-live="polite"></div>
-  <script src="app.js"></script>
 </body>
 </html>

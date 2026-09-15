@@ -540,3 +540,68 @@ body.break-open { overflow: hidden; }
   body.printing-signs .rooms-sign-prompt { font-size: 1.5rem; }
   body.printing-signs .rooms-sign-body { font-size: 1.25rem; }
 }
+
+/* ---------------------------------------------------------------------------
+   The threshold (index.html)
+   Three doors, above the fold, deck first. Deliberately thin on prose: this
+   page's job is to be left within about ten seconds, and the deck's promise is
+   that no reading is required to use it. A landing page that has to be read
+   would charge its own audience at the door.
+   --------------------------------------------------------------------------- */
+
+.threshold-header { padding-bottom: 6px; }
+.threshold-header h1 { margin: 0 0 6px; }
+.threshold-line {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.doors {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.door { margin: 0; }
+.door > a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: 22px 22px 24px;
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--cyan);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+.door > a:hover { border-color: var(--cyan); filter: brightness(0.985); }
+.door > a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.door-verb {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+  line-height: 1.25;
+}
+.door-name { color: var(--cyan-ink); font-weight: 700; }
+.door-body { margin-top: 6px; max-width: 46ch; line-height: 1.5; }
+
+/* The deck is the door with an audience already pointed at it, so it gets the
+   most weight. The other two are peers. */
+.door-deck > a { background: var(--place-campfire); border-left-color: var(--cyan-ink); }
+.door-deck .door-verb { font-size: 1.75rem; }
+.door-rooms > a { background: var(--place-habitat); }
+.door-about > a { background: var(--place-library); }
+
+.threshold-more { margin: 26px 0 0; max-width: 66ch; color: var(--muted); }
+
+@media (min-width: 860px) {
+  .doors { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .door-deck { grid-column: 1 / -1; }
+  .door-deck > a { flex-direction: row; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .door-deck .door-body { margin-top: 0; flex: 1 1 22ch; }
+}
