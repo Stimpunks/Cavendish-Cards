@@ -1,11 +1,11 @@
 {
-  "name": "Cavendish Cards",
+  "name": "Cavendish Space",
   "short_name": "Cavendish",
   "id": "/",
   "scope": "/",
   "lang": "en",
   "dir": "ltr",
-  "description": "A calm, no-scoring deck for naming sensory and interaction needs.",
+  "description": "Places built to fit bodyminds, not the other way round. A calm, no-scoring deck for naming sensory and interaction needs, and a tool for zoning a room.",
   "categories": ["education"],
   "start_url": "/deck.html",
   "display": "standalone",

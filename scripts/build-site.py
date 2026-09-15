@@ -448,19 +448,19 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   <meta property="og:locale" content="en_US">
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   {_JSONLD}
-  <meta property="og:title" content="Cavendish Cards — {e(title)}">
+  <meta property="og:title" content="Cavendish Space — {e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:url" content="https://cavendish.space/{current}.html">
   <link rel="canonical" href="https://cavendish.space/{current}.html">
-  <meta property="og:image" content="https://cavendish.space/og-image.png">
+  <meta property="og:image" content="https://cavendish.space/og-image.png?v=2">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
+  <meta property="og:image:alt" content="Cavendish Space — a sheltering arch with a hearth inside it, beside the words &quot;Cavendish Space: places built to fit bodyminds, not the other way round.&quot;">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cavendish Cards — {e(title)}">
+  <meta name="twitter:title" content="Cavendish Space — {e(title)}">
   <meta name="twitter:description" content="{e(description)}">
-  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png?v=2">
 </head>
 <body>
   <a class="skip" href="#{skip_id}">{e(skip_label)}</a>
@@ -642,19 +642,19 @@ def guidebook_html(out_families):
   <meta property="og:locale" content="en_US">
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   {_JSONLD}
-  <meta property="og:title" content="Cavendish Cards — Guidebook">
+  <meta property="og:title" content="Cavendish Space — Guidebook">
   <meta property="og:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
   <meta property="og:url" content="https://cavendish.space/guidebook.html">
   <link rel="canonical" href="https://cavendish.space/guidebook.html">
-  <meta property="og:image" content="https://cavendish.space/og-image.png">
+  <meta property="og:image" content="https://cavendish.space/og-image.png?v=2">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
+  <meta property="og:image:alt" content="Cavendish Space — a sheltering arch with a hearth inside it, beside the words &quot;Cavendish Space: places built to fit bodyminds, not the other way round.&quot;">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cavendish Cards — Guidebook">
+  <meta name="twitter:title" content="Cavendish Space — Guidebook">
   <meta name="twitter:description" content="What each Cavendish card means and how to hold it. It describes the card, never the person.">
-  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png?v=2">
 </head>
 <body>
   <a class="skip" href="#gb">Skip to the guidebook</a>
@@ -962,19 +962,19 @@ def implementation_html(out_families):
   <meta property="og:locale" content="en_US">
   <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
   {_JSONLD}
-  <meta property="og:title" content="Cavendish Cards — Implementation Guidebook">
+  <meta property="og:title" content="Cavendish Space — Implementation Guidebook">
   <meta property="og:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
   <meta property="og:url" content="https://cavendish.space/implementation.html">
   <link rel="canonical" href="https://cavendish.space/implementation.html">
-  <meta property="og:image" content="https://cavendish.space/og-image.png">
+  <meta property="og:image" content="https://cavendish.space/og-image.png?v=2">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Cavendish Cards — a fan of colorful cards on a warm cream background.">
+  <meta property="og:image:alt" content="Cavendish Space — a sheltering arch with a hearth inside it, beside the words &quot;Cavendish Space: places built to fit bodyminds, not the other way round.&quot;">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cavendish Cards — Implementation Guidebook">
+  <meta name="twitter:title" content="Cavendish Space — Implementation Guidebook">
   <meta name="twitter:description" content="How to build the room the cards ask for. The facilitator layer: materials live here, never on a card.">
-  <meta name="twitter:image" content="https://cavendish.space/og-image.png">
+  <meta name="twitter:image" content="https://cavendish.space/og-image.png?v=2">
 </head>
 <body>
   <a class="skip" href="#impl">Skip to the guide</a>
@@ -1101,6 +1101,16 @@ def _write_service_worker(root, web, faces):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
+    # Icons and the share card are precached, so they must feed the version hash
+    # too. Without this an icon-only change never reaches a returning visitor:
+    # the service worker keeps serving the old one from a cache it has no reason
+    # to evict. Everything precached should influence the version.
+    for name in ("favicon.svg", "favicon.ico", "apple-touch-icon.png",
+                 "icon-192.png", "icon-512.png", "og-image.png",
+                 "site.webmanifest"):
+        p_ = web / name
+        if p_.exists():
+            h.update(p_.read_bytes())
     for name in face_names:
         h.update(name.encode("utf-8"))
         h.update((faces / name).read_bytes())

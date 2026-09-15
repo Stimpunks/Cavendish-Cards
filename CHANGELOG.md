@@ -8,6 +8,11 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- **New mark.** The favicon was a fan of three cards, which described the site when the site was a card deck. It is now **a sheltering arch with a hearth inside it** — the cave and the campfire in one shape, on the house cream tile that reads as the habitat holding them. Chosen by rendering the candidates at 16px and looking: a three-zone version was legible at 64px and mush at 16, which is the size that actually matters.
+- Icons and the Open Graph card are now generated from one SVG source by `scripts/build-icons.py`, so the mark is defined once. Three variants, for a real reason: a browser tab draws the favicon as-is and keeps its rounded border, while Apple and Android mask app icons and crop the edges — a rounded tile inside a mask gets its corners shaved twice.
+- **New share card** at 1200×630, set in Atkinson Hyperlegible like the site, carrying the mark, the line *places built to fit bodyminds, not the other way round*, and the two verbs. The old `og:image:alt` described a fan of cards on a cream background, which had not been true since the image changed; it now describes what is actually in the picture.
+- Fixed a latent cache bug found while doing it: the service worker's version hash was computed from the HTML, CSS, JS and card faces but **not** the icons it precaches — so an icon-only change would never have reached a returning visitor. Everything precached now feeds the version.
+
 - **The site moved to [cavendish.space](https://cavendish.space/).** The name now matches what the site is: Cavendish Space holding the deck, the room zoner, and the model, rather than a card deck that grew two more things. **cavendish.app keeps working** — it stays registered, stays an alias on the site, stays on the certificate, and 301s path-for-path, so every existing link lands on the same page it always did.
 - Everything the site says about itself moved with it: canonical URLs, Open Graph and Twitter URLs, the JSON-LD graph, the sitemap, robots.txt, and the footer on the printable room signs, which had the old domain baked into the sheet you pin to a door.
 
