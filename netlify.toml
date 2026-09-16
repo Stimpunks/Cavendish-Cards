@@ -28,3 +28,11 @@
   for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify does not map the .webmanifest extension, so it falls back to
+# application/octet-stream. Some browsers refuse a manifest served at the wrong
+# type, which silently breaks install-to-home-screen. Pin the registered type.
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

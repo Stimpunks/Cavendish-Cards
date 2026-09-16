@@ -4,6 +4,16 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-09-16
+
+### Site
+
+- **A real 404 page.** A broken link used to land on Netlify's stock "Page not found" — right status code, wrong everything else: no menu, no route back, and not a word in the deck's voice. `/404.html` is now generated from the same shell as every other prose page, so its menu comes from `SITE_NAV` and cannot drift. The copy holds the line the rest of the deck holds: a dead link is a broken system, not a visitor who did something wrong. It names four doors back in and says where to report the bug.
+- **Dark mode was telling the browser it was light.** Every page shipped `<meta name="color-scheme" content="light">` while the stylesheet has shipped a full dark theme for months. Browsers took the meta tag at its word, so dark-mode visitors got light-rendered scrollbars and form controls, and the white flash the no-flash script exists to prevent. Now `light dark`.
+- `theme-color` was a single cream value, which put light browser chrome above a dark page. It is now a light/dark pair keyed to `prefers-color-scheme`, using the same two `--bg` tokens as the stylesheet.
+- **The web manifest was served as `application/octet-stream`.** Netlify has no mapping for the `.webmanifest` extension, and some browsers refuse a manifest at the wrong type — which would have broken add-to-home-screen silently, with nothing in any log. `netlify.toml` now pins `application/manifest+json`.
+- The standalone page shell's one-line description is now overridable instead of hardcoded. It had to be: "you're on one of its pages" is false on the page that says a page isn't there.
+
 ## 2026-09-15
 
 ### Site

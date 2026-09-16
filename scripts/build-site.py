@@ -418,7 +418,15 @@ def md_to_html(text):
     return "\n".join(out)
 
 
-def _standalone_page(title, description, skip_id, skip_label, h1, current, body):
+# The one-line description under the h1 on every standalone page. The 404 page
+# overrides it, since "you're on one of its pages" is false there.
+_SHELL_TAGLINE = ("A calm, no-scoring deck for naming sensory and interaction "
+                  "needs. You're on one of its pages — open the deck to "
+                  "lay a spread.")
+
+
+def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
+                     tagline=_SHELL_TAGLINE):
     """Full HTML doc for a standalone prose page, matching the site shell."""
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -436,10 +444,11 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#fdf6e3">
+  <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -470,7 +479,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body)
     <div class="wrap">
       <p class="backlink"><a href="index.html">Cavendish Space</a></p>
       <h1>{e(h1)}</h1>
-      <p class="tagline">A calm, no-scoring deck for naming sensory and interaction needs. You're on one of its pages — open the deck to lay a spread.</p>
+      <p class="tagline">{tagline}</p>
     </div>
   </header>
   <main id="{skip_id}" class="wrap">
@@ -540,6 +549,34 @@ def privacy_html(root):
         "What Cavendish Cards keeps (almost nothing), how it stays on your device, and the security measures behind the site.",
         "privacy", "Skip to the privacy details", "Privacy & security", "privacy",
         md_to_html(src))
+
+
+def not_found_html():
+    """The 404 page. Netlify serves /404.html with a 404 status for any unmatched
+    path, so this is what a broken link lands on. It reuses the standalone shell,
+    which means the menu comes from SITE_NAV and stays correct for free. The copy
+    holds the line: a dead link is a broken system, not a visitor who did
+    something wrong."""
+    body = """<p>This page isn't here. A link pointed somewhere that doesn't exist
+&mdash; that's the link, not you. Nothing you did broke anything, and nothing is lost.</p>
+<p>Here are the doors back in:</p>
+<ul>
+<li><a href="deck.html">The deck</a> &mdash; show how you feel and what you need.</li>
+<li><a href="rooms.html">Zone a room</a> &mdash; set up a space with the five zones.</li>
+<li><a href="space.html">What is a Cavendish Space?</a> &mdash; the model behind all of it.</li>
+<li><a href="guidebook.html">The guidebook</a> &mdash; every card, and how to hold it.</li>
+</ul>
+<p>The full menu is at the top of this page. If a link on this site sent you here,
+that's a bug worth telling us about &mdash;
+<a href="https://github.com/Stimpunks/Cavendish-Cards/issues">open an issue</a>
+or email <a href="mailto:stimpunks@stimpunks.org">stimpunks@stimpunks.org</a>.</p>"""
+    return _standalone_page(
+        "Page not found",
+        "That page isn't here. The deck, the zone builder, and the guidebook are.",
+        "not-found", "Skip to the ways back", "This page isn't here", "404",
+        body,
+        tagline="A calm, no-scoring deck for naming sensory and interaction needs. "
+                "The page you asked for isn't here — these are.")
 
 
 def changelog_html(root):
@@ -630,10 +667,11 @@ def guidebook_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#fdf6e3">
+  <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -950,10 +988,11 @@ def implementation_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#fdf6e3">
+  <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Cavendish Cards">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -1262,6 +1301,7 @@ def main():
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
+    (web / "404.html").write_text(not_found_html(), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
     (root / "cavendish-cards-implementation-layer.md").write_text(
