@@ -21,6 +21,16 @@
 }
 
 :root {
+  --zs-ground: #e9f0e6;
+  --zs-hill: #0F6E56;
+  --zs-mouth: #06342a;
+  --zs-stone: #cfc9b4;
+  --zs-fire: #993C1D;
+  --zs-flame: #d98324;
+  --zs-water: #2aa198;
+  --zs-roof: #3f3792;
+  --zs-shelf: #534AB7;
+  --zs-book: #efeaf1;
   --bg: #fdf6e3;
   --panel: #eee8d5;
   --ink: #073642;
@@ -51,6 +61,16 @@
    the reader forces dark. Same values either way. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --zs-ground: #073a33;
+    --zs-hill: #159274;
+    --zs-mouth: #022019;
+    --zs-stone: #3f4f4f;
+    --zs-fire: #c2542c;
+    --zs-flame: #e8a04a;
+    --zs-water: #2aa198;
+    --zs-roof: #4a3fa8;
+    --zs-shelf: #6a60d4;
+    --zs-book: #e6e2f2;
     color-scheme: dark;
     --bg: #002b36;
     --panel: #073642;
@@ -72,6 +92,16 @@
   }
 }
 :root[data-theme="dark"] {
+    --zs-ground: #073a33;
+    --zs-hill: #159274;
+    --zs-mouth: #022019;
+    --zs-stone: #3f4f4f;
+    --zs-fire: #c2542c;
+    --zs-flame: #e8a04a;
+    --zs-water: #2aa198;
+    --zs-roof: #4a3fa8;
+    --zs-shelf: #6a60d4;
+    --zs-book: #e6e2f2;
   color-scheme: dark;
   --bg: #002b36;
   --panel: #073642;
@@ -638,3 +668,37 @@ body.break-open { overflow: hidden; }
   .lockup { gap: 14px; }
   .lockup-mark { width: 54px; height: 54px; }
 }
+
+/* ---------------------------------------------------------------------------
+   The zonescape on the threshold: the five zones as a place, drawn rather than
+   listed. Every fill is a token so the whole picture flips with the theme —
+   the first draft had a fixed pale ground, which on a dark page read as a
+   bright slab laid across the bottom of the screen.
+   --------------------------------------------------------------------------- */
+
+.zonescape { margin: 44px 0 0; }
+.zonescape-art { display: block; width: 100%; height: auto; }
+.zonescape figcaption {
+  margin: 14px 0 0;
+  max-width: 78ch;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+.zonescape figcaption strong { color: var(--ink); }
+
+.zs-ground { fill: var(--zs-ground); }
+.zs-hill   { fill: var(--zs-hill); }
+.zs-mouth  { fill: var(--zs-mouth); }
+.zs-stone  { fill: var(--zs-stone); }
+.zs-fire   { fill: var(--zs-fire); }
+.zs-flame  { fill: var(--zs-flame); }
+.zs-water  { fill: var(--zs-water); }
+.zs-waterline { fill: none; stroke: var(--zs-hill); stroke-width: 2.5; opacity: .4; }
+.zs-reed   { fill: none; stroke: var(--zs-hill); stroke-width: 3.4; stroke-linecap: round; }
+.zs-roof   { fill: var(--zs-roof); }
+.zs-shelf  { fill: var(--zs-shelf); }
+.zs-book   { fill: var(--zs-book); opacity: .85; }
+.zs-path   { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-dasharray: 1 13;
+             stroke-linecap: round; opacity: .65; }
+.zs-pad    { fill: var(--zs-water); opacity: .5; }
