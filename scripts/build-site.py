@@ -312,6 +312,58 @@ SITE_NAV = [
 ]
 
 
+# Pages whose HTML this script renders from a Markdown source, keyed by their
+# SITE_NAV key. The source is published at web/<key>.md in the SAME build that
+# renders the HTML, so the two representations cannot drift. A value of None
+# means the Markdown is generated in-build rather than read from the repo root.
+#
+# The guidebook is deliberately absent. guidebook.html is generated here from
+# cards/**, but cavendish-cards-guidebook.md is written by build-guidebook.py
+# and only refreshed when someone remembers to run build-all.py. Publishing it
+# as guidebook.md would ship a snapshot that can silently fall behind the deck,
+# which is the one failure mode a .md endpoint must not have.
+MD_ENDPOINTS = {
+    "why": "cavendish-cards-why-sheet.md",
+    "origin": "cavendish-cards-origin.md",
+    "arles": "cavendish-cards-arles.md",
+    "example-spreads": "cavendish-cards-example-spreads.md",
+    "livable-worlds": "cavendish-cards-livable-worlds.md",
+    "privacy": "cavendish-cards-privacy.md",
+    "facilitator": "cavendish-cards-facilitator-sheet.md",
+    "changelog": "CHANGELOG.md",
+    "implementation": None,
+}
+
+# llms.txt v2 wants the file advertised by link relation rather than guessed at
+# the root. Emitted in every page head; netlify.toml sends the matching
+# `Link: </llms.txt>; rel="describedby"` header for agents that never parse HTML.
+_LLMS_LINK = '<link rel="describedby" type="text/markdown" href="/llms.txt">'
+
+
+def nav_entry(key):
+    """(label, href) for a SITE_NAV key."""
+    for label, href, k in SITE_NAV:
+        if k == key:
+            return label, href
+    raise KeyError(f"no SITE_NAV entry for {key!r}")
+
+
+def md_path(key):
+    """Published .md path for a nav key, or None if that page has no source."""
+    return f"/{key}.md" if key in MD_ENDPOINTS else None
+
+
+def _md_head_links(key, label):
+    """The describedby + alternate link pair for a page head."""
+    out = "  " + _LLMS_LINK
+    rel = md_path(key)
+    if rel:
+        out += ('\n  <link rel="alternate" type="text/markdown" '
+                f'href="{rel}" title="{e(label)} \u2014 Markdown source">')
+    return out
+
+
+
 def site_nav(current):
     """A no-JS collapsed menu (native <details>), consistent across pages."""
     items = []
@@ -444,6 +496,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+{_md_head_links(current, h1)}
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -667,6 +720,7 @@ def guidebook_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="describedby" type="text/markdown" href="/llms.txt">
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -988,6 +1042,8 @@ def implementation_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="describedby" type="text/markdown" href="/llms.txt">
+  <link rel="alternate" type="text/markdown" href="/implementation.md" title="Implementation guidebook &mdash; Markdown source">
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -1122,6 +1178,123 @@ def _write_sitemap_robots(web):
               "Allow: /\n\n"
               f"Sitemap: {_SITE_URL}/sitemap.xml\n")
     (web / "robots.txt").write_text(robots, encoding="utf-8")
+
+
+def _git_date(root, filename):
+    """Last commit date (YYYY-MM-DD) for a repo file, or None if git can't say.
+    Used for the `updated` field in .md frontmatter -- the build date would be a
+    lie on every deploy that didn't touch the file."""
+    import subprocess
+    try:
+        r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", filename],
+                           cwd=str(root), capture_output=True, text=True, timeout=15)
+        return r.stdout.strip() or None
+    except Exception:
+        return None
+
+
+def _write_md_endpoints(root, web, impl_md):
+    """Publish each Markdown-sourced page at web/<key>.md with frontmatter.
+
+    Same build, same source as the HTML, so the two representations cannot
+    drift. Frontmatter carries only what an agent can use: title, the canonical
+    HTML URL, the last-changed date, and the licence."""
+    import datetime
+    written = []
+    for key, source in sorted(MD_ENDPOINTS.items()):
+        label, href = nav_entry(key)
+        if source is None:
+            body = impl_md
+            updated = datetime.date.today().isoformat()
+        else:
+            body = (root / source).read_text(encoding="utf-8")
+            updated = _git_date(root, source) or datetime.date.today().isoformat()
+        fm = [
+            "---",
+            f'title: "{label}"',
+            f"url: {_SITE_URL}/{href}",
+            f"updated: {updated}",
+            "license: CC0-1.0",
+            "license_url: https://creativecommons.org/publicdomain/zero/1.0/",
+            "---",
+            "",
+        ]
+        (web / f"{key}.md").write_text("\n".join(fm) + body, encoding="utf-8")
+        written.append(f"{key}.md")
+    return written
+
+
+# llms.txt, curated rather than exhaustive -- the point is to say what matters
+# and in what order, not to restate sitemap.xml. Each entry is (nav key,
+# one-line description); the URL is the page's .md where one exists and its
+# .html where it doesn't. Keep the descriptions plain: models quote them.
+_LLMS_SECTIONS = [
+    ("Start here", [
+        ("deck", "The card player. Lay a spread face-down; turning a card up is the consent."),
+        ("rooms", "Zone a room into cave, campfire, watering hole, library, and habitat."),
+        ("space", "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses."),
+        ("why", "Why the deck exists, who it serves, and the stance behind it."),
+    ]),
+    ("The deck in use", [
+        ("guidebook", "Every card: the metaphor, what it names, and how to hold it. HTML only — it is generated from cards/ and has no stable Markdown twin."),
+        ("facilitator", "The one-page sheet for whoever is holding the space. Also a print PDF."),
+        ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
+        ("implementation", "Turning a spread into changes to the room, on any budget."),
+        ("livable-worlds", "A checklist for building spaces that fit bodyminds."),
+    ]),
+    ("Where it comes from", [
+        ("origin", "The Cavendish Space model, its lineage, and who Cavendish was."),
+        ("arles", "How the deck fits the Stimpunks Design Method, and why it stops short of Systems as cards."),
+    ]),
+    ("Optional", [
+        ("changelog", "What changed in the deck and the site, newest first."),
+        ("privacy", "What the site keeps, which is almost nothing."),
+    ]),
+]
+
+_LLMS_SUMMARY = (
+    "Free, CC0, neuroaffirming prompt cards and room-zoning tools from Stimpunks "
+    "Foundation. A person of any age shows how they feel and what they need by "
+    "pointing at or laying pictures — no reading required, no scoring, no "
+    "matching, no right answer, no winning."
+)
+
+_LLMS_BODY = [
+    "Cavendish Space holds three things: a pictorial card deck, a tool for zoning a "
+    "room into the five Cavendish zones, and the model behind both. Everything here "
+    "is dedicated to the public domain under CC0 1.0, and the card art is "
+    "human-made — no AI art.",
+
+    "Two things it is not, because it gets mistaken for both. It is **not a "
+    "screening or assessment tool**: nothing is scored, normed, or recorded. It is "
+    "**not an AAC board**: a card earns its place by naming a hard-to-voice inner "
+    "state or a needed change to the environment *and* carrying a reframe, so "
+    "\"can't tell\" belongs and \"hungry\" does not. The deck sits alongside real AAC "
+    "and never replaces it.",
+
+    "The framing that matters for anything you generate from this: a spread of "
+    "cards is a design brief for the environment, not a report on a person. Cards "
+    "describe the card, never the person. Broken systems, not broken people.",
+]
+
+
+def _write_llms_txt(web):
+    """Write web/llms.txt per the llms.txt v2 convention."""
+    L = ["# Cavendish Space", "", f"> {_LLMS_SUMMARY}", ""]
+    for para in _LLMS_BODY:
+        L += [para, ""]
+    L += ["Every prose page listed below is also served as Markdown: swap `.html` for "
+          "`.md` on its URL, or use the `.md` links here. The full card data is at "
+          f"{_SITE_URL}/cards.json, and the source lives at "
+          "https://github.com/Stimpunks/Cavendish-Cards.", ""]
+    for heading, entries in _LLMS_SECTIONS:
+        L += [f"## {heading}", ""]
+        for key, desc in entries:
+            label, href = nav_entry(key)
+            rel = md_path(key) or f"/{href}"
+            L.append(f"- [{label}]({_SITE_URL}{rel}): {desc}")
+        L.append("")
+    (web / "llms.txt").write_text("\n".join(L), encoding="utf-8")
 
 
 def _write_service_worker(root, web, faces):
@@ -1304,12 +1477,16 @@ def main():
     (web / "404.html").write_text(not_found_html(), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
+    _impl_md = implementation_md(out_families)
     (root / "cavendish-cards-implementation-layer.md").write_text(
-        implementation_md(out_families), encoding="utf-8")
+        _impl_md, encoding="utf-8")
+    _md_written = _write_md_endpoints(root, web, _impl_md)
+    _write_llms_txt(web)
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
           f"web/why.html, web/origin.html, web/facilitator.html, web/example-spreads.html, "
           f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
+          f"web/llms.txt, {len(_md_written)} .md endpoints, "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")
