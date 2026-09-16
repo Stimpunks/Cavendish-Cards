@@ -40,6 +40,16 @@ The exact rules are public in the repository, in the `netlify.toml` file — you
 
 Nothing here is hidden. The whole site — every line of code, this policy, and the security rules themselves — is public and dedicated to the public domain under CC0. You can read it, run it yourself, or check any claim on this page against the source: [github.com/Stimpunks/Cavendish-Cards](https://github.com/Stimpunks/Cavendish-Cards).
 
+## Reporting a security problem
+
+Found a way to break something here? Tell us, and we will fix it.
+
+Email **stimpunks@stimpunks.org**, or open an issue in [the repository](https://github.com/Stimpunks/Cavendish-Cards/issues) if the problem is not sensitive. There is no bounty — this is a small nonprofit project — but a person reads what comes in and will answer you.
+
+Please give us a reasonable window to fix a real vulnerability before writing about it publicly. The stakes here are low by design: the site has no accounts, no server-side code, and no database, and it stores nothing about you to leak.
+
+The machine-readable version of this, for scanners and security tooling, is at [/.well-known/security.txt](https://cavendish.space/.well-known/security.txt).
+
 ## Questions
 
 Cavendish Cards is a project of the [Stimpunks Foundation](https://stimpunks.org/). If anything here is unclear, or you would like something changed, the repository above is the place to reach us.
