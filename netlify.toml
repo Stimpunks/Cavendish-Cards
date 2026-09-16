@@ -49,6 +49,6 @@
 
 # RFC 9116 requires security.txt be served as text/plain.
 [[headers]]
-  for = "/.well-known/security.txt"
+  for = "/security.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"

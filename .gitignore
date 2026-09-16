@@ -22,7 +22,7 @@ __pycache__/
 /web/changelog.html
 /web/404.html
 /web/llms.txt
-/web/.well-known/
+/web/security.txt
 /web/arles.md
 /web/changelog.md
 /web/example-spreads.md

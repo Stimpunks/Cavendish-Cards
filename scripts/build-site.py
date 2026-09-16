@@ -1325,9 +1325,12 @@ def _write_security_txt(web):
         f"Policy: {_SITE_URL}/privacy.html",
         "",
     ]
-    wk = web / ".well-known"
-    wk.mkdir(exist_ok=True)
-    (wk / "security.txt").write_text("\n".join(lines), encoding="utf-8")
+    # Written to the site root, NOT web/.well-known/: Netlify's deploy does not
+    # publish dot-directories from the publish dir (verified against the live
+    # site -- /.well-known/security.txt 404'd while every sibling file served).
+    # web/_redirects rewrites the canonical well-known path here with a 200, so
+    # the RFC 9116 location is what actually answers.
+    (web / "security.txt").write_text("\n".join(lines), encoding="utf-8")
 
 
 def _write_service_worker(root, web, faces):

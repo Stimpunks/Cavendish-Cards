@@ -11,3 +11,10 @@
 # redirecting.
 https://cavendish.app/*   https://cavendish.space/:splat   301!
 http://cavendish.app/*    https://cavendish.space/:splat   301!
+
+# RFC 9116 says /.well-known/security.txt is the canonical location, but Netlify
+# does not publish dot-directories from the publish dir -- a file generated at
+# web/.well-known/security.txt 404s. So the generator writes /security.txt and
+# this serves it at the canonical path with a 200 rewrite (not a redirect: the
+# well-known URL itself must answer).
+/.well-known/security.txt   /security.txt   200
