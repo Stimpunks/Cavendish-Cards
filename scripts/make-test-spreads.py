@@ -67,6 +67,7 @@ def reflection_for(card, already):
 
 
 MANIFEST = []
+UNSTRIPPED = set()   # kinds the method says to strip, planted here on purpose
 
 
 def render(cards, date, note=None):
@@ -74,6 +75,15 @@ def render(cards, date, note=None):
     # Record what was laid, with its realm, so the answer key never has to
     # re-derive a realm from a card name.
     MANIFEST.extend((c["_family"], c["name"]) for c in cards)
+    if note:
+        UNSTRIPPED.add("a note field")
+    for c in cards:
+        if c["_family"] == "interaction":
+            UNSTRIPPED.add("an Interaction card")
+        elif c["_family"] == "love-locution":
+            UNSTRIPPED.add("a Kind word")
+        elif c["_family"] == "grower":
+            UNSTRIPPED.add("a grower")
     out = ["My Cavendish spread", date, ""]
     laid = []
     for c in cards:
@@ -161,17 +171,30 @@ def mapping_from_method():
     return cond_text, card_to_cond
 
 
-NEVER = {"weather", "love-locution", "interaction"}
+# Realms the method never aggregates. Growers belong here for the same reason
+# Kind words do: a grower is self-description, and a pile of self-description
+# summarized is a profile. Leaving them out of this set was how the first
+# version of this key let `dandelion` vanish without anyone noticing.
+NEVER = {"weather", "love-locution", "interaction", "grower"}
+
+# Lily pads that announce where a person is in a moment rather than asking the
+# room for anything. The method treats these like weather.
+LILY_STATES = {"ready now", "all done"}
 
 
 def answer_key(cond_text, card_to_cond):
-    conds, zones, unmapped, dropped = set(), set(), set(), set()
+    conds, zones, unmapped, dropped, deckgap = set(), set(), set(), set(), set()
     for f, name in MANIFEST:
-        if f in NEVER:
+        # Every realm ships one, and it means the same thing everywhere: the
+        # deck had no card for what was needed. That is a different question
+        # from a card the method could not place, so a different bucket.
+        if name in ("your own", "draw your own"):
+            deckgap.add(f)
+        elif f in NEVER or name in LILY_STATES:
             dropped.add(name)
         elif f == "places":
             zones.add(name)
-        elif f == "what-helps":
+        elif f in ("what-helps", "lily-pad"):
             hit = card_to_cond.get(name)
             if hit:
                 conds.update(hit)
@@ -185,9 +208,14 @@ def answer_key(cond_text, card_to_cond):
          "**As ids, for the link** — `" + ",".join(order) + "`", "",
          "    https://cavendish.space/rooms.html#asked=" + ",".join(order), "",
          "**Zones asked for** — " + (", ".join(sorted(zones)) or "none"), "",
-         "**Named but not a room condition** — " + ", ".join(sorted(unmapped)),
-         "  (these belong in kit / permission / pacing, or in the remainder)", "",
+         "**The method had no box for this** — " + (", ".join(sorted(unmapped)) or "none"),
+         "  (kit / permission / pacing, or an honest remainder — never a stretched condition)", "",
+         "**The deck had no card for this** — " + (
+             ", ".join(f"a `your own` from {r}" for r in sorted(deckgap)) or "none"), "",
          "**Never aggregated, should not appear at all** — " + ", ".join(sorted(dropped)), "",
+         "**Should be reported as unstripped** — " + ", ".join(sorted(UNSTRIPPED)), "",
+         "  (named as kinds, never quoted, never counted — a silent drop teaches the",
+         "  coordinator the strip step worked when it did not)", "",
          "If what comes back has a number in it, a person as the subject of a sentence,",
          "or a category that is not in the method's vocabulary, the tool did not follow it."]
     return "\n".join(L)

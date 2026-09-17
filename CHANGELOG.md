@@ -28,6 +28,16 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 - **Nothing about this touches the site's promise.** No form, no endpoint, no submission, no storage. The page is prose; the work happens in the coordinator's own tool. Cavendish still stores nothing, and still has no server-side code.
 
+- **The group-brief method got tested, and four things were wrong with it.** Twelve generated spreads went through it in a separate session, which is the only way to find out what a set of instructions actually does. The room list and the zoner link came back exactly right. What it caught was everything the method had no rule for.
+
+- **Growers were not addressed at all.** Dandelion, tulip and orchid describe how a person grows and what conditions they need — self-description, and a pile of it summarized is the closest this deck comes to producing a profile. The method now names growers alongside Kind words and Interaction as never aggregated. It also says why they are the most tempting thing here to mine: "give me my conditions and I bloom" sounds like it names conditions, and does not name which.
+
+- **Lily pads fell through a gap.** The mapping table gestured at "the lily pads about going slowly," which left `stuck` and `watch first` belonging to nothing. They now split three ways, named card by card rather than described: `coming back` maps, because it asks the room to hold a place; the four pace requests map; `ready now` and `all done` are passing states and are never aggregated; `stuck` and `watch first` go to the remainder with a question. Nothing is left to inference.
+
+- **A brief must now say what it had to drop.** If an Interaction card, a Kind word, a grower or a note field is in the paste, the strip step did not happen, and the coordinator has to learn that before the next event — a silent drop teaches them the process worked when it did not. The report names the kind and nothing else: never the content, never how many. The note field matters most: it is the most identifying text in a pile, and often the most mappable, which is exactly why it is not the tool's to mine.
+
+- **The remainder was doing two jobs.** "Somebody drew their own card" and "this page could not place a card that exists" are different problems and ask different questions — one is a gap in the deck, the other a gap in the instructions. They are two lines now, and neither is ever resolved by stretching a condition to fit.
+
 - **And the brief can now arrive in the zoner.** [Zone a room](https://cavendish.space/rooms.html) reads a group brief from the end of its own URL — `rooms.html#asked=quiet,corner,way-out` — and shows what was asked for beside what the room has: asked for and already here, asked for and not there yet. Tick what is true and the rest is the to-do list.
 
 - **It does not tick the boxes for you, on purpose.** A tick means the room has something; a brief means somebody asked for it. Pre-filling a brief would make the page announce zones the room cannot actually hold, which is the one thing that page exists to refuse. So the brief is a layer beside the form, not a shortcut into it, and "put the brief aside" clears it without touching your ticks. The page re-sorts the list into its own order, so a tool that ranked its output cannot pass the ranking along, and it still never counts anything.

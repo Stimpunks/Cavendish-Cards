@@ -28,6 +28,8 @@ So there is a step before the method, and it is not optional.
 
 If any of that cannot be honored, do the sorting by hand. The vocabulary below works fine with paper.
 
+If something that should have been stripped goes in anyway, the brief will say so — which is a safety net, not a plan. It reports that a note field was there; it cannot un-send it.
+
 ## Three rules
 
 These are the rules the tools already follow, written so an AI can follow them too.
@@ -53,13 +55,13 @@ Seventeen conditions, each phrased as the change rather than the lack. These are
 - `room-to-move` — room to move without being in anyone's way. From: room to move, parallel existence.
 - `sit-my-way` — permission to sit however you like. From: sit my way.
 - `corner` — a corner or nook out of the main flow. From: a corner, a den.
-- `own-spot` — a spot that can stay someone's for the session. From: my own spot.
+- `own-spot` — a spot that can stay someone's for the session. From: my own spot, coming back.
 - `way-out` — a way out that doesn't cross in front of everyone. From: a way out, no spotlight.
-- `come-and-go` — leaving and coming back without explaining. From: let me come and go, a way out.
+- `come-and-go` — leaving and coming back without explaining. From: let me come and go, a way out, coming back.
 - `control` — let people in the room change things in it. From: let me control it, let me unmask.
 - `written` — what happens here written down or posted. From: tell me first, another way to talk.
 - `another-way` — a way to take part other than speaking aloud. From: another way to talk, no spotlight.
-- `no-rush` — things not all at one pace. From: no rush, one thing at a time, let me finish, and the lily pads about going slowly.
+- `no-rush` — things not all at one pace. From: no rush, one thing at a time, let me finish, i need a minute, not yet, slowly, i want to stay a while.
 - `small-group` — somewhere a small group can meet without the room listening in. From: just one person, parallel existence.
 
 ## The three buckets that are not the room
@@ -82,23 +84,32 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 **Interaction cards are never aggregated.** The red, yellow, and green badges are worn, live, for a moment, and meant to be changed the second they stop being true. A summary of who was red today is a behavior report wearing a badge's clothes. Leave them out of the paste entirely.
 
+**Growers are never aggregated.** Dandelion, tulip, orchid describe how a person grows and what conditions they need to bloom. That is self-description, and turning a pile of it into a summary is the closest this deck comes to producing a profile. It is also the most tempting thing here to mine, because "give me my conditions and I bloom" sounds like it names conditions. It does not name which. Leave growers out.
+
 **Places go to the zones, not the conditions.** If people laid the cave, the room needs a cave. That is a direct request for a zone and should be read as one.
+
+**Lily pads split three ways, and the mapping table already says which.** `coming back` asks the room to hold a place, so it maps. `i need a minute`, `not yet`, `slowly` and `i want to stay a while` are pace requests, so they map. `ready now` and `all done` are passing states like weather — a person announcing where they are in a moment — so they are never aggregated. `stuck` and `watch first` are neither: they name a moment the vocabulary above has no box for, so they go to the remainder with a question attached. Do not stretch a condition to cover them.
 
 ---- 
 
 ## What the output looks like
 
-Four lists and a zone read. No preamble, no summary of the group, no recommendations about people.
+Four lists, a zone read, and two kinds of honesty at the end. No preamble, no summary of the group, no recommendations about people.
 
 - **The room needs** — somewhere it can be made quiet · a corner or nook out of the main flow · a way out that doesn't cross in front of everyone · light that can come down · a temperature people can change or dress for
 - **Kit** — something soft to sit or lean on · something to chew · a snack and water within reach
 - **Permission, say it out loud** — stim freely · sit however you like · leave and come back without explaining
 - **Pacing** — post the plan before the session · one thing at a time · nothing on a single clock
 - **Zones asked for** — the cave, the watering hole
-- **Named but not mapped** — "keep it the same" — nobody has said yet what stays the same. Ask.
+- **The deck had no card for this** — someone drew their own. Ask what they drew; it may be a card this deck still owes people.
+- **The method had no box for this** — "stuck", "watch first". Ask whether the room owes them a change of pace or just somewhere to land.
+- **Should not have been in the paste** — an Interaction card, and a note field. Dropped unread. The strip step did not happen; do it before the next one.
+- **The day** — the weather ran the full range, easy through heavy. It stays with the day, not the room.
 - **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature
 
-The remainder line matters. An honest remainder is better than a forced fit, and it is the only part of the brief that should generate a question.
+**The two remainders are different questions, so they are two lines.** "The deck had no card for this" is a gap in the deck — somebody needed something that does not exist yet, and the answer might be a new card. "The method had no box for this" is a gap in *these instructions* — the card exists and this page could not place it. Never merge them, and never resolve either by stretching a condition to fit.
+
+**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, it means the strip step did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present, dropped unread" and nothing more. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
 ## The link, and what it does not do
 
