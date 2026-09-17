@@ -317,11 +317,12 @@ SITE_NAV = [
 # renders the HTML, so the two representations cannot drift. A value of None
 # means the Markdown is generated in-build rather than read from the repo root.
 #
-# The guidebook is deliberately absent. guidebook.html is generated here from
-# cards/**, but cavendish-cards-guidebook.md is written by build-guidebook.py
-# and only refreshed when someone remembers to run build-all.py. Publishing it
-# as guidebook.md would ship a snapshot that can silently fall behind the deck,
-# which is the one failure mode a .md endpoint must not have.
+# The guidebook used to be excluded here: guidebook.html is generated from
+# cards/**, but cavendish-cards-guidebook.md was written only by
+# build-guidebook.py, so publishing it would have shipped whatever snapshot
+# happened to be committed. That is fixed -- build-site.py now calls
+# build-guidebook.build_markdown() itself, so both representations come from
+# cards/** in the same build and cannot disagree.
 MD_ENDPOINTS = {
     "why": "cavendish-cards-why-sheet.md",
     "origin": "cavendish-cards-origin.md",
@@ -331,6 +332,7 @@ MD_ENDPOINTS = {
     "privacy": "cavendish-cards-privacy.md",
     "facilitator": "cavendish-cards-facilitator-sheet.md",
     "changelog": "CHANGELOG.md",
+    "guidebook": None,
     "implementation": None,
 }
 
@@ -721,6 +723,7 @@ def guidebook_html(out_families):
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="describedby" type="text/markdown" href="/llms.txt">
+  <link rel="alternate" type="text/markdown" href="/guidebook.md" title="Guidebook &mdash; Markdown source">
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -1193,18 +1196,21 @@ def _git_date(root, filename):
         return None
 
 
-def _write_md_endpoints(root, web, impl_md):
+def _write_md_endpoints(root, web, generated):
     """Publish each Markdown-sourced page at web/<key>.md with frontmatter.
 
     Same build, same source as the HTML, so the two representations cannot
     drift. Frontmatter carries only what an agent can use: title, the canonical
-    HTML URL, the last-changed date, and the licence."""
+    HTML URL, the last-changed date, and the licence.
+
+    `generated` maps the keys whose MD_ENDPOINTS value is None to their
+    already-built Markdown, for pages with no file in the repo root to copy."""
     import datetime
     written = []
     for key, source in sorted(MD_ENDPOINTS.items()):
         label, href = nav_entry(key)
         if source is None:
-            body = impl_md
+            body = generated[key]
             updated = datetime.date.today().isoformat()
         else:
             body = (root / source).read_text(encoding="utf-8")
@@ -1236,7 +1242,7 @@ _LLMS_SECTIONS = [
         ("why", "Why the deck exists, who it serves, and the stance behind it."),
     ]),
     ("The deck in use", [
-        ("guidebook", "Every card: the metaphor, what it names, and how to hold it. HTML only — it is generated from cards/ and has no stable Markdown twin."),
+        ("guidebook", "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document."),
         ("facilitator", "The one-page sheet for whoever is holding the space. Also a print PDF."),
         ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
         ("implementation", "Turning a spread into changes to the room, on any budget."),
@@ -1516,14 +1522,23 @@ def main():
     _impl_md = implementation_md(out_families)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         _impl_md, encoding="utf-8")
-    _md_written = _write_md_endpoints(root, web, _impl_md)
+    # Same call build-guidebook.py makes, so the published guidebook.md, the
+    # rendered guidebook.html and the tracked root copy all agree by
+    # construction. Writing the tracked file here (as we already do for the
+    # implementation layer) means a deck change shows up in `git status` after
+    # any build-site.py run, instead of waiting for someone to remember
+    # build-all.py.
+    _gb_md, _, _ = gb.build_markdown(cards_dir)
+    (root / "cavendish-cards-guidebook.md").write_text(_gb_md, encoding="utf-8")
+    _md_written = _write_md_endpoints(
+        root, web, {"implementation": _impl_md, "guidebook": _gb_md})
     _write_llms_txt(web)
     _write_security_txt(web)
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
           f"web/why.html, web/origin.html, web/facilitator.html, web/example-spreads.html, "
           f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
-          f"web/llms.txt, web/.well-known/security.txt, "
+          f"web/llms.txt, web/security.txt, "
           f"{len(_md_written)} .md endpoints, "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     for fam in out_families:

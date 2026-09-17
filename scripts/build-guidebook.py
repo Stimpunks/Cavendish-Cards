@@ -293,13 +293,15 @@ def render_card(name, cue, prompt, notes, pattern=""):
     return "\n".join(parts)
 
 
-def main():
-    root = Path(__file__).resolve().parent.parent
-    cards_dir = root / "cards"
-    out_path = root / "cavendish-cards-guidebook.md"
-    if not cards_dir.is_dir():
-        sys.exit(f"cards/ not found at {cards_dir}")
+def build_markdown(cards_dir):
+    """Build the Markdown guidebook from cards/ and return
+    (text, total_cards, [(family_display, count)]).
 
+    Split out of main() so build-site.py can render the same document in the
+    same build that renders guidebook.html, instead of publishing whatever
+    snapshot of cavendish-cards-guidebook.md happens to be committed. Keep this
+    a pure function -- no file writes, no sys.exit -- so both callers can use it.
+    """
     doc = [
         "# Cavendish Cards — Guidebook",
         "",
@@ -358,7 +360,18 @@ def main():
         "",
     ]
 
-    out_path.write_text("\n".join(doc), encoding="utf-8")
+    return "\n".join(doc), total, summary
+
+
+def main():
+    root = Path(__file__).resolve().parent.parent
+    cards_dir = root / "cards"
+    out_path = root / "cavendish-cards-guidebook.md"
+    if not cards_dir.is_dir():
+        sys.exit(f"cards/ not found at {cards_dir}")
+
+    text, total, summary = build_markdown(cards_dir)
+    out_path.write_text(text, encoding="utf-8")
     print(f"Wrote {out_path.name} — {total} cards across {len(summary)} families")
     for display, count in summary:
         print(f"  {display}: {count}")
