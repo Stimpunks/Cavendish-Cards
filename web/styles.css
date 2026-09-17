@@ -51,7 +51,13 @@
   --places-ink: #534AB7;
   --maxw: 1040px;
   color-scheme: light;
-  font-size: 18px;
+  /* Everything on the site is sized in rem off this. Raised from 18px on
+     2026-09-17 to sit with the sibling sites: stimpunks.org runs 19.5px and
+     queering.earth 19px, and Cavendish was reading about 13% smaller than
+     stimpunks by x-height. Changing it moves headings, nav, cards and signs
+     together -- which is the point, and also why a change here needs the
+     breakbar re-measured at 375px and the print paths re-rendered. */
+  font-size: 19px;
 }
 
 /* Dark mode: the Solarized dark pairing of the light palette above. Card
@@ -132,7 +138,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
@@ -283,6 +289,16 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
    every width -- an icon-only home is a guess for anyone who does not already
    know the glyph, which defeats the point of having it. */
 @media (max-width: 480px) {
+  /* The four controls fit one row at 375px with nothing to spare, so the
+     gaps come in here too. Re-measure this if anything is added to the
+     bar or the root size changes again -- it wraps the moment it stops
+     fitting, and a wrapped bar is a second sticky row on every page. */
+  .breakbar .wrap, .breakbar-left { gap: 6px; }
+  /* And the bar's own side padding, which buys 12px. The controls are a
+     fixed width, so this is what decides whether a 360px Android gets one
+     row or two. The 6px it takes off the gutter is not perceptible on a
+     band that already has its own bottom border. */
+  .breakbar .wrap { padding-left: 14px; padding-right: 14px; }
   .homelink, .theme-toggle { padding: 5px 10px; }
   .breakbar .btn { padding: 7px 13px; }
   .deck-cta-full { display: none; }
@@ -370,7 +386,14 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .site-header .sitenav { margin: 0 0 10px; }
 
 /* Standalone prose pages (Why, Origin). */
-.prose { max-width: 72ch; }
+/* 64ch, down from 72ch. The measure was the real outlier against the sibling
+   sites -- they run 44-50ch and this ran 72ch at desktop width, 45% longer
+   lines than the family, with the tightest leading of any of them. Long lines
+   need MORE help returning to the next one, not less, so the leading went up
+   with this coming down. 72ch also sat right at the WCAG 1.4.8 (AAA) limit of
+   80 characters, which is not where a site about not making people work to
+   read should be sitting. */
+.prose { max-width: 64ch; }
 .prose h2 { margin-top: 28px; }
 .prose h3 { margin-top: 18px; font-size: 1.1rem; color: var(--ink-strong); }
 .prose p { margin: 10px 0; }
