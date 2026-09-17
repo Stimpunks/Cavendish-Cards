@@ -10,7 +10,7 @@ figures resting easy near water
 
 ## Prompt
 
-A soft place to pause and be near people.
+Somewhere to rest, near other people.
 
 ## Notes
 

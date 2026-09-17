@@ -106,6 +106,33 @@ def wrap(s, n):
     return textwrap.wrap(s, width=n) or [s]
 
 
+def build_art_svg(family, slug):
+    """Just the illustration: no card frame, no realm tag, no name, no prompt.
+
+    The room signs in rooms.js print the picture beside the zone's own words at
+    wall size, so they want the motif alone -- a whole card face there would
+    print the name and prompt twice, once large and once tiny.
+
+    It keeps the card's paper colour behind the art rather than going
+    transparent. The motifs are drawn in the family's accent and dark accent,
+    which are chosen to sit on that paper; on a dark page a transparent version
+    would be dark purple on dark teal. A light panel is also what the card
+    faces already do on a dark screen.
+
+    Returns None when the card has no motif, so a caller can leave the picture
+    out instead of printing an empty box.
+    """
+    acc, dark, _word = FAM[family]
+    art = ART_LIB.draw(family, slug, acc, dark)
+    if art is None:
+        return None
+    w, h = ART_LIB.W, ART_LIB.H
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+            f'width="{w}" height="{h}">\n'
+            f'<rect x="0" y="0" width="{w}" height="{h}" rx="24" fill="#fdf6e3"/>\n'
+            f'{art}\n</svg>\n')
+
+
 def build_svg(family, slug, name, cue, prompt):
     """One complete card face: family tag, illustration, name, prompt.
 

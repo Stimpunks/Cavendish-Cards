@@ -46,10 +46,19 @@
   /* The five zones. `needs` mirrors the "Needs:" line under each zone in
    * rooms.html — if you change one, change both. `sign` is what gets printed
    * and put on the wall: the deck's own prompt, then one line telling a person
-   * walking up what this place asks of them. */
+   * walking up what this place asks of them.
+   *
+   * `prompt` is the matching card's own ## Prompt in cards/places/ — a third
+   * copy, so change it there, here, and in rooms.html together.
+   *
+   * `art` is that card's illustration without the card around it, written by
+   * build-site.py from card-art.py's motif (ART_ONLY). It is named per zone
+   * rather than built from the id, so renaming an id cannot quietly point a
+   * sign at a file that is not there. */
   var ZONES = [
     {
       id: "cave",
+      art: "faces/places--the-cave--art.svg",
       name: "The cave",
       prompt: "Somewhere quiet, just for you.",
       needs: ["quiet", "dim", "corner", "come-and-go"],
@@ -57,6 +66,7 @@
     },
     {
       id: "campfire",
+      art: "faces/places--the-campfire--art.svg",
       name: "The campfire",
       prompt: "A small group, sharing.",
       needs: ["small-group", "soft", "sit-my-way", "another-way"],
@@ -64,13 +74,15 @@
     },
     {
       id: "watering-hole",
+      art: "faces/places--the-watering-hole--art.svg",
       name: "The watering hole",
-      prompt: "A soft place to pause and be near people.",
+      prompt: "Somewhere to rest, near other people.",
       needs: ["room-to-move", "way-out", "come-and-go", "less-to-look-at"],
       sign: "Be near people without joining in. Hover at the edge, drift off, come back. No task, no script."
     },
     {
       id: "library",
+      art: "faces/places--the-library--art.svg",
       name: "The library",
       prompt: "Where we keep what we've figured out.",
       needs: ["written", "no-rush", "another-way", "own-spot"],
@@ -78,6 +90,7 @@
     },
     {
       id: "habitat",
+      art: "faces/places--the-habitat--art.svg",
       name: "The habitat",
       prompt: "The world around it all — steady, sensory-safe.",
       needs: ["control", "temperature", "quiet", "dim", "steady-sound"],
@@ -303,6 +316,17 @@
 
   function signCard(z) {
     var fig = el("figure", "rooms-sign");
+    if (z.art) {
+      // Decorative: the zone's name is the heading immediately below, so alt
+      // text would make a screen reader say it twice.
+      var img = document.createElement("img");
+      img.className = "rooms-sign-art";
+      img.src = z.art;
+      img.alt = "";
+      img.width = 630;
+      img.height = 530;
+      fig.appendChild(img);
+    }
     fig.appendChild(el("p", "rooms-sign-kicker", "This is"));
     fig.appendChild(el("h3", "rooms-sign-name", z.name.toLowerCase()));
     fig.appendChild(el("p", "rooms-sign-prompt", z.prompt));

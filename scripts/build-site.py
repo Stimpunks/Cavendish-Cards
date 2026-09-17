@@ -24,6 +24,13 @@ import shutil
 import sys
 
 
+# Realms that also get an art-only SVG beside each card face, for somewhere
+# that wants the picture without the card. Only Places so far: the five room
+# signs in rooms.js. Kept to what is used -- generating 94 of these to serve
+# five would just be more to cache and more to precache.
+ART_ONLY = {"places"}
+
+
 def _load_placeholders():
     path = Path(__file__).resolve().parent / "build-placeholders.py"
     if not path.exists():
@@ -2425,6 +2432,20 @@ def main():
             # {cslug}.svg would let realms overwrite each other's faces.
             face_file = f"{slug}--{cslug}.svg"
             (faces / face_file).write_text(face_svg, encoding="utf-8")
+
+            # Art-only copy for the room signs, which print the picture beside
+            # the zone's own words -- see ART_ONLY. It comes from card-art.py's
+            # motif, so a card with FINISHED art has none: if real Places art
+            # ever lands, this needs revisiting rather than silently dropping
+            # the picture off the signs. The build says so.
+            if slug in ART_ONLY:
+                art_svg = bp.build_art_svg(slug, cslug)
+                if art_svg:
+                    (faces / f"{slug}--{cslug}--art.svg").write_text(
+                        art_svg, encoding="utf-8")
+                elif finished.exists():
+                    print(f"  ! {slug}/{cslug} has finished art, so no art-only "
+                          f"copy for the room signs", file=sys.stderr)
 
             grp = group_map.get(cslug)
             if group_order and grp is None:

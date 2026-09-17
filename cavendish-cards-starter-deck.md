@@ -30,7 +30,7 @@ The five Cavendish zones. Fixed. Everything else sits in one of these.
 | ----------------- | ------------------------------------------ | ----------------------------------------------- |
 | the cave          | a small den, low light, a person tucked in | Somewhere quiet, just for you.                  |
 | the campfire      | a few figures around a warm glow           | A small group, sharing.                         |
-| the watering hole | figures resting easy near water            | A soft place to pause and be near people.       |
+| the watering hole | figures resting easy near water            | Somewhere to rest, near other people.           |
 | the library       | shelves, maps, a book held open            | Where we keep what we've figured out.           |
 | the habitat       | the whole landscape holding the other four | The world around it all — steady, sensory-safe. |
 

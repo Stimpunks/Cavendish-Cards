@@ -714,6 +714,16 @@ body.break-open { overflow: hidden; }
   padding: 26px 24px 18px;
   text-align: center;
 }
+/* The zone's illustration, above its words. The card's own picture without
+   the card around it (faces/places--<slug>--art.svg), so a sign on the wall
+   and the card in someone's hand show the same thing -- which is the point:
+   a person who cannot read the sign can still match the picture. It carries
+   its own light paper colour, so it reads the same in dark mode and on
+   paper. */
+.rooms-sign-art {
+  display: block; width: 100%; max-width: 260px; height: auto;
+  margin: 0 auto 14px; border-radius: 12px;
+}
 .rooms-sign-kicker { margin: 0; color: var(--muted); text-transform: lowercase; letter-spacing: .04em; }
 .rooms-sign-name { margin: 2px 0 10px; font-size: 2rem; color: var(--ink-strong); }
 .rooms-sign-prompt { margin: 0 0 14px; font-style: italic; font-size: 1.15rem; }
@@ -932,6 +942,10 @@ body.break-open { overflow: hidden; }
   body.printing-signs .rooms-sign-name { font-size: 3.2rem; }
   body.printing-signs .rooms-sign-prompt { font-size: 1.5rem; }
   body.printing-signs .rooms-sign-body { font-size: 1.25rem; }
+  /* One sign fills a page, so the picture can be the size of a picture.
+     Capped in vh as well as px: the sign is a centred flex column, and a
+     picture sized only in px pushes the words off a short page. */
+  body.printing-signs .rooms-sign-art { max-width: 420px; max-height: 38vh; margin-bottom: 20px; }
 
   /* Badge sheets are already exact physical sizes -- an 8.5in-wide SVG on an
      8.5in page. So printing them means getting everything else off the page and
