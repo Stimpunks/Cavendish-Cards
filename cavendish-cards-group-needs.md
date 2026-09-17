@@ -111,9 +111,19 @@ Four lists, a zone read, and two kinds of honesty at the end. No preamble, no su
 
 **And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, it means the strip step did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present, dropped unread" and nothing more. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
-## The link, and what it does not do
+## The link, and how to build it
 
-The last line is the room list again, as ids, in a link. Use only the ids listed above, comma-separated, after `#asked=`. Nothing else goes in it — no names, no notes, no weather, no counts.
+The last line of the brief is the room list again, as ids, in a link to the zoner. Build it exactly like this, in full, every time:
+
+> `https://cavendish.space/rooms.html#asked=` followed by the ids, comma-separated, with no spaces.
+
+So a brief naming quiet, a corner, a way out, dimmable light and a temperature people can change ends with:
+
+> [https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature](https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature)
+
+Three rules for what goes in it. **Only ids from the list above** — the seventeen, spelled exactly as they appear, not the sentence next to them. **Nothing else** — no names, no notes, no weather, no zones, no counts. **Always the whole address**, starting `https://cavendish.space/`, because the coordinator will paste it into a message or a document, not into this page.
+
+A word that is not one of the seventeen is not silently dropped: the zoner names it back to whoever opens the link and says it has no condition for it. A typo is visible rather than lost, which is the same principle as the remainder.
 
 Open it and [Zone a room](rooms.html) shows the brief beside the room: asked for and already here, asked for and not there yet. Then tick what is true, and it says which of the five zones the room can hold today and what each of the rest still needs. Print the signs. The room says it itself, and nobody has to ask.
 
