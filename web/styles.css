@@ -614,6 +614,127 @@ body.break-open { overflow: hidden; }
 .share-print li { margin: 10px 0; font-size: 1.15rem; line-height: 1.45; }
 .share-print-foot { margin: 22px 0 0; color: var(--muted); font-size: .9rem; }
 
+/* ---------------------------------------------------------------------------
+   Interaction badges (badges.html)
+   The one realm meant to be worn, so it gets a maker. Signal colors are named
+   as classes rather than set inline: the CSP forbids style attributes, which is
+   also why the badge sheets are drawn with SVG presentation attributes.
+   --------------------------------------------------------------------------- */
+
+.sig-come-say-hi   { --sw: #1E8E3E; }
+.sig-people-i-know { --sw: #EAB308; }
+.sig-not-right-now { --sw: #D64541; }
+.sig-ive-got-this  { --sw: #FFFFFF; }
+.sig-ask-first     { --sw: #E8730C; }
+.sig-your-own      { --sw: #5F5E5A; }
+
+.badge-meanings { display: grid; gap: 14px; margin: 18px 0 0; }
+@media (min-width: 720px) {
+  .badge-meanings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.badge-meaning {
+  margin: 0;
+  padding: 16px 18px 18px;
+  border: 1px solid var(--line);
+  border-left: 10px solid var(--sw, var(--line));
+  border-radius: 12px;
+  background: var(--surface);
+}
+.badge-meaning h3 { margin: 0 0 4px; font-size: 1.15rem; }
+.badge-meaning p { margin: 0 0 8px; max-width: 46ch; }
+.badge-meaning p:last-child { margin-bottom: 0; }
+.badge-meaning-word {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+/* Radio labels carry a bold lead plus an explanation. Without a wrapping span
+   the two become separate flex items and the bold half concertinas into a
+   narrow column. */
+.badges-form .rooms-group label > span { display: block; }
+.badges-form .rooms-group input[type="radio"] {
+  margin-top: .3em;
+  width: 1.1em;
+  height: 1.1em;
+  flex: 0 0 auto;
+  accent-color: var(--cyan-ink);
+}
+
+.badge-picks { display: grid; gap: 4px; }
+.badge-pick {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.badge-pick-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--sw, var(--line));
+  border: 1px solid #00000033;
+  flex: none;
+}
+.badge-pick-text { line-height: 1.4; }
+.badge-pick-text .muted { font-size: .9rem; }
+
+.badge-controls { display: grid; gap: 0; }
+@media (min-width: 860px) {
+  .badge-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; }
+}
+.badges-form input[type="text"],
+.badges-form input[type="number"] {
+  display: block;
+  width: 100%;
+  max-width: 34ch;
+  margin: 4px 0 12px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: .95rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.badges-form input[type="file"] { margin: 4px 0 12px; max-width: 100%; font-size: .9rem; }
+.badges-form input[type="number"] { max-width: 12ch; }
+.badge-logo-line { margin: 0 0 12px; font-size: .9rem; }
+.btn.small { padding: 4px 10px; font-size: .85rem; }
+
+.badge-sheets { display: grid; gap: 26px; margin: 20px 0 0; }
+@media (min-width: 900px) {
+  .badge-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.badge-sheet { margin: 0; }
+.badge-sheet-paper {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px #0000001a;
+}
+.badge-sheet-paper svg { display: block; width: 100%; height: auto; }
+.badge-sheet figcaption {
+  margin: 8px 0 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.badge-sheet-title { font-weight: 700; color: var(--ink-strong); }
+
+.badges-list, .badges-spec { padding-left: 1.2em; max-width: 74ch; }
+.badges-list li, .badges-spec li { margin: 8px 0; line-height: 1.55; }
+.badges-steps { padding-left: 1.3em; max-width: 74ch; }
+.badges-steps li { margin: 10px 0; line-height: 1.55; }
+.badges-sheets-section h3, .rooms-step h3 { margin: 26px 0 8px; }
+
 @media print {
   .breakbar, .skip, .theme-toggle, .rooms-actions, .site-footer { display: none !important; }
   .rooms-zone { break-inside: avoid; }
@@ -642,6 +763,24 @@ body.break-open { overflow: hidden; }
   body.printing-signs .rooms-sign-name { font-size: 3.2rem; }
   body.printing-signs .rooms-sign-prompt { font-size: 1.5rem; }
   body.printing-signs .rooms-sign-body { font-size: 1.25rem; }
+
+  /* Badge sheets are already exact physical sizes -- an 8.5in-wide SVG on an
+     8.5in page. So printing them means getting everything else off the page and
+     letting the SVG print at its own size, rather than scaling anything. The
+     matching `@page { size }` is inserted from badges.js through the CSSOM,
+     because the CSP forbids an inline <style>. */
+  body.printing-badges > *:not(main) { display: none !important; }
+  body.printing-badges main .wrap > section:not(.badges-sheets-section) { display: none !important; }
+  body.printing-badges .badges-sheets-section > *:not(.badge-sheets) { display: none !important; }
+  body.printing-badges .badge-sheets { display: block; margin: 0; gap: 0; }
+  body.printing-badges .badge-sheet { break-after: page; page-break-after: always; }
+  body.printing-badges .badge-sheet:last-child { break-after: auto; page-break-after: auto; }
+  body.printing-badges .badge-sheet-paper {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.printing-badges .badge-sheet figcaption { display: none !important; }
 }
 
 /* ---------------------------------------------------------------------------

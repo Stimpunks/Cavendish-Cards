@@ -12,7 +12,17 @@
 # Response headers: security hardening for every response, plus long-lived
 # immutable caching for the self-hosted fonts. The CSP can be strict because
 # the site loads only same-origin resources (no third-party scripts, styles,
-# fonts, or images). frame-ancestors allows embedding from Stimpunks only;
+# fonts, or images) -- with one exception. img-src allows data: URLs, because
+# badges.html lets someone put THEIR OWN logo on a badge: that file is read with
+# FileReader in their browser and embedded in the badge SVG as a data URL. It is
+# never uploaded, and there is no endpoint to upload it to. A data: image cannot
+# execute anything -- an SVG inside an <image> element renders in the secure
+# static mode -- and this is the narrowest relaxation that makes the feature
+# work. Note what is NOT relaxed: style-src still has no 'unsafe-inline', so no
+# page here may use a style attribute. Badge colors are classes, the badge
+# sheets use SVG presentation attributes, and the print @page rule goes in
+# through the CSSOM, which CSP does not govern.
+# frame-ancestors allows embedding from Stimpunks only;
 # widen or tighten as needed. The script-src sha256 whitelists the small inline
 # no-flash theme script; keep it in sync with _THEME_INLINE in build-site.py and
 # the copy in web/index.html (change the script -> recompute the hash).
@@ -44,7 +54,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), browsing-topics=()"
     Link = "</llms.txt>; rel=\"describedby\"; type=\"text/markdown\""
-    Content-Security-Policy = "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self' https://stimpunks.org https://*.stimpunks.org; form-action 'none'; img-src 'self'; style-src 'self'; script-src 'self' 'sha256-7/896sRDDRYbHkuzCgrxnPtpdmQDYaNNIUKwJwO8+Gc='; font-src 'self'; connect-src 'self'; media-src 'self'; manifest-src 'self'; worker-src 'self'"
+    Content-Security-Policy = "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self' https://stimpunks.org https://*.stimpunks.org; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-7/896sRDDRYbHkuzCgrxnPtpdmQDYaNNIUKwJwO8+Gc='; font-src 'self'; connect-src 'self'; media-src 'self'; manifest-src 'self'; worker-src 'self'"
 
 [[headers]]
   for = "/fonts/*"

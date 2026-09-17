@@ -10,9 +10,12 @@ A static site with no framework and no build tooling to install — just Python'
 
 **Hand-authored** (edit these directly):
 
-- `index.html` — the deck page shell.
+- `index.html` — the threshold: three doors, deliberately thin on prose.
+- `deck.html` + `app.js` — the deck itself: rendering, filtering, laying and turning cards, the lightbox.
+- `rooms.html` + `rooms.js` — the room zoner, and the printable zone signs.
+- `badges.html` + `badges.js` — the interaction-badge maker: badges at the four standard conference sizes, sheets imposed for cutting, and the print and assembly instructions.
+- `space.html` — the condensed account of the Cavendish Space model.
 - `styles.css` — all styling, including the light and dark palettes.
-- `app.js` — the deck itself: rendering, filtering, laying and turning cards, the lightbox.
 - `sw-register.js` — registers the service worker on every page.
 - `theme-toggle.js` — the on-page light/dark toggle.
 
@@ -21,7 +24,7 @@ A static site with no framework and no build tooling to install — just Python'
 - `fonts/` — Atkinson Hyperlegible (Regular, Bold, Italic), self-hosted as woff2.
 - `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` — the card-fan favicon and app icons.
 - `og-image.png` — the social share image.
-- `site.webmanifest` — the web-app manifest (name, icons, theme colour, standalone display).
+- `site.webmanifest` — the web-app manifest (name, icons, theme color, standalone display).
 
 **Generated** by [`../scripts/build-site.py`](../scripts/build-site.py) — don't hand-edit; they're gitignored and Netlify rebuilds them on every deploy:
 
@@ -42,6 +45,8 @@ python3 -m http.server --directory web  # then open http://localhost:8000
 ```
 
 Serve it over http rather than opening `index.html` directly: browsers block `fetch('cards.json')` from `file://`, and the service worker only runs in a secure context (http on `localhost` counts). The security headers and CSP are applied by Netlify from [`../netlify.toml`](../netlify.toml), so they are not present when serving locally — that's expected.
+
+**Which means a local page is more permissive than the deployed one.** The CSP has no `'unsafe-inline'` for styles, so a `style` attribute works perfectly here and does nothing in production. Keep colors and layout in `styles.css`, use SVG presentation attributes for generated graphics, and reach for `CSSStyleSheet.insertRule()` when a rule genuinely has to be built at runtime.
 
 ## Deploy on Netlify
 

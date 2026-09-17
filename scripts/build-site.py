@@ -298,6 +298,7 @@ SITE_NAV = [
     ("Cavendish Space", "index.html", "home"),
     ("The deck", "deck.html", "deck"),
     ("Zone a room", "rooms.html", "rooms"),
+    ("Interaction badges", "badges.html", "badges"),
     ("What is a Cavendish Space?", "space.html", "space"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
@@ -1185,7 +1186,7 @@ def implementation_md(out_families):
 
 
 _SITE_URL = "https://cavendish.space"
-_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/space.html", "/guidebook.html", "/implementation.html",
+_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
@@ -1522,6 +1523,7 @@ _LLMS_SECTIONS = [
     ("Start here", [
         ("deck", "The card player. Lay a spread face-down; turning a card up is the consent."),
         ("rooms", "Zone a room into cave, campfire, watering hole, library, and habitat."),
+        ("badges", "Make, print, and assemble interaction badges at conference badge size — the green/yellow/red communication badges from Autistic space, plus bulk print and assembly instructions."),
         ("space", "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses."),
         ("why", "Why the deck exists, who it serves, and the stance behind it."),
         ("not-aac", "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together."),
@@ -1635,7 +1637,8 @@ def _write_service_worker(root, web, faces):
     font_names = sorted(p.name for p in (web / "fonts").glob("*.woff2"))
     h = hashlib.sha1()
     for name in ("index.html", "deck.html", "styles.css", "app.js", "cards.json",
-                 "theme-toggle.js", "rooms.html", "rooms.js", "space.html",
+                 "theme-toggle.js", "rooms.html", "rooms.js", "badges.html",
+                 "badges.js", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
@@ -1664,7 +1667,7 @@ def _write_service_worker(root, web, faces):
     version = h.hexdigest()[:8]
     precache = [
         "/", "/index.html", "/deck.html", "/styles.css", "/app.js", "/cards.json",
-        "/rooms.html", "/rooms.js", "/space.html",
+        "/rooms.html", "/rooms.js", "/badges.html", "/badges.js", "/space.html",
         "/sw-register.js", "/theme-toggle.js", "/site.webmanifest",
         "/favicon.svg", "/favicon.ico", "/apple-touch-icon.png",
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
