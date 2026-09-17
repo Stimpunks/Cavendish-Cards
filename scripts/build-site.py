@@ -1324,6 +1324,114 @@ _ROBOTS_PREAMBLE = """\
 """
 
 
+# Prose documents that cite cards as examples. The guidebook is deliberately not
+# here: its card names come from cards/** beside the card they describe, so a
+# name in a Notes field is authored next to its own source and cannot drift.
+_CARD_CITING_DOCS = [
+    "cavendish-cards-facilitator-sheet.md",
+    "cavendish-cards-starter-deck.md",
+    "cavendish-cards-example-spreads.md",
+    "cavendish-cards-livable-worlds.md",
+    "cavendish-cards-group-needs.md",
+    "cavendish-cards-why-sheet.md",
+    "cavendish-cards-not-aac.md",
+]
+
+# Words that claim a realm, mapped to the family they claim. Used to check that a
+# list introduced as "lay a lily pad -- x, y, z" holds only lily pads.
+_REALM_WORDS = {
+    "lily pad": "lily-pad", "lily-pad": "lily-pad",
+    "what-helps": "what-helps", "what helps": "what-helps",
+    "weather card": "weather", "weather": "weather",
+    "interaction card": "interaction",
+    "kind word": "love-locution", "love locution": "love-locution",
+    "grower": "grower",
+    "place card": "places",
+}
+
+
+def _check_card_citations(root, out_families):
+    """Warn when a prose document cites a card that does not exist, or puts a
+    real card in the wrong realm.
+
+    Every one of these errors reached print: "map the edges" told a facilitator
+    to lay a lily pad and listed `tell me first`, which is What helps; another
+    mode listed `a minute alone`, which is no card at all. They survived because
+    prose gets read against itself and never against the deck.
+
+    Three checks, all high-precision on purpose -- a noisy warning is one nobody
+    reads:
+
+      A. An italic list where some items are cards and some are not. Mixed lists
+         are card citations, so the odd one out is a mistake rather than prose.
+      B. An italic list introduced by a word claiming a realm, holding a card
+         from a different realm.
+      C. A near-miss differing from a real card only by its leading article
+         (`cave` for `the cave`, `the den` for `a den`).
+
+    What it cannot catch: an invented phrase in plain prose, with no italics and
+    no realm word near it. `a minute alone` was found by reading. Non-fatal,
+    like the other warnings here.
+    """
+    realms = {}
+    for fam in out_families:
+        for c in fam["cards"]:
+            realms.setdefault(c["name"], set()).add(fam["slug"])
+    articles = ("the ", "a ", "an ")
+
+    def variants(name):
+        bare = name
+        for a in articles:
+            if name.startswith(a):
+                bare = name[len(a):]
+        return {bare} | {a + bare for a in articles}
+
+    near = {}
+    for name in realms:
+        for v in variants(name):
+            if v not in realms:
+                near.setdefault(v, set()).add(name)
+
+    for rel in _CARD_CITING_DOCS:
+        path = root / rel
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for m in re.finditer(r"\*([^*\n]+)\*", text):
+            items = [i.strip().strip(".").strip() for i in m.group(1).split(",")]
+            items = [i for i in items
+                     if i and i == i.lower() and len(i) < 30
+                     and "\u2014" not in i and "\u2013" not in i]
+            if len(items) < 2:
+                continue
+            hits = [i for i in items if i in realms]
+            if not hits:
+                continue
+            for i in items:
+                if i in realms:
+                    continue
+                if i in near:
+                    print(f"  ! {rel}: cites {i!r}; the card is "
+                          f"{' or '.join(repr(n) for n in sorted(near[i]))}",
+                          file=sys.stderr)
+                else:
+                    print(f"  ! {rel}: {i!r} is listed beside real cards but is "
+                          f"not a card", file=sys.stderr)
+            # B: a realm word just before the list constrains every item in it.
+            lead = text[max(0, m.start() - 40):m.start()].lower()
+            claimed = None
+            for word, fam in _REALM_WORDS.items():
+                tail = lead.rsplit(word, 1)
+                if len(tail) == 2 and re.fullmatch(r"[\s\u2014\u2013:\-]{0,4}", tail[1]):
+                    claimed = fam
+            if claimed:
+                for i in hits:
+                    if claimed not in realms[i]:
+                        print(f"  ! {rel}: {i!r} is listed as a {claimed!r} card "
+                              f"but belongs to {'/'.join(sorted(realms[i]))}",
+                              file=sys.stderr)
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -1704,6 +1812,7 @@ def main():
     _write_sitemap_robots(web)
     _check_cond_parity(root, web)
     _check_group_example(root)
+    _check_card_citations(root, out_families)
     _impl_md = implementation_md(out_families)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         _impl_md, encoding="utf-8")
