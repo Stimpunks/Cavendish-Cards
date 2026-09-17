@@ -18,11 +18,11 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Decision
 ## The realms (as of this snapshot — generators compute exact counts; check `cards/`)
 
 - **Places** (~6): the cave, the campfire, the watering hole, the library, the habitat (+ your own). The five Cavendish zones. Fixed.
-- **Weather** (~18): inner weather, the whole range good and hard. **Curated display order** (gentle range, no headings, no good/bad split).
-- **What helps** (~28): the niche-construction realm; the largest on purpose. Grouped into ~12 sense **signposts** in its single-realm view (Being in charge, Sound, Light & looking, Touch, Pressure, Temperature, Movement, Mouth & nose, Space & enclosure, Telling & talking, People & time, Make your own).
-- **Lily pads** (~10): transitions/moments. Renders in `web/app.js` as a normal browsable realm, same as any other family — the old always-on "moments strip" has been retired.
+- **Weather** (~23): inner weather, the whole range good and hard. **Curated display order** (gentle range, no headings, no good/bad split).
+- **What helps** (~34): the niche-construction realm; the largest on purpose. Grouped into ~12 sense **signposts** in its single-realm view (Being in charge, Sound, Light & looking, Touch, Pressure, Temperature, Movement, Mouth & nose, Space & enclosure, Telling & talking, People & time, Make your own).
+- **Lily pads** (~10): transitions/moments. Renders in `web/app.js` as a normal browsable realm, same as any other family — the old always-on "moments strip" has been retired (`MOMENTS` in `build-site.py` is now an empty set).
 - **Growers** (~4): dandelion/tulip/orchid resilience metaphor. Optional.
-- **Kind words** (~9): affirmations. App label **"Kind words"** (subtitle "Also called Love Locutions or Love Languages"); the **guidebook keeps "Love Locutions."** Reframed as **self-affirmation / self-advocacy** — **given to someone, or claimed for yourself**, never earned, never a reward. Folder/slug stays `love-locution`.
+- **Kind words** (~10): affirmations. App label **"Kind words"** (subtitle "Also called Love Locutions or Love Languages"); the **guidebook keeps "Love Locutions."** Reframed as **self-affirmation / self-advocacy** — **given to someone, or claimed for yourself**, never earned, never a reward. Folder/slug stays `love-locution`.
 - **Interaction** (~6): the Autistic community's red/yellow/green communication badges (ANI/Autreat/Sinclair 1996). The one exception to face-down default — meant to be shown; has its own distinct card back.
 - **Blank** (1): draw your own. Every realm also carries a `your-own` card.
 
@@ -96,14 +96,15 @@ You run **locally, in this repo, on Ryan's Mac.** Edit files in place, run the b
 - **Ryan** — Co-Creative Director / Board Chair, Stimpunks. Drives the build; commits/pushes. Approves values-heavy / counter-deficit / Autistic-community / lineage wording, including in Helen's stead.
 - **Helen Edgar** — Autistic Realms; co-creator of Cavendish Space. Owns the values-heavy and Autistic-community calls (monotropism framing, self-affirmation reframe, "not AAC" wording, sensory/interoception language) — but **trusts Ryan to make these in her stead and reviews in batch later.** Different timezones, so approval shouldn't block iteration: ship with Ryan's sign-off and **log the change for Helen's batch review** rather than waiting on her.
 
-## Current status & open flags (snapshot ~2026-07-20 — verify against repo)
+## Current status & open flags (snapshot 2026-09-16 — verify against repo)
 
-**Recently landed (per recent sessions):** the all-ages reframe; `let me unmask` and the anxiety cluster (`no words right now`, `too seen`, `no spotlight`, `you don't have to talk`); the Kind words "given or claimed" reframe + reframed card back; the Interaction card back; ARLES integration (`cavendish-cards-arles.md` → `web/arles.html`, home-page poster + intro mention); the three refused frameworks (no pathology / no deficit / no behaviorism) on the guidebook page; `build-facilitator-pdf.py` wired into `build-all.py`; the playtest-PDF path quirk fixed (`build-all.py` writes the tracked `assets/playtest/cavendish-cards-playtest.pdf`) and `scripts/__pycache__/` gitignored.
+**Recently landed:** the all-ages reframe; `let me unmask` and the anxiety cluster (`no words right now`, `too seen`, `no spotlight`, `you don't have to talk`); the Kind words "given or claimed" reframe + reframed card back; the Interaction card back; ARLES integration; the three refused frameworks on the guidebook page; the cavendish.app → cavendish.space move; the livable-worlds, privacy and changelog pages; `llms.txt` plus a `.md` endpoint per prose page; a generated `security.txt`; placeholder vector art for every card (`scripts/card-art.py`), with image cues off the card face; `build-all.py` running the PDF steps itself; the playtest PDF's input-hash sidecar; and the group-brief method (`cavendish-cards-group-needs.md` → `/group-needs.html`) with its `rooms.html#asked=` overlay in the zoner.
 
 **Still live:**
-- ~~**Print PDFs lag after content changes.**~~ **Resolved 2026-09-16.** Both PDFs had been stale since July — the facilitator sheet still said “child” throughout, two months after the all-ages reframe, and was missing the rewritten “Map the edges” mode. Both are rebuilt and committed, and `build-all.py` now runs the PDF steps itself (see Build gotchas), so a single `python3 scripts/build-all.py` keeps every tracked generated file current. The residual risk is committing card changes without running it at all — a `--check` mode or a pre-commit hook would close that, and hasn't been built.
 - **Anxiety-cluster Patterns 52–54** are drafted for the Library but unpublished; pending Helen's review before publish/wire, then flip `published=True` and link the pattern lines on `big-step`, `too-seen`, `tender`, `no-spotlight`.
-- **Confirm recent pushes actually landed** — from Claude Code, just `git log` / `git fetch`.
+- **Nothing forces a rebuild before a commit.** `build-all.py` keeps every tracked generated file current, but the residual risk is committing card changes without running it at all. A `--check` mode or a pre-commit hook would close that, and hasn't been built.
+- **`fewer choices` and `keep it the same`** are in no `GROUPS` signpost, so they fall into "More" in the What helps view. "Being in charge" looks like the home for both — an open call, not a decision.
+- **Confirm recent pushes actually landed** (`git log` / `git fetch`).
 
 **Distinctness to watch in playtest:** pulled every way vs full · meerkat vs buzzy/prickly · round and round vs stormy · let me finish vs tell me first / no rush · let me come and go vs not right now · can't tell vs foggy / far-away.
 
