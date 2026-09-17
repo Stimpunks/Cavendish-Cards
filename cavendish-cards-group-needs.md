@@ -25,6 +25,7 @@ So there is a step before the method, and it is not optional.
 - **Know that a small group is identifying.** In a group of eight, one unusual card is a pointer at a person even with the name gone. If a spread would be recognizable, leave it out of the paste and carry it yourself.
 - **The AI is a third party.** Whatever service you use has its own retention and its own training policy, and neither is ours. Cavendish stores nothing at any point in this — but the moment you paste, that stops being the whole story.
 - **Drop the note field.** The deck's copy button includes anything a person typed into the note box. That is the most personal part of a spread and the least necessary for this. Delete it before you paste.
+- **Do not paste a headcount, and strip the dates.** "Twelve people, one pile" hands over a number before the brief starts, and a date plus a small group narrows who was there. Neither helps and both travel.
 - **Leave out the realms that never aggregate.** Interaction cards, Kind words and growers do not belong in a room brief (the reasons are below), and the simplest way to keep them out of one is to keep them out of the paste. Less goes to a third party that way, too.
 
 If any of that cannot be honored, do the sorting by hand. The vocabulary below works fine with paper.
@@ -43,6 +44,14 @@ These are the rules the tools already follow, written so an AI can follow them t
 
 ---- 
 
+## First, the card roster
+
+Before any of this, fetch **https://cavendish.space/cards.json**. It is the whole deck as data: every card, under the realm it belongs to. You need it, because which realm a card came from decides everything below, and a card's name does not tell you. `not right now` is an Interaction card; `not yet` is a lily pad. `you don't have to talk` is a Kind word and carries no description at all, so there is nothing in a pasted spread to identify it by.
+
+Use the roster to put every line of the paste in its realm first. Then map.
+
+**If you cannot fetch it, ask the coordinator which realm each unfamiliar card came from.** Do not infer a realm from how a card sounds. Guessing a realm is how a mood becomes a room change and how a worn badge ends up in a summary — and you will not know you got it wrong.
+
 ## The room conditions
 
 Seventeen conditions, each phrased as the change rather than the lack. These are the same ids [Zone a room](rooms.html) uses, so a brief written in them can be ticked straight into the zoner. After each one: the cards that map to it.
@@ -51,7 +60,7 @@ Seventeen conditions, each phrased as the change rather than the lack. These are
 - `steady-sound` — steady background sound or headphones allowed. From: a steady sound, headphones.
 - `dim` — light that can come down or a corner out of the brightest light. From: dim the light, a den.
 - `less-to-look-at` — somewhere with less to look at. From: less to look at.
-- `soft` — something soft to sit or lean on. From: something soft.
+- `soft` — something soft to sit or lean on. From: none yet.
 - `temperature` — a temperature people can change or dress for. From: the right temperature.
 - `room-to-move` — room to move without being in anyone's way. From: room to move, parallel existence.
 - `sit-my-way` — permission to sit however you like. From: sit my way.
@@ -69,11 +78,13 @@ Seventeen conditions, each phrased as the change rather than the lack. These are
 
 Plenty of what a spread names is not a fixture. Forcing it into a room condition loses it. These go in their own lists.
 
-**Kit** — things the space stocks or a person brings. A big squeeze, busy hands, something to chew, a snack or a drink, a smell that helps. Mostly an afternoon and a budget. The [implementation guidebook](implementation.html) covers doing this on no money.
+**Kit** — things the space stocks or a person brings. A big squeeze, something soft, busy hands, something to chew, a snack or a drink, a smell that helps. Mostly an afternoon and a budget. The [implementation guidebook](implementation.html) covers doing this on no money.
 
 **Permission** — things that cost nothing and are a rule, not a purchase. Let me stim, let me unmask, sit my way, say it straight, no spotlight. These belong on the signs, in the opening announcement, and in what the staff are told. A permission that is not said out loud has not been given.
 
-**Pacing** — how the session runs. Keep it the same, fewer choices, tell me first, one thing at a time, let me finish, no rush. This is the agenda, not the furniture.
+**Pacing** — how the session runs. Keep it the same, fewer choices, tell me first, one thing at a time, let me finish, no rush, and the four lily pads that map to `no-rush`. Those land in both: the room has to allow more than one pace, and the agenda has to actually use it. This is the agenda, not the furniture.
+
+`soft` has no card yet. Nothing in the deck asks for soft seating: `something soft` sounds like it does and does not — it is "a plush thing to hold," a comfort object, so it is kit. The condition stays in the list because the zoner uses it and a room still needs somewhere soft to sit; it just will not arrive from a card. A reader who wants it will say so in their own words, which is the remainder's job.
 
 A card can land in two lists. Let me unmask is a room condition and a permission; do both. Sit my way is a permission the room has to physically allow. Overlap is not a mistake to resolve.
 
@@ -81,7 +92,7 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 **The `reflect:` lines are not answers.** A spread copied from the deck carries the reflection question the app offered under each card. Those questions are the app talking, not the person, and several of them *name other cards as examples* — "is there a lily-pad card that fits right now — not yet, slowly, or i need a minute?" names three cards nobody laid. Read only the card lines. A tool that matches card names against the whole paste will find needs that were never asked for, and the spread that suffers most is the one where somebody laid nothing but weather. Ignore every `reflect:` line, or delete them before pasting.
 
-**Weather cards are not needs.** Stormy, foggy, running on empty, too seen — these say how a day felt. They do not convert into a room change, and an AI that infers one ("several people were stormy, so add quiet") is guessing at people from their moods. Weather may be reflected back as one plain sentence about the day, attached to nobody. It never becomes an entry in a list.
+**Weather cards are not needs.** Stormy, foggy, running on empty, too seen — these say how a day felt. They do not convert into a room change, and an AI that infers one ("several people were stormy, so add quiet") is guessing at people from their moods. Weather is not summarized at all — not as a list, and not as a sentence about how the day went. "The weather ran the full range" sounds harmless and is still a claim about a group of people's moods, which rules two and three both forbid. Say only that weather was laid and is not being summarized, and that anyone who wants to know how the day felt can ask the people who were there. They are right there, and they are better at it than you.
 
 **Kind words are never aggregated.** They are given to someone or claimed for yourself. They are not a need and not data.
 
@@ -106,13 +117,15 @@ Four lists, a zone read, and two kinds of honesty at the end. No preamble, no su
 - **Zones asked for** — the cave, the watering hole
 - **The deck had no card for this** — someone drew their own. Ask what they drew; it may be a card this deck still owes people.
 - **The method had no box for this** — "stuck", "watch first". Ask whether the room owes them a change of pace or just somewhere to land.
-- **Should not have been in the paste** — an Interaction card, and a note field. Dropped unread. The strip step did not happen; do it before the next one.
-- **The day** — the weather ran the full range, easy through heavy. It stays with the day, not the room.
+- **Should not have been in the paste** — an Interaction card, and a note field. Neither is used in this brief. The strip step did not happen; do it before the next one.
+- **Weather** — laid, and not summarized. If you want to know how the day felt, ask the people who were there.
 - **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature
 
 **The two remainders are different questions, so they are two lines.** "The deck had no card for this" is a gap in the deck — somebody needed something that does not exist yet, and the answer might be a new card. "The method had no box for this" is a gap in *these instructions* — the card exists and this page could not place it. Never merge them, and never resolve either by stretching a condition to fit.
 
-**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present, dropped unread" and nothing more. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
+**Put the room list in this page's order**, not the order the cards arrived in and not longest-first. Any order can be read as priority, so use one that obviously is not: the conditions run down this page in a fixed order, so use that. The other lists can run in any order that is not frequency.
+
+**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present; it is not used in this brief" and nothing more. Do not write "dropped unread" — you had to read it to know what it was, and a phrase that reassures the coordinator about something that did not happen is worse than saying nothing. The only step that can actually keep a note unread is the one before the paste. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
 ## The link, and how to build it
 
@@ -123,6 +136,8 @@ The last line of the brief is the room list again, as ids, in a link to the zone
 So a brief naming quiet, a corner, a way out, dimmable light and a temperature people can change ends with:
 
 > [https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature](https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature)
+
+A zone somebody asked for does not go in the link — the zoner works out which zones a room can hold from what is ticked, so there is nothing for a zone to set. Carry it by hand: say it in the brief, and once the conditions are ticked the zoner will list what that zone still needs.
 
 Three rules for what goes in it. **Only ids from the list above** — the seventeen, spelled exactly as they appear, not the sentence next to them. **Nothing else** — no names, no notes, no weather, no zones, no counts. **Always the whole address**, starting `https://cavendish.space/`, because the coordinator will paste it into a message or a document, not into this page.
 
@@ -146,7 +161,7 @@ Give it this page and then the spreads. Most tools will fetch a URL:
 
 If yours cannot fetch, paste this page's text above the spreads. Either way, the method is the whole page — there is no shorter version that keeps the rules, because the rules are the point.
 
-Check what comes back against the three rules before you act on it or show it to anyone. If there is a number in it, a person as the subject of a sentence, or a category that is not in the vocabulary above, the tool did not follow the method. Say so and ask again.
+Check what comes back against the three rules before you act on it or show it to anyone. If there is a number in it, a person as the subject of a sentence, or a *category* it invented rather than one from this page, the tool did not follow the method. The two remainder lines are the exception and are meant to carry card names that are not in the vocabulary — that is them working, not failing. Say so and ask again.
 
 ## What this is not
 

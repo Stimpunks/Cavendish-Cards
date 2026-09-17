@@ -168,7 +168,7 @@ def mapping_from_method():
         cond_text[cid] = label.strip()
         for name in froms.split(","):
             name = name.strip()
-            if name and not name.startswith("and the lily pads"):
+            if name and name != "none yet":
                 card_to_cond.setdefault(name, []).append(cid)
     buckets = {}
     for name, cards in re.findall(
