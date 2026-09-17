@@ -171,12 +171,29 @@
       </details>
       <div class="summary-note-field">
         <label for="summary-note">Anything you want to remember about this? <span class="muted">(optional)</span></label>
-        <textarea id="summary-note" rows="3" placeholder="Just for you &mdash; added to the copy, never saved."></textarea>
+        <textarea id="summary-note" rows="3" placeholder="Just for you &mdash; added to your own copy, never to a shared one, and never saved."></textarea>
       </div>
       <div class="table-actions">
         <button id="summary-copy" type="button" class="btn">Copy for a journal</button>
         <button id="summary-close" type="button" class="btn ghost">Hide</button>
       </div>
+
+      <section class="summary-share" aria-labelledby="share-h">
+        <h3 id="share-h">Giving this to someone</h3>
+        <p>Only if you want to. Turning a card up shared it with this room. Sending it on is a
+        separate choice, and it is yours &mdash; nobody can make it for you, and you don&rsquo;t
+        have to say why either way.</p>
+        <p class="muted" id="share-what"></p>
+        <div class="table-actions">
+          <button id="summary-share" type="button" class="btn">Copy to share</button>
+          <button id="summary-print" type="button" class="btn ghost">Print to hand over</button>
+        </div>
+        <p class="muted">On a computer other people use, printing this or just showing someone
+        the screen is safer than copying &mdash; a copy sits on the clipboard for whoever uses
+        the computer next.</p>
+      </section>
+
+      <div id="share-print" class="share-print" hidden></div>
     </section>
   </main>
 

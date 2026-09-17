@@ -28,6 +28,18 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 - **Nothing about this touches the site's promise.** No form, no endpoint, no submission, no storage. The page is prose; the work happens in the coordinator's own tool. Cavendish still stores nothing, and still has no server-side code.
 
+- **The deck can now produce a copy meant for someone else.** It had one copy button, labelled "Copy for a journal," with a note field that said "just for you" — a private keepsake. The group-brief method had been quietly repurposing that keepsake as the thing a coordinator collects, which is why every test run failed the same way: the journal copy carries a date, a reflection question under each card, and whatever was typed in the note.
+
+- **"Copy to share" is the card lines and nothing else.** No date, no questions, no note, and no interaction cards, kind words or growers — those are for showing in the room or keeping, not for sending on. The deck says which of them it left out, so nobody has to guess what was withheld. The strip step the method asks coordinators to remember now happens in the deck, at the moment a person decides to share.
+
+- **And the choice to share is now its own act.** Turning a card face-up is consent to show it in this room. Pressing a second, differently labelled button is consent to send it somewhere else. A person who never presses it has shared nothing, and does not have to say why.
+
+- **Share copies merge themselves.** They carry no header and no separator, so several pasted together become one flat list — which is what a brief needs, and which destroys the record of whose needs arrived together. In a small group, that record is what identifies somebody.
+
+- **"Print to hand over" prints the shared version.** For anyone with no way to send anything — which includes most children on a shared school computer — paper into a box is the most private route available and the only one with a chain of custody. The page also warns that copying on a shared computer leaves the spread on the clipboard for whoever sits down next.
+
+- **The method page now says how a spread reaches a coordinator at all**, which it had never covered: ask for the shared copy by name, the paper and show-me-the-screen routes, never hand out a link that pre-addresses a message to you — and two things not to build. Not an anonymous self-deleting drop box, which sounds like privacy and is a safeguarding problem, and stores the message on someone else's server besides. Not a consent checkbox, which on a site with no server has nothing to enforce it and cannot be informed anyway; the consent that counts is said out loud before anyone lays a card.
+
 - **A second independent run came back clean on the mapping, and found six more things.** Twelve different spreads, chosen because they exercise the mappings that had just changed. Every condition matched, the card roster did its job, and the session reported it had not needed to guess at a realm once — which was the whole point of adding it.
 
 - **A note field is still the coordinator's to act on, and the method never said so.** It told the tool not to mine the note and then let the matter drop, which meant the most specific information in the pile — a named light in a named hall, a door where leaving required an explanation — quietly went nowhere while the brief said generic things about dim and quiet. Not mining it is right. Letting it fall on the floor is not. The brief now hands it back: not used here, still yours, go and look at what it names.

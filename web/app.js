@@ -3,6 +3,7 @@
 
   var deckEl, tableEl, emptyEl, clearBtn, doneBtn, filtersEl, blurbEl, liveEl, toTableBtn;
   var summaryEl, summaryListEl, summaryNoteEl, summaryCopyBtn, summaryCloseBtn;
+  var summaryShareBtn, summaryPrintBtn, shareWhatEl, sharePrintEl;
   var lightboxEl, lbImg, lbNameEl, lbPromptEl, lbNoteEl, lbNoteTextEl, lbBuildEl, lbBuildLinkEl, lbCloseBtn, lbReturn = null;
   var families = [];
   var browseFamilies = [];
@@ -408,6 +409,70 @@
     }).join('\n');
   }
 
+  /* Two copies, and the difference between them is the whole point.
+   *
+   * The journal copy is a keepsake: date, reflection questions, and whatever
+   * was typed in the note. The share copy is what somebody else may end up
+   * reading, so it carries the card lines and nothing else.
+   *
+   * Three realms are left out of it. Interaction cards are worn and shown live,
+   * not sent; Kind words are given or claimed, not needs; growers are
+   * self-description, and a pile of self-description summarized is a profile.
+   * Doing it here means the deck strips at the moment of choosing to share,
+   * rather than leaving it to whoever receives the pile.
+   *
+   * No header, no date, no separator, by design: several people's share copies
+   * pasted together become one flat list, which is what a brief wants and which
+   * destroys the record of whose needs arrived together. In a small group that
+   * record is what identifies somebody. */
+  var SHARE_EXCLUDE = { "interaction": 1, "love-locution": 1, "grower": 1 };
+
+  // Read out loud in a sentence, so they are phrased rather than derived --
+  // "growers cards" is what deriving them gets you.
+  var SHARE_EXCLUDE_LABEL = {
+    "interaction": "interaction cards",
+    "love-locution": "kind words",
+    "grower": "grower cards"
+  };
+
+  function shareItems() {
+    return laid.filter(function (item) {
+      var c = byUid[item.uid];
+      return c && !SHARE_EXCLUDE[c.family];
+    });
+  }
+
+  function shareText() {
+    return shareItems().map(function (item) {
+      var c = byUid[item.uid];
+      return '- ' + c.name + (c.prompt ? ' \u2014 ' + c.prompt : '');
+    }).join('\n');
+  }
+
+  /* Say what a share copy leaves out, naming only the realms actually laid --
+   * a standing disclaimer about cards nobody touched is noise. */
+  function shareWhat() {
+    if (!shareItems().length) {
+      return 'There is nothing here to share \u2014 everything you laid is meant for showing '
+           + 'in the room rather than sending on. That is a fine spread to have laid.';
+    }
+    var names = [];
+    laid.forEach(function (item) {
+      var c = byUid[item.uid];
+      var label = c && SHARE_EXCLUDE_LABEL[c.family];
+      if (label && names.indexOf(label) < 0) names.push(label);
+    });
+    var out = 'A shared copy is just the cards \u2014 not the date, not the questions, '
+            + 'and not your note.';
+    if (names.length) {
+      out += ' It also leaves out your '
+          + (names.length === 1 ? names[0]
+             : names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1])
+          + ': those stay with you, or get shown in the room \u2014 they are not for sending on.';
+    }
+    return out;
+  }
+
   function showSummary() {
     if (!summaryEl) return;
     summaryListEl.innerHTML = '';
@@ -420,6 +485,11 @@
         (q ? '<span class="summary-reflect">' + esc(q) + '</span>' : '');
       summaryListEl.appendChild(li);
     });
+    if (shareWhatEl) shareWhatEl.textContent = shareWhat();
+    var canShare = shareItems().length > 0;
+    if (summaryShareBtn) summaryShareBtn.disabled = !canShare;
+    if (summaryPrintBtn) summaryPrintBtn.disabled = !canShare;
+
     summaryEl.hidden = false;
     var h = document.getElementById('summary-h');
     if (h) h.focus();
@@ -550,6 +620,55 @@
         });
       });
     }
+    if (summaryShareBtn) {
+      summaryShareBtn.addEventListener('click', function () {
+        var text = shareText();
+        if (!text) {
+          flashButton(summaryShareBtn, 'Nothing to share');
+          announce('Nothing in this spread is meant for sending on.');
+          return;
+        }
+        copyText(text).then(function (ok) {
+          flashButton(summaryShareBtn, ok ? 'Copied to share!' : "Couldn't copy");
+          announce(ok ? 'Copied the cards, without your note or the date.'
+                      : 'Could not copy.');
+        });
+      });
+    }
+
+    if (summaryPrintBtn) {
+      summaryPrintBtn.addEventListener('click', function () {
+        if (!sharePrintEl || !shareItems().length) return;
+        // Build the sheet fresh each time: the table can change between prints.
+        sharePrintEl.textContent = '';
+        var h = document.createElement('h2');
+        h.textContent = 'What I need';
+        sharePrintEl.appendChild(h);
+        var ul = document.createElement('ul');
+        shareItems().forEach(function (item) {
+          var c = byUid[item.uid];
+          var li = document.createElement('li');
+          li.textContent = c.name + (c.prompt ? ' \u2014 ' + c.prompt : '');
+          ul.appendChild(li);
+        });
+        sharePrintEl.appendChild(ul);
+        var foot = document.createElement('p');
+        foot.className = 'share-print-foot';
+        foot.textContent = 'Cavendish Cards \u00b7 cavendish.space \u00b7 '
+          + 'This is a brief for the room, not a report on a person.';
+        sharePrintEl.appendChild(foot);
+        sharePrintEl.hidden = false;
+        document.body.classList.add('printing-spread');
+        window.print();
+      });
+    }
+
+    // Undo the print mode however the dialog ended, including a cancel.
+    window.addEventListener('afterprint', function () {
+      document.body.classList.remove('printing-spread');
+      if (sharePrintEl) sharePrintEl.hidden = true;
+    });
+
     if (summaryCloseBtn) {
       summaryCloseBtn.addEventListener('click', function () {
         summaryEl.hidden = true;
@@ -577,6 +696,10 @@
     summaryNoteEl = document.getElementById('summary-note');
     summaryCopyBtn = document.getElementById('summary-copy');
     summaryCloseBtn = document.getElementById('summary-close');
+    summaryShareBtn = document.getElementById('summary-share');
+    summaryPrintBtn = document.getElementById('summary-print');
+    shareWhatEl = document.getElementById('share-what');
+    sharePrintEl = document.getElementById('share-print');
 
     lightboxEl = document.getElementById('lightbox');
     lbImg = document.getElementById('lightbox-img');

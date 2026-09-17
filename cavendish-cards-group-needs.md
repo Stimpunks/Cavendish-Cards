@@ -14,6 +14,39 @@ That is the tree the idea started with. The branches are just authored rather th
 
 ---- 
 
+## Getting the spreads in the first place
+
+A spread has to travel from the person who laid it to you, and how it travels matters more than anything you do with it afterwards.
+
+In [the deck](deck.html), a person who has laid their cards presses **I'm done** and the spread appears with two ways to copy it. They are not interchangeable.
+
+- **Copy for a journal** is the whole thing — the date, the reflection question under each card, and anything typed in the note box. That copy is theirs. It is not what you want, and asking for it asks for more than you need.
+- **Copy to share** is the card lines and nothing else: no date, no questions, no note, and no interaction cards, kind words or growers. That is the paste this method is written for, and it does the whole strip step at the moment the person chooses to share, rather than leaving it to you afterwards.
+
+**Ask for it by name.** "Press Copy to share and send me that" does the privacy work in one sentence. "Send me your spread" does not.
+
+Share copies also merge themselves. They carry no header and no separator, so several pasted together are one flat list — which is what a brief wants, and which quietly destroys the record of whose needs arrived together. In a small group, that record is the thing that identifies somebody.
+
+### When there is no way to send it
+
+Plenty of people will have no way to email you, and children on a shared school computer usually have no account worth using. **A spread does not have to travel digitally, and mostly it should not.**
+
+- **Print to hand over.** The deck prints the shared version — the cards, and nothing else. Paper into a box is the most private route there is and the only one with a chain of custody.
+- **Show you the screen.** The spread is already laid. Read it with them and write down what you need. No account, no address, nothing copied.
+- **Lay the physical cards** and leave them on a table, or hand them over.
+
+**Copying on a shared computer leaves the spread on the clipboard** for whoever sits down next. On a classroom machine, printing or showing the screen is safer than either copy button.
+
+If someone does send it, let them use their own mail or messaging app and choose the recipient themselves. Do not hand out a link that pre-addresses a message to you: it puts your address into everything that link is pasted into, and it turns a deliberate act into a button press.
+
+### What not to set up
+
+**Not an anonymous drop box.** A channel where a person sends an adult a message with no sender, no record and no retention sounds like a privacy win and is a safeguarding problem — an unlogged, self-deleting line between an adult and a child is the pattern child-protection policy exists to prevent, and a school is right to refuse it. Those services also hold the message on their own servers until it is read, so "nothing is stored" stops being true the moment you use one. Paper in a box gets you the same anonymity and keeps the chain of custody.
+
+**Not a consent checkbox.** A tick box saying "you may run this through an AI" has nothing to enforce it and nobody to record it — this site has no server, and one that looks like consent while doing nothing is worse than none. It also cannot be informed: at the moment of laying cards, nobody knows which AI, whose account, or what that service keeps. The consent that counts is you saying out loud, before anyone lays a card, that spreads will go through an AI. That is a sentence a person can decline.
+
+---- 
+
 ## Before you paste anything
 
 Turning a card face-up is the consent. That consent was given to the room, in the moment, to the people there. It was not given to an AI company.
@@ -25,6 +58,7 @@ So there is a step before the method, and it is not optional.
 - **Know that a small group is identifying.** In a group of eight, one unusual card is a pointer at a person even with the name gone. If a spread would be recognizable, leave it out of the paste and carry it yourself.
 - **The AI is a third party.** Whatever service you use has its own retention and its own training policy, and neither is ours. Cavendish stores nothing at any point in this — but the moment you paste, that stops being the whole story.
 - **Drop the note field.** The deck's copy button includes anything a person typed into the note box. That is the most personal part of a spread and the least necessary for this. Delete it before you paste.
+- **If it came from Copy to share, most of this is done.** The bullets below are for spreads that arrive some other way — a journal copy, a photo, a handwritten list, an older version of the deck. Check anyway; it costs a moment.
 - **Merge, and mean it.** Twelve spreads with a separator between them *are* a headcount, and a more revealing one than a number: they also show which needs arrived together, which is the thing that identifies a person in a small group. The deck's copy button hands you one spread at a time, so this is the state a real paste arrives in unless you do something about it. Combine the card lines into one list before you paste.
 - **Do not paste a headcount, and strip the dates.** "Twelve people, one pile" hands over a number before the brief starts, and a date plus a small group narrows who was there. Neither helps and both travel.
 - **Leave out the realms that never aggregate.** Interaction cards, Kind words and growers do not belong in a room brief (the reasons are below), and the simplest way to keep them out of one is to keep them out of the paste. Less goes to a third party that way, too.

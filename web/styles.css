@@ -576,11 +576,37 @@ body.break-open { overflow: hidden; }
    - Plain print (browser File > Print): the whole page, minus screen furniture.
    - "printing-signs" (the buttons on the page): ONLY the signs, one per sheet,
      because a sign competing with a page of prose is a sign nobody puts up. */
+/* Giving a spread to someone. Set apart from the journal actions above it,
+   because it is a different decision and should not read as the next step. */
+.summary-share {
+  margin: 22px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.summary-share h3 { margin: 0 0 8px; }
+.summary-share p { max-width: 68ch; margin: 0 0 10px; }
+.summary-share .table-actions { margin: 14px 0 10px; }
+.summary-share .btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* Hidden on screen; the print rules below are the only thing that shows it. */
+.share-print { margin: 0; }
+.share-print h2 { margin: 0 0 12px; }
+.share-print ul { margin: 0; padding-left: 1.2em; }
+.share-print li { margin: 10px 0; font-size: 1.15rem; line-height: 1.45; }
+.share-print-foot { margin: 22px 0 0; color: var(--muted); font-size: .9rem; }
+
 @media print {
   .breakbar, .skip, .theme-toggle, .rooms-actions, .site-footer { display: none !important; }
   .rooms-zone { break-inside: avoid; }
   .rooms-sign { break-inside: avoid; border-width: 3px; }
   .rooms-signs { grid-template-columns: 1fr; }
+
+  body.printing-spread > *:not(main) { display: none !important; }
+  body.printing-spread main > section:not(.summary) { display: none !important; }
+  body.printing-spread .summary > *:not(.share-print) { display: none !important; }
+  body.printing-spread .share-print { display: block !important; }
 
   body.printing-signs > *:not(main) { display: none !important; }
   body.printing-signs main .wrap > section:not(.rooms-signs-section) { display: none !important; }
