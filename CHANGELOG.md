@@ -18,6 +18,16 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- **A new page for grouping a room's access needs**, at [/group-needs.html](https://cavendish.space/group-needs.html). At an event, people lay spreads; a coordinator cannot hold twenty of them in their head. The page is a method for turning the pile into one short brief for the room — and it doubles as a skill description you can hand to whatever AI you already use, so it does the sorting. Hand it the page, then the spreads.
+
+- **The method is narrow on purpose, because of what goes wrong without it.** Left to itself, a general-purpose AI will invent its own categories for access needs, rank them by how many people asked, and hand back something that reads like a report on a group of people. So the page does not ask for analysis. It asks for translation into a vocabulary that already exists here: the seventeen room conditions behind [Zone a room](https://cavendish.space/rooms.html), plus three lists that are not the room at all — kit, permission, and pacing. A need that fits no box is listed in the person's own card rather than forced into one.
+
+- **Three rules carry the stance, and they are the whole point.** No score, ever. The subject of every output sentence is the room, never a person or a group. And no counting — not how many spreads named a thing, not sorted by it, not marked common or rare. Access is not a vote: one person needing a way out is exactly as actionable as eight, because you build the way out once either way. Counts also re-identify, since in a small group "named once" points at somebody.
+
+- **Consent gets a step of its own, before the method.** Turning a card face-up is consent given to the room, in the moment, to the people there — not to an AI company. So the page opens with what to do first: merge and strip names, tell people at the start that this is the plan, drop the note field, leave out a spread that would be recognizable, and know that whatever service you paste into has its own retention and it is not ours. Weather, Kind words, and Interaction cards are never aggregated at all.
+
+- **Nothing about this touches the site's promise.** No form, no endpoint, no submission, no storage. The page is prose; the work happens in the coordinator's own tool. Cavendish still stores nothing, and still has no server-side code.
+
 - The print-and-play PDF is no longer rebuilt when nothing has changed. It renders differently every time it is built — same pages, a few bytes apart — so every full build left a 3.7MB file looking modified when it wasn't, which both hid real staleness and would have padded the repository with meaningless copies. It now checks a hash of what actually shapes it and does nothing if that hasn't moved.
 
 - **The printed facilitator sheet had been saying the wrong thing since July.** The deck was rewritten for all ages in the summer — `child` became `person`, `adult` became `facilitator` — and the web version changed with it, but the PDF you actually print and hand to someone did not. It still said "the child controls sharing," still described "Build my day" as being for "a child and a support worker," and was missing the rewritten "Map the edges." Rebuilt from the current source, along with the print-and-play deck, which had been missing two pages of cards added since July.

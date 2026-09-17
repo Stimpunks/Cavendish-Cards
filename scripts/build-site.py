@@ -303,6 +303,7 @@ SITE_NAV = [
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
     ("Example spreads", "example-spreads.html", "example-spreads"),
+    ("Group access needs", "group-needs.html", "group-needs"),
     ("Livable worlds checklist", "livable-worlds.html", "livable-worlds"),
     ("Why this exists", "why.html", "why"),
     ("Origin & lineage", "origin.html", "origin"),
@@ -328,6 +329,7 @@ MD_ENDPOINTS = {
     "origin": "cavendish-cards-origin.md",
     "arles": "cavendish-cards-arles.md",
     "example-spreads": "cavendish-cards-example-spreads.md",
+    "group-needs": "cavendish-cards-group-needs.md",
     "livable-worlds": "cavendish-cards-livable-worlds.md",
     "privacy": "cavendish-cards-privacy.md",
     "facilitator": "cavendish-cards-facilitator-sheet.md",
@@ -585,6 +587,17 @@ def example_spreads_html(root):
         "Example spreads",
         "Worked examples of the deck in use: a moment, a spread someone laid, and how to read it as a design brief for the environment.",
         "example-spreads", "Skip to the examples", "Example spreads", "example-spreads",
+        md_to_html(src))
+
+
+def group_needs_html(root):
+    src = (root / "cavendish-cards-group-needs.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Group access needs",
+        "A method for turning a pile of spreads into one brief for the room \u2014 and a "
+        "skill description to hand an AI, with the rules that keep it a design brief "
+        "and not a report on people.",
+        "group-needs", "Skip to the method", "Group access needs", "group-needs",
         md_to_html(src))
 
 
@@ -1144,7 +1157,8 @@ def implementation_md(out_families):
 _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
-               "/example-spreads.html", "/livable-worlds.html", "/privacy.html", "/changelog.html"]
+               "/example-spreads.html", "/group-needs.html", "/livable-worlds.html",
+               "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
 # first paint. Kept byte-identical to the copy in web/index.html and to the CSP
@@ -1259,6 +1273,7 @@ _LLMS_SECTIONS = [
         ("facilitator", "The one-page sheet for whoever is holding the space. Also a print PDF."),
         ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
         ("implementation", "Turning a spread into changes to the room, on any budget."),
+        ("group-needs", "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone."),
         ("livable-worlds", "A checklist for building spaces that fit bodyminds."),
     ]),
     ("Where it comes from", [
@@ -1396,7 +1411,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
-        "/livable-worlds.html", "/privacy.html", "/changelog.html",
+        "/group-needs.html", "/livable-worlds.html", "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1527,6 +1542,7 @@ def main():
     (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
+    (web / "group-needs.html").write_text(group_needs_html(root), encoding="utf-8")
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
