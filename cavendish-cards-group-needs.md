@@ -99,11 +99,11 @@ Seventeen conditions, each phrased as the change rather than the lack. These are
 - `less-to-look-at` — somewhere with less to look at. From: less to look at.
 - `soft` — something soft to sit or lean on. From: none yet.
 - `temperature` — a temperature people can change or dress for. From: the right temperature.
-- `room-to-move` — room to move without being in anyone's way. From: room to move, parallel existence.
+- `room-to-move` — room to move without being in anyone's way. From: room to move, let me stim.
 - `sit-my-way` — permission to sit however you like. From: sit my way.
 - `corner` — a corner, nook, or den out of the main flow. From: a corner, a den.
 - `own-spot` — a spot that can stay someone's for the session. From: my own spot, coming back.
-- `way-out` — a way out that doesn't cross in front of everyone. From: a way out, no spotlight.
+- `way-out` — a way out that doesn't cross in front of everyone. From: a way out.
 - `come-and-go` — leaving and coming back without explaining. From: let me come and go, a way out, coming back.
 - `control` — let people in the room change things in it. From: let me control it, let me unmask.
 - `written` — what happens here written down or posted. From: tell me first, another way to talk.
@@ -117,7 +117,9 @@ Plenty of what a spread names is not a fixture. Forcing it into a room condition
 
 **Kit** — things the space stocks or a person brings. A big squeeze, something soft, busy hands, something to chew, a snack or a drink, a smell that helps. Mostly an afternoon and a budget. The [implementation guidebook](implementation.html) covers doing this on no money.
 
-**Permission** — things that cost nothing and are a rule, not a purchase. Let me stim, let me unmask, let me control it, sit my way, say it straight, no spotlight. The test for whether a card belongs here as well as in a condition: **would the room allowing it be enough, or does somebody have to say so out loud?** A room can physically let you sit on the floor and still be a room where nobody does. These belong on the signs, in the opening announcement, and in what the staff are told. A permission that is not said out loud has not been given.
+**Permission** — things that cost nothing and are a rule, not a purchase. Let me stim, let me unmask, let me control it, sit my way, say it straight, no spotlight. The test for whether a card belongs here as well as in a condition: **would the room allowing it be enough, or does somebody have to say so out loud?** A room can physically let you sit on the floor and still be a room where nobody does.
+
+Some cards are permission and nothing else — `say it straight` asks for no fixture at all. A paste made only of those produces an empty room list and a full permission list, and that is a correct brief, not a broken one. A room can satisfy every fixture on this page and still be a place where instructions are vague and nobody stims. These belong on the signs, in the opening announcement, and in what the staff are told. A permission that is not said out loud has not been given.
 
 **Pacing** — how the session runs. Keep it the same, fewer choices, tell me first, one thing at a time, let me finish, no rush, and the four lily pads that map to `no-rush`. Those land in both: the room has to allow more than one pace, and the agenda has to actually use it. This is the agenda, not the furniture.
 
@@ -129,7 +131,7 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 **The `reflect:` lines are not answers.** A spread copied from the deck carries the reflection question the app offered under each card. Those questions are the app talking, not the person, and several of them *name other cards as examples* — "is there a lily-pad card that fits right now — not yet, slowly, or i need a minute?" names three cards nobody laid. Read only the card lines. A tool that matches card names against the whole paste will find needs that were never asked for, and the spread that suffers most is the one where somebody laid nothing but weather. Ignore every `reflect:` line, or delete them before pasting.
 
-**Weather cards are not needs.** Stormy, foggy, running on empty, too seen — these say how a day felt. They do not convert into a room change, and an AI that infers one ("several people were stormy, so add quiet") is guessing at people from their moods. Weather is not summarized at all — not as a list, and not as a sentence about how the day went. "The weather ran the full range" sounds harmless and is still a claim about a group of people's moods, which rules two and three both forbid. Say only that weather was laid and is not being summarized, and that anyone who wants to know how the day felt can ask the people who were there. They are right there, and they are better at it than you.
+**Weather cards are not needs.** Stormy, foggy, running on empty, too seen — these say how a day felt. They do not convert into a room change, and an AI that infers one ("several people were stormy, so add quiet") is guessing at people from their moods. Weather is not summarized at all — not as a list, and not as a sentence about how the day went. "The weather ran the full range" sounds harmless and is still a claim about a group of people's moods, which rules two and three both forbid. Say only that weather was laid and is not being summarized, that the room list came only from the cards which name a need, and that anyone who wants to know how the day felt can ask the people who were there. That last part matters for a different reason: a confident room list reads as though it rests on the whole pile, and on a day when most of what was laid was weather it does not. Saying so costs nothing and claims nothing about anybody. They are right there, and they are better at it than you.
 
 **Kind words are never aggregated.** They are given to someone or claimed for yourself. They are not a need and not data.
 
@@ -147,20 +149,26 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 Four lists, a zone read, and two kinds of honesty at the end. No preamble, no summary of the group, no recommendations about people.
 
-- **The room needs** — somewhere it can be made quiet · a corner, nook, or den out of the main flow · a way out that doesn't cross in front of everyone · light that can come down · a temperature people can change or dress for
-- **Kit** — something soft to sit or lean on · something to chew · a snack and water within reach
+- **The room needs** — somewhere it can be made quiet · light that can come down or a corner out of the brightest light · a temperature people can change or dress for · a corner, nook, or den out of the main flow · a way out that doesn't cross in front of everyone
+- **Kit** — something soft to hold · something to chew · a snack and water within reach
 - **Permission, say it out loud** — stim freely · sit however you like · leave and come back without explaining
 - **Pacing** — post the plan before the session · one thing at a time · nothing on a single clock
 - **Zones asked for** — the cave, the watering hole
 - **The deck had no card for this** — someone drew their own. Ask what they drew; it may be a card this deck still owes people.
 - **The method had no box for this** — "stuck", "watch first". Ask whether the room owes them a change of pace or just somewhere to land.
 - **Should not have been in the paste** — an Interaction card, and a note field. Neither is used in this brief. The strip step did not happen; do it before the next one.
-- **Weather** — laid, and not summarized. If you want to know how the day felt, ask the people who were there.
-- **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature
+- **Weather** — laid, and not summarized. The room list above comes only from the cards that name a need. If you want to know how the day felt, ask the people who were there.
+- **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,dim,temperature,corner,way-out
 
 **The two remainders are different questions, so they are two lines.** "The deck had no card for this" is a gap in the deck — somebody needed something that does not exist yet, and the answer might be a new card. "The method had no box for this" is a gap in *these instructions* — the card exists and this page could not place it. Never merge them, and never resolve either by stretching a condition to fit.
 
 **A list that comes back empty keeps its heading and says so.** Silently dropping a heading is how a coordinator concludes there was nothing to say. If nobody named a permission, write that nobody did — and add that it does not mean none are needed, since the signs on [Zone a room](rooms.html) carry the standing ones whether or not anyone laid a card.
+
+This is about **your own lists**, not the vocabulary. Do not go through the seventeen conditions listing the ones nobody asked for: that is an inventory of a pile, and a count of zero is still a count. Saying "nothing came back under kit" describes your output. Saying "nobody asked for control" describes the people.
+
+**Say each thing once.** Merged spreads repeat — several people laid `headphones` — and a list that repeats an item is a tally wearing a list's clothes. Collapse duplicates. The brief names what the room needs, and it needs it once.
+
+**A line that is not a card is not yours to discard.** If the paste carries something a person or the coordinator wrote — "the hall has no blinds" — do not map it and do not silently drop it. Quote it back under the remainder and say it was not a card. Throwing away the one sentence somebody wrote in their own words is the same failure as throwing away the note.
 
 **Put the room list in this page's order**, not the order the cards arrived in and not longest-first. Any order can be read as priority, so use one that obviously is not: the conditions run down this page in a fixed order, so use that. The other lists can run in any order that is not frequency.
 
@@ -174,9 +182,9 @@ The last line of the brief is the room list again, as ids, in a link to the zone
 
 > `https://cavendish.space/rooms.html#asked=` followed by the ids, comma-separated, with no spaces.
 
-So a brief naming quiet, a corner, a way out, dimmable light and a temperature people can change ends with:
+So a brief naming quiet, dimmable light, a temperature people can change, a corner and a way out ends with — in this page's order, not the order they were named:
 
-> [https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature](https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature)
+> [https://cavendish.space/rooms.html#asked=quiet,dim,temperature,corner,way-out](https://cavendish.space/rooms.html#asked=quiet,dim,temperature,corner,way-out)
 
 A zone somebody asked for does not go in the link — the zoner works out which zones a room can hold from what is ticked, so there is nothing for a zone to set. Carry it by hand: say it in the brief, and once the conditions are ticked the zoner will list what that zone still needs.
 
@@ -199,6 +207,8 @@ A link is still a list of what a group of people asked for. Share it the way you
 Give it this page and then the spreads. Most tools will fetch a URL:
 
 > Follow the method at https://cavendish.space/group-needs.md exactly. Here are the merged spreads:
+
+**If what comes back reads like a summary, your tool did not get the method.** Some fetch layers return a precis of a page rather than the page. A precis of this page loses every rule on it and looks like success. The same goes for `cards.json` — a summarized roster is wrong in a way nothing downstream can detect. Get the raw file, or paste the text.
 
 If yours cannot fetch, paste this page's text above the spreads. Either way, the method is the whole page — there is no shorter version that keeps the rules, because the rules are the point.
 

@@ -70,9 +70,24 @@ MANIFEST = []
 UNSTRIPPED = set()   # kinds the method says to strip, planted here on purpose
 REFLECT_LINES = []   # the app's questions, which name cards nobody laid
 
+# --share emits what the deck's "Copy to share" button produces instead of what
+# "Copy for a journal" produces: card lines only, excluded realms already gone,
+# no date, no note, no reflections, no separators. It is the format the method
+# now expects, so the test set has to be able to speak it.
+SHARE = False
+SHARE_EXCLUDE = {"interaction", "love-locution", "grower"}
+
 
 def render(cards, date, note=None):
-    """One spread, byte-shaped like the deck's copy button (app.js summaryText)."""
+    """One spread, byte-shaped like the deck's copy buttons (app.js)."""
+    if SHARE:
+        # The deck strips before the person ever sends it, so nothing here is
+        # "planted" any more -- that is what the button is for.
+        keep = [c for c in cards if c["_family"] not in SHARE_EXCLUDE]
+        MANIFEST.extend((c["_family"], c["name"]) for c in keep)
+        return "\n".join(
+            "- " + c["name"] + (" — " + c["prompt"] if c["prompt"] else "")
+            for c in keep)
     # Record what was laid, with its realm, so the answer key never has to
     # re-derive a realm from a card name.
     MANIFEST.extend((c["_family"], c["name"]) for c in cards)
@@ -239,7 +254,10 @@ def answer_key(cond_text, card_to_cond, buckets):
          "**The deck had no card for this** — " + (
              ", ".join(f"a `your own` from {r}" for r in sorted(deckgap)) or "none"), "",
          "**Never aggregated, should not appear at all** — " + ", ".join(sorted(dropped)), "",
-         "**Should be reported as unstripped** — " + ", ".join(sorted(UNSTRIPPED)), "",
+         "**Should be reported as unstripped** — " + (
+             ", ".join(sorted(UNSTRIPPED)) if UNSTRIPPED else
+             "nothing. The heading still appears and says so — a section that "
+             "vanishes reads as nothing to report."), "",
          "**Decoys — named only in reflect: lines, laid by nobody** — " + (
              ", ".join(f"{c} (would add `{','.join(card_to_cond[c])}`)"
                        for c in sorted(decoys)) or "none"), "",
@@ -253,15 +271,26 @@ def answer_key(cond_text, card_to_cond, buckets):
 
 
 def main():
-    seed = int(sys.argv[1]) if len(sys.argv) > 1 else 20260916
+    global SHARE
+    SHARE = "--share" in sys.argv
+    rest = [a for a in sys.argv[1:] if a != "--share"]
+    seed = int(rest[0]) if rest else 20260916
     spreads = build(random.Random(seed))
-    out = ["# Test spreads for the group-brief method", "",
-           f"Generated from web/cards.json in the deck's copy-button format (seed {seed}).",
-           f"{len(spreads)} spreads, as if from one event. Merge them, strip what the method",
-           "says to strip, then paste. Labels are for you — they are not part of a real paste.",
-           ""]
-    for i, (label, text) in enumerate(spreads, 1):
-        out += ["", "=" * 70, f"## Spread {i} — {label}", "=" * 70, "", text]
+    if SHARE:
+        out = ["# Test paste for the group-brief method (share copies)", "",
+               "What twelve people pressing \u201cCopy to share\u201d produces, pasted together "
+               f"(seed {seed}).",
+               "No labels, no separators, no spread boundaries — that is what the button is for.",
+               "Everything below the rule is one flat list.", "", "-" * 70, ""]
+        out += [text for _label, text in spreads]
+    else:
+        out = ["# Test spreads for the group-brief method", "",
+               f"Generated from web/cards.json in the deck's copy-button format (seed {seed}).",
+               f"{len(spreads)} spreads, as if from one event. Merge them, strip what the method",
+               "says to strip, then paste. Labels are for you — they are not part of a real paste.",
+               ""]
+        for i, (label, text) in enumerate(spreads, 1):
+            out += ["", "=" * 70, f"## Spread {i} — {label}", "=" * 70, "", text]
     out.append(answer_key(*mapping_from_method()))
     print("\n".join(out))
 
