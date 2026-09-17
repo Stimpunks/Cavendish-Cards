@@ -15,22 +15,22 @@ A deck for naming sensory and niche-construction needs. Point at a card, or lay 
 Pick the one card that's you right now. That's the whole game. Say back what you see: "Buzzy today. Okay." Under a minute.
 
 **Build my day** — *a person and a facilitator*
-Lay a place, a weather, and a couple of what-helps cards. A sentence in pictures — *cave, buzzy, headphones.* You've been handed a design brief. Build the conditions. Two to five minutes.
+Lay a place, a weather, and a couple of what-helps cards. A sentence in pictures — *the cave, buzzy, headphones.* You've been handed a design brief. Build the conditions. Two to five minutes.
 
 **Class weather** — *a whole group*
 Everyone lays a weather card face-up. The room's weather becomes visible. No one is named. Nothing is scored. Two minutes, and the group has a shared word for the day.
 
 **Map the edges** — *older learners, or a group*
-Every day has edges — the jumps between one thing and the next, where a mind in deep focus gets yanked to something new. Those crossings are where the day gets hard, and the strain is the *jump*, not the person. Lay the day out left to right, then find its edges: focus → talking, rest → joining in, home → out the door. On each edge that bites, lay a lily pad — *slowly, tell me first, i need a minute, coming back* — the stepping stone that would let you land gently instead of being pulled across. You're not mapping what's wrong with you; you're padding the crossings so the day fits. Designed *with* the person, never *at* them. Ten to fifteen minutes.
+Every day has edges — the jumps between one thing and the next, where a mind in deep focus gets yanked to something new. Those crossings are where the day gets hard, and the strain is the *jump*, not the person. Lay the day out left to right, then find its edges: focus → talking, rest → joining in, home → out the door. On each edge that bites, lay a lily pad — *slowly, not yet, i need a minute, coming back* — the stepping stone that would let you land gently instead of being pulled across. A what-helps card can pad a crossing too: *tell me first* is the one that most often does. You're not mapping what's wrong with you; you're padding the crossings so the day fits. Designed *with* the person, never *at* them. Ten to fifteen minutes.
 
 **Play as the environment** — *staff training*
 Deal a table of what-helps cards with needs that conflict — room to move against less talking, just one person against a full group. Build one habitat that holds them all. You'll feel neurological pluralism instead of hearing about it. Twenty minutes.
 
 **Moving between** — *anyone, across a day*
-Lay places, interaction moods, and lily pads left to right — the cave, ready now, the campfire, a minute alone, back again. A rhythm of alone and together, mapped in cards. Move one when the rhythm shifts. This is intermittent collaboration: nobody stays in one place all day.
+Lay places, interaction moods, and lily pads left to right — the cave, ready now, the campfire, i need a minute, back again. A rhythm of alone and together, mapped in cards. Move one when the rhythm shifts. This is intermittent collaboration: nobody stays in one place all day.
 
 **Build a niche** — *a learner, or a group*
-Lay the what-helps that would make a space fit you — a den, less to look at, the right temperature — with the habitat card at the center. A design brief for the room, not a snapshot of a day. Then build it, on any budget.
+Lay the what-helps that would make a space fit you — a den, less to look at, the right temperature — with the habitat card at the center. A design brief for the room, not a snapshot of a day. Then build it, on any budget — [Zone a room](https://cavendish.space/rooms.html) works out which zones the space can already hold, and prints signs for the door.
 
 ---- 
 
@@ -44,7 +44,7 @@ The turn of a card is the consent. It plays out three ways:
 
 Interaction cards are the exception — they're made to be shown.
 
-In the web deck that choice is two buttons. **Copy for a journal** is the whole spread — the date, the questions, the note box — and it belongs to the person. **Copy to share** is the cards alone. Ask for the shared one by name: it leaves out the note, the date, and the cards that are worn rather than sent.
+In the web deck that choice is two buttons. **Copy for a journal** is the whole spread — the date, the questions, the note box — and it belongs to the person. **Copy to share** is the cards alone. Ask for the shared one by name: it leaves out the note, the date, and the interaction, kind words and grower cards, which are worn or kept rather than sent.
 
 ---- 
 
@@ -65,6 +65,8 @@ Nobody can hold twenty spreads in their head. [Group access needs](https://caven
 ---- 
 
 **If it's not working, it's not the person.**
+
+**Not an AAC board.** It sits alongside a person's real communication system and never replaces it; a spread cannot carry somebody's words. [Why that matters](https://cavendish.space/not-aac.html).
 
 **Not a screening tool.** A spread is the person telling you something — not you assessing them. No pathology paradigm, no deficit ideology, no behaviorism: a card names a need, never a symptom or a target.
 

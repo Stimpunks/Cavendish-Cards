@@ -91,7 +91,7 @@ A pictorial deck for naming sensory and niche-construction needs. Point at a car
 
 The starter deck is **{total} cards** across seven realms, plus blanks. It is usable by early years out of the box and deep enough to run staff training. It grows in the open: one card, one file, community-authored, CC0.
 
-Broken systems, not broken people. A person laying *cave, buzzy, headphones* has handed you a design brief, not a behavior report.
+Broken systems, not broken people. A person laying *the cave, buzzy, headphones* has handed you a design brief, not a behavior report.
 
 ---- 
 
@@ -128,10 +128,10 @@ The same {total} cards, seven ways:
 - **Early years — show me.** One card. The facilitator mirrors it back.
 - **Person and staff — build my day.** A place, a weather, a couple of what-helps. A sentence in pictures.
 - **A class — class weather.** Everyone lays a weather card face-up. No one named, nothing scored.
-- **Older learners — map the edges.** Every day has edges — the jumps between one thing and the next, where a mind in deep focus gets yanked across. The strain is the *jump*, not the person. Lay the day out left to right, find its edges (focus → talking, rest → joining in, home → out the door), and on each one that bites, lay a lily pad — *slowly, tell me first, i need a minute, coming back* — the stepping stone that lets you land gently instead of being pulled across. You're not mapping what's wrong with you; you're padding the crossings so the day fits. Designed *with* the person, never *at* them.
+- **Older learners — map the edges.** Every day has edges — the jumps between one thing and the next, where a mind in deep focus gets yanked across. The strain is the *jump*, not the person. Lay the day out left to right, find its edges (focus → talking, rest → joining in, home → out the door), and on each one that bites, lay a lily pad — *slowly, not yet, i need a minute, coming back* — the stepping stone that lets you land gently instead of being pulled across. You're not mapping what's wrong with you; you're padding the crossings so the day fits. Designed *with* the person, never *at* them.
 - **Staff training — play as the environment.** Deal conflicting what-helps cards; build one habitat that holds them all. Feel neurological pluralism instead of hearing about it.
-- **Moving between — map your rhythm.** Lay places, interaction moods, and lily pads left to right to show how you move between alone and together across a day: the cave, then ready now, then the campfire, then a minute alone, then back. Move a card when the rhythm shifts. This is intermittent collaboration — nobody stays in one place all day.
-- **Build a niche — design a space that fits.** Lay the what-helps that would make a space yours — the den, less to look at, the right temperature — with *the habitat* card at the center. A design brief for the room, not a snapshot of the day. Then build it on any budget: see [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/)."""
+- **Moving between — map your rhythm.** Lay places, interaction moods, and lily pads left to right to show how you move between alone and together across a day: the cave, then ready now, then the campfire, then i need a minute, then back. Move a card when the rhythm shifts. This is intermittent collaboration — nobody stays in one place all day.
+- **Build a niche — design a space that fits.** Lay the what-helps that would make a space yours — a den, less to look at, the right temperature — with *the habitat* card at the center. A design brief for the room, not a snapshot of the day. Then build it on any budget: see [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/)."""
 
 LICENSE = """## License
 
