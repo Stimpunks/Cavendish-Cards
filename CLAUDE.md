@@ -1,6 +1,6 @@
 # CLAUDE.md — Cavendish Cards
 
-Context for Claude Code (and any agent) working in this repo. Durable context only — the repo is the source of truth for live card counts, status, and file contents. **When this file and the repo disagree, trust the repo and fix this file.** This file is the Claude Code counterpart to `cavendish-cards-project-brief.md`; the two are kept in step, differing only in the workflow section (see the end).
+Context for Claude Code (and any agent) working in this repo. Durable context only — the repo is the source of truth for live card counts, status, and file contents. **When this file and the repo disagree, trust the repo and fix this file.** This is the only context file: if this project needs explaining somewhere outside the clone, export or paste this one rather than starting a second copy that will drift from it.
 
 ## What this is
 
@@ -107,7 +107,3 @@ Work happens **locally, in this clone, on Ryan's Mac, through Claude Code.** Edi
 - **Confirm recent pushes actually landed** (`git log` / `git fetch`).
 
 **Distinctness to watch in playtest:** pulled every way vs full · meerkat vs buzzy/prickly · round and round vs stormy · let me finish vs tell me first / no rush · let me come and go vs not right now · can't tell vs foggy / far-away.
-
-## This file vs the project brief
-
-`cavendish-cards-project-brief.md` is the same context in a portable file, for explaining this project anywhere outside the clone. The two used to differ in workflow; that difference is retired and they now say the same things, which is the whole reason to check one against the other. Keep them in step, and when either disagrees with the repo, fix the file — the repo is the source of truth.
