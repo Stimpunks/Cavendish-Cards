@@ -224,7 +224,7 @@ SCREENING = (
     "the opposite of what it is for. Broken systems, not broken people."
 )
 
-# The three refused frameworks, kept word-for-word in sync with README and with
+# The four refused frameworks, kept word-for-word in sync with README and with
 # build-guidebook.py (FRAMEWORKS_LEAD / FRAMEWORKS there).
 FRAMEWORKS_LEAD = (
     "It carries none of the frameworks that turn human difference into a problem "
@@ -242,6 +242,11 @@ FRAMEWORKS = [
      "No card is a target, a reward, or a compliance check. Turning a card up is "
      "communication, not performance — never something to shape a person toward "
      "\"better\" behavior."),
+    ("No emotional sorting",
+     "A card names where a person can be and what helps. It never places them on "
+     "a scale of how regulated they are, and there is no state anyone is supposed "
+     "to get back to. The five places describe a room, not the person standing "
+     "in it."),
 ]
 
 NOT_AAC = (

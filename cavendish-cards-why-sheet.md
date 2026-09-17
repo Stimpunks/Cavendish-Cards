@@ -63,6 +63,7 @@ Cavendish Cards come out of the [Cavendish Space](https://stimpunks.org/space/) 
 - **Screen, score, sort, assess, or diagnose.** A spread is the person telling you something — not you assessing them. Used to rank or flag people, the deck becomes the opposite of what it is for.
 - **Replace AAC.** The deck is a lens, not a language. It is small and opinionated on purpose. If a person needs a way to communicate, they need AAC — "they have the cards" is never a reason to under-provide it. The full argument: [Cavendish Cards are not AAC](not-aac.html).
 - **Reward, target, or shape behavior.** No card is earned, and turning a card up is communication, not performance. There is no behaviorism here.
+- **Sort a person by how regulated they are.** There is no scale here, and no state anyone is supposed to get back to. A place describes a room; weather describes a moment, not a level.
 - **Name the person as the problem.** If it isn't working, the environment is what hasn't fit yet. Broken systems, not broken people.
 
 ---

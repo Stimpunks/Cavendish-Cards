@@ -68,7 +68,7 @@ Nobody can hold twenty spreads in their head. [Group access needs](https://caven
 
 **Not an AAC board.** It sits alongside a person's real communication system and never replaces it; a spread cannot carry somebody's words. [Why that matters](https://cavendish.space/not-aac.html).
 
-**Not a screening tool.** A spread is the person telling you something — not you assessing them. No pathology paradigm, no deficit ideology, no behaviorism: a card names a need, never a symptom or a target.
+**Not a screening tool.** A spread is the person telling you something — not you assessing them. No pathology paradigm, no deficit ideology, no behaviorism, no emotional sorting: a card names a need, never a symptom, a target, or a level.
 
 Broken systems, not broken people. The deck exists so a person can shape the space around them — and so the people beside them can read what they need without asking a person to explain in words they may not have.
 

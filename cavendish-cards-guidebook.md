@@ -11,6 +11,7 @@ It carries none of the frameworks that turn human difference into a problem to b
 - **No pathology paradigm.** A card names a need, not a symptom. "Buzzy" describes an environment that is too much — not a disorder inside the person.
 - **No deficit ideology.** The deck records what helps, never what a person lacks. If it isn't working, the environment is what hasn't fit yet.
 - **No behaviorism.** No card is a target, a reward, or a compliance check. Turning a card up is communication, not performance — never something to shape a person toward "better" behavior.
+- **No emotional sorting.** A card names where a person can be and what helps. It never places them on a scale of how regulated they are, and there is no state anyone is supposed to get back to. The five places describe a room, not the person standing in it.
 
 **Not an AAC board.** The deck is a lens, not a language. It makes one hard-to-voice thing — sensory, regulatory, and emotional weather, and the conditions that help — sayable, and it stops there. It is not a communication system and does not try to be comprehensive the way AAC must be. Most of all, it sits alongside a person's real communication tools, never in place of them: if a person needs a way to communicate, they need AAC, and "they have the cards" is never a reason to under-provide it.
 
