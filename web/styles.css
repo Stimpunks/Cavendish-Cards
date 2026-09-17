@@ -263,6 +263,14 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .homelink:hover { border-color: var(--cyan); }
 .homelink-icon { font-size: 1.05rem; line-height: 1; }
 
+/* The deck button carries both labels and the stylesheet paints one. The bar
+   holds four controls and "Open the deck" put it 13px over a single row at
+   375px, which cost a whole second sticky row on every page. Both spans are
+   aria-hidden and the link's aria-label is the full wording, so a screen
+   reader hears the same thing at every width -- and the short label is a
+   subset of that name, which is what WCAG 2.5.3 asks for. */
+.deck-cta-brief { display: none; }
+
 /* Narrow screens: the bar carries four controls (Home, Menu, theme, Open the
    deck) and cannot fit them on one row at phone widths, so it wraps. Trimming
    the padding and dropping the theme toggle's word keeps that to two compact
@@ -277,6 +285,8 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 @media (max-width: 480px) {
   .homelink, .theme-toggle { padding: 5px 10px; }
   .breakbar .btn { padding: 7px 13px; }
+  .deck-cta-full { display: none; }
+  .deck-cta-brief { display: inline; }
   .theme-toggle .theme-toggle-label {
     position: absolute; width: 1px; height: 1px;
     padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0);
