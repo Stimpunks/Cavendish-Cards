@@ -68,6 +68,7 @@ def reflection_for(card, already):
 
 MANIFEST = []
 UNSTRIPPED = set()   # kinds the method says to strip, planted here on purpose
+REFLECT_LINES = []   # the app's questions, which name cards nobody laid
 
 
 def render(cards, date, note=None):
@@ -91,6 +92,7 @@ def render(cards, date, note=None):
         q = reflection_for(c, laid)
         if q:
             out.append("  reflect: " + q)
+            REFLECT_LINES.append(q)
         laid.append(c)
     if note:
         out += ["", "Note:", note]
@@ -168,7 +170,17 @@ def mapping_from_method():
             name = name.strip()
             if name and not name.startswith("and the lily pads"):
                 card_to_cond.setdefault(name, []).append(cid)
-    return cond_text, card_to_cond
+    buckets = {}
+    for name, cards in re.findall(
+            r"^\*\*(Kit|Permission|Pacing)\*\* \u2014 [^.]+\. ([^.]+)\.", doc, re.M):
+        for c in cards.split(","):
+            c = c.strip()
+            c = (c[0].lower() + c[1:]) if c else c   # the doc sentence-cases them
+            if c:
+                buckets.setdefault(c, []).append(name.lower())
+    if not buckets:
+        sys.exit(f"could not parse the kit/permission/pacing lists in {METHOD_MD.name}")
+    return cond_text, card_to_cond, buckets
 
 
 # Realms the method never aggregates. Growers belong here for the same reason
@@ -182,8 +194,9 @@ NEVER = {"weather", "love-locution", "interaction", "grower"}
 LILY_STATES = {"ready now", "all done"}
 
 
-def answer_key(cond_text, card_to_cond):
+def answer_key(cond_text, card_to_cond, buckets):
     conds, zones, unmapped, dropped, deckgap = set(), set(), set(), set(), set()
+    bucketed = {}
     for f, name in MANIFEST:
         # Every realm ships one, and it means the same thing everywhere: the
         # deck had no card for what was needed. That is a different question
@@ -198,8 +211,19 @@ def answer_key(cond_text, card_to_cond):
             hit = card_to_cond.get(name)
             if hit:
                 conds.update(hit)
-            else:
+            if name in buckets:
+                for b in buckets[name]:
+                    bucketed.setdefault(b, set()).add(name)
+            elif not hit:
+                # No room condition and no bucket either: a genuine hole in the
+                # method, which is a different finding from "not a fixture".
                 unmapped.add(name)
+    # Cards named in a reflection question but never actually laid. Mapping one
+    # is the clearest sign a tool read the whole paste instead of the card lines.
+    laid_names = {n for _f, n in MANIFEST}
+    decoys = {c for c in card_to_cond
+              if c not in laid_names
+              and any(re.search(r"\b" + re.escape(c) + r"\b", q) for q in REFLECT_LINES)}
     order = [c for c in cond_text if c in conds]
     L = ["", "", "=" * 70, "## Answer key", "=" * 70, "",
          "What a brief over all of these should come back with, worked out from the",
@@ -208,12 +232,19 @@ def answer_key(cond_text, card_to_cond):
          "**As ids, for the link** — `" + ",".join(order) + "`", "",
          "    https://cavendish.space/rooms.html#asked=" + ",".join(order), "",
          "**Zones asked for** — " + (", ".join(sorted(zones)) or "none"), "",
+         "**Not a room condition, but it has a bucket** — " + " \u00b7 ".join(
+             f"{b}: " + ", ".join(sorted(v)) for b, v in sorted(bucketed.items())), "",
          "**The method had no box for this** — " + (", ".join(sorted(unmapped)) or "none"),
-         "  (kit / permission / pacing, or an honest remainder — never a stretched condition)", "",
+         "  (a real hole — an honest remainder with a question, never a stretched condition)", "",
          "**The deck had no card for this** — " + (
              ", ".join(f"a `your own` from {r}" for r in sorted(deckgap)) or "none"), "",
          "**Never aggregated, should not appear at all** — " + ", ".join(sorted(dropped)), "",
          "**Should be reported as unstripped** — " + ", ".join(sorted(UNSTRIPPED)), "",
+         "**Decoys — named only in reflect: lines, laid by nobody** — " + (
+             ", ".join(f"{c} (would add `{','.join(card_to_cond[c])}`)"
+                       for c in sorted(decoys)) or "none"), "",
+         "  (the reflection questions are the app talking, not the person. A brief",
+         "  carrying a condition sourced only from one of these read the wrong lines.)", "",
          "  (named as kinds, never quoted, never counted — a silent drop teaches the",
          "  coordinator the strip step worked when it did not)", "",
          "If what comes back has a number in it, a person as the subject of a sentence,",

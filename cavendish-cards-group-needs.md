@@ -25,6 +25,7 @@ So there is a step before the method, and it is not optional.
 - **Know that a small group is identifying.** In a group of eight, one unusual card is a pointer at a person even with the name gone. If a spread would be recognizable, leave it out of the paste and carry it yourself.
 - **The AI is a third party.** Whatever service you use has its own retention and its own training policy, and neither is ours. Cavendish stores nothing at any point in this — but the moment you paste, that stops being the whole story.
 - **Drop the note field.** The deck's copy button includes anything a person typed into the note box. That is the most personal part of a spread and the least necessary for this. Delete it before you paste.
+- **Leave out the realms that never aggregate.** Interaction cards, Kind words and growers do not belong in a room brief (the reasons are below), and the simplest way to keep them out of one is to keep them out of the paste. Less goes to a third party that way, too.
 
 If any of that cannot be honored, do the sorting by hand. The vocabulary below works fine with paper.
 
@@ -78,6 +79,8 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 ## What never gets mapped
 
+**The `reflect:` lines are not answers.** A spread copied from the deck carries the reflection question the app offered under each card. Those questions are the app talking, not the person, and several of them *name other cards as examples* — "is there a lily-pad card that fits right now — not yet, slowly, or i need a minute?" names three cards nobody laid. Read only the card lines. A tool that matches card names against the whole paste will find needs that were never asked for, and the spread that suffers most is the one where somebody laid nothing but weather. Ignore every `reflect:` line, or delete them before pasting.
+
 **Weather cards are not needs.** Stormy, foggy, running on empty, too seen — these say how a day felt. They do not convert into a room change, and an AI that infers one ("several people were stormy, so add quiet") is guessing at people from their moods. Weather may be reflected back as one plain sentence about the day, attached to nobody. It never becomes an entry in a list.
 
 **Kind words are never aggregated.** They are given to someone or claimed for yourself. They are not a need and not data.
@@ -109,7 +112,7 @@ Four lists, a zone read, and two kinds of honesty at the end. No preamble, no su
 
 **The two remainders are different questions, so they are two lines.** "The deck had no card for this" is a gap in the deck — somebody needed something that does not exist yet, and the answer might be a new card. "The method had no box for this" is a gap in *these instructions* — the card exists and this page could not place it. Never merge them, and never resolve either by stretching a condition to fit.
 
-**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, it means the strip step did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present, dropped unread" and nothing more. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
+**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present, dropped unread" and nothing more. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
 ## The link, and how to build it
 
