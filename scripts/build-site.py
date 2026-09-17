@@ -1251,6 +1251,49 @@ def _check_group_example(root):
                   f"{line[:60]!r}", file=sys.stderr)
 
 
+# robots.txt, written deliberately rather than left to a blanket rule. The
+# values call behind it (2026-09-17, Ryan's, logged for Helen's batch review):
+# the deck is CC0, and llms.txt already steers models rather than shutting them
+# out, so blocking AI crawlers would contradict a file this same generator
+# writes. Naming each agent is what makes the openness legible as a choice.
+#
+# The vendor docs are the source of truth for these names and they change --
+# re-check them rather than trusting this list's age. See
+# https://specification.website/spec/agent-readiness/robots-for-ai-crawlers/
+AI_CRAWLERS = [
+    ("GPTBot", "OpenAI, training."),
+    ("OAI-SearchBot", "OpenAI, retrieval for ChatGPT browsing."),
+    ("ChatGPT-User", "OpenAI, on-demand fetch when someone asks ChatGPT for a URL."),
+    ("ClaudeBot", "Anthropic, training and retrieval."),
+    ("anthropic-ai", "Anthropic, legacy name, still seen."),
+    ("Google-Extended", "Google. Covers Gemini and Vertex training only, not Search."),
+    ("Applebot-Extended",
+     "Apple. Covers Apple Intelligence training only, not Siri or Spotlight."),
+    ("PerplexityBot", "Perplexity, retrieval."),
+    ("Bytespider", "ByteDance."),
+    ("CCBot", "Common Crawl, the dataset behind many open models."),
+]
+
+_ROBOTS_PREAMBLE = """\
+# cavendish.space -- Cavendish Space, by Stimpunks Foundation.
+#
+# Everything here is CC0: dedicated to the public domain. So every crawler is
+# allowed, AI crawlers included, and each one is named below rather than left to
+# a blanket rule -- the openness here is chosen, not defaulted into.
+#
+# The reasoning, plainly: if a model is going to say something about Autistic and
+# Disabled people, we would rather it had read this deck than not. A spread of
+# cards is a design brief for the environment, not a report on a person. Cards
+# describe the card, never the person. Broken systems, not broken people.
+#
+# /llms.txt is a curated index written for that purpose, and every prose page is
+# also served as Markdown -- swap .html for .md.
+#
+# Nothing here is a security boundary, and none of it is a deletion request:
+# what is already in a training set stays there. It is a statement of welcome.
+"""
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -1262,7 +1305,12 @@ def _write_sitemap_robots(web):
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                + urls + "\n</urlset>\n")
     (web / "sitemap.xml").write_text(sitemap, encoding="utf-8")
-    robots = ("User-agent: *\n"
+    groups = "".join(f"# {note}\nUser-agent: {agent}\nAllow: /\n\n"
+                     for agent, note in AI_CRAWLERS)
+    robots = (_ROBOTS_PREAMBLE + "\n"
+              + groups
+              + "# Everything else.\n"
+              "User-agent: *\n"
               "Allow: /\n\n"
               f"Sitemap: {_SITE_URL}/sitemap.xml\n")
     (web / "robots.txt").write_text(robots, encoding="utf-8")
