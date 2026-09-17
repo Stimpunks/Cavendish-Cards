@@ -83,6 +83,7 @@ Plus a **blank card** — the deck isn't finished. A person or a facilitator dra
 - [`scripts/build-starter-deck.py`](./scripts/build-starter-deck.py) — regenerates the starter-deck list from the card files.
 - [`scripts/build-placeholders.py`](./scripts/build-placeholders.py) — generates the playtest placeholder cards from the card files.
 - [`scripts/build-facilitator-pdf.py`](./scripts/build-facilitator-pdf.py) — regenerates the facilitator-sheet PDF from its Markdown source.
+- [`scripts/serve.py`](./scripts/serve.py) — serves `web/` locally for preview; no dependencies, works under any Python.
 - [`web/`](./web/) — the playable web version, live at [cavendish.space](https://cavendish.space/). A static site generated from the cards; see its [README](./web/README.md).
 - [`scripts/build-site.py`](./scripts/build-site.py) — builds the web deck from the card files and page sources: card data, faces, the standalone pages, the offline service worker, sitemap, and robots.txt.
 - [`netlify.toml`](./netlify.toml) — Netlify build configuration, plus the site's security response headers and Content Security Policy.

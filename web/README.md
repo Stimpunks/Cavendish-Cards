@@ -42,9 +42,11 @@ The generator reads every card in [`../cards/`](../cards/), uses the finished fa
 From the repo root:
 
 ```
-python3 scripts/build-site.py           # writes cards.json, faces/, the pages, sw.js, sitemap.xml, robots.txt
-python3 -m http.server --directory web  # then open http://localhost:8000
+python3 scripts/build-site.py   # writes cards.json, faces/, the pages, sw.js, sitemap.xml, robots.txt
+python3 scripts/serve.py        # then open http://localhost:8000
 ```
+
+`serve.py` is a thin wrapper on `http.server` that adds `no-store` (so a rebuild shows up on reload rather than serving yesterday's `cards.json` from the browser cache) and the media types [`../netlify.toml`](../netlify.toml) pins by hand. `python3 -m http.server --directory web` still works in most places, but it evaluates `os.getcwd()` while building its argument parser, which fails outright in some sandboxes.
 
 Serve it over http rather than opening `index.html` directly: browsers block `fetch('cards.json')` from `file://`, and the service worker only runs in a secure context (http on `localhost` counts). The security headers and CSP are applied by Netlify from [`../netlify.toml`](../netlify.toml), so they are not present when serving locally — that's expected.
 
