@@ -14,6 +14,10 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- **Dropped the print-and-play PDF and its builder.** `scripts/build-playtest-pdf.py`, `assets/playtest/cavendish-cards-playtest.pdf` and its hash sidecar are gone; the new page replaces them and is better on every axis. **94 cards against 88** — the PDF skipped Interaction, which has finished faces the placeholder generator does not produce — and it used the placeholder face for every card even where finished art existed, so it had quietly started to disagree with the deck. It was Letter-only. It was also 3.9 MB of binary tracked in git that no two builds produced identically, which is why it needed a hash sidecar to stop dirtying every build. A generated artifact that needs a mechanism to hide how unreproducible it is has a bigger problem than staleness. The site's page costs the repo nothing and is rebuilt on every deploy. `build-placeholders.py` stays: `assets/playtest/**` is still the reviewable record of what the placeholder art looks like.
+
+- With it went the last use of `cairosvg`, so the PDF venv only needs WeasyPrint now. Existing venvs are fine as they are.
+
 - **New page: [Print the deck](https://cavendish.space/print.html).** The whole deck, 94 cards on 15 sheets, nine to a page, at **2.5 × 3.5 in** — standard playing-card size, which is what the card faces were already drawn at. It fits a normal sleeve, a normal box, and a normal hand. There is nothing to configure, on purpose: a deck is a deck, so the page has no options, no size picker, and no paper control.
 
 - **One sheet geometry, both papers.** A sheet is exactly the 3 × 3 grid and no more — 7.5 × 10.5 in — which is the one size that fits US Letter and A4 inside a quarter-inch margin. So there is a single set of files and nothing to choose. US Letter is the tight one: eleven inches less two quarter-inch margins is 10.5 exactly, with nothing spare, and the page says so rather than letting somebody discover it a ream in.

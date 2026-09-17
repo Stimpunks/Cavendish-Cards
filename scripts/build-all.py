@@ -5,8 +5,7 @@ Regenerates all derived files from the card files:
   build-starter-deck.py  -> cavendish-cards-starter-deck.md
   build-guidebook.py     -> cavendish-cards-guidebook.md
   build-placeholders.py  -> assets/playtest/**
-  build-site.py          -> web/ (cards.json, guidebook.html, faces/) [gitignored]
-  build-playtest-pdf.py  -> assets/playtest/cavendish-cards-playtest.pdf  [needs cairosvg + weasyprint]
+  build-site.py          -> web/ (cards.json, guidebook.html, faces/, print.html) [gitignored]
   build-facilitator-pdf.py -> cavendish-cards-facilitator-sheet.pdf  [needs weasyprint]
 
 Usage (from anywhere):
@@ -25,21 +24,20 @@ Suitable as a pre-commit hook (a full run is ~2s when nothing has changed):
 
     git config core.hooksPath hooks     # if you add one under hooks/
 
-The PDF steps are optional: if their extra dependencies aren't installed they are
+The PDF step is optional: if its extra dependencies aren't installed it is
 skipped with a note, and the run still succeeds. Any required step failing makes
 this exit non-zero.
 
-The PDFs need cairosvg/weasyprint plus native libraries, which Apple's system
-Python cannot load: macOS strips DYLD_* when launching a SIP-protected binary,
-so cffi never finds libcairo or libgobject. The fix is a Homebrew-Python venv.
-Create it once:
+WeasyPrint needs native libraries, which Apple's system Python cannot load:
+macOS strips DYLD_* when launching a SIP-protected binary, so cffi never finds
+libcairo or libgobject. The fix is a Homebrew-Python venv. Create it once:
 
     brew install cairo pango gdk-pixbuf libffi
     /opt/homebrew/bin/python3 -m venv ~/.venvs/cavendish-pdf
-    ~/.venvs/cavendish-pdf/bin/pip install cairosvg weasyprint
+    ~/.venvs/cavendish-pdf/bin/pip install weasyprint
 
-This script then finds it on its own and runs the PDF steps with it, so the
-print files stop drifting behind the deck. Override the path with
+This script then finds it on its own and runs the PDF step with it, so the
+facilitator sheet stops drifting behind the deck. Override the path with
 CAVENDISH_PDF_PYTHON if you keep the venv somewhere else.
 """
 
@@ -56,7 +54,6 @@ STEPS = [
     ("build-guidebook.py", True, False),
     ("build-placeholders.py", True, False),
     ("build-site.py", True, False),
-    ("build-playtest-pdf.py", False, True),
     ("build-facilitator-pdf.py", False, True),
 ]
 
@@ -158,7 +155,7 @@ def main():
                   "           Create the venv once and this step runs itself:\n"
                   "             brew install cairo pango gdk-pixbuf libffi\n"
                   "             /opt/homebrew/bin/python3 -m venv ~/.venvs/cavendish-pdf\n"
-                  "             ~/.venvs/cavendish-pdf/bin/pip install cairosvg weasyprint\n")
+                  "             ~/.venvs/cavendish-pdf/bin/pip install weasyprint\n")
             skipped.append((script, "missing PDF dependencies"))
         elif required:
             print(f"  FAILED: {detail}\n")

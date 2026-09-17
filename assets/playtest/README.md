@@ -26,15 +26,11 @@ Interaction cards are skipped — they already have finished faces in [`../cards
 
 Adding a card without adding a motif for it is reported on stderr, so a new card cannot quietly ship with an empty picture window. To see the whole set at once, `python3 scripts/card-art.py` writes a contact sheet of every motif to `/tmp`.
 
-## Print-and-play PDF
+## Printing a deck
 
-For a ready-to-print sheet — nine cards per US-Letter page, with cut borders — run [`../../scripts/build-playtest-pdf.py`](../../scripts/build-playtest-pdf.py) from the repo root:
+Use **[cavendish.space/print.html](https://cavendish.space/print.html)**: the whole deck at playing-card size, nine to a sheet, imposed for cutting, with the print and cutting instructions on the page.
 
-```
-python3 scripts/build-playtest-pdf.py
-```
-
-It reuses the placeholder generator, so the PDF always matches these cards, and writes `cavendish-cards-playtest.pdf` beside them. Unlike the SVG generator, it needs two libraries: `pip install cairosvg weasyprint` (WeasyPrint also needs system libraries — Pango, cairo, GDK-PixBuf — see its [install notes](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)).
+A `build-playtest-pdf.py` used to write a print-and-play PDF beside these SVGs. It was retired on 2026-09-17. It only ever covered 88 cards — it skipped Interaction, which has finished faces — and it used the placeholder face for every card even where finished art existed, so it had started to disagree with the deck. It was also a 3.9 MB binary tracked in git that no build could reproduce byte for byte, which is why it needed a hash sidecar to stop it dirtying every build. The site's page is generated from the same faces the deck shows, covers all 94 cards, and costs the repo nothing.
 
 ## When real art arrives
 
