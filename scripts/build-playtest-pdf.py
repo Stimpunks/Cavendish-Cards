@@ -15,14 +15,48 @@ Unlike build-placeholders.py, this needs two libraries:
 WeasyPrint also needs system libraries (Pango, cairo, GDK-PixBuf); see
 https://doc.courtbouillon.org/weasyprint/stable/first_steps.html
 
+This PDF is not reproducible: three consecutive builds from identical inputs
+produce three different files, differing by a few bytes with identical page
+content. (The card PNGs are written to a random temp directory whose file://
+paths go into the HTML WeasyPrint renders; SOURCE_DATE_EPOCH does not fix it,
+so it is not the PDF timestamp.) Left alone, that means every build-all.py run
+leaves a 3.7MB binary dirty in git whether or not anything changed -- noise
+that hides real staleness and bloats history if committed.
+
+So the build is skipped when its inputs have not moved. A hash of the card
+files, the two scripts that shape the output, and the rendering library
+versions is kept in a sidecar next to the PDF; a mismatch rebuilds, a match
+does nothing. Pass --force to rebuild regardless.
+
 Usage, from the repo root:
-    python3 scripts/build-playtest-pdf.py [output.pdf]
+    python3 scripts/build-playtest-pdf.py [output.pdf] [--force]
 """
 
 from pathlib import Path
+import hashlib
 import importlib.util
 import sys
 import tempfile
+
+
+def _inputs_digest(root, versions):
+    """Hash everything that changes this PDF's content.
+
+    Covers the cards, build-placeholders.py (which draws the faces) and this
+    script (which lays them out), plus the rendering library versions, so a
+    toolchain upgrade rebuilds too. It does NOT cover system fonts -- cairosvg
+    rasterizes text with whatever is installed, so a font change will not
+    trigger a rebuild. Use --force after one.
+    """
+    h = hashlib.sha256()
+    for card in sorted((root / "cards").rglob("*.md")):
+        h.update(str(card.relative_to(root)).encode("utf-8"))
+        h.update(card.read_bytes())
+    for script in ("build-placeholders.py", "build-playtest-pdf.py"):
+        h.update((root / "scripts" / script).read_bytes())
+    for name, version in sorted(versions.items()):
+        h.update(f"{name}={version}".encode("utf-8"))
+    return h.hexdigest()
 
 
 def _load_placeholders():
@@ -55,8 +89,19 @@ def main():
     if not cards_dir.is_dir():
         sys.exit(f"cards/ not found at {cards_dir}")
 
-    out_path = (Path(sys.argv[1]).resolve() if len(sys.argv) > 1
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
+    force = "--force" in sys.argv[1:]
+    out_path = (Path(args[0]).resolve() if args
                 else root / "assets" / "playtest" / "cavendish-cards-playtest.pdf")
+    stamp_path = out_path.with_suffix(".inputs.sha256")
+
+    digest = _inputs_digest(root, {"cairosvg": cairosvg.__version__,
+                                   "weasyprint": weasyprint.__version__})
+    if not force and out_path.exists() and stamp_path.exists():
+        if stamp_path.read_text(encoding="utf-8").strip() == digest:
+            print(f"{out_path.name} is up to date (inputs unchanged); skipping. "
+                  f"Use --force to rebuild.")
+            return
 
     tmp = tempfile.TemporaryDirectory()
     png_paths = []
@@ -96,6 +141,7 @@ html,body {{ margin: 0; padding: 0; }}
 
     weasyprint.HTML(string=doc, base_url=str(root)).write_pdf(str(out_path))
     tmp.cleanup()
+    stamp_path.write_text(digest + "\n", encoding="utf-8")
     print(f"Wrote {out_path.name} — {total} cards, {(total + 8) // 9} page(s)")
 
 

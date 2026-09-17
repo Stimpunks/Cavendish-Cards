@@ -8,6 +8,8 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- The print-and-play PDF is no longer rebuilt when nothing has changed. It renders differently every time it is built &mdash; same pages, a few bytes apart &mdash; so every full build left a 3.7MB file looking modified when it wasn't, which both hid real staleness and would have padded the repository with meaningless copies. It now checks a hash of what actually shapes it and does nothing if that hasn't moved.
+
 - **The printed facilitator sheet had been saying the wrong thing since July.** The deck was rewritten for all ages in the summer &mdash; `child` became `person`, `adult` became `facilitator` &mdash; and the web version changed with it, but the PDF you actually print and hand to someone did not. It still said "the child controls sharing," still described "Build my day" as being for "a child and a support worker," and was missing the rewritten "Map the edges." Rebuilt from the current source, along with the print-and-play deck, which had been missing two pages of cards added since July.
 - **And the reason it lagged is fixed, not just the lag.** The PDF builders need native libraries that Apple's system Python cannot load, so rebuilding them meant remembering an undocumented local setup &mdash; which is why two months passed. `build-all.py` now finds the right interpreter itself and runs the PDF steps with it, so one command rebuilds everything. Where that interpreter doesn't exist, it skips exactly as before and prints the three commands that would fix it.
 
