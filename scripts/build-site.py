@@ -1015,8 +1015,8 @@ IMPL_PLAYMODES = (
 IMPL_LINEAGE = [
     ("Physical niche construction in the early years",
      "Helen Edgar. Much of the budget and building practice here comes from twenty "
-     "years teaching children with Profound and Multiple Disabilities, where children "
-     "and adults shaped the space together. (Credit wording to confirm with Helen.)",
+     "years teaching children with Profound and Multiple Learning Disabilities, where "
+     "children and adults shaped the space together. (Credit wording to confirm with Helen.)",
      None),
     ("Nesting as the physical architecture of lily padding", "David Gray-Hammond.", None),
     ("Lily padding, and transitional trauma for monotropic minds", "Tanya Adkin.", None),

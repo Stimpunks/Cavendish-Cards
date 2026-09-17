@@ -78,7 +78,7 @@ Two play modes map the rhythm; this book builds the room that lets it happen. Ru
 
 ## Lineage
 
-- **Physical niche construction in the early years** — Helen Edgar. Much of the budget and building practice here comes from twenty years teaching children with Profound and Multiple Disabilities, where children and adults shaped the space together. (Credit wording to confirm with Helen.)
+- **Physical niche construction in the early years** — Helen Edgar. Much of the budget and building practice here comes from twenty years teaching children with Profound and Multiple Learning Disabilities, where children and adults shaped the space together. (Credit wording to confirm with Helen.)
 - **Nesting as the physical architecture of lily padding** — David Gray-Hammond.
 - **Lily padding, and transitional trauma for monotropic minds** — Tanya Adkin.
 - **Caves, campfires, and watering holes** — David Thornburg's learning-space metaphors; the case for cave spaces in schools, Prakash Nair, The Language of School Design.
