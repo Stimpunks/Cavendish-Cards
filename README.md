@@ -71,7 +71,7 @@ Plus a **blank card** — the deck isn't finished. A person or a facilitator dra
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per realm plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction realm, whose fixed color+shape designs need no illustrator.
 - [`assets/playtest/`](./assets/playtest/) — placeholder card faces, one per card, while human art is in progress. Vector illustrations drawn in code, marked as placeholders on the card. Not the deck's art. See its [README](./assets/playtest/README.md).
-- [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
+- [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — the seven ways to play, the sharing model, and what to do with a pile of spreads, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a person. Also rendered as a page on the site.
 - [`cavendish-cards-why-sheet.md`](./cavendish-cards-why-sheet.md) — a [Why Sheet](https://stimpunks.org/why/) making the case for the deck and connecting it to the [Cavendish Space](https://stimpunks.org/space/) learning-space principles.

@@ -44,6 +44,8 @@ The turn of a card is the consent. It plays out three ways:
 
 Interaction cards are the exception — they're made to be shown.
 
+In the web deck that choice is two buttons. **Copy for a journal** is the whole spread — the date, the questions, the note box — and it belongs to the person. **Copy to share** is the cards alone. Ask for the shared one by name: it leaves out the note, the date, and the cards that are worn rather than sent.
+
 ---- 
 
 ## When a person lays "stuck"
@@ -55,6 +57,10 @@ Stuck is a lily pad. It's a place to land, not a failure. Read it as information
 1. **Mirror it back.** Name what you see, plainly. No praise, no fixing, no interrogation.
 2. **Reach for the environment, not the person.** A card is a request to change the conditions. Change them.
 3. **Leave the sharing with the person.** What they turn up is theirs to turn up.
+
+## A pile of spreads after an event
+
+Nobody can hold twenty spreads in their head. [Group access needs](https://cavendish.space/group-needs.html) turns a pile into one short brief for the room, written so you can hand that page to whatever AI you already use and have it do the sorting — under rules that keep the room as the subject and never count anybody. Merge and strip first; the page says what to take out, and why.
 
 ---- 
 

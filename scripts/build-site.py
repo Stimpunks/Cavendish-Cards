@@ -714,12 +714,12 @@ def facilitator_html(root):
     # Drop the sheet's own CC0 footer; the site shell already carries one.
     blocks = [b for b in blocks if not b.startswith("<footer>")]
     pdf_note = (f'<p class="facilitator-pdf"><a href="{FACILITATOR_PDF_URL}">'
-                'Download the one-page print sheet (PDF)</a> \u2014 the same content, '
+                'Download the print sheet (PDF)</a> \u2014 the same content, '
                 'laid out for handing round.</p>')
     body = pdf_note + "\n" + "\n".join(blocks)
     return _standalone_page(
         "Facilitator Sheet",
-        "A one-page guide for support staff: the seven ways to play, the sharing model, and how to respond to a spread.",
+        "A short guide for support staff: the seven ways to play, the sharing model, what to do with a pile of spreads, and how to respond to one.",
         "facilitator", "Skip to the facilitator sheet", "Facilitator Sheet",
         "facilitator", body)
 
@@ -1420,7 +1420,7 @@ _LLMS_SECTIONS = [
     ]),
     ("The deck in use", [
         ("guidebook", "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document."),
-        ("facilitator", "The one-page sheet for whoever is holding the space. Also a print PDF."),
+        ("facilitator", "The sheet for whoever is holding the space. Also a print PDF."),
         ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
         ("implementation", "Turning a spread into changes to the room, on any budget."),
         ("group-needs", "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone."),
