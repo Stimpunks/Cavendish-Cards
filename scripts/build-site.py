@@ -1211,6 +1211,46 @@ def _check_cond_parity(root, web):
     return len(in_js), len(in_doc)
 
 
+def _check_group_example(root):
+    """Warn when the group-brief page's worked example breaks its own rules.
+
+    Twice now the example has contradicted the prose above it: once listing the
+    room conditions in arrival order, which the ordering rule forbids, and once
+    opening a line with a person as its subject, which rule two forbids. Prose
+    examples are the part of a page nobody proofreads against the page, and the
+    example is the part a reader copies. Non-fatal, like the other warnings.
+    """
+    doc = (root / "cavendish-cards-group-needs.md").read_text(encoding="utf-8")
+    order, label = [], {}
+    for cid, text, _src in re.findall(
+            r"^- `([a-z-]+)` \u2014 ([^.]+)\. From: ([^.]+)\.", doc, re.M):
+        order.append(cid)
+        label[text.strip()] = cid
+    m = re.search(r"^- \*\*The room needs\*\* \u2014 (.+)$", doc, re.M)
+    if not m or not order:
+        print("  ! could not check the group-brief example", file=sys.stderr)
+        return
+    ids = [label.get(x.strip()) for x in m.group(1).split(" \u00b7 ")]
+    if None in ids:
+        print("  ! the group-brief example names a condition that is not in its own "
+              "table", file=sys.stderr)
+    else:
+        pos = [order.index(i) for i in ids]
+        if pos != sorted(pos):
+            print("  ! the group-brief example lists conditions out of the page's own "
+                  "order, which the ordering rule forbids", file=sys.stderr)
+        link = re.search(r"\*\*A link to the zoner\*\* \u2014 \S+#asked=([a-z,-]+)", doc)
+        if link and link.group(1).split(",") != ids:
+            print("  ! the group-brief example's link does not match its own room list",
+                  file=sys.stderr)
+    # Rule two: no output line takes a person as its subject.
+    for line in re.findall(r"^- \*\*[^*]+\*\* \u2014 (.+)$", doc, re.M):
+        first = line.strip().split()[0].lower().strip('"')
+        if first in ("someone", "somebody", "people", "they", "he", "she", "a person"):
+            print(f"  ! a group-brief example line takes a person as its subject: "
+                  f"{line[:60]!r}", file=sys.stderr)
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -1581,6 +1621,7 @@ def main():
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
     _check_cond_parity(root, web)
+    _check_group_example(root)
     _impl_md = implementation_md(out_families)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         _impl_md, encoding="utf-8")

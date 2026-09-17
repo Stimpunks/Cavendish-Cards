@@ -75,7 +75,9 @@ These are the rules the tools already follow, written so an AI can follow them t
 
 **The subject is always the room.** No output sentence takes a person or a group as its subject. Not "attendees struggle with noise" — "this room needs somewhere it can be made quiet." A spread is a design brief for the environment. It is never a report on who was there.
 
-**No counting.** Do not say how many spreads named a thing, do not sort by it, do not mark anything as common or rare or an outlier. Access is not a vote. One person needing a way out is exactly as actionable as eight, because you build the way out once either way. Counts also re-identify: in a small group, "named once" points at somebody. The brief names what the room needs and stops there.
+**No counting.** Do not say how many spreads named a thing, do not sort by it, do not mark anything as common or rare or an outlier. Access is not a vote, and in a small group a count re-identifies — "named once" points at somebody. That is the whole argument, and it is enough.
+
+Be straight about what it costs. For a fixture you build once, frequency genuinely does not change the job. For anything with a budget or an afternoon attached, a coordinator does have to choose what to do first, and this brief will not tell them. **That choice belongs to the room, not to the pile.** Take the list to [Zone a room](rooms.html), tick what is already true, and what remains is the real to-do list; start with the permissions, which cost nothing, then whatever an afternoon fixes. If you still need to choose between two, ask the people who are going to be in the room. They are better placed than a tally of cards, and asking them is the whole ethic here.
 
 ---- 
 
@@ -91,7 +93,7 @@ Use the roster to put every line of the paste in its realm first. Then map.
 
 ## The room conditions
 
-Seventeen conditions, each phrased as the change rather than the lack. These are the same ids [Zone a room](rooms.html) uses, so a brief written in them can be ticked straight into the zoner. After each one: the cards that map to it.
+Seventeen conditions, each phrased as the change rather than the lack. Sixteen is the number a paste can actually reach — `soft` has no card behind it, for the reason given under the buckets below — so a brief that never mentions it is not missing anything. These are the same ids [Zone a room](rooms.html) uses, so a brief written in them can be ticked straight into the zoner. After each one: the cards that map to it.
 
 - `quiet` — somewhere it can be made quiet. From: headphones, less talking, a den.
 - `steady-sound` — steady background sound or headphones allowed. From: a steady sound, headphones.
@@ -141,7 +143,7 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 **Places go to the zones, not the conditions.** If people laid the cave, the room needs a cave. That is a direct request for a zone and should be read as one.
 
-**Lily pads split three ways, and the mapping table already says which.** `coming back` asks the room to hold a place, so it maps. `i need a minute`, `not yet`, `slowly` and `i want to stay a while` are pace requests, so they map. `ready now` and `all done` are passing states like weather — a person announcing where they are in a moment — so they are never aggregated, and like weather they get one line saying they were laid and are not summarized. Silence would read as though nobody laid them. `stuck` and `watch first` are neither: they name a moment the vocabulary above has no box for, so they go to the remainder with a question attached. Do not stretch a condition to cover them.
+**Lily pads split three ways, and the mapping table already says which.** `coming back` asks the room to hold a place, so it maps. `i need a minute`, `not yet`, `slowly` and `i want to stay a while` are pace requests, so they map. `ready now` and `all done` are passing states like weather — a person announcing where they are in a moment — so they are never aggregated, and like weather they get one line saying they were laid and are not summarized. Silence would read as though nobody laid them. If none were laid, there is no line — the empty-list rule below is about your own four lists, and "nobody laid `ready now`" is a sentence about people. `stuck` and `watch first` are neither: they name a moment the vocabulary above has no box for, so they go to the remainder with a question attached. Do not stretch a condition to cover them.
 
 ---- 
 
@@ -154,9 +156,9 @@ Four lists, a zone read, and two kinds of honesty at the end. No preamble, no su
 - **Permission, say it out loud** — stim freely · sit however you like · leave and come back without explaining
 - **Pacing** — post the plan before the session · one thing at a time · nothing on a single clock
 - **Zones asked for** — the cave, the watering hole
-- **The deck had no card for this** — someone drew their own. Ask what they drew; it may be a card this deck still owes people.
+- **The deck had no card for this** — a `your own` card was laid. Ask what it named; it may be a card this deck still owes people.
 - **The method had no box for this** — "stuck", "watch first". Ask whether the room owes them a change of pace or just somewhere to land.
-- **Should not have been in the paste** — an Interaction card, and a note field. Neither is used in this brief. The strip step did not happen; do it before the next one.
+- **Should not have been in the paste** — interaction · note field · dates. None of it is used in this brief. The strip step did not happen; do it before the next one.
 - **Weather** — laid, and not summarized. The room list above comes only from the cards that name a need. If you want to know how the day felt, ask the people who were there.
 - **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,dim,temperature,corner,way-out
 
@@ -168,11 +170,13 @@ This is about **your own lists**, not the vocabulary. Do not go through the seve
 
 **Say each thing once.** Merged spreads repeat — several people laid `headphones` — and a list that repeats an item is a tally wearing a list's clothes. Collapse duplicates. The brief names what the room needs, and it needs it once.
 
-**A line that is not a card is not yours to discard.** If the paste carries something a person or the coordinator wrote — "the hall has no blinds" — do not map it and do not silently drop it. Quote it back under the remainder and say it was not a card. Throwing away the one sentence somebody wrote in their own words is the same failure as throwing away the note.
+**Free text is never quoted, and never silently dropped either.** The deck's own furniture — the "My Cavendish spread" line, the date, the separators between spreads — is not free text; drop that without comment. Anything written in somebody's own words is: a note field, a sentence the coordinator typed in, a line with no label at all. For all of it, do the same thing — say a line of free text was there, say it was not mapped, and tell the coordinator to read it themselves.
+
+**Do not reproduce it, whatever it is labelled.** A note field and an unlabelled sentence are indistinguishable the moment somebody tidies the word "Note:" off one, and a rule that quotes the unlabelled one quotes the most identifying text in the pile the first time that happens. There is never a reason to: the coordinator is holding the paste. They can read it. You do not need to say it back to them.
 
 **Put the room list in this page's order**, not the order the cards arrived in and not longest-first. Any order can be read as priority, so use one that obviously is not: the conditions run down this page in a fixed order, so use that. The other lists can run in any order that is not frequency.
 
-**And say what you had to drop.** If an Interaction card, a Kind word, a grower, a note field, the dates, or the spreads still separated one from another are in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present; it is not used in this brief" and nothing more. Then tell the coordinator the note is still theirs: **a note field is not used in this brief, and is still yours to act on by hand — read it yourself and go look at what it names.** A note is usually the most specific thing in the pile, naming a particular light in a particular hall, and the brief is generic where the note was exact. Not mining it is right. Letting it fall on the floor is not, and saying nothing does exactly that.
+**And say what you had to drop.** If an Interaction card, a Kind word, a grower, a note field, the dates, or the spreads still separated one from another are in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the kinds as bare labels, with no article and no number — `interaction · note field · dates` — because "an Interaction card" is a count of one and "Interaction cards" is a count of more than one. A label carries neither. Then tell the coordinator the note is still theirs: **a note field is not used in this brief, and is still yours to act on by hand — read it yourself and go look at what it names.** A note is usually the most specific thing in the pile, naming a particular light in a particular hall, and the brief is generic where the note was exact. Not mining it is right. Letting it fall on the floor is not, and saying nothing does exactly that.
 
 Do not write "dropped unread" — you had to read it to know what it was, and a phrase that reassures the coordinator about something that did not happen is worse than saying nothing. The only step that can actually keep a note unread is the one before the paste. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
