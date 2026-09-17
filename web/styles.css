@@ -735,6 +735,40 @@ body.break-open { overflow: hidden; }
 .badges-steps li { margin: 10px 0; line-height: 1.55; }
 .badges-sheets-section h3, .rooms-step h3 { margin: 26px 0 8px; }
 
+/* ---------------------------------------------------------------------------
+   Print the deck (print.html)
+   The sheets are inline SVG at exactly 7.5 x 10.5in. On screen they scale to
+   the column; on paper they print at their own size and nothing is scaled, so
+   a card comes off the printer at 2.5 x 3.5in.
+   --------------------------------------------------------------------------- */
+
+.print-contents { padding-left: 1.2em; max-width: 60ch; }
+.print-contents li { margin: 6px 0; line-height: 1.5; }
+
+.print-sheets { display: grid; gap: 26px; margin: 20px 0 0; }
+@media (min-width: 900px) {
+  .print-sheets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.print-sheet { margin: 0; }
+.print-paper {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px #0000001a;
+}
+.print-paper svg { display: block; width: 100%; height: auto; }
+.print-sheet figcaption {
+  margin: 8px 0 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.print-sheet-title { font-weight: 700; color: var(--ink-strong); }
+
 @media print {
   .breakbar, .skip, .theme-toggle, .rooms-actions, .site-footer { display: none !important; }
   .rooms-zone { break-inside: avoid; }
@@ -772,6 +806,21 @@ body.break-open { overflow: hidden; }
   body.printing-badges > *:not(main) { display: none !important; }
   body.printing-badges main .wrap > section:not(.badges-sheets-section) { display: none !important; }
   body.printing-badges .badges-sheets-section > *:not(.badge-sheets) { display: none !important; }
+  /* Both print paths lay an SVG of an exact physical size onto a page box of
+     the same size, so ANY box around it costs real millimetres. main's 28px of
+     padding and .wrap's 20px each side were enough to push a 10.5in sheet onto
+     a second page and to shrink an 8.5in one to 8.08in -- a badge that is no
+     longer 3 x 4in and holes that no longer line up sheet to sheet. Strip the
+     shell, and let each sheet render at its own intrinsic width and height
+     rather than at 100% of whatever contains it. */
+  body.printing-badges main, body.printing-deck main { padding: 0; }
+  body.printing-badges .wrap, body.printing-deck .wrap { padding: 0; max-width: none; }
+  body.printing-badges .badges-sheets-section,
+  body.printing-deck .print-sheets-section,
+  body.printing-deck .print-backs-section { margin: 0; }
+  body.printing-badges .badge-sheet-paper svg,
+  body.printing-deck .print-paper svg { width: auto; height: auto; max-width: none; }
+
   body.printing-badges .badge-sheets { display: block; margin: 0; gap: 0; }
   body.printing-badges .badge-sheet { break-after: page; page-break-after: always; }
   body.printing-badges .badge-sheet:last-child { break-after: auto; page-break-after: auto; }
@@ -781,6 +830,34 @@ body.break-open { overflow: hidden; }
     box-shadow: none;
   }
   body.printing-badges .badge-sheet figcaption { display: none !important; }
+
+  /* The deck. Same idea as the badge sheets: get everything else off the page
+     and let the SVG print at its own size. The backs section only comes along
+     when the reader asked for it. CSS cannot open the <details> that holds
+     them -- a closed one renders nothing at all, whatever the stylesheet says
+     -- so print.js sets .open before it calls print(), and these rules only
+     decide whether the section is shown once it is open. */
+  body.printing-deck > *:not(main) { display: none !important; }
+  /* Generated pages nest as main.wrap > div.prose > section; the hand-authored
+     ones as main > div.wrap > section. Both shapes are listed rather than
+     guessed at -- the first version of this rule matched neither, and a print
+     selector that matches nothing fails silently until somebody wastes a ream. */
+  body.printing-deck .prose > section:not(.print-sheets-section):not(.print-backs-section),
+  body.printing-deck main .wrap > section:not(.print-sheets-section):not(.print-backs-section) { display: none !important; }
+  body.printing-deck .print-backs-section { display: none !important; }
+  body.printing-deck.printing-backs .print-backs-section { display: block !important; }
+  body.printing-deck .print-backs-section > *:not(details) { display: none !important; }
+  body.printing-deck .print-backs-section summary { display: none !important; }
+  body.printing-deck .print-sheets-section > *:not(.print-sheets) { display: none !important; }
+  body.printing-deck .print-sheets { display: block; margin: 0; gap: 0; }
+  body.printing-deck .print-sheet { break-after: page; page-break-after: always; }
+  body.printing-deck .print-sheet:last-child { break-after: auto; page-break-after: auto; }
+  body.printing-deck .print-paper {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  body.printing-deck .print-sheet figcaption { display: none !important; }
 }
 
 /* ---------------------------------------------------------------------------

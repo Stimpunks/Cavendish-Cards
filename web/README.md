@@ -14,6 +14,7 @@ A static site with no framework and no build tooling to install — just Python'
 - `deck.html` + `app.js` — the deck itself: rendering, filtering, laying and turning cards, the lightbox.
 - `rooms.html` + `rooms.js` — the room zoner, and the printable zone signs.
 - `badges.html` + `badges.js` — the interaction-badge maker: badges at the four standard conference sizes, sheets imposed for cutting, and the print and assembly instructions.
+- `print.js` — the two print buttons on the generated `print.html`.
 - `space.html` — the condensed account of the Cavendish Space model.
 - `styles.css` — all styling, including the light and dark palettes.
 - `sw-register.js` — registers the service worker on every page.
@@ -31,6 +32,7 @@ A static site with no framework and no build tooling to install — just Python'
 - `cards.json` and `faces/` — the deck data and card faces, from the card files.
 - `guidebook.html`, `implementation.html`, `why.html`, `origin.html`, `facilitator.html`, `privacy.html` — the standalone pages.
 - `sw.js` — the offline service worker, generated from [`../scripts/sw-template.js`](../scripts/sw-template.js) and version-stamped each build.
+- `print.html` and `print/` — the print-and-play sheets: the whole deck imposed nine-up at playing-card size, inline in the page and as one SVG per sheet.
 - `sitemap.xml`, `robots.txt`.
 
 The generator reads every card in [`../cards/`](../cards/), uses the finished face from [`../assets/cards/`](../assets/cards/) when one exists and a placeholder otherwise, copies the two card backs, and renders the prose pages from their Markdown sources in the repo root. So the site always matches the deck and its sources — no site edits needed when a card or a sheet changes.

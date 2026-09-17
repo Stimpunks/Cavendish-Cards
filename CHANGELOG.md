@@ -6,7 +6,27 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ## 2026-09-17
 
+### Deck
+
+- **`PLACEHOLDER ART · HUMAN ART WANTED` came off the card faces.** It was the condition the placeholder-art carve-out was granted on, so this is a real change and not housekeeping. What changed is that the deck became something people *print*: the new print-and-play page hands anyone the whole deck at playing-card size, and a line of grey capitals across ninety-four cards is a line nobody can take off once they have been cut. The card belongs to the person holding it, and that sentence was never addressed to them — it was addressed to us, and to anyone who might mistake a stand-in for finished art. It is still said, in the [call for art](./CALL-FOR-ART.md), the README, the playtest and template READMEs, and on the site, which is where somebody who could actually send art will read it. Dropped everywhere rather than only on the print sheets: a card that says one thing on paper and another on screen is two decks.
+
+- The picture now sits centred in its window rather than riding high in it. The offset that pushed it up existed to leave room for the line that has gone, and is computed from the two heights instead of hard-coded, so it cannot be left pointing at nothing again.
+
 ### Site
+
+- **New page: [Print the deck](https://cavendish.space/print.html).** The whole deck, 94 cards on 15 sheets, nine to a page, at **2.5 × 3.5 in** — standard playing-card size, which is what the card faces were already drawn at. It fits a normal sleeve, a normal box, and a normal hand. There is nothing to configure, on purpose: a deck is a deck, so the page has no options, no size picker, and no paper control.
+
+- **One sheet geometry, both papers.** A sheet is exactly the 3 × 3 grid and no more — 7.5 × 10.5 in — which is the one size that fits US Letter and A4 inside a quarter-inch margin. So there is a single set of files and nothing to choose. US Letter is the tight one: eleven inches less two quarter-inch margins is 10.5 exactly, with nothing spare, and the page says so rather than letting somebody discover it a ream in.
+
+- **A sheet never mixes realms.** It costs four part-full pages across the deck and buys the thing the page would otherwise need a control for: to print one realm, print its pages. The contents list gives the page numbers.
+
+- Each slot is painted with the card's own paper color before the card goes down, so a straight cut through the rounded corners a face draws does not leave four white notches on every card.
+
+- **Backs are offered and explicitly optional.** The deck's privacy rule is that face-down cards are indistinguishable — a spread must not leak before its person turns a card up — and blank card stock does that perfectly well. Where backs are wanted, every card in a realm shares one, so a back sheet is the same image nine times and alignment cannot go wrong whichever way the paper turns over.
+
+- **Two print bugs found by rendering the pages instead of reading them.** The deck's sheets paginated to 18 pages instead of 15, and the badge sheets printed at 8.08 in wide instead of 8.5 — both because `main` and `.wrap` carry padding that is real millimetres when an exact-size sheet meets an exact-size page. And the rule meant to strip the page furniture matched nothing at all on generated pages, which nest differently from hand-authored ones. A print stylesheet that matches nothing fails silently; these were caught by rendering with WeasyPrint and counting pages, which is now the documented way to check a print path.
+
+- `web/faces/` is wiped and rebuilt rather than written over. Netlify builds from a clean checkout so it never noticed, but a long-lived clone had accumulated 77 orphan faces from an old naming scheme — every one still precached by the service worker, every one still carrying markings the deck had since dropped.
 
 - **New page: [Interaction badges](https://cavendish.space/badges.html).** Interaction is the one realm meant to be worn, and until now the site could show you the cards but not hand you a badge. The new page makes them at any of the four standard conference badge sizes &mdash; 4 &times; 3 in, A7, A6, and 4 &times; 6 in, each portrait or landscape, all of them sizes you can buy a holder for &mdash; from the deck's own six signals, with the card's own name and line on each. The layout is proportional rather than drawn once and stretched, because those four do not share an aspect ratio; the punch holes are the deliberate exception and stay a quarter inch a third of an inch down at every size, since that is a fact about hole punches rather than about badges. You choose which signals go in the stack, put your event's name and your own logo on them, and get sheets laid out for cutting: one signal per sheet for an event, or one set per sheet for a person. The lineage is named on the page: [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, 1996, and the [Stimpunks field guide](https://stimpunks.org/fieldguide/events/access/interaction-badges/) page organizers already use.
 

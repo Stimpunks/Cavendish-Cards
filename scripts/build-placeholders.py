@@ -44,15 +44,12 @@ FAM = {
 ORDER = ["places", "weather", "what-helps", "lily-pad", "grower",
          "love-locution", "blank"]
 
-# The art window, in card units. card-art.py draws into the top card_art.H of
-# this box; ART_DROP nudges the picture down so it sits centred in the space
-# above the marker line rather than riding high against the window's top edge.
+# The art window, in card units. card-art.py draws a W x H picture into it, and
+# ART_DROP centres that picture in the window rather than letting it ride high
+# against the top edge. Computed from the two heights, not hard-coded: the
+# window used to reserve room at the bottom for a placeholder marker, and when
+# the marker went the offset was left behind pointing at nothing.
 ART = (60, 150, 630, 600)
-ART_DROP = 28
-
-# Small type under the picture. The art is a stand-in, and the card says so
-# rather than passing code-drawn shapes off as the deck's illustration.
-MARK = "PLACEHOLDER ART · HUMAN ART WANTED"
 
 
 def _load_card_art():
@@ -67,6 +64,7 @@ def _load_card_art():
 
 
 ART_LIB = _load_card_art()
+ART_DROP = (ART[3] - ART_LIB.H) // 2
 
 
 def parse_card(path):
@@ -158,7 +156,6 @@ def build_svg(family, slug, name, cue, prompt):
 <rect id="art" x="{ax}" y="{ay}" width="{aw}" height="{ah}" rx="24" fill="#fdf6e3"/>
 <g id="art-illustration" clip-path="url(#art-window)"><g transform="translate({ax} {ay + ART_DROP})">{art}</g></g>
 <rect x="{ax}" y="{ay}" width="{aw}" height="{ah}" rx="24" fill="none" stroke="{acc}" stroke-width="3"/>
-<text x="375" y="{ay + ah - 24}" text-anchor="middle" font-family="{FONT}" font-size="17" fill="#93a1a1" letter-spacing="2">{MARK}</text>
 {name_svg}
 {prompt_svg}
 </svg>

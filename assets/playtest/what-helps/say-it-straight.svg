@@ -7,9 +7,8 @@
      element's own user space, so putting both on one <g> would clip against
      the moved coordinates and shear the top off every picture. -->
 <rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
-<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><path d="M96 380 q70 -70 140 -10 q70 60 140 -20 q70 -80 140 10" stroke-opacity="0.28" stroke-dasharray="16 14" fill="none" stroke="#0F6E56" stroke-width="9"/><line x1="96.0" y1="240.0" x2="534.0" y2="240.0" fill="none" stroke="#04342C" stroke-width="14"/><polyline points="513.4,252.4 534.0,240.0 513.4,227.6" fill="none" stroke="#04342C" stroke-width="14"/></g></g></g>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 185)"><g stroke-linecap="round" stroke-linejoin="round"><path d="M96 380 q70 -70 140 -10 q70 60 140 -20 q70 -80 140 10" stroke-opacity="0.28" stroke-dasharray="16 14" fill="none" stroke="#0F6E56" stroke-width="9"/><line x1="96.0" y1="240.0" x2="534.0" y2="240.0" fill="none" stroke="#04342C" stroke-width="14"/><polyline points="513.4,252.4 534.0,240.0 513.4,227.6" fill="none" stroke="#04342C" stroke-width="14"/></g></g></g>
 <rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#0F6E56" stroke-width="3"/>
-<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">say it straight</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Say what you mean.</text>
 </svg>

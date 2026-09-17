@@ -299,6 +299,7 @@ SITE_NAV = [
     ("The deck", "deck.html", "deck"),
     ("Zone a room", "rooms.html", "rooms"),
     ("Interaction badges", "badges.html", "badges"),
+    ("Print the deck", "print.html", "print"),
     ("What is a Cavendish Space?", "space.html", "space"),
     ("Guidebook", "guidebook.html", "guidebook"),
     ("Implementation guidebook", "implementation.html", "implementation"),
@@ -501,7 +502,7 @@ _SHELL_TAGLINE = ("A calm, no-scoring deck for naming sensory and interaction "
 
 
 def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
-                     tagline=_SHELL_TAGLINE):
+                     tagline=_SHELL_TAGLINE, script=None):
     """Full HTML doc for a standalone prose page, matching the site shell."""
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -510,6 +511,7 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {_THEME_INLINE}
   <script src="/theme-toggle.js" defer></script>
+  {f'<script src="/{script}" defer></script>' if script else ''}
   <title>Cavendish Cards — {e(title)}</title>
   <meta name="description" content="{e(description)}">
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -1186,7 +1188,7 @@ def implementation_md(out_families):
 
 
 _SITE_URL = "https://cavendish.space"
-_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/space.html", "/guidebook.html", "/implementation.html",
+_SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
@@ -1433,6 +1435,315 @@ def _check_card_citations(root, out_families):
                               file=sys.stderr)
 
 
+# ---------------------------------------------------------------------------
+# Print-and-play sheets (print.html)
+#
+# The deck at its real size, imposed for cutting. Everything here is fixed:
+# there is nothing to choose, because a deck is a deck. The only number that
+# matters is the card, and it is the standard playing-card size the deck has
+# always been drawn at -- 2.5 x 3.5 in, which is what the 750 x 1050 face
+# viewBox is at 300dpi.
+#
+# The sheet is exactly the 3x3 grid and no more: 7.5 x 10.5 in. That is the one
+# geometry that fits BOTH US Letter and A4 inside a quarter-inch margin, so
+# there is no paper-size control and no second set of files. Letter is the
+# tight one -- 11in less two quarter-inch margins is 10.5in exactly, with
+# nothing to spare -- which the page says out loud, because a printer that
+# cannot reach 0.25in of the short edge will shave the bottom row.
+#
+# Sheets never mix realms. It costs four sheets across the deck and buys the
+# thing a control would otherwise have to buy: printing one realm is choosing
+# its pages in the print dialog.
+PRINT_CARD_W, PRINT_CARD_H = 180, 252          # 2.5 x 3.5 in, in points
+PRINT_COLS, PRINT_ROWS = 3, 3
+PRINT_SHEET_W = PRINT_CARD_W * PRINT_COLS      # 540pt = 7.5in
+PRINT_SHEET_H = PRINT_CARD_H * PRINT_ROWS      # 756pt = 10.5in
+PRINT_PER_SHEET = PRINT_COLS * PRINT_ROWS
+PRINT_CUT = "#c9c2ad"
+
+
+def _nest_svg(svg_text, x, y, w, h, uid):
+    """Drop one card's SVG into a sheet at (x, y), scaled to w x h.
+
+    Two things have to happen. The root <svg> gets position and size while
+    keeping its own viewBox, which is what makes a 750x1050 face render at
+    180x252pt. And every id is namespaced, because nine cards on a sheet means
+    nine copies of `art-window` in one document and `url(#art-window)` resolves
+    to whichever came first -- harmless today, since every card's clip is the
+    same rectangle, and a trap the moment one card's differs.
+    """
+    body = re.sub(r"^\s*<\?xml[^>]*\?>\s*", "", svg_text)
+    body = re.sub(r'\sid="([^"]+)"', lambda m: f' id="{uid}-{m.group(1)}"', body)
+    body = re.sub(r"url\(#([^)]+)\)", lambda m: f"url(#{uid}-{m.group(1)})", body)
+    body = re.sub(
+        r"<svg\b[^>]*>",
+        f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 750 1050" '
+        f'preserveAspectRatio="xMidYMid meet">',
+        body, count=1)
+    return body
+
+
+def _card_bg(svg_text):
+    """The card's own paper color, read off its full-bleed base rect.
+
+    Cards butt against each other on a sheet, so a straight cut runs through
+    the rounded corners a face draws. Without something behind them each cut
+    card comes away with four white notches. Painting the card's own color into
+    the slot first fills them, and the rounding stops mattering -- square-cut or
+    corner-rounded, the card is solid to its edge either way. Read rather than
+    assumed: two backs and one card use a different paper.
+    """
+    m = re.search(r'<rect[^>]*width="750"[^>]*height="1050"[^>]*fill="([^"]+)"',
+                  svg_text)
+    return m.group(1) if m else "#eee8d5"
+
+
+def _cut_grid():
+    """Hairlines on every card boundary, so a ruler has something to follow.
+
+    Drawn as full-length lines rather than a box per card: the cuts that matter
+    run the whole way across, and a shared edge should be one line rather than
+    two that can disagree by a hair.
+    """
+    out = []
+    for c in range(PRINT_COLS + 1):
+        x = c * PRINT_CARD_W
+        out.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{PRINT_SHEET_H}" '
+                   f'stroke="{PRINT_CUT}" stroke-width="0.5"/>')
+    for r in range(PRINT_ROWS + 1):
+        y = r * PRINT_CARD_H
+        out.append(f'<line x1="0" y1="{y}" x2="{PRINT_SHEET_W}" y2="{y}" '
+                   f'stroke="{PRINT_CUT}" stroke-width="0.5"/>')
+    return "".join(out)
+
+
+def _sheet_open(label):
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="7.5in" height="10.5in" '
+            f'viewBox="0 0 {PRINT_SHEET_W} {PRINT_SHEET_H}" role="img" '
+            f'aria-label="{e(label)}">'
+            f'<rect x="0" y="0" width="{PRINT_SHEET_W}" height="{PRINT_SHEET_H}" '
+            f'fill="#ffffff"/>')
+
+
+def _slot_bg(x, y, fill):
+    return (f'<rect x="{x}" y="{y}" width="{PRINT_CARD_W}" height="{PRINT_CARD_H}" '
+            f'fill="{fill}"/>')
+
+
+def _slot_xy(i):
+    return ((i % PRINT_COLS) * PRINT_CARD_W, (i // PRINT_COLS) * PRINT_CARD_H)
+
+
+def print_sheets(out_families, faces):
+    """Impose the whole deck, one realm at a time, nine cards to a sheet.
+
+    Returns a list of dicts: realm label, the face sheet, the matching back
+    sheet, and the card names on it. A realm's cards all share one back, so a
+    back sheet is the same image nine times and needs no mirroring for duplex
+    -- whichever way the paper turns over, every slot is already right.
+    """
+    sheets = []
+    for fam in out_families:
+        cards = fam["cards"]
+        for start in range(0, len(cards), PRINT_PER_SHEET):
+            chunk = cards[start:start + PRINT_PER_SHEET]
+            n = len(sheets) + 1
+            label = (f"{fam['name']} — sheet {start // PRINT_PER_SHEET + 1}"
+                     if len(cards) > PRINT_PER_SHEET else fam["name"])
+
+            faces_svg = [_sheet_open(f"Cavendish Cards, {label}: nine card faces "
+                                     f"laid out for cutting.")]
+            backs_svg = [_sheet_open(f"Cavendish Cards, {label}: the matching "
+                                     f"card backs.")]
+            back_file = chunk[0]["back"].split("/")[-1]
+            back_svg = (faces / back_file).read_text(encoding="utf-8")
+            for i, card in enumerate(chunk):
+                x, y = _slot_xy(i)
+                face = (faces / card["face"].split("/")[-1]).read_text(encoding="utf-8")
+                faces_svg.append(_slot_bg(x, y, _card_bg(face)))
+                faces_svg.append(_nest_svg(face, x, y, PRINT_CARD_W, PRINT_CARD_H,
+                                           f"s{n}c{i}"))
+                backs_svg.append(_slot_bg(x, y, _card_bg(back_svg)))
+                backs_svg.append(_nest_svg(back_svg, x, y, PRINT_CARD_W, PRINT_CARD_H,
+                                           f"b{n}c{i}"))
+            grid = _cut_grid()
+            sheets.append({
+                "n": n,
+                "label": label,
+                "realm": fam["name"],
+                "slug": f"{n:02d}-{fam['slug']}",
+                "count": len(chunk),
+                "names": [c["name"] for c in chunk],
+                "faces": "".join(faces_svg) + grid + "</svg>",
+                "backs": "".join(backs_svg) + grid + "</svg>",
+            })
+    return sheets
+
+
+def _write_print_sheets(web, sheets):
+    """Write each sheet as a standalone SVG under web/print/.
+
+    The page already carries every sheet inline, so these exist for one reason:
+    handing a file to somebody, or to a print shop, without asking them to
+    print a web page.
+    """
+    out = web / "print"
+    if out.is_dir():
+        shutil.rmtree(out)
+    out.mkdir(parents=True, exist_ok=True)
+    for s in sheets:
+        (out / f"faces-{s['slug']}.svg").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n' + s["faces"], encoding="utf-8")
+        (out / f"backs-{s['slug']}.svg").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n' + s["backs"], encoding="utf-8")
+
+
+def print_html(sheets, total_cards):
+    """The print-and-play page: the whole deck, imposed, with nothing to set."""
+    pages = len(sheets)
+    realms = []
+    for s in sheets:
+        if not realms or realms[-1][0] != s["realm"]:
+            realms.append([s["realm"], [s["n"]]])
+        else:
+            realms[-1][1].append(s["n"])
+    realm_rows = "".join(
+        "<li><strong>{}</strong> &mdash; {}</li>".format(
+            e(name),
+            "sheet " + str(ns[0]) if len(ns) == 1
+            else f"sheets {ns[0]}&ndash;{ns[-1]}")
+        for name, ns in realms)
+
+    face_blocks = "".join(
+        f'<figure class="print-sheet" id="sheet-{s["n"]}">'
+        f'<div class="print-paper">{s["faces"]}</div>'
+        f'<figcaption><span class="print-sheet-title">Sheet {s["n"]} &middot; '
+        f'{e(s["label"])}</span> <span class="muted">{s["count"]} '
+        f'{"card" if s["count"] == 1 else "cards"}</span> '
+        f'<a class="btn ghost small" href="print/faces-{s["slug"]}.svg" download>'
+        f'Download</a></figcaption></figure>'
+        for s in sheets)
+
+    back_blocks = "".join(
+        f'<figure class="print-sheet print-back">'
+        f'<div class="print-paper">{s["backs"]}</div>'
+        f'<figcaption><span class="print-sheet-title">Backs for sheet {s["n"]}'
+        f'</span> <span class="muted">{e(s["realm"])}</span> '
+        f'<a class="btn ghost small" href="print/backs-{s["slug"]}.svg" download>'
+        f'Download</a></figcaption></figure>'
+        for s in sheets)
+
+    body = f'''
+      <section class="rooms-intro">
+        <h2>The whole deck, at the size it is drawn</h2>
+        <p class="intro">{total_cards} cards on {pages} sheets, nine to a page, at
+          <strong>2.5 &times; 3.5 in</strong> (63.5 &times; 88.9 mm) &mdash; standard
+          playing-card size. They fit a normal card sleeve, a normal card box, and a
+          normal hand.</p>
+        <p class="intro">There is nothing to choose on this page. A deck is a deck:
+          same cards, same size, same order every time. Print it, cut it, use it.</p>
+        <div class="rules stack">
+          <p class="rules-lead"><strong>Before you print.</strong></p>
+          <ul class="rules-list">
+            <li><strong>Set the scale to 100%,</strong> not &ldquo;fit to page.&rdquo;
+              This is the one that goes wrong. Browsers shrink by default, and a deck
+              printed at 94% no longer fits a sleeve or a box.</li>
+            <li><strong>Set margins to Minimum or None.</strong> A sheet is 7.5 &times;
+              10.5 in, which fits US Letter and A4 alike inside a quarter-inch margin
+              &mdash; the same file for both, no setting to pick.</li>
+            <li><strong>US Letter is the tight one.</strong> Eleven inches less two
+              quarter-inch margins is 10.5 exactly, with nothing spare. If your printer
+              cannot reach within a quarter inch of the short edge it will shave the
+              bottom row. A4 has three-quarters of an inch to spare; use it if you have
+              it, or print the bottom row's sheet again on a printer that can.</li>
+            <li><strong>Use card, not paper.</strong> 250&ndash;300 gsm (about
+              90&ndash;110 lb cover) handles like a card and survives being laid out and
+              swept up a hundred times. Plain paper curls by the second session.</li>
+          </ul>
+        </div>
+        <div class="rooms-actions">
+          <button type="button" class="btn" id="print-faces">Print the {pages} sheets</button>
+          <button type="button" class="btn ghost" id="print-both">Print faces and backs</button>
+        </div>
+        <p class="muted rooms-note" id="print-note">No JavaScript? These buttons only
+          set the page size for you. Print the page from your browser&rsquo;s own menu
+          instead, with margins at 0.25 in (6 mm) and scale at 100%.</p>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="whats-here">What is on which sheet</h2>
+        <p class="intro">A sheet never mixes realms. That costs a few part-full pages
+          across the deck and buys the thing this page would otherwise need a control
+          for: <strong>to print one realm, print its pages.</strong></p>
+        <ul class="print-contents">{realm_rows}</ul>
+      </section>
+
+      <section class="rooms-step print-sheets-section">
+        <h2 id="sheets">The sheets</h2>
+        <div class="print-sheets">{face_blocks}</div>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="cutting">Cutting</h2>
+        <ul class="badges-list">
+          <li>The hairlines are the cuts. They run the full width and height of the
+            sheet, so every cut is one straight line through three cards at once.</li>
+          <li><strong>Cut the rows first, then the columns.</strong> Three long cuts
+            each way turns a sheet into nine cards, and the cards stay square. Cutting
+            one card out at a time is how a deck ends up with nine different sizes.</li>
+          <li>A guillotine or a rotary trimmer beats scissors, and a metal ruler with a
+            craft knife beats both for a single sheet.</li>
+          <li><strong>Optional:</strong> a corner rounder, 3 mm radius. It is the
+            difference between cards that look homemade and cards that look made, and it
+            stops the corners going furry.</li>
+        </ul>
+      </section>
+
+      <section class="rooms-step print-backs-section">
+        <h2 id="backs">The backs, if you want them</h2>
+        <p class="intro">You do not need these. <strong>The deck's privacy rule is that
+          face-down cards are indistinguishable</strong> &mdash; a spread must not leak
+          before its person turns a card up &mdash; and blank card stock does that
+          perfectly well. Print backs only if you want the finished object.</p>
+        <p class="intro">If you do: every card in a realm shares one back, so a back
+          sheet is the same image nine times. That means <strong>alignment cannot go
+          wrong</strong> &mdash; it does not matter which way the paper turns over.
+          Print the faces, feed the stack back in, print the matching back sheet, and
+          check one card against the light before you run the rest.</p>
+        <p class="intro">Two realms carry their own back on purpose, and both are realms
+          that are never laid face-down: <strong>Kind words</strong>, which is given or
+          claimed, and <strong>Interaction</strong>, which is worn and shown. Everything
+          else shares the standard back. That is why a distinct back is safe for those
+          two and nowhere else.</p>
+        <details class="disclose" id="print-backs-details">
+          <summary>Show the {pages} back sheets</summary>
+          <div class="print-sheets">{back_blocks}</div>
+        </details>
+      </section>
+
+      <section class="rooms-step">
+        <h2 id="next">Then what</h2>
+        <ul class="rooms-next">
+          <li><a href="guidebook.html">The guidebook</a> &mdash; every card, what it
+            names, and how to hold it. Print it or keep it open beside the deck.</li>
+          <li><a href="facilitator.html">The facilitator sheet</a> &mdash; for whoever
+            is holding the space, with the play modes on it.</li>
+          <li><a href="badges.html">Interaction badges</a> &mdash; the one realm meant
+            to be worn rather than laid down, at conference badge size.</li>
+          <li><a href="deck.html">The web deck</a> &mdash; the same cards, if you would
+            rather not print anything at all.</li>
+        </ul>
+      </section>
+'''
+    return _standalone_page(
+        "Print the deck",
+        f"Print the whole Cavendish Cards deck at standard playing-card size "
+        f"— {total_cards} cards on {pages} sheets, nine to a page, ready to cut. "
+        f"Nothing to set up, no account, free and CC0.",
+        "sheets", "Skip to the sheets", "Print the deck", "print", body,
+        script="print.js")
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -1524,6 +1835,7 @@ _LLMS_SECTIONS = [
         ("deck", "The card player. Lay a spread face-down; turning a card up is the consent."),
         ("rooms", "Zone a room into cave, campfire, watering hole, library, and habitat."),
         ("badges", "Make, print, and assemble interaction badges at conference badge size — the green/yellow/red communication badges from Autistic space, plus bulk print and assembly instructions."),
+        ("print", "Print the whole deck at standard playing-card size: every card, nine to a sheet, ready to cut. Nothing to configure."),
         ("space", "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses."),
         ("why", "Why the deck exists, who it serves, and the stance behind it."),
         ("not-aac", "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together."),
@@ -1638,7 +1950,7 @@ def _write_service_worker(root, web, faces):
     h = hashlib.sha1()
     for name in ("index.html", "deck.html", "styles.css", "app.js", "cards.json",
                  "theme-toggle.js", "rooms.html", "rooms.js", "badges.html",
-                 "badges.js", "space.html",
+                 "badges.js", "print.html", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
@@ -1691,6 +2003,14 @@ def main():
     faces = web / "faces"
     if not cards_dir.is_dir():
         sys.exit(f"cards/ not found at {cards_dir}")
+    # Wipe rather than overwrite. Netlify builds from a clean checkout so it
+    # never noticed, but a long-lived local clone accumulates every face the
+    # deck has ever had: renaming the files to <family>--<slug>.svg left 77
+    # orphans behind, each one still precached by the service worker and each
+    # one still carrying markings the deck had since dropped. A generated
+    # directory should hold exactly what this build generated.
+    if faces.is_dir():
+        shutil.rmtree(faces)
     faces.mkdir(parents=True, exist_ok=True)
 
     for back in ("back-standard.svg", "back-love-locution.svg", "back-interaction.svg"):
@@ -1810,6 +2130,9 @@ def main():
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
     (web / "changelog.html").write_text(changelog_html(root), encoding="utf-8")
+    _print = print_sheets(out_families, faces)
+    _write_print_sheets(web, _print)
+    (web / "print.html").write_text(print_html(_print, total), encoding="utf-8")
     (web / "404.html").write_text(not_found_html(), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
@@ -1834,6 +2157,7 @@ def main():
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
           f"web/why.html, web/origin.html, web/facilitator.html, web/example-spreads.html, "
+          f"web/print.html ({len(_print)} sheets), "
           f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
           f"web/llms.txt, web/security.txt, "
           f"{len(_md_written)} .md endpoints, "
