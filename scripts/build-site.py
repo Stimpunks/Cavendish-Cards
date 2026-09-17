@@ -1196,6 +1196,17 @@ def _git_date(root, filename):
         return None
 
 
+# What dates a generated page: the cards it is built from, plus the generator
+# that renders it (a constant edited there changes the output too). ISO dates
+# sort lexicographically, so max() is the newest. Erring newer is the safe
+# direction -- it tells a caller to re-fetch, where erring older would tell it
+# nothing changed when something did.
+GENERATED_FROM = {
+    "guidebook": ["cards", "scripts/build-guidebook.py"],
+    "implementation": ["cards", "scripts/build-site.py"],
+}
+
+
 def _write_md_endpoints(root, web, generated):
     """Publish each Markdown-sourced page at web/<key>.md with frontmatter.
 
@@ -1211,7 +1222,9 @@ def _write_md_endpoints(root, web, generated):
         label, href = nav_entry(key)
         if source is None:
             body = generated[key]
-            updated = datetime.date.today().isoformat()
+            dates = [d for d in (_git_date(root, path)
+                                 for path in GENERATED_FROM[key]) if d]
+            updated = max(dates) if dates else datetime.date.today().isoformat()
         else:
             body = (root / source).read_text(encoding="utf-8")
             updated = _git_date(root, source) or datetime.date.today().isoformat()
