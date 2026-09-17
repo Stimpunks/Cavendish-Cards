@@ -305,6 +305,7 @@ SITE_NAV = [
     ("Implementation guidebook", "implementation.html", "implementation"),
     ("Facilitator sheet", "facilitator.html", "facilitator"),
     ("Example spreads", "example-spreads.html", "example-spreads"),
+    ("Place Explorers (for children)", "place-explorers.html", "place-explorers"),
     ("Group access needs", "group-needs.html", "group-needs"),
     ("Livable worlds checklist", "livable-worlds.html", "livable-worlds"),
     ("Why this exists", "why.html", "why"),
@@ -340,6 +341,7 @@ MD_ENDPOINTS = {
     "changelog": "CHANGELOG.md",
     "guidebook": None,
     "implementation": None,
+    "place-explorers": None,
 }
 
 # llms.txt v2 wants the file advertised by link relation rather than guessed at
@@ -494,16 +496,24 @@ def md_to_html(text):
     return "\n".join(out)
 
 
-# The one-line description under the h1 on every standalone page. The 404 page
-# overrides it, since "you're on one of its pages" is false there.
-_SHELL_TAGLINE = ("A calm, no-scoring deck for naming sensory and interaction "
-                  "needs. You're on one of its pages — open the deck to "
-                  "lay a spread.")
-
-
 def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
-                     tagline=_SHELL_TAGLINE, script=None):
-    """Full HTML doc for a standalone prose page, matching the site shell."""
+                     tagline, script=None):
+    """Full HTML doc for a standalone prose page, matching the site shell.
+
+    `tagline` is the line under the h1 and it is REQUIRED -- there is no default
+    on purpose. It used to fall back to one generic sentence about the deck,
+    which meant twelve pages in a row greeted a visitor with the same words and
+    told them nothing about where they had landed. A default is what let that
+    happen quietly, so the parameter has none: a new page cannot be added
+    without someone writing a line for it.
+
+    It is not the meta description. The description is written for a search
+    result or a link preview and talks about the page in the third person; the
+    tagline is addressed to the person already on it, and says what this page
+    is for and what they can do with it. Keep it to a sentence or two of the
+    deck's voice. The hand-authored pages carry theirs inline in the same
+    `<p class="tagline">`, and the guidebook and implementation pages open with
+    a `<p class="intro">` instead, which does the same job at more length."""
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -581,7 +591,9 @@ def why_html(root):
         "Why this exists",
         "Why Cavendish Cards exist: what the deck is, why, and how it serves learners.",
         "why", "Skip to the Why sheet", "Why this exists", "why",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="What the deck is for, who it serves, and what it refuses to "
+                "be. Start here if you want the argument before the cards.")
 
 
 def not_aac_html(root):
@@ -592,7 +604,10 @@ def not_aac_html(root):
         "what AAC is for, what the deck is for, and what a person is still owed once "
         "the cards are on the table.",
         "not-aac", "Skip to the argument", "Cavendish Cards are not AAC", "not-aac",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="The boundary, at length. These cards sit alongside a person's "
+                "real communication tools and never in place of them — here is "
+                "why the line falls where it does.")
 
 
 def origin_html(root):
@@ -601,7 +616,10 @@ def origin_html(root):
         "Origin & lineage",
         "Where the Cavendish Space model behind the deck comes from, and its lineage.",
         "origin", "Skip to the origin", "Origin & lineage", "origin",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="Where the model came from: Henry Cavendish's own conditions, "
+                "Thornburg's learning spaces, and the Autistic community work "
+                "all of it rests on. Credit where it is owed.")
 
 
 def arles_html(root):
@@ -610,7 +628,10 @@ def arles_html(root):
         "ARLES & the cards",
         "How the deck fits the Stimpunks Design Method (ARLES): Attention, Relational, Lived Experience, Environment, Systems — and why it stops short of Systems as cards.",
         "arles", "Skip to the ARLES page", "ARLES & the cards", "arles",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="How the deck maps onto the Stimpunks Design Method — and why "
+                "it stops at Environment rather than asking a person to card "
+                "the system that is failing them.")
 
 
 def example_spreads_html(root):
@@ -619,7 +640,136 @@ def example_spreads_html(root):
         "Example spreads",
         "Worked examples of the deck in use: a moment, a spread someone laid, and how to read it as a design brief for the environment.",
         "example-spreads", "Skip to the examples", "Example spreads", "example-spreads",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="Spreads somebody laid, read the way they are meant to be read: "
+                "as a list of things to change in the room, never as a report "
+                "on a person.")
+
+
+# The children's page. Its prose lives in cavendish-cards-place-explorers.md;
+# the five place cards are generated from here, because the picture on each one
+# is the deck's own Places face and the name beside it is the card's own name.
+# Only the child-height line and the classroom example are new, so only those
+# two are written here -- a rewording of `the cave` in cards/places/ cannot
+# leave this page quoting a card that no longer says that.
+#
+# There is no picker. The draft this page came from ended with one: choose a
+# place, be told to "go find your Cave". That hands a child responsibility for
+# an accommodation the room may not have, which is the deck's argument run
+# backwards, so the page turns toward the room instead. And the
+# point-at-a-picture job it was imitating is already done, properly and
+# face-down, by the Places cards this page links to.
+#
+# (slug in cards/places/, the line a child reads, the classroom example)
+PLACES = [
+    ("the-cave",
+     "Your own quiet spot. Nobody else is in it. Just you.",
+     "a reading corner, a tent, or headphones at your desk."),
+    ("the-campfire",
+     "A small circle with a few friends. Quiet enough to talk in.",
+     "three friends sharing one table for a project."),
+    ("the-watering-hole",
+     "Lots of people near each other, all doing their own thing. "
+     "You do not have to talk to anyone.",
+     "everyone drawing quietly at the same big table."),
+    ("the-library",
+     "Everyone sharing a space to think or learn in. Together, but separately.",
+     "the whole class reading at the same time."),
+    # The habitat holds the other four, so it spans the grid rather than
+    # sitting in it as a fifth equal tile.
+    ("the-habitat",
+     "The whole space that holds the other four inside it. "
+     "Your classroom. Your home.",
+     "look around the room you are in. Where would a cave go? "
+     "Where is the campfire?"),
+]
+
+_PLACES_HEADING = "## The five places"
+
+
+def _place_names(out_families):
+    """{slug: name} for the Places realm, from the built deck."""
+    for fam in out_families:
+        if fam["slug"] == "places":
+            return {c["slug"]: c["name"] for c in fam["cards"]}
+    return {}
+
+
+def _place_cards_html(out_families):
+    """The five place cards as a grid, each showing its real card face.
+
+    The face is the same SVG the deck and the print sheets use, so a child sees
+    on this page exactly the card they would be handed. It is decorative here:
+    the card's name is the <h3> right beside it, and alt text repeating that
+    name would make a screen reader say everything twice."""
+    names = _place_names(out_families)
+    cards = []
+    for slug, line, try_it in PLACES:
+        name = names.get(slug)
+        if not name:
+            print(f"  ! place-explorers: no places/{slug} card", file=sys.stderr)
+            continue
+        wide = " wide" if slug == "the-habitat" else ""
+        cards.append(
+            f'<article class="placecard{wide} place-{slug}">'
+            f'<img class="placecard-face" src="faces/places--{slug}.svg" alt="" '
+            f'width="750" height="1050" loading="lazy" decoding="async">'
+            f'<div class="placecard-text">'
+            f'<h3>{e(name)}</h3>'
+            f'<p>{e(line)}</p>'
+            f'<p class="tryit"><strong>Try it:</strong> {e(try_it)}</p>'
+            f'</div></article>')
+    return '<div class="places-grid">' + "".join(cards) + "</div>"
+
+
+def _place_cards_md(out_families):
+    """The same five cards as Markdown, for the .md endpoint."""
+    names = _place_names(out_families)
+    out = []
+    for slug, line, try_it in PLACES:
+        name = names.get(slug)
+        if not name:
+            continue
+        out += [f"### {name}", "",
+                f"![{name}](faces/places--{slug}.svg)", "",
+                line, "", f"**Try it:** {try_it}", ""]
+    return "\n".join(out)
+
+
+def _place_explorers_parts(root):
+    """The prose source, split either side of the generated card grid."""
+    src = (root / "cavendish-cards-place-explorers.md").read_text(encoding="utf-8")
+    if _PLACES_HEADING not in src:
+        sys.exit(f"place-explorers: source is missing {_PLACES_HEADING!r}")
+    before, after = src.split(_PLACES_HEADING, 1)
+    return before, after
+
+
+def place_explorers_md(root, out_families):
+    """The full page as Markdown: prose source + generated cards spliced in."""
+    before, after = _place_explorers_parts(root)
+    return (before + _PLACES_HEADING + "\n\n"
+            + _place_cards_md(out_families) + "\n" + after.lstrip("\n"))
+
+
+def place_explorers_html(root, out_families):
+    """The five places in children's words, with the deck's own card faces."""
+    before, after = _place_explorers_parts(root)
+    body = "\n".join([
+        md_to_html(before),
+        "<h2>The five places</h2>",
+        _place_cards_html(out_families),
+        md_to_html(after),
+    ])
+    return _standalone_page(
+        "Place Explorers",
+        "The five Cavendish places in children's words, for ages about 7 to 11 — "
+        "cave, campfire, watering hole, library, and habitat, with classroom "
+        "examples and what to do when the place you need isn't there.",
+        "place-explorers", "Skip to the places", "Place Explorers", "place-explorers",
+        body,
+        tagline="Every room should have a spot for how you feel. "
+                "Here are the five, in children's words.")
 
 
 def group_needs_html(root):
@@ -630,7 +780,10 @@ def group_needs_html(root):
         "skill description to hand an AI, with the rules that keep it a design brief "
         "and not a report on people.",
         "group-needs", "Skip to the method", "Group access needs", "group-needs",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="Many spreads, one room, and no counting. How to turn what a "
+                "group asked for into a brief the room can act on, without it "
+                "becoming a report on anybody.")
 
 
 def livable_worlds_html(root):
@@ -639,7 +792,10 @@ def livable_worlds_html(root):
         "Livable worlds checklist",
         "A companion audit for the deck: run it on the room, the routine, the kit, or the system \u2014 never on the person \u2014 to find what to change.",
         "livable-worlds", "Skip to the checklist", "Livable worlds checklist", "livable-worlds",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="Run it on the room, the routine, the kit, or the system. Never "
+                "on the person. Every box that comes up short is a design "
+                "brief.")
 
 
 def privacy_html(root):
@@ -648,7 +804,10 @@ def privacy_html(root):
         "Privacy & security",
         "What Cavendish Cards keeps (almost nothing), how it stays on your device, and the security measures behind the site.",
         "privacy", "Skip to the privacy details", "Privacy & security", "privacy",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="Nothing leaves your device, because there is nowhere for it to "
+                "go: no server, no database, no analytics, no third parties. "
+                "Also how to tell us if you find a hole.")
 
 
 def not_found_html():
@@ -675,8 +834,8 @@ or email <a href="mailto:stimpunks@stimpunks.org">stimpunks@stimpunks.org</a>.</
         "That page isn't here. The deck, the zone builder, and the guidebook are.",
         "not-found", "Skip to the ways back", "This page isn't here", "404",
         body,
-        tagline="A calm, no-scoring deck for naming sensory and interaction needs. "
-                "The page you asked for isn't here — these are.")
+        tagline="Every other page on this site still works. "
+                "These are the main ones.")
 
 
 def changelog_html(root):
@@ -685,7 +844,9 @@ def changelog_html(root):
         "Changelog",
         "A running summary of notable changes to the Cavendish Cards deck and website.",
         "changelog", "Skip to the changelog", "Changelog", "changelog",
-        md_to_html(src))
+        md_to_html(src),
+        tagline="What changed in the deck and on the site, newest first — cards "
+                "added and reworded under Deck, everything else under Site.")
 
 
 def _load_facilitator():
@@ -724,7 +885,10 @@ def facilitator_html(root):
         "Facilitator Sheet",
         "A short guide for support staff: the seven ways to play, the sharing model, what to do with a pile of spreads, and how to respond to one.",
         "facilitator", "Skip to the facilitator sheet", "Facilitator Sheet",
-        "facilitator", body)
+        "facilitator", body,
+        tagline="For whoever is holding the space. The ways to play, how "
+                "sharing works, and what to do when somebody lays a spread in "
+                "front of you.")
 
 
 def guidebook_html(out_families):
@@ -1190,7 +1354,7 @@ def implementation_md(out_families):
 _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html", "/facilitator.html",
-               "/example-spreads.html", "/group-needs.html", "/livable-worlds.html",
+               "/example-spreads.html", "/place-explorers.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
@@ -1334,6 +1498,7 @@ _CARD_CITING_DOCS = [
     "cavendish-cards-facilitator-sheet.md",
     "cavendish-cards-starter-deck.md",
     "cavendish-cards-example-spreads.md",
+    "cavendish-cards-place-explorers.md",
     "cavendish-cards-livable-worlds.md",
     "cavendish-cards-group-needs.md",
     "cavendish-cards-why-sheet.md",
@@ -1741,6 +1906,8 @@ def print_html(sheets, total_cards):
         f"— {total_cards} cards on {pages} sheets, nine to a page, ready to cut. "
         f"Nothing to set up, no account, free and CC0.",
         "sheets", "Skip to the sheets", "Print the deck", "print", body,
+        tagline="The whole deck at playing-card size, nine to a sheet, ready to "
+                "cut. Nothing to choose, because a deck is a deck.",
         script="print.js")
 
 
@@ -1787,6 +1954,8 @@ def _git_date(root, filename):
 GENERATED_FROM = {
     "guidebook": ["cards", "scripts/build-guidebook.py"],
     "implementation": ["cards", "scripts/build-site.py"],
+    "place-explorers": ["cards", "cavendish-cards-place-explorers.md",
+                        "scripts/build-site.py"],
 }
 
 
@@ -1844,6 +2013,7 @@ _LLMS_SECTIONS = [
         ("guidebook", "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document."),
         ("facilitator", "The sheet for whoever is holding the space. Also a print PDF."),
         ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
+        ("place-explorers", "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into."),
         ("implementation", "Turning a spread into changes to the room, on any budget."),
         ("group-needs", "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone."),
         ("livable-worlds", "A checklist for building spaces that fit bodyminds."),
@@ -1953,6 +2123,7 @@ def _write_service_worker(root, web, faces):
                  "badges.js", "print.html", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
+                 "place-explorers.html", "group-needs.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
                  "changelog.html"):
         p = web / name
@@ -1985,6 +2156,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
+        "/place-explorers.html",
         "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
         "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
@@ -2126,6 +2298,8 @@ def main():
     (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
+    (web / "place-explorers.html").write_text(
+        place_explorers_html(root, out_families), encoding="utf-8")
     (web / "group-needs.html").write_text(group_needs_html(root), encoding="utf-8")
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
@@ -2151,7 +2325,8 @@ def main():
     _gb_md, _, _ = gb.build_markdown(cards_dir)
     (root / "cavendish-cards-guidebook.md").write_text(_gb_md, encoding="utf-8")
     _md_written = _write_md_endpoints(
-        root, web, {"implementation": _impl_md, "guidebook": _gb_md})
+        root, web, {"implementation": _impl_md, "guidebook": _gb_md,
+                    "place-explorers": place_explorers_md(root, out_families)})
     _write_llms_txt(web)
     _write_security_txt(web)
 

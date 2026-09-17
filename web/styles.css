@@ -48,6 +48,7 @@
   --place-watering-hole: #e4efee;
   --place-library: #efeaf1;
   --place-habitat: #e9f0e6;
+  --places-ink: #534AB7;
   --maxw: 1040px;
   color-scheme: light;
   font-size: 18px;
@@ -89,6 +90,7 @@
     --place-watering-hole: #01313a;
     --place-library: #0a2c3f;
     --place-habitat: #04322f;
+    --places-ink: #a79df0;
   }
 }
 :root[data-theme="dark"] {
@@ -120,6 +122,7 @@
   --place-watering-hole: #01313a;
   --place-library: #0a2c3f;
   --place-habitat: #04322f;
+  --places-ink: #a79df0;
 }
 
 * { box-sizing: border-box; }
@@ -314,6 +317,62 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   line-height: 1.45;
   font-weight: 700;
   color: var(--ink-strong);
+}
+
+/* Place Explorers (the children's page): the five Places cards as a grid, each
+   showing its real card face. The picture is the same SVG the deck and the
+   print sheets use, so a child sees on the page exactly the card they would be
+   handed — that is the point of the layout, and the reason this is a grid of
+   cards rather than another column of prose.
+
+   The grid breaks out of .prose's 72ch measure to the width of .wrap's content
+   box, which is as wide as the page ever gets; it never exceeds that, so it
+   cannot cause horizontal page scroll. The accent is the Places realm's own
+   purple (the same #534AB7 the card faces carry), lightened in dark mode
+   because at text size the face value does not clear AA on the dark surface.
+
+   No style attributes anywhere: style-src is 'self' with no 'unsafe-inline',
+   so a colour set inline would silently do nothing in production. */
+.prose .places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  width: min(calc(var(--maxw) - 40px), calc(100vw - 48px));
+  margin: 18px 0 30px;
+}
+.prose .placecard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  border: 2px solid var(--places-ink);
+  border-radius: 18px;
+  background: var(--surface);
+}
+.prose .placecard-face {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.prose .placecard-text { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.prose .placecard h3 { margin: 0; font-size: 1.15rem; color: var(--places-ink); }
+.prose .placecard p { margin: 0; }
+.prose .placecard .tryit {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  font-size: .94rem;
+}
+/* The habitat holds the other four, so its card spans the row rather than
+   sitting in it as a fifth equal tile. */
+.prose .placecard.wide { grid-column: 1 / -1; flex-direction: row; align-items: center; }
+.prose .placecard.wide .placecard-face { width: 132px; flex: none; }
+@media (max-width: 460px) {
+  .prose .placecard.wide { flex-direction: column; align-items: stretch; }
+  .prose .placecard.wide .placecard-face { width: 100%; }
 }
 
 /* Facilitator sheet page: matches the print sheet's structure (modes, dot
