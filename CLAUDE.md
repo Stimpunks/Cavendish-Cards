@@ -56,14 +56,19 @@ You run **locally, in this repo, on Ryan's Mac.** Edit files in place, run the b
   - Deck-content or generator change → `python3 scripts/build-all.py`, then stage the regenerated tracked files (guidebook.md, starter-deck.md, `assets/playtest/`, PDFs).
   - Hand-authored web files (`web/index.html`, `web/styles.css`, `web/app.js`) → **no rebuild**; Netlify serves as-is. Just commit them.
   - Generated web outputs are gitignored; commit the *source* (`build-site.py` etc.), never the HTML/JSON.
-- **Validate in place:** `python3 -m py_compile <script>` for Python, `node --check` for JS, then run the relevant generator and grep the output. `build-all.py` skips the PDF steps cleanly if weasyprint isn't installed. `scripts/check-readability.py` is available for prose checks.
+- **Validate in place:** `python3 -m py_compile <script>` for Python, `node --check` for JS, then run the relevant generator and grep the output. `build-all.py` now runs the PDF steps too when the PDF venv exists, and skips them cleanly with setup instructions when it doesn't. `scripts/check-readability.py` is available for prose checks.
 - **Git etiquette:** propose commits with a clear message and let Ryan approve the push (he prefers to hold the trigger on `git push`). Deletions use `git rm`. After a push, verify with `git log` / `git fetch` — don't assume it landed.
 - **Log values-heavy changes** for Helen's batch review (see Collaborators), and keep `CHANGELOG.md` current.
 
 ### Build gotchas (still live)
 
 - **Do not hoist the `weasyprint` import to module level in `build-facilitator-pdf.py`,** and do not change `parse()`'s `(title, kicker, blocks)` return shape — either one breaks the Netlify site build and weasyprint-less machines, because `build-site.py` reuses that `parse()` to render `facilitator.html`.
-- **macOS PDF build** needs native libs (`brew install cairo pango gdk-pixbuf libffi`) plus a Homebrew-Python venv with `DYLD_FALLBACK_LIBRARY_PATH` set (Apple's system Python strips `DYLD_*` under SIP). The facilitator PDF and the print-and-play PDF only regenerate when their builders are run in that venv.
+- **macOS PDF build** needs native libs (`brew install cairo pango gdk-pixbuf libffi`) plus a Homebrew-Python venv — Apple's system Python can never work, because macOS strips `DYLD_*` when launching a SIP-protected binary, so cffi never finds libcairo or libgobject. **`build-all.py` now handles this for you:** it looks for `~/.venvs/cavendish-pdf/bin/python` (override with `CAVENDISH_PDF_PYTHON`) and runs the two PDF steps with it, setting `DYLD_FALLBACK_LIBRARY_PATH` to Homebrew's lib dir in the child env — which survives, because dyld only strips it when launching a *protected* binary and the venv interpreter isn't one. So `python3 scripts/build-all.py` builds everything, PDFs included, from any Python. Create the venv once:
+  ```bash
+  brew install cairo pango gdk-pixbuf libffi
+  /opt/homebrew/bin/python3 -m venv ~/.venvs/cavendish-pdf
+  ~/.venvs/cavendish-pdf/bin/pip install cairosvg weasyprint
+  ```
 
 ## Decision log (settled — don't relitigate without reason)
 
@@ -89,7 +94,7 @@ You run **locally, in this repo, on Ryan's Mac.** Edit files in place, run the b
 **Recently landed (per recent sessions):** the all-ages reframe; `let me unmask` and the anxiety cluster (`no words right now`, `too seen`, `no spotlight`, `you don't have to talk`); the Kind words "given or claimed" reframe + reframed card back; the Interaction card back; ARLES integration (`cavendish-cards-arles.md` → `web/arles.html`, home-page poster + intro mention); the three refused frameworks (no pathology / no deficit / no behaviorism) on the guidebook page; `build-facilitator-pdf.py` wired into `build-all.py`; the playtest-PDF path quirk fixed (`build-all.py` writes the tracked `assets/playtest/cavendish-cards-playtest.pdf`) and `scripts/__pycache__/` gitignored.
 
 **Still live:**
-- **Print PDFs lag after content changes.** Recent edits leave `cavendish-cards-facilitator-sheet.pdf` and `cavendish-cards-playtest.pdf` behind the deck until rebuilt locally in the weasyprint venv and committed. Easy to forget.
+- ~~**Print PDFs lag after content changes.**~~ **Resolved 2026-09-16.** Both PDFs had been stale since July — the facilitator sheet still said “child” throughout, two months after the all-ages reframe, and was missing the rewritten “Map the edges” mode. Both are rebuilt and committed, and `build-all.py` now runs the PDF steps itself (see Build gotchas), so a single `python3 scripts/build-all.py` keeps every tracked generated file current. The residual risk is committing card changes without running it at all — a `--check` mode or a pre-commit hook would close that, and hasn't been built.
 - **Anxiety-cluster Patterns 52–54** are drafted for the Library but unpublished; pending Helen's review before publish/wire, then flip `published=True` and link the pattern lines on `big-step`, `too-seen`, `tender`, `no-spotlight`.
 - **Confirm recent pushes actually landed** — from Claude Code, just `git log` / `git fetch`.
 
