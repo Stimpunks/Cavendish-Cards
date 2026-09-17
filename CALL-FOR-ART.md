@@ -2,7 +2,7 @@
 
 **Cavendish Cards** is a free, open deck that helps a person show how they feel and what they need — by pointing at a picture instead of having to find the words. It's made by and for neurodivergent and Disabled people, and it runs on one belief: **broken systems, not broken people.** A card names a need; it never labels a person.
 
-Right now the deck works, but its pictures are placeholders — simple vector shapes we drew in code so the deck could be printed and played while we wait. Every one of them says so on the card. **We're looking for artists to draw the real thing** — and we'd love it to come from our community.
+Right now the deck works, but its pictures are placeholders — simple vector shapes we drew in code so the deck could be printed and played while we wait. They are stand-ins, not the deck's art. **We're looking for artists to draw the real thing** — and we'd love it to come from our community.
 
 You make the art. We do all the technical work of fitting it onto the cards.
 
@@ -18,7 +18,7 @@ The cards are for **all ages**, so the art should be:
 - **Inclusive** — where you draw people, draw a range of them: different skin tones, bodies, hair, and ages, and Disabled people simply present (ear defenders, mobility aids, AAC devices, and so on) as an ordinary part of the picture. Avoid stereotypes; don't gender things that don't need it.
 - **Your own style** — crayon, paint, ink, collage, cut-paper, digital, whatever you love. The style is the point.
 
-Please **don't** include any text (we add the words), any card border or frame (the card supplies that), or any copyrighted or brand characters. And please **no AI-generated images** — this deck's art is human- and community-made. (Our own placeholders are the one carve-out, and a narrow one: plain vector shapes written by hand as code, marked as placeholders on every card, and replaced by your work the moment it arrives. Nothing here comes from an image generator.)
+Please **don't** include any text (we add the words), any card border or frame (the card supplies that), or any copyrighted or brand characters. And please **no AI-generated images** — this deck's art is human- and community-made. (Our own placeholders are the one carve-out, and a narrow one: plain vector shapes written by hand as code, never passed off as anything else — this file, the README and the site all say they are stand-ins — and replaced by your work the moment it arrives. Nothing here comes from an image generator.)
 
 ## What to draw
 

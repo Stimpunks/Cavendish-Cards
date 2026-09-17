@@ -2038,9 +2038,11 @@ _LLMS_SUMMARY = (
 _LLMS_BODY = [
     "Cavendish Space holds three things: a pictorial card deck, a tool for zoning a "
     "room into the five Cavendish zones, and the model behind both. Everything here "
-    "is dedicated to the public domain under CC0 1.0. The deck's art is human- and "
-    "community-made — no AI art; until it arrives, each card carries a placeholder "
-    "vector illustration drawn in code and marked as one on the card face.",
+    "is dedicated to the public domain under CC0 1.0. The deck's art is to be human- "
+    "and community-made — no AI-generated images, ever. Most of it has yet to be "
+    "drawn, so until a human piece arrives a card carries a placeholder illustration "
+    "hand-written as vector shapes in the project's own code, replaced automatically "
+    "the moment real art lands. The call for art is open.",
 
     "Two things it is not, because it gets mistaken for both. It is **not a "
     "screening or assessment tool**: nothing is scored, normed, or recorded. It is "

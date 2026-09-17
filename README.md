@@ -10,7 +10,7 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 
 **[Play it on the web](https://cavendish.space/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
 
-**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders, drawn in code and marked as such on every card. Any style, warm and human-made, CC0. You draw; we place it.
+**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders, drawn in code and waiting on the real thing. Any style, warm and human-made, CC0. You draw; we place it.
 
 ## Two rules hold the whole thing up
 
@@ -70,7 +70,7 @@ Plus a **blank card** — the deck isn't finished. A person or a facilitator dra
 - [`CALL-FOR-ART.md`](./CALL-FOR-ART.md) — the call for art: what we need from illustrators, and how to submit.
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per realm plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction realm, whose fixed color+shape designs need no illustrator.
-- [`assets/playtest/`](./assets/playtest/) — placeholder card faces, one per card, while human art is in progress. Vector illustrations drawn in code, marked as placeholders on the card. Not the deck's art. See its [README](./assets/playtest/README.md).
+- [`assets/playtest/`](./assets/playtest/) — placeholder card faces, one per card, while human art is in progress. Vector illustrations drawn in code. Not the deck's art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — the seven ways to play, the sharing model, and what to do with a pile of spreads, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a person. Also rendered as a page on the site.
