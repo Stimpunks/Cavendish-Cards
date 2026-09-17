@@ -306,6 +306,7 @@ SITE_NAV = [
     ("Group access needs", "group-needs.html", "group-needs"),
     ("Livable worlds checklist", "livable-worlds.html", "livable-worlds"),
     ("Why this exists", "why.html", "why"),
+    ("Not an AAC board", "not-aac.html", "not-aac"),
     ("Origin & lineage", "origin.html", "origin"),
     ("ARLES & the cards", "arles.html", "arles"),
     ("Privacy & security", "privacy.html", "privacy"),
@@ -326,6 +327,7 @@ SITE_NAV = [
 # cards/** in the same build and cannot disagree.
 MD_ENDPOINTS = {
     "why": "cavendish-cards-why-sheet.md",
+    "not-aac": "cavendish-cards-not-aac.md",
     "origin": "cavendish-cards-origin.md",
     "arles": "cavendish-cards-arles.md",
     "example-spreads": "cavendish-cards-example-spreads.md",
@@ -419,11 +421,19 @@ def _strip_md_links(s):
 def md_to_html(text):
     """Render the small Markdown subset used by the Why sheet and Origin page.
 
-    Handles ## / ### headings, "- " bullet lists, "> " blockquotes, all-dash
-    rules, blank-line paragraphs, and inline links/bold/code/em. Drops a leading
-    "# " title so the page shell owns the single <h1>.
+    Handles ## / ### headings, "- " bullet lists, "> " blockquotes, ">> " pull
+    quotes, all-dash rules, blank-line paragraphs, and inline links/bold/code/em.
+    Drops a leading "# " title so the page shell owns the single <h1>.
+
+    A pull quote is a line the page is built around, promoted out of the body
+    text rather than duplicated beside it — so the sentence appears once, in the
+    source and on the page. ">> " was picked because a plain Markdown reader
+    renders it as a nested blockquote: still a quote, just set in deeper, which
+    is close enough to the intent that the .md endpoint reads correctly with no
+    renderer support. It emits a <p>, not a <blockquote>: these are the page's
+    own words, and <blockquote> would claim they came from somewhere else.
     """
-    out, para, items, quote = [], [], [], []
+    out, para, items, quote, pull = [], [], [], [], []
 
     def flush_para():
         if para:
@@ -442,8 +452,14 @@ def md_to_html(text):
                        + _md_inline(" ".join(quote).strip()) + "</p></blockquote>")
             quote.clear()
 
+    def flush_pull():
+        if pull:
+            out.append('<p class="pull">'
+                       + _md_inline(" ".join(pull).strip()) + "</p>")
+            pull.clear()
+
     def flush_all():
-        flush_para(); flush_list(); flush_quote()
+        flush_para(); flush_list(); flush_quote(); flush_pull()
 
     for raw in text.replace("\r\n", "\n").split("\n"):
         s = raw.strip()
@@ -465,10 +481,12 @@ def md_to_html(text):
         if s.startswith("## "):
             flush_all(); out.append("<h2>" + _md_inline(s[3:]) + "</h2>"); continue
         if s.startswith("- "):
-            flush_para(); flush_quote(); items.append(s[2:]); continue
+            flush_para(); flush_quote(); flush_pull(); items.append(s[2:]); continue
+        if s.startswith(">> "):                       # pull quote, before "> "
+            flush_para(); flush_list(); flush_quote(); pull.append(s[3:]); continue
         if s.startswith("> "):
-            flush_para(); flush_list(); quote.append(s[2:]); continue
-        flush_list(); flush_quote(); para.append(s)
+            flush_para(); flush_list(); flush_pull(); quote.append(s[2:]); continue
+        flush_list(); flush_quote(); flush_pull(); para.append(s)
 
     flush_all()
     return "\n".join(out)
@@ -560,6 +578,17 @@ def why_html(root):
         "Why this exists",
         "Why Cavendish Cards exist: what the deck is, why, and how it serves learners.",
         "why", "Skip to the Why sheet", "Why this exists", "why",
+        md_to_html(src))
+
+
+def not_aac_html(root):
+    src = (root / "cavendish-cards-not-aac.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Cavendish Cards are not AAC",
+        "Why a deck of pictures a person points at is not a communication system \u2014 "
+        "what AAC is for, what the deck is for, and what a person is still owed once "
+        "the cards are on the table.",
+        "not-aac", "Skip to the argument", "Cavendish Cards are not AAC", "not-aac",
         md_to_html(src))
 
 
@@ -781,6 +810,7 @@ def guidebook_html(out_families):
       </div>
       <div class="rules" role="note" aria-label="Not an AAC board">
         <p><strong>Not an AAC board.</strong> {e(NOT_AAC)}</p>
+        <p>The long version, and why the line is where it is: <a href="not-aac.html">Cavendish Cards are not AAC</a>.</p>
       </div>
     </div>
   </header>
@@ -1156,7 +1186,7 @@ def implementation_md(out_families):
 
 _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/space.html", "/guidebook.html", "/implementation.html",
-               "/why.html", "/origin.html", "/arles.html", "/facilitator.html",
+               "/why.html", "/not-aac.html", "/origin.html", "/arles.html", "/facilitator.html",
                "/example-spreads.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
 
@@ -1386,6 +1416,7 @@ _LLMS_SECTIONS = [
         ("rooms", "Zone a room into cave, campfire, watering hole, library, and habitat."),
         ("space", "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses."),
         ("why", "Why the deck exists, who it serves, and the stance behind it."),
+        ("not-aac", "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together."),
     ]),
     ("The deck in use", [
         ("guidebook", "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document."),
@@ -1499,7 +1530,8 @@ def _write_service_worker(root, web, faces):
                  "theme-toggle.js", "rooms.html", "rooms.js", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
-                 "livable-worlds.html", "privacy.html", "changelog.html"):
+                 "livable-worlds.html", "not-aac.html", "privacy.html",
+                 "changelog.html"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
@@ -1530,7 +1562,8 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
-        "/group-needs.html", "/livable-worlds.html", "/privacy.html", "/changelog.html",
+        "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
+        "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -1657,6 +1690,7 @@ def main():
     (web / "guidebook.html").write_text(guidebook_html(out_families), encoding="utf-8")
     (web / "implementation.html").write_text(implementation_html(out_families), encoding="utf-8")
     (web / "why.html").write_text(why_html(root), encoding="utf-8")
+    (web / "not-aac.html").write_text(not_aac_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")

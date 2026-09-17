@@ -39,6 +39,8 @@ The deck is a lens, not a language. It makes one hard-to-voice thing — sensory
 
 Most of all: **this deck sits alongside a person's real communication tools — never in place of them.** If a person needs a way to communicate, they need AAC — this holds at any age, and especially for children. Don't let "they have the cards" become a reason to under-provide it.
 
+The full argument — what AAC is for, what the deck is for, the inclusion test that keeps them apart, and how they work together — is on [Cavendish Cards are not AAC](https://cavendish.space/not-aac.html).
+
 ## Privacy & security
 
 Cavendish Cards keeps nothing about you or a person. No accounts, no analytics, no tracking, no cookies; no spread, card choice, or reflection is ever recorded or sent anywhere. The only things saved live on your own device, for your own benefit — an optional light/dark preference and an offline copy of the site — and you can clear them at any time. The site loads only its own files, fonts included, with no third parties; it is served over HTTPS and ships a strict Content Security Policy and related protections.
