@@ -108,5 +108,17 @@ Work happens **locally, in this clone, on Ryan's Mac, through Claude Code.** Edi
 - **No card asks for soft seating.** The `soft` condition in `rooms.js` ("something soft to sit or lean on") has no card behind it: `something soft` sounds like it and is "a plush thing to hold," a comfort object, so it is kit. That leaves a zoner checkbox a spread can never reach. Either What helps wants a card for somewhere soft to sit, or the condition should leave the seventeen — a deck call, surfaced by the group-brief testing, not made.
 - **`fewer choices` and `keep it the same`** are in no `GROUPS` signpost, so they fall into "More" in the What helps view. "Being in charge" looks like the home for both — an open call, not a decision.
 - **Confirm recent pushes actually landed** (`git log` / `git fetch`).
+- **No DNS CAA records** — researched 2026-09-17, not applied, because it is a DNS change in the Netlify UI rather than anything in this repo. Without CAA, any of ~50 public CAs may issue for cavendish.space. Records to add at the **apex of both `cavendish.space` and `cavendish.app`** (Netlify DNS supports the CAA type; TTL 300):
+  ```
+  0 issue     "letsencrypt.org;accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/54403714"
+  0 issuewild "letsencrypt.org;accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/54403714"
+  0 iodef     "mailto:stimpunks@stimpunks.org"
+  ```
+  That `accounturi` is Netlify's own published ACME account (RFC 8657), from their HTTPS docs — it pins issuance to Netlify, not just to Let's Encrypt. **Three traps, in order of how badly they bite:**
+  1. **`issuewild` must permit Let's Encrypt, not `";"`.** The generic advice (including specification.website's starter set) says forbid wildcards — but Netlify DNS auto-provisions a **wildcard** cert, so `issuewild ";"` would break renewal. Verified: the live cert's SANs are `*.cavendish.app, *.cavendish.space, cavendish.app, cavendish.space`.
+  2. **Both domains are on one certificate**, so a CA checks CAA for every name on it. Setting records on only `.space` leaves `.app` open to any CA; a mistake on *either* domain breaks HTTPS for *both*.
+  3. **Failure is silent and delayed.** The current cert runs to 2026-12-14, so a bad record would not surface until renewal in mid-November. Verify with `dig CAA cavendish.space +short` and <https://sslmate.com/caa/> straight after adding, rather than waiting.
+
+  If renewal ever does fail, relax to plain `0 issue "letsencrypt.org"` (drop `accounturi`) first — that still narrows ~50 CAs to one, and the `accounturi` pin is the part tied to a Netlify-internal value that could change.
 
 **Distinctness to watch in playtest:** pulled every way vs full · meerkat vs buzzy/prickly · round and round vs stormy · let me finish vs tell me first / no rush · let me come and go vs not right now · can't tell vs foggy / far-away.
