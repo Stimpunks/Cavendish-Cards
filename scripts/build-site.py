@@ -864,8 +864,9 @@ PLACES = [
      "You can join in, or just listen.",
      "everyone showing the class something they made."),
     ("the-library",
-     "Everyone sharing a space to think or learn in. Together, but separately.",
-     "the whole class reading at the same time."),
+     "Where we keep what we have worked out, so anyone can find it again. "
+     "Look things up, and add what you know.",
+     "the word wall, or the box of instructions everyone adds to."),
     # The habitat holds the other four, so it spans the grid rather than
     # sitting in it as a fifth equal tile.
     ("the-habitat",
