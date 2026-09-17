@@ -50,14 +50,14 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Decision
 
 ## Working in this repo (Claude Code)
 
-You run **locally, in this repo, on Ryan's Mac.** Edit files in place, run the build scripts, and run git directly — there is no separate container and no file-mirroring step. (This section replaces the old chat-era workflow that used a remote container and a text-only Filesystem bridge. Ignore any doc that says "validate on your own container" or "mirror the edit back" — that does not apply here.)
+Work happens **locally, in this clone, on Ryan's Mac, through Claude Code.** Edit files in place, run the build scripts, and run git directly — there is no container and no file-mirroring step.
 
 - **Before editing:** `git status` / `git diff`. Ryan may have uncommitted local work; don't clobber it.
 - **Rebuild rule:**
-  - Deck-content or generator change → `python3 scripts/build-all.py`, then stage the regenerated tracked files (guidebook.md, starter-deck.md, `assets/playtest/`, PDFs).
-  - Hand-authored web files (`web/index.html`, `web/styles.css`, `web/app.js`) → **no rebuild**; Netlify serves as-is. Just commit them.
+  - Deck-content or generator change → `python3 scripts/build-all.py`, then stage the regenerated tracked files (guidebook.md, implementation-layer.md, starter-deck.md, `assets/playtest/`, PDFs and the input-hash sidecar).
+  - Hand-authored web files (`web/index.html`, `web/deck.html`, `web/rooms.html`, `web/space.html`, `web/styles.css`, `web/app.js`, `web/rooms.js`) → **no rebuild**; Netlify serves as-is. Just commit them.
   - Generated web outputs are gitignored; commit the *source* (`build-site.py` etc.), never the HTML/JSON.
-- **Validate in place:** `python3 -m py_compile <script>` for Python, `node --check` for JS, then run the relevant generator and grep the output. `build-all.py` now runs the PDF steps too when the PDF venv exists, and skips them cleanly with setup instructions when it doesn't. `scripts/check-readability.py` is available for prose checks. **`scripts/make-test-spreads.py`** writes realistic spreads in the deck's copy-button format plus an answer key, for exercising the group-brief method without hand-typing spreads or inventing card names — a dev tool only: it ships nothing, nothing it writes is tracked, and `build-all.py` does not call it. It reads the generated `web/cards.json`, so run `build-site.py` first in a fresh clone.
+- **Validate in place:** `python3 -m py_compile <script>` for Python, `node --check` for JS, then run the relevant generator and grep the output. `build-all.py` runs the PDF steps too when the PDF venv exists, and skips them cleanly with setup instructions when it doesn't. `scripts/check-readability.py` is available for prose checks. **`scripts/make-test-spreads.py`** writes realistic spreads in the deck's copy-button format plus an answer key, for exercising the group-brief method without hand-typing spreads or inventing card names — a dev tool only: it ships nothing, nothing it writes is tracked, and `build-all.py` does not call it. It reads the generated `web/cards.json`, so run `build-site.py` first in a fresh clone.
 - **Git etiquette:** propose commits with a clear message and let Ryan approve the push (he prefers to hold the trigger on `git push`). Deletions use `git rm`. After a push, verify with `git log` / `git fetch` — don't assume it landed.
 - **Log values-heavy changes** for Helen's batch review (see Collaborators), and keep `CHANGELOG.md` current.
 
@@ -110,4 +110,4 @@ You run **locally, in this repo, on Ryan's Mac.** Edit files in place, run the b
 
 ## This file vs the project brief
 
-`cavendish-cards-project-brief.md` is the chat / Project-knowledge version of this context; this `CLAUDE.md` is the Claude Code version. They should stay in step and differ only in workflow (the brief assumes chat + a remote container; this file assumes local execution). If both drift, reconcile them against the repo — don't let them contradict.
+`cavendish-cards-project-brief.md` is the same context in a portable file, for explaining this project anywhere outside the clone. The two used to differ in workflow; that difference is retired and they now say the same things, which is the whole reason to check one against the other. Keep them in step, and when either disagrees with the repo, fix the file — the repo is the source of truth.
