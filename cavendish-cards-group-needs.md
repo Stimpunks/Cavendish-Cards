@@ -96,10 +96,23 @@ Four lists and a zone read. No preamble, no summary of the group, no recommendat
 - **Pacing** — post the plan before the session · one thing at a time · nothing on a single clock
 - **Zones asked for** — the cave, the watering hole
 - **Named but not mapped** — "keep it the same" — nobody has said yet what stays the same. Ask.
+- **A link to the zoner** — https://cavendish.space/rooms.html#asked=quiet,corner,way-out,dim,temperature
 
-That last line matters. An honest remainder is better than a forced fit, and it is the only part of the brief that should generate a question.
+The remainder line matters. An honest remainder is better than a forced fit, and it is the only part of the brief that should generate a question.
 
-Then take the room list into [Zone a room](rooms.html), tick what is already true, and it will tell you which of the five zones the room can hold today and what each of the rest still needs. Print the signs. The room says it itself, and nobody has to ask.
+## The link, and what it does not do
+
+The last line is the room list again, as ids, in a link. Use only the ids listed above, comma-separated, after `#asked=`. Nothing else goes in it — no names, no notes, no weather, no counts.
+
+Open it and [Zone a room](rooms.html) shows the brief beside the room: asked for and already here, asked for and not there yet. Then tick what is true, and it says which of the five zones the room can hold today and what each of the rest still needs. Print the signs. The room says it itself, and nobody has to ask.
+
+Three things the link deliberately does not do.
+
+- **It does not tick anything.** A tick means the room has something. The brief means somebody asked for it. Pre-ticking a brief would make the page claim zones the room cannot hold, which is the one thing that page refuses to do.
+- **It does not carry an order.** The zoner re-sorts the ids into its own order on arrival, so a ranked list cannot sneak a ranking through.
+- **It does not reach a server.** Everything after the `#` stays in the browser and is never put in the request — that is how URLs work, not a promise we are making. The zoner does not save it either. Close the tab and it is gone, the same as a spread.
+
+A link is still a list of what a group of people asked for. Share it the way you would share the brief itself.
 
 ## Handing it to your AI
 

@@ -497,6 +497,35 @@ body.break-open { overflow: hidden; }
 }
 .rooms-saved { margin: 0; font-size: .92rem; }
 
+/* The group-brief overlay. Asked-for conditions are marked in text as well as
+   tint -- a color-only signal says nothing to a screen reader, and this list is
+   the whole reason somebody opened the page. */
+.rooms-asked { margin: 12px 0 0; }
+.rooms-asked-gap, .rooms-asked-have {
+  margin: 10px 0 12px;
+  padding-left: 1.2em;
+  max-width: 72ch;
+}
+.rooms-asked-gap li, .rooms-asked-have li { margin: 8px 0; line-height: 1.5; }
+.rooms-group label.is-asked {
+  background: var(--surface-active);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 8px -10px;
+}
+.rooms-asked-tag {
+  flex: 0 0 auto;
+  margin-top: .1em;
+  font-size: .78rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--cyan-ink);
+  border: 1px solid var(--cyan-ink);
+  border-radius: 999px;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+
 .rooms-result { margin: 12px 0 0; }
 .rooms-lead { max-width: 68ch; font-size: 1.05rem; color: var(--ink-strong); }
 .rooms-held, .rooms-open { margin: 10px 0 12px; padding-left: 1.2em; max-width: 72ch; }

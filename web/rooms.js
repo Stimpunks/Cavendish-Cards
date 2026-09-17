@@ -90,7 +90,113 @@
   var signsBox = document.getElementById("rooms-signs");
   var savedNote = document.getElementById("rooms-saved");
   var jsNote = document.getElementById("rooms-jsnote");
+  var askedSection = document.getElementById("rooms-asked-section");
+  var askedBox = document.getElementById("rooms-asked");
   if (!form || !resultBox) return;
+
+  /* A group brief arrives in the URL fragment: rooms.html#asked=quiet,corner
+   *
+   * It does NOT tick boxes, and that distinction is the reason this is a
+   * separate layer rather than a shortcut into the form. A tick means "the
+   * room has this." A brief means "somebody asked for this." Pre-ticking a
+   * brief would make the page announce zones the room cannot actually hold,
+   * which is the one thing it must never do.
+   *
+   * Read from the fragment and never stored. Everything after "#" stays in the
+   * browser -- no browser puts it in the request -- and this is a list of
+   * access needs somebody named, so it does not go in localStorage either.
+   * Close the tab and it is gone, the same as a spread.
+   *
+   * Rendered in COND order, never the link's order, so a tool that emitted a
+   * ranked list cannot smuggle a ranking through. Nothing here is counted. */
+  var CONDORDER = Object.keys(COND);
+  var asked = [];
+  var askedUnknown = [];
+
+  function readAsked() {
+    asked = [];
+    askedUnknown = [];
+    var m = /(?:^|[#&])asked=([^&]*)/.exec(String(location.hash || ""));
+    if (!m) return;
+    var raw;
+    try { raw = decodeURIComponent(m[1].replace(/\+/g, " ")); } catch (e) { raw = m[1]; }
+    raw.split(/[,\s]+/).forEach(function (t) {
+      var k = t.trim().toLowerCase();
+      if (!k) return;
+      if (COND[k]) {
+        if (asked.indexOf(k) < 0) asked.push(k);
+      } else if (askedUnknown.indexOf(k) < 0 && askedUnknown.length < 12) {
+        askedUnknown.push(k);
+      }
+    });
+    asked.sort(function (a, b) { return CONDORDER.indexOf(a) - CONDORDER.indexOf(b); });
+  }
+
+  /* Mark the boxes the brief named, in text as well as color -- a coordinator
+   * scanning the form should not have to hold the list in their head, and a
+   * tint alone says nothing to a screen reader. */
+  function flagAskedBoxes() {
+    boxes().forEach(function (b) {
+      var lab = b.closest ? b.closest("label") : b.parentNode;
+      if (!lab) return;
+      var on = asked.indexOf(b.value) >= 0;
+      var tag = lab.querySelector(".rooms-asked-tag");
+      if (on) {
+        lab.classList.add("is-asked");
+        // Right after the checkbox, not at the end: appended, it lands past a
+        // two-line label and reads as a stray word.
+        if (!tag) lab.insertBefore(el("span", "rooms-asked-tag", "asked for"), b.nextSibling);
+      } else {
+        lab.classList.remove("is-asked");
+        if (tag) tag.parentNode.removeChild(tag);
+      }
+    });
+  }
+
+  function renderAsked(state) {
+    if (!askedSection || !askedBox) return;
+    if (!asked.length && !askedUnknown.length) {
+      askedSection.hidden = true;
+      return;
+    }
+    askedSection.hidden = false;
+    askedBox.textContent = "";
+
+    var here = asked.filter(function (k) { return state[k]; });
+    var gap = asked.filter(function (k) { return !state[k]; });
+
+    var lead = el("p", "rooms-lead");
+    lead.textContent = gap.length
+      ? "Tick below what the room already has. What stays unticked is what there is still to do."
+      : "Everything the brief named is ticked below. Nothing from it is outstanding.";
+    askedBox.appendChild(lead);
+
+    if (gap.length) {
+      askedBox.appendChild(el("h3", "rooms-open-head", "Asked for, not there yet"));
+      var gl = el("ul", "rooms-asked-gap");
+      gap.forEach(function (k) { gl.appendChild(el("li", null, COND[k])); });
+      askedBox.appendChild(gl);
+    }
+    if (here.length) {
+      askedBox.appendChild(el("h3", "rooms-open-head", "Asked for, already here"));
+      var hl = el("ul", "rooms-asked-have");
+      here.forEach(function (k) { hl.appendChild(el("li", null, COND[k])); });
+      askedBox.appendChild(hl);
+    }
+    if (askedUnknown.length) {
+      var u = el("p", "muted");
+      u.textContent = "The link also named " +
+        joinList(askedUnknown.map(function (k) { return "\u201c" + k + "\u201d"; })) +
+        ", which this page has no condition for. Carry " +
+        (askedUnknown.length === 1 ? "that one" : "those") +
+        " yourself \u2014 a need this page cannot hold is still a need.";
+      askedBox.appendChild(u);
+    }
+    var note = el("p", "muted");
+    note.textContent = "This list came from the link and is not kept in this browser. " +
+      "It says what was asked for. It does not say how many asked, and it is in no order of importance.";
+    askedBox.appendChild(note);
+  }
 
   function boxes() {
     return Array.prototype.slice.call(form.querySelectorAll('input[name="c"]'));
@@ -192,6 +298,7 @@
     }
 
     renderSigns(held.map(function (r) { return r.zone; }));
+    renderAsked(state);
   }
 
   function signCard(z) {
@@ -242,6 +349,27 @@
     });
   }
 
+  var askedClear = document.getElementById("rooms-asked-clear");
+  if (askedClear) {
+    askedClear.addEventListener("click", function () {
+      // Drop the fragment without a navigation, so the ticks and the scroll stay put.
+      if (history.replaceState) {
+        history.replaceState(null, "", location.pathname + location.search);
+      } else {
+        location.hash = "";
+      }
+      readAsked();
+      flagAskedBoxes();
+      render(selected());
+    });
+  }
+
+  window.addEventListener("hashchange", function () {
+    readAsked();
+    flagAskedBoxes();
+    render(selected());
+  });
+
   var printBtn = document.getElementById("rooms-print");
   if (printBtn) {
     printBtn.addEventListener("click", function () {
@@ -268,6 +396,8 @@
     jsNote.textContent = "Ticking a box updates this straight away. Your choices stay in this browser.";
   }
 
+  readAsked();
   load();
+  flagAskedBoxes();
   render(selected());
 })();

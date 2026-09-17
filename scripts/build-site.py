@@ -1180,6 +1180,37 @@ _JSONLD = ('<script type="application/ld+json">\n'
            '</script>')
 
 
+def _check_cond_parity(root, web):
+    """Warn when the group-brief page and rooms.js disagree about the conditions.
+
+    The 17 COND ids in web/rooms.js stopped being private the moment
+    cavendish-cards-group-needs.md started telling coordinators (and their AI)
+    to map needs into them, and rooms.html#asked=<ids> started carrying them in
+    a link. Rename one in the JS and the doc silently teaches an id that no
+    longer resolves, which surfaces as a need quietly dropped from somebody's
+    brief -- exactly the failure the page is written to prevent.
+
+    Non-fatal, like the missing-face warning: a stale doc should not stop a
+    deploy, but it should be impossible to miss in the build output.
+    """
+    js = (web / "rooms.js").read_text(encoding="utf-8")
+    block = re.search(r"var COND = \{(.*?)\n  \};", js, re.S)
+    doc_path = root / "cavendish-cards-group-needs.md"
+    if not block or not doc_path.exists():
+        print("  ! could not check COND parity (rooms.js or the group-brief doc moved)",
+              file=sys.stderr)
+        return
+    in_js = set(re.findall(r'"([a-z-]+)":', block.group(1)))
+    in_doc = set(re.findall(r"^- `([a-z-]+)`", doc_path.read_text(encoding="utf-8"), re.M))
+    for k in sorted(in_js - in_doc):
+        print(f"  ! condition {k!r} is in rooms.js but not in the group-brief doc",
+              file=sys.stderr)
+    for k in sorted(in_doc - in_js):
+        print(f"  ! the group-brief doc lists {k!r}, which rooms.js has no condition for",
+              file=sys.stderr)
+    return len(in_js), len(in_doc)
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -1549,6 +1580,7 @@ def main():
     (web / "404.html").write_text(not_found_html(), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
+    _check_cond_parity(root, web)
     _impl_md = implementation_md(out_families)
     (root / "cavendish-cards-implementation-layer.md").write_text(
         _impl_md, encoding="utf-8")
