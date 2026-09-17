@@ -4,6 +4,12 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-09-17
+
+### Site
+
+- Added a way to ask whether anything was committed without being rebuilt. `build-all.py --check` runs the build and reports any generated file that moved, and an opt-in pre-commit hook runs it for anyone who wants it. The deck's generated files &mdash; the guidebook, the starter deck, the print PDFs &mdash; have drifted behind the cards before, and until now the only defense was remembering. The hook stays off until you turn it on.
+
 ## 2026-09-16
 
 ### Deck

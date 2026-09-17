@@ -11,6 +11,19 @@ Regenerates all derived files from the card files:
 
 Usage (from anywhere):
     python3 scripts/build-all.py
+    python3 scripts/build-all.py --check
+
+--check answers one question: was anything committed without being rebuilt?
+It runs the same build, then reports any tracked file the build changed, and
+exits 1 if there were any. Note that it *does* write -- it is the standard
+"regenerate and diff" check, not a dry run. That is safe, because the builders
+are idempotent: run twice on an unchanged tree and the second run touches
+nothing. It compares git status before and after, so your own edits in
+progress are not mistaken for stale output.
+
+Suitable as a pre-commit hook (a full run is ~2s when nothing has changed):
+
+    git config core.hooksPath hooks     # if you add one under hooks/
 
 The PDF steps are optional: if their extra dependencies aren't installed they are
 skipped with a note, and the run still succeeds. Any required step failing makes
@@ -52,6 +65,23 @@ DEFAULT_PDF_VENV = Path.home() / ".venvs" / "cavendish-pdf" / "bin" / "python"
 BREW_LIBS = ["/opt/homebrew/lib", "/usr/local/lib"]
 
 
+def git_status(root):
+    """path -> two-char porcelain code, or None if git can't answer.
+
+    Gitignored files are excluded by git, so the generated web/ outputs never
+    show up here -- only tracked files and genuinely new untracked ones.
+    """
+    proc = subprocess.run(["git", "status", "--porcelain"], cwd=str(root),
+                          capture_output=True, text=True)
+    if proc.returncode != 0:
+        return None
+    status = {}
+    for line in proc.stdout.splitlines():
+        if len(line) > 3:
+            status[line[3:].strip()] = line[:2]
+    return status
+
+
 def pdf_interpreter():
     """Path to a Python that can load the PDF native libs, or None."""
     override = os.environ.get("CAVENDISH_PDF_PYTHON")
@@ -77,6 +107,17 @@ def pdf_env():
 
 
 def main():
+    check = "--check" in sys.argv[1:]
+    root = SCRIPTS_DIR.parent
+
+    before = None
+    if check:
+        before = git_status(root)
+        if before is None:
+            print("--check needs a git repository to compare against; "
+                  "cannot verify here.")
+            sys.exit(2)
+
     print("Cavendish Cards: building all outputs\n")
     built, skipped, failed = [], [], []
 
@@ -134,6 +175,29 @@ def main():
         print(f"  FAILED   {script}: {why}")
     if failed:
         sys.exit(1)
+
+    if not check:
+        return
+
+    after = git_status(root)
+    changed = sorted(path for path, code in after.items()
+                     if before.get(path) != code)
+    print()
+    if changed:
+        print("STALE -- rebuilding changed these tracked files:")
+        for path in changed:
+            print(f"  {path}")
+        print("\nThey were committed without being regenerated. Stage them.")
+        sys.exit(1)
+
+    if skipped:
+        print("Up to date, but this check was PARTIAL -- these steps did not run:")
+        for script, why in skipped:
+            print(f"  {script}: {why}")
+        print("Outputs they own could still be stale.")
+        sys.exit(0)
+
+    print("Up to date: every generated file matches its sources.")
 
 
 if __name__ == "__main__":

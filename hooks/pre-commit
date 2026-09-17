@@ -1,0 +1,28 @@
+#!/bin/sh
+# Cavendish Cards pre-commit hook.
+#
+# INERT until you opt in, once per clone:
+#     git config core.hooksPath hooks
+# and to stop:
+#     git config --unset core.hooksPath
+#
+# What it does: runs the full build and refuses the commit if that changed any
+# tracked file -- which means something was about to be committed without being
+# regenerated. Quiet when everything is current; the build takes about two
+# seconds on an unchanged tree.
+#
+# Bypass a single commit with:  git commit --no-verify
+#
+# Caveat worth knowing: the build reads the working tree, not the index. If you
+# staged only part of your changes (git add -p), it checks what is on disk
+# rather than what you are committing.
+
+root=$(git rev-parse --show-toplevel) || exit 0
+
+if ! out=$(python3 "$root/scripts/build-all.py" --check 2>&1); then
+    printf '%s\n' "$out"
+    echo
+    echo "pre-commit: generated files were out of date and have been rebuilt."
+    echo "Stage them and commit again, or use --no-verify to skip this check."
+    exit 1
+fi
