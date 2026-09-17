@@ -34,7 +34,7 @@
     "temperature": "a temperature people can change or dress for",
     "room-to-move": "room to move without being in anyone's way",
     "sit-my-way": "permission to sit however you like",
-    "corner": "a corner or nook out of the main flow",
+    "corner": "a corner, nook, or den out of the main flow",
     "way-out": "a way out that doesn't cross in front of everyone",
     "written": "what happens here written down or posted",
     "another-way": "a way to take part other than speaking aloud",

@@ -103,6 +103,7 @@ Work happens **locally, in this clone, on Ryan's Mac, through Claude Code.** Edi
 **Still live:**
 - **Anxiety-cluster Patterns 52–54** are drafted for the Library but unpublished; pending Helen's review before publish/wire, then flip `published=True` and link the pattern lines on `big-step`, `too-seen`, `tender`, `no-spotlight`.
 - **Nothing forces a rebuild before a commit.** `build-all.py` keeps every tracked generated file current, but the residual risk is committing card changes without running it at all. A `--check` mode or a pre-commit hook would close that, and hasn't been built.
+- **No card asks for soft seating.** The `soft` condition in `rooms.js` ("something soft to sit or lean on") has no card behind it: `something soft` sounds like it and is "a plush thing to hold," a comfort object, so it is kit. That leaves a zoner checkbox a spread can never reach. Either What helps wants a card for somewhere soft to sit, or the condition should leave the seventeen — a deck call, surfaced by the group-brief testing, not made.
 - **`fewer choices` and `keep it the same`** are in no `GROUPS` signpost, so they fall into "More" in the What helps view. "Being in charge" looks like the home for both — an open call, not a decision.
 - **Confirm recent pushes actually landed** (`git log` / `git fetch`).
 

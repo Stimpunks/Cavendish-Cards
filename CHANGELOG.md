@@ -28,6 +28,18 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 - **Nothing about this touches the site's promise.** No form, no endpoint, no submission, no storage. The page is prose; the work happens in the coordinator's own tool. Cavendish still stores nothing, and still has no server-side code.
 
+- **A second independent run came back clean on the mapping, and found six more things.** Twelve different spreads, chosen because they exercise the mappings that had just changed. Every condition matched, the card roster did its job, and the session reported it had not needed to guess at a realm once — which was the whole point of adding it.
+
+- **A note field is still the coordinator's to act on, and the method never said so.** It told the tool not to mine the note and then let the matter drop, which meant the most specific information in the pile — a named light in a named hall, a door where leaving required an explanation — quietly went nowhere while the brief said generic things about dim and quiet. Not mining it is right. Letting it fall on the floor is not. The brief now hands it back: not used here, still yours, go and look at what it names.
+
+- **Merging is not a tidiness request.** Twelve spreads with a separator between them are a headcount, and a more revealing one than a number, because they also show which needs arrived together — which is what identifies a person in a small group. The deck's copy button produces one spread at a time, so this is how a real paste arrives unless somebody does something about it. The method now says that plainly, and an un-merged paste is reported back as a strip failure.
+
+- **Dens were lost from a label.** [Zone a room](https://cavendish.space/rooms.html)'s own checkbox has always read "a corner, nook, or den out of the main flow," but the short label used everywhere else dropped the den — so the deck's `a den` card mapping to that condition looked like a stretch rather than the form's own words. Restored in the zoner, its printed output, and the method.
+
+- **The permission list had no rule behind it**, just cards somebody had listed once. It has one now: a card belongs there as well as in a condition when the room allowing it is not enough and somebody has to say so out loud. A room can physically let you sit on the floor and still be a room where nobody does. `let me control it` joins the list on that test.
+
+- **Empty lists keep their heading.** A section that silently disappears reads as nothing to report. If nobody named a permission the brief says so — and says it does not mean none are needed, since the signs carry the standing ones either way.
+
 - **An independent session ran the spreads and found the method's real flaw.** It produced a correct room list, then reported that it had guessed at six cards. The method names which cards map to which condition, and never says which realm any card belongs to — so every card not in a mapping list left it choosing between "this is weather, it goes with the day", "this has no box, it goes to the remainder" and "this is a realm we never aggregate, drop it" by reading the card's tone. That is exactly the inference the page exists to forbid, and the page was requiring it. `not right now` is an Interaction card and `not yet` is a lily pad; `you don't have to talk` is a Kind word and carries no description at all, so a pasted spread gives nothing to identify it by.
 
 - **The fix was already published and never pointed at.** The whole deck is at [/cards.json](https://cavendish.space/cards.json), every card under its realm. The method now says to fetch it first and sort the paste into realms before mapping anything, and to ask the coordinator rather than guess if it cannot.

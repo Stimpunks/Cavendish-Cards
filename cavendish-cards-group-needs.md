@@ -25,6 +25,7 @@ So there is a step before the method, and it is not optional.
 - **Know that a small group is identifying.** In a group of eight, one unusual card is a pointer at a person even with the name gone. If a spread would be recognizable, leave it out of the paste and carry it yourself.
 - **The AI is a third party.** Whatever service you use has its own retention and its own training policy, and neither is ours. Cavendish stores nothing at any point in this — but the moment you paste, that stops being the whole story.
 - **Drop the note field.** The deck's copy button includes anything a person typed into the note box. That is the most personal part of a spread and the least necessary for this. Delete it before you paste.
+- **Merge, and mean it.** Twelve spreads with a separator between them *are* a headcount, and a more revealing one than a number: they also show which needs arrived together, which is the thing that identifies a person in a small group. The deck's copy button hands you one spread at a time, so this is the state a real paste arrives in unless you do something about it. Combine the card lines into one list before you paste.
 - **Do not paste a headcount, and strip the dates.** "Twelve people, one pile" hands over a number before the brief starts, and a date plus a small group narrows who was there. Neither helps and both travel.
 - **Leave out the realms that never aggregate.** Interaction cards, Kind words and growers do not belong in a room brief (the reasons are below), and the simplest way to keep them out of one is to keep them out of the paste. Less goes to a third party that way, too.
 
@@ -50,6 +51,8 @@ Before any of this, fetch **https://cavendish.space/cards.json**. It is the whol
 
 Use the roster to put every line of the paste in its realm first. Then map.
 
+**`your own` needs the prompt, not the name.** Every realm ships one, so the name alone cannot place it — the prompt does: "Something else that helps" is What helps, "A feeling that isn't here yet" is Weather, and so on down the roster. Whichever realm it came from, and the Blank deck's `draw your own` too, it means the same thing and goes to the same line: the deck had no card for what this person needed. If the prompt is missing, ask.
+
 **If you cannot fetch it, ask the coordinator which realm each unfamiliar card came from.** Do not infer a realm from how a card sounds. Guessing a realm is how a mood becomes a room change and how a worn badge ends up in a summary — and you will not know you got it wrong.
 
 ## The room conditions
@@ -64,7 +67,7 @@ Seventeen conditions, each phrased as the change rather than the lack. These are
 - `temperature` — a temperature people can change or dress for. From: the right temperature.
 - `room-to-move` — room to move without being in anyone's way. From: room to move, parallel existence.
 - `sit-my-way` — permission to sit however you like. From: sit my way.
-- `corner` — a corner or nook out of the main flow. From: a corner, a den.
+- `corner` — a corner, nook, or den out of the main flow. From: a corner, a den.
 - `own-spot` — a spot that can stay someone's for the session. From: my own spot, coming back.
 - `way-out` — a way out that doesn't cross in front of everyone. From: a way out, no spotlight.
 - `come-and-go` — leaving and coming back without explaining. From: let me come and go, a way out, coming back.
@@ -80,7 +83,7 @@ Plenty of what a spread names is not a fixture. Forcing it into a room condition
 
 **Kit** — things the space stocks or a person brings. A big squeeze, something soft, busy hands, something to chew, a snack or a drink, a smell that helps. Mostly an afternoon and a budget. The [implementation guidebook](implementation.html) covers doing this on no money.
 
-**Permission** — things that cost nothing and are a rule, not a purchase. Let me stim, let me unmask, sit my way, say it straight, no spotlight. These belong on the signs, in the opening announcement, and in what the staff are told. A permission that is not said out loud has not been given.
+**Permission** — things that cost nothing and are a rule, not a purchase. Let me stim, let me unmask, let me control it, sit my way, say it straight, no spotlight. The test for whether a card belongs here as well as in a condition: **would the room allowing it be enough, or does somebody have to say so out loud?** A room can physically let you sit on the floor and still be a room where nobody does. These belong on the signs, in the opening announcement, and in what the staff are told. A permission that is not said out loud has not been given.
 
 **Pacing** — how the session runs. Keep it the same, fewer choices, tell me first, one thing at a time, let me finish, no rush, and the four lily pads that map to `no-rush`. Those land in both: the room has to allow more than one pace, and the agenda has to actually use it. This is the agenda, not the furniture.
 
@@ -102,7 +105,7 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 **Places go to the zones, not the conditions.** If people laid the cave, the room needs a cave. That is a direct request for a zone and should be read as one.
 
-**Lily pads split three ways, and the mapping table already says which.** `coming back` asks the room to hold a place, so it maps. `i need a minute`, `not yet`, `slowly` and `i want to stay a while` are pace requests, so they map. `ready now` and `all done` are passing states like weather — a person announcing where they are in a moment — so they are never aggregated. `stuck` and `watch first` are neither: they name a moment the vocabulary above has no box for, so they go to the remainder with a question attached. Do not stretch a condition to cover them.
+**Lily pads split three ways, and the mapping table already says which.** `coming back` asks the room to hold a place, so it maps. `i need a minute`, `not yet`, `slowly` and `i want to stay a while` are pace requests, so they map. `ready now` and `all done` are passing states like weather — a person announcing where they are in a moment — so they are never aggregated, and like weather they get one line saying they were laid and are not summarized. Silence would read as though nobody laid them. `stuck` and `watch first` are neither: they name a moment the vocabulary above has no box for, so they go to the remainder with a question attached. Do not stretch a condition to cover them.
 
 ---- 
 
@@ -110,7 +113,7 @@ A card can land in two lists. Let me unmask is a room condition and a permission
 
 Four lists, a zone read, and two kinds of honesty at the end. No preamble, no summary of the group, no recommendations about people.
 
-- **The room needs** — somewhere it can be made quiet · a corner or nook out of the main flow · a way out that doesn't cross in front of everyone · light that can come down · a temperature people can change or dress for
+- **The room needs** — somewhere it can be made quiet · a corner, nook, or den out of the main flow · a way out that doesn't cross in front of everyone · light that can come down · a temperature people can change or dress for
 - **Kit** — something soft to sit or lean on · something to chew · a snack and water within reach
 - **Permission, say it out loud** — stim freely · sit however you like · leave and come back without explaining
 - **Pacing** — post the plan before the session · one thing at a time · nothing on a single clock
@@ -123,9 +126,13 @@ Four lists, a zone read, and two kinds of honesty at the end. No preamble, no su
 
 **The two remainders are different questions, so they are two lines.** "The deck had no card for this" is a gap in the deck — somebody needed something that does not exist yet, and the answer might be a new card. "The method had no box for this" is a gap in *these instructions* — the card exists and this page could not place it. Never merge them, and never resolve either by stretching a condition to fit.
 
+**A list that comes back empty keeps its heading and says so.** Silently dropping a heading is how a coordinator concludes there was nothing to say. If nobody named a permission, write that nobody did — and add that it does not mean none are needed, since the signs on [Zone a room](rooms.html) carry the standing ones whether or not anyone laid a card.
+
 **Put the room list in this page's order**, not the order the cards arrived in and not longest-first. Any order can be read as priority, so use one that obviously is not: the conditions run down this page in a fixed order, so use that. The other lists can run in any order that is not frequency.
 
-**And say what you had to drop.** If an Interaction card, a Kind word, a grower, or a note field is in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present; it is not used in this brief" and nothing more. Do not write "dropped unread" — you had to read it to know what it was, and a phrase that reassures the coordinator about something that did not happen is worse than saying nothing. The only step that can actually keep a note unread is the one before the paste. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
+**And say what you had to drop.** If an Interaction card, a Kind word, a grower, a note field, the dates, or the spreads still separated one from another are in the paste, the strip step above did not happen, and the coordinator needs to know that before the next event — a silent drop teaches them the process works when it did not. Name the *kind*, never the content, and never how many: "a note field was present; it is not used in this brief" and nothing more. Then tell the coordinator the note is still theirs: **a note field is not used in this brief, and is still yours to act on by hand — read it yourself and go look at what it names.** A note is usually the most specific thing in the pile, naming a particular light in a particular hall, and the brief is generic where the note was exact. Not mining it is right. Letting it fall on the floor is not, and saying nothing does exactly that.
+
+Do not write "dropped unread" — you had to read it to know what it was, and a phrase that reassures the coordinator about something that did not happen is worse than saying nothing. The only step that can actually keep a note unread is the one before the paste. A note is the most identifying text in a pile and often the most mappable, which is exactly why it is not yours to mine.
 
 ## The link, and how to build it
 
