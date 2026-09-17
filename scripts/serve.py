@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Serve web/ for local preview, from any Python on the machine.
 
-    python3 scripts/serve.py [port]        # default 8000
+    python3 scripts/serve.py [port]        # port, else $PORT, else 8000
 
 This exists because `python3 -m http.server --directory web` has a landmine in
 it: that module's __main__ block evaluates `os.getcwd()` while building its
@@ -60,12 +60,22 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 def main():
+    # An argument wins; then $PORT, which is how the Claude Code preview
+    # launcher hands over a free port when 8000 is already taken by another
+    # session's server; then the old default. Nothing here needs a fixed port
+    # -- it serves static files, with no callback, webhook, or allowed origin
+    # pointing at it -- so .claude/launch.json sets autoPort and passes none.
     port = 8000
+    source = None
     if len(sys.argv) > 1:
+        port, source = sys.argv[1], "argument"
+    elif os.environ.get("PORT"):
+        port, source = os.environ["PORT"], "$PORT"
+    if source is not None:
         try:
-            port = int(sys.argv[1])
+            port = int(port)
         except ValueError:
-            sys.exit(f"Not a port number: {sys.argv[1]!r}")
+            sys.exit(f"Not a port number ({source}): {port!r}")
 
     if not os.path.isdir(ROOT):
         sys.exit(f"No {ROOT}. Run `python3 scripts/build-site.py` first.")
