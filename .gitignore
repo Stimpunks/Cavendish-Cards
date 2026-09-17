@@ -1,9 +1,11 @@
 
+# Finder metadata. Unanchored, so it matches at any depth -- the old rules
+# were per-directory and missed web/, cards/what-helps/ and
+# assets/playtest/, which is how four of these ended up committed.
+.DS_Store
+
 .Ulysses-Settings.plist
 .Ulysses-Group.plist
-/.DS_Store
-/cards/.DS_Store
-/assets/.DS_Store
 
 # Claude Code local settings (machine-specific permission allowlist)
 /.claude/settings.local.json
@@ -40,4 +42,3 @@ __pycache__/
 /web/sitemap.xml
 /web/robots.txt
 /web/faces/
-/assets/cards/.DS_Store
