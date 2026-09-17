@@ -281,11 +281,28 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .breakbar-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 #to-table { flex: none; }
 
-/* Collapsed site menu (native <details>), reused on every page. */
+/* Collapsed site menu (native <details>), reused on every page.
+
+   The menu MUST cap its own height and scroll. It is absolutely positioned
+   inside a `position: sticky` breakbar, so a menu taller than the viewport is
+   not merely awkward -- its last items are unreachable. Scrolling the page
+   moves the sticky bar and the menu with it, so nothing brings them back.
+   At nineteen entries the open menu measured 692px, which overflows a 375x667
+   phone (iPhone SE / 8, and plenty of Androids) by 81px: Privacy & security
+   and Changelog could not be tapped at all. Nothing caught it, because the
+   nav parity check compares hrefs and not whether you can reach them.
+
+   dvh second so it wins where supported: on a phone, 100vh is the viewport
+   with the browser chrome retracted, which is taller than what you can
+   actually see while the URL bar is showing. */
 .sitenav { position: relative; margin: 0; }
 .sitenav > ul {
   list-style: none; margin: 6px 0 0; padding: 8px 12px;
   position: absolute; z-index: 20; left: 0; min-width: 230px;
+  max-height: calc(100vh - 80px);
+  max-height: calc(100dvh - 80px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--panel); border: 1px solid var(--line);
   border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.14);
 }
