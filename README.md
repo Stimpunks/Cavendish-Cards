@@ -10,7 +10,7 @@ Inspired by oracle decks, but these are not oracle cards. They are pictorial pro
 
 **[Play it on the web](https://cavendish.space/)** — browse the deck and lay a spread. No scoring, no accounts, nothing stored.
 
-**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders. Any style, warm and human-made, CC0. You draw; we place it.
+**[Artists: we need art](./CALL-FOR-ART.md)** — the deck's pictures are still placeholders, drawn in code and marked as such on every card. Any style, warm and human-made, CC0. You draw; we place it.
 
 ## Two rules hold the whole thing up
 
@@ -68,7 +68,7 @@ Plus a **blank card** — the deck isn't finished. A person or a facilitator dra
 - [`CALL-FOR-ART.md`](./CALL-FOR-ART.md) — the call for art: what we need from illustrators, and how to submit.
 - [`assets/templates/`](./assets/templates/) — print-scale SVG card frames, one per realm plus the two card backs, each with an art slot for human-made artwork. See its [README](./assets/templates/README.md) for the workflow.
 - [`assets/cards/`](./assets/cards/) — finished, print-ready card faces. So far the interaction realm, whose fixed color+shape designs need no illustrator.
-- [`assets/playtest/`](./assets/playtest/) — temporary placeholder card faces for playtesting while human art is in progress. Not deck art. See its [README](./assets/playtest/README.md).
+- [`assets/playtest/`](./assets/playtest/) — placeholder card faces, one per card, while human art is in progress. Vector illustrations drawn in code, marked as placeholders on the card. Not the deck's art. See its [README](./assets/playtest/README.md).
 - [`cavendish-cards-facilitator-sheet.md`](./cavendish-cards-facilitator-sheet.md) — one page on the seven ways to play, for support staff. Screen-reader-friendly source.
 - [`cavendish-cards-facilitator-sheet.pdf`](./cavendish-cards-facilitator-sheet.pdf) — the print-ready version of the same sheet.
 - [`cavendish-cards-example-spreads.md`](./cavendish-cards-example-spreads.md) — worked gameplay examples: a moment, a spread someone laid, and how to read it as a design brief for the environment, never a report on a person. Also rendered as a page on the site.
@@ -108,9 +108,9 @@ The deck is playable online at **[cavendish.space](https://cavendish.space/)** �
 
 It works offline and installs like an app. After the first visit the deck keeps working with no connection, and most browsers offer "Install" or "Add to Home Screen" to open it in its own window from a home screen or dock. It follows your device's light or dark setting, with an on-page toggle to switch. The offline copy and your theme choice are the only things kept, and they stay on your device — see [Privacy & security](https://cavendish.space/privacy.html).
 
-## Playtesting before the art exists
+## Playing before the art exists
 
-Human- and community-made artwork takes time, so the deck can be printed and played now with temporary placeholders — plain, code-drawn stand-ins (an "image pending" glyph plus each card's image-cue text), never illustrations. From the repo root:
+The deck's art is human- and community-made, and no AI-generated image is committed here. But none has been submitted yet, and a deck of empty picture windows is not a deck — the whole point is that a person *points at a picture*. So the project takes the same carve-out it takes for its icons and card frames: **placeholder vector illustrations, drawn in code** in [`scripts/card-art.py`](./scripts/card-art.py), one per card, each face marked `PLACEHOLDER ART · HUMAN ART WANTED`. Shapes with coordinates, written by hand and reviewable like any other source — not an image generator, and not the deck's art. The [call for art](./CALL-FOR-ART.md) is still open, and still the goal. From the repo root:
 
 ```
 python3 scripts/build-placeholders.py     # writes assets/playtest/<family>/<slug>.svg
@@ -121,7 +121,7 @@ The placeholder generator has no dependencies; the PDF builder needs `cairosvg` 
 
 ## Contributing
 
-The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. After adding or editing cards, run `python3 scripts/build-all.py` from the repo root to regenerate the starter deck, guidebook, placeholders, web deck, and print-and-play PDF. The guidance inside the template carries the only rules: sentence case, human- and community-made art, no scoring language, counter-deficit framing — nothing that reads a card as a symptom, a target, or a reward. Always capitalize Autistic and Disabled. Illustrators: see the [call for art](./CALL-FOR-ART.md) for the style and specs, then email work to stimpunks@stimpunks.org — we handle placement. (The card frames live in [`assets/templates/`](./assets/templates/) if you'd rather drop artwork into the slot yourself.)
+The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it in, and open a pull request. After adding or editing cards, run `python3 scripts/build-all.py` from the repo root to regenerate the starter deck, guidebook, placeholders, web deck, and print-and-play PDF. The guidance inside the template carries the only rules: sentence case, human- and community-made art (with a motif in `scripts/card-art.py` to stand in until it arrives), no scoring language, counter-deficit framing — nothing that reads a card as a symptom, a target, or a reward. Always capitalize Autistic and Disabled. Illustrators: see the [call for art](./CALL-FOR-ART.md) for the style and specs, then email work to stimpunks@stimpunks.org — we handle placement. (The card frames live in [`assets/templates/`](./assets/templates/) if you'd rather drop artwork into the slot yourself.)
 
 ## License
 

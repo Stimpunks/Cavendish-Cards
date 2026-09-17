@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#0F6E56"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#04342C">what helps</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#0F6E56" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#0F6E56" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#0F6E56"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#0F6E56"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">a blanket or umbrella</text><text x="375" y="536" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">making a little roof</text><text x="375" y="572" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">overhead</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><circle cx="315.0" cy="340.0" r="130.0" fill="#0F6E56" fill-opacity="0.14"/><rect x="40.0" y="438.0" width="550.0" height="14.0" rx="7.0" fill="#0F6E56" fill-opacity="0.13"/><line x1="40.0" y1="445.0" x2="590.0" y2="445.0" stroke-opacity="0.45" fill="none" stroke="#0F6E56" stroke-width="3"/><path d="M283.1 438.0 Q283.1 352.9 315.0 352.9 Q346.9 352.9 346.9 438.0 Z" fill="#04342C" fill-opacity="1.0"/><circle cx="315.0" cy="319.4" r="23.6" fill="#04342C" fill-opacity="1.0"/><path d="M109.0 268 Q315.0 108 521.0 268 Q419.0 240 315.0 254 Q211.0 240 109.0 268 Z" fill="#0F6E56" fill-opacity="0.75"/><line x1="315.0" y1="254.0" x2="315.0" y2="296.0" fill="none" stroke="#04342C" stroke-width="8"/></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#0F6E56" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">a den</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Something over me to tuck under.</text>
 </svg>

@@ -12,7 +12,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 
 - **Broken systems, not broken people.** Counter-deficit throughout. A card names a need, a state, or a change to the environment — never the person as the problem.
 - **Neurodiversity paradigm**, not pathology. Identity-first language; always **capitalize Autistic and Disabled**.
-- **Human/community-made art only — no AI art.** Glossary/Notes are human-authored.
+- **Human/community-made art only — no AI art.** Glossary/Notes are human-authored. **One carve-out, added 2026-09-16:** until human art arrives, every card carries a *placeholder vector illustration* drawn in code in `scripts/card-art.py` and marked `PLACEHOLDER ART · HUMAN ART WANTED` on the face. Shapes with coordinates, hand-written and reviewable like any other source — never a generative-image tool. The call for art is still open and still the goal; see the Decision log.
 - Nothing about us without us. Helen Edgar (Autistic Realms) owns the values-heavy and Autistic-community calls (see Collaborators for the current, looser review pattern).
 
 ## The realms (as of this handoff — the generators compute exact counts)
@@ -32,6 +32,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 - Ryan's local clone (Claude edits here via Filesystem MCP): **/Users/ryan/Documents/GitHub/Cavendish-Cards/**
 - Deployed web app: **https://cavendish.space/** (Netlify; builds `web/` via `scripts/build-site.py`). All in-repo links point to cavendish.space.
 - Card art submissions → **stimpunks@stimpunks.org** (see CALL-FOR-ART.md). CC0, no AI.
+- **Card faces.** `assets/cards/<family>/<slug>.svg` is finished art and wins when present (so far only Interaction). Everything else gets a placeholder face from `build-placeholders.py`, whose picture comes from `scripts/card-art.py` — one motif function per card, registered in its `MOTIFS` dict. Adding a card means adding a motif; the build reports missing ones.
 
 ## How Claude and Ryan collaborate (workflow)
 
@@ -57,6 +58,7 @@ It is **not** a screening/assessment tool and **not** an AAC board (see Boundari
 
 ## Decision log (settled — don't relitigate without reason)
 
+- **Placeholder vector art is allowed; AI-generated art is not (2026-09-16).** The human-art rule stands for the deck's real art. But since the call for art opened, **zero** human pieces have been submitted, and the deck shipped 88 cards whose picture window was an empty dashed box — which defeats the entire premise, since a person is meant to *point at a picture*. So the carve-out already in force for the favicon, the app icons, and the card frames now covers card faces: plain vector illustration, hand-written as code in `scripts/card-art.py`, marked `PLACEHOLDER ART · HUMAN ART WANTED` on every face, and replaced automatically the moment a finished face lands in `assets/cards/`. **No generative-image tool, ever.** Image cues are no longer printed on the card — they are the brief the illustration was drawn from, and a card must work with no reading at all. Logged for Helen's batch review.
 - **All ages, not just children** (per Helen's request). The deck's framing was broadened from child-specific to all ages: `child` → `person`, `adult` → `facilitator` where it means the support role, or age-neutral phrasing otherwise; the "adult layer" term of art is now the **"facilitator layer."** Self-use and peer-use are first-class (Kind words are self-affirmation on the web; example spread 8 is an adult using the deck for themselves, no facilitator). Child-safety commitments are retained and children are still named explicitly (e.g. the AAC-alongside line). Origin's historical "children with PMLD" / "adult professionals" wording is left as-is. **Resolved (was an open item):** added `let me unmask` (What helps) — a niche-construction *need* (permission and a safe space to unmask), which passes the inclusion test as a request to the environment, not a "you are masking" behavior-label. The deck still never asks anyone to name masking as a meta-observation; `let me unmask` and `no-spotlight` address the masking *pressure*, not the mask itself. Logged for Helen's batch review.
 
 - **Not an AAC board.** Inclusion test (in `CARD.md`): a card earns its place if it names a hard-to-voice inner state or a niche-construction need AND carries a reframe — not if it's a want/object/action a person could request. "can't tell" (experience) belongs; "hungry" (request) does not. The deck sits **alongside** real AAC, never replacing it (child-safety line, in README + guidebook).

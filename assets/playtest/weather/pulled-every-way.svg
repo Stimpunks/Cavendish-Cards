@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#BA7517"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#412402">weather</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#BA7517" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#BA7517" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#BA7517"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#BA7517"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#412402" opacity="0.75">a small figure with arrows</text><text x="375" y="536" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#412402" opacity="0.75">tugging outward in every</text><text x="375" y="572" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#412402" opacity="0.75">direction at once</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><line x1="407.0" y1="268.0" x2="519.0" y2="268.0" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="505.3,276.2 519.0,268.0 505.3,259.8" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="380.1" y1="333.1" x2="459.2" y2="412.2" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="443.7,408.4 459.2,412.2 455.4,396.7" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="315.0" y1="360.0" x2="315.0" y2="472.0" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="306.8,458.3 315.0,472.0 323.2,458.3" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="249.9" y1="333.1" x2="170.8" y2="412.2" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="174.6,396.7 170.8,412.2 186.3,408.4" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="223.0" y1="268.0" x2="111.0" y2="268.0" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="124.7,259.8 111.0,268.0 124.7,276.2" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="249.9" y1="202.9" x2="170.8" y2="123.8" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="186.3,127.6 170.8,123.8 174.6,139.3" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="315.0" y1="176.0" x2="315.0" y2="64.0" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="323.2,77.7 315.0,64.0 306.8,77.7" fill="none" stroke="#BA7517" stroke-width="8"/><line x1="380.1" y1="202.9" x2="459.2" y2="123.8" fill="none" stroke="#BA7517" stroke-width="8"/><polyline points="455.4,139.3 459.2,123.8 443.7,127.6" fill="none" stroke="#BA7517" stroke-width="8"/><path d="M289.0 320.0 Q289.0 250.6 315.0 250.6 Q341.0 250.6 341.0 320.0 Z" fill="#412402" fill-opacity="1.0"/><circle cx="315.0" cy="223.3" r="19.2" fill="#412402" fill-opacity="1.0"/></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#BA7517" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">pulled every way</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Too many things pulling at me at once.</text>
 </svg>

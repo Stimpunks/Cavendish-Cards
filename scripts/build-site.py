@@ -1281,8 +1281,9 @@ _LLMS_SUMMARY = (
 _LLMS_BODY = [
     "Cavendish Space holds three things: a pictorial card deck, a tool for zoning a "
     "room into the five Cavendish zones, and the model behind both. Everything here "
-    "is dedicated to the public domain under CC0 1.0, and the card art is "
-    "human-made — no AI art.",
+    "is dedicated to the public domain under CC0 1.0. The deck's art is human- and "
+    "community-made — no AI art; until it arrives, each card carries a placeholder "
+    "vector illustration drawn in code and marked as one on the card face.",
 
     "Two things it is not, because it gets mistaken for both. It is **not a "
     "screening or assessment tool**: nothing is scored, normed, or recorded. It is "
@@ -1453,7 +1454,7 @@ def main():
             if finished.exists():
                 face_svg = finished.read_text(encoding="utf-8")
             elif slug in bp.FAM:
-                face_svg = bp.build_svg(slug, name, cue, prompt)
+                face_svg = bp.build_svg(slug, cslug, name, cue, prompt)
             else:
                 print(f"  ! no face for {slug}/{cslug}", file=sys.stderr)
                 continue

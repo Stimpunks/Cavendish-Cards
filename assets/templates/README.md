@@ -23,6 +23,8 @@ Each front holds two relevant pieces:
 
 Art is human- and community-made. The frame holds the layout; it never supplies the picture. Don't paste AI-generated images.
 
+Until a human piece arrives for a card, the deck ships a **placeholder vector illustration** in that window — drawn in code by [`../../scripts/card-art.py`](../../scripts/card-art.py) and marked `PLACEHOLDER ART · HUMAN ART WANTED` on the face. See [`../playtest/README.md`](../playtest/README.md) for why. Those are stand-ins, not the deck's art; a finished face dropped into [`../cards/`](../cards/) replaces one automatically.
+
 ## Anatomy
 
 - **Family tag** (top-left) — the family name in its color. Matches the `Family` field and the `cards/<family>/` folder.

@@ -15,7 +15,7 @@ Broken systems, not broken people. A person laying *cave, buzzy, headphones* has
 Each card is one small spec:
 
 - **Name** — the words under the picture. For the facilitators. A person never needs to read them.
-- **Image cue** — a motif for the illustrator. All deck art is human- and community-made; these are starting points, not finished art.
+- **Image cue** — a motif for the illustrator. All deck art is human- and community-made; these are starting points, not finished art. Until a human piece arrives, each card carries a placeholder vector illustration drawn from its cue, marked as a placeholder on the card face.
 - **Prompt** — an optional line someone can voice, or the person can read. Gentle, never a demand.
 
 Sentence case throughout. Always capitalize Autistic and Disabled.

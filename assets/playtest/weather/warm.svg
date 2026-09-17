@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#BA7517"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#412402">weather</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#BA7517" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#BA7517" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#BA7517"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#BA7517"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#412402" opacity="0.75">a cozy glow, wrapped up</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><circle cx="315.0" cy="300.0" r="214.0" fill="#BA7517" fill-opacity="0.08"/><circle cx="315.0" cy="300.0" r="168.0" fill="#BA7517" fill-opacity="0.14"/><circle cx="315.0" cy="300.0" r="122.0" fill="#BA7517" fill-opacity="0.2"/><circle cx="315.0" cy="300.0" r="76.0" fill="#BA7517" fill-opacity="0.26"/><path d="M279.7 428.0 Q279.7 333.9 315.0 333.9 Q350.3 333.9 350.3 428.0 Z" fill="#412402" fill-opacity="1.0"/><circle cx="315.0" cy="297.0" r="26.0" fill="#412402" fill-opacity="1.0"/><path d="M197.0 252 Q315.0 206 433.0 252 L453.0 432 L177.0 432 Z" fill="#BA7517" fill-opacity="0.7"/><path d="M177.0 424 q34 18 68 0 q34 -18 68 0 q34 18 68 0" stroke-opacity="0.5" fill="none" stroke="#412402" stroke-width="6"/></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#BA7517" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">warm</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Settled and safe.</text>
 </svg>

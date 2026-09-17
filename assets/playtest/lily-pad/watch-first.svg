@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#3B6D11"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#173404">lily pad</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#3B6D11" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#3B6D11" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#3B6D11"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#3B6D11"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#173404" opacity="0.75">eyes at the edge of a</text><text x="375" y="536" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#173404" opacity="0.75">group</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><rect x="40.0" y="424.0" width="550.0" height="14.0" rx="7.0" fill="#3B6D11" fill-opacity="0.13"/><line x1="40.0" y1="431.0" x2="590.0" y2="431.0" stroke-opacity="0.45" fill="none" stroke="#3B6D11" stroke-width="3"/><path d="M272.3 396.0 Q272.3 322.1 300.0 322.1 Q327.7 322.1 327.7 396.0 Z" fill="#3B6D11" fill-opacity="0.5"/><circle cx="300.0" cy="293.0" r="20.5" fill="#3B6D11" fill-opacity="0.5"/><path d="M346.3 410.0 Q346.3 336.1 374.0 336.1 Q401.7 336.1 401.7 410.0 Z" fill="#3B6D11" fill-opacity="0.5"/><circle cx="374.0" cy="307.0" r="20.5" fill="#3B6D11" fill-opacity="0.5"/><path d="M420.3 396.0 Q420.3 322.1 448.0 322.1 Q475.7 322.1 475.7 396.0 Z" fill="#3B6D11" fill-opacity="0.5"/><circle cx="448.0" cy="293.0" r="20.5" fill="#3B6D11" fill-opacity="0.5"/><path d="M494.3 410.0 Q494.3 336.1 522.0 336.1 Q549.7 336.1 549.7 410.0 Z" fill="#3B6D11" fill-opacity="0.5"/><circle cx="522.0" cy="307.0" r="20.5" fill="#3B6D11" fill-opacity="0.5"/><path d="M118.9 410.0 Q118.9 327.1 150.0 327.1 Q181.1 327.1 181.1 410.0 Z" fill="#173404" fill-opacity="1.0"/><circle cx="150.0" cy="294.6" r="22.9" fill="#173404" fill-opacity="1.0"/><ellipse cx="150.0" cy="296.0" rx="40.0" ry="26.0" fill="#fdf6e3" stroke="#173404" stroke-width="6"/><circle cx="158.0" cy="296.0" r="13.0" fill="#173404"/><path d="M198 296 q76 8 118 46" stroke-dasharray="12 10" fill="none" stroke="#3B6D11" stroke-width="5"/></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#3B6D11" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">watch first</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Let me look before I join.</text>
 </svg>

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#0F6E56"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#04342C">what helps</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#0F6E56" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#0F6E56" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#0F6E56"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#0F6E56"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">a figure stepping out</text><text x="375" y="536" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">through an open doorway</text><text x="375" y="572" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">and back in — a loop of</text><text x="375" y="608" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#04342C" opacity="0.75">coming and going</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><rect x="40.0" y="444.0" width="550.0" height="14.0" rx="7.0" fill="#0F6E56" fill-opacity="0.13"/><line x1="40.0" y1="451.0" x2="590.0" y2="451.0" stroke-opacity="0.45" fill="none" stroke="#0F6E56" stroke-width="3"/><rect x="251.0" y="150.0" width="150.0" height="286.0" rx="10.0" fill="#0F6E56" fill-opacity="0.5"/><rect x="251.0" y="150.0" width="150.0" height="286.0" rx="10.0" fill="none" stroke="#04342C" stroke-width="11"/><path d="M401.0 150.0 L475.0 124.0 L475.0 462.0 L401.0 436.0 Z" fill="#0F6E56" fill-opacity="0.22"/><circle cx="457.0" cy="293.0" r="7.0" fill="#04342C"/><path d="M361.0 400 q160 30 160 -80 q0 -96 -150 -60" stroke-dasharray="18 14" fill="none" stroke="#0F6E56" stroke-width="9"/><path d="M466.0 464.0 Q466.0 408.0 487.0 408.0 Q508.0 408.0 508.0 464.0 Z" fill="#04342C" fill-opacity="1.0"/><circle cx="487.0" cy="386.0" r="15.5" fill="#04342C" fill-opacity="1.0"/><line x1="411.0" y1="260.0" x2="345.0" y2="260.0" fill="none" stroke="#04342C" stroke-width="8"/><polyline points="357.9,252.3 345.0,260.0 357.9,267.7" fill="none" stroke="#04342C" stroke-width="8"/></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#0F6E56" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">let me come and go</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">Let me join and slip away as I need.</text>
 </svg>

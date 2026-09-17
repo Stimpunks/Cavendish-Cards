@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+<defs><clipPath id="art-window"><rect x="60" y="150" width="630" height="600" rx="24"/></clipPath></defs>
 <rect x="0" y="0" width="750" height="1050" rx="48" fill="#eee8d5"/>
 <rect x="60" y="60" width="34" height="34" rx="9" fill="#3B6D11"/>
 <text x="108" y="87" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="30" font-weight="500" fill="#173404">lily pad</text>
-<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3" stroke="#3B6D11" stroke-width="3" stroke-dasharray="11 9"/>
-<g id="art-placeholder" opacity="0.6">
-<rect x="300" y="292" width="150" height="118" rx="12" fill="none" stroke="#3B6D11" stroke-width="4"/>
-<circle cx="334" cy="328" r="12" fill="#3B6D11"/>
-<polygon points="315,404 360,350 390,382 424,338 449,404" fill="#3B6D11"/>
-</g>
-<text x="375" y="500" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="27" fill="#173404" opacity="0.75">a gentle raised hand</text>
-<text x="375" y="712" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER · ART TO COME</text>
+<!-- The clip lives on an untransformed group: a clip-path resolves in the
+     element's own user space, so putting both on one <g> would clip against
+     the moved coordinates and shear the top off every picture. -->
+<rect id="art" x="60" y="150" width="630" height="600" rx="24" fill="#fdf6e3"/>
+<g id="art-illustration" clip-path="url(#art-window)"><g transform="translate(60 178)"><g stroke-linecap="round" stroke-linejoin="round"><path d="M149.0 250.0 q-16 26 0 52" stroke-opacity="0.45" fill="none" stroke="#3B6D11" stroke-width="5"/><path d="M115.0 258.0 q-16 26 0 52" stroke-opacity="0.33" fill="none" stroke="#3B6D11" stroke-width="5"/><path d="M81.0 266.0 q-16 26 0 52" stroke-opacity="0.21000000000000002" fill="none" stroke="#3B6D11" stroke-width="5"/><g transform="translate(315.0 300.0) rotate(0) scale(1.000)"><path d="M-96 134 q-14 -108 6 -160 q10 -26 30 -20 q16 4 16 34 l0 46 l0 -132 q0 -30 26 -30 q26 0 26 30 l0 126 l0 -146 q0 -30 26 -30 q26 0 26 30 l0 146 l0 -112 q0 -30 26 -30 q26 0 26 30 l0 208 q0 90 -92 90 q-84 0 -116 -80 Z" fill="#3B6D11" fill-opacity="0.6"/><path d="M-96 134 q-14 -108 6 -160 q10 -26 30 -20 q16 4 16 34 l0 46 l0 -132 q0 -30 26 -30 q26 0 26 30 l0 126 l0 -146 q0 -30 26 -30 q26 0 26 30 l0 146 l0 -112 q0 -30 26 -30 q26 0 26 30 l0 208 q0 90 -92 90 q-84 0 -116 -80 Z" fill="none" stroke="#173404" stroke-width="11"/></g></g></g></g>
+<rect x="60" y="150" width="630" height="600" rx="24" fill="none" stroke="#3B6D11" stroke-width="3"/>
+<text x="375" y="726" text-anchor="middle" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="17" fill="#93a1a1" letter-spacing="2">PLACEHOLDER ART · HUMAN ART WANTED</text>
 <text x="60" y="852" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="58" font-weight="700" fill="#002b36">not yet</text>
 <text x="60" y="916" font-family="'Atkinson Hyperlegible','Atkinson Hyperlegible Next',sans-serif" font-size="29" fill="#586e75">I'm not ready to move.</text>
 </svg>
