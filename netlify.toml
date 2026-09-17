@@ -26,7 +26,20 @@
     # subdomain that is not HTTPS is unreachable for anyone who has visited the
     # apex, for max-age. No `preload` -- the preload list's own operator now
     # advises against it, and removal from it takes months.
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    #
+    # max-age is two years (the spec's production value), raised from one on
+    # 2026-09-17. It is a per-visitor sliding timer: each response resets that
+    # browser's countdown, so this protects anyone returning within 730 days of
+    # their last visit rather than committing the site for two years. Going 1 ->
+    # 2 years does not change the kind of failure, only its duration -- HSTS at
+    # any max-age already makes certificate errors non-bypassable (RFC 6797
+    # 12.1), which is the step that was taken when HSTS went on.
+    #
+    # Rollback is the asymmetric part: max-age=0 is only learned from a
+    # SUCCESSFUL HTTPS response, so the escape hatch needs the thing that would
+    # be broken. The realistic break is a failed renewal, which is what a
+    # mis-set CAA record would cause -- verify those when you add them.
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), browsing-topics=()"

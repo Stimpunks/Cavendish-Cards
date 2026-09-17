@@ -29,7 +29,7 @@ The site loads only its own files. Fonts are served from cavendish.space, not fr
 
 The site is served only over an encrypted connection (HTTPS), and ships a set of rules that tell your browser to lock it down:
 
-- **No slipping back to an unencrypted connection.** Once your browser has been here once, it is told to refuse plain HTTP for this site and any subdomain of it, for a year. A link that starts with `http://` is upgraded by the browser before it is sent, so it never travels in the clear — not even the first request.
+- **No slipping back to an unencrypted connection.** Once your browser has been here once, it is told to refuse plain HTTP for this site and any subdomain of it, for two years. A link that starts with `http://` is upgraded by the browser before it is sent, so it never travels in the clear — not even the first request.
 - **A strict content security policy.** The browser is told to load scripts, styles, fonts, images, and data only from cavendish.space. Inline scripts are refused unless they match a known fingerprint, which blocks injected or third-party code.
 - **No embedding by strangers.** Other websites cannot frame the deck, apart from Stimpunks' own site. This guards against clickjacking.
 - **Locked-down device access.** The page asks for no camera, microphone, or location, and the browser is told to deny them outright.

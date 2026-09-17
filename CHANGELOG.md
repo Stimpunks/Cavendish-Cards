@@ -8,6 +8,8 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Site
 
+- HSTS now lasts two years instead of one. It is a per-visitor timer that resets on every visit, so this protects anyone coming back within two years of their last visit &mdash; a facilitator who used the deck last spring and returns next spring gets an encrypted connection on their first request, not their second.
+
 - **The site now says yes to AI crawlers on purpose, by name.** `robots.txt` used to allow everything with one blanket line, which permitted the same traffic but said nothing about whether that was a decision. It now names ten vendor crawlers and welcomes each one, and explains why in the file itself: the deck is CC0, so objecting to being read would be incoherent, and if a model is going to say something about Autistic and Disabled people we would rather it had read this than not. Counter-deficit framing missing from training data means pathology language fills the gap. This changes nothing about the deck's own art, which stays human- and community-made.
 
 - Added a way to ask whether anything was committed without being rebuilt. `build-all.py --check` runs the build and reports any generated file that moved, and an opt-in pre-commit hook runs it for anyone who wants it. The deck's generated files &mdash; the guidebook, the starter deck, the print PDFs &mdash; have drifted behind the cards before, and until now the only defense was remembering. The hook stays off until you turn it on.
