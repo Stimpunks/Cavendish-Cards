@@ -462,7 +462,12 @@ def site_nav_pretty(current, indent):
 
     Those are read and reviewed as diffs by people, so the block they carry is
     formatted rather than the single line the generated pages get."""
-    out = [f'{indent}<details class="disclose sitenav">',
+    label, href = nav_entry("home")
+    hcur = ' aria-current="page"' if current == "home" else ""
+    out = [f'{indent}<a class="homelink" href="{href}"{hcur}>'
+           '<span class="homelink-icon" aria-hidden="true">\u2302</span>'
+           '<span>Home</span></a>',
+           f'{indent}<details class="disclose sitenav">',
            f'{indent}  <summary>Menu</summary>',
            f'{indent}  <div class="sitenav-panel">']
     for group, entries in nav_groups():
@@ -509,6 +514,31 @@ def _write_hand_authored_navs(web):
     return written
 
 
+def home_link(current):
+    """The Home control in the breakbar.
+
+    A named Home link, not just the site name and not only the menu's first
+    item: people arrive at a page wired to look top-left for the word, and the
+    one route home being an entry inside a collapsed menu means it is not there
+    until you open something. The glyph matches the theme toggle's ☀/☾ pattern
+    (plain text, no emoji, so it takes the current colour) and is aria-hidden,
+    because the word beside it is the accessible name."""
+    label, href = nav_entry("home")
+    cur = ' aria-current="page"' if current == "home" else ""
+    return (f'<a class="homelink" href="{href}"{cur}>'
+            '<span class="homelink-icon" aria-hidden="true">\u2302</span>'
+            '<span>Home</span></a>')
+
+
+def nav_cluster(current):
+    """Home + the collapsed menu: everything the generated nav block holds.
+
+    One function so the generated pages and the five hand-authored ones cannot
+    end up with different controls in the bar. The theme toggle inserts itself
+    after .sitenav at runtime, so the rendered order is Home, Menu, theme."""
+    return home_link(current) + site_nav(current)
+
+
 def site_topbar(current):
     """Sticky top bar for every generated page: the collapsed Menu on the left,
     and a clear route into the deck on the right. Mirrors index.html's breakbar
@@ -517,7 +547,7 @@ def site_topbar(current):
     so they also know what site they're on."""
     return ('<div class="breakbar"><div class="wrap">'
             '<div class="breakbar-left">'
-            + site_nav(current) +
+            + nav_cluster(current) +
             '</div>'
             '<a class="btn" href="deck.html">Open the deck</a>'
             '</div></div>')

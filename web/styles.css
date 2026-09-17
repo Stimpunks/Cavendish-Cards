@@ -248,6 +248,46 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 700;
 }
 .theme-toggle:hover { border-color: var(--cyan); }
+
+/* Home, first in the breakbar. Shaped like the theme toggle beside it so the
+   bar reads as one row of controls, but it is an <a> and not a <button>,
+   because it goes somewhere. The word stays visible at every width: an
+   icon-only home is a guess for anyone who does not already know the glyph,
+   and the whole point is that it is findable without thinking. */
+.homelink {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 13px; border-radius: 999px; margin: 2px 0;
+  border: 1.5px solid var(--line); background: var(--surface);
+  color: var(--ink); font-weight: 700; text-decoration: none;
+}
+.homelink:hover { border-color: var(--cyan); }
+.homelink-icon { font-size: 1.05rem; line-height: 1; }
+
+/* Narrow screens: the bar carries four controls (Home, Menu, theme, Open the
+   deck) and cannot fit them on one row at phone widths, so it wraps. Trimming
+   the padding and dropping the theme toggle's word keeps that to two compact
+   rows rather than two tall ones -- this bar is sticky, so its height is taken
+   off every screenful of every page.
+
+   The theme label is hidden with .visually-hidden and NOT display:none: its
+   icon is aria-hidden, so removing the word from the accessibility tree would
+   leave the button with no accessible name at all. Home keeps its word at
+   every width -- an icon-only home is a guess for anyone who does not already
+   know the glyph, which defeats the point of having it. */
+@media (max-width: 480px) {
+  .homelink, .theme-toggle { padding: 5px 10px; }
+  .breakbar .btn { padding: 7px 13px; }
+  .theme-toggle .theme-toggle-label {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+  }
+}
+/* On the threshold itself: still there, still in the same place, but it does
+   not invite a click to where you already are. */
+.homelink[aria-current="page"] {
+  background: transparent; color: var(--muted); border-style: dashed;
+}
 .theme-toggle-icon { font-size: 1.05rem; line-height: 1; }
 .site-header .theme-toggle { margin: 0 0 10px; }
 
