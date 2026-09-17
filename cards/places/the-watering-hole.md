@@ -10,7 +10,7 @@ figures resting easy near water
 
 ## Prompt
 
-Somewhere to rest, near other people.
+Where we learn from each other.
 
 ## Notes
 

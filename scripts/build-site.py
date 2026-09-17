@@ -860,9 +860,9 @@ PLACES = [
      "A small circle with a few friends. Quiet enough to talk in.",
      "three friends sharing one table for a project."),
     ("the-watering-hole",
-     "Lots of people near each other, all doing their own thing. "
-     "You do not have to talk to anyone.",
-     "everyone drawing quietly at the same big table."),
+     "Lots of people, showing each other what they know. "
+     "You can join in, or just listen.",
+     "everyone showing the class something they made."),
     ("the-library",
      "Everyone sharing a space to think or learn in. Together, but separately.",
      "the whole class reading at the same time."),

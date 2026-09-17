@@ -76,7 +76,7 @@
       id: "watering-hole",
       art: "faces/places--the-watering-hole--art.svg",
       name: "The watering hole",
-      prompt: "Somewhere to rest, near other people.",
+      prompt: "Where we learn from each other.",
       needs: ["room-to-move", "way-out", "come-and-go", "less-to-look-at"],
       sign: "Be near people without joining in. Hover at the edge, drift off, come back. No task, no script."
     },

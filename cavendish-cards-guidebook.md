@@ -52,7 +52,7 @@ The library is where what a group has figured out is kept and shared — shelves
 *Pattern: [14 Interest-Driven Learning](https://stimpunks.org/patterns/library/interest-driven-learning/) · 43 Commons Infrastructure*
 
 ### the watering hole
-*figures resting easy near water* · "Somewhere to rest, near other people."
+*figures resting easy near water* · "Where we learn from each other."
 
 The watering hole is the open, in-between place where people cross paths and talk easily — near others, with no need to join in. It names easy, background togetherness: drifting in and out, overhearing, being among people with no task or script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge. Being near people is the whole point, and joining in stays optional.
 
