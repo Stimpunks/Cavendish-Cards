@@ -298,28 +298,50 @@ def e(s):
 # mirrored by the hand-authored index.html. No JS: a native <details> menu.
 # ---------------------------------------------------------------------------
 
-# Order of the collapsed site menu. (label, href, key)
+# Order of the collapsed site menu: (label, href, key, group).
+#
+# The group is the heading the entry sits under, and group ORDER is the order
+# the groups first appear here -- so there is no second list to keep in step
+# with this one. `None` means ungrouped, rendered above the first heading.
+#
+# This is also the ONE taxonomy: llms.txt builds its sections from these same
+# groups (see _LLMS_DESCRIPTIONS), so the menu a person reads and the index a
+# model reads cannot drift into two different shapes of the same site.
 SITE_NAV = [
-    ("Cavendish Space", "index.html", "home"),
-    ("The deck", "deck.html", "deck"),
-    ("Zone a room", "rooms.html", "rooms"),
-    ("Interaction badges", "badges.html", "badges"),
-    ("Print the deck", "print.html", "print"),
-    ("What is a Cavendish Space?", "space.html", "space"),
-    ("Guidebook", "guidebook.html", "guidebook"),
-    ("Implementation guidebook", "implementation.html", "implementation"),
-    ("Facilitator sheet", "facilitator.html", "facilitator"),
-    ("Example spreads", "example-spreads.html", "example-spreads"),
-    ("Place Explorers (for children)", "place-explorers.html", "place-explorers"),
-    ("Group access needs", "group-needs.html", "group-needs"),
-    ("Livable worlds checklist", "livable-worlds.html", "livable-worlds"),
-    ("Why this exists", "why.html", "why"),
-    ("Not an AAC board", "not-aac.html", "not-aac"),
-    ("Origin & lineage", "origin.html", "origin"),
-    ("ARLES & the cards", "arles.html", "arles"),
-    ("Privacy & security", "privacy.html", "privacy"),
-    ("Changelog", "changelog.html", "changelog"),
+    ("Cavendish Space", "index.html", "home", None),
+
+    ("The deck", "deck.html", "deck", "Use it"),
+    ("Zone a room", "rooms.html", "rooms", "Use it"),
+    ("Interaction badges", "badges.html", "badges", "Use it"),
+    ("Print the deck", "print.html", "print", "Use it"),
+
+    ("Guidebook", "guidebook.html", "guidebook", "The deck in use"),
+    ("Implementation guidebook", "implementation.html", "implementation", "The deck in use"),
+    ("Facilitator sheet", "facilitator.html", "facilitator", "The deck in use"),
+    ("Example spreads", "example-spreads.html", "example-spreads", "The deck in use"),
+    ("Place Explorers (for children)", "place-explorers.html", "place-explorers", "The deck in use"),
+    ("Group access needs", "group-needs.html", "group-needs", "The deck in use"),
+    ("Livable worlds checklist", "livable-worlds.html", "livable-worlds", "The deck in use"),
+
+    ("What is a Cavendish Space?", "space.html", "space", "The model"),
+    ("Why this exists", "why.html", "why", "The model"),
+    ("Not an AAC board", "not-aac.html", "not-aac", "The model"),
+    ("Origin & lineage", "origin.html", "origin", "The model"),
+    ("ARLES & the cards", "arles.html", "arles", "The model"),
+
+    ("Privacy & security", "privacy.html", "privacy", "About this site"),
+    ("Changelog", "changelog.html", "changelog", "About this site"),
 ]
+
+
+def nav_groups():
+    """[(group or None, [(label, href, key), ...])] in SITE_NAV order."""
+    out = []
+    for label, href, key, group in SITE_NAV:
+        if not out or out[-1][0] != group:
+            out.append((group, []))
+        out[-1][1].append((label, href, key))
+    return out
 
 
 # Pages whose HTML this script renders from a Markdown source, keyed by their
@@ -357,7 +379,7 @@ _LLMS_LINK = '<link rel="describedby" type="text/markdown" href="/llms.txt">'
 
 def nav_entry(key):
     """(label, href) for a SITE_NAV key."""
-    for label, href, k in SITE_NAV:
+    for label, href, k, _group in SITE_NAV:
         if k == key:
             return label, href
     raise KeyError(f"no SITE_NAV entry for {key!r}")
@@ -380,14 +402,30 @@ def _md_head_links(key, label):
 
 
 def site_nav(current):
-    """A no-JS collapsed menu (native <details>), consistent across pages."""
-    items = []
-    for label, href, key in SITE_NAV:
-        cur = ' aria-current="page"' if key == current else ""
-        items.append(f'<li><a href="{href}"{cur}>{e(label)}</a></li>')
+    """A no-JS collapsed menu (native <details>), consistent across pages.
+
+    Grouped, because nineteen flat entries is a wall rather than a list. The
+    headings are <p aria-hidden>, with the same words as each <ul>'s aria-label:
+    a screen reader hears "list, Use it, 4 items" and does not hear the heading
+    twice. aria-label rather than aria-labelledby on purpose -- ids would have
+    to be unique per page, and some pages carry this menu twice.
+
+    The panel is a <div> holding several <ul>s rather than one <ul>, so the
+    grouping is real structure and not labels faked with list items."""
+    parts = []
+    for group, entries in nav_groups():
+        items = []
+        for label, href, key in entries:
+            cur = ' aria-current="page"' if key == current else ""
+            items.append(f'<li><a href="{href}"{cur}>{e(label)}</a></li>')
+        if group:
+            parts.append(f'<p class="navgroup" aria-hidden="true">{e(group)}</p>')
+            parts.append(f'<ul aria-label="{e(group)}">{"".join(items)}</ul>')
+        else:
+            parts.append(f'<ul>{"".join(items)}</ul>')
     return ('<details class="disclose sitenav">'
             '<summary>Menu</summary>'
-            f'<ul>{"".join(items)}</ul>'
+            f'<div class="sitenav-panel">{"".join(parts)}</div>'
             '</details>')
 
 
@@ -2000,38 +2038,34 @@ def _write_md_endpoints(root, web, generated):
     return written
 
 
-# llms.txt, curated rather than exhaustive -- the point is to say what matters
-# and in what order, not to restate sitemap.xml. Each entry is (nav key,
-# one-line description); the URL is the page's .md where one exists and its
-# .html where it doesn't. Keep the descriptions plain: models quote them.
-_LLMS_SECTIONS = [
-    ("Start here", [
-        ("deck", "The card player. Lay a spread face-down; turning a card up is the consent."),
-        ("rooms", "Zone a room into cave, campfire, watering hole, library, and habitat."),
-        ("badges", "Make, print, and assemble interaction badges at conference badge size — the green/yellow/red communication badges from Autistic space, plus bulk print and assembly instructions."),
-        ("print", "Print the whole deck at standard playing-card size: every card, nine to a sheet, ready to cut. Nothing to configure."),
-        ("space", "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses."),
-        ("why", "Why the deck exists, who it serves, and the stance behind it."),
-        ("not-aac", "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together."),
-    ]),
-    ("The deck in use", [
-        ("guidebook", "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document."),
-        ("facilitator", "The sheet for whoever is holding the space. Also a print PDF."),
-        ("example-spreads", "Worked examples: a spread someone laid, and how to read it as a design brief."),
-        ("place-explorers", "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into."),
-        ("implementation", "Turning a spread into changes to the room, on any budget."),
-        ("group-needs", "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone."),
-        ("livable-worlds", "A checklist for building spaces that fit bodyminds."),
-    ]),
-    ("Where it comes from", [
-        ("origin", "The Cavendish Space model, its lineage, and who Cavendish was."),
-        ("arles", "How the deck fits the Stimpunks Design Method, and why it stops short of Systems as cards."),
-    ]),
-    ("Optional", [
-        ("changelog", "What changed in the deck and the site, newest first."),
-        ("privacy", "What the site keeps, which is almost nothing."),
-    ]),
-]
+# llms.txt descriptions, keyed by SITE_NAV key. The GROUPING and the ORDER
+# both come from SITE_NAV -- this is only the one-line gloss per page, which is
+# the part llms.txt needs and the menu does not. One taxonomy, so the site
+# cannot present itself to a person in one shape and to a model in another.
+#
+# A key with no entry here is left out of llms.txt: `home` is the only one, and
+# it is the page every other link already leads back to. Keep the descriptions
+# plain; models quote them.
+_LLMS_DESCRIPTIONS = {
+    "deck": "The card player. Lay a spread face-down; turning a card up is the consent.",
+    "rooms": "Zone a room into cave, campfire, watering hole, library, and habitat.",
+    "badges": "Make, print, and assemble interaction badges at conference badge size — the green/yellow/red communication badges from Autistic space, plus bulk print and assembly instructions.",
+    "print": "Print the whole deck at standard playing-card size: every card, nine to a sheet, ready to cut. Nothing to configure.",
+    "guidebook": "Every card in the deck: the metaphor, what it names, and how to hold it. The whole deck in one document.",
+    "implementation": "Turning a spread into changes to the room, on any budget.",
+    "facilitator": "The sheet for whoever is holding the space. Also a print PDF.",
+    "example-spreads": "Worked examples: a spread someone laid, and how to read it as a design brief.",
+    "place-explorers": "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into.",
+    "group-needs": "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone.",
+    "livable-worlds": "A checklist for building spaces that fit bodyminds.",
+    "space": "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses.",
+    "why": "Why the deck exists, who it serves, and the stance behind it.",
+    "not-aac": "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together.",
+    "origin": "The Cavendish Space model, its lineage, and who Cavendish was.",
+    "arles": "How the deck fits the Stimpunks Design Method, and why it stops short of Systems as cards.",
+    "privacy": "What the site keeps, which is almost nothing.",
+    "changelog": "What changed in the deck and the site, newest first.",
+}
 
 _LLMS_SUMMARY = (
     "Free, CC0, neuroaffirming prompt cards and room-zoning tools from Stimpunks "
@@ -2071,12 +2105,22 @@ def _write_llms_txt(web):
           "`.md` on its URL, or use the `.md` links here. The full card data is at "
           f"{_SITE_URL}/cards.json, and the source lives at "
           "https://github.com/Stimpunks/Cavendish-Cards.", ""]
-    for heading, entries in _LLMS_SECTIONS:
+    # A grouped page with no description silently vanishes from llms.txt, which
+    # is the failure the one-taxonomy change exists to prevent -- so say so.
+    # Non-fatal, like the other warnings here; watch the build output.
+    for _l, _h, key, group in SITE_NAV:
+        if group and key not in _LLMS_DESCRIPTIONS:
+            print(f"  ! llms.txt: no description for {key!r}; it will be left out",
+                  file=sys.stderr)
+    for heading, entries in nav_groups():
+        listed = [(lbl, hrf, k) for lbl, hrf, k in entries
+                  if k in _LLMS_DESCRIPTIONS]
+        if not heading or not listed:
+            continue
         L += [f"## {heading}", ""]
-        for key, desc in entries:
-            label, href = nav_entry(key)
+        for label, href, key in listed:
             rel = md_path(key) or f"/{href}"
-            L.append(f"- [{label}]({_SITE_URL}{rel}): {desc}")
+            L.append(f"- [{label}]({_SITE_URL}{rel}): {_LLMS_DESCRIPTIONS[key]}")
         L.append("")
     (web / "llms.txt").write_text("\n".join(L), encoding="utf-8")
 

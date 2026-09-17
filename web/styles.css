@@ -296,9 +296,9 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
    with the browser chrome retracted, which is taller than what you can
    actually see while the URL bar is showing. */
 .sitenav { position: relative; margin: 0; }
-.sitenav > ul {
-  list-style: none; margin: 6px 0 0; padding: 8px 12px;
-  position: absolute; z-index: 20; left: 0; min-width: 230px;
+.sitenav-panel {
+  margin: 6px 0 0; padding: 8px 12px;
+  position: absolute; z-index: 20; left: 0; min-width: 240px;
   max-height: calc(100vh - 80px);
   max-height: calc(100dvh - 80px);
   overflow-y: auto;
@@ -306,7 +306,16 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   background: var(--panel); border: 1px solid var(--line);
   border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.14);
 }
-.sitenav > ul li { margin: 3px 0; }
+.sitenav-panel ul { list-style: none; margin: 0; padding: 0; }
+.sitenav-panel li { margin: 3px 0; }
+/* Group heading. aria-hidden in the markup: each <ul> carries the same words
+   as its aria-label, so a screen reader announces the group once, as the
+   list's name, instead of reading the heading and then the name. */
+.sitenav-panel .navgroup {
+  margin: 12px 0 4px; font-size: .8rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+}
+.sitenav-panel > ul:first-child + .navgroup { margin-top: 10px; }
 .sitenav a[aria-current="page"] { font-weight: 700; }
 .site-header .sitenav { margin: 0 0 10px; }
 
