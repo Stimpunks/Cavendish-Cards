@@ -308,6 +308,215 @@ def e(s):
 
 
 # ---------------------------------------------------------------------------
+# SPACE-TIME (Helen Edgar, Autistic Realms) -- the one source for the page's
+# infographic, its table, and the Cavendish mapping beside it.
+#
+# All three renderings come from this list on purpose. The article publishes an
+# infographic and a table that say the same thing in two shapes, and keeping
+# two copies here would let them drift the first time a line was reworded. The
+# figure prints `letter`/`name`/`tile`; the table prints `space`/`dims`/`flow`;
+# the "what it asks of a room" section prints `asks`/`zones`/`cards`/`conds`.
+#
+# Provenance, per field:
+#   space, dims  -- the NAMES of elements in other people's frameworks
+#                   (Doherty et al. 2023; McGreevy et al. 2024 after Todres et
+#                   al. 2009). Cited, never absorbed.
+#   flow         -- Helen's own column, carried with her agreement under the
+#                   dual-licensing this page documents. Reproduced as written
+#                   except for house US spelling (honouring -> honoring,
+#                   centres -> centers); reword nothing else without asking.
+#   tile, asks,
+#   zones, cards,
+#   conds        -- this project's, and the only part that knows the deck
+#                   exists. `conds` are COND ids in web/rooms.js, checked at
+#                   build time by _check_space_time_conds().
+SPACE_TIME = [
+    {
+        "letter": "S", "name": "Sensory attunement", "part": "SPACE",
+        "tile": "The channels a bodymind takes the world in through — turned "
+                "down or turned up, by the person they belong to.",
+        "space": "Sensory",
+        "dims": "Embodiment, Insiderness",
+        "flow": "Monotropic focus impacts our sensory experiences; attunement "
+                "validates embodied inner worlds and helps regulation and wellbeing.",
+        "asks": "Options in both directions, reachable without asking. A "
+                "channel runs two ways: one person needs the sound down and "
+                "the next needs some added, so a room that only ever subtracts "
+                "has answered half of this.",
+        "zones": ["the cave"],
+        "cards": [("What helps", ["headphones", "a steady sound", "dim the light",
+                                  "less to look at", "the right temperature",
+                                  "a smell that helps", "something to chew",
+                                  "a big squeeze"])],
+        "conds": ["quiet", "steady-sound", "dim", "less-to-look-at",
+                  "temperature", "soft"],
+    },
+    {
+        "letter": "P", "name": "Predictability and place", "part": "SPACE",
+        "tile": "Knowing what happens next, and having somewhere to be while "
+                "it does.",
+        "space": "Predictability",
+        "dims": "Sense of place, Personal journey",
+        "flow": "Predictability and flexible time reduces attentional "
+                "fragmentation, allowing grounding, deep focus and continuity "
+                "and flow in safe environments.",
+        "asks": "Warning before a change, a pace that isn't one pace, and a "
+                "spot that stays yours between visits. For monotropic "
+                "attention this is not a comfort — it is the difference "
+                "between flow and fragmentation.",
+        "zones": ["the habitat"],
+        "cards": [("What helps", ["tell me first", "keep it the same", "no rush",
+                                  "let me finish", "my own spot",
+                                  "one thing at a time"]),
+                  ("Lily pads", ["not yet", "slowly", "coming back"])],
+        "conds": ["written", "no-rush", "own-spot"],
+    },
+    {
+        "letter": "A", "name": "Acceptance and agency", "part": "SPACE",
+        "tile": "Following your own attention without being redirected. "
+                "Holding the dial yourself.",
+        "space": "Acceptance",
+        "dims": "Agency, Uniqueness",
+        "flow": "Embracing monotropism enables agency; people can follow "
+                "interests without constant redirection which causes dysregulation.",
+        "asks": "Permission that does not have to be asked for each time. This "
+                "is the element the deck's own mechanics answer before any "
+                "card does: cards lie face-down, and turning one up is the "
+                "consent. Nobody reads a spread that was not offered.",
+        "zones": [],
+        "cards": [("What helps", ["let me control it", "let me stim",
+                                  "let me unmask", "sit my way",
+                                  "let me come and go", "fewer choices"])],
+        "conds": ["control", "sit-my-way", "come-and-go", "way-out"],
+    },
+    {
+        "letter": "C", "name": "Communication and connection", "part": "SPACE",
+        "tile": "Every way of saying it counts. Speaking is one of them, not "
+                "the price of entry.",
+        "space": "Communication",
+        "dims": "Togetherness, Sense-making",
+        "flow": "Monotropic attention shapes communication through detail, "
+                "flow, and passion, creating authentic connections and "
+                "different ways of communicating.",
+        "asks": "A way to take part that isn't talking, and a way to say how "
+                "open you are without a conversation about it. This is the "
+                "layer most rooms have done least about, because silence gets "
+                "read as nothing happening.",
+        "zones": ["the campfire", "the watering hole"],
+        "cards": [("Interaction", ["come say hi", "ask first", "people i know",
+                                   "not right now"]),
+                  ("What helps", ["another way to talk", "less talking",
+                                  "say it straight", "no spotlight"])],
+        "conds": ["another-way", "written", "small-group"],
+    },
+    {
+        "letter": "E", "name": "Empathy", "part": "SPACE",
+        "tile": "Meeting the bodymind that is actually here — the stimming and "
+                "the interests included.",
+        "space": "Empathy",
+        "dims": "Embodiment, Insiderness",
+        "flow": "Monotropic flow is expressed through our bodies and minds by "
+                "stimming and engagement in interests; empathy requires "
+                "honoring and helps build trust.",
+        "asks": "Nothing to install. This one is a practice, and it is what "
+                "somebody does with a spread once it is in front of them: "
+                "mirror it back, reach for the environment rather than the "
+                "person, and leave the sharing where it started.",
+        "zones": [],
+        "cards": [("Weather", ["can't tell", "foggy", "tender", "too seen"]),
+                  ("Kind words", ["i see you", "nothing to fix",
+                                  "your way is a real way"])],
+        "conds": [],
+    },
+    {
+        "letter": "T", "name": "Togetherness", "part": "TIME",
+        "tile": "Shared attention. Being alongside people, at the depth you "
+                "choose and no deeper.",
+        "space": "(implicit in SPACE)",
+        "dims": "Togetherness, Sense of place, Sense-making",
+        "flow": "Shared monotropic focus and joint flow (e.g., special "
+                "interests) builds deep relational bonds and helps foster "
+                "relationships and community.",
+        "asks": "Company that costs nothing to join and nothing to leave. Two "
+                "different rooms, not one: a few people sharing something, and "
+                "somewhere you can be near people without joining in.",
+        "zones": ["the campfire", "the watering hole"],
+        "cards": [("What helps", ["parallel existence", "just one person",
+                                  "room to move", "a way out"])],
+        "conds": ["small-group", "room-to-move", "way-out", "come-and-go"],
+    },
+    {
+        "letter": "I", "name": "Insiderness and personal journey", "part": "TIME",
+        "tile": "The inside view is the account of record, and it keeps going "
+                "across the day.",
+        "space": "(implicit in SPACE)",
+        "dims": "Insiderness, Embodiment, Uniqueness, Personal journey",
+        "flow": "Monotropism centers our unique internal perspectives; "
+                "validating our inner experiences and stories validates "
+                "Autistic knowledge and ways of being.",
+        "asks": "Somebody's own account, held as the account — not checked "
+                "against an observation of them. Every rule against counting "
+                "in this project protects this element: no score, no tally, "
+                "nothing kept.",
+        "zones": [],
+        "cards": [("Growers", ["dandelion", "tulip", "orchid"]),
+                  ("Kind words", ["you belong here", "you're not broken",
+                                  "it's okay to need what you need"])],
+        "conds": ["own-spot"],
+    },
+    {
+        "letter": "M", "name": "Meaning-making and sense of place", "part": "TIME",
+        "tile": "Coherence, and somewhere that is yours to be in.",
+        "space": "(implicit in SPACE)",
+        "dims": "Sense-making, Sense of place, Personal journey",
+        "flow": "Monotropic attention drives coherence and narrative, making "
+                "meaning and having a shared understanding with others is "
+                "central to our wellbeing.",
+        "asks": "Somewhere to put what you have made and find it again, and "
+                "the room visibly changing after somebody said what they "
+                "needed. Nothing makes a place mean less than asking and then "
+                "building nothing.",
+        "zones": ["the library", "the habitat"],
+        "cards": [("Weather", ["in the zone"]),
+                  ("Lily pads", ["i want to stay a while"])],
+        "conds": ["own-spot", "written"],
+    },
+    {
+        "letter": "E", "name": "Embodiment and uniqueness", "part": "TIME",
+        "tile": "Attention is lived through a body. No two of them the same.",
+        "space": "(implicit in SPACE)",
+        "dims": "Embodiment, Insiderness, Uniqueness",
+        "flow": "Flow and attention are lived through our bodyminds — "
+                "being monotropic is an embodied way of being which impacts "
+                "every aspect of life.",
+        "asks": "Room for a body to do what it does, in public, without it "
+                "being a problem someone solves. And the your-own card in "
+                "every realm, because a deck of ninety-odd fixed pictures is "
+                "still a set of somebody else's words.",
+        "zones": [],
+        "cards": [("What helps", ["let me stim", "busy hands", "room to move",
+                                  "sit my way", "something soft"]),
+                  ("Weather", ["heavy", "full", "running on empty", "fizzy"])],
+        "conds": ["room-to-move", "sit-my-way", "soft"],
+    },
+]
+
+# The infographic's own closing statement, from the article. Rendered as the
+# figure's caption so the picture carries the words it carries there.
+SPACE_TIME_STATEMENT = [
+    "Monotropism shapes Autistic experiences through deep, embodied attention tunnels.",
+    "Being monotropic shapes how Autistic people sense, focus, and connect.",
+    "With Sensory attunement, Predictability, Acceptance, Communication, and "
+    "Empathy, Autistic people find grounding and flow.",
+    "Through Togetherness, Insiderness, Meaning-Making, and Embodiment, we can "
+    "thrive, belong, and share our unique ways of being.",
+    "SPACE–TIME helps us reimagine care and create environments where "
+    "Autistic people can thrive.",
+]
+
+
+
+# ---------------------------------------------------------------------------
 # Site navigation, a tiny Markdown renderer, and a shared page shell.
 # Used by the standalone pages (Guidebook, Implementation, Why, Origin) and
 # mirrored by the hand-authored index.html. No JS: a native <details> menu.
@@ -343,6 +552,8 @@ SITE_NAV = [
     ("Not an AAC board", "not-aac.html", "not-aac", "The model"),
     ("Origin & lineage", "origin.html", "origin", "The model"),
     ("ARLES & the cards", "arles.html", "arles", "The model"),
+    ("SPACE-TIME", "space-time.html", "space-time", "The model"),
+    ("Building inclusive environments", "inclusive-environment.html", "inclusive-environment", "The model"),
 
     ("Privacy & security", "privacy.html", "privacy", "About this site"),
     ("Changelog", "changelog.html", "changelog", "About this site"),
@@ -375,6 +586,7 @@ MD_ENDPOINTS = {
     "not-aac": "cavendish-cards-not-aac.md",
     "origin": "cavendish-cards-origin.md",
     "arles": "cavendish-cards-arles.md",
+    "inclusive-environment": "cavendish-cards-inclusive-environment.md",
     "example-spreads": "cavendish-cards-example-spreads.md",
     "group-needs": "cavendish-cards-group-needs.md",
     "livable-worlds": "cavendish-cards-livable-worlds.md",
@@ -384,6 +596,7 @@ MD_ENDPOINTS = {
     "guidebook": None,
     "implementation": None,
     "place-explorers": None,
+    "space-time": None,
 }
 
 # llms.txt v2 wants the file advertised by link relation rather than guessed at
@@ -604,6 +817,7 @@ _MD_BOLD = re.compile(r'\*\*([^*]+)\*\*')
 _MD_CODE = re.compile(r'`([^`]+)`')
 _MD_EM = re.compile(r'\*([^*\n]+?)\*')
 _MD_IMG = re.compile(r'^!\[([^\]]*)\]\(([^)]+)\)\s*$')
+_MD_OL = re.compile(r'^\d+\.\s+(.*)$')
 
 
 def _md_inline(s):
@@ -624,9 +838,18 @@ def _strip_md_links(s):
 def md_to_html(text):
     """Render the small Markdown subset used by the Why sheet and Origin page.
 
-    Handles ## / ### headings, "- " bullet lists, "> " blockquotes, ">> " pull
-    quotes, all-dash rules, blank-line paragraphs, and inline links/bold/code/em.
-    Drops a leading "# " title so the page shell owns the single <h1>.
+    Handles ## / ### headings, "- " bullet lists, "1. " numbered lists, "> "
+    blockquotes, ">> " pull quotes, all-dash rules, blank-line paragraphs, and
+    inline links/bold/code/em. Drops a leading "# " title so the page shell owns
+    the single <h1>.
+
+    Numbered lists were added on 2026-09-18, late. Three sources had been
+    writing them since long before, and with no rule to match them every "1. "
+    line fell through to the paragraph branch and got JOINED to its neighbours:
+    the three steps for reading a spread shipped on /example-spreads.html as one
+    run-on paragraph with the numerals still in the middle of it. Nothing
+    failed, which is why it lasted -- a renderer that silently does something
+    plausible with input it does not understand is worse than one that stops.
 
     A pull quote is a line the page is built around, promoted out of the body
     text rather than duplicated beside it — so the sentence appears once, in the
@@ -636,7 +859,7 @@ def md_to_html(text):
     renderer support. It emits a <p>, not a <blockquote>: these are the page's
     own words, and <blockquote> would claim they came from somewhere else.
     """
-    out, para, items, quote, pull = [], [], [], [], []
+    out, para, items, steps, quote, pull = [], [], [], [], [], []
 
     def flush_para():
         if para:
@@ -648,6 +871,12 @@ def md_to_html(text):
             out.append("<ul>" + "".join("<li>" + _md_inline(i) + "</li>"
                                         for i in items) + "</ul>")
             items.clear()
+
+    def flush_steps():
+        if steps:
+            out.append("<ol>" + "".join("<li>" + _md_inline(i) + "</li>"
+                                        for i in steps) + "</ol>")
+            steps.clear()
 
     def flush_quote():
         if quote:
@@ -662,7 +891,7 @@ def md_to_html(text):
             pull.clear()
 
     def flush_all():
-        flush_para(); flush_list(); flush_quote(); flush_pull()
+        flush_para(); flush_list(); flush_steps(); flush_quote(); flush_pull()
 
     for raw in text.replace("\r\n", "\n").split("\n"):
         s = raw.strip()
@@ -684,12 +913,19 @@ def md_to_html(text):
         if s.startswith("## "):
             flush_all(); out.append("<h2>" + _md_inline(s[3:]) + "</h2>"); continue
         if s.startswith("- "):
-            flush_para(); flush_quote(); flush_pull(); items.append(s[2:]); continue
+            flush_para(); flush_steps(); flush_quote(); flush_pull()
+            items.append(s[2:]); continue
+        m = _MD_OL.match(s)
+        if m:
+            flush_para(); flush_list(); flush_quote(); flush_pull()
+            steps.append(m.group(1)); continue
         if s.startswith(">> "):                       # pull quote, before "> "
-            flush_para(); flush_list(); flush_quote(); pull.append(s[3:]); continue
+            flush_para(); flush_list(); flush_steps(); flush_quote()
+            pull.append(s[3:]); continue
         if s.startswith("> "):
-            flush_para(); flush_list(); flush_pull(); quote.append(s[2:]); continue
-        flush_list(); flush_quote(); flush_pull(); para.append(s)
+            flush_para(); flush_list(); flush_steps(); flush_pull()
+            quote.append(s[2:]); continue
+        flush_list(); flush_steps(); flush_quote(); flush_pull(); para.append(s)
 
     flush_all()
     return "\n".join(out)
@@ -970,6 +1206,298 @@ def place_explorers_html(root, out_families):
         body,
         tagline="Every room should have a spot for how you feel. "
                 "Here are the five, in children's words.")
+
+
+# ---------------------------------------------------------------------------
+# SPACE-TIME page: three renderings of SPACE_TIME, plus the prose around them.
+# ---------------------------------------------------------------------------
+
+_ST_HEADINGS = ["## The framework at a glance",
+                "## SPACE-TIME and monotropism",
+                "## What each element asks of a room"]
+
+
+def _split_on_headings(src, headings, what):
+    """Split a prose source into the chunks around a list of headings.
+
+    Returns [before_first, after_1, after_2, ...] -- one more piece than there
+    are headings -- so a caller can interleave generated blocks. The headings
+    themselves are dropped; the caller re-emits them, which keeps the heading
+    text in the prose source where an author will find it.
+
+    A missing heading is fatal. The alternative is a page that silently ships
+    without its table, and a generated block is exactly the kind of thing
+    nobody notices is absent."""
+    out = []
+    rest = src
+    for h in headings:
+        if h not in rest:
+            sys.exit(f"{what}: source is missing the heading {h!r}")
+        before, rest = rest.split(h, 1)
+        out.append(before)
+    out.append(rest)
+    return out
+
+
+def _cond_map(web):
+    """The zone builder's conditions, id -> text, in rooms.js order.
+
+    One parser, three callers: the COND parity check, the SPACE-TIME page's
+    room conditions, and the SPACE-TIME id check. The page prints the zoner's
+    own words rather than a paraphrase, so a reworded condition reaches the
+    page on the next build instead of quietly disagreeing with it."""
+    js = (web / "rooms.js").read_text(encoding="utf-8")
+    block = re.search(r"var COND = \{(.*?)\n  \};", js, re.S)
+    if not block:
+        return {}
+    return dict(re.findall(r'"([a-z-]+)": "([^"]*)"', block.group(1)))
+
+
+def _check_space_time_cards(out_families):
+    """Warn when SPACE-TIME cites a card that isn't in the realm it claims.
+
+    Same failure as _check_card_citations, one layer in: the mapping is written
+    by realm, by hand, from memory of the deck, and `i want to stay a while`
+    was filed under Weather here before this check existed -- it is a lily pad.
+    Non-fatal, like the rest; watch the build output."""
+    where = {}
+    display = {}
+    for fam in out_families:
+        display[fam["slug"]] = fam["name"]
+        for c in fam["cards"]:
+            where.setdefault(c["name"], set()).add(fam["name"])
+    for row in SPACE_TIME:
+        for realm, names in row["cards"]:
+            for n in names:
+                if n not in where:
+                    print(f"  ! SPACE-TIME {row['letter']} cites {n!r}, "
+                          f"which is no card in the deck", file=sys.stderr)
+                elif realm not in where[n]:
+                    print(f"  ! SPACE-TIME {row['letter']} files {n!r} under "
+                          f"{realm}; it is {'/'.join(sorted(where[n]))}",
+                          file=sys.stderr)
+
+
+def _check_space_time_conds(web):
+    """Warn when SPACE-TIME points at a zone-builder condition that is gone.
+
+    The ids are a published contract already (see _check_cond_parity); this
+    page is now a fourth place that spells them."""
+    conds = _cond_map(web)
+    if not conds:
+        print("  ! could not check SPACE-TIME conditions (rooms.js moved)",
+              file=sys.stderr)
+        return
+    for row in SPACE_TIME:
+        for cid in row["conds"]:
+            if cid not in conds:
+                print(f"  ! SPACE-TIME {row['letter']} names condition "
+                      f"{cid!r}, which rooms.js has no condition for",
+                      file=sys.stderr)
+
+
+def _space_time_figure_html():
+    """The article's infographic, rebuilt as HTML.
+
+    A picture of a framework is a picture: unselectable, unsearchable,
+    unreadable at a screen reader and unreadable at 200% zoom on a phone. So it
+    is laid out rather than drawn -- two panels of letter tiles and the
+    statement underneath, from the same list the table comes from. The letters
+    are aria-hidden: each one is the first letter of the name right beside it,
+    and a screen reader announcing "S, Sensory attunement" reads the spelling
+    aloud as content."""
+    panels = []
+    for part, lead in (("SPACE", "The foundations. What has to hold before "
+                                 "anything else is possible."),
+                       ("TIME", "What belonging takes, once the foundations "
+                                "hold.")):
+        rows = [r for r in SPACE_TIME if r["part"] == part]
+        word = "".join(r["letter"] for r in rows)
+        tiles = "".join(
+            f'<li class="st-tile">'
+            f'<span class="st-letter" aria-hidden="true">{e(r["letter"])}</span>'
+            f'<span class="st-tile-text">'
+            f'<strong>{e(r["name"])}</strong>'
+            f'<span class="st-tile-line">{e(r["tile"])}</span>'
+            f'</span></li>'
+            for r in rows)
+        panels.append(
+            f'<section class="st-panel st-panel-{part.lower()}" '
+            f'aria-label="{e(word)}">'
+            f'<h3 class="st-word">{e(word)}</h3>'
+            f'<p class="st-lead">{e(lead)}</p>'
+            f'<ul class="st-tiles">{tiles}</ul>'
+            f'</section>')
+    statement = "".join(f"<p>{e(line)}</p>" for line in SPACE_TIME_STATEMENT)
+    return ('<figure class="st-figure">'
+            '<div class="st-panels">' + "".join(panels) + '</div>'
+            '<figcaption class="st-statement">' + statement +
+            '<p class="st-credit">SPACE-TIME, by Helen Edgar '
+            '(<a href="https://autisticrealms.com/space-time-a-monotropism-informed-framework-for-autistic-people/">Autistic Realms</a>). '
+            'Laid out here rather than pictured, so it can be read at any size '
+            'and by anything.</p>'
+            '</figcaption></figure>')
+
+
+def _space_time_table_html():
+    """Helen's table, reproduced. Four columns, hers, in her order.
+
+    The Cavendish mapping is deliberately NOT a fifth column here: it is our
+    writing, it belongs to us, and folding it in would make one table that
+    reads as though one person wrote all of it. It gets its own section below.
+
+    Wrapped in a labelled, focusable region so the horizontal overflow a narrow
+    screen forces is reachable from a keyboard as well as a finger."""
+    head = ("<thead><tr>"
+            "<th scope=\"col\">SPACE-TIME element</th>"
+            "<th scope=\"col\">From Autistic SPACE</th>"
+            "<th scope=\"col\">From the 8 dimensions of care</th>"
+            "<th scope=\"col\">Monotropism and Autistic flow</th>"
+            "</tr></thead>")
+    rows = "".join(
+        '<tr><th scope="row">'
+        f'<span class="st-rowletter" aria-hidden="true">{e(r["letter"])}</span> '
+        f'{e(r["name"])}</th>'
+        f'<td>{e(r["space"])}</td><td>{e(r["dims"])}</td>'
+        f'<td>{e(r["flow"])}</td></tr>'
+        for r in SPACE_TIME)
+    return ('<div class="table-scroll" tabindex="0" role="region" '
+            'aria-label="SPACE-TIME and monotropism, a table of nine elements">'
+            '<table class="st-table">'
+            '<caption>Each element, the framework it comes from, and what '
+            'monotropism has to do with it. Columns two and three name other '
+            "people's frameworks; column four is Helen Edgar's.</caption>"
+            + head + "<tbody>" + rows + "</tbody></table></div>")
+
+
+def _space_time_build_html(conds):
+    """What each element asks of a room — the deck's own column, as blocks.
+
+    Blocks rather than a table: this is prose with two short lists under it,
+    and a fifth column of paragraphs would have pushed the table past what any
+    phone can show."""
+    out = []
+    for r in SPACE_TIME:
+        bits = [f'<h3 class="st-ask-head">'
+                f'<span class="st-rowletter" aria-hidden="true">{e(r["letter"])}</span> '
+                f'{e(r["name"])}</h3>',
+                f'<p>{e(r["asks"])}</p>']
+        if r["zones"]:
+            zones = ", ".join(e(z) for z in r["zones"])
+            bits.append(f'<p class="st-where"><strong>Places:</strong> {zones}.</p>')
+        for realm, names in r["cards"]:
+            listed = ", ".join(f"<em>{e(n)}</em>" for n in names)
+            bits.append(f'<p class="st-where"><strong>{e(realm)}:</strong> {listed}.</p>')
+        live = [c for c in r["conds"] if c in conds]
+        if live:
+            listed = "".join(f"<li><code>{e(c)}</code> — {e(conds[c])}</li>"
+                             for c in live)
+            bits.append('<p class="st-where"><strong>In the zone builder:</strong></p>'
+                        f'<ul class="st-conds">{listed}</ul>')
+        else:
+            bits.append('<p class="st-where"><strong>In the zone builder:</strong> '
+                        'nothing to tick. This one is not a property of the room.</p>')
+        out.append('<section class="st-ask">' + "".join(bits) + '</section>')
+    return '<div class="st-asks">' + "".join(out) + "</div>"
+
+
+def _space_time_figure_md():
+    """The infographic as Markdown, for the .md endpoint."""
+    L = []
+    for part in ("SPACE", "TIME"):
+        L += [f"### {part}", ""]
+        for r in SPACE_TIME:
+            if r["part"] == part:
+                L.append(f"- **{r['letter']} — {r['name']}.** {r['tile']}")
+        L.append("")
+    L += SPACE_TIME_STATEMENT + [""]
+    L.append("SPACE-TIME, by Helen Edgar (Autistic Realms).")
+    return "\n".join(L)
+
+
+def _space_time_table_md():
+    """Helen's table as a Markdown pipe table."""
+    L = ["| SPACE-TIME element | From Autistic SPACE | "
+         "From the 8 dimensions of care | Monotropism and Autistic flow |",
+         "| --- | --- | --- | --- |"]
+    for r in SPACE_TIME:
+        L.append(f"| **{r['letter']} — {r['name']}** | {r['space']} | "
+                 f"{r['dims']} | {r['flow']} |")
+    return "\n".join(L)
+
+
+def _space_time_build_md(conds):
+    """The Cavendish mapping as Markdown."""
+    L = []
+    for r in SPACE_TIME:
+        L += [f"### {r['letter']} — {r['name']}", "", r["asks"], ""]
+        if r["zones"]:
+            L.append(f"- **Places:** {', '.join(r['zones'])}.")
+        for realm, names in r["cards"]:
+            L.append(f"- **{realm}:** {', '.join('*' + n + '*' for n in names)}.")
+        live = [c for c in r["conds"] if c in conds]
+        if live:
+            L.append("- **In the zone builder:** "
+                     + "; ".join(f"`{c}` ({conds[c]})" for c in live) + ".")
+        else:
+            L.append("- **In the zone builder:** nothing to tick. This one is "
+                     "not a property of the room.")
+        L.append("")
+    return "\n".join(L)
+
+
+def space_time_html(root, web):
+    conds = _cond_map(web)
+    src = (root / "cavendish-cards-space-time.md").read_text(encoding="utf-8")
+    a, b, c, d = _split_on_headings(src, _ST_HEADINGS, "space-time")
+    body = "\n".join([
+        md_to_html(a),
+        "<h2>The framework at a glance</h2>", _space_time_figure_html(),
+        "<h2>SPACE-TIME and monotropism</h2>", _space_time_table_html(),
+        "<h2>What each element asks of a room</h2>", _space_time_build_html(conds),
+        md_to_html(d),
+    ])
+    return _standalone_page(
+        "SPACE-TIME",
+        "Helen Edgar's monotropism-informed framework for Autistic people — "
+        "nine elements an environment has to hold, the table behind them, and "
+        "which cards and room conditions answer each one.",
+        "space-time", "Skip to the framework", "SPACE-TIME", "space-time",
+        body,
+        tagline="What a place has to hold if an Autistic person is going to do "
+                "more there than endure it — and which cards and zones "
+                "answer each part.")
+
+
+def space_time_md(root, web):
+    """The full page as Markdown: prose source with the generated blocks in."""
+    conds = _cond_map(web)
+    src = (root / "cavendish-cards-space-time.md").read_text(encoding="utf-8")
+    a, b, c, d = _split_on_headings(src, _ST_HEADINGS, "space-time")
+    blocks = [_space_time_figure_md(), _space_time_table_md(),
+              _space_time_build_md(conds)]
+    # A generated block has to end in a BLANK line, not just a newline: the
+    # pipe table ran straight into the next "## " heading otherwise, which a
+    # Markdown reader renders as one more table row.
+    return "".join([a] + [h + "\n\n" + b.rstrip("\n") + "\n\n"
+                          for h, b in zip(_ST_HEADINGS, blocks)]
+                   + [d.lstrip("\n")])
+
+
+def inclusive_environment_html(root):
+    src = (root / "cavendish-cards-inclusive-environment.md").read_text(
+        encoding="utf-8")
+    return _standalone_page(
+        "Building inclusive environments",
+        "The seven layers an environment is built in — nervous system, "
+        "sensory, communication, predictability, instruction, repair, power "
+        "— what each one asks for, and which cards and zones reach it.",
+        "inclusive-environment", "Skip to the layers",
+        "Building inclusive environments", "inclusive-environment",
+        md_to_html(src),
+        tagline="Inclusion is architecture, not goodwill. The seven layers a "
+                "place is built in, and where the deck reaches — plus the "
+                "two it deliberately doesn't.")
 
 
 def group_needs_html(root):
@@ -1663,7 +2191,8 @@ def implementation_md(out_families):
 
 _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", "/space.html", "/guidebook.html", "/implementation.html",
-               "/why.html", "/not-aac.html", "/origin.html", "/arles.html", "/facilitator.html",
+               "/why.html", "/not-aac.html", "/origin.html", "/arles.html",
+               "/space-time.html", "/inclusive-environment.html", "/facilitator.html",
                "/example-spreads.html", "/place-explorers.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
 
@@ -1732,14 +2261,13 @@ def _check_cond_parity(root, web):
     Non-fatal, like the missing-face warning: a stale doc should not stop a
     deploy, but it should be impossible to miss in the build output.
     """
-    js = (web / "rooms.js").read_text(encoding="utf-8")
-    block = re.search(r"var COND = \{(.*?)\n  \};", js, re.S)
+    conds = _cond_map(web)
     doc_path = root / "cavendish-cards-group-needs.md"
-    if not block or not doc_path.exists():
+    if not conds or not doc_path.exists():
         print("  ! could not check COND parity (rooms.js or the group-brief doc moved)",
               file=sys.stderr)
         return
-    in_js = set(re.findall(r'"([a-z-]+)":', block.group(1)))
+    in_js = set(conds)
     in_doc = set(re.findall(r"^- `([a-z-]+)`", doc_path.read_text(encoding="utf-8"), re.M))
     for k in sorted(in_js - in_doc):
         print(f"  ! condition {k!r} is in rooms.js but not in the group-brief doc",
@@ -1845,6 +2373,8 @@ _CARD_CITING_DOCS = [
     "cavendish-cards-group-needs.md",
     "cavendish-cards-why-sheet.md",
     "cavendish-cards-not-aac.md",
+    "cavendish-cards-inclusive-environment.md",
+    "cavendish-cards-space-time.md",
 ]
 
 # Words that claim a realm, mapped to the family they claim. Used to check that a
@@ -2298,6 +2828,11 @@ GENERATED_FROM = {
     "implementation": ["cards", "scripts/build-site.py"],
     "place-explorers": ["cards", "cavendish-cards-place-explorers.md",
                         "scripts/build-site.py"],
+    # Not built from cards/**: the figure, the table and the room-condition
+    # mapping come from SPACE_TIME in the generator, and the conditions'
+    # wording comes from rooms.js.
+    "space-time": ["cavendish-cards-space-time.md", "web/rooms.js",
+                   "scripts/build-site.py"],
 }
 
 
@@ -2362,6 +2897,8 @@ _LLMS_DESCRIPTIONS = {
     "not-aac": "Why the deck is not AAC and must never be offered in place of it: what each one is for, the inclusion test that keeps them apart, and how they work together.",
     "origin": "The Cavendish Space model, its lineage, and who Cavendish was.",
     "arles": "How the deck fits the Stimpunks Design Method, and why it stops short of Systems as cards.",
+    "space-time": "SPACE-TIME, Helen Edgar's monotropism-informed framework: nine things a place has to hold — Sensory attunement, Predictability and place, Acceptance and agency, Communication and connection, Empathy, then Togetherness, Insiderness, Meaning-making, Embodiment — with the framework table, and which cards and room conditions answer each one. It is a brief for building a place, never a scale to score a person on.",
+    "inclusive-environment": "The seven layers an environment is built in, from nervous system out to policy and power, what each asks for, and where the deck reaches. Inclusion as architecture rather than accommodation, and the two layers the deck deliberately stops short of.",
     "privacy": "What the site keeps, which is almost nothing.",
     "changelog": "What changed in the deck and the site, newest first.",
 }
@@ -2475,6 +3012,7 @@ def _write_service_worker(root, web, faces):
                  "arles.html", "facilitator.html", "example-spreads.html",
                  "place-explorers.html", "group-needs.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
+                 "space-time.html", "inclusive-environment.html",
                  "changelog.html"):
         p = web / name
         if p.exists():
@@ -2508,6 +3046,7 @@ def _write_service_worker(root, web, faces):
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
         "/place-explorers.html",
         "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
+        "/space-time.html", "/inclusive-environment.html",
         "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
@@ -2660,6 +3199,9 @@ def main():
     (web / "not-aac.html").write_text(not_aac_html(root), encoding="utf-8")
     (web / "origin.html").write_text(origin_html(root), encoding="utf-8")
     (web / "arles.html").write_text(arles_html(root), encoding="utf-8")
+    (web / "space-time.html").write_text(space_time_html(root, web), encoding="utf-8")
+    (web / "inclusive-environment.html").write_text(
+        inclusive_environment_html(root), encoding="utf-8")
     (web / "facilitator.html").write_text(facilitator_html(root), encoding="utf-8")
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
     (web / "place-explorers.html").write_text(
@@ -2676,6 +3218,8 @@ def main():
     _write_sitemap_robots(web)
     _check_signpost_parity()
     _check_cond_parity(root, web)
+    _check_space_time_cards(out_families)
+    _check_space_time_conds(web)
     _check_group_example(root)
     _check_card_citations(root, out_families)
     _impl_md = implementation_md(out_families)
@@ -2691,7 +3235,8 @@ def main():
     (root / "cavendish-cards-guidebook.md").write_text(_gb_md, encoding="utf-8")
     _md_written = _write_md_endpoints(
         root, web, {"implementation": _impl_md, "guidebook": _gb_md,
-                    "place-explorers": place_explorers_md(root, out_families)})
+                    "place-explorers": place_explorers_md(root, out_families),
+                    "space-time": space_time_md(root, web)})
     _write_llms_txt(web)
     _write_security_txt(web)
     _navs = _write_hand_authored_navs(web)

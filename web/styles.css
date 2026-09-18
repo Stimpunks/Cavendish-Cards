@@ -49,6 +49,16 @@
   --place-library: #efeaf1;
   --place-habitat: #e9f0e6;
   --places-ink: #534AB7;
+  /* SPACE-TIME accents (/space-time.html). Two jobs, deliberately two pairs of
+     tokens: the accent is heading and border colour drawn on the panel, and
+     --st-letter-ink is what goes INSIDE the letter tile. Collapsing them into
+     one token is how the first version shipped white on the dark-mode cyan at
+     about 2:1 -- an accent light enough to read on a dark surface is far too
+     light to carry white text. So dark mode flips the tile's ink to the page
+     background instead of chasing a colour that can do both. */
+  --st-space: #993C1D;
+  --st-time: #0d6b63;
+  --st-letter-ink: #fff;
   --maxw: 1040px;
   color-scheme: light;
   /* Everything on the site is sized in rem off this. Raised from 18px on
@@ -97,6 +107,9 @@
     --place-library: #0a2c3f;
     --place-habitat: #04322f;
     --places-ink: #a79df0;
+    --st-space: #e8a04a;
+    --st-time: #5fc9c0;
+    --st-letter-ink: #002b36;
   }
 }
 :root[data-theme="dark"] {
@@ -129,6 +142,9 @@
   --place-library: #0a2c3f;
   --place-habitat: #04322f;
   --places-ink: #a79df0;
+  --st-space: #e8a04a;
+  --st-time: #5fc9c0;
+  --st-letter-ink: #002b36;
 }
 
 * { box-sizing: border-box; }
@@ -473,6 +489,157 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
   .prose .placecard.wide { flex-direction: column; align-items: stretch; }
   .prose .placecard.wide .placecard-face { width: 100%; }
 }
+
+/* SPACE-TIME (/space-time.html): the article's infographic, laid out rather
+   than pictured, plus the framework table and the per-element mapping.
+
+   Why HTML and not an image: a picture of a framework cannot be selected,
+   searched, translated, read by a screen reader, or reflowed at 200% zoom on a
+   phone — and this one is nine elements of prose, which is the worst possible
+   thing to flatten into pixels. So the tiles are a list, the statement is a
+   figcaption, and the whole thing survives being read by anything.
+
+   Like the places grid, the figure breaks out of .prose's 64ch measure to the
+   width of .wrap's content box and never past it, so it cannot cause
+   horizontal page scroll. No style attributes: style-src is 'self' with no
+   'unsafe-inline', so an inline colour would silently do nothing in
+   production. SPACE runs warm and TIME runs teal, through the --st-* tokens
+   defined at the top of this file -- see the note there about why the tile's
+   fill and its ink are separate tokens. */
+.prose .st-figure {
+  margin: 20px 0 30px;
+  width: min(calc(var(--maxw) - 40px), calc(100vw - 48px));
+}
+.prose .st-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.prose .st-panel {
+  padding: 16px 18px;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+.prose .st-panel-space { border-color: var(--st-space); }
+.prose .st-panel-time { border-color: var(--st-time); }
+.prose .st-word {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: .22em;
+  line-height: 1.1;
+}
+.prose .st-panel-space .st-word { color: var(--st-space); }
+.prose .st-panel-time .st-word { color: var(--st-time); }
+.prose .st-lead {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+.prose ul.st-tiles { list-style: none; margin: 0; padding: 0; }
+.prose .st-tile {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 0 0 12px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--line);
+}
+.prose .st-tile:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+/* The letter is decorative: it is the first letter of the name beside it, and
+   a screen reader announcing "S, Sensory attunement" would spell the framework
+   out as content. aria-hidden in the markup; sized here. */
+.prose .st-letter {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  color: var(--st-letter-ink);
+}
+.prose .st-panel-space .st-letter { background: var(--st-space); }
+.prose .st-panel-time .st-letter { background: var(--st-time); }
+.prose .st-tile-text { display: block; }
+.prose .st-tile-text strong { display: block; color: var(--ink-strong); }
+.prose .st-tile-line { display: block; font-size: .94rem; margin-top: 2px; }
+.prose .st-statement {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: var(--panel);
+}
+.prose .st-statement p { margin: 0 0 8px; }
+.prose .st-statement p:last-child { margin-bottom: 0; }
+.prose .st-credit { font-size: .88rem; color: var(--muted); margin-top: 12px; }
+
+/* The framework table. Four columns of real prose will overflow a phone
+   whatever is done to them, so the overflow is made explicit and reachable:
+   a labelled region with tabindex="0", which is what lets a keyboard scroll it
+   at all. Without that the fourth column is simply unreadable without a mouse. */
+.prose .table-scroll {
+  width: min(calc(var(--maxw) - 40px), calc(100vw - 48px));
+  margin: 18px 0 30px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.prose .table-scroll:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.prose table.st-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 720px;
+  font-size: .94rem;
+}
+.prose table.st-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 14px 16px 10px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.prose table.st-table th,
+.prose table.st-table td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.prose table.st-table thead th {
+  background: var(--panel);
+  color: var(--ink-strong);
+  border-top: none;
+}
+.prose table.st-table tbody th { color: var(--ink-strong); width: 12.5em; }
+.prose table.st-table td:nth-child(2),
+.prose table.st-table td:nth-child(3) { color: var(--muted); width: 9em; }
+.prose .st-rowletter {
+  display: inline-block;
+  min-width: 1.4em;
+  color: var(--cyan-ink);
+  font-weight: 700;
+}
+
+/* What each element asks of a room — the deck's own mapping, one block per
+   element. Blocks rather than a fifth table column: these are paragraphs with
+   two lists under them, and no phone can show that as a column. */
+.prose .st-asks { margin: 18px 0 30px; }
+.prose .st-ask {
+  padding: 14px 16px;
+  margin: 0 0 12px;
+  border-left: 4px solid var(--cyan);
+  border-radius: 0 14px 14px 0;
+  background: var(--panel);
+}
+.prose .st-ask-head { margin: 0 0 6px; font-size: 1.1rem; color: var(--ink-strong); }
+.prose .st-ask p { margin: 0 0 8px; }
+.prose .st-where { font-size: .94rem; }
+.prose .st-where strong { color: var(--ink-strong); }
+.prose ul.st-conds { margin: 0; padding-left: 1.2em; font-size: .94rem; }
+.prose ul.st-conds li { margin: 2px 0; }
 
 /* Facilitator sheet page: matches the print sheet's structure (modes, dot
    bullets, numbered steps), restyled for the web with the site palette. */
@@ -941,6 +1108,17 @@ body.break-open { overflow: hidden; }
   .breakbar, .skip, .theme-toggle, .rooms-actions, .site-footer { display: none !important; }
   .rooms-zone { break-inside: avoid; }
   .prose .pull { font-size: 1.2rem; break-inside: avoid; }
+  /* SPACE-TIME on paper. The table lives in a horizontally scrolling region on
+     screen, and a scroll region prints as whatever happened to be scrolled
+     into view -- i.e. the fourth column, which is the whole point of the
+     table, silently off the page. So the overflow is released and the
+     min-width dropped, and the panels stack instead of sitting side by side. */
+  .prose .table-scroll { overflow: visible; border: none; }
+  .prose table.st-table { min-width: 0; font-size: .85rem; }
+  .prose table.st-table tbody tr { break-inside: avoid; }
+  .prose .st-panels { grid-template-columns: 1fr; }
+  .prose .st-figure, .prose .table-scroll { width: auto; }
+  .prose .st-panel, .prose .st-ask, .prose .st-tile { break-inside: avoid; }
   .rooms-sign { break-inside: avoid; border-width: 3px; }
   .rooms-signs { grid-template-columns: 1fr; }
 
