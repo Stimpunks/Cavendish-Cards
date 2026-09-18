@@ -1,7 +1,7 @@
 # Draft proposal — Pattern 28: Double Empathy (promote from behind-lens to card-nameable)
 
 **Status:** draft for Helen's batch review. Not wired into the deck yet.
-**Companion to:** `pattern-library-anxiety-cluster-draft` (proposed Patterns 52–54) and the [Pattern crosswalk](cavendish-cards-pattern-crosswalk.md).
+**Companion to:** the anxiety cluster — [52 Threshold Anxiety](https://stimpunks.org/patterns/library/threshold-anxiety/), [53 Exposure Anxiety](https://stimpunks.org/patterns/library/exposure-anxiety/), [54 Rejection Sensitivity](https://stimpunks.org/patterns/library/rejection-sensitivity/), published 2026-09-18 — and the [Pattern crosswalk](cavendish-cards-pattern-crosswalk.md).
 
 ## The decision this asks for
 

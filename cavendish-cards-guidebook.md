@@ -74,7 +74,7 @@ _Inner weather, not clinical states — the whole range, good and hard alike._
 
 Big step is a small figure at the foot of a giant step — a doorway, a first day, a change that feels too big to cross. This card names threshold anxiety: the dread that lands right at the edge of a change, before it even begins. It is different from meerkat, which watches for danger, and from stormy, which is a feeling already spilling over. Big step is the fear of the crossing itself, felt before the first move. The step is big; the person is not small. When this card is out, make the step smaller. Warn before it comes (tell me first), break the crossing into parts (slowly), keep the exit in view (a way out), and don't rush the edge. Lineage: [threshold anxiety](https://stimpunks.org/glossary/threshold-anxiety/), also called transition anxiety — close kin to [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) and [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/).
 
-*Pattern: [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · 35 Predictable Structure*
+*Pattern: [52 Threshold Anxiety](https://stimpunks.org/patterns/library/threshold-anxiety/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · 35 Predictable Structure*
 
 ### bright
 *clear sky, open light* · "Clear and good right now."
@@ -197,10 +197,14 @@ Stormy is big clouds about to break — pressure built up, feeling close to the 
 
 Tender is like skin after too much sun — sore and raw, so even a light touch stings. This card names a small thing that hurts a lot. A word or a look can sting far more than it seems like it should, and the hurt comes fast and hard to put into words. Often it builds up after years of extra criticism. This is not being too sensitive; the soreness is real, and the world put it there — broken systems, not broken people. When this card is out, be gentle and clear: use kind words, say what you mean so there's nothing to guess, and remind the person they're still wanted and not in trouble. Let the hurt ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
 
+*Pattern: [54 Rejection Sensitivity](https://stimpunks.org/patterns/library/rejection-sensitivity/)*
+
 ### too seen
 *a small figure wanting to fold inward as soft gazes turn toward them from every side* · "Being looked at is a lot right now."
 
 Too seen is the raw feeling of being looked at — every pair of eyes seems to land right on you. This card names a kind of exposure anxiety: not fear of danger, but the discomfort of being watched. Even kind, warm attention can feel like too much and make you want to disappear. It's different from meerkat, which is watching out for danger — too seen is about being the one who is watched, and the wish to be with people can still be there underneath. When this card is out, ease off: look away, lower the attention, and let the person be there without being on show. Their wish to hide doesn't mean they want to leave. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
+
+*Pattern: [53 Exposure Anxiety](https://stimpunks.org/patterns/library/exposure-anxiety/)*
 
 ### warm
 *a cozy glow, wrapped up* · "Settled and safe."
@@ -384,7 +388,7 @@ No rush is a slow, easy clock — time without pressure. This card names a need 
 
 No spotlight means being let out of the beam of attention — not called on, not watched, not praised in front of everyone. This card names exposure anxiety: for some people, direct attention feels pushy rather than kind. Being looked at, praised, or put on the spot makes them want to hide, even when the wish to join in is still there. Praise and pressure can make it worse, so a calm, side-on approach works better. When this card is out, come at it from the side: sit alongside instead of face to face, skip the praise in front of others, and let the person show what they can do in their own way and time. Lineage: [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) (Donna Williams).
 
-*Pattern: [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/)*
+*Pattern: [53 Exposure Anxiety](https://stimpunks.org/patterns/library/exposure-anxiety/) · [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/)*
 
 ### one thing at a time
 *a single thing on a clear table* · "One thing, then the next."

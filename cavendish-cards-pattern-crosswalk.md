@@ -48,14 +48,14 @@ The naming layer — the deck is thickest here. Several cards ⤢ pull down into
 | meerkat | **23 Co-Regulation** · 07 Regulation First | wants a safe person close; meerkat mode |
 | stormy | **07 Regulation First** · 23 Co-Regulation | emotional flooding — not burnout |
 | warm | **09 Environment Fit** · 22 Regulation Windows | remember the conditions that made it |
-| big-step | **13 Context Switching Cost** · 35 Predictable Structure | threshold/transition anxiety — the switching + predictability patterns partly hold it; anticipatory anxiety itself is a gap |
+| big-step | **52 Threshold Anxiety** · 13 Context Switching Cost · 35 Predictable Structure | threshold/transition anxiety — 52 names the dread at the edge; switching and predictability carry the fix |
+| tender | **54 Rejection Sensitivity** | rejection-sensitive dysphoria, the "emotional sunburn" |
+| too-seen | **53 Exposure Anxiety** | being watched, not being in danger — the wish to join can still be there |
 | no-words-right-now | **30 Communication Bandwidth** · 07 Regulation First | situational mutism — a clean home; sits alongside real AAC |
 | can't tell | — | interoception, the eighth sense — see Gaps |
 | far-away | — | dissociation / spacing out — see Gaps |
 | bright | — | good weather — see Gaps |
 | fizzy | — | good excitement — see Gaps |
-| tender | — | rejection-sensitive dysphoria — see Gaps |
-| too-seen | — | exposure anxiety — see Gaps |
 
 ## What helps · Environment
 
@@ -92,7 +92,7 @@ The niche-construction realm. The card names the *need*; the Pattern names the *
 | just one person | **06 Social Energy** · 34 Collaboration Gradients | narrow the social field |
 | parallel existence | **29 Parallel Presence** · 23 Co-Regulation | body doubling |
 | a snack or a drink | **10 Energy Accounting** | maintenance, not off-task |
-| no-spotlight | **08 Masking Pressure** | relief from observation/performance demand — also the fix for exposure anxiety (a gap) |
+| no-spotlight | **53 Exposure Anxiety** · 08 Masking Pressure | the fix side of exposure anxiety — relief from observation and performance demand |
 | let me unmask | **08 Masking Pressure** · 51 Bodymind Affirmation | permission to drop the performance — a need, not a self-diagnosis of masking |
 
 ## Lily pads · Relational + Attention
@@ -201,6 +201,9 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 49 Environmental Weathering | 🟡 | dandelion |
 | 50 Bodymind Break | 🟡 | room to move · you can rest |
 | 51 Bodymind Affirmation | 🟡 | happy flappy · let me stim · let me unmask · i see you · i'm glad you're here · it's okay to need what you need · nothing to fix · you belong here · you can rest · your way is a real way · you're not broken |
+| 52 Threshold Anxiety | 🟢 | big-step |
+| 53 Exposure Anxiety | 🟢 | too-seen · no-spotlight |
+| 54 Rejection Sensitivity | 🟢 | tender |
 
 ----
 
@@ -212,8 +215,9 @@ These aren't loose ends — they're places the deck, built from the youngest and
 - **Dissociation / spacing out** — `far-away`. The mind stepping back under overload. Currently homeless; not the same as Sensory Load, and 11 Burnout Threshold is deliberately too clinical for the person layer.
 - **Regulated and good states** — `bright`, `fizzy`, and the felt side of `warm`. The Library is friction-lean; it under-patterns good weather. A positive-state Pattern (flow-and-delight, or "the recipe worth repeating") would close the loop, and it's on-ethos: naming the good matters as much as naming the hard.
 - **Differential environmental sensitivity** — the Growers. Boyce & Ellis's orchid/dandelion is its own construct; 09 Environment Fit + 49 Environmental Weathering only partly carry it. A sensitivity Pattern would give all three growers one home.
-- **The anxiety / exposure cluster** — `big-step` (threshold/transition anxiety), `too-seen` (exposure anxiety, Donna Williams), `tender` (rejection-sensitive dysphoria), and the fix-side `no-spotlight`. This is the largest gap: the Library patterns overload, energy, and regulation, but not anticipatory or social-evaluative anxiety. Four cards already live here with clean lineages (threshold/exposure anxiety, RSD). A small anxiety cluster in the Library — anticipatory anxiety, exposure anxiety, rejection sensitivity — would give all four a home. Drafts exist: see `pattern-library-anxiety-cluster-draft` (proposed Patterns 52–54). Note `no-words-right-now` (situational mutism) is the one member of this family that *does* map cleanly, to 30 Communication Bandwidth.
 - **Task initiation** — `stuck`. Getting going is not the same as switching. 13 Context Switching Cost is adjacent, not identical.
+
+**Closed 2026-09-18.** The anxiety / exposure cluster was the largest gap on this list — `big-step`, `too-seen`, `tender`, and the fix-side `no-spotlight`, all with clean lineages and nowhere in the Library to sit. It closed when **52 Threshold Anxiety**, **53 Exposure Anxiety** and **54 Rejection Sensitivity** went live, and all four cards are now mapped in the tables above. The Pattern shipped as *Threshold Anxiety*, not the drafted *anticipatory anxiety*: the glossary argues threshold anxiety works better as a plain description than as a label, and `big-step`'s own Notes already said *"This card names threshold anxiety"* — glossary, card, and Pattern now use one name. `no-words-right-now` (situational mutism) was never part of the gap; it has always mapped cleanly to 30 Communication Bandwidth.
 
 ## Patterns without a card (deliberate stops)
 

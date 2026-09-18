@@ -8,6 +8,12 @@ Each dated entry is split into **Deck** (changes to the cards themselves) and **
 
 ### Deck
 
+- **The anxiety cluster has Patterns now — 52 Threshold Anxiety, 53 Exposure Anxiety, 54 Rejection Sensitivity.** Four cards had clean lineages and nowhere in the [Pattern Library](https://stimpunks.org/patterns/library/) to sit: `big step` (threshold anxiety), `too seen` (exposure anxiety), `tender` (rejection-sensitive dysphoria), and the fix-side `no spotlight`. It was the largest entry in the crosswalk's gap list. The three Patterns are live, the four cards are wired to them, and that gap is closed. **Nothing a person sees changed** — the `## Pattern` field is facilitator-layer, the same wall as materials: it renders in the [guidebook](https://cavendish.space/guidebook.html) and never on a card face, in the starter deck, or in the web deck's card view.
+
+- **52 shipped as Threshold Anxiety, not the drafted "anticipatory anxiety", and the rename is the point.** The [glossary](https://stimpunks.org/glossary/threshold-anxiety/) argues that threshold anxiety works better as a plain description than as a label, and `big step`'s own Notes already said *"This card names threshold anxiety"*. Glossary, card, and Pattern now use one name instead of three.
+
+- **The card layer still waits on Helen.** The Pattern pages are the Library layer — design-frame prose over concepts the glossary already carried — and they went up on Ryan's call. The four cards' own words did not change here, and their framing is hers to shape.
+
 - **Two new signposts in the What helps view: `Choosing` and `Same & new`.** Twelve become fourteen, and **"More" is empty for the first time** — every What helps card now sits under a signpost. `Choosing` holds `fewer choices`; `Same & new` holds `keep it the same` and `something different`.
 
 - **They are not called "Predictability" and "Novelty", and that is the whole decision.** Those are principle names, and every existing signpost names something a person can recognise — Sound, Touch, Pressure, Light & looking. Worse, a signpost called Predictability pulls at `tell me first`, which belongs in Telling & talking because it is about *warning*, not sameness. Naming for the channel instead of the principle left an already-placed card alone.

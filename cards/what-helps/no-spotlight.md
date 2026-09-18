@@ -18,6 +18,7 @@ No spotlight means being let out of the beam of attention — not called on, not
 
 ## Pattern
 
+53 exposure-anxiety
 08 masking-pressure
 
 ----

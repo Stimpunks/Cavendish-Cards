@@ -188,6 +188,9 @@ PATTERNS = {
     "environmental-weathering": (49, "Environmental Weathering", False),
     "bodymind-break": (50, "Bodymind Break", False),
     "bodymind-affirmation": (51, "Bodymind Affirmation", False),
+    "threshold-anxiety": (52, "Threshold Anxiety", True),
+    "exposure-anxiety": (53, "Exposure Anxiety", True),
+    "rejection-sensitivity": (54, "Rejection Sensitivity", True),
 }
 
 

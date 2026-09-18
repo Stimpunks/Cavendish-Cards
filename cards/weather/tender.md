@@ -22,6 +22,10 @@ A small thing hurt a lot right now.
 
 Tender is like skin after too much sun — sore and raw, so even a light touch stings. This card names a small thing that hurts a lot. A word or a look can sting far more than it seems like it should, and the hurt comes fast and hard to put into words. Often it builds up after years of extra criticism. This is not being too sensitive; the soreness is real, and the world put it there — broken systems, not broken people. When this card is out, be gentle and clear: use kind words, say what you mean so there's nothing to guess, and remind the person they're still wanted and not in trouble. Let the hurt ease before anything else. Lineage: [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/), the "emotional sunburn" — a term from the ADHD community, and increasingly the Autistic one.
 
+## Pattern
+
+54 rejection-sensitivity
+
 ----
 
 ## License
