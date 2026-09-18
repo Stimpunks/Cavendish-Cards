@@ -1078,6 +1078,26 @@ def m_wh_sit_my_way(a, d):
     return ground(438, a) + cushion + stool + stand
 
 
+def m_wh_something_different(a, d):
+    # The familiar way: a path worn smooth, with the same things still on it.
+    floor = line(54, 420, 340, 420, **stroke(d, THIN, stroke_opacity=0.32))
+    # The worn path carries on past the fork: the familiar way is not closed.
+    worn = path("M60 420 q116 -26 232 -2 q92 9 186 -2",
+                **stroke(a, 20, stroke_opacity=0.24))
+    same = ""
+    for i in range(3):
+        x = 116 + i * 96
+        same += (rect(x - 27, 322, 54, 96, 13, fill=a, fill_opacity=0.34) +
+                 line(x - 34, 322, x + 34, 322, **stroke(d, THIN)))
+    # The new way: a branch off the same path, drawn at full weight.
+    branch = path("M352 420 C452 418 500 350 506 268 C509 232 508 214 506 198",
+                  **stroke(a, 15))
+    tip = star4(506, 150, 62, a) + star4(506, 150, 26, PAPER)
+    spark = (sparkle(404, 232, 23, a) + sparkle(590, 266, 17, a) +
+             sparkle(428, 322, 13, a, w=5))
+    return floor + worn + same + branch + tip + spark
+
+
 def m_wh_something_soft(a, d):
     plush = (path(f"M{CX:.1f} 176 q112 0 112 112 q0 78 -52 112 "
                   f"q-60 38 -120 0 q-52 -34 -52 -112 q0 -112 112 -112 Z",
@@ -1529,6 +1549,7 @@ MOTIFS = {
     ("what-helps", "room-to-move"): m_wh_room_to_move,
     ("what-helps", "say-it-straight"): m_wh_say_it_straight,
     ("what-helps", "sit-my-way"): m_wh_sit_my_way,
+    ("what-helps", "something-different"): m_wh_something_different,
     ("what-helps", "something-soft"): m_wh_something_soft,
     ("what-helps", "something-to-chew"): m_wh_something_to_chew,
     ("what-helps", "tell-me-first"): m_wh_tell_me_first,

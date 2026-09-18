@@ -421,6 +421,13 @@ Three ways to be where a chair would go — on the floor, on a wobble stool, or 
 
 *Pattern: 19 Stim Regulation · 32 Consent Over Compliance*
 
+### something different
+*a smooth, well-worn path with the familiar things still standing along it — and a new branch curving off toward something bright and unfamiliar, both ways left open* · "Something different from before."
+
+Something different is a well-worn path with a new branch curving off it, the familiar things still standing where they were. This card names a need for newness — not more input, but different input. A space can be well built, well lit, and carefully calibrated, and still be exactly what it was a month ago; a world that never varies goes flat even when nothing about it is wrong. It is different from need more, which asks for the volume turned up — this asks for what is in the space to change. It does not cancel keep it the same either: a routine holding steady while the thing inside it moves is a common shape, not a contradiction. Asking for something different is not ingratitude, and not being hard to please, even when someone worked hard on the space that has stopped being new. When this card is out, change the content rather than the container — a new thing to explore, a different scene, a fresh direction inside the same routine. Lineage: [monotropism](https://stimpunks.org/monotropism/) — the tunnel stays; what's in it can move.
+
+*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · [14 Interest-Driven Learning](https://stimpunks.org/patterns/library/interest-driven-learning/)*
+
 ### something soft
 *a plush thing to hold* · "Something to hold and squeeze."
 
