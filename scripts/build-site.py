@@ -143,10 +143,17 @@ def order_files(slug, fam_dir):
         return (1, 0, s)
     return sorted(files, key=key)
 
-# Sense-signpost grouping for the What helps family (display only).
+# Signpost grouping for the What helps family (display only). Mostly sensory
+# channels, plus two that are not a sense at all -- Choosing and Same & new.
+# A signpost is a CHANNEL WITH TWO DIRECTIONS, not a single need: Sound holds
+# both turning it down and adding a steady hum, and Same & new holds both
+# keeping it and changing it. Name a signpost for the channel, never for the
+# design principle behind it -- "Predictability" would drag `tell me first`
+# out of Telling & talking, where it belongs, because it is about warning.
 GROUPS = {
     "what-helps": [
         ("Being in charge", ["let-me-control-it"]),
+        ("Choosing", ["fewer-choices"]),
         ("Sound", ["headphones", "a-steady-sound"]),
         ("Light & looking", ["dim-the-light", "less-to-look-at"]),
         ("Touch", ["something-soft"]),
@@ -157,6 +164,7 @@ GROUPS = {
         ("Space & enclosure", ["a-corner", "a-den", "my-own-spot", "a-way-out"]),
         ("Telling & talking", ["less-talking", "say-it-straight", "tell-me-first", "another-way-to-talk"]),
         ("People & time", ["just-one-person", "parallel-existence", "no-spotlight", "let-me-unmask", "no-rush", "one-thing-at-a-time", "let-me-finish", "let-me-come-and-go"]),
+        ("Same & new", ["keep-it-the-same", "something-different"]),
         ("Make your own", ["your-own"]),
     ],
 }
@@ -1257,7 +1265,8 @@ IMPL_REALM_NOTES = {
         "standing in the room rather than at a desk, and put the answers in the signposts "
         "below. Two things a sense-walk will never show you, so ask them on their own: who "
         "holds the controls, and how much a person has to say \u2014 or how fast they have to "
-        "be \u2014 to get what they need. Organised here by sense, the way the deck groups it.",
+        "be \u2014 to get what they need. Organised here the way the deck groups it \u2014 mostly "
+        "by sense, plus the two that are not a channel of the body at all.",
     "lily-pad":
         "A transition is a crossing, and for a mind in deep focus a hard crossing is "
         "jarring and costly \u2014 attention yanked across with nowhere to land. Lily pads are "
@@ -1308,12 +1317,16 @@ IMPL_PAIRINGS = {
                               "because the schedule wants it.",
 }
 
-# What helps — build guidance organised by the deck's sense signposts.
+# What helps — build guidance, one entry per signpost. Keep in step with GROUPS.
 IMPL_WHATHELPS = [
     ("Being in charge",
      "Hand over the dial. The same input is fine when the person controls it and too "
      "much when someone else does \u2014 so give them the switch, the volume, the timing, "
      "not a fixed setting."),
+    ("Choosing",
+     "Cut the field down. Too many options is a real cost, not fussiness \u2014 offer two or "
+     "three instead of ten, settle the small things in advance, or hand over a first step "
+     "to start from. Narrowing a choice is not taking the choice away."),
     ("Sound",
      "Turn the world down, or fill it kindly \u2014 headphones, a quieter corner, or a "
      "steady hum to cover the jagged, unpredictable sounds. The sound was the problem; "
@@ -1352,6 +1365,11 @@ IMPL_WHATHELPS = [
      "Thin the social field and slow the clock \u2014 one steady person instead of a crowd, "
      "quiet company alongside, more processing time, a stopping point before a switch, "
      "permission to come and go. Speed is not understanding."),
+    ("Same & new",
+     "Two directions on one dial. Hold the routine steady where it does not need to move "
+     "\u2014 same order, same setup, same cup \u2014 and change what is inside it when it has gone "
+     "flat. A person can want both at once, and usually does: a steady container with "
+     "moving contents is the shape that works, not a contradiction."),
     ("Make your own",
      "The gap the deck doesn't hold yet \u2014 draw or build the missing help together."),
 ]
