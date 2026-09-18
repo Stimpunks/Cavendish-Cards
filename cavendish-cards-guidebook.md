@@ -28,35 +28,35 @@ _The five Cavendish zones. Everything else sits in one of these._
 
 The campfire is a small circle around a warm glow, sharing and being told stories. It names warm, low-key togetherness — a few people you know, not a crowd, close enough to feel the warmth without the heat. In Thornburg's learning spaces, the campfire is the storyteller's circle, where a person learns from those who came before. When this card is out, keep the group small and the fire gentle. A campfire is not a stage, and no one at it should have to perform.
 
-*Pattern: 34 Collaboration Gradients · [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/)*
+*Pattern: [34 Collaboration Gradients](https://stimpunks.org/patterns/library/collaboration-gradients/) · [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/)*
 
 ### the cave
 *a small den, low light, a person tucked in* · "Somewhere quiet, just for you."
 
 The cave is a place you go alone — low light, close walls, the world kept outside for a while. This card names a need to be by yourself. It isn't hiding, and it isn't a shutdown from distress; it's the real rest and thinking that only happen away from other people. The cave is one of David Thornburg's learning-space ideas — the place where a person learns from themselves. When this card is out, protect the quiet: offer it freely, and don't make company or an explanation the price of it.
 
-*Pattern: 38 Attention Sanctuaries · [12 Energy Recovery](https://stimpunks.org/patterns/library/energy-recovery/) · 21 Sensory Safe Zones*
+*Pattern: [38 Attention Sanctuaries](https://stimpunks.org/patterns/library/attention-sanctuaries/) · [12 Energy Recovery](https://stimpunks.org/patterns/library/energy-recovery/) · [21 Sensory Safe Zones](https://stimpunks.org/patterns/library/sensory-safe-zones/)*
 
 ### the habitat
 *the whole landscape holding the other four* · "The world around it all — steady, sensory-safe."
 
 The habitat is the whole landscape that holds the cave, campfire, watering hole, and library. It's the conditions all around you, not a spot you stand in. It names the environment itself: the light, sound, texture, and rhythm that either fit a person or don't. This is the deck's big idea, as a place — you meet needs by shaping the surroundings, not by changing the person. When this card is out, the work is the environment. Make the habitat steady and sensory-safe, and the other places become reachable.
 
-*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · 47 Collaborative Niche Construction*
+*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · [47 Collaborative Niche Construction](https://stimpunks.org/patterns/library/collaborative-niche-construction/)*
 
 ### the library
 *shelves, maps, a book held open* · "Where we keep what we've figured out."
 
 The library is where what a group has figured out is kept and shared — shelves, maps, a page held open. It names a pull toward looking things up and going deep: finding out more about what matters, and drawing on what others have already worked out. In Cavendish Space, it's the shared store the other places feed into. When this card is out, point toward the resource, not the answer. The library is a place to find your own way in, at your own pace.
 
-*Pattern: [14 Interest-Driven Learning](https://stimpunks.org/patterns/library/interest-driven-learning/) · 43 Commons Infrastructure*
+*Pattern: [14 Interest-Driven Learning](https://stimpunks.org/patterns/library/interest-driven-learning/) · [43 Commons Infrastructure](https://stimpunks.org/patterns/library/commons-infrastructure/)*
 
 ### the watering hole
 *figures resting easy near water* · "Where we learn from each other."
 
 The watering hole is the open, in-between place where people cross paths and talk easily — near others, with no need to join in. It names easy, background togetherness: drifting in and out, overhearing, being among people with no task or script. It is Thornburg's third learning space, where a person learns from peers. When this card is out, make room to hover at the edge. Being near people is the whole point, and joining in stays optional.
 
-*Pattern: 29 Parallel Presence · 34 Collaboration Gradients*
+*Pattern: [29 Parallel Presence](https://stimpunks.org/patterns/library/parallel-presence/) · [34 Collaboration Gradients](https://stimpunks.org/patterns/library/collaboration-gradients/)*
 
 ### your own
 *a blank card and a pencil* · "A space that isn't here yet."
@@ -74,7 +74,7 @@ _Inner weather, not clinical states — the whole range, good and hard alike._
 
 Big step is a small figure at the foot of a giant step — a doorway, a first day, a change that feels too big to cross. This card names threshold anxiety: the dread that lands right at the edge of a change, before it even begins. It is different from meerkat, which watches for danger, and from stormy, which is a feeling already spilling over. Big step is the fear of the crossing itself, felt before the first move. The step is big; the person is not small. When this card is out, make the step smaller. Warn before it comes (tell me first), break the crossing into parts (slowly), keep the exit in view (a way out), and don't rush the edge. Lineage: [threshold anxiety](https://stimpunks.org/glossary/threshold-anxiety/), also called transition anxiety — close kin to [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) and [rejection sensitive dysphoria](https://stimpunks.org/glossary/rejection-sensitive-dysphoria/).
 
-*Pattern: [52 Threshold Anxiety](https://stimpunks.org/patterns/library/threshold-anxiety/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · 35 Predictable Structure*
+*Pattern: [52 Threshold Anxiety](https://stimpunks.org/patterns/library/threshold-anxiety/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · [35 Predictable Structure](https://stimpunks.org/patterns/library/predictable-structure/)*
 
 ### bright
 *clear sky, open light* · "Clear and good right now."
@@ -122,7 +122,7 @@ Full is a jar filled to the brim — one more drop and it spills. This card name
 
 Happy flappy is joy too big to hold still — hands flapping, bouncing on toes, a whole-body yes. This card names happy stimming: delight that moves out through the body. It's the way many Autistic people feel and show joy. This is not something to calm down; it is the good thing itself. When this card is out, celebrate with them. Join the bounce, make room for the flap, and never still the hands.
 
-*Pattern: 19 Stim Regulation · 51 Bodymind Affirmation*
+*Pattern: [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/) · [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/)*
 
 ### heavy
 *a weighted sky pressing down* · "Low and weighed down."
@@ -143,21 +143,21 @@ In the zone is deep, happy focus. Attention narrows to one thing while the rest 
 
 Meerkat is the on-alert feeling — standing guard, scanning for danger, unable to settle or focus, wanting someone safe close by. This card names a body stuck on high alert: not misbehaving, not clingy, but overwhelmed and looking for safety. When this card is out, be the safe one. Come close, stay near, lower the demands, and don't leave them to face it alone. Lineage: [meerkat mode](https://stimpunks.org/glossary/meerkat-mode/) (Tanya Adkin and David Gray-Hammond).
 
-*Pattern: 23 Co-Regulation · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
+*Pattern: [23 Co-Regulation](https://stimpunks.org/patterns/library/co-regulation/) · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
 
 ### need more
 *a figure reaching outward in a muted, empty space, movement lines around them* · "Everything's too flat and still — I need more."
 
 Need more is the under-filled feeling — the world too flat, too still, too quiet. The body reaches for input to feel right: movement, pressure, sound, something to crash into or spin. This is sensory seeking. It is regulation, not misbehavior or being "too much" — a body topping itself up to the level it needs. When this card is out, add input instead of taking it away: a chance to move, jump, push, squeeze, or make noise. Lineage: sensory seeking.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 19 Stim Regulation*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/)*
 
 ### no words right now
 *a figure with bright, present eyes and a softly closed mouth, the voice curled up quiet inside* · "The words won't come right now."
 
 No words right now is a voice gone quiet — the words are there, but the door to them is shut for now. This card names situational mutism: speech gets hard or impossible in some places, with some people, or when things are too much. It's never a choice and never rudeness, and often the person really wants to talk. Pushing for speech only makes the door heavier, and sometimes pointing, typing, or even a nod stop working too. When this card is out, take the pressure off talking: don't repeat or reword the question, don't wait for a spoken answer, and offer another way to share or just stay quietly nearby. Let the voice come back on its own. This card names a feeling — it never replaces a person's real communication tools. Lineage: [situational mutism](https://stimpunks.org/glossary/situational-mutism/) — "situational," not "selective," because it depends on the situation and is never chosen.
 
-*Pattern: 30 Communication Bandwidth · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
+*Pattern: [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/) · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
 
 ### prickly
 *thorns, everything scratches* · "Everything's rubbing the wrong way."
@@ -190,7 +190,7 @@ Running on empty is the last spoon in your hand, the rest of the day's already s
 
 Stormy is big clouds about to break — pressure built up, feeling close to the edge. This card names strong emotion near its limit: overwhelmed, about to spill, weather that has to move through. A storm is not something to manage away; it's a front to get through safely. When this card is out, get to shelter. Lower the stimulation, drop the demands, stay steady and near, and let it pass without adding to it.
 
-*Pattern: [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/) · 23 Co-Regulation*
+*Pattern: [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/) · [23 Co-Regulation](https://stimpunks.org/patterns/library/co-regulation/)*
 
 ### tender
 *a small figure with a soft, sore glow along their skin, flinching as a tiny word lands nearby like a dropped pebble* · "A small thing hurt a lot right now."
@@ -211,7 +211,7 @@ Too seen is the raw feeling of being looked at — every pair of eyes seems to l
 
 Warm is a cozy glow, wrapped up — settled, safe, at ease. This card names calm and safe: comfortable, steady, no alarm anywhere. Naming the good weather matters as much as naming the hard weather, so it can be noticed and returned to. When this card is out, notice what made it happen, and remember it. Those are the conditions worth repeating.
 
-*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · 22 Regulation Windows*
+*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · [22 Regulation Windows](https://stimpunks.org/patterns/library/regulation-windows/)*
 
 ### your own
 *a blank card and a pencil* · "A feeling that isn't here yet."
@@ -231,28 +231,28 @@ _The niche-construction pieces: the ways we change the environment so it fits._
 
 A big squeeze is deep, even pressure — a weighted wrap, a firm hug, a tight tuck. This card names how firm pressure can calm the body. Many bodies feel steadier with a big squeeze when a light touch wouldn't help. This is well-understood sensory regulation, not neediness. When this card is out, offer the pressure the person asks for — and only the pressure they ask for, on their terms.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 22 Regulation Windows*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [22 Regulation Windows](https://stimpunks.org/patterns/library/regulation-windows/)*
 
 ### a corner
 *a small figure tucked into a corner, walls on two sides* · "Somewhere with sides, at my back."
 
 A corner is the cheapest cave there is — two walls meeting, a covered back, an edge to settle against. This card names a pull toward being tucked in. Sides and edges cut down the input and help a body feel held. Corners and nooks are in every room and cost nothing. When this card is out, find the person a corner, or make one with a shelf or some furniture, instead of asking them to settle out in the open.
 
-*Pattern: 21 Sensory Safe Zones · 38 Attention Sanctuaries*
+*Pattern: [21 Sensory Safe Zones](https://stimpunks.org/patterns/library/sensory-safe-zones/) · [38 Attention Sanctuaries](https://stimpunks.org/patterns/library/attention-sanctuaries/)*
 
 ### a den
 *a blanket or umbrella making a little roof overhead* · "Something over me to tuck under."
 
 A den is a roof you make — a blanket over a table, an umbrella, a pop-up tent, a hood pulled up. This card names the comfort of cover overhead. A small, closed-in pocket drops the light and noise and marks off a space that's yours. Dens are quick to build from what's already in the room. When this card is out, help build the cover, and let the person decide how closed-in it should be.
 
-*Pattern: 21 Sensory Safe Zones · 38 Attention Sanctuaries*
+*Pattern: [21 Sensory Safe Zones](https://stimpunks.org/patterns/library/sensory-safe-zones/) · [38 Attention Sanctuaries](https://stimpunks.org/patterns/library/attention-sanctuaries/)*
 
 ### a smell that helps
 *a hand near a scented thing* · "A smell that settles me, or less of one."
 
 This is a card for the nose. It names smell as a real sensory need — a calming smell to bring close, or a bad one that has to go. Smell is easy for others to miss, and hard to ignore when it's wrong. When this card is out, change the air, not the person.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 37 Sensory Gradients*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [37 Sensory Gradients](https://stimpunks.org/patterns/library/sensory-gradients/)*
 
 ### a snack or a drink
 *a cup and a small snack* · "Something to eat or drink."
@@ -266,35 +266,35 @@ This card names a body need that quietly throws everything else off — hunger, 
 
 A steady sound is a gentle, repeating wave — a hum, white noise, a loop to rest on. This card names a need for calm, steady input. A constant sound can cover the sharp, surprising ones. Some quiet is too quiet, and a steady sound fills it kindly. When this card is out, offer the calm sound, and protect it from interruption.
 
-*Pattern: 20 Sensory Filtering · 37 Sensory Gradients*
+*Pattern: [20 Sensory Filtering](https://stimpunks.org/patterns/library/sensory-filtering/) · [37 Sensory Gradients](https://stimpunks.org/patterns/library/sensory-gradients/)*
 
 ### a way out
 *an open door* · "A way to leave that I can use."
 
 A way out is an open door — an exit you can see and use. This card names the need to know you can leave. It's not always about leaving; it's about being sure that leaving is allowed. Often, just knowing the door is there is what makes staying possible. When this card is out, make the exit certain: a clear way to step out, no asking ritual, no penalty for using it.
 
-*Pattern: 32 Consent Over Compliance · 35 Predictable Structure*
+*Pattern: [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/) · [35 Predictable Structure](https://stimpunks.org/patterns/library/predictable-structure/)*
 
 ### another way to talk
 *a hand pointing at a card, next to a small whiteboard* · "Let me point, write, or show it."
 
 A pointing hand and a whiteboard — saying it without saying it out loud. This card names the need for another way to communicate: pointing, typing, writing, signing, or showing a card when speech is hard, slow, or gone for now. A different way to talk is not less talking. When this card is out, offer the other channel and wait. Hand over the whiteboard, the device, the cards, and the time, instead of pushing for spoken words.
 
-*Pattern: 30 Communication Bandwidth · 27 Interaction Access*
+*Pattern: [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/) · [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/)*
 
 ### busy hands
 *a fidget in motion* · "Something for my hands to do."
 
 Busy hands is a fidget in motion — something for the hands to do while the rest pays attention. This card names a need for busy hands: a fidget, a texture, a small motion that steadies focus instead of splitting it. Moving hands are often how a person listens. When this card is out, let the hands be busy. The fidget is helping, not distracting.
 
-*Pattern: 19 Stim Regulation · [15 Attention Anchors](https://stimpunks.org/patterns/library/attention-anchors/)*
+*Pattern: [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/) · [15 Attention Anchors](https://stimpunks.org/patterns/library/attention-anchors/)*
 
 ### dim the light
 *a dial lowering a lamp* · "Softer light."
 
 Dim the light is a dial turned down — harsh brightness eased to something softer. This card names being sensitive to light: bright bulbs, glare, or sheer strength that most people tune out but this body can't. Lowering the light is a change to the room, not a special favor. When this card is out, soften the light where you can, and treat a too-bright room as the thing to fix.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 37 Sensory Gradients*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [37 Sensory Gradients](https://stimpunks.org/patterns/library/sensory-gradients/)*
 
 ### fewer choices
 *a wall of too many identical doors, with a hand gently sliding all but two aside — a big choice made small and doable* · "Fewer things to choose from."
@@ -306,14 +306,14 @@ Fewer choices is a wall of too many doors, with all but a couple slid gently asi
 
 Headphones turn the world's volume down — a wall between the ears and too much sound. This card names a need for less sound: quieter, or filtered, so the rest becomes bearable. This is a fix to the room, not avoidance — the sound was the problem, and turning it down is a fair answer. When this card is out, give the quiet or the headphones freely. Needing less noise is not a failure to put up with it.
 
-*Pattern: 20 Sensory Filtering · [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/)*
+*Pattern: [20 Sensory Filtering](https://stimpunks.org/patterns/library/sensory-filtering/) · [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/)*
 
 ### just one person
 *two figures, side by side* · "Not a crowd — one person."
 
 Just one person is two figures side by side — one companion, not a crowd. This card names a need to shrink the social field: one trusted person at a time, where a group would be too much. Liking one-to-one is a real access need, not being antisocial. When this card is out, thin the crowd. Offer a single steady person, and don't make group joining the only way to count as taking part.
 
-*Pattern: [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/) · 34 Collaboration Gradients*
+*Pattern: [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/) · [34 Collaboration Gradients](https://stimpunks.org/patterns/library/collaboration-gradients/)*
 
 ### keep it the same
 *the same few things set out in the same order each morning — same cup, same seat — a familiar path worn smooth* · "The same way as before."
@@ -325,28 +325,28 @@ Keep it the same is the same few things in the same order, day after day — a p
 
 Less talking is a quiet mouth and a calm face — fewer words in the air. This card names a need for less language to handle: less to take in, less to answer, a break from keeping a conversation going. Quiet together can be a relief, not a gap to fill. When this card is out, ease off the words. Fewer questions, more room, and don't read the quiet as trouble.
 
-*Pattern: 30 Communication Bandwidth · [16 Cognitive Load Windows](https://stimpunks.org/patterns/library/cognitive-load-windows/)*
+*Pattern: [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/) · [16 Cognitive Load Windows](https://stimpunks.org/patterns/library/cognitive-load-windows/)*
 
 ### less to look at
 *a busy, cluttered wall beside a calm bare one* · "Fewer things to look at."
 
 One wall is crowded with stuff; one wall is calm and bare. This card asks for the bare one. It names visual clutter as its own load: busy walls, bright displays, and too much in view can be as much as too much sound, even when the light is fine. Clearing the view is free. When this card is out, take some things down, or turn the person toward a plainer view. Reduce what there is to look at, not what the person can cope with.
 
-*Pattern: 20 Sensory Filtering · [03 Sensory Load](https://stimpunks.org/patterns/library/sensory-load/)*
+*Pattern: [20 Sensory Filtering](https://stimpunks.org/patterns/library/sensory-filtering/) · [03 Sensory Load](https://stimpunks.org/patterns/library/sensory-load/)*
 
 ### let me come and go
 *a figure stepping out through an open doorway and back in — a loop of coming and going* · "Let me join and slip away as I need."
 
 Let me come and go is the need to move between being with people and being alone. You join in, slip away to recharge, then come back — on your own rhythm, not a set schedule. Dipping in and out is how many people do their best being-together. It isn't rudeness, avoidance, or flakiness. When this card is out, make coming and going cost nothing: no explaining, no earning your way back in, and permission to lurk, drop in, and leave. Lineage: [intermittent collaboration](https://stimpunks.org/glossary/intermittent-collaboration/), from Cavendish Space.
 
-*Pattern: 34 Collaboration Gradients · 29 Parallel Presence*
+*Pattern: [34 Collaboration Gradients](https://stimpunks.org/patterns/library/collaboration-gradients/) · [29 Parallel Presence](https://stimpunks.org/patterns/library/parallel-presence/)*
 
 ### let me control it
 *a hand resting on a dimmer switch* · "Let me be the one to change it."
 
 This is a hand on the switch — the person turning the light, the sound, or the thing up or down themselves. This card names control as its own need. It's not one right setting; it's being the one who decides and adjusts. For many people the same input is fine when they hold the dial, and too much when someone else does. When this card is out, hand over the control — the switch, the volume, the timing — instead of setting it for them.
 
-*Pattern: 32 Consent Over Compliance · [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/)*
+*Pattern: [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/) · [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/)*
 
 ### let me finish
 *a bookmark being slid into place — a natural stopping point reached* · "Let me get to a stopping point first."
@@ -360,21 +360,21 @@ Let me finish is the need to reach a stopping point before switching — not rus
 
 Stimming is how many bodies settle and steady themselves — rocking, flapping, humming, pacing, tapping. This card names the need to move in your own way, freely, without being stopped or corrected. It is regulation and expression, not misbehavior. The freedom to move is part of the freedom to be. When this card is out, make room for the movement and let it be — never still it. Lineage: freedom of embodiment, from the Neuroqueer Learning Spaces Manifesto and Nick Walker's *Neuroqueer Heresies*.
 
-*Pattern: 19 Stim Regulation · 51 Bodymind Affirmation*
+*Pattern: [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/) · [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/)*
 
 ### let me unmask
 *a figure gently lowering a smiling paper mask away from their face — behind it, their own softer, real expression, shoulders easing. warm and relieved, never scary* · "Let me drop the mask here."
 
 Let me unmask is the need to set the mask down — to stop performing and let your real face show. Masking is the tiring work of hiding Autistic ways of being to seem okay, and it is survival, not a choice. It wears a body out. This card asks for a place, and people, where the performance can stop — where stimming, looking away, or going quiet costs nothing. When this card is out, make it safe to drop the mask: don't correct the stims, don't read quiet or little eye contact as rudeness, and never make seeming "normal" the price of belonging. Lineage: masking / camouflaging; freedom of embodiment, from Nick Walker's *Neuroqueer Heresies*.
 
-*Pattern: [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/) · 51 Bodymind Affirmation*
+*Pattern: [08 Masking Pressure](https://stimpunks.org/patterns/library/masking-pressure/) · [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/)*
 
 ### my own spot
 *a marked place that's mine* · "A place that's just mine."
 
 My own spot is a marked place that belongs to one person — a seat, a corner, a patch of floor. This card names a need for a reliable base: somewhere steady and claimed, safe from being moved or shared without warning. A predictable spot makes it easier to work out where to be each day. When this card is out, protect the spot. Keep it theirs, and give notice before anything about it changes.
 
-*Pattern: 35 Predictable Structure · 21 Sensory Safe Zones*
+*Pattern: [35 Predictable Structure](https://stimpunks.org/patterns/library/predictable-structure/) · [21 Sensory Safe Zones](https://stimpunks.org/patterns/library/sensory-safe-zones/)*
 
 ### no rush
 *a slow, easy clock* · "All the time I need."
@@ -402,28 +402,28 @@ One thing at a time is a single object on a clear table. This card names a need 
 
 Two figures side by side, each in their own world — company without any push to interact. This card names body doubling: being near someone while you each do your own thing. The shared presence steadies you, with no pull to talk or join in. For many people this is the easiest kind of togetherness. When this card is out, offer quiet company. Settle nearby, expect nothing, and don't turn it into a conversation.
 
-*Pattern: 29 Parallel Presence · 23 Co-Regulation*
+*Pattern: [29 Parallel Presence](https://stimpunks.org/patterns/library/parallel-presence/) · [23 Co-Regulation](https://stimpunks.org/patterns/library/co-regulation/)*
 
 ### room to move
 *open floor, space to pace or spin* · "Space to move my body."
 
 Room to move is open floor — space to pace, rock, spin, or stim. This card names a need for movement: motion that helps a body settle and think, not fidgeting to be stopped. Bodies that move to focus are doing exactly what they should. When this card is out, make space for the movement instead of asking the body to be still. Stillness is not the goal.
 
-*Pattern: 19 Stim Regulation · 50 Bodymind Break*
+*Pattern: [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/) · [50 Bodymind Break](https://stimpunks.org/patterns/library/bodymind-break/)*
 
 ### say it straight
 *a straight arrow, not a curving one* · "Say what you mean."
 
 Say it straight is a straight arrow, not a detour. This card names a need for plain, direct words — say what you mean, with no hints and no reading between the lines. The gap runs both ways. Indirect meaning takes real effort to decode, and leaves room to get it wrong. That is the double empathy problem (Milton, 2012), not a failure to read people. When this card is out, be direct: plain requests, clear feedback, no hidden test. A clear "no" is kinder than a soft maybe.
 
-*Pattern: 30 Communication Bandwidth*
+*Pattern: [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/)*
 
 ### sit my way
 *a floor cushion, a wobble stool, and someone standing* · "Let me sit or stand how I like."
 
 Three ways to be where a chair would go — on the floor, on a wobble stool, or standing. This card names posture as a choice. A body settles and pays attention differently depending on how it's allowed to sit, move, or stand, and the "proper" way is often the worst fit. Letting the body choose costs nothing. When this card is out, widen the options — floor, cushion, stool, standing, moving — instead of asking the person to sit still and straight.
 
-*Pattern: 19 Stim Regulation · 32 Consent Over Compliance*
+*Pattern: [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/) · [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/)*
 
 ### something different
 *a smooth, well-worn path with the familiar things still standing along it — and a new branch curving off toward something bright and unfamiliar, both ways left open* · "Something different from before."
@@ -444,21 +444,21 @@ Something soft is a plush thing to hold — comfort and grounding through touch.
 
 Something to chew is a chewy tool — safe input for the mouth, a chew or a crunch. This card names a need to chew: biting or crunching that helps a body settle and calm. This is a known sensory strategy, met with a safe tool, not corrected. When this card is out, provide a proper chew and treat the need as ordinary. It is not misbehavior.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 19 Stim Regulation*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [19 Stim Regulation](https://stimpunks.org/patterns/library/stim-regulation/)*
 
 ### tell me first
 *a small heads-up sign* · "Let me know before it changes."
 
 Tell me first is a small heads-up sign — a warning before a change. This card names a need to know what's coming, so a change doesn't arrive as a shock. Surprise is costly for many nervous systems, and a heads-up is cheap to give. When this card is out, say what's next before it happens, every time you can.
 
-*Pattern: 35 Predictable Structure · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
+*Pattern: [35 Predictable Structure](https://stimpunks.org/patterns/library/predictable-structure/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
 
 ### the right temperature
 *a blanket on one side, a fan on the other* · "Warmer, or cooler."
 
 Warmth on one side, cool air on the other — the body asking for a different temperature. This card names temperature as a real sensory need. Too warm or too cold can fill a body up as much as noise or light can, and it's easy for others to miss. A layer, a fan, an open window, or a warm drink all help. When this card is out, change the temperature around the person — add or take away a layer, move the air — instead of telling them they're fine.
 
-*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · 37 Sensory Gradients*
+*Pattern: [18 Sensory Thresholds](https://stimpunks.org/patterns/library/sensory-thresholds/) · [37 Sensory Gradients](https://stimpunks.org/patterns/library/sensory-gradients/)*
 
 ### your own
 *a blank card and a pencil* · "Something else that helps."
@@ -478,7 +478,7 @@ _The in-between. Stepping stones for the crossings — every card is a place to 
 
 "All done" is a closed, happy loop — a clean ending, chosen. It names finishing: this is done, and it's theirs to call. Calling your own ending is different from being made to stop. When this card is out, honor the ending. Let "done" mean done — no one-more-thing, and no arguing over whether it really is.
 
-*Pattern: 32 Consent Over Compliance · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
+*Pattern: [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
 
 ### coming back
 *a footprint returning to a spot* · "I'll be back — hold my place."
@@ -492,7 +492,7 @@ _The in-between. Stepping stones for the crossings — every card is a place to 
 
 "I need a minute" is a figure resting on a lily pad partway across — a pause, not a goodbye. It names the need to stop for a moment and gather before going on: still in it, just not moving yet. A pause is part of the crossing, not a refusal of it. When this card is out, hold the moment open. Stop the clock, don't fill the quiet, and let the minute really be a minute.
 
-*Pattern: 22 Regulation Windows · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
+*Pattern: [22 Regulation Windows](https://stimpunks.org/patterns/library/regulation-windows/) · [07 Regulation First](https://stimpunks.org/patterns/library/regulation-first/)*
 
 ### i want to stay a while
 *a figure settled on a lily pad* · "I'm good here. Let me stay."
@@ -506,35 +506,35 @@ This card names the wish to stay put — not stuck, not avoiding, just not done 
 
 "Not yet" is a gently raised hand — asking for more time before a change. It names readiness that hasn't arrived: not a no, just "not at this moment." Honoring "not yet" is how you keep a change from becoming a fight. When this card is out, wait for ready. Check back instead of pushing, and let the move happen when it can.
 
-*Pattern: [04 Processing Time](https://stimpunks.org/patterns/library/processing-time/) · 32 Consent Over Compliance*
+*Pattern: [04 Processing Time](https://stimpunks.org/patterns/library/processing-time/) · [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/)*
 
 ### ready now
 *a foot stepping forward* · "I'm ready to shift."
 
 "Ready now" is a foot stepping forward — the green light for a change, on the person's own signal. It names readiness that has arrived: the move can happen because they say so, not because the schedule does. Letting the person call "ready" gives the change back to them. When this card is out, go when they go. Follow their timing, and treat their signal as the one that counts.
 
-*Pattern: 32 Consent Over Compliance · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
+*Pattern: [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/)*
 
 ### slowly
 *a gentle bridge between two pads* · "Ease me across, one step."
 
 "Slowly" is a gentle bridge between two lily pads — a change taken one careful step at a time. It names a need to cross in stages: not no, but not all at once — ease across with support. Some changes only work when they're broken into steps. When this card is out, build the bridge. Step it down, go at their pace, and don't turn the crossing into one big leap.
 
-*Pattern: [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · 35 Predictable Structure*
+*Pattern: [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · [35 Predictable Structure](https://stimpunks.org/patterns/library/predictable-structure/)*
 
 ### stuck
 *a figure paused between two pads* · "I can't get going. That's okay."
 
 "Stuck" is a figure paused between two lily pads, unable to get going for now. This is a real state, not something to scold — the engine won't start yet, and that tells you about the moment, not the person. Stuck is a place to rest, never a failure. When this card is out, don't push them across the gap. Ask what would help them where they are, or offer a what-helps card and let them choose.
 
-*Pattern: [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · [16 Cognitive Load Windows](https://stimpunks.org/patterns/library/cognitive-load-windows/)*
+*Pattern: [55 Task Initiation](https://stimpunks.org/patterns/library/task-initiation/) · [13 Context Switching Cost](https://stimpunks.org/patterns/library/context-switching-cost/) · [16 Cognitive Load Windows](https://stimpunks.org/patterns/library/cognitive-load-windows/)*
 
 ### watch first
 *eyes at the edge of a group* · "Let me look before I join."
 
 "Watch first" is a pair of eyes at the edge of a group — looking before going in. It names a real way of joining in: taking part by watching until things are clear enough to step into. Watching is taking part, not shyness to be pushed past. When this card is out, let the watching stand. No coaxing to join, and count the edge of the group as being in it.
 
-*Pattern: 34 Collaboration Gradients · 27 Interaction Access*
+*Pattern: [34 Collaboration Gradients](https://stimpunks.org/patterns/library/collaboration-gradients/) · [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/)*
 
 ### your own
 *a blank card and a pencil* · "A moment that isn't here yet."
@@ -552,7 +552,7 @@ _Who am I today. A non-deficit way to hold that different people bloom in differ
 
 The dandelion grows almost anywhere — cracks in the pavement, poor soil, little care — and still blooms. This card names being hardy across many conditions: a way of growing that holds up in lots of places, gentle and rough alike. The dandelion comes from Boyce and Ellis's work on how differently people respond to their surroundings. When this card is out, it's about range, not worth. Hardy is not better than sensitive, just different, and every grower still deserves good ground.
 
-*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · 49 Environmental Weathering*
+*Pattern: [09 Environment Fit](https://stimpunks.org/patterns/library/environment-fit/) · [49 Environmental Weathering](https://stimpunks.org/patterns/library/environmental-weathering/)*
 
 ### orchid
 *an orchid in its own conditions* · "Give me my conditions and I bloom."
@@ -586,49 +586,49 @@ _Affirmations. Given to someone, or claimed for yourself — never earned, never
 
 "I see you" is eyes meeting, kindly — the plain fact of being truly noticed. It says: you are not looked past, not managed, but really seen and known. Being seen as yourself is rare, and it steadies you. When this card is given, let it be true. See the actual person in front of you, and let them feel it.
 
-*Pattern: 23 Co-Regulation · 51 Bodymind Affirmation*
+*Pattern: [23 Co-Regulation](https://stimpunks.org/patterns/library/co-regulation/) · [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/)*
 
 ### i'm glad you're here
 *two figures, warm together* · given or claimed
 
 "I'm glad you're here" is two figures warm together — simple gladness that someone is near. It says: you are wanted, not just put up with. Your being here is a good thing to someone. Being glad of a person is not the same as liking what they did. When this card is given, attach it to the person, not their behavior — glad they're here, full stop.
 
-*Pattern: 51 Bodymind Affirmation · 44 Ecologies of Care*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [44 Ecologies of Care](https://stimpunks.org/patterns/library/ecologies-of-care/)*
 
 ### it's okay to need what you need
 *an open, unjudging space* · given or claimed
 
 "It's okay to need what you need" is an open space with no judgment — room to have your own needs. It says: your needs are fine exactly as they are. Not too much, not embarrassing, not up for debate. Needing support is not a flaw. When this card is given, drop the judgment completely. The need is fine, and asking for it should cost nothing.
 
-*Pattern: 51 Bodymind Affirmation · 32 Consent Over Compliance*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/)*
 
 ### nothing to fix
 *a whole thing, left as it is* · given or claimed
 
 "Nothing to fix" is a whole thing, left as it is — no urge to repair it. It says: you are not a project, and this moment does not need to improve you. The urge to fix a person often does the harm. When this card is given, set the fixing down. Be with the person as they are, instead of working on them.
 
-*Pattern: 51 Bodymind Affirmation · 39 Average User Fallacy*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [39 Average User Fallacy](https://stimpunks.org/patterns/library/average-user-fallacy/)*
 
 ### you belong here
 *a hand held out, welcoming* · given or claimed
 
 "You belong here" is a hand held out in welcome — belonging offered plainly. It says: you are part of this, not on trial in it. Belonging you have to earn isn't really belonging. When this card is given, mean it with no strings. Offer it because the person is here, never as a reward for fitting in.
 
-*Pattern: 51 Bodymind Affirmation · 44 Ecologies of Care*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [44 Ecologies of Care](https://stimpunks.org/patterns/library/ecologies-of-care/)*
 
 ### you can rest
 *a soft place to lie down* · given or claimed
 
 "You can rest" is a soft place to lie down — permission to stop. It says: rest is allowed, and no one has to earn it. You can stop trying so hard, and nothing bad follows. Rest you only get when you "deserve" it isn't rest. When this card is given, make the permission real. Clear the demands, and let stopping be truly safe.
 
-*Pattern: [12 Energy Recovery](https://stimpunks.org/patterns/library/energy-recovery/) · 50 Bodymind Break*
+*Pattern: [12 Energy Recovery](https://stimpunks.org/patterns/library/energy-recovery/) · [50 Bodymind Break](https://stimpunks.org/patterns/library/bodymind-break/)*
 
 ### you don't have to talk
 *a calm, open space with no question hanging in the air* · given or claimed
 
 "You don't have to talk" is a calm, open space with no question hanging in it — quiet made welcome. It says: not speaking is not the same as not knowing. Speech is not the measure of a mind, and staying quiet costs nothing here. Presume competence: the quiet person is thinking, understanding, and fully here, whether or not the words come out. When this card is given, mean it with no test — no coaxing for "just one word," no reward for speaking, just real ease with the quiet. Lineage: presume competence.
 
-*Pattern: 51 Bodymind Affirmation · 30 Communication Bandwidth*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/)*
 
 ### your own
 *a blank card and a pencil* · given or claimed
@@ -640,14 +640,14 @@ It names the gap: a kind thing to give that no card holds yet. When this card is
 
 "Your way is a real way" is many paths, all of them good — a person's own way honored. It says: a different route to the same place still counts. Your way of doing, thinking, or being is not a wrong version of someone else's. Different is not deficient. When this card is given, back it up in practice. Let the person's way actually stand, instead of praising it and then overriding it.
 
-*Pattern: 45 Cognitive Pluralism · 51 Bodymind Affirmation*
+*Pattern: [45 Neurological Pluralism](https://stimpunks.org/patterns/library/neurological-pluralism/) · [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/)*
 
 ### you're not broken
 *whole, unbroken shape* · given or claimed
 
 "You're not broken" is a whole shape, not a broken one — the heart of the deck, said straight to a person. Your difference is real and your struggle is real, but neither one makes you broken: broken systems, not broken people. When this card is given, it answers a lifetime of the opposite message — so give it plainly and often, and don't add a "but."
 
-*Pattern: 51 Bodymind Affirmation · 39 Average User Fallacy*
+*Pattern: [51 Bodymind Affirmation](https://stimpunks.org/patterns/library/bodymind-affirmation/) · [39 Average User Fallacy](https://stimpunks.org/patterns/library/average-user-fallacy/)*
 
 ----
 
@@ -660,35 +660,35 @@ _How open I am to talking, right now. The Autistic community's color communicati
 
 The orange star is the consent badge. It sets a boundary around touch. It says you may ask before touching — a hug, a hand — where, without it, you shouldn't ask at all. When this card is shown, ask first and accept the answer. Keep the star, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. From the [orange-star convention](https://stimpunks.org/access/interaction/).
 
-*Pattern: 32 Consent Over Compliance · 27 Interaction Access*
+*Pattern: [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/) · [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/)*
 
 ### come say hi
 *white circle on green* · "i want to talk — you can start."
 
 The green circle is the "come talk to me" badge. It's an open door: the person wants contact but may not be able to start it, so others are welcome to begin. When this card is shown, take the invitation and say hello first. Keep the circle, too: the shape carries the meaning along with the color, for people who are colorblind. Unlike the rest of the deck, interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
-*Pattern: 27 Interaction Access · 30 Communication Bandwidth*
+*Pattern: [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/) · [30 Communication Bandwidth](https://stimpunks.org/patterns/library/communication-bandwidth/)*
 
 ### i've got this
 *dark diamond outline on white* · "i can do my own hellos."
 
 The neutral card — a dark diamond on white — is the "I do my own hellos" badge. It's an ordinary open state: approach as normal, and the person will handle their own hellos. When this card is shown, just interact as usual. Keep the diamond, too: it's a Stimpunks addition so the neutral card stays clear for people who are colorblind, since plain white has no set shape. Interaction cards are made to be shown, and can be worn or flipped as things change. From the [neutral (white, or no badge) convention](https://stimpunks.org/access/interaction/).
 
-*Pattern: 27 Interaction Access*
+*Pattern: [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/)*
 
 ### not right now
 *white square on red* · "please don't start talking to me."
 
 The red square is the "not right now" badge. It's a closed door to being approached: the person doesn't want others to start things, though they may still come to you, and you can answer when they do. When this card is shown, hold back. Don't start a conversation, and don't take it personally. Keep the square, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
-*Pattern: 27 Interaction Access · 32 Consent Over Compliance*
+*Pattern: [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/) · [32 Consent Over Compliance](https://stimpunks.org/patterns/library/consent-over-compliance/)*
 
 ### people i know
 *white triangle on yellow* · "only say hi if we've met."
 
 The yellow triangle is the "only people I know" badge. It's a narrowed door: the person wants to talk only with people they already know, though if they start talking to you, you're welcome to reply. When this card is shown, don't approach as a stranger. Wait to be known or greeted first. Keep the triangle, too: the shape carries the meaning along with the color, for people who are colorblind. Interaction cards are made to be shown, and can be worn or flipped as things change. Lineage: the [color communication badges](https://stimpunks.org/access/interaction/) from Autism Network International and the first Autreat, Jim Sinclair, 1996.
 
-*Pattern: 27 Interaction Access · [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/)*
+*Pattern: [27 Interaction Access](https://stimpunks.org/patterns/library/interaction-access/) · [06 Social Energy](https://stimpunks.org/patterns/library/social-energy/)*
 
 ### your own
 *a blank badge and a pencil* · "Your own signal."
@@ -706,7 +706,7 @@ _The card the deck doesn't have yet. Find the gap, draw it, send it in._
 
 The blank card is an empty front and a pencil — a card that isn't drawn yet. It names the fact that the deck isn't finished. Whatever a person needs that no card says yet, this is where it gets made. A blank is not a gap to say sorry for. It's the deck admitting it can't know every need in advance. When this card is out, take the missing need seriously. Draw it with the person, let it join whichever family fits, and send it back so the shared deck can grow. This is how the deck gets made: use it, find the gap, make the card.
 
-*Pattern: 47 Collaborative Niche Construction · 43 Commons Infrastructure*
+*Pattern: [47 Collaborative Niche Construction](https://stimpunks.org/patterns/library/collaborative-niche-construction/) · [43 Commons Infrastructure](https://stimpunks.org/patterns/library/commons-infrastructure/)*
 
 ----
 

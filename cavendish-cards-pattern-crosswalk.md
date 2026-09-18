@@ -11,7 +11,7 @@ The deck lives in the middle of [ARLES](https://stimpunks.org/glossary/arles/) �
 ## How to read the tables
 
 - **Bold** is the primary Pattern. Others are secondary.
-- A Pattern's number is its Library number. Status: 🟢 published · 🔜 next to write · 🟡 planned. Only 🟢 pages exist today, so only 🟢 backlinks can be wired now.
+- A Pattern's number is its Library number. **The Library completed at 56 on 2026-09-18, so every Pattern below is published and every backlink is live** — the 🟢 markers are all that is left of a three-way status (🟢 published · 🔜 next to write · 🟡 planned) that the Library outran. The vocabulary stays for a Pattern drafted ahead of its page.
 - The card's home ARLES layer is set by its realm (in each heading). A ⤢ marks a card whose Pattern pulls a different layer than its realm — e.g. a Weather card (Lived Experience) that is really about Attention.
 - `—` means no clean Pattern. Those are collected under [Gaps](#gaps-cards-the-library-doesnt-pattern-yet) as candidate new Patterns, not oversights.
 
@@ -44,7 +44,7 @@ The naming layer — the deck is thickest here. Several cards ⤢ pull down into
 | in the zone ⤢ | **01 Monotropism** · 05 Deep Attention | monotropic flow; tendril theory |
 | pulled every way ⤢ | **01 Monotropism** · 13 Context Switching Cost | monotropic split |
 | round and round ⤢ | **01 Monotropism** | monotropic spiral — everyday loop only, clinical depth stays out |
-| happy flappy | **19 Stim Regulation** 🔜 · 51 Bodymind Affirmation | happy stimming |
+| happy flappy | **19 Stim Regulation** · 51 Bodymind Affirmation | happy stimming |
 | meerkat | **23 Co-Regulation** · 07 Regulation First | wants a safe person close; meerkat mode |
 | stormy | **07 Regulation First** · 23 Co-Regulation | emotional flooding — not burnout |
 | warm | **09 Environment Fit** · 22 Regulation Windows | remember the conditions that made it |
@@ -70,12 +70,12 @@ The niche-construction realm. The card names the *need*; the Pattern names the *
 | a smell that helps | **18 Sensory Thresholds** · 37 Sensory Gradients | scent, easy for others to miss |
 | the right temperature | **18 Sensory Thresholds** · 37 Sensory Gradients | thermal comfort |
 | a big squeeze | **18 Sensory Thresholds** · 22 Regulation Windows | proprioceptive input |
-| something to chew | **18 Sensory Thresholds** · 19 Stim Regulation 🔜 | oral-sensory regulation |
+| something to chew | **18 Sensory Thresholds** · 19 Stim Regulation | oral-sensory regulation |
 | something soft | **15 Attention Anchors** · 18 Sensory Thresholds | tactile anchor |
-| busy hands | **19 Stim Regulation** 🔜 · 15 Attention Anchors | fidget as listening |
-| let me stim | **19 Stim Regulation** 🔜 · 51 Bodymind Affirmation | freedom of embodiment |
-| room to move | **19 Stim Regulation** 🔜 · 50 Bodymind Break | movement to think |
-| sit my way | **19 Stim Regulation** 🔜 · 32 Consent Over Compliance | posture as choice |
+| busy hands | **19 Stim Regulation** · 15 Attention Anchors | fidget as listening |
+| let me stim | **19 Stim Regulation** · 51 Bodymind Affirmation | freedom of embodiment |
+| room to move | **19 Stim Regulation** · 50 Bodymind Break | movement to think |
+| sit my way | **19 Stim Regulation** · 32 Consent Over Compliance | posture as choice |
 | a corner | **21 Sensory Safe Zones** · 38 Attention Sanctuaries | enclosure |
 | a den | **21 Sensory Safe Zones** · 38 Attention Sanctuaries | cover overhead |
 | my own spot | **35 Predictable Structure** · 21 Sensory Safe Zones | a reliable base |
@@ -102,7 +102,7 @@ Transitions and moments. Mostly [13 Context Switching Cost](https://stimpunks.or
 | Card | Pattern(s) | Note |
 |---|---|---|
 | i need a minute | **22 Regulation Windows** · 07 Regulation First | pause to gather |
-| stuck | **13 Context Switching Cost** · 16 Cognitive Load Windows | task initiation — see Gaps |
+| stuck | **55 Task Initiation** · 13 Context Switching Cost · 16 Cognitive Load Windows | getting going, not switching — 55 is grounded in monotropic inertia |
 | not yet | **04 Processing Time** · 32 Consent Over Compliance | readiness hasn't arrived |
 | ready now | **32 Consent Over Compliance** · 13 Context Switching Cost | the person's own signal |
 | slowly | **13 Context Switching Cost** · 35 Predictable Structure | a graded crossing |
@@ -133,7 +133,7 @@ Affirmations. Given between people on paper (co-regulation); claimed and shown o
 | nothing to fix | **51 Bodymind Affirmation** · 39 Average User Fallacy | acceptance over correction |
 | you belong here | **51 Bodymind Affirmation** · 44 Ecologies of Care | unconditional membership |
 | you can rest | **12 Energy Recovery** · 50 Bodymind Break | permission to stop |
-| your way is a real way | **45 Cognitive Pluralism** · 51 Bodymind Affirmation | a nonstandard route honored |
+| your way is a real way | **45 Neurological Pluralism** · 51 Bodymind Affirmation | a nonstandard route honored |
 | you're not broken | **51 Bodymind Affirmation** · 39 Average User Fallacy | broken systems, not broken people |
 | you don't have to talk | **51 Bodymind Affirmation** · 30 Communication Bandwidth | presume competence; speech is not the measure of a mind |
 
@@ -180,30 +180,31 @@ Pattern → the cards that name it. This is the "cards that name this" list a pu
 | 15 Attention Anchors | 🟢 | busy hands · something soft |
 | 16 Cognitive Load Windows | 🟢 | foggy · full · less talking · no rush · stuck |
 | 18 Sensory Thresholds | 🟢 | buzzy · prickly · need more · a big squeeze · a smell that helps · dim the light · headphones · something to chew · something soft · the right temperature · orchid |
-| 19 Stim Regulation | 🔜 | happy flappy · need more · busy hands · let me stim · room to move · sit my way · something to chew · a big squeeze |
-| 20 Sensory Filtering | 🟡 | headphones · less to look at · a steady sound |
-| 21 Sensory Safe Zones | 🟡 | the cave · a corner · a den · my own spot |
-| 22 Regulation Windows | 🟡 | warm · i need a minute · a big squeeze |
-| 23 Co-Regulation | 🟡 | meerkat · stormy · parallel existence · i see you |
-| 27 Interaction Access | 🟡 | come say hi · people i know · not right now · ask first · i've got this · another way to talk · watch first |
-| 29 Parallel Presence | 🟡 | the watering hole · let me come and go · parallel existence |
-| 30 Communication Bandwidth | 🟡 | another way to talk · just one person · less talking · say it straight · come say hi · no-words-right-now · you don't have to talk |
-| 32 Consent Over Compliance | 🟡 | a way out · let me control it · sit my way · not yet · ready now · all done · it's okay to need what you need · ask first · not right now · let me come and go |
-| 34 Collaboration Gradients | 🟡 | the campfire · the watering hole · just one person · let me come and go · watch first |
-| 35 Predictable Structure | 🟡 | my own spot · a way out · tell me first · slowly · big-step |
-| 37 Sensory Gradients | 🟡 | a smell that helps · a steady sound · dim the light · headphones · the right temperature |
-| 38 Attention Sanctuaries | 🟡 | the cave · a corner · a den |
-| 39 Average User Fallacy | 🟡 | you're not broken · nothing to fix |
-| 43 Commons Infrastructure | 🟡 | the library · draw your own |
-| 44 Ecologies of Care | 🟡 | i'm glad you're here · you belong here |
-| 45 Cognitive Pluralism | 🟡 | your way is a real way |
-| 47 Collaborative Niche Construction | 🟡 | the habitat · draw your own |
-| 49 Environmental Weathering | 🟡 | dandelion |
-| 50 Bodymind Break | 🟡 | room to move · you can rest |
-| 51 Bodymind Affirmation | 🟡 | happy flappy · let me stim · let me unmask · i see you · i'm glad you're here · it's okay to need what you need · nothing to fix · you belong here · you can rest · your way is a real way · you're not broken |
+| 19 Stim Regulation | 🟢 | happy flappy · need more · busy hands · let me stim · room to move · sit my way · something to chew · a big squeeze |
+| 20 Sensory Filtering | 🟢 | headphones · less to look at · a steady sound |
+| 21 Sensory Safe Zones | 🟢 | the cave · a corner · a den · my own spot |
+| 22 Regulation Windows | 🟢 | warm · i need a minute · a big squeeze |
+| 23 Co-Regulation | 🟢 | meerkat · stormy · parallel existence · i see you |
+| 27 Interaction Access | 🟢 | come say hi · people i know · not right now · ask first · i've got this · another way to talk · watch first |
+| 29 Parallel Presence | 🟢 | the watering hole · let me come and go · parallel existence |
+| 30 Communication Bandwidth | 🟢 | another way to talk · just one person · less talking · say it straight · come say hi · no-words-right-now · you don't have to talk |
+| 32 Consent Over Compliance | 🟢 | a way out · let me control it · sit my way · not yet · ready now · all done · it's okay to need what you need · ask first · not right now · let me come and go |
+| 34 Collaboration Gradients | 🟢 | the campfire · the watering hole · just one person · let me come and go · watch first |
+| 35 Predictable Structure | 🟢 | my own spot · a way out · tell me first · slowly · big-step |
+| 37 Sensory Gradients | 🟢 | a smell that helps · a steady sound · dim the light · headphones · the right temperature |
+| 38 Attention Sanctuaries | 🟢 | the cave · a corner · a den |
+| 39 Average User Fallacy | 🟢 | you're not broken · nothing to fix |
+| 43 Commons Infrastructure | 🟢 | the library · draw your own |
+| 44 Ecologies of Care | 🟢 | i'm glad you're here · you belong here |
+| 45 Neurological Pluralism | 🟢 | your way is a real way |
+| 47 Collaborative Niche Construction | 🟢 | the habitat · draw your own |
+| 49 Environmental Weathering | 🟢 | dandelion |
+| 50 Bodymind Break | 🟢 | room to move · you can rest |
+| 51 Bodymind Affirmation | 🟢 | happy flappy · let me stim · let me unmask · i see you · i'm glad you're here · it's okay to need what you need · nothing to fix · you belong here · you can rest · your way is a real way · you're not broken |
 | 52 Threshold Anxiety | 🟢 | big-step |
 | 53 Exposure Anxiety | 🟢 | too-seen · no-spotlight |
 | 54 Rejection Sensitivity | 🟢 | tender |
+| 55 Task Initiation | 🟢 | stuck |
 
 ----
 
@@ -215,9 +216,12 @@ These aren't loose ends — they're places the deck, built from the youngest and
 - **Dissociation / spacing out** — `far-away`. The mind stepping back under overload. Currently homeless; not the same as Sensory Load, and 11 Burnout Threshold is deliberately too clinical for the person layer.
 - **Regulated and good states** — `bright`, `fizzy`, and the felt side of `warm`. The Library is friction-lean; it under-patterns good weather. A positive-state Pattern (flow-and-delight, or "the recipe worth repeating") would close the loop, and it's on-ethos: naming the good matters as much as naming the hard.
 - **Differential environmental sensitivity** — the Growers. Boyce & Ellis's orchid/dandelion is its own construct; 09 Environment Fit + 49 Environmental Weathering only partly carry it. A sensitivity Pattern would give all three growers one home.
-- **Task initiation** — `stuck`. Getting going is not the same as switching. 13 Context Switching Cost is adjacent, not identical.
 
 **Closed 2026-09-18.** The anxiety / exposure cluster was the largest gap on this list — `big-step`, `too-seen`, `tender`, and the fix-side `no-spotlight`, all with clean lineages and nowhere in the Library to sit. It closed when **52 Threshold Anxiety**, **53 Exposure Anxiety** and **54 Rejection Sensitivity** went live, and all four cards are now mapped in the tables above. The Pattern shipped as *Threshold Anxiety*, not the drafted *anticipatory anxiety*: the glossary argues threshold anxiety works better as a plain description than as a label, and `big-step`'s own Notes already said *"This card names threshold anxiety"* — glossary, card, and Pattern now use one name. `no-words-right-now` (situational mutism) was never part of the gap; it has always mapped cleanly to 30 Communication Bandwidth.
+
+**Also closed 2026-09-18.** Task initiation — `stuck` — closed hours later, when the Library completed at 56 and **55 Task Initiation** arrived with it. This list said *getting going is not the same as switching; 13 Context Switching Cost is adjacent, not identical*, and 55 is built on exactly that distinction: [executive function](https://stimpunks.org/glossary/executive-function/) and [monotropic inertia](https://stimpunks.org/glossary/monotropic-inertia/), the difficulty of starting *and* of stopping as a feature of a monotropic attention system rather than a failure of will. That is `stuck`'s own frame — the engine will not start yet, which tells you about the moment and not the person — so 55 is primary and 13 and 16 stay as secondaries rather than being displaced.
+
+**Four gaps remain open, and the thirty-eight Patterns published on 2026-09-18 closed none of them.** Two gaps closing in two days makes this list look like it is being worked through; it is not. Interoception, dissociation, good states and differential environmental sensitivity all sit below the Library's floor in a way a Systems-layer batch does nothing about — that batch built upward, and these four are downward. The good-states gap is the most on-ethos of the four and the least likely to arrive by accident, since a friction-lean Library has no reason to reach for it.
 
 ## Patterns without a card (deliberate stops)
 
@@ -226,7 +230,8 @@ Confirmation the deck's edges are where they should be, not gaps:
 - **08 Masking Pressure** — the deck names felt states, not the mask. "I'm masking" is a meta-observation about behavior, not a felt state, so no card asks a person to name it. (`no-spotlight` and `let me unmask` map here as the *relief* from the masking demand, not as naming the mask itself.)
 - **11 Burnout Threshold** — kept out of the person layer by the decision log (the same call that keeps the monotropic-spiral clinical depth out of `round and round`).
 - **02 Spiky Profiles · 17 Attention Ecology · 28 Double Empathy** — realm- or designer-level lenses that sit *behind* cards rather than *as* one. Double Empathy is the whole reason the Interaction realm exists. `say it straight` is the first card to name the *need* Double Empathy explains (plain, direct communication); it patterns to 30 Communication Bandwidth and holds the Double Empathy lineage in its Notes, keeping 28 as a behind-lens. **Open question for Helen:** whether a direct-communication card is the case that finally turns Double Empathy from a lens into a nameable Pattern.
-- **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a person.
+- **24 Recovery Cycles · 25 Energy Debt · 26 Sustainable Pace · 56 Asynchronous Access — open, not stopped (2026-09-18).** These four arrived with the completed Library and have no card, but unlike the bullets above that is not yet a decision. They are the design side of things the deck already names from the person's side: 24 against `you can rest` and `coming back`, 25 against `heavy` and `full`, 26 against `no rush` and `slowly`, 56 against `let me come and go` and `another way to talk`. Each names a **rhythm the environment is built with** — oscillation, balance, rate, time-shifting — rather than a state a person points at, which is the reasoning that would stop them; but the pull is real enough that inheriting a stop here would be the same mistake as inheriting one at 46. **A deck call, surfaced and not made** — mapping a card that already has a home is a bigger change than placing a homeless one, and it should not ride along on a registry rewrite. For Helen. (**36 Cognitive Map Clarity** has likewise never had a card or a stated stop; that absence predates this pass and is not analysed here.)
+- **31 Social Translation · 33 Meeting Friction · 39–42 · 46–48** — Systems and Civilization patterns, adult and institutional. The deck stops at Environment on purpose. **Re-confirmed 2026-09-18, by reading rather than by inheriting.** This stop was written when the pages did not exist, so nobody had read the thing being stopped at. [46 Neurodivergent Institutions](https://stimpunks.org/patterns/library/neurodivergent-institutions/) is the one on this list that went live that day, and it reads as organisational design — *build organisations neurodivergent people run rather than are included in* — which is a policy, not something a person lays down. The line holds. Worth noting that [43 Commons Infrastructure](https://stimpunks.org/patterns/library/commons-infrastructure/) and [44 Ecologies of Care](https://stimpunks.org/patterns/library/ecologies-of-care/) were never on this list and already carry cards; 44 argues at human scale — care webs, one trusted relationship at a time — which is why `i'm glad you're here` and `you belong here` reach it as a truth handed to a person and still not as a policy. The handful of affirmations that brush 39 / 44 / 45 / 47 are the exceptions that prove it — they reach the systems layer only as a truth handed to a person, never as a policy handed to a person.
 
 ----
 

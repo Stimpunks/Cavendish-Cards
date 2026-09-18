@@ -18,7 +18,7 @@ many paths, all valid
 
 ## Pattern
 
-45 cognitive-pluralism
+45 neurological-pluralism
 51 bodymind-affirmation
 
 ----

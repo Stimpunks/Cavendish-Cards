@@ -134,10 +134,23 @@ NOT_AAC = (
 # card names it in the person's. Two frames, one reality.
 #
 # slug -> (library number, display name, published?). Only published patterns
-# have a live page to link; planned ones render as plain text until their page
-# ships. Status as of the Pattern Library at build time — bump `published` to
-# True when a page goes live. Source of truth for number/name/status lives here,
-# so a stale number typed in a card self-corrects on build.
+# have a live page to link; an unpublished one renders as plain text until its
+# page ships. As of 2026-09-18 the Library is complete at 56 and every entry
+# here is published, so the flag currently does nothing — it stays because it is
+# how a Pattern drafted ahead of its page would be carried, and removing it would
+# mean re-deriving that mechanism the next time.
+#
+# THIS IS A HAND-MAINTAINED COPY OF A SOURCE OF TRUTH THAT LIVES SOMEWHERE ELSE,
+# and nothing in this build compares the two. The Library went from 18 published
+# to 56 in a single day; 29 flags here went stale in eight hours and every build
+# passed, because the build cannot see stimpunks.org and should not try — a
+# network call per build is the wrong habit, and the site's bot protection makes
+# it a fragile one. The drift check belongs where the Library is already
+# mirrored, not here. Verify against the Library when a Pattern is cited.
+#
+# Numbers, names and slugs below were read from the Library index on 2026-09-18
+# and are contiguous 1-56. Source of truth for number/name/status lives here for
+# the deck's purposes, so a stale number typed in a card self-corrects on build.
 PATTERN_LIBRARY_URL = "https://stimpunks.org/patterns/library/"
 PATTERNS = {
     "monotropism": (1, "Monotropism", True),
@@ -158,39 +171,44 @@ PATTERNS = {
     "cognitive-load-windows": (16, "Cognitive Load Windows", True),
     "attention-ecology": (17, "Attention Ecology", True),
     "sensory-thresholds": (18, "Sensory Thresholds", True),
-    "stim-regulation": (19, "Stim Regulation", False),
-    "sensory-filtering": (20, "Sensory Filtering", False),
-    "sensory-safe-zones": (21, "Sensory Safe Zones", False),
-    "regulation-windows": (22, "Regulation Windows", False),
-    "co-regulation": (23, "Co-Regulation", False),
-    "interaction-access": (27, "Interaction Access", False),
-    "double-empathy": (28, "Double Empathy", False),
-    "parallel-presence": (29, "Parallel Presence", False),
-    "communication-bandwidth": (30, "Communication Bandwidth", False),
-    "social-translation": (31, "Social Translation", False),
-    "consent-over-compliance": (32, "Consent Over Compliance", False),
-    "meeting-friction": (33, "Meeting Friction", False),
-    "collaboration-gradients": (34, "Collaboration Gradients", False),
-    "predictable-structure": (35, "Predictable Structure", False),
-    "cognitive-map-clarity": (36, "Cognitive Map Clarity", False),
-    "sensory-gradients": (37, "Sensory Gradients", False),
-    "attention-sanctuaries": (38, "Attention Sanctuaries", False),
-    "average-user-fallacy": (39, "Average User Fallacy", False),
-    "meritocracy-trap": (40, "Meritocracy Trap", False),
-    "administrative-burden": (41, "Administrative Burden", False),
-    "metric-fixation": (42, "Metric Fixation", False),
-    "commons-infrastructure": (43, "Commons Infrastructure", False),
-    "ecologies-of-care": (44, "Ecologies of Care", False),
-    "cognitive-pluralism": (45, "Cognitive Pluralism", False),
-    "neurodivergent-institutions": (46, "Neurodivergent Institutions", False),
-    "collaborative-niche-construction": (47, "Collaborative Niche Construction", False),
-    "neurodivergent-civilization": (48, "Neurodivergent Civilization", False),
-    "environmental-weathering": (49, "Environmental Weathering", False),
-    "bodymind-break": (50, "Bodymind Break", False),
-    "bodymind-affirmation": (51, "Bodymind Affirmation", False),
+    "stim-regulation": (19, "Stim Regulation", True),
+    "sensory-filtering": (20, "Sensory Filtering", True),
+    "sensory-safe-zones": (21, "Sensory Safe Zones", True),
+    "regulation-windows": (22, "Regulation Windows", True),
+    "co-regulation": (23, "Co-Regulation", True),
+    "recovery-cycles": (24, "Recovery Cycles", True),
+    "energy-debt": (25, "Energy Debt", True),
+    "sustainable-pace": (26, "Sustainable Pace", True),
+    "interaction-access": (27, "Interaction Access", True),
+    "double-empathy": (28, "Double Empathy", True),
+    "parallel-presence": (29, "Parallel Presence", True),
+    "communication-bandwidth": (30, "Communication Bandwidth", True),
+    "social-translation": (31, "Social Translation", True),
+    "consent-over-compliance": (32, "Consent Over Compliance", True),
+    "meeting-friction": (33, "Meeting Friction", True),
+    "collaboration-gradients": (34, "Collaboration Gradients", True),
+    "predictable-structure": (35, "Predictable Structure", True),
+    "cognitive-map-clarity": (36, "Cognitive Map Clarity", True),
+    "sensory-gradients": (37, "Sensory Gradients", True),
+    "attention-sanctuaries": (38, "Attention Sanctuaries", True),
+    "average-user-fallacy": (39, "Average User Fallacy", True),
+    "meritocracy-trap": (40, "Meritocracy Trap", True),
+    "administrative-burden": (41, "Administrative Burden", True),
+    "metric-fixation": (42, "Metric Fixation", True),
+    "commons-infrastructure": (43, "Commons Infrastructure", True),
+    "ecologies-of-care": (44, "Ecologies of Care", True),
+    "neurological-pluralism": (45, "Neurological Pluralism", True),
+    "neurodivergent-institutions": (46, "Neurodivergent Institutions", True),
+    "collaborative-niche-construction": (47, "Collaborative Niche Construction", True),
+    "neurodivergent-civilization": (48, "Neurodivergent Civilization", True),
+    "environmental-weathering": (49, "Environmental Weathering", True),
+    "bodymind-break": (50, "Bodymind Break", True),
+    "bodymind-affirmation": (51, "Bodymind Affirmation", True),
     "threshold-anxiety": (52, "Threshold Anxiety", True),
     "exposure-anxiety": (53, "Exposure Anxiety", True),
     "rejection-sensitivity": (54, "Rejection Sensitivity", True),
+    "task-initiation": (55, "Task Initiation", True),
+    "asynchronous-access": (56, "Asynchronous Access", True),
 }
 
 
