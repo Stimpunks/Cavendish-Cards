@@ -1687,6 +1687,38 @@ _JSONLD = ('<script type="application/ld+json">\n'
            '</script>')
 
 
+def _check_signpost_parity():
+    """Warn when GROUPS and IMPL_WHATHELPS disagree about the signposts.
+
+    They are two hand-kept lists of the same taxonomy: GROUPS decides which
+    signpost a card appears under in the deck's What helps view, IMPL_WHATHELPS
+    carries the build guidance for that signpost in the implementation
+    guidebook. Nothing joins them, because IMPL_WHATHELPS holds prose rather
+    than card slugs -- so a signpost added to one and not the other is silently
+    wrong in a way no rebuild surfaces: the deck grows a heading with no
+    guidance behind it, or the guidebook keeps explaining a signpost the deck
+    no longer has. Order is compared too, since the two lists render
+    independently and are meant to read in the same sequence.
+
+    Non-fatal, like the COND check: a mismatch should not stop a deploy, but it
+    should be impossible to miss in the build output.
+    """
+    in_groups = [name for name, _ in GROUPS.get("what-helps", [])]
+    in_impl = [name for name, _ in IMPL_WHATHELPS]
+    missing = [n for n in in_groups if n not in in_impl]
+    extra = [n for n in in_impl if n not in in_groups]
+    for n in missing:
+        print(f"  ! signpost {n!r} is in GROUPS but has no IMPL_WHATHELPS entry "
+              f"(the implementation guidebook will not mention it)", file=sys.stderr)
+    for n in extra:
+        print(f"  ! IMPL_WHATHELPS explains {n!r}, which is not a signpost in GROUPS",
+              file=sys.stderr)
+    if not missing and not extra and in_groups != in_impl:
+        print(f"  ! the signposts match but are in a different order: GROUPS has "
+              f"{in_groups}, IMPL_WHATHELPS has {in_impl}", file=sys.stderr)
+    return len(in_groups), len(in_impl)
+
+
 def _check_cond_parity(root, web):
     """Warn when the group-brief page and rooms.js disagree about the conditions.
 
@@ -2642,6 +2674,7 @@ def main():
     (web / "404.html").write_text(not_found_html(), encoding="utf-8")
     _sw_version, _sw_count = _write_service_worker(root, web, faces)
     _write_sitemap_robots(web)
+    _check_signpost_parity()
     _check_cond_parity(root, web)
     _check_group_example(root)
     _check_card_citations(root, out_families)
