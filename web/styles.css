@@ -563,7 +563,7 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .prose .st-panel-space .st-letter { background: var(--st-space); }
 .prose .st-panel-time .st-letter { background: var(--st-time); }
 .prose .st-tile-text { display: block; }
-.prose .st-tile-text strong { display: block; color: var(--ink-strong); }
+.prose .st-tile-name { display: block; color: var(--ink-strong); }
 .prose .st-tile-line { display: block; font-size: .94rem; margin-top: 2px; }
 .prose .st-statement {
   margin-top: 18px;

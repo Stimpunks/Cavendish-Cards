@@ -1305,7 +1305,21 @@ def _space_time_figure_html():
     statement underneath, from the same list the table comes from. The letters
     are aria-hidden: each one is the first letter of the name right beside it,
     and a screen reader announcing "S, Sensory attunement" reads the spelling
-    aloud as content."""
+    aloud as content.
+
+    **The markup has to read correctly with no CSS at all**, and the first
+    version did not. The tile's three parts were concatenated with no
+    separator, relying entirely on the stylesheet to break them apart, so
+    unstyled it rendered as "SSensory attunementThe channels a bodymind takes
+    the world in through". That is not a hypothetical: the service worker
+    serves navigations network-first and styles.css cache-first, so for exactly
+    one load after any deploy that adds a component, a returning visitor gets
+    the NEW markup against the OLD stylesheet. Every new component on this site
+    passes through that window. So the parts are separated by real whitespace
+    and the name carries its own full stop -- unstyled it reads "S Sensory
+    attunement. The channels a bodymind takes the world in through ...", which
+    is a sentence. Whitespace between flex items is discarded, and these are
+    block-level once styled, so nothing changes in the styled case."""
     panels = []
     for part, lead in (("SPACE", "The foundations. What has to hold before "
                                  "anything else is possible."),
@@ -1314,12 +1328,12 @@ def _space_time_figure_html():
         rows = [r for r in SPACE_TIME if r["part"] == part]
         word = "".join(r["letter"] for r in rows)
         tiles = "".join(
-            f'<li class="st-tile">'
-            f'<span class="st-letter" aria-hidden="true">{e(r["letter"])}</span>'
-            f'<span class="st-tile-text">'
-            f'<strong>{e(r["name"])}</strong>'
-            f'<span class="st-tile-line">{e(r["tile"])}</span>'
-            f'</span></li>'
+            f'<li class="st-tile">\n'
+            f'<span class="st-letter" aria-hidden="true">{e(r["letter"])}</span>\n'
+            f'<span class="st-tile-text">\n'
+            f'<strong class="st-tile-name">{e(r["name"])}.</strong>\n'
+            f'<span class="st-tile-line">{e(r["tile"])}</span>\n'
+            f'</span>\n</li>'
             for r in rows)
         panels.append(
             f'<section class="st-panel st-panel-{part.lower()}" '
