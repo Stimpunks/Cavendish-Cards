@@ -1360,6 +1360,77 @@ IMPL_BUDGET = (
 )
 BUDGET_URL = "https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/"
 NESTING_URL = "https://stimpunks.org/glossary/nesting/"
+PMLD_URL = ("https://stimpunks.org/2024/10/28/spaces-for-multi-sensory-learners-and-those-with-profound-and-multiple-learning-disabilities/")
+PMLD_TITLE = ("Cavendish Spaces for Multi-Sensory Learners and Those with Profound and Multiple Learning Disabilities")
+
+IMPL_EXAMPLES_HEAD = "Worked examples: multi-sensory and PMLD settings"
+
+IMPL_EXAMPLES_INTRO = (
+    "Some people will never point at a card. The zones get built with them anyway, read "
+    "from a different channel \u2014 what a person reaches for, turns toward, settles into, "
+    "or pushes away. These are worked examples from early-years and specialist settings, "
+    "where much of this practice was built with children with Profound and Multiple "
+    "Learning Disabilities, at the level of umbrellas, projectors, and things within "
+    "arm's length. Written here in the deck's own words; the source has them at length."
+)
+
+IMPL_EXAMPLES_RULES_LEAD = "Three things carry more weight here than anywhere else in this book:"
+
+IMPL_EXAMPLES_RULES = [
+    ("A den someone cannot leave is not a den",
+     "A cave works because the person chose it and can end it. When leaving needs "
+     "somebody else's hands, the way out is not a doorway \u2014 it is a person who checks, "
+     "on the person's signal rather than the room's schedule. Without that, a sensory "
+     "space is seclusion with nicer lighting."),
+    ("Whatever a person talks with comes into the space",
+     "A switch, a book, a talker, a signing partner, a card \u2014 it goes into the cave with "
+     "them, stays in reach, and stays charged. A space that separates a person from "
+     "their voice is the wrong space, however soft it is."),
+    ("Reading is not scoring",
+     "You build from what a person reaches for and what they turn away from. That "
+     "reading is a design brief for the room, exactly like a spread. It is not a record "
+     "of the person, it does not go in a file, and there is no state anyone is supposed "
+     "to reach."),
+]
+
+IMPL_EXAMPLES_LEAD = "Then, zone by zone:"
+
+IMPL_EXAMPLES = [
+    ("the cave",
+     "Enclosure, at whatever height the person already is. Over a bed: a frame carrying "
+     "lights, soft materials, and things to reach for without moving. On the floor: a "
+     "tent big enough that a wheelchair, a standing frame, or a physio wedge comes "
+     "inside \u2014 the equipment goes in the cave, never parked outside it. At floor level: "
+     "a large umbrella, which is the portable version, opened where the person already "
+     "is, with things hung from the spokes. Overhead: a hoop or a curtain track, with a "
+     "curtain that changes with the theme and takes a projection."),
+    ("the campfire",
+     "A small known group around one shared thing, with somebody telling it. A basket of "
+     "natural objects to pass and explore. Multisensory stories, told the same way each "
+     "time so the next part can be anticipated \u2014 rhyming versions when the rhythm is "
+     "what carries it. Story Massage and Dance Massage, where the story arrives through "
+     "touch and movement instead of words: offered, paused when a person signals, never "
+     "done to somebody. Messy play graded by temperature and texture rather than by "
+     "activity \u2014 dry, wet, warm, cool \u2014 and by scent. A theme to go into together: moon "
+     "sand, percussion, switch-activated toys placed within reach of the person using them."),
+    ("the watering hole",
+     "The same materials, shared, with nobody leading. Trays or mats of paint big enough "
+     "for more than one person, explored with hands, feet, or whatever part a person "
+     "explores with. A hanging rail or a basket of instruments and sensory toys, at a "
+     "height people can take from themselves. A projected scene with a scent to match "
+     "\u2014 a woodland, a seaside, a winter \u2014 held long enough that people can come into "
+     "it, be near each other in it, and leave without the scene ending. What passes "
+     "between people here is what they show each other by doing it alongside: a splash, "
+     "a sound, a handful of paint somebody then tries."),
+]
+
+IMPL_EXAMPLES_GAP = (
+    "The source works three zones \u2014 cave, campfire, and watering hole, which are "
+    "Thornburg's three. The library and the habitat are Cavendish's own additions, and "
+    "it does not work them, so neither does this. That is a gap in the examples, not a "
+    "sign the zones don't apply: the habitat in a room like this is the whole sensory "
+    "surround the other three sit inside, and it is still the first thing to get steady."
+)
 
 IMPL_PLAYMODES = (
     "Two play modes map the rhythm; this book builds the room that lets it happen. Run "
@@ -1369,20 +1440,21 @@ IMPL_PLAYMODES = (
     "needed. The person maps; you build it with them; the room changes, not the person."
 )
 
-# (bold lead, rest, optional url)
+# (bold lead, rest, optional url, optional link text -- None prints the bare URL)
 IMPL_LINEAGE = [
     ("Physical niche construction in the early years",
      "Helen Edgar. Much of the budget and building practice here comes from twenty "
      "years teaching children with Profound and Multiple Learning Disabilities, where "
-     "children and adults shaped the space together. (Credit wording to confirm with Helen.)",
-     None),
-    ("Nesting as the physical architecture of lily padding", "David Gray-Hammond.", None),
-    ("Lily padding, and transitional trauma for monotropic minds", "Tanya Adkin.", None),
+     "children and adults shaped the space together. (Credit wording to confirm with Helen.) "
+     "Written up with Ryan Boren in",
+     PMLD_URL, PMLD_TITLE),
+    ("Nesting as the physical architecture of lily padding", "David Gray-Hammond.", None, None),
+    ("Lily padding, and transitional trauma for monotropic minds", "Tanya Adkin.", None, None),
     ("Caves, campfires, and watering holes",
      "David Thornburg's learning-space metaphors; the case for cave spaces in schools, "
-     "Prakash Nair, The Language of School Design.", None),
+     "Prakash Nair, The Language of School Design.", None, None),
     ("Cavendish Space, intermittent collaboration, niche construction",
-     "Stimpunks Foundation.", "https://stimpunks.org/glossary/lily-pad/"),
+     "Stimpunks Foundation.", "https://stimpunks.org/glossary/lily-pad/", None),
 ]
 
 
@@ -1414,14 +1486,29 @@ def implementation_html(out_families):
         f'<p class="muted">{e(IMPL_BUDGET)} For the full material-level how-to, see '
         f'<a href="{BUDGET_URL}">Creating Cavendish Space on a Budget</a> and '
         f'<a href="{NESTING_URL}">Nesting</a>.</p></section>')
+    ex_rules = "".join(
+        f'<li><strong>{e(t)}.</strong> {e(b)}</li>' for t, b in IMPL_EXAMPLES_RULES)
+    ex_items = "".join(
+        f'<article class="gb-entry"><h3>{e(name)}</h3><p>{e(txt)}</p></article>'
+        for name, txt in IMPL_EXAMPLES)
+    examples_html = (
+        f'<section class="gb-family" id="build-examples"><h2>{e(IMPL_EXAMPLES_HEAD)}</h2>'
+        f'<p class="muted">{e(IMPL_EXAMPLES_INTRO)} See '
+        f'<a href="{PMLD_URL}">{e(PMLD_TITLE)}</a>.</p>'
+        f'<div class="rules stack" role="note" aria-label="{e(IMPL_EXAMPLES_HEAD)}">'
+        f'<p class="rules-lead">{e(IMPL_EXAMPLES_RULES_LEAD)}</p>'
+        f'<ul class="rules-list">{ex_rules}</ul></div>'
+        f'<p class="muted">{e(IMPL_EXAMPLES_LEAD)}</p>{ex_items}'
+        f'<p class="muted">{e(IMPL_EXAMPLES_GAP)}</p></section>')
     play_html = (
         f'<section class="gb-family" id="build-play"><h2>How it pairs with the play modes</h2>'
         f'<p class="muted">{e(IMPL_PLAYMODES)}</p></section>')
     lineage_items = "".join(
         f'<li><strong>{e(lead)}</strong> \u2014 {e(rest)}'
-        + (f' <a href="{url}">{e(url)}</a>' if url else '')
+        + (f' <a href="{url}">{e(label)}</a>.' if label
+           else f' <a href="{url}">{e(url)}</a>' if url else '')
         + '</li>'
-        for lead, rest, url in IMPL_LINEAGE)
+        for lead, rest, url, label in IMPL_LINEAGE)
     lineage_html = (
         f'<section class="gb-family" id="build-lineage"><h2>Lineage</h2>'
         f'<ul class="gb-lineage">{lineage_items}</ul></section>')
@@ -1430,7 +1517,7 @@ def implementation_html(out_families):
         f'<div class="rules" role="note" aria-label="{e(t)}"><p><strong>{e(t)}.</strong> {e(b)}</p></div>'
         for t, b in IMPL_GUARDRAILS)
 
-    body = "\n".join(sections + [budget_html, play_html, lineage_html])
+    body = "\n".join(sections + [budget_html, examples_html, play_html, lineage_html])
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1531,10 +1618,18 @@ def implementation_md(out_families):
     L += ["---- ", "", "## On any budget", ""]
     L.append(f"{IMPL_BUDGET} For the full material-level how-to, see "
              f"[Creating Cavendish Space on a Budget]({BUDGET_URL}) and [Nesting]({NESTING_URL}).")
-    L += ["", "## How it pairs with the play modes", "", IMPL_PLAYMODES, ""]
+    L += ["", f"## {IMPL_EXAMPLES_HEAD}", "",
+          f"{IMPL_EXAMPLES_INTRO} See [{PMLD_TITLE}]({PMLD_URL}).", "",
+          IMPL_EXAMPLES_RULES_LEAD, ""]
+    L += [f"- **{t}.** {b}" for t, b in IMPL_EXAMPLES_RULES]
+    L += ["", IMPL_EXAMPLES_LEAD, ""]
+    L += [f"- **{name}** \u2014 {txt}" for name, txt in IMPL_EXAMPLES]
+    L += ["", IMPL_EXAMPLES_GAP, ""]
+    L += ["## How it pairs with the play modes", "", IMPL_PLAYMODES, ""]
     L += ["## Lineage", ""]
-    for lead, rest, url in IMPL_LINEAGE:
-        L.append(f"- **{lead}** — {rest}" + (f" {url}" if url else ""))
+    for lead, rest, url, label in IMPL_LINEAGE:
+        link = f" [{label}]({url})." if label else (f" {url}" if url else "")
+        L.append(f"- **{lead}** — {rest}{link}")
     L += ["", "---- ", ""]
     L.append("Dedicated to the public domain under [CC0 1.0]"
              "(https://creativecommons.org/publicdomain/zero/1.0/). "

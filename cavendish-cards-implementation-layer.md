@@ -72,13 +72,31 @@ A transition is a crossing, and for a mind in deep focus a hard crossing is jarr
 
 None of this is a purchase order. A blanket over a table is a cave. A rug zones a watering hole. A turned-around shelf makes a corner. A dimmable lamp makes a decompression seam. A cushion at the join of two zones is a pause pad. The materials are yours to choose; the card names the need, and you fill it with what you have. For the full material-level how-to, see [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/) and [Nesting](https://stimpunks.org/glossary/nesting/).
 
+## Worked examples: multi-sensory and PMLD settings
+
+Some people will never point at a card. The zones get built with them anyway, read from a different channel — what a person reaches for, turns toward, settles into, or pushes away. These are worked examples from early-years and specialist settings, where much of this practice was built with children with Profound and Multiple Learning Disabilities, at the level of umbrellas, projectors, and things within arm's length. Written here in the deck's own words; the source has them at length. See [Cavendish Spaces for Multi-Sensory Learners and Those with Profound and Multiple Learning Disabilities](https://stimpunks.org/2024/10/28/spaces-for-multi-sensory-learners-and-those-with-profound-and-multiple-learning-disabilities/).
+
+Three things carry more weight here than anywhere else in this book:
+
+- **A den someone cannot leave is not a den.** A cave works because the person chose it and can end it. When leaving needs somebody else's hands, the way out is not a doorway — it is a person who checks, on the person's signal rather than the room's schedule. Without that, a sensory space is seclusion with nicer lighting.
+- **Whatever a person talks with comes into the space.** A switch, a book, a talker, a signing partner, a card — it goes into the cave with them, stays in reach, and stays charged. A space that separates a person from their voice is the wrong space, however soft it is.
+- **Reading is not scoring.** You build from what a person reaches for and what they turn away from. That reading is a design brief for the room, exactly like a spread. It is not a record of the person, it does not go in a file, and there is no state anyone is supposed to reach.
+
+Then, zone by zone:
+
+- **the cave** — Enclosure, at whatever height the person already is. Over a bed: a frame carrying lights, soft materials, and things to reach for without moving. On the floor: a tent big enough that a wheelchair, a standing frame, or a physio wedge comes inside — the equipment goes in the cave, never parked outside it. At floor level: a large umbrella, which is the portable version, opened where the person already is, with things hung from the spokes. Overhead: a hoop or a curtain track, with a curtain that changes with the theme and takes a projection.
+- **the campfire** — A small known group around one shared thing, with somebody telling it. A basket of natural objects to pass and explore. Multisensory stories, told the same way each time so the next part can be anticipated — rhyming versions when the rhythm is what carries it. Story Massage and Dance Massage, where the story arrives through touch and movement instead of words: offered, paused when a person signals, never done to somebody. Messy play graded by temperature and texture rather than by activity — dry, wet, warm, cool — and by scent. A theme to go into together: moon sand, percussion, switch-activated toys placed within reach of the person using them.
+- **the watering hole** — The same materials, shared, with nobody leading. Trays or mats of paint big enough for more than one person, explored with hands, feet, or whatever part a person explores with. A hanging rail or a basket of instruments and sensory toys, at a height people can take from themselves. A projected scene with a scent to match — a woodland, a seaside, a winter — held long enough that people can come into it, be near each other in it, and leave without the scene ending. What passes between people here is what they show each other by doing it alongside: a splash, a sound, a handful of paint somebody then tries.
+
+The source works three zones — cave, campfire, and watering hole, which are Thornburg's three. The library and the habitat are Cavendish's own additions, and it does not work them, so neither does this. That is a gap in the examples, not a sign the zones don't apply: the habitat in a room like this is the whole sensory surround the other three sit inside, and it is still the first thing to get steady.
+
 ## How it pairs with the play modes
 
 Two play modes map the rhythm; this book builds the room that lets it happen. Run Map the edges with the person to find where the crossings bite — focus to talking, rest to joining in, home to out the door. Run Moving between to see the shape of a day, alone to together and back. Then build the padding where the map shows it's needed. The person maps; you build it with them; the room changes, not the person.
 
 ## Lineage
 
-- **Physical niche construction in the early years** — Helen Edgar. Much of the budget and building practice here comes from twenty years teaching children with Profound and Multiple Learning Disabilities, where children and adults shaped the space together. (Credit wording to confirm with Helen.)
+- **Physical niche construction in the early years** — Helen Edgar. Much of the budget and building practice here comes from twenty years teaching children with Profound and Multiple Learning Disabilities, where children and adults shaped the space together. (Credit wording to confirm with Helen.) Written up with Ryan Boren in [Cavendish Spaces for Multi-Sensory Learners and Those with Profound and Multiple Learning Disabilities](https://stimpunks.org/2024/10/28/spaces-for-multi-sensory-learners-and-those-with-profound-and-multiple-learning-disabilities/).
 - **Nesting as the physical architecture of lily padding** — David Gray-Hammond.
 - **Lily padding, and transitional trauma for monotropic minds** — Tanya Adkin.
 - **Caves, campfires, and watering holes** — David Thornburg's learning-space metaphors; the case for cave spaces in schools, Prakash Nair, The Language of School Design.

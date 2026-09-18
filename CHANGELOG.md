@@ -4,6 +4,22 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-09-18
+
+### Site
+
+- **New section in the [implementation guidebook](https://cavendish.space/implementation.html#build-examples): worked examples for multi-sensory and PMLD settings.** The book had almost nothing for a person who will never point at a card. It now builds the zones from a different channel — what somebody reaches for, turns toward, settles into, or pushes away — with the cave at four heights (over a bed, a floor tent a wheelchair or a standing frame comes *inside*, an umbrella opened where the person already is, a ceiling hoop that takes a projection), the campfire as multisensory and rhyming stories, Story Massage and Dance Massage, and messy play graded by temperature and texture, and the watering hole as shared trays of paint and a projected scene held long enough that people can come into it and leave without it ending. Drawn from [Cavendish Spaces for Multi-Sensory Learners and Those with Profound and Multiple Learning Disabilities](https://stimpunks.org/2024/10/28/spaces-for-multi-sensory-learners-and-those-with-profound-and-multiple-learning-disabilities/), by Helen Edgar and Ryan Boren.
+
+- **Written in the deck's own words rather than lifted.** The source is CC BY-SA 4.0 and every page here is CC0, and a BY-SA island inside a CC0 deck would travel outward silently through the print sheets and the `.md` endpoints. The authors could have relicensed their own text, but rewriting was the better move anyway: the section had to carry this book's voice and this book's refusals, and the source is linked so nobody has to take our word for the practice.
+
+- **Three guardrails that carry more weight in this setting than anywhere else in the book.** A den someone cannot leave is not a den — when leaving needs somebody else's hands, the way out is a person who checks on the person's signal, not a doorway, and without that a sensory space is seclusion with nicer lighting. Whatever a person talks with comes into the space, in reach and charged; a space that separates a person from their voice is the wrong space however soft it is. And reading is not scoring: what somebody reaches for is a design brief for the room, exactly like a spread, and it does not go in a file.
+
+- **The section says what it does not have.** The source works cave, campfire, and watering hole — Thornburg's three. The library and the habitat are Cavendish's own additions and it does not work them, so neither does this, and the section says so rather than inventing examples. A gap in the examples is not a sign the zones don't apply.
+
+- **The lineage credit now points somewhere.** The implementation guidebook was already crediting Helen's twenty years teaching children with Profound and Multiple Learning Disabilities and linking nothing. It links the write-up. The [Cavendish Space page](https://cavendish.space/space.html#more) carries it too, under "Take it into a room," beside [Creating Cavendish Space on a Budget](https://stimpunks.org/2024/03/14/creating-cavendish-space-on-a-budget/).
+
+- Logged for Helen's batch review — it is her practice and half her text.
+
 ## 2026-09-17
 
 ### Deck
