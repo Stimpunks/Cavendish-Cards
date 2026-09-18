@@ -1251,8 +1251,13 @@ IMPL_REALM_NOTES = {
         "These are the pieces you change so the space fits. Each card names a need, not a "
         "product \u2014 a den can be a pop-up tent or a blanket over a table; less to look at "
         "can be a screen, a corner, or a turned-around desk. Build for the sense the person "
-        "is asking about, with whatever you have. Organised here by sense, the way the deck "
-        "groups it.",
+        "is asking about, with whatever you have. When nobody has laid a card, walk the room "
+        "and ask it yourself, one channel at a time: what does a person see here, hear, "
+        "smell? What meets them when they touch something? How can they move? Ask it "
+        "standing in the room rather than at a desk, and put the answers in the signposts "
+        "below. Two things a sense-walk will never show you, so ask them on their own: who "
+        "holds the controls, and how much a person has to say \u2014 or how fast they have to "
+        "be \u2014 to get what they need. Organised here by sense, the way the deck groups it.",
     "lily-pad":
         "A transition is a crossing, and for a mind in deep focus a hard crossing is "
         "jarring and costly \u2014 attention yanked across with nowhere to land. Lily pads are "

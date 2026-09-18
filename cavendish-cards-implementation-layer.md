@@ -35,7 +35,7 @@ The five zones are the cave (solitude), the campfire (a small, known group), the
 
 ## Building the niche
 
-These are the pieces you change so the space fits. Each card names a need, not a product — a den can be a pop-up tent or a blanket over a table; less to look at can be a screen, a corner, or a turned-around desk. Build for the sense the person is asking about, with whatever you have. Organised here by sense, the way the deck groups it.
+These are the pieces you change so the space fits. Each card names a need, not a product — a den can be a pop-up tent or a blanket over a table; less to look at can be a screen, a corner, or a turned-around desk. Build for the sense the person is asking about, with whatever you have. When nobody has laid a card, walk the room and ask it yourself, one channel at a time: what does a person see here, hear, smell? What meets them when they touch something? How can they move? Ask it standing in the room rather than at a desk, and put the answers in the signposts below. Two things a sense-walk will never show you, so ask them on their own: who holds the controls, and how much a person has to say — or how fast they have to be — to get what they need. Organised here by sense, the way the deck groups it.
 
 - **Being in charge** — Hand over the dial. The same input is fine when the person controls it and too much when someone else does — so give them the switch, the volume, the timing, not a fixed setting.
 - **Sound** — Turn the world down, or fill it kindly — headphones, a quieter corner, or a steady hum to cover the jagged, unpredictable sounds. The sound was the problem; lowering it is the answer, not avoidance.
