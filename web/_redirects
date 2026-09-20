@@ -18,3 +18,9 @@ http://cavendish.app/*    https://cavendish.space/:splat   301!
 # this serves it at the canonical path with a 200 rewrite (not a redirect: the
 # well-known URL itself must answer).
 /.well-known/security.txt   /security.txt   200
+
+# The feed lives at /feed.xml. These are the two paths people type instead; a
+# feed URL gets pasted into readers by hand more than most, and a 404 there
+# looks like the site has no feed rather than like a typo.
+/feed       /feed.xml   301
+/rss.xml    /feed.xml   301

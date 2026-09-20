@@ -22,8 +22,9 @@ same interpreter serves this fine.
 
 Two things this adds over the stdlib default, both to make the local site
 behave a little more like the deployed one: the media types netlify.toml pins
-by hand, and no-store on everything so a rebuild shows up on reload instead of
-serving yesterday's cards.json out of the browser cache.
+by hand (by extension, and by name for /feed.xml), and no-store on everything
+so a rebuild shows up on reload instead of serving yesterday's cards.json out
+of the browser cache.
 
 What it cannot do is apply the security headers. Those come from netlify.toml
 and are absent locally -- see web/README.md for what that hides, because it has
@@ -49,6 +50,16 @@ class Handler(SimpleHTTPRequestHandler):
         ".svg": "image/svg+xml",
         ".woff2": "font/woff2",
     }
+
+    def guess_type(self, path):
+        # netlify.toml pins the feed's type on one path rather than on the .xml
+        # extension, so that sitemap.xml keeps its own. Extension maps cannot
+        # express that, so mirror it here -- otherwise a feed reader pointed at
+        # the local server gets text/xml and may refuse the feed, which is a
+        # difference from production and not a bug in the feed.
+        if os.path.basename(path) == "feed.xml":
+            return "application/rss+xml; charset=utf-8"
+        return super().guess_type(path)
 
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")

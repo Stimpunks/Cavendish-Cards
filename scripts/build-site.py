@@ -604,6 +604,28 @@ MD_ENDPOINTS = {
 # `Link: </llms.txt>; rel="describedby"` header for agents that never parse HTML.
 _LLMS_LINK = '<link rel="describedby" type="text/markdown" href="/llms.txt">'
 
+# The changelog feed, advertised the same way. A feed reader cannot subscribe to
+# what it cannot find: without this the person has to know the URL, and with it
+# every reader auto-discovers from whichever page they happen to be on. It goes
+# in EVERY head rather than only on the changelog page, because the page a
+# person is standing on when they decide to follow the project is rarely the
+# changelog. netlify.toml sends the matching `Link:` header.
+_FEED_PATH = "/feed.xml"
+_FEED_TITLE = "Cavendish Cards \u2014 Changelog"
+_FEED_LINK = ('<link rel="alternate" type="application/rss+xml" '
+              f'href="{_FEED_PATH}" title="{e(_FEED_TITLE)}">')
+
+
+def site_head_links(indent="  "):
+    """The head links every page carries, whoever generated the page.
+
+    One source for both, so the generated pages and the five hand-authored ones
+    cannot end up advertising different things -- the hand-authored heads carry
+    this inside `head:start`/`head:end` markers that the build rewrites, the
+    same arrangement as the menu. Per-page links (the Markdown alternate) are
+    added by _md_head_links() on top of these."""
+    return "\n".join(indent + link for link in (_LLMS_LINK, _FEED_LINK))
+
 
 def nav_entry(key):
     """(label, href) for a SITE_NAV key."""
@@ -619,8 +641,8 @@ def md_path(key):
 
 
 def _md_head_links(key, label):
-    """The describedby + alternate link pair for a page head."""
-    out = "  " + _LLMS_LINK
+    """The site-wide head links, plus this page's Markdown alternate."""
+    out = site_head_links()
     rel = md_path(key)
     if rel:
         out += ('\n  <link rel="alternate" type="text/markdown" '
@@ -724,10 +746,20 @@ def _deck_cta_pretty(current, indent):
     return indent + deck_cta()
 
 
+def _head_links_pretty(current, indent):
+    return site_head_links(indent)
+
+
 # name -> (renderer(current, indent), required?). A required block missing its
 # markers stops the build; an optional one is simply not on that page -- only
 # four of the five carry the deck button, since the deck page is the deck.
+#
+# `head` is required for the same reason `nav` is, and the reason bites harder:
+# a stale menu is at least visible to whoever opens it, while a head link that
+# quietly stops being written is invisible until somebody reports that their
+# feed reader cannot find the feed.
 GENERATED_BLOCKS = {
+    "head": (_head_links_pretty, True),
     "nav": (site_nav_pretty, True),
     "cta": (_deck_cta_pretty, False),
 }
@@ -1580,13 +1612,68 @@ or email <a href="mailto:stimpunks@stimpunks.org">stimpunks@stimpunks.org</a>.</
                 "These are the main ones.")
 
 
+_CHANGELOG_DATE = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
+_CHANGELOG_SECTION = re.compile(r"^### (.+?)\s*$")
+
+
+def parse_changelog(text):
+    """(preamble, [(date, body), ...]) from CHANGELOG.md, all still Markdown.
+
+    Entries come back in the order the file writes them, newest first, and are
+    deliberately NOT sorted: the page and the feed are two renderings of one
+    file, and a feed that reordered what the page shows would be a third thing
+    to keep in step.
+
+    One dated `## YYYY-MM-DD` heading is one entry, which is also one feed item
+    -- so an entry is the unit a person subscribes to, and a second change
+    appended to today's entry updates that item rather than shipping another.
+    """
+    preamble, entries, cur = [], [], None
+    for line in text.replace("\r\n", "\n").split("\n"):
+        m = _CHANGELOG_DATE.match(line)
+        if m:
+            cur = (m.group(1), [])
+            entries.append(cur)
+            continue
+        (cur[1] if cur else preamble).append(line)
+    return ("\n".join(preamble).strip("\n"),
+            [(d, "\n".join(body).strip("\n")) for d, body in entries])
+
+
+def changelog_sections(body):
+    """[(heading, [first line of each bullet, ...])] for one entry's ### parts.
+
+    Feeds a feed item's title, categories and summary -- never its content,
+    which is the whole entry rendered. So anything written above the first
+    `### ` heading is absent from the summary and present in the item; Deck and
+    Site are the shape every entry has been written in since the file started.
+    """
+    out = []
+    for line in body.split("\n"):
+        m = _CHANGELOG_SECTION.match(line)
+        if m:
+            out.append((m.group(1), []))
+        elif line.strip().startswith("- ") and out:
+            out[-1][1].append(line.strip()[2:])
+    return out
+
+
 def changelog_html(root):
     src = (root / "CHANGELOG.md").read_text(encoding="utf-8")
+    preamble, entries = parse_changelog(src)
+    # Rendered entry by entry rather than in one md_to_html pass, so each date
+    # heading can carry an id. That id is what a feed item links to: without it
+    # every item would point at the top of the same long page, and somebody
+    # following one from six weeks ago would have to go hunting for it.
+    parts = [md_to_html(preamble), _CHANGELOG_FEED_NOTE]
+    for date, body in entries:
+        parts.append(f'<h2 id="{date}">{date}</h2>')
+        parts.append(md_to_html(body))
     return _standalone_page(
         "Changelog",
         "A running summary of notable changes to the Cavendish Cards deck and website.",
         "changelog", "Skip to the changelog", "Changelog", "changelog",
-        md_to_html(src),
+        "\n".join(parts),
         tagline="What changed in the deck and on the site, newest first — cards "
                 "added and reworded under Deck, everything else under Site.")
 
@@ -1673,8 +1760,7 @@ def guidebook_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="describedby" type="text/markdown" href="/llms.txt">
-  <link rel="alternate" type="text/markdown" href="/guidebook.md" title="Guidebook &mdash; Markdown source">
+{_md_head_links("guidebook", "Guidebook")}
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -2099,8 +2185,7 @@ def implementation_html(out_families):
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="describedby" type="text/markdown" href="/llms.txt">
-  <link rel="alternate" type="text/markdown" href="/implementation.md" title="Implementation guidebook &mdash; Markdown source">
+{_md_head_links("implementation", "Implementation guidebook")}
   <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -2797,6 +2882,203 @@ def print_html(sheets, total_cards):
         script="print.js")
 
 
+# ---------------------------------------------------------------------------
+# The changelog feed (RSS 2.0, /feed.xml).
+#
+# One item per dated entry in CHANGELOG.md, built from the same parse the
+# changelog page uses, so the two cannot describe different histories. RSS 2.0
+# rather than Atom or JSON Feed because it is the format every reader takes and
+# the one people mean when they ask for a feed; the extras that make a feed
+# portable come from the Atom, content and Syndication namespaces, which is the
+# ordinary way to ship RSS 2.0 well.
+#
+# It is the only push channel this project has. The site has no analytics, no
+# mailing list, no account, and nothing that phones home -- so the feed is how
+# somebody who wants to know when a card changed finds out, without the site
+# having to learn anything at all about them. That is the reason it is here,
+# and it is why it must stay static: a feed is a file, not an endpoint.
+# ---------------------------------------------------------------------------
+
+_CHANGELOG_FEED_NOTE = (
+    '<p>This page has a feed: <a href="/feed.xml">/feed.xml</a> \u2014 one item '
+    'per dated entry, for following changes in a reader instead of checking '
+    'back. Nothing is counted and nothing is stored; subscribing tells this '
+    'site nothing about you.</p>')
+
+_FEED_MAX_ITEMS = 20
+
+# RFC 822 wants English day and month abbreviations. strftime("%a")/("%b")
+# would give whatever the build machine's locale says, which on Netlify is C
+# and on somebody's laptop may not be -- a feed is not the place to find out.
+_RFC822_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+_RFC822_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def _rfc822(d):
+    """An entry's date as an RFC 822 timestamp, at midnight GMT.
+
+    The changelog records dates, not times, so a time has to be invented and
+    the only question is which invention is safe. Midnight GMT is the earliest
+    moment of the stated day anywhere west of the meridian, which is where this
+    is written -- so an entry dated today is never stamped in the future, and
+    aggregators that quietly drop future-dated items never see one."""
+    return (f"{_RFC822_DAYS[d.weekday()]}, {d.day:02d} "
+            f"{_RFC822_MONTHS[d.month - 1]} {d.year} 00:00:00 GMT")
+
+
+def _plain(md):
+    """Markdown to plain text, for a feed <description>.
+
+    Readers that show only the description show it as text, so the markers have
+    to come out rather than be escaped into view. Asterisks and backticks are
+    dropped as CHARACTERS rather than matched as pairs, because the paired
+    version leaves debris: `**bold with *emphasis* inside**` defeats the bold
+    pattern, and what reaches the reader is a summary that opens with a stray
+    asterisk. Nothing in this file uses either character literally. Underscores
+    are left alone -- they are in half the identifiers the changelog names."""
+    s = _strip_md_links(md)
+    s = s.replace("*", "").replace("`", "")
+    return " ".join(s.split())
+
+
+def _clip(s, limit=240):
+    """Trim to `limit` on a word boundary, with an ellipsis if anything went."""
+    if len(s) <= limit:
+        return s
+    return s[:limit].rsplit(" ", 1)[0].rstrip(" ,;:.\u2014-") + "\u2026"
+
+
+def _cdata(s):
+    """Wrap HTML for a feed item. "]]>" cannot appear inside a CDATA section,
+    so any that turns up in the changelog is split across two of them."""
+    return "<![CDATA[" + s.replace("]]>", "]]]]><![CDATA[>") + "]]>"
+
+
+def _feed_item(date, body):
+    """One <item>, or None if the date is unusable."""
+    import datetime
+    try:
+        d = datetime.date.fromisoformat(date)
+    except ValueError:
+        # Non-fatal on purpose. A typo in a date should not be able to stop a
+        # Netlify deploy, which would freeze the whole site over one heading.
+        print(f"  ! feed: {date!r} is not a real date; entry left out",
+              file=sys.stderr)
+        return None
+    sections = changelog_sections(body)
+    names = [name for name, _ in sections]
+    title = f"{date} \u2014 {' and '.join(names)}" if names else date
+    summary = "  ".join(f"{name}: {_clip(_plain(bullets[0]))}"
+                        for name, bullets in sections if bullets)
+    if not summary:
+        summary = _clip(_plain(body))
+    url = f"{_SITE_URL}/changelog.html#{date}"
+    L = [
+        "    <item>",
+        f"      <title>{e(title)}</title>",
+        f"      <link>{url}</link>",
+        # The guid is the permalink and must never change for an item that has
+        # already gone out -- it is the only thing a reader has to tell an
+        # edited entry from a new one. It is stable because the date is: the
+        # anchor it points at comes from the same heading this item is built
+        # from, so the two cannot come apart.
+        f'      <guid isPermaLink="true">{url}</guid>',
+        f"      <pubDate>{_rfc822(d)}</pubDate>",
+    ]
+    L += [f"      <category>{e(name)}</category>" for name in names]
+    L += [
+        f"      <description>{e(summary)}</description>",
+        f"      <content:encoded>{_cdata(md_to_html(body))}</content:encoded>",
+        "    </item>",
+    ]
+    return "\n".join(L)
+
+
+_ABS_LINK = re.compile(r"^(?:https?:|mailto:|#)")
+
+
+def _check_changelog_links(src):
+    """Warn on a relative link in CHANGELOG.md.
+
+    The page could almost live with one; a feed item cannot. It is read inside
+    somebody's reader, where a relative href resolves against whatever that
+    reader calls home, and the same text is also published at /changelog.md and
+    printed in the feed's content. This found `./CALL-FOR-ART.md` on the first
+    run -- a link that had been broken on the page too, since that file is in
+    the repo and not on the site. Non-fatal, like the other checks here."""
+    for target in set(m.group(2) for m in _MD_LINK.finditer(src)):
+        if not _ABS_LINK.match(target):
+            print(f"  ! changelog: relative link {target!r}; a feed item is read "
+                  f"away from this page, so links have to be absolute",
+                  file=sys.stderr)
+
+
+def _write_feed(root, web):
+    """Write web/feed.xml from CHANGELOG.md. Returns the number of items."""
+    import datetime
+    src = (root / "CHANGELOG.md").read_text(encoding="utf-8")
+    _check_changelog_links(src)
+    _preamble, entries = parse_changelog(src)
+    # Capped, because every item carries its whole entry and a day here can run
+    # to forty of them. The full history is two clicks away in two formats
+    # (/changelog.html and /changelog.md), which is the honest answer at this
+    # size; RFC 5005 paging is what to add if the cap ever hides something a
+    # subscriber would actually go looking for.
+    entries = entries[:_FEED_MAX_ITEMS]
+    items = [x for x in (_feed_item(d, b) for d, b in entries) if x]
+    # lastBuildDate is the newest entry, NOT the build time. The channel's
+    # content changed when the changelog did; stamping every deploy would tell
+    # a conditional fetcher to re-read the whole feed each time an unrelated
+    # card face moved, and would make the file differ from itself on a build
+    # that changed nothing.
+    newest = (datetime.date.fromisoformat(entries[0][0]) if entries
+              else datetime.date.today())
+    L = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0"',
+        '     xmlns:atom="http://www.w3.org/2005/Atom"',
+        '     xmlns:content="http://purl.org/rss/1.0/modules/content/"',
+        '     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">',
+        "  <channel>",
+        f"    <title>{e(_FEED_TITLE)}</title>",
+        f"    <link>{_SITE_URL}/changelog.html</link>",
+        "    <description>Notable changes to the Cavendish Cards deck and the "
+        "site at cavendish.space. One item per dated entry: the cards under "
+        "Deck, the web version under Site.</description>",
+        "    <language>en-US</language>",
+        # rel="self" is what makes a feed portable: mirrored, cached, or handed
+        # to somebody by a friend, it still says where to subscribe.
+        f'    <atom:link href="{_SITE_URL}{_FEED_PATH}" rel="self" '
+        'type="application/rss+xml"/>',
+        f"    <lastBuildDate>{_rfc822(newest)}</lastBuildDate>",
+        # Declared cadence, for aggregators polite enough to read it. Daily is
+        # the honest ceiling: the site deploys continuously and a busy day can
+        # add several entries, but they land on one dated heading and so on one
+        # item. Quiet stretches run for weeks, and a reader backing off through
+        # those is the behavior we want, not a problem to paper over.
+        "    <sy:updatePeriod>daily</sy:updatePeriod>",
+        "    <sy:updateFrequency>1</sy:updateFrequency>",
+        "    <copyright>CC0 1.0 Universal. No rights reserved.</copyright>",
+        "    <docs>https://www.rssboard.org/rss-specification</docs>",
+        "    <generator>scripts/build-site.py</generator>",
+        # RSS caps a channel image at 144px wide, so the 96px favicon is the
+        # one we have that fits. og-image.png is 1200 wide and would be dropped
+        # or rescaled by whoever displayed it.
+        "    <image>",
+        f"      <url>{_SITE_URL}/favicon-96x96.png</url>",
+        f"      <title>{e(_FEED_TITLE)}</title>",
+        f"      <link>{_SITE_URL}/changelog.html</link>",
+        "      <width>96</width>",
+        "      <height>96</height>",
+        "    </image>",
+    ]
+    L += items
+    L += ["  </channel>", "</rss>", ""]
+    (web / "feed.xml").write_text("\n".join(L), encoding="utf-8")
+    return len(items)
+
+
 def _write_sitemap_robots(web):
     """Write web/sitemap.xml and web/robots.txt from the known page list."""
     import datetime
@@ -2953,7 +3235,9 @@ def _write_llms_txt(web):
         L += [para, ""]
     L += ["Every prose page listed below is also served as Markdown: swap `.html` for "
           "`.md` on its URL, or use the `.md` links here. The full card data is at "
-          f"{_SITE_URL}/cards.json, and the source lives at "
+          f"{_SITE_URL}/cards.json, changes are syndicated at "
+          f"{_SITE_URL}{_FEED_PATH} (RSS, one item per dated changelog entry), "
+          "and the source lives at "
           "https://github.com/Stimpunks/Cavendish-Cards.", ""]
     # A grouped page with no description silently vanishes from llms.txt, which
     # is the failure the one-taxonomy change exists to prevent -- so say so.
@@ -3253,6 +3537,7 @@ def main():
                     "space-time": space_time_md(root, web)})
     _write_llms_txt(web)
     _write_security_txt(web)
+    _feed_items = _write_feed(root, web)
     _navs = _write_hand_authored_navs(web)
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
@@ -3260,10 +3545,11 @@ def main():
           f"web/print.html ({len(_print)} sheets), "
           f"web/sw.js (v{_sw_version}, {_sw_count} precached), "
           f"web/llms.txt, web/security.txt, "
+          f"web/feed.xml ({_feed_items} items), "
           f"{len(_md_written)} .md endpoints, "
           f"cavendish-cards-implementation-layer.md, and {total} faces into web/faces/")
     if _navs:
-        print(f"  menu rewritten in {len(_navs)} hand-authored pages: "
+        print(f"  generated blocks rewritten in {len(_navs)} hand-authored pages: "
               f"{', '.join(sorted(_navs))} — commit them")
     for fam in out_families:
         print(f"  {fam['name']}: {len(fam['cards'])}")

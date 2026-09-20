@@ -53,7 +53,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), browsing-topics=()"
-    Link = "</llms.txt>; rel=\"describedby\"; type=\"text/markdown\""
+    Link = "</llms.txt>; rel=\"describedby\"; type=\"text/markdown\", </feed.xml>; rel=\"alternate\"; type=\"application/rss+xml\"; title=\"Cavendish Cards - Changelog\""
     Content-Security-Policy = "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self' https://stimpunks.org https://*.stimpunks.org; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-7/896sRDDRYbHkuzCgrxnPtpdmQDYaNNIUKwJwO8+Gc='; font-src 'self'; connect-src 'self'; media-src 'self'; manifest-src 'self'; worker-src 'self'"
 
 [[headers]]
@@ -83,3 +83,13 @@
   for = "/security.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+
+# The changelog feed. Netlify serves .xml as text/xml, and some readers ignore a
+# feed that arrives as text/xml or application/xml rather than the registered
+# RSS type -- so pin it on this one path, and leave sitemap.xml alone. The cache
+# window is short because a feed's whole job is to be re-fetched.
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+    Cache-Control = "public, max-age=1800"
