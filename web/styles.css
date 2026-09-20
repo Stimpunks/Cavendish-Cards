@@ -415,6 +415,15 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
 .prose p { margin: 10px 0; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: 4px 0; }
+/* Changelog entries are paragraphs wearing bullets. 4px is right for the
+   one-line items every other prose list here holds, and wrong for these:
+   a median entry runs three lines and the longest twelve, so at 4px two
+   entries sat closer together than the lines inside one of them. They get
+   the paragraph rhythm instead, the same 10px as .prose p. Until
+   2026-09-20 the gap came from the browser's default margin on a <ul>,
+   because each bullet was its own one-item list -- which is the bug this
+   replaces, not a spacing decision anyone made. */
+.prose .logbook li { margin: 10px 0; }
 .prose blockquote { margin: 12px 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
 
 /* Pull quote: a line the page is built around, set large. Written as ">> " in

@@ -883,6 +883,21 @@ def md_to_html(text):
     failed, which is why it lasted -- a renderer that silently does something
     plausible with input it does not understand is worse than one that stops.
 
+    Blank lines between bullets were splitting one list into many, until
+    2026-09-20. Every source here puts a blank line between bullets, because
+    forty of these paragraphs run together unreadably in a text editor
+    otherwise -- and each one started a fresh <ul>. It looked right, since the
+    styling of ten one-item lists and one ten-item list is nearly identical,
+    and it was wrong where markup is read rather than looked at: a screen
+    reader announced "list, 1 item" once per bullet, dozens of times down a
+    changelog entry, which tells somebody the opposite of what the page means.
+    The same markup had just started shipping inside the feed's items as well.
+    The rule now matches every other Markdown renderer: a blank line ends a
+    paragraph, not a list. Items are still rendered tight, without the <p> a
+    loose list gets in CommonMark, which is the same simplification the rest of
+    this function makes and costs nothing here -- no source wraps a bullet's
+    continuation onto an indented line.
+
     A pull quote is a line the page is built around, promoted out of the body
     text rather than duplicated beside it — so the sentence appears once, in the
     source and on the page. ">> " was picked because a plain Markdown reader
@@ -928,7 +943,13 @@ def md_to_html(text):
     for raw in text.replace("\r\n", "\n").split("\n"):
         s = raw.strip()
         if not s:
-            flush_all(); continue
+            # A blank line ends a paragraph, a blockquote and a pull quote --
+            # that is what those are delimited by. It does NOT end a list. Every
+            # branch below already closes the lists it needs to, so the list
+            # stays open until a line arrives that is not another item, which is
+            # what a blank line between two bullets should mean and what every
+            # other Markdown renderer does with one.
+            flush_para(); flush_quote(); flush_pull(); continue
         if s.startswith("# "):                       # drop title; shell owns <h1>
             flush_all(); continue
         m = _MD_IMG.match(s)
@@ -1665,10 +1686,15 @@ def changelog_html(root):
     # heading can carry an id. That id is what a feed item links to: without it
     # every item would point at the top of the same long page, and somebody
     # following one from six weeks ago would have to go hunting for it.
-    parts = [md_to_html(preamble), _CHANGELOG_FEED_NOTE]
+    # The entries are wrapped because their bullets are not like any other
+    # list on this site: the median one runs three lines and the longest twelve,
+    # where every other prose list here is a line or two. `.logbook` is what
+    # lets the stylesheet space them as the paragraphs they are.
+    parts = [md_to_html(preamble), _CHANGELOG_FEED_NOTE, '<div class="logbook">']
     for date, body in entries:
         parts.append(f'<h2 id="{date}">{date}</h2>')
         parts.append(md_to_html(body))
+    parts.append("</div>")
     return _standalone_page(
         "Changelog",
         "A running summary of notable changes to the Cavendish Cards deck and website.",
