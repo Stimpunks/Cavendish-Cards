@@ -555,6 +555,7 @@ SITE_NAV = [
     ("Facilitator sheet", "facilitator.html", "facilitator", "The deck in use"),
     ("Example spreads", "example-spreads.html", "example-spreads", "The deck in use"),
     ("Place Explorers (for children)", "place-explorers.html", "place-explorers", "The deck in use"),
+    ("Hold a cogen", "cogens.html", "cogens", "The deck in use"),
     ("Group access needs", "group-needs.html", "group-needs", "The deck in use"),
     ("Livable worlds checklist", "livable-worlds.html", "livable-worlds", "The deck in use"),
 
@@ -599,6 +600,7 @@ MD_ENDPOINTS = {
     "arles": "cavendish-cards-arles.md",
     "inclusive-environment": "cavendish-cards-inclusive-environment.md",
     "example-spreads": "cavendish-cards-example-spreads.md",
+    "cogens": "cavendish-cards-cogens.md",
     "group-needs": "cavendish-cards-group-needs.md",
     "livable-worlds": "cavendish-cards-livable-worlds.md",
     "privacy": "cavendish-cards-privacy.md",
@@ -940,6 +942,14 @@ def md_to_html(text):
     is close enough to the intent that the .md endpoint reads correctly with no
     renderer support. It emits a <p>, not a <blockquote>: these are the page's
     own words, and <blockquote> would claim they came from somewhere else.
+
+    A blockquote is the opposite case -- somebody else's words -- and since
+    2026-10-23 it can carry more than one paragraph. Inside a quote a bare ">"
+    is a paragraph break and "> - " is a list item; its lines are rendered by
+    this function, so the quotation keeps the shape it had in the book. A final
+    "> — Name, *Work*, p. N" after a bare ">" is the source, set as a
+    figcaption beside the <blockquote> rather than inside it. A blank line
+    still ends the quote. Single-paragraph quotes render exactly as before.
     """
     out, para, items, steps, quote, pull = [], [], [], [], [], []
 
@@ -962,8 +972,26 @@ def md_to_html(text):
 
     def flush_quote():
         if quote:
-            out.append("<blockquote><p>"
-                       + _md_inline(" ".join(quote).strip()) + "</p></blockquote>")
+            # The quote's own lines, rendered by this same function, so a
+            # paragraph break (a bare ">") or a list ("> - ") inside a quotation
+            # comes out as one -- the cogens page quotes three rules as a list.
+            # A last paragraph opening with an em dash is the attribution, and
+            # HTML wants that outside the <blockquote>: it becomes the
+            # figcaption of a <figure> holding both.
+            lines = list(quote)
+            while lines and not lines[-1]:
+                lines.pop()
+            caption = None
+            if (len(lines) >= 3 and lines[-1].startswith("— ")
+                    and not lines[-2]):
+                caption = lines.pop()
+                while lines and not lines[-1]:
+                    lines.pop()
+            inner = "<blockquote>" + md_to_html("\n".join(lines)) + "</blockquote>"
+            if caption:
+                inner = ('<figure class="quote">' + inner + "<figcaption>"
+                         + _md_inline(caption) + "</figcaption></figure>")
+            out.append(inner)
             quote.clear()
 
     def flush_pull():
@@ -1010,7 +1038,7 @@ def md_to_html(text):
         if s.startswith(">> "):                       # pull quote, before "> "
             flush_para(); flush_list(); flush_steps(); flush_quote()
             pull.append(s[3:]); continue
-        if s.startswith("> "):
+        if s.startswith("> ") or s == ">":            # bare ">" breaks, not ends
             flush_para(); flush_list(); flush_steps(); flush_pull()
             quote.append(s[2:]); continue
         flush_list(); flush_steps(); flush_quote(); flush_pull(); para.append(s)
@@ -1601,6 +1629,20 @@ def inclusive_environment_html(root):
         tagline="Inclusion is architecture, not goodwill. The seven layers a "
                 "place is built in, and where the deck reaches — plus the "
                 "two it deliberately doesn't.")
+
+
+def cogens_html(root):
+    src = (root / "cavendish-cards-cogens.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Hold a cogen",
+        "How to hold a cogen \u2014 Christopher Emdin's cogenerative dialogue \u2014 "
+        "with Cavendish Cards: a small, regular conversation where the people in a "
+        "room plan changes to it, and a card turned up counts as a turn.",
+        "cogens", "Skip to how to hold one", "Hold a cogen", "cogens",
+        md_to_html(src),
+        tagline="One turn at a time, a laid card counting as much as a spoken "
+                "word, and a plan for the room at the end. How to hold a cogen "
+                "with the deck.")
 
 
 def group_needs_html(root):
@@ -2356,7 +2398,7 @@ _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html",
                "/space-time.html", "/inclusive-environment.html", "/facilitator.html",
-               "/example-spreads.html", "/place-explorers.html", "/group-needs.html", "/livable-worlds.html",
+               "/example-spreads.html", "/place-explorers.html", "/cogens.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
@@ -2570,6 +2612,7 @@ _CARD_CITING_DOCS = [
     "cavendish-cards-place-explorers.md",
     "cavendish-cards-livable-worlds.md",
     "cavendish-cards-group-needs.md",
+    "cavendish-cards-cogens.md",
     "cavendish-cards-why-sheet.md",
     "cavendish-cards-not-aac.md",
     "cavendish-cards-inclusive-environment.md",
@@ -3290,6 +3333,7 @@ _LLMS_DESCRIPTIONS = {
     "facilitator": "The sheet for whoever is holding the space. Also a print PDF.",
     "example-spreads": "Worked examples: a spread someone laid, and how to read it as a design brief.",
     "place-explorers": "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into.",
+    "cogens": "Hold a cogen — Christopher Emdin's cogenerative dialogue — with the deck: a small, regular conversation where the people in a room plan changes to it. A card turned up is a turn, nobody has to speak, nothing is counted, and every line of the plan is about the room, never a person.",
     "group-needs": "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone.",
     "livable-worlds": "A checklist for building spaces that fit bodyminds.",
     "space": "What a Cavendish Space is: the five zones, the eleven elements, what the model refuses.",
@@ -3413,7 +3457,7 @@ def _write_service_worker(root, web, faces):
                  "badges.js", "print.html", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
-                 "place-explorers.html", "group-needs.html",
+                 "place-explorers.html", "cogens.html", "group-needs.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
                  "space-time.html", "inclusive-environment.html",
                  "changelog.html"):
@@ -3447,7 +3491,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
-        "/place-explorers.html",
+        "/place-explorers.html", "/cogens.html",
         "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
         "/space-time.html", "/inclusive-environment.html",
         "/privacy.html", "/changelog.html",
@@ -3609,6 +3653,7 @@ def main():
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
     (web / "place-explorers.html").write_text(
         place_explorers_html(root, out_families), encoding="utf-8")
+    (web / "cogens.html").write_text(cogens_html(root), encoding="utf-8")
     (web / "group-needs.html").write_text(group_needs_html(root), encoding="utf-8")
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")

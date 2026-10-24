@@ -425,6 +425,14 @@ h2 { font-size: 1.4rem; color: var(--ink-strong); margin: 0 0 4px; }
    replaces, not a spacing decision anyone made. */
 .prose .logbook li { margin: 10px 0; }
 .prose blockquote { margin: 12px 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+/* A quotation with its source: md_to_html sets "> — Name, *Work*, p. N" as the
+   figcaption of a figure around the blockquote, because HTML wants the
+   attribution outside the quote. The caption lines up with the quoted text
+   (14px padding + 3px rule). Unstyled it is still an indented quote with its
+   source on the next line, so the one load on the old stylesheet reads fine. */
+.prose .quote { margin: 12px 0; }
+.prose .quote blockquote { margin: 0; }
+.prose .quote figcaption { margin: 6px 0 0; padding-left: 17px; color: var(--muted); font-size: .92rem; }
 
 /* Pull quote: a line the page is built around, set large. Written as ">> " in
    the Markdown source (see md_to_html in build-site.py). It is a <p> and not a
