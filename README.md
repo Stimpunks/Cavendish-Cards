@@ -130,3 +130,5 @@ The deck grows in the open. To add a card, copy [`CARD.md`](./CARD.md), fill it 
 ## License
 
 Dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Free to use, print, translate, adapt, and remix — no permission needed, no attribution required. Default to open.
+
+**Quoted material belongs to whoever wrote it.** Where a page quotes another writer, it quotes a few lines under fair use (or the UK's quotation exception), with the writer, the work and the page named beside the words. Those words are quoted, not given away: the dedication covers ours and nothing else. If you reuse a quotation, keep its credit with it.

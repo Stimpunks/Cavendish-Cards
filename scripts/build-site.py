@@ -15,6 +15,7 @@ Usage, from the repo root:
 """
 
 from pathlib import Path
+import functools
 import hashlib
 import html
 import importlib.util
@@ -41,9 +42,12 @@ def _load_placeholders():
     return mod
 
 
+@functools.lru_cache(maxsize=None)
 def _load_guidebook():
     # Reuse the Pattern crosswalk registry + renderers so the web guidebook and
     # the Markdown guidebook can't drift. Single source of truth in build-guidebook.py.
+    # Cached, because QUOTED_NOTE below needs it at import time and main() needs
+    # it again; one module object, not two.
     path = Path(__file__).resolve().parent / "build-guidebook.py"
     if not path.exists():
         sys.exit(f"Could not find {path}")
@@ -51,6 +55,13 @@ def _load_guidebook():
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+# What the CC0 dedication does not cover, said beside it everywhere it is
+# stated. The sentence lives in build-guidebook.py, whose Markdown carries it
+# too, so the guidebook and the site cannot word the exception two ways.
+QUOTED_NOTE = _load_guidebook().QUOTED_NOTE
+CC0_URL = "https://creativecommons.org/publicdomain/zero/1.0/"
 
 
 # Family display order on the web (interaction first, per playtest feedback),
@@ -742,8 +753,28 @@ def deck_cta():
             '<span class="deck-cta-brief" aria-hidden="true">The deck</span></a>')
 
 
+def site_license():
+    """The footer's license line: the dedication and what it does not cover.
+
+    Sitewide rather than only on a page that quotes, for three reasons. The
+    sentence is true on a page with no quotation in it, so it costs those pages
+    nothing. A per-page flag is one more thing to remember, and forgetting it
+    fails silently -- a quoting page would ship a false license statement and
+    nothing would say so. And quoted words travel: into the .md endpoint, the
+    feed, llms.txt and whatever a reader copies them into, none of which knows
+    which page they came from. The page that quotes still names its sources and
+    says so in its own License section, which is the part that prints; the
+    footer does not (`.site-footer` is display:none in print)."""
+    return (f'<p>Free to use, print, and adapt under <a href="{CC0_URL}">CC0 1.0</a>. '
+            f'{e(QUOTED_NOTE)}</p>')
+
+
 def _deck_cta_pretty(current, indent):
     return indent + deck_cta()
+
+
+def _license_pretty(current, indent):
+    return indent + site_license()
 
 
 def _head_links_pretty(current, indent):
@@ -758,10 +789,14 @@ def _head_links_pretty(current, indent):
 # a stale menu is at least visible to whoever opens it, while a head link that
 # quietly stops being written is invisible until somebody reports that their
 # feed reader cannot find the feed.
+#
+# `license` is required too: every page links CC0 in its head, so every page
+# owes the reader the sentence saying what that does not cover.
 GENERATED_BLOCKS = {
     "head": (_head_links_pretty, True),
     "nav": (site_nav_pretty, True),
     "cta": (_deck_cta_pretty, False),
+    "license": (_license_pretty, True),
 }
 
 
@@ -1065,7 +1100,8 @@ def _standalone_page(title, description, skip_id, skip_label, h1, current, body,
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
+      {site_license()}
+      <p>Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
     </div>
   </footer>
 </body>
@@ -1840,7 +1876,8 @@ def guidebook_html(out_families):
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
+      {site_license()}
+      <p>Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards/blob/main/CALL-FOR-ART.md">Contribute art</a>.</p>
     </div>
   </footer>
 </body>
@@ -2259,7 +2296,8 @@ def implementation_html(out_families):
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Free to use, print, and adapt under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>.</p>
+      {site_license()}
+      <p>Part of the <a href="https://stimpunks.org/projects/cavendish-space-project/">Cavendish Space Project</a>. <a href="https://github.com/Stimpunks/Cavendish-Cards">Source on GitHub</a>.</p>
     </div>
   </footer>
 </body>
@@ -2308,7 +2346,7 @@ def implementation_md(out_families):
         L.append(f"- **{lead}** — {rest}{link}")
     L += ["", "---- ", ""]
     L.append("Dedicated to the public domain under [CC0 1.0]"
-             "(https://creativecommons.org/publicdomain/zero/1.0/). "
+             f"({CC0_URL}). {QUOTED_NOTE} "
              "Home: https://stimpunks.org/projects/cavendish-space-project/")
     L.append("")
     return "\n".join(L)
@@ -2327,18 +2365,53 @@ _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", 
 _THEME_INLINE = "<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>"
 
 
+# `license` stays the bare CC0 URL, as <link rel="license"> does: it names the
+# dedication covering the site's own content, which is what a tool reading it
+# needs to recognise. The exception goes in `copyrightNotice`, schema.org's
+# free-text field for exactly this.
 _JSONLD = ('<script type="application/ld+json">\n'
            '{"@context":"https://schema.org","@graph":['
            '{"@type":"WebSite","@id":"https://cavendish.space/#website",'
            '"name":"Cavendish Cards","url":"https://cavendish.space/",'
            '"description":"A calm, no-scoring deck for naming sensory and '
            'interaction needs.","inLanguage":"en",'
-           '"license":"https://creativecommons.org/publicdomain/zero/1.0/",'
+           f'"license":"{CC0_URL}",'
+           '"copyrightNotice":'
+           + json.dumps(f"Dedicated to the public domain under CC0 1.0. "
+                        f"{QUOTED_NOTE}", ensure_ascii=False) + ','
            '"publisher":{"@id":"https://stimpunks.org/#organization"}},'
            '{"@type":"Organization","@id":"https://stimpunks.org/#organization",'
            '"name":"Stimpunks Foundation","url":"https://stimpunks.org/",'
            '"sameAs":["https://github.com/Stimpunks/Cavendish-Cards"]}]}\n'
            '</script>')
+
+
+def _check_cc0_exception(web):
+    """Warn on any published file that states CC0 without saying what it skips.
+
+    The rule (CLAUDE.md, "Quote fairly…") is that CC0 is never stated alone,
+    because a page here may quote another writer and the dedication cannot
+    cover their words. Every place that said CC0 before 2026-10-23 said it
+    flat, footers to feed; this is what stops the next one -- a new template, a
+    hand edit to a page, a new agent-facing file -- from going out the same
+    way. File-level on purpose: a page's own License section may say CC0 alone
+    when its footer carries the sentence. Matches the first clause, so
+    robots.txt's ASCII `--` still counts.
+
+    Non-fatal, like the other checks: watch the build output."""
+    needle = QUOTED_NOTE.partition(" —")[0]
+    flat = []
+    for path in sorted(web.iterdir()):
+        if path.suffix not in {".html", ".md", ".txt", ".xml", ".json",
+                               ".webmanifest"}:
+            continue
+        text = path.read_text(encoding="utf-8")
+        if ("CC0" in text or "publicdomain/zero" in text) and needle not in text:
+            flat.append(path.name)
+    for name in flat:
+        print(f"  ! web/{name} states CC0 without the quoted-material exception "
+              f"({needle!r})", file=sys.stderr)
+    return flat
 
 
 def _check_signpost_parity():
@@ -2469,9 +2542,10 @@ AI_CRAWLERS = [
 _ROBOTS_PREAMBLE = """\
 # cavendish.space -- Cavendish Space, by Stimpunks Foundation.
 #
-# Everything here is CC0: dedicated to the public domain. So every crawler is
-# allowed, AI crawlers included, and each one is named below rather than left to
-# a blanket rule -- the openness here is chosen, not defaulted into.
+# Everything of ours here is CC0: dedicated to the public domain. So every
+# crawler is allowed, AI crawlers included, and each one is named below rather
+# than left to a blanket rule -- the openness here is chosen, not defaulted into.
+# Quoted material belongs to whoever wrote it -- quoted, not given away.
 #
 # The reasoning, plainly: if a model is going to say something about Autistic and
 # Disabled people, we would rather it had read this deck than not. A spread of
@@ -3085,7 +3159,8 @@ def _write_feed(root, web):
         # those is the behavior we want, not a problem to paper over.
         "    <sy:updatePeriod>daily</sy:updatePeriod>",
         "    <sy:updateFrequency>1</sy:updateFrequency>",
-        "    <copyright>CC0 1.0 Universal. No rights reserved.</copyright>",
+        "    <copyright>CC0 1.0 Universal: no rights reserved in our own words. "
+        f"{e(QUOTED_NOTE)}</copyright>",
         "    <docs>https://www.rssboard.org/rss-specification</docs>",
         "    <generator>scripts/build-site.py</generator>",
         # RSS caps a channel image at 144px wide, so the 96px favicon is the
@@ -3185,7 +3260,10 @@ def _write_md_endpoints(root, web, generated):
             f"url: {_SITE_URL}/{href}",
             f"updated: {updated}",
             "license: CC0-1.0",
-            "license_url: https://creativecommons.org/publicdomain/zero/1.0/",
+            f"license_url: {CC0_URL}",
+            # SPDX has no identifier for "except what is quoted", so the
+            # exception rides beside the id rather than replacing it.
+            f"license_note: {json.dumps(QUOTED_NOTE, ensure_ascii=False)}",
             "---",
             "",
         ]
@@ -3234,8 +3312,9 @@ _LLMS_SUMMARY = (
 
 _LLMS_BODY = [
     "Cavendish Space holds three things: a pictorial card deck, a tool for zoning a "
-    "room into the five Cavendish zones, and the model behind both. Everything here "
-    "is dedicated to the public domain under CC0 1.0. The deck's art is to be human- "
+    "room into the five Cavendish zones, and the model behind both. Everything of "
+    f"ours here is dedicated to the public domain under CC0 1.0. {QUOTED_NOTE} A quotation "
+    "keeps its credit wherever it goes. The deck's art is to be human- "
     "and community-made — no AI-generated images, ever. Most of it has yet to be "
     "drawn, so until a human piece arrives a card carries a placeholder illustration "
     "hand-written as vector shapes in the project's own code, replaced automatically "
@@ -3565,6 +3644,8 @@ def main():
     _write_security_txt(web)
     _feed_items = _write_feed(root, web)
     _navs = _write_hand_authored_navs(web)
+    # Last, so it reads the hand-authored pages after their blocks are written.
+    _check_cc0_exception(web)
 
     print(f"Wrote web/cards.json, web/guidebook.html, web/implementation.html, "
           f"web/why.html, web/origin.html, web/facilitator.html, web/example-spreads.html, "

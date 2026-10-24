@@ -88,4 +88,4 @@ Nothing about a user is stored or transmitted. The only local storage is the the
 
 - **Fonts.** Atkinson Hyperlegible is self-hosted from `fonts/` (woff2), declared with `@font-face` in `styles.css` and preloaded in each page `<head>` — no external font request.
 - **Accessibility.** Full keyboard operation, visible focus, screen-reader announcements for laying and turning cards, `prefers-reduced-motion` respected, and both palettes at WCAG AA contrast. Keep these if you extend it.
-- **License.** CC0 1.0, like the rest of the deck.
+- **License.** CC0 1.0, like the rest of the deck. Quoted material belongs to whoever wrote it — quoted, not given away; see the License section of the [main README](https://github.com/Stimpunks/Cavendish-Cards#license).

@@ -106,4 +106,4 @@ Two play modes map the rhythm; this book builds the room that lets it happen. Ru
 
 ---- 
 
-Dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Home: https://stimpunks.org/projects/cavendish-space-project/
+Dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Quoted material belongs to whoever wrote it — quoted, not given away. Home: https://stimpunks.org/projects/cavendish-space-project/

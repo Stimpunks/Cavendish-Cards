@@ -115,6 +115,16 @@ FRAMEWORKS = [
      "in it."),
 ]
 
+# The CC0 dedication covers our words and nothing else: nobody can give away
+# what is not theirs, and a page here may quote another writer under fair use
+# (US) or the quotation exception (UK, CDPA s.30(1ZA)). So every place this
+# project states CC0 carries this sentence beside it. One copy, here --
+# build-site.py imports it for the footers, the .md frontmatter, JSON-LD,
+# llms.txt, robots.txt and the feed, and _check_cc0_exception() warns on any
+# published file that says CC0 without it. The wording is the Why-Sheets
+# README's, so the two presses say it the same way.
+QUOTED_NOTE = "Quoted material belongs to whoever wrote it — quoted, not given away."
+
 NOT_AAC = (
     "The deck is a lens, not a language. It makes one hard-to-voice thing — "
     "sensory, regulatory, and emotional weather, and the conditions that help — "
@@ -382,6 +392,7 @@ def build_markdown(cards_dir):
         "",
         "Dedicated to the public domain under "
         "[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). "
+        f"{QUOTED_NOTE} "
         "Home: https://stimpunks.org/projects/cavendish-space-project/",
         "",
     ]

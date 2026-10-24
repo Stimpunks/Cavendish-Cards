@@ -4,6 +4,14 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-10-23
+
+### Site
+
+- **Every page now says what CC0 does not cover.** The footer reads *"Free to use, print, and adapt under CC0 1.0. Quoted material belongs to whoever wrote it — quoted, not given away."* Our own words are still dedicated to the public domain, with no permission needed and no credit required. Another writer's words never were ours to give away. We are making room to quote them: a few lines, under fair use, with the writer, the work and the page named beside the words. A quotation lets you check our reading instead of trusting it, which a paraphrase with a name beside it cannot do. The same sentence now sits beside CC0 everywhere the site states it: the Markdown version of every page ([/why.md](https://cavendish.space/why.md), and so on), [llms.txt](https://cavendish.space/llms.txt), [robots.txt](https://cavendish.space/robots.txt), the [feed](https://cavendish.space/feed.xml) and the [README](https://github.com/Stimpunks/Cavendish-Cards#license). The wording is the one [whysheet.press](https://whysheet.press/) uses, so both presses say it the same way.
+
+- **The footer's license line now comes from one place.** Three of the five hand-written pages carried it in two different wordings, and the threshold and the model page had none in their footers. All five now print the same line the generated pages do, from the build. A build check warns if any published file says CC0 without the exception — and its first run found one we had missed.
+
 ## 2026-09-20
 
 ### Site
