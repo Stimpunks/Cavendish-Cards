@@ -4,6 +4,12 @@ Notable changes to Cavendish Cards — both the **deck** (cards added or reworde
 
 Each dated entry is split into **Deck** (changes to the cards themselves) and **Site** (changes to the web version). An entry only includes the sections that changed.
 
+## 2026-11-11
+
+### Site
+
+- **New page: [Walk a Cavendish classroom](https://cavendish.space/classroom.html).** Stimpunks.World has built the [Cavendish Primary Classroom](https://stimpunks.world/cavendish-primary-classroom): a mainstream primary classroom for a class of thirty, set up the Cavendish Space way, as an example for people training to teach. This page says what is in it and links you there. It covers the five places in one room; the light, warmth, sound and seats the class can change; a sensory cave that is never a time-out; a day that bends; what the classroom will not do; and where the deck sits on its library shelf. It is in the menu under The deck in use, after Place Explorers.
+
 ## 2026-10-23
 
 ### Site

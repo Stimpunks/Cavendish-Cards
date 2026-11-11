@@ -555,6 +555,7 @@ SITE_NAV = [
     ("Facilitator sheet", "facilitator.html", "facilitator", "The deck in use"),
     ("Example spreads", "example-spreads.html", "example-spreads", "The deck in use"),
     ("Place Explorers (for children)", "place-explorers.html", "place-explorers", "The deck in use"),
+    ("Walk a Cavendish classroom", "classroom.html", "classroom", "The deck in use"),
     ("Hold a cogen", "cogens.html", "cogens", "The deck in use"),
     ("Group access needs", "group-needs.html", "group-needs", "The deck in use"),
     ("Livable worlds checklist", "livable-worlds.html", "livable-worlds", "The deck in use"),
@@ -600,6 +601,7 @@ MD_ENDPOINTS = {
     "arles": "cavendish-cards-arles.md",
     "inclusive-environment": "cavendish-cards-inclusive-environment.md",
     "example-spreads": "cavendish-cards-example-spreads.md",
+    "classroom": "cavendish-cards-classroom.md",
     "cogens": "cavendish-cards-cogens.md",
     "group-needs": "cavendish-cards-group-needs.md",
     "livable-worlds": "cavendish-cards-livable-worlds.md",
@@ -1631,6 +1633,21 @@ def inclusive_environment_html(root):
                 "two it deliberately doesn't.")
 
 
+def classroom_html(root):
+    src = (root / "cavendish-cards-classroom.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "Walk a Cavendish classroom",
+        "A summary of the Cavendish Primary Classroom on Stimpunks.World: a "
+        "mainstream primary classroom for a class of thirty, zoned into the five "
+        "places and set up so the room does the adjusting, as an example for "
+        "people training to teach.",
+        "classroom", "Skip to the classroom", "Walk a Cavendish classroom",
+        "classroom", md_to_html(src),
+        tagline="A classroom for thirty, set up so the room changes and the "
+                "child never has to. What is in it, what it refuses, and the "
+                "link to walk in.")
+
+
 def cogens_html(root):
     src = (root / "cavendish-cards-cogens.md").read_text(encoding="utf-8")
     return _standalone_page(
@@ -2398,7 +2415,7 @@ _SITE_URL = "https://cavendish.space"
 _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", "/space.html", "/guidebook.html", "/implementation.html",
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html",
                "/space-time.html", "/inclusive-environment.html", "/facilitator.html",
-               "/example-spreads.html", "/place-explorers.html", "/cogens.html", "/group-needs.html", "/livable-worlds.html",
+               "/example-spreads.html", "/place-explorers.html", "/classroom.html", "/cogens.html", "/group-needs.html", "/livable-worlds.html",
                "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
@@ -2613,6 +2630,7 @@ _CARD_CITING_DOCS = [
     "cavendish-cards-livable-worlds.md",
     "cavendish-cards-group-needs.md",
     "cavendish-cards-cogens.md",
+    "cavendish-cards-classroom.md",
     "cavendish-cards-why-sheet.md",
     "cavendish-cards-not-aac.md",
     "cavendish-cards-inclusive-environment.md",
@@ -3333,6 +3351,7 @@ _LLMS_DESCRIPTIONS = {
     "facilitator": "The sheet for whoever is holding the space. Also a print PDF.",
     "example-spreads": "Worked examples: a spread someone laid, and how to read it as a design brief.",
     "place-explorers": "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into.",
+    "classroom": "A summary of the Cavendish Primary Classroom on Stimpunks.World — a mainstream primary classroom for thirty, zoned into the five places, with light, warmth, sound and seating the class can change, a sensory cave that is never a time-out, and what the room refuses — with the link to walk it.",
     "cogens": "Hold a cogen — Christopher Emdin's cogenerative dialogue — with the deck: a small, regular conversation where the people in a room plan changes to it. A card turned up is a turn, nobody has to speak, nothing is counted, and every line of the plan is about the room, never a person.",
     "group-needs": "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone.",
     "livable-worlds": "A checklist for building spaces that fit bodyminds.",
@@ -3457,7 +3476,8 @@ def _write_service_worker(root, web, faces):
                  "badges.js", "print.html", "space.html",
                  "guidebook.html", "implementation.html", "why.html", "origin.html",
                  "arles.html", "facilitator.html", "example-spreads.html",
-                 "place-explorers.html", "cogens.html", "group-needs.html",
+                 "place-explorers.html", "classroom.html", "cogens.html",
+                 "group-needs.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
                  "space-time.html", "inclusive-environment.html",
                  "changelog.html"):
@@ -3491,7 +3511,7 @@ def _write_service_worker(root, web, faces):
         "/icon-192.png", "/icon-512.png", "/og-image.png", "/audio/ocean-waves.mp3",
         "/guidebook.html", "/implementation.html", "/why.html",
         "/origin.html", "/arles.html", "/facilitator.html", "/example-spreads.html",
-        "/place-explorers.html", "/cogens.html",
+        "/place-explorers.html", "/classroom.html", "/cogens.html",
         "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
         "/space-time.html", "/inclusive-environment.html",
         "/privacy.html", "/changelog.html",
@@ -3653,6 +3673,7 @@ def main():
     (web / "example-spreads.html").write_text(example_spreads_html(root), encoding="utf-8")
     (web / "place-explorers.html").write_text(
         place_explorers_html(root, out_families), encoding="utf-8")
+    (web / "classroom.html").write_text(classroom_html(root), encoding="utf-8")
     (web / "cogens.html").write_text(cogens_html(root), encoding="utf-8")
     (web / "group-needs.html").write_text(group_needs_html(root), encoding="utf-8")
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
