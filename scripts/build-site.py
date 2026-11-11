@@ -568,6 +568,7 @@ SITE_NAV = [
     ("SPACE-TIME", "space-time.html", "space-time", "The model"),
     ("Building inclusive environments", "inclusive-environment.html", "inclusive-environment", "The model"),
     ("Cultures of Regulation", "cultures-of-regulation.html", "cultures-of-regulation", "The model"),
+    ("A third place needs a cave", "third-places.html", "third-places", "The model"),
 
     ("Privacy & security", "privacy.html", "privacy", "About this site"),
     ("Changelog", "changelog.html", "changelog", "About this site"),
@@ -605,6 +606,7 @@ MD_ENDPOINTS = {
     "classroom": "cavendish-cards-classroom.md",
     "cogens": "cavendish-cards-cogens.md",
     "cultures-of-regulation": "cavendish-cards-cultures-of-regulation.md",
+    "third-places": "cavendish-cards-third-places.md",
     "group-needs": "cavendish-cards-group-needs.md",
     "livable-worlds": "cavendish-cards-livable-worlds.md",
     "privacy": "cavendish-cards-privacy.md",
@@ -1666,6 +1668,22 @@ def cultures_of_regulation_html(root):
                 "on the way. What it did, and the slides to run your own.")
 
 
+def third_places_html(root):
+    src = (root / "cavendish-cards-third-places.md").read_text(encoding="utf-8")
+    return _standalone_page(
+        "A third place needs a cave",
+        "Cavendish Space as a third place: Ray Oldenburg's eight "
+        "characteristics read through caves, campfires and watering holes, "
+        "where the coffeehouse model fails, and six questions to ask of any "
+        "place people gather without having to buy anything.",
+        "third-places", "Skip to the argument",
+        "A third place needs a cave",
+        "third-places", md_to_html(src),
+        tagline="Somewhere to be with people without buying anything. Most "
+                "of those places are built for talking. Here is what one "
+                "looks like when it is built for being there.")
+
+
 def cogens_html(root):
     src = (root / "cavendish-cards-cogens.md").read_text(encoding="utf-8")
     return _standalone_page(
@@ -2434,7 +2452,7 @@ _SITE_PAGES = ["/", "/deck.html", "/rooms.html", "/badges.html", "/print.html", 
                "/why.html", "/not-aac.html", "/origin.html", "/arles.html",
                "/space-time.html", "/inclusive-environment.html", "/facilitator.html",
                "/example-spreads.html", "/place-explorers.html", "/classroom.html", "/cogens.html", "/group-needs.html", "/livable-worlds.html",
-               "/cultures-of-regulation.html", "/privacy.html", "/changelog.html"]
+               "/cultures-of-regulation.html", "/third-places.html", "/privacy.html", "/changelog.html"]
 
 # Pre-paint inline script (no flash): applies a saved light/dark choice before
 # first paint. Kept byte-identical to the copy in web/index.html and to the CSP
@@ -2650,6 +2668,7 @@ _CARD_CITING_DOCS = [
     "cavendish-cards-cogens.md",
     "cavendish-cards-classroom.md",
     "cavendish-cards-cultures-of-regulation.md",
+    "cavendish-cards-third-places.md",
     "cavendish-cards-why-sheet.md",
     "cavendish-cards-not-aac.md",
     "cavendish-cards-inclusive-environment.md",
@@ -3372,6 +3391,7 @@ _LLMS_DESCRIPTIONS = {
     "place-explorers": "The five places in children's words, ages about 7 to 11: cave, campfire, watering hole, library, habitat, each shown as its real card face, with a classroom example — plus what to do when the place a child needs isn't in the room. A place is somewhere a person can be, never a state a child is sorted into.",
     "classroom": "A summary of the Cavendish Primary Classroom on Stimpunks.World — a mainstream primary classroom for thirty, zoned into the five places, with light, warmth, sound and seating the class can change, a sensory cave that is never a time-out, and what the room refuses — with the link to walk it.",
     "cultures-of-regulation": "Helen Edgar's Cavendish Space workshop, Building Neurodivergent-Affirming Cultures of Regulation: regulation as embodied, sensory, relational, environmental and interdependent — never a scale a person is rated on — practiced by moving between a campfire, a watering hole and a cave, with a sensory sock ball made along the way. Links the workshop slides (PDF) and Helen's write-up on stimpunks.org.",
+    "third-places": "Cavendish Space as a third place: Ray Oldenburg's eight characteristics of third places read through caves, campfires and watering holes. Conversation as the price of entry, presence as participation, the door you can stand outside, why a third place with no cave is a watering hole with no shade, and six questions to ask of any place people gather without paying.",
     "cogens": "Hold a cogen — Christopher Emdin's cogenerative dialogue — with the deck: a small, regular conversation where the people in a room plan changes to it. A card turned up is a turn, nobody has to speak, nothing is counted, and every line of the plan is about the room, never a person.",
     "group-needs": "Many spreads at once: how to turn a group's access needs into one brief for the room, including the rules an AI must follow to do it without profiling anyone.",
     "livable-worlds": "A checklist for building spaces that fit bodyminds.",
@@ -3500,7 +3520,8 @@ def _write_service_worker(root, web, faces):
                  "group-needs.html",
                  "livable-worlds.html", "not-aac.html", "privacy.html",
                  "space-time.html", "inclusive-environment.html",
-                 "cultures-of-regulation.html", "changelog.html"):
+                 "cultures-of-regulation.html", "third-places.html",
+                 "changelog.html"):
         p = web / name
         if p.exists():
             h.update(p.read_bytes())
@@ -3534,7 +3555,8 @@ def _write_service_worker(root, web, faces):
         "/place-explorers.html", "/classroom.html", "/cogens.html",
         "/group-needs.html", "/livable-worlds.html", "/not-aac.html",
         "/space-time.html", "/inclusive-environment.html",
-        "/cultures-of-regulation.html", "/privacy.html", "/changelog.html",
+        "/cultures-of-regulation.html", "/third-places.html",
+        "/privacy.html", "/changelog.html",
     ] + [f"/fonts/{n}" for n in font_names] + [f"/faces/{n}" for n in face_names]
     js = (template.replace("__VERSION__", version)
                   .replace("__PRECACHE__", json.dumps(precache, ensure_ascii=False)))
@@ -3697,6 +3719,7 @@ def main():
     (web / "cogens.html").write_text(cogens_html(root), encoding="utf-8")
     (web / "cultures-of-regulation.html").write_text(
         cultures_of_regulation_html(root), encoding="utf-8")
+    (web / "third-places.html").write_text(third_places_html(root), encoding="utf-8")
     (web / "group-needs.html").write_text(group_needs_html(root), encoding="utf-8")
     (web / "livable-worlds.html").write_text(livable_worlds_html(root), encoding="utf-8")
     (web / "privacy.html").write_text(privacy_html(root), encoding="utf-8")
